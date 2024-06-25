@@ -130,7 +130,7 @@
  "unk_4bf03ff": true,
  "tAttackSpeed": {
   "value": "Attacks_Per_Second_Total",
-  "compiled": "BQAAAAAAAADJAAAA/v///wAAAAAAAAAA"
+  "compiled": "BQAAAAAAAADIAAAA/v///wAAAAAAAAAA"
  },
  "unk_6deb090": false,
  "unk_ed2bdad": false,
@@ -158,7 +158,25 @@
  "unk_5e1a52d": true,
  "bCaptionsInside": false,
  "eShapeshiftForm": -1,
- "arResourceCosts": [],
+ "arResourceCosts": [
+  {
+   "__type__": "PowerResourceCost",
+   "__typeHash__": 2616788302,
+   "eType": 3,
+   "tMinRequired": {
+    "value": "SF_25 ? SF_26 : 0",
+    "compiled": "BQAAAB8AAAAAAAAAAAAAAAAAAAAFAAAAIAAAAAAAAAAAAAAAAAAAAAYAAAAAAAAAEAAAAAAAAAA="
+   },
+   "tInitialCost": {
+    "value": "SF_25 ? SF_26 : 0",
+    "compiled": "BQAAAB8AAAAAAAAAAAAAAAAAAAAFAAAAIAAAAAAAAAAAAAAAAAAAAAYAAAAAAAAAEAAAAAAAAAA="
+   },
+   "tChannellingCost": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   }
+  }
+ ],
  "tHealthCost": {
   "value": "0",
   "compiled": "BgAAAAAAAAAAAAAA"
@@ -1698,7 +1716,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "RogueComboPointsEnabled()",
-    "compiled": "AQAAAGIAAAAAAAAA"
+    "compiled": "AQAAAGEAAAAAAAAA"
    }
   },
   {
@@ -1787,6 +1805,30 @@
    "tFormula": {
     "value": "Percent_Bonus_Projectiles_Per_Power#Rogue_Puncture + Percent_Bonus_Projectiles_All",
     "compiled": "BQAAAAAAAAB8AwAATZEFAAAAAAAFAAAAAAAAAHsDAAD+////AAAAAAsAAAAAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "AffixIsEquipped(SNO.Affix.S05_BSK_Generic_004) > 0",
+    "compiled": "BQAAAFkAAACyqx0AAAAAAAAAAAABAAAAJAAAAAYAAAAAAAAACAAAAAAAAAA="
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "Affix.S05_BSK_Generic_004.\"Static Value 1\"",
+    "compiled": "BQAAAGMAAACyqx0AAQAAAAAAAAAAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "1 + Resource_Gain_Bonus_Percent_Per_Power#Rogue_Puncture",
+    "compiled": "BgAAAAAAgD8FAAAAAAAAAKEAAABNkQUAAAAAAAsAAAAAAAAA"
    }
   }
  ],

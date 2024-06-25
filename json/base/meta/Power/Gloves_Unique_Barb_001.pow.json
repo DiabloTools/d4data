@@ -63,7 +63,7 @@
  "unk_4bf03ff": true,
  "tAttackSpeed": {
   "value": "Attacks_Per_Second_Total",
-  "compiled": "BQAAAAAAAADJAAAA/v///wAAAAAAAAAA"
+  "compiled": "BQAAAAAAAADIAAAA/v///wAAAAAAAAAA"
  },
  "unk_6deb090": false,
  "unk_ed2bdad": false,
@@ -459,7 +459,15 @@
   }
  ],
  "unk_6afae78": false,
- "snoClassRequirement": null,
+ "snoClassRequirement": {
+  "__raw__": 169776,
+  "__group__": 74,
+  "__type__": "DT_SNO",
+  "__typeHash__": 2764331143,
+  "__targetFileName__": "base/meta/PlayerClass/Barbarian.pcl",
+  "groupName": "PlayerClass",
+  "name": "Barbarian"
+ },
  "snoSkillRequirement": null,
  "snoItemRequirement": null,
  "snoHeroConditionRequirement": null,
@@ -734,8 +742,8 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "3",
-    "compiled": "BgAAAAAAQEAAAAAA"
+    "value": "3 * SF_4",
+    "compiled": "BgAAAAAAQEAFAAAACgAAAAAAAAAAAAAAAAAAAA0AAAAAAAAA"
    }
   },
   {
@@ -752,6 +760,14 @@
    "tFormula": {
     "value": "Affix.Gloves_Unique_Barb_001.\"Static Value 0\"",
     "compiled": "BQAAAGMAAAC+1AgAAAAAAAAAAAAAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "Min(1.5, 1 + (AoE_Size_Bonus_Per_Power#Barbarian_Whirlwind / 2))",
+    "compiled": "BgAAAAAAwD8GAAAAAACAPwUAAAAAAAAAnAMAAGMmAwAAAAAABgAAAAAAAEAOAAAACwAAAAEAAAAAAAAAAAAAAA=="
    }
   }
  ],

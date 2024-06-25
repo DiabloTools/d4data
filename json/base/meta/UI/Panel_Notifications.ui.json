@@ -176,6 +176,7 @@
      },
      "hOptionalUIWindowStyleFields": {
       "nHeight": 0,
+      "eClipBehavior": 1,
       "nWidth": 0,
       "bEncloseChildren": 1
      }
@@ -206,6 +207,7 @@
         "hOptionalUIControlConsoleInputFields": {}
        },
        "hOptionalUIWindowStyleFields": {
+        "unk_b0ab75a": 0,
         "bEncloseChildren": 1
        }
       }
@@ -264,8 +266,8 @@
           "tMargins": {
            "__type__": "UIMargins",
            "__typeHash__": 501814863,
-           "flLeft": 10,
-           "flTop": 10,
+           "flLeft": 0,
+           "flTop": 0,
            "flRight": 10,
            "flBottom": 10
           }
@@ -297,8 +299,9 @@
             "hOptionalUIControlConsoleInputFields": {}
            },
            "hOptionalUIWindowStyleFields": {
+            "nHeight": 0,
             "nRight": 4,
-            "nMinWidth": 340,
+            "nMinWidth": 341,
             "snoTiledStyle": {
              "__raw__": 513292,
              "__group__": 103,
@@ -310,16 +313,183 @@
             },
             "nLeft": 4,
             "eHorizontalAnchoring": 0,
+            "rgbaTint": {
+             "r": 255,
+             "g": 255,
+             "b": 255,
+             "a": 255
+            },
             "hImageFrame": {
              "__type__": "UIImageHandleReference",
              "__typeHash__": 1797021084,
              "hImageHandle": 0
             },
-            "bEncloseChildren": 1
+            "bEncloseChildren": 1,
+            "nMinHeight": -1
            }
           }
          ],
          "arChildren": [
+          {
+           "__type__": "UIControlTemplate",
+           "__typeHash__": 641859515,
+           "szName": "VFX_UI_Container",
+           "ptInlineStyle": [
+            {
+             "__type__": "UIWindowStyle",
+             "__typeHash__": 506492871,
+             "dwType": 506492871,
+             "dwPad": 0,
+             "hParentStyle": {
+              "__type__": "UIControlHandle",
+              "__typeHash__": 3063971755,
+              "snoUI": null,
+              "szControlName": 0
+             },
+             "unk_441f783": "0",
+             "hOptionalUIControlStyleFields": {
+              "bActive": 1
+             },
+             "tConsoleInput": {
+              "__type__": "UIControlConsoleInput",
+              "__typeHash__": 3089331074,
+              "hOptionalUIControlConsoleInputFields": {}
+             },
+             "hOptionalUIWindowStyleFields": {
+              "nTop": 10,
+              "eClipBehavior": 1,
+              "eVerticalAnchoring": 0,
+              "nMinWidth": 340,
+              "eHorizontalAnchoring": 0,
+              "unk_b0ab75a": 1,
+              "unk_bffade6": 4,
+              "hImageFrame": {
+               "__type__": "UIImageHandleReference",
+               "__typeHash__": 1797021084,
+               "hImageHandle": 0
+              },
+              "eAlphaInheritanceType": 1,
+              "bEncloseChildren": 1,
+              "nMinHeight": 48
+             }
+            }
+           ],
+           "arChildren": [
+            {
+             "__type__": "UIControlTemplate",
+             "__typeHash__": 641859515,
+             "szName": "VFX_UI_Flames",
+             "ptInlineStyle": [
+              {
+               "__type__": "UIRActorStyle",
+               "__typeHash__": 2564089914,
+               "dwType": 2564089914,
+               "dwPad": 0,
+               "hParentStyle": {
+                "__type__": "UIControlHandle",
+                "__typeHash__": 3063971755,
+                "snoUI": null,
+                "szControlName": 0
+               },
+               "unk_441f783": "0",
+               "hOptionalUIControlStyleFields": {
+                "bActive": 1
+               },
+               "tConsoleInput": {
+                "__type__": "UIControlConsoleInput",
+                "__typeHash__": 3089331074,
+                "hOptionalUIControlConsoleInputFields": {}
+               },
+               "hOptionalUIWindowStyleFields": {
+                "nTop": 10,
+                "vecScale": {
+                 "x": 0.800000011920929,
+                 "y": 0.800000011920929
+                },
+                "eClipBehavior": 1,
+                "nMaxWidth": -1,
+                "nMinWidth": 340,
+                "unk_849b3d9": 1,
+                "bEncloseChildren": 1,
+                "nMinHeight": 45,
+                "tOnActivateEffects": [
+                 {
+                  "__type__": "UIEffect",
+                  "__typeHash__": 228221451,
+                  "snoEffectGroup": {
+                   "__raw__": 1954305,
+                   "__group__": 14,
+                   "__type__": "DT_SNO",
+                   "__typeHash__": 2764331143,
+                   "__targetFileName__": "base/meta/EffectGroup/Panel_UI_VFX.efg",
+                   "groupName": "EffectGroup",
+                   "name": "Panel_UI_VFX"
+                  },
+                  "szUIRActorPath": ".VFX_UI_Flames",
+                  "eScaleMethod": 2,
+                  "vecScale": {
+                   "x": 0.800000011920929,
+                   "y": 0.800000011920929
+                  },
+                  "unk_4a73e5": {
+                   "x": -1,
+                   "y": -1
+                  }
+                 }
+                ]
+               },
+               "hOptionalUIRActorStyleFields": {}
+              }
+             ],
+             "arChildren": [],
+             "unk_1cb": []
+            }
+           ],
+           "unk_1cb": []
+          },
+          {
+           "__type__": "UIControlTemplate",
+           "__typeHash__": 641859515,
+           "szName": "VFX_UI_Fire",
+           "ptInlineStyle": [
+            {
+             "__type__": "UIWindowStyle",
+             "__typeHash__": 506492871,
+             "dwType": 506492871,
+             "dwPad": 0,
+             "hParentStyle": {
+              "__type__": "UIControlHandle",
+              "__typeHash__": 3063971755,
+              "snoUI": null,
+              "szControlName": 0
+             },
+             "unk_441f783": "0",
+             "hOptionalUIControlStyleFields": {
+              "bActive": 1
+             },
+             "tConsoleInput": {
+              "__type__": "UIControlConsoleInput",
+              "__typeHash__": 3089331074,
+              "hOptionalUIControlConsoleInputFields": {}
+             },
+             "hOptionalUIWindowStyleFields": {
+              "nMinWidth": 340,
+              "snoMaterial": {
+               "__raw__": 1961180,
+               "__group__": 57,
+               "__type__": "DT_SNO",
+               "__typeHash__": 2764331143,
+               "__targetFileName__": "base/meta/Material/vfx_ui_material_flame.mat",
+               "groupName": "Material",
+               "name": "vfx_ui_material_flame"
+              },
+              "nMinHeight": 60
+             }
+            }
+           ],
+           "arChildren": [],
+           "unk_1cb": []
+          },
           {
            "__type__": "UIControlTemplate",
            "__typeHash__": 641859515,
@@ -346,16 +516,24 @@
               "hOptionalUIControlConsoleInputFields": {}
              },
              "hOptionalUIWindowStyleFields": {
+              "nTop": 0,
               "rgbaForeground": {
                "r": 227,
                "g": 224,
                "b": 217,
                "a": 255
               },
+              "nHeight": 0,
               "eVerticalAnchoring": 1,
               "nMaxWidth": 310,
               "nLeft": 20,
-              "eHorizontalAnchoring": 0
+              "eHorizontalAnchoring": 0,
+              "hImageFrame": {
+               "__type__": "UIImageHandleReference",
+               "__typeHash__": 1797021084,
+               "hImageHandle": 0
+              },
+              "eAlphaInheritanceType": 1
              },
              "tFont": {
               "__type__": "UIControlFont",
@@ -375,9 +553,9 @@
              },
              "hOptionalUITextStyleFields": {
               "flTextPaddingB": 8,
-              "flTextPaddingL": 5,
+              "flTextPaddingL": 25,
               "flTextPaddingR": 15,
-              "flTextPaddingT": 9,
+              "flTextPaddingT": 20,
               "bWordWrap": 1,
               "hText": {
                "__type__": "StringLabelHandleEx",
@@ -398,6 +576,7 @@
               "unk_ad7d5ca": 1,
               "eResizeToFit": 1,
               "eTextJustify": 1,
+              "bUseDropShadow": 1,
               "bTextAllCaps": 1
              }
             }
@@ -467,6 +646,7 @@
              },
              "hOptionalUIWindowStyleFields": {
               "eVerticalAnchoring": 3,
+              "nRight": -4,
               "nWidth": 15,
               "eHorizontalAnchoring": 2,
               "hImageFrame": {
@@ -537,7 +717,7 @@
            },
            "hOptionalUITextStyleFields": {
             "flTextPaddingB": 5,
-            "flTextPaddingL": 10,
+            "flTextPaddingL": 20,
             "flTextPaddingR": 10,
             "bWordWrap": 1,
             "hText": {
@@ -581,7 +761,9 @@
           "szControlName": 0
          },
          "unk_441f783": "0",
-         "hOptionalUIControlStyleFields": {},
+         "hOptionalUIControlStyleFields": {
+          "bActive": 0
+         },
          "tConsoleInput": {
           "__type__": "UIControlConsoleInput",
           "__typeHash__": 3089331074,
@@ -592,6 +774,7 @@
           "eVerticalAnchoring": 3,
           "nWidth": 350,
           "eHorizontalAnchoring": 3,
+          "dwAlpha": 0,
           "bEncloseChildren": 0
          }
         }
@@ -678,8 +861,11 @@
           "hOptionalUIControlConsoleInputFields": {}
          },
          "hOptionalUIWindowStyleFields": {
-          "eClipBehavior": 2,
+          "nHeight": 100,
           "eVerticalAnchoring": 3,
+          "nMaxWidth": -1,
+          "nMinWidth": -1,
+          "nWidth": 350,
           "snoTiledStyle": {
            "__raw__": 603057,
            "__group__": 103,
@@ -689,7 +875,9 @@
            "groupName": "TiledStyle",
            "name": "TooltipFrameLight"
           },
-          "eHorizontalAnchoring": 3
+          "eHorizontalAnchoring": 3,
+          "eAlphaInheritanceType": 0,
+          "nMinHeight": -1
          }
         }
        ],
@@ -854,6 +1042,7 @@
      },
      "hOptionalUIWindowStyleFields": {
       "nHeight": 0,
+      "eClipBehavior": 1,
       "nWidth": 0,
       "bEncloseChildren": 1
      }
@@ -942,8 +1131,8 @@
           "tMargins": {
            "__type__": "UIMargins",
            "__typeHash__": 501814863,
-           "flLeft": 10,
-           "flTop": 10,
+           "flLeft": 0,
+           "flTop": 0,
            "flRight": 10,
            "flBottom": 10
           }
@@ -1053,9 +1242,9 @@
              },
              "hOptionalUITextStyleFields": {
               "flTextPaddingB": 8,
-              "flTextPaddingL": 5,
+              "flTextPaddingL": 25,
               "flTextPaddingR": 15,
-              "flTextPaddingT": 9,
+              "flTextPaddingT": 20,
               "bWordWrap": 1,
               "hText": {
                "__type__": "StringLabelHandleEx",
@@ -1145,6 +1334,7 @@
              },
              "hOptionalUIWindowStyleFields": {
               "eVerticalAnchoring": 3,
+              "nRight": -4,
               "nWidth": 15,
               "eHorizontalAnchoring": 2,
               "hImageFrame": {
@@ -1215,7 +1405,7 @@
            },
            "hOptionalUITextStyleFields": {
             "flTextPaddingB": 5,
-            "flTextPaddingL": 10,
+            "flTextPaddingL": 20,
             "flTextPaddingR": 10,
             "bWordWrap": 1,
             "hText": {
@@ -1266,7 +1456,7 @@
           "hOptionalUIControlConsoleInputFields": {}
          },
          "hOptionalUIWindowStyleFields": {
-          "eClipBehavior": 2,
+          "eClipBehavior": 0,
           "eVerticalAnchoring": 3,
           "snoTiledStyle": {
            "__raw__": 603057,

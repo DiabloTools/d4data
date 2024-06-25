@@ -241,7 +241,7 @@
  "unk_4bf03ff": true,
  "tAttackSpeed": {
   "value": "Attacks_Per_Second_Total * 1.1 * (1 + (Mod.SkillAttackSpeed * SF_12))",
-  "compiled": "BQAAAAAAAADJAAAA/v///wAAAAAGAAAAzcyMPw0AAAAGAAAAAACAPwUAAABaAAAA/////8jd0psAAAAABQAAABIAAAAAAAAAAAAAAAAAAAANAAAACwAAAA0AAAAAAAAA"
+  "compiled": "BQAAAAAAAADIAAAA/v///wAAAAAGAAAAzcyMPw0AAAAGAAAAAACAPwUAAABaAAAA/////8jd0psAAAAABQAAABIAAAAAAAAAAAAAAAAAAAANAAAACwAAAA0AAAAAAAAA"
  },
  "unk_6deb090": false,
  "unk_ed2bdad": false,
@@ -293,7 +293,25 @@
  "unk_5e1a52d": true,
  "bCaptionsInside": false,
  "eShapeshiftForm": 2,
- "arResourceCosts": [],
+ "arResourceCosts": [
+  {
+   "__type__": "PowerResourceCost",
+   "__typeHash__": 2616788302,
+   "eType": 5,
+   "tMinRequired": {
+    "value": "SF_17 ? SF_18 : 0",
+    "compiled": "BQAAABcAAAAAAAAAAAAAAAAAAAAFAAAAGAAAAAAAAAAAAAAAAAAAAAYAAAAAAAAAEAAAAAAAAAA="
+   },
+   "tInitialCost": {
+    "value": "SF_17 ? SF_18 : 0",
+    "compiled": "BQAAABcAAAAAAAAAAAAAAAAAAAAFAAAAGAAAAAAAAAAAAAAAAAAAAAYAAAAAAAAAEAAAAAAAAAA="
+   },
+   "tChannellingCost": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   }
+  }
+ ],
  "tHealthCost": {
   "value": "0",
   "compiled": "BgAAAAAAAAAAAAAA"
@@ -1172,6 +1190,22 @@
    "tFormula": {
     "value": "50",
     "compiled": "BgAAAAAASEIAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "AffixIsEquipped(SNO.Affix.S05_BSK_Generic_004) > 0",
+    "compiled": "BQAAAFkAAACyqx0AAAAAAAAAAAABAAAAJAAAAAYAAAAAAAAACAAAAAAAAAA="
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "Affix.S05_BSK_Generic_004.\"Static Value 1\"",
+    "compiled": "BQAAAGMAAACyqx0AAQAAAAAAAAAAAAAA"
    }
   }
  ],
