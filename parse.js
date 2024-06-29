@@ -18,7 +18,7 @@ let replacedSnos = {};
 let encryptedSnos = {};
 let snoPayloadMap = {};
 let gbid = fs.existsSync('json/GBID.json') ? JSON.parse(fs.readFileSync('json/GBID.json'), null, ' ') : {};
-let readLog = [];
+//let readLog = [];
 let incoming = {};
 let outgoing = {};
 
@@ -264,7 +264,7 @@ function findSnoGroup(id) {
 
 let basicTypes = {
   "DT_BYTE": function (ret, file, typeHashes, offset, field, fieldPath, results = { readLength: 0 }) {
-    readLog.push({fieldPath: fieldPath.join('.') + ' @ ' + offset, value: ret});
+    //readLog.push({fieldPath: fieldPath.join('.') + ' @ ' + offset, value: ret});
     ret.value = file.readUInt8(offset);
     results.readLength += 1;
 
@@ -273,7 +273,7 @@ let basicTypes = {
     }
   },
   "DT_WORD": function (ret, file, typeHashes, offset, field, fieldPath, results = { readLength: 0 }) {
-    readLog.push({fieldPath: fieldPath.join('.') + ' @ ' + offset, value: ret});
+    //readLog.push({fieldPath: fieldPath.join('.') + ' @ ' + offset, value: ret});
     ret.value = file.readUInt16LE(offset);
     results.readLength += 2;
 
@@ -286,7 +286,7 @@ let basicTypes = {
     results.readLength += 4;
   },
   "DT_INT": function (ret, file, typeHashes, offset, field, fieldPath, results = { readLength: 0 }) {
-    readLog.push({fieldPath: fieldPath.join('.') + ' @ ' + offset, value: ret});
+    //readLog.push({fieldPath: fieldPath.join('.') + ' @ ' + offset, value: ret});
     ret.value = file.readInt32LE(offset);
     results.readLength += 4;
 
@@ -295,12 +295,12 @@ let basicTypes = {
     }
   },
   "DT_FLOAT": function (ret, file, typeHashes, offset, field, fieldPath, results = { readLength: 0 }) {
-    readLog.push({fieldPath: fieldPath.join('.') + ' @ ' + offset, value: ret});
+    //readLog.push({fieldPath: fieldPath.join('.') + ' @ ' + offset, value: ret});
     ret.value = file.readFloatLE(offset);
     results.readLength += 4;
   },
   "DT_OPTIONAL": function (ret, file, typeHashes, offset, field, fieldPath, results = { readLength: 0 }) {
-    readLog.push({fieldPath: fieldPath.join('.') + ' @ ' + offset, value: ret});
+    //readLog.push({fieldPath: fieldPath.join('.') + ' @ ' + offset, value: ret});
 
     results.readLength += 4;
     if (file.readInt32LE(offset)) {
@@ -311,7 +311,7 @@ let basicTypes = {
     }
   },
   "DT_SNO": function (ret, file, typeHashes, offset, field, fieldPath, results = { readLength: 0 }) {
-    readLog.push({fieldPath: fieldPath.join('.') + ' @ ' + offset, value: ret});
+    //readLog.push({fieldPath: fieldPath.join('.') + ' @ ' + offset, value: ret});
     results.readLength += 4;
 
     ret.__raw__ = file.readInt32LE(offset);
@@ -347,7 +347,7 @@ let basicTypes = {
     }
   },
   "DT_SNO_NAME": function (ret, file, typeHashes, offset, field, fieldPath, results = { readLength: 0 }) {
-    readLog.push({fieldPath: fieldPath.join('.') + ' @ ' + offset, value: ret});
+    //readLog.push({fieldPath: fieldPath.join('.') + ' @ ' + offset, value: ret});
     results.readLength += 8;
 
     ret.__raw__ = file.readInt32LE(offset + 4);
@@ -383,7 +383,7 @@ let basicTypes = {
     }
   },
   "DT_GBID": function (ret, file, typeHashes, offset, field, fieldPath, results = { readLength: 0 }) {
-    readLog.push({fieldPath: fieldPath.join('.') + ' @ ' + offset, value: ret});
+    //readLog.push({fieldPath: fieldPath.join('.') + ' @ ' + offset, value: ret});
     results.readLength += 4;
 
     ret.__raw__ = file.readUInt32LE(offset);
@@ -403,13 +403,13 @@ let basicTypes = {
     }
   },
   "DT_STARTLOC_NAME": function (ret, file, typeHashes, offset, field, fieldPath, results = { readLength: 0 }) {
-    readLog.push({fieldPath: fieldPath.join('.') + ' @ ' + offset, value: ret});
+    //readLog.push({fieldPath: fieldPath.join('.') + ' @ ' + offset, value: ret});
     ret.value = file.readUInt32LE(offset);
 
     results.readLength += 4;
   },
   "DT_UINT": function (ret, file, typeHashes, offset, field, fieldPath, results = { readLength: 0 }) {
-    readLog.push({fieldPath: fieldPath.join('.') + ' @ ' + offset, value: ret});
+    //readLog.push({fieldPath: fieldPath.join('.') + ' @ ' + offset, value: ret});
     ret.value = file.readUInt32LE(offset);
 
     results.readLength += 4;
@@ -419,19 +419,19 @@ let basicTypes = {
     }
   },
   "DT_ACD_NETWORK_NAME": function (ret, file, typeHashes, offset, field, fieldPath, results = { readLength: 0 }) {
-    readLog.push({fieldPath: fieldPath.join('.') + ' @ ' + offset, value: ret});
+    //readLog.push({fieldPath: fieldPath.join('.') + ' @ ' + offset, value: ret});
     ret.value = file.readBigUInt64LE(offset).toString(16);
 
     results.readLength += 8;
   },
   "DT_SHARED_SERVER_DATA_ID": function (ret, file, typeHashes, offset, field, fieldPath, results = { readLength: 0 }) {
-    readLog.push({fieldPath: fieldPath.join('.') + ' @ ' + offset, value: ret});
+    //readLog.push({fieldPath: fieldPath.join('.') + ' @ ' + offset, value: ret});
     ret.value = file.readBigUInt64LE(offset).toString(16);
 
     results.readLength += 8;
   },
   "DT_INT64": function (ret, file, typeHashes, offset, field, fieldPath, results = { readLength: 0 }) {
-    readLog.push({fieldPath: fieldPath.join('.') + ' @ ' + offset, value: ret});
+    //readLog.push({fieldPath: fieldPath.join('.') + ' @ ' + offset, value: ret});
     ret.value = file.readBigInt64LE(offset).toString(16);
 
     results.readLength += 8;
@@ -441,7 +441,7 @@ let basicTypes = {
     }
   },
   "DT_RANGE": function (ret, file, typeHashes, offset, field, fieldPath, results = { readLength: 0 }) {
-    readLog.push({fieldPath: fieldPath.join('.') + ' @ ' + offset, value: ret});
+    //readLog.push({fieldPath: fieldPath.join('.') + ' @ ' + offset, value: ret});
     let typeSize = getTypeSize(typeHashes.slice(1));
     let subresults = { readLength: 0 };
     ret.rangeValue1 = readStructure.bind(this)(file, typeHashes.slice(1), offset, field, [...fieldPath, 'value1'], subresults);
@@ -449,7 +449,7 @@ let basicTypes = {
     results.readLength += subresults.readLength;
   },
   "DT_FIXEDARRAY": function (ret, file, typeHashes, offset, field, fieldPath, results = { readLength: 0 }) {
-    readLog.push({fieldPath: fieldPath.join('.') + ' @ ' + offset, value: ret});
+    //readLog.push({fieldPath: fieldPath.join('.') + ' @ ' + offset, value: ret});
     ret.value = [];
     results.readLength += 0;
 
@@ -462,7 +462,7 @@ let basicTypes = {
     results.readLength += subresults.readLength;
   },
   "DT_TAGMAP": function (ret, file, typeHashes, offset, field, fieldPath, results = { readLength: 0 }) {
-    readLog.push({fieldPath: fieldPath.join('.') + ' @ ' + offset, value: ret});
+    //readLog.push({fieldPath: fieldPath.join('.') + ' @ ' + offset, value: ret});
     let padding1 = file.readInt32LE(offset);
     let padding2 = file.readInt32LE(offset + 4);
     let dataOffset = file.readInt32LE(offset + 8);
@@ -551,7 +551,7 @@ let basicTypes = {
     }
   },
   "DT_VARIABLEARRAY": function (ret, file, typeHashes, offset, field, fieldPath, results = { readLength: 0 }) {
-    readLog.push({fieldPath: fieldPath.join('.') + ' @ ' + offset, value: ret});
+    //readLog.push({fieldPath: fieldPath.join('.') + ' @ ' + offset, value: ret});
     let padding1 = file.readInt32LE(offset);
     let padding2 = file.readInt32LE(offset + 4);
     let dataOffset = file.readInt32LE(offset + 8);
@@ -618,7 +618,7 @@ let basicTypes = {
     }
   },
   "DT_POLYMORPHIC_VARIABLEARRAY": function (ret, file, typeHashes, offset, field, fieldPath, results = { readLength: 0 }) {
-    readLog.push({fieldPath: fieldPath.join('.') + ' @ ' + offset, value: ret});
+    //readLog.push({fieldPath: fieldPath.join('.') + ' @ ' + offset, value: ret});
 
     let padding1 = file.readInt32LE(offset);
     let padding2 = file.readInt32LE(offset + 4);
@@ -702,7 +702,7 @@ let basicTypes = {
     }
   },
   "DT_STRING_FORMULA": function (ret, file, typeHashes, offset, field, fieldPath, results = { readLength: 0 }) {
-    readLog.push({fieldPath: fieldPath.join('.') + ' @ ' + offset, value: ret});
+    //readLog.push({fieldPath: fieldPath.join('.') + ' @ ' + offset, value: ret});
     let formulaOffset = file.readInt32LE(offset + 8);
     let formulaSize = file.readInt32LE(offset + 12);
     let compiledOffset = file.readInt32LE(offset + 24);
@@ -718,7 +718,7 @@ let basicTypes = {
     ret.compiled = file.subarray(compiledOffset, compiledOffset + compiledSize).toString('base64');
   },
   "DT_CSTRING": function (ret, file, typeHashes, offset, field, fieldPath, results = { readLength: 0 }) {
-    readLog.push({fieldPath: fieldPath.join('.') + ' @ ' + offset, value: ret});
+    //readLog.push({fieldPath: fieldPath.join('.') + ' @ ' + offset, value: ret});
     const padding = file.readBigInt64LE(offset);
     let stringOffset = file.readInt32LE(offset + 8);
     let stringSize = file.readInt32LE(offset + 12);
@@ -747,7 +747,7 @@ let basicTypes = {
     ret.value = file.subarray(stringOffset, stringOffset + stringSize).toString();
   },
   "DT_CHARARRAY": function (ret, file, typeHashes, offset, field, fieldPath, results = { readLength: 0 }) {
-    readLog.push({fieldPath: fieldPath.join('.') + ' @ ' + offset, value: ret});
+    //readLog.push({fieldPath: fieldPath.join('.') + ' @ ' + offset, value: ret});
     let strlen = field.arrayLength;
 
     results.readLength += Math.max(0, field.arrayLength);
@@ -759,7 +759,7 @@ let basicTypes = {
     ret.value = file.subarray(offset, offset + strlen).toString();
   },
   "DT_RGBACOLOR": function (ret, file, typeHashes, offset, field, fieldPath, results = { readLength: 0 }) {
-    readLog.push({fieldPath: fieldPath.join('.') + ' @ ' + offset, value: ret});
+    //readLog.push({fieldPath: fieldPath.join('.') + ' @ ' + offset, value: ret});
     ret.value = {
       r: file.readUInt8(offset),
       g: file.readUInt8(offset + 1),
@@ -770,7 +770,7 @@ let basicTypes = {
     results.readLength += 4;
   },
   "DT_RGBACOLORVALUE": function (ret, file, typeHashes, offset, field, fieldPath, results = { readLength: 0 }) {
-    readLog.push({fieldPath: fieldPath.join('.') + ' @ ' + offset, value: ret});
+    //readLog.push({fieldPath: fieldPath.join('.') + ' @ ' + offset, value: ret});
     ret.value = {
       r: file.readFloatLE(offset),
       g: file.readFloatLE(offset + 4),
@@ -780,7 +780,7 @@ let basicTypes = {
     results.readLength += 16;
   },
   "DT_BCVEC2I": function (ret, file, typeHashes, offset, field, fieldPath, results = { readLength: 0 }) {
-    readLog.push({fieldPath: fieldPath.join('.') + ' @ ' + offset, value: ret});
+    //readLog.push({fieldPath: fieldPath.join('.') + ' @ ' + offset, value: ret});
     ret.value = {
       x: file.readInt32LE(offset),
       y: file.readInt32LE(offset + 4),
@@ -788,7 +788,7 @@ let basicTypes = {
     results.readLength += 8;
   },
   "DT_VECTOR2D": function (ret, file, typeHashes, offset, field, fieldPath, results = { readLength: 0 }) {
-    readLog.push({fieldPath: fieldPath.join('.') + ' @ ' + offset, value: ret});
+    //readLog.push({fieldPath: fieldPath.join('.') + ' @ ' + offset, value: ret});
     ret.value = {
       x: file.readFloatLE(offset),
       y: file.readFloatLE(offset + 4),
@@ -796,7 +796,7 @@ let basicTypes = {
     results.readLength += 8;
   },
   "DT_VECTOR3D": function (ret, file, typeHashes, offset, field, fieldPath, results = { readLength: 0 }) {
-    readLog.push({fieldPath: fieldPath.join('.') + ' @ ' + offset, value: ret});
+    //readLog.push({fieldPath: fieldPath.join('.') + ' @ ' + offset, value: ret});
     ret.value = {
       x: file.readFloatLE(offset),
       y: file.readFloatLE(offset + 4),
@@ -805,7 +805,7 @@ let basicTypes = {
     results.readLength += 12;
   },
   "DT_VECTOR4D": function (ret, file, typeHashes, offset, field, fieldPath, results = { readLength: 0 }) {
-    readLog.push({fieldPath: fieldPath.join('.') + ' @ ' + offset, value: ret});
+    //readLog.push({fieldPath: fieldPath.join('.') + ' @ ' + offset, value: ret});
     ret.value = {
       x: file.readFloatLE(offset),
       y: file.readFloatLE(offset + 4),
@@ -940,7 +940,7 @@ fileNames.forEach((fileName, index) => {
 
   let newFileName = fileName.split('/');
 
-  readLog = [];
+  //readLog = [];
 
   if (newFileName[0] === 'data') {
     newFileName[0] = 'json';
