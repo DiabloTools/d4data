@@ -892,31 +892,48 @@ function readStructure(file, typeHashes, offset, field, fieldPath, results = { r
 }
 
 let fileNames = [];
+let fileNamesGB = [];
 let dirNames = {};
 let success = 0;
 let total = 0;
 
-function getAllFiles(path) {
-  if (fs.existsSync(path)) {
+function getAllFiles(path, files) {
     if (fs.statSync(path).isDirectory()) {
       while (path.slice(-1) === '/') {
         path = path.slice(0, -1);
       }
-  
-      fs.readdirSync(path).forEach((file) => {
-        getAllFiles(path + '/' + file);
-      })
+
+      if (path.endsWith("GameBalance")) {
+        fs.readdirSync(path).forEach((file) => {
+          getAllFiles(path + '/' + file, fileNamesGB);
+        })
+      } else {
+        fs.readdirSync(path).forEach((file) => {
+          getAllFiles(path + '/' + file, files);
+        })
+      }
     }
     else {
-      dirNames[node_path.dirname(path)] = node_path.dirname(path);
-      fileNames.push(path);
+      const dirName = node_path.dirname(path)
+      dirNames[dirName] = dirName;
+      files.push(path);
     }
-  }
 }
 
+console.log("Collecting files...")
 for (let c = 2; c < process.argv.length; c++) {
-  getAllFiles(process.argv[c]);
+  const path = process.argv[c];
+  if (!fs.existsSync(path)) {
+    console.error("Directory '%s' does not exist", path);
+    continue;
+  }
+  getAllFiles(path, fileNames);
 }
+if (fileNames.length == 0 && fileNamesGB.length == 0) {
+  console.error("No files were found in the given directories.");
+  process.exit(1);
+}
+console.log("Collected", fileNames.length + fileNamesGB.length, "files in", Object.keys(dirNames).length, "directories.")
 
 dirNames = Object.values(dirNames);
 
@@ -933,11 +950,7 @@ dirNames.forEach(dirName => {
 
 let gbMap = {};
 
-fileNames.forEach((fileName, index) => {
-  // if (/bad data/gi.test(fileName)) {
-  //   return;
-  // }
-
+function parseFile(fileName, index) {
   let newFileName = fileName.split('/');
 
   //readLog = [];
@@ -1018,7 +1031,10 @@ fileNames.forEach((fileName, index) => {
       err,
     }));
   }
-});
+}
+
+fileNamesGB.forEach(parseFile);
+fileNames.forEach(parseFile);
 
 if (Object.values(gbMap).length) {
   fs.writeFileSync('json/eGameBalanceType.json', JSON.stringify(gbMap, null, ' '));
