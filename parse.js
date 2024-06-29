@@ -1031,7 +1031,26 @@ function parseFile(fileName, index) {
       err,
     }));
   }
+
+  return newFileName;
 }
+
+fileNamesGB.some((fileName, index) => {
+  if (fileName.endsWith("DataAttributes.gam")) {
+    const newFileName = parseFile(fileName, index);
+    const dataAttributes = JSON.parse(fs.readFileSync(newFileName), null, ' ');
+    const entries = dataAttributes.ptData[0].tEntries;
+    entries.forEach((attrib) => {
+      // convert to int32
+      const attribKey = attrib.nDataAttribKey >> 0;
+      attributes[attribKey] = {
+        "eAttrib": attribKey,
+        "name": attrib.szName
+      };
+    });
+    return true;
+  }
+});
 
 fileNamesGB.forEach(parseFile);
 fileNames.forEach(parseFile);
