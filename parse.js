@@ -195,24 +195,6 @@ function getType (hash) {
   return definitions[hash];
 }
 
-function getTypeSize (type) {
-  if (!type) {
-    return null;
-  }
-
-  if (!Array.isArray(type)) {
-    type = [type];
-  }
-
-  let typeDef = getType(type[0]);
-
-  if (typeDef.size !== null) {
-    return typeDef.size;
-  }
-
-  return getTypeSize(type.slice(1));
-}
-
 function getBasicTypeAlignment (typeDef, typeHashes, inTagMap = false) {
   switch(typeDef.hash) {
     case 1683664497: // DT_POLYMORPHIC_VARIABLEARRAY
@@ -442,7 +424,6 @@ let basicTypes = {
   },
   "DT_RANGE": function (ret, file, typeHashes, offset, field, fieldPath, results = { readLength: 0 }) {
     //readLog.push({fieldPath: fieldPath.join('.') + ' @ ' + offset, value: ret});
-    let typeSize = getTypeSize(typeHashes.slice(1));
     let subresults = { readLength: 0 };
     ret.rangeValue1 = readStructure.bind(this)(file, typeHashes.slice(1), offset, field, [...fieldPath, 'value1'], subresults);
     ret.rangeValue2 = readStructure.bind(this)(file, typeHashes.slice(1), offset + subresults.readLength, field, [...fieldPath, 'value2'], subresults);
