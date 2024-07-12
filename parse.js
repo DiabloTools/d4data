@@ -950,6 +950,35 @@ dirNames.forEach(dirName => {
 
 let gbMap = {};
 
+function collectGameBalanceReferences(fileName, index) {
+  try {
+    let file = fs.readFileSync(fileName);
+
+    if (file.length >= 16) {
+      const header = file.subarray(0, 16);
+
+      file = file.subarray(16);
+
+      const dwSignature = header.readUInt32LE(0);
+
+      if (dwSignature === 0xdeadbeef) {
+        let globals = {
+          test: true,
+        };
+
+        const data = readStructure.bind(globals)(file, [getTypeHashFromFormatHash(header.readUInt32LE(4))], 0, null, [fileName]);
+
+        if (!Object.keys(data).length) {
+          debugger;
+        }
+      }
+    }
+  } catch (err) {
+    console.error('Error parsing #' + index, fileName);
+    console.error(err);
+  }
+}
+
 function parseFile(fileName, index) {
   let newFileName = fileName.split('/');
 
@@ -1052,6 +1081,7 @@ fileNamesGB.some((fileName, index) => {
   }
 });
 
+fileNamesGB.forEach(collectGameBalanceReferences);
 fileNamesGB.forEach(parseFile);
 fileNames.forEach(parseFile);
 
