@@ -566,6 +566,8 @@ arPieces
 arPlatforms
 arPlayStyle
 arPlayedFlags
+arPlayerFoleyOverridePreloadHelpers
+arPlayerStoreEmoteAnimPreloadHelpers
 arPointGroups
 arPoints
 arPointsPerDataType
@@ -693,6 +695,7 @@ arStaticOptions
 arStaticValues
 arSteps
 arStoreAnimSets
+arStoreCountrySpecificData
 arStoreDisclaimerData
 arStrings
 arSubParams
@@ -787,6 +790,8 @@ bAcceptsReturn
 bAccountBound
 bActive
 bAffectChildren
+bAffectNPCs
+bAffectsRagdoll
 bAimedPower
 bAllArsenalSlot
 bAllowSwapping
@@ -869,6 +874,7 @@ bFadeAtEnd
 bFadeAtStart
 bFemale
 bFirstLine
+bFirstProjectileOnly
 bForce
 bForceCast
 bForceControllerIcons
@@ -934,6 +940,7 @@ bInvertCameraY
 bInvertPan
 bInvisibleDuring
 bInvulnerableDuring
+bIsAccountNewUserSurvey
 bIsAdding
 bIsApproachPower
 bIsAutoAssign
@@ -1069,18 +1076,24 @@ bShowPortrait
 bShowPreviewText
 bShowReputationOverlay
 bShown
+bShowsActiveStateOnHotbar
+bShowsDurationOnHotbar
+bShowsStackCountOnHotbar
 bShrinkToFit
+bSingleAffixElitePrefix
 bSingleTest
 bSnap
 bSnapFacing
 bSnapToTarget
 bSpecificPetTypes
+bStackPerSource
 bStartImmediately
 bStash
 bStaticActor
 bSubMenu
 bSuccess
 bTargetAlive
+bTargetAreaDebugDraw
 bTargetFullFamily
 bTargetGroundOnly
 bTextAllCaps
@@ -1118,6 +1131,7 @@ bValid
 bVelocityCamera
 bVertical
 bVisible
+bVisibleInHotbarUI
 bVisibleInUI
 bVsync
 bWalksCloserIfOutOfRange
@@ -1252,6 +1266,7 @@ dwEntranceName
 dwEntranceNameToFind
 dwEventEntryHash
 dwExperience
+dwExperienceToNextLevel
 dwExplosionChannel
 dwFaceCount
 dwFeatureFlags
@@ -1679,6 +1694,8 @@ eGraphType
 eGroup
 eGroupImportance
 eGroupType
+eHWClass
+eHWPlatform
 eHairState
 eHairStateGenderOverride
 eHealType
@@ -1699,6 +1716,7 @@ eIQL
 eIQM
 eIcon
 eId
+eImageFitType
 eIndicatorType
 eIndices
 eInstanceQuestType
@@ -2062,6 +2080,7 @@ fFastMovementUpdate
 fFemale
 fFlatten
 fFloatingWorldMarker
+fForceHasMount
 fForceMinimapIcon
 fFrondRippleLightingScalar
 fFrondRippleTile
@@ -2091,6 +2110,7 @@ fHasGraph
 fHasService
 fHasZoneMap
 fHealer
+fHealerVendorNPCPowerCooldown
 fHeight
 fHidden
 fHiddenFromUI
@@ -2098,7 +2118,11 @@ fHiddenMapIcon
 fHiddenUntilUnlocked
 fHideFaceMarking
 fHideFollowerArchetype
+fHideHasMount
 fHideIdles
+fHidePortrayal
+fHideRoutine
+fHideWeaponClass
 fHighQuality
 fHotbarAssignable
 fHugsGround
@@ -2212,6 +2236,11 @@ fRollingBranchFieldMin
 fRollingBranchLightingAdjust
 fRollingBranchRipple
 fRollingBranchVerticalOffset
+fRollingNoisePeriod
+fRollingNoiseSize
+fRollingNoiseSpeed
+fRollingNoiseTurbulence
+fRollingNoiseTwist
 fRunAnimWhenScared
 fScaleUVsToFrame
 fScaredOfPlayers
@@ -2327,6 +2356,7 @@ flAttributesRunSpeed
 flAttributesSlideSpeed
 flAttributesWalkSpeed
 flAuxBusGain
+flBackgroundGlint
 flBackgroundInnerRadius
 flBase
 flBaseOverpowerDamageBonus
@@ -2364,6 +2394,10 @@ flBonusPercentage
 flBorderStrength
 flBorderWidth
 flBossCameraActivationRadius
+flBossCameraBiasDistanceMax
+flBossCameraBiasDistanceMin
+flBossCameraBiasFromPlayerMax
+flBossCameraBiasFromPlayerMin
 flBossCameraMaxMoveRatePerSecond
 flBossCameraSmoothing
 flBossMonsterAdditionalHealthPerPlayer
@@ -2575,6 +2609,7 @@ flFloatingDamageAmountAverage
 flFloatingDamageAmountMax
 flFloatingDamageAmountMin
 flFloatingDamageTextBossBonusScale
+flFloatingDamageTextEliteOffset
 flFloatingDamageTextScaleAverage
 flFloatingDamageTextScaleMax
 flFloatingDamageTextScaleMin
@@ -2611,6 +2646,7 @@ flGizmoOperateOffset
 flGizmoUseTime
 flGlobalCooldownSeconds
 flGlobalOverpowerDamageMultiplier
+flGoldLossPercent
 flGravityMagnitude
 flGravityMultiplier
 flGravityPadding
@@ -2702,6 +2738,7 @@ flLethalExplosionMagnitude
 flLifeStealMultiplier
 flLiftFactor
 flLight
+flLightDirectIntensityScale
 flLightInfluenceThreshold
 flLightningAltitude
 flLightningAzimuth
@@ -2899,6 +2936,7 @@ flPlayerInteractAngle
 flPlayerPowerCacheTimeoutCrowdControlled
 flPlayerPowerCacheTimeoutInterrupt
 flPlayerPowerCacheTimeoutNormal
+flPlayerPowerCacheTimeoutSamePower
 flPoseFrame
 flPostDeathPowerChance
 flPowerAnimSpeed
@@ -3257,6 +3295,7 @@ grid
 hAcquisitionDescription
 hAddOnDetailsScreenImage
 hBackground
+hBackgroundTileImage
 hBkgrnd
 hBorder
 hBottomBorder
@@ -3326,6 +3365,7 @@ hIconNormal
 hIconNotification
 hIconOverride
 hIconPushed
+hIconRepresentation
 hIconRound
 hIconSelected
 hIconTooltip
@@ -3450,6 +3490,7 @@ hPortraitImage
 hProgressBackgroundImage
 hProgressFillLineImage
 hProgressForegroundImage
+hPurchaseCompleteDisclaimer
 hRadioButtonImageFrame
 hRadioButtonImageFrameMouseOver
 hRadioButtonImagePressed
@@ -3653,6 +3694,8 @@ nAffixItemEquipPower
 nAffixStringListIndex
 nAffixesAdjustment
 nAmount
+nAncestralIPowerMax
+nAncestralIPowerMin
 nAppearanceIndex
 nApplyCountDelta
 nApplyCountMin
@@ -3727,6 +3770,7 @@ nDefaultIntValue
 nDefaultString
 nDefaultTab
 nDefaultValue
+nDefaultZoomBreakpoint
 nDegrade
 nDeltaXP
 nDepth
@@ -3904,6 +3948,7 @@ nMaxPoints
 nMaxPrimitives
 nMaxRecentAchievements
 nMaxRefundCost
+nMaxSkillLevel
 nMaxStackSize
 nMaxWidth
 nMetaDataCount
@@ -3911,6 +3956,7 @@ nMin
 nMinHeight
 nMinLevel
 nMinLevelReq
+nMinMaxBehavior
 nMinWidth
 nMinimum
 nMinimumAncestralRequiredLevel
@@ -4008,6 +4054,8 @@ nRoomCountDelta
 nRoomCountMax
 nRoomCountMin
 nRopeType
+nSacredIPowerMax
+nSacredIPowerMin
 nSamples
 nSavePointNumber
 nScalarFunction
@@ -4029,6 +4077,7 @@ nSkinColorIndex
 nSlot
 nSlotMaxY
 nSlotMinY
+nSlotOffsetY
 nSlotX
 nSlotY
 nSlots
@@ -4036,6 +4085,7 @@ nSnapshotIndex
 nSocketIndex
 nSortOrder
 nSortPri
+nSortPriOffset
 nSortPriority
 nSortPriorityOffset
 nSourcePermutationId
@@ -4587,6 +4637,7 @@ q16
 qInitialOrientation
 qRot
 qRotationOffset
+qSSOrientationOffset
 qSkylightTexRotation
 qTextureRotation
 qTwistAxis
@@ -4619,6 +4670,7 @@ rgbaColor
 rgbaColorAdd
 rgbaColorMul
 rgbaColors
+rgbaColors2
 rgbaDebugColor
 rgbaDropShadow
 rgbaDropShadowHighlight
@@ -4677,6 +4729,7 @@ rgbaThresholdColor
 rgbaTint
 rgbaUIDisplayColor
 rgbaVignetteColor
+rgbaWardrobeColorSwatch
 rgbavalAvgColor
 rgbavalMaxColor
 rgbavalMinColor
@@ -5105,6 +5158,7 @@ snoMusicOverride
 snoMythicGreaterAffixLandSoundEffect
 snoMythicLandSoundEffect
 snoMythicPickupEffect
+snoNMDPortalCosmetic
 snoNPCBarefootLandSoundTable
 snoNPCBarefootRunSoundTable
 snoNPCBarefootSlideSoundTable
@@ -5925,6 +5979,7 @@ tCrowdControl
 tCurrency
 tCurrencyConfiguration
 tCustomCollFlags
+tCustomEnabledYaw
 tCustomization
 tCustomizationData
 tCustomizedPreview
@@ -5964,6 +6019,8 @@ tDimension2
 tDimension3
 tDimension4
 tDimension5
+tDisabledInnerPitch
+tDisabledInnerYaw
 tDisplayTimes
 tDropRange
 tDruidData
@@ -5982,6 +6039,7 @@ tElements
 tElevationMovementSpeed
 tEmblemIcon
 tEmitterParams
+tEmotePowerAnims
 tEnchantAffixChoices
 tEnchantSkills
 tEnchantementCostFormula
