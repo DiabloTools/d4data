@@ -134,8 +134,8 @@
  },
  "unk_6deb090": false,
  "unk_ed2bdad": false,
- "bOverkillStacked": false,
- "unk_7a86b64": false,
+ "bOverkillStacked": true,
+ "unk_7a86b64": true,
  "eDamageType": 5,
  "unk_752edeb": false,
  "tCombatEffectChance": {
@@ -182,7 +182,25 @@
  "unk_5e1a52d": true,
  "bCaptionsInside": false,
  "eShapeshiftForm": -1,
- "arResourceCosts": [],
+ "arResourceCosts": [
+  {
+   "__type__": "PowerResourceCost",
+   "__typeHash__": 2616788302,
+   "eType": 6,
+   "tMinRequired": {
+    "value": "SF_16 ? SF_17 : 0",
+    "compiled": "BQAAABYAAAAAAAAAAAAAAAAAAAAFAAAAFwAAAAAAAAAAAAAAAAAAAAYAAAAAAAAAEAAAAAAAAAA="
+   },
+   "tInitialCost": {
+    "value": "SF_16 ? SF_17 : 0",
+    "compiled": "BQAAABYAAAAAAAAAAAAAAAAAAAAFAAAAFwAAAAAAAAAAAAAAAAAAAAYAAAAAAAAAEAAAAAAAAAA="
+   },
+   "tChannellingCost": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   }
+  }
+ ],
  "tHealthCost": {
   "value": "0",
   "compiled": "BgAAAAAAAAAAAAAA"
@@ -726,7 +744,8 @@
      "value": "0",
      "compiled": "BgAAAAAAAAAAAAAA"
     }
-   }
+   },
+   "dwShaderMapOverride": 4294967295
   },
   {
    "__type__": "PowerBuffDefinition",
@@ -824,7 +843,8 @@
      "value": "0",
      "compiled": "BgAAAAAAAAAAAAAA"
     }
-   }
+   },
+   "dwShaderMapOverride": 4294967295
   },
   {
    "__type__": "PowerBuffDefinition",
@@ -922,7 +942,8 @@
      "value": "0",
      "compiled": "BgAAAAAAAAAAAAAA"
     }
-   }
+   },
+   "dwShaderMapOverride": 4294967295
   },
   {
    "__type__": "PowerBuffDefinition",
@@ -1020,7 +1041,8 @@
      "value": "0",
      "compiled": "BgAAAAAAAAAAAAAA"
     }
-   }
+   },
+   "dwShaderMapOverride": 4294967295
   },
   {
    "__type__": "PowerBuffDefinition",
@@ -1118,7 +1140,8 @@
      "value": "0",
      "compiled": "BgAAAAAAAAAAAAAA"
     }
-   }
+   },
+   "dwShaderMapOverride": 4294967295
   },
   {
    "__type__": "PowerBuffDefinition",
@@ -1216,7 +1239,8 @@
      "value": "0",
      "compiled": "BgAAAAAAAAAAAAAA"
     }
-   }
+   },
+   "dwShaderMapOverride": 4294967295
   }
  ],
  "nFormulaCount": 0,
@@ -1322,7 +1346,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Attacks_Per_Second_Total - (Attacks_Per_Second_Total * 0.2)",
-    "compiled": "BQAAAAAAAADJAAAA/v///wAAAAAFAAAAAAAAAMkAAAD+////AAAAAAYAAADNzEw+DQAAAAwAAAAAAAAA"
+    "compiled": "BQAAAAAAAADIAAAA/v///wAAAAAFAAAAAAAAAMgAAAD+////AAAAAAYAAADNzEw+DQAAAAwAAAAAAAAA"
    }
   },
   {
@@ -1337,8 +1361,8 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "50/3",
-    "compiled": "BgAAAFVVhUEAAAAA"
+    "value": "30",
+    "compiled": "BgAAAAAA8EEAAAAA"
    }
   },
   {
@@ -1347,6 +1371,22 @@
    "tFormula": {
     "value": "3",
     "compiled": "BgAAAAAAQEAAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "AffixIsEquipped(SNO.Affix.S05_BSK_Generic_004) > 0",
+    "compiled": "BQAAAFkAAACyqx0AAAAAAAAAAAABAAAAJAAAAAYAAAAAAAAACAAAAAAAAAA="
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "Affix.S05_BSK_Generic_004.\"Static Value 1\"",
+    "compiled": "BQAAAGMAAACyqx0AAQAAAAAAAAAAAAAA"
    }
   }
  ],

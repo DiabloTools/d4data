@@ -118,7 +118,7 @@
  "unk_4bf03ff": true,
  "tAttackSpeed": {
   "value": "Attacks_Per_Second_Total",
-  "compiled": "BQAAAAAAAADJAAAA/v///wAAAAAAAAAA"
+  "compiled": "BQAAAAAAAADIAAAA/v///wAAAAAAAAAA"
  },
  "unk_6deb090": false,
  "unk_ed2bdad": false,
@@ -146,7 +146,25 @@
  "unk_5e1a52d": true,
  "bCaptionsInside": false,
  "eShapeshiftForm": -1,
- "arResourceCosts": [],
+ "arResourceCosts": [
+  {
+   "__type__": "PowerResourceCost",
+   "__typeHash__": 2616788302,
+   "eType": 1,
+   "tMinRequired": {
+    "value": "SF_22 ? SF_23 : 0",
+    "compiled": "BQAAABwAAAAAAAAAAAAAAAAAAAAFAAAAHQAAAAAAAAAAAAAAAAAAAAYAAAAAAAAAEAAAAAAAAAA="
+   },
+   "tInitialCost": {
+    "value": "SF_22 ? SF_23 : 0",
+    "compiled": "BQAAABwAAAAAAAAAAAAAAAAAAAAFAAAAHQAAAAAAAAAAAAAAAAAAAAYAAAAAAAAAEAAAAAAAAAA="
+   },
+   "tChannellingCost": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   }
+  }
+ ],
  "tHealthCost": {
   "value": "0",
   "compiled": "BgAAAAAAAAAAAAAA"
@@ -164,8 +182,8 @@
   "compiled": "BQAAAA4AAAAAAAAAAAAAAAAAAAAFAAAACgAAAAAAAAAAAAAAAAAAAAYAAAAAAAAAEAAAAAAAAAA="
  },
  "tCooldownTime": {
-  "value": "SF_9 ? SF_4 : 0.25",
-  "compiled": "BQAAAA8AAAAAAAAAAAAAAAAAAAAFAAAACgAAAAAAAAAAAAAAAAAAAAYAAAAAAIA+EAAAAAAAAAA="
+  "value": "SF_22 ? 0 : (SF_9 ? SF_4 : 0.25)",
+  "compiled": "BQAAABwAAAAAAAAAAAAAAAAAAAAGAAAAAAAAAAUAAAAPAAAAAAAAAAAAAAAAAAAABQAAAAoAAAAAAAAAAAAAAAAAAAAGAAAAAACAPhAAAAAQAAAAAAAAAA=="
  },
  "tResourceCostReductionCoefficient": {
   "value": "1",
@@ -690,7 +708,8 @@
      "value": "0",
      "compiled": "BgAAAAAAAAAAAAAA"
     }
-   }
+   },
+   "dwShaderMapOverride": 4294967295
   },
   {
    "__type__": "PowerBuffDefinition",
@@ -788,7 +807,8 @@
      "value": "0",
      "compiled": "BgAAAAAAAAAAAAAA"
     }
-   }
+   },
+   "dwShaderMapOverride": 4294967295
   }
  ],
  "nFormulaCount": 0,
@@ -813,8 +833,8 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "3 * SF_22",
-    "compiled": "BgAAAAAAQEAFAAAAHAAAAAAAAAAAAAAAAAAAAA0AAAAAAAAA"
+    "value": "3 * SF_26",
+    "compiled": "BgAAAAAAQEAFAAAAIAAAAAAAAAAAAAAAAAAAAA0AAAAAAAAA"
    }
   },
   {
@@ -861,16 +881,16 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "SF_10 ? 1 : 0",
-    "compiled": "BQAAABAAAAAAAAAAAAAAAAAAAAAGAAAAAACAPwYAAAAAAAAAEAAAAAAAAAA="
+    "value": "SF_22 ? 0 : (SF_10 ? 1 : 0)",
+    "compiled": "BQAAABwAAAAAAAAAAAAAAAAAAAAGAAAAAAAAAAUAAAAQAAAAAAAAAAAAAAAAAAAABgAAAAAAgD8GAAAAAAAAABAAAAAQAAAAAAAAAA=="
    }
   },
   {
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "SF_10 ? 0 : 1",
-    "compiled": "BQAAABAAAAAAAAAAAAAAAAAAAAAGAAAAAAAAAAYAAAAAAIA/EAAAAAAAAAA="
+    "value": "SF_22 ? 0 : (SF_10 ? 0 : 1)",
+    "compiled": "BQAAABwAAAAAAAAAAAAAAAAAAAAGAAAAAAAAAAUAAAAQAAAAAAAAAAAAAAAAAAAABgAAAAAAAAAGAAAAAACAPxAAAAAQAAAAAAAAAA=="
    }
   },
   {
@@ -934,7 +954,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Affix_Value_1#2HMace_Unique_Barb_100/100 * SF_0",
-    "compiled": "BQAAAAAAAAAYBAAAptQIAAAAAAAGAAAAAADIQg4AAAAFAAAABgAAAAAAAAAAAAAAAAAAAA0AAAAAAAAA"
+    "compiled": "BQAAAAAAAAAZBAAAptQIAAAAAAAGAAAAAADIQg4AAAAFAAAABgAAAAAAAAAAAAAAAAAAAA0AAAAAAAAA"
    }
   },
   {
@@ -966,7 +986,39 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "GetBonusMaxChargesForPower(SNO.Power.Barbarian_DeathBlow)",
-    "compiled": "BQAAAFkAAAAh7gQAAAAAAAAAAAABAAAAbwAAAAAAAAA="
+    "compiled": "BQAAAFkAAAAh7gQAAAAAAAAAAAABAAAAbgAAAAAAAAA="
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "AffixIsEquipped(SNO.Affix.S05_BSK_Barbarian_002) == 1",
+    "compiled": "BQAAAFkAAACoaB0AAAAAAAAAAAABAAAAJAAAAAYAAAAAAIA/CQAAAAAAAAA="
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "PowerTag.S05_BSK_Barbarian_002.\"Script Formula 3\" - (SF_24 * Max(SF_10-1, 0))",
+    "compiled": "BQAAAAUAAACqaB0AAwAAAAAAAAAFAAAAHgAAAAAAAAAAAAAAAAAAAAUAAAAQAAAAAAAAAAAAAAAAAAAABgAAAAAAgD8MAAAABgAAAAAAAAABAAAAAQAAAA0AAAAMAAAAAAAAAA=="
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "Affix_Value_2#S05_BSK_Barbarian_002",
+    "compiled": "BQAAAAAAAAAaBAAAqGgdAAAAAAAAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "AffixIsEquipped(SNO.Affix.S05_BSK_Barbarian_002) == 0",
+    "compiled": "BQAAAFkAAACoaB0AAAAAAAAAAAABAAAAJAAAAAYAAAAAAAAACQAAAAAAAAA="
    }
   },
   {
@@ -974,7 +1026,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Min(1.5, 1 + (AoE_Size_Bonus_Per_Power#Barbarian_DeathBlow / 2))",
-    "compiled": "BgAAAAAAwD8GAAAAAACAPwUAAAAAAAAAmwMAACHuBAAAAAAABgAAAAAAAEAOAAAACwAAAAEAAAAAAAAAAAAAAA=="
+    "compiled": "BgAAAAAAwD8GAAAAAACAPwUAAAAAAAAAnAMAACHuBAAAAAAABgAAAAAAAEAOAAAACwAAAAEAAAAAAAAAAAAAAA=="
    }
   }
  ],

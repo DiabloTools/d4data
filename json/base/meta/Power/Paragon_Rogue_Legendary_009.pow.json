@@ -63,7 +63,7 @@
  "unk_4bf03ff": true,
  "tAttackSpeed": {
   "value": "Attacks_Per_Second_Total",
-  "compiled": "BQAAAAAAAADJAAAA/v///wAAAAAAAAAA"
+  "compiled": "BQAAAAAAAADIAAAA/v///wAAAAAAAAAA"
  },
  "unk_6deb090": false,
  "unk_ed2bdad": false,
@@ -619,7 +619,8 @@
      "value": "0",
      "compiled": "BgAAAAAAAAAAAAAA"
     }
-   }
+   },
+   "dwShaderMapOverride": 4294967295
   },
   {
    "__type__": "PowerBuffDefinition",
@@ -717,7 +718,8 @@
      "value": "0",
      "compiled": "BgAAAAAAAAAAAAAA"
     }
-   }
+   },
+   "dwShaderMapOverride": 4294967295
   }
  ],
  "nFormulaCount": 0,
@@ -735,7 +737,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "2/15 * 100 * ParagonPowerBudgetMultiplierNodeLegendary()",
-    "compiled": "BgAAAAAAAEAGAAAAAABwQQ4AAAAGAAAAAADIQg0AAAABAAAAVQAAAA0AAAAAAAAA"
+    "compiled": "BgAAAAAAAEAGAAAAAABwQQ4AAAAGAAAAAADIQg0AAAABAAAAVAAAAA0AAAAAAAAA"
    }
   },
   {
@@ -743,7 +745,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Dodge_Chance_Bonus*(1-Dodge_Chance_Reduction_Percent)+Dodge_Chance_Bonus_Additive+Core_Stat_Dodge_Chance_Bonus",
-    "compiled": "BQAAAAAAAAAnAQAA/v///wAAAAAGAAAAAACAPwUAAAAAAAAALgEAAP7///8AAAAADAAAAA0AAAAFAAAAAAAAACsBAAD+////AAAAAAsAAAAFAAAAAAAAACgBAAD+////AAAAAAsAAAAAAAAA"
+    "compiled": "BQAAAAAAAAAmAQAA/v///wAAAAAGAAAAAACAPwUAAAAAAAAALQEAAP7///8AAAAADAAAAA0AAAAFAAAAAAAAACoBAAD+////AAAAAAsAAAAFAAAAAAAAACcBAAD+////AAAAAAsAAAAAAAAA"
    }
   },
   {
@@ -751,7 +753,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Dodge_Chance_Bonus_Melee",
-    "compiled": "BQAAAAAAAAApAQAA/v///wAAAAAAAAAA"
+    "compiled": "BQAAAAAAAAAoAQAA/v///wAAAAAAAAAA"
    }
   },
   {
@@ -759,7 +761,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Dodge_Chance_Bonus_Ranged",
-    "compiled": "BQAAAAAAAAAqAQAA/v///wAAAAAAAAAA"
+    "compiled": "BQAAAAAAAAApAQAA/v///wAAAAAAAAAA"
    }
   },
   {
@@ -782,8 +784,16 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "Damage_Percent_Bonus_Per_Skill_Tag#Skill_Primary_Core * SF_6",
-    "compiled": "BQAAAAAAAADiAAAACuLxqAAAAAAFAAAADAAAAAAAAAAAAAAAAAAAAA0AAAAAAAAA"
+    "value": "Min(SF_8, Damage_Percent_Bonus_Per_Skill_Tag#Skill_Primary_Core * SF_6)",
+    "compiled": "BQAAAA4AAAAAAAAAAAAAAAAAAAAFAAAAAAAAAOEAAAAK4vGoAAAAAAUAAAAMAAAAAAAAAAAAAAAAAAAADQAAAAEAAAAAAAAAAAAAAA=="
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "0.35",
+    "compiled": "BgAAADQzsz4AAAAA"
    }
   }
  ],

@@ -15,21 +15,21 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "desc",
-   "szText": "{c_label}Cooldown:{/c_label} {c_resource}{Cooldown Time}{/c_resource} seconds\r\nThrow a smoky concoction at enemies that {c_important}{u}Dazes{/u}{/c} them for {c_number}{buffduration:SMOKE_BLINDNESS}{/c} seconds.",
+   "szText": "{c_label}Cooldown:{/c_label} {c_resource}{Cooldown Time}{/c_resource} seconds\r\n{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat Effect Chance}|%|]{/c}\r\n{/if}Throw a smoky concoction at enemies that deals {c_number}{payload:SMOKE_PAYLOAD}{/c} damage and {c_important}{u}Dazes{/u}{/c} them for {c_number}{buffduration:SMOKE_BLINDNESS}{/c} seconds.",
    "hLabel": 3707583
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "rankup_desc",
-   "szText": "\r\n{icon:bullet,1.2} {c_important}{u}Daze{/u}{/c} Duration {icon:arrow,1.2} {c_number}{buffduration:SMOKE_BLINDNESS}{/c} seconds",
+   "szText": "\r\n{icon:bullet,1.2} Damage {icon:arrow,1.2} {c_number}{if:Mod.UpgradeB}{payload:POISON_PAYLOAD}{else}{payload:SMOKE_PAYLOAD}{/if}{/c}\r\n{icon:bullet,1.2} Cooldown {icon:arrow,1.2} {c_number}{Cooldown Time}{/c} seconds.",
    "hLabel": 4074074671
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod0_Description",
-   "szText": "Enemies affected by {c_important}Smoke Grenade{/c} take {c_number}[{SF_6}*100|%x|]{/c} increased damage from you.",
+   "szText": "Enemies hit by {c_important}Smoke Grenade{/c} take {c_number}[{SF_6}*100|%x|]{/c} increased damage from you for {c_number}{SF_20}{/c} seconds.",
    "hLabel": 3591940403
   },
   {
@@ -43,7 +43,7 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod2_Description",
-   "szText": "{c_label}Lucky Hit:{/c} Dealing direct damage to enemies affected by {c_important}Smoke Grenade{/c} has up to a {c_number}{SF_7}%{/c} chance to reduce its Cooldown by {c_number}{SF_11}{/c} second, or by {c_number}{SF_12}{/c} seconds instead if the enemy is {c_important}{u}Vulnerable{/u}{/c}.",
+   "szText": "Hitting an Elite or Boss with your {c_important}Smoke Grenade{/c} reduces its Cooldown by {c_number}{SF_11}{/c} seconds.",
    "hLabel": 1960229941
   },
   {
@@ -57,7 +57,7 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod3_Description",
-   "szText": "If an enemy is {c_important}{u}Vulnerable{/u}{/c}, Slowed, or {c_important}{u}Chilled{/u}{/c} then {c_important}Smoke Grenade{/c} will {c_important}{u}Daze{/u}{/c} them for {c_number}[{SF_8}*100|%x|]{/c} longer.",
+   "szText": "{c_important}Smoke Grenade{/c} now deals Poison damage and applies another {c_number}{payload:POISON_PAYLOAD}{/c} Poisoning damage over {c_number}{SF_21}{/c} seconds.",
    "hLabel": 3291858358
   },
   {

@@ -15,7 +15,7 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "desc",
-   "szText": "{c_label}Energy Cost:{/c_label} {c_resource}{Resource Cost}{/c_resource}\r\n{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat Effect Chance}|%|]{/c}\r\n{/if}Unleash a flurry of stabs and slashes, striking enemies in front of you {c_number}{SF_2}{/c} times and dealing a total of {c_number}{payload:DAMAGE_TOOLTIP}{/c} damage to each.{if:SF_12}\r\n\r\n{c_important}Combo Points{/c} increase damage and grant an Attack Speed bonus for {c_number}{SF_11}{/c} seconds.\r\n{icon:bullet,1.2} {c_label}1 Point:{/c} {c_number}{payload:DAMAGE_TOOLTIP_1CP}{/c} damage, {c_number}[{SF_10}*100|%+|]{/c} bonus\r\n{icon:bullet,1.2} {c_label}2 Points:{/c} {c_number}{payload:DAMAGE_TOOLTIP_2CP}{/c} damage, {c_number}[2*{SF_10}*100|%+|]{/c} bonus\r\n{icon:bullet,1.2} {c_label}3 Points:{/c} {c_number}{payload:DAMAGE_TOOLTIP_3CP}{/c} damage, {c_number}[3*{SF_10}*100*{SF_22}|%+|]{/c} bonus{/if}",
+   "szText": "{c_label}Energy Cost:{/c_label} {c_resource}{Resource Cost}{/c_resource}\r\n{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat Effect Chance}|%|]{/c}\r\n{/if}Unleash a flurry of stabs and slashes, striking enemies in front of you {c_number}{SF_2}{/c} times and dealing a total of {c_number}{payload:DAMAGE_TOOLTIP}{/c} damage to each. {if:SF_12}\r\n\r\n{c_important}Combo Points{/c} increase damage and grant an Attack Speed bonus for {c_number}{SF_11}{/c} seconds.\r\n{icon:bullet,1.2} {c_label}1 Point:{/c} {c_number}{payload:DAMAGE_TOOLTIP_1CP}{/c} damage, {c_number}[{SF_10}*100|%+|]{/c} bonus\r\n{icon:bullet,1.2} {c_label}2 Points:{/c} {c_number}{payload:DAMAGE_TOOLTIP_2CP}{/c} damage, {c_number}[2*{SF_10}*100|%+|]{/c} bonus\r\n{icon:bullet,1.2} {c_label}3 Points:{/c} {c_number}{payload:DAMAGE_TOOLTIP_3CP}{/c} damage, {c_number}[3*{SF_10}*100*{SF_22}|%+|]{/c} bonus{/if}",
    "hLabel": 3707583
   },
   {
@@ -28,8 +28,22 @@
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
+   "szLabel": "Buff15_Name",
+   "szText": "Advanced Flurry",
+   "hLabel": 2963123689
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Buff15_Description",
+   "szText": "Flurry damage increased and Energy cost reduced.",
+   "hLabel": 3292451788
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
    "szLabel": "Mod0_Description",
-   "szText": "Each time {c_important}Flurry{/c} damages a Crowd Controlled or {c_important}{u}Vulnerable{/u}{/c} enemy, you are Healed for {c_number}[{SF_8}*100|%|]{/c} of your Maximum Life {c_number}([Max(1,PlayerHealthMax() * {SF_8})]){/c}, up to {c_number}[{SF_6}*{SF_8}*100|%|]{/c} Maximum Life {c_number}([PlayerHealthMax() * {SF_8} * {SF_6}]){/c} per cast.",
+   "szText": "Each time {c_important}Flurry{/c} hits an enemy, it deals {c_number}[{SF_44}|%x|]{/c} increased damage for {c_number}{buffduration:EMPOWERED_FLURRY}{/c} seconds, up to {c_number}[SF_33}|%x|]{/c}, and has a {c_number}[{SF_36}*100|%|]{/c} chance to apply {c_important}{u}Vulnerable{/u}{/c} for {c_number}{SF_7}{/c} seconds",
    "hLabel": 3591940403
   },
   {
@@ -43,7 +57,7 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod2_Description",
-   "szText": "{c_important}Flurry{/c} deals {c_number}[SF_25 * 100|%x|]{/c} increased damage to {c_important}{u}Vulnerable{/u}{/c} enemies. If {c_important}Flurry{/c} hits any {c_important}{u}Vulnerable{/u}{/c} enemy it will make all enemies hit by that cast {c_important}{u}Vulnerable{/u}{/c} for {c_number}{SF_7}{/c} seconds.",
+   "szText": "Casting {c_important}Flurry{/c} dashes you to the target and Heals {c_number}[{SF_8}*100|%|]{/c} of your Maximum Life.",
    "hLabel": 1960229941
   },
   {
@@ -57,7 +71,7 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod1_Description",
-   "szText": "Evading through an enemy will cause your next {c_important}Flurry{/c} to deal {c_number}[SF_24 * 100|%x|]{/c} increased damage and Stun enemies for {c_number}{buffduration:STUN}{/c} seconds.",
+   "szText": "Successive casts of {c_important}Flurry{/c} increase its damage by {c_number}[SF_43 * 100|%x|]{/c} and reduce its Energy cost by {c_number}[SF_42 * 100|%|]{/c}, up to {c_number}{SF_35}{/c} times. ",
    "hLabel": 628601524
   },
   {

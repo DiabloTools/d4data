@@ -140,7 +140,7 @@
  "unk_4bf03ff": true,
  "tAttackSpeed": {
   "value": "Attacks_Per_Second_Total * 1.25",
-  "compiled": "BQAAAAAAAADJAAAA/v///wAAAAAGAAAAAACgPw0AAAAAAAAA"
+  "compiled": "BQAAAAAAAADIAAAA/v///wAAAAAGAAAAAACgPw0AAAAAAAAA"
  },
  "unk_6deb090": false,
  "unk_ed2bdad": false,
@@ -168,7 +168,25 @@
  "unk_5e1a52d": true,
  "bCaptionsInside": false,
  "eShapeshiftForm": -1,
- "arResourceCosts": [],
+ "arResourceCosts": [
+  {
+   "__type__": "PowerResourceCost",
+   "__typeHash__": 2616788302,
+   "eType": 1,
+   "tMinRequired": {
+    "value": "SF_18 ? SF_19 : 0",
+    "compiled": "BQAAABgAAAAAAAAAAAAAAAAAAAAFAAAAGQAAAAAAAAAAAAAAAAAAAAYAAAAAAAAAEAAAAAAAAAA="
+   },
+   "tInitialCost": {
+    "value": "SF_18 ? SF_19 : 0",
+    "compiled": "BQAAABgAAAAAAAAAAAAAAAAAAAAFAAAAGQAAAAAAAAAAAAAAAAAAAAYAAAAAAAAAEAAAAAAAAAA="
+   },
+   "tChannellingCost": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   }
+  }
+ ],
  "tHealthCost": {
   "value": "0",
   "compiled": "BgAAAAAAAAAAAAAA"
@@ -712,7 +730,8 @@
      "value": "0",
      "compiled": "BgAAAAAAAAAAAAAA"
     }
-   }
+   },
+   "dwShaderMapOverride": 4294967295
   },
   {
    "__type__": "PowerBuffDefinition",
@@ -810,7 +829,8 @@
      "value": "0",
      "compiled": "BgAAAAAAAAAAAAAA"
     }
-   }
+   },
+   "dwShaderMapOverride": 4294967295
   },
   {
    "__type__": "PowerBuffDefinition",
@@ -908,7 +928,8 @@
      "value": "0",
      "compiled": "BgAAAAAAAAAAAAAA"
     }
-   }
+   },
+   "dwShaderMapOverride": 4294967295
   },
   {
    "__type__": "PowerBuffDefinition",
@@ -1006,7 +1027,8 @@
      "value": "0",
      "compiled": "BgAAAAAAAAAAAAAA"
     }
-   }
+   },
+   "dwShaderMapOverride": 4294967295
   },
   {
    "__type__": "PowerBuffDefinition",
@@ -1104,7 +1126,8 @@
      "value": "0",
      "compiled": "BgAAAAAAAAAAAAAA"
     }
-   }
+   },
+   "dwShaderMapOverride": 4294967295
   }
  ],
  "nFormulaCount": 0,
@@ -1169,8 +1192,8 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "Round(Affix_Value_1#Amulet_Unique_Barb_100)",
-    "compiled": "BQAAAAAAAAAYBAAAPtgIAAAAAAABAAAAKAAAAAAAAAA="
+    "value": "AffixIsEquipped(SNO.Affix.Amulet_Unique_Barb_100) ? Round(Affix.Amulet_Unique_Barb_100.\"Static Value 0\") : 0",
+    "compiled": "BQAAAFkAAAA+2AgAAAAAAAAAAAABAAAAJAAAAAUAAABjAAAAPtgIAAAAAAAAAAAAAQAAACcAAAAGAAAAAAAAABAAAAAAAAAA"
    }
   },
   {
@@ -1202,7 +1225,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Affix_Value_2#legendary_generic_043 / 100",
-    "compiled": "BQAAAAAAAAAZBAAAltQIAAAAAAAGAAAAAADIQg4AAAAAAAAA"
+    "compiled": "BQAAAAAAAAAaBAAAltQIAAAAAAAGAAAAAADIQg4AAAAAAAAA"
    }
   },
   {
@@ -1250,6 +1273,30 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Affix_Value_2#Amulet_Unique_Barb_100 / 100",
+    "compiled": "BQAAAAAAAAAaBAAAPtgIAAAAAAAGAAAAAADIQg4AAAAAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "AffixIsEquipped(SNO.Affix.S05_BSK_Generic_004) > 0",
+    "compiled": "BQAAAFkAAACyqx0AAAAAAAAAAAABAAAAJAAAAAYAAAAAAAAACAAAAAAAAAA="
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "Affix.S05_BSK_Generic_004.\"Static Value 1\"",
+    "compiled": "BQAAAGMAAACyqx0AAQAAAAAAAAAAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "Affix_Value_1#Amulet_Unique_Barb_100 / 100",
     "compiled": "BQAAAAAAAAAZBAAAPtgIAAAAAAAGAAAAAADIQg4AAAAAAAAA"
    }
   }

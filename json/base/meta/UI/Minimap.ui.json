@@ -421,7 +421,9 @@
            }
           },
           "hOptionalUITextStyleFields": {
-           "eTextJustifyVertical": 2,
+           "bShowPreviewText": 1,
+           "szPreviewText": "Level area  name",
+           "eTextJustifyVertical": 6,
            "eResizeToFit": 1,
            "bTextAllCaps": 0
           }
@@ -1203,13 +1205,99 @@
           },
           "hOptionalUITextStyleFields": {
            "flTextPaddingL": 4,
-           "eTextJustifyVertical": 2,
+           "bShowPreviewText": 1,
+           "szPreviewText": "7:23",
+           "eTextJustifyVertical": 6,
            "eResizeToFit": 1,
            "eTextJustify": 1
           }
          }
         ],
         "arChildren": [],
+        "unk_1cb": []
+       },
+       {
+        "__type__": "UIControlTemplate",
+        "__typeHash__": 641859515,
+        "szName": "devicebattery",
+        "ptInlineStyle": [
+         {
+          "__type__": "UIWindowStyle",
+          "__typeHash__": 506492871,
+          "dwType": 506492871,
+          "dwPad": 0,
+          "hParentStyle": {
+           "__type__": "UIControlHandle",
+           "__typeHash__": 3063971755,
+           "snoUI": null,
+           "szControlName": 0
+          },
+          "unk_441f783": "0",
+          "hOptionalUIControlStyleFields": {
+           "bActive": 0
+          },
+          "tConsoleInput": {
+           "__type__": "UIControlConsoleInput",
+           "__typeHash__": 3089331074,
+           "hOptionalUIControlConsoleInputFields": {}
+          },
+          "hOptionalUIWindowStyleFields": {
+           "nHeight": 14,
+           "eVerticalAnchoring": 1,
+           "eImageFitType": 6,
+           "nWidth": 38,
+           "hImageFrame": {
+            "__type__": "UIImageHandleReference",
+            "__typeHash__": 1797021084,
+            "hImageHandle": 2360889198
+           }
+          }
+         }
+        ],
+        "arChildren": [
+         {
+          "__type__": "UIControlTemplate",
+          "__typeHash__": 641859515,
+          "szName": "charge_indicator",
+          "ptInlineStyle": [
+           {
+            "__type__": "UIWindowStyle",
+            "__typeHash__": 506492871,
+            "dwType": 506492871,
+            "dwPad": 0,
+            "hParentStyle": {
+             "__type__": "UIControlHandle",
+             "__typeHash__": 3063971755,
+             "snoUI": null,
+             "szControlName": 0
+            },
+            "unk_441f783": "0",
+            "hOptionalUIControlStyleFields": {
+             "bActive": 0
+            },
+            "tConsoleInput": {
+             "__type__": "UIControlConsoleInput",
+             "__typeHash__": 3089331074,
+             "hOptionalUIControlConsoleInputFields": {}
+            },
+            "hOptionalUIWindowStyleFields": {
+             "nHeight": 6,
+             "eVerticalAnchoring": 3,
+             "eImageFitType": 6,
+             "nWidth": 13,
+             "eHorizontalAnchoring": 3,
+             "hImageFrame": {
+              "__type__": "UIImageHandleReference",
+              "__typeHash__": 1797021084,
+              "hImageHandle": 2719195686
+             }
+            }
+           }
+          ],
+          "arChildren": [],
+          "unk_1cb": []
+         }
+        ],
         "unk_1cb": []
        }
       ],
@@ -1861,8 +1949,9 @@
        "hOptionalUIControlConsoleInputFields": {}
       },
       "hOptionalUIWindowStyleFields": {
-       "nTop": 315,
+       "nTop": 314,
        "nHeight": 39,
+       "nBottom": 1,
        "nRight": 22,
        "nWidth": 340,
        "snoTiledStyle": null,
@@ -2664,7 +2753,11 @@
        "hOptionalUIControlConsoleInputFields": {}
       },
       "hOptionalUIWindowStyleFields": {
+       "nTop": 0,
        "eVerticalAnchoring": 3,
+       "nBottom": 0,
+       "nRight": 0,
+       "nLeft": 0,
        "eHorizontalAnchoring": 3
       }
      }
@@ -4515,6 +4608,7 @@
           },
           "hOptionalUITextStyleFields": {
            "nOutlineStrength": 5,
+           "bShowPreviewText": 0,
            "hText": {
             "__type__": "StringLabelHandleEx",
             "__typeHash__": 721585600,
@@ -4529,6 +4623,7 @@
             },
             "szLabel": 978569357
            },
+           "szPreviewText": "",
            "eTextJustifyVertical": 2,
            "eResizeToFit": 1,
            "eTextJustify": 2,
@@ -4944,921 +5039,6 @@
       "__type__": "UIControlTemplate",
       "__typeHash__": 641859515,
       "szName": "Storyboard_FadeIn",
-      "ptInlineStyle": [
-       {
-        "__type__": "UIStoryboard2Style",
-        "__typeHash__": 3193003306,
-        "dwType": 3193003306,
-        "dwPad": 0,
-        "hParentStyle": {
-         "__type__": "UIControlHandle",
-         "__typeHash__": 3063971755,
-         "snoUI": null,
-         "szControlName": 0
-        },
-        "unk_441f783": "0",
-        "hOptionalUIControlStyleFields": {},
-        "snoStoryboard": {
-         "__raw__": 215041,
-         "__group__": 90,
-         "__type__": "DT_SNO",
-         "__typeHash__": 2764331143,
-         "__targetFileName__": "base/meta/Storyboard/FadeIn_Medium.stb",
-         "groupName": "StoryBoard",
-         "name": "FadeIn_Medium"
-        },
-        "eLoadBehavior": 0,
-        "eActivateBehavior": 1,
-        "eFinishBehavior": 0,
-        "hOptionalUIStoryboard2StyleFields": {}
-       }
-      ],
-      "arChildren": [],
-      "unk_1cb": []
-     }
-    ],
-    "unk_1cb": []
-   },
-   {
-    "__type__": "UIControlTemplate",
-    "__typeHash__": 641859515,
-    "szName": "Vamptide_Area",
-    "ptInlineStyle": [
-     {
-      "__type__": "UIWindowStyle",
-      "__typeHash__": 506492871,
-      "dwType": 506492871,
-      "dwPad": 0,
-      "hParentStyle": {
-       "__type__": "UIControlHandle",
-       "__typeHash__": 3063971755,
-       "snoUI": null,
-       "szControlName": 0
-      },
-      "unk_441f783": "0",
-      "hOptionalUIControlStyleFields": {
-       "bActive": 0
-      },
-      "tConsoleInput": {
-       "__type__": "UIControlConsoleInput",
-       "__typeHash__": 3089331074,
-       "hOptionalUIControlConsoleInputFields": {}
-      },
-      "hOptionalUIWindowStyleFields": {
-       "nTop": 40,
-       "nMaxWidth": 400,
-       "nRight": 370,
-       "nLeft": 0,
-       "eHorizontalAnchoring": 2,
-       "bEncloseChildren": 1
-      }
-     }
-    ],
-    "arChildren": [
-     {
-      "__type__": "UIControlTemplate",
-      "__typeHash__": 641859515,
-      "szName": "Vamptide_Content_Stack",
-      "ptInlineStyle": [
-       {
-        "__type__": "UIStackPanelStyle",
-        "__typeHash__": 287728085,
-        "dwType": 287728085,
-        "dwPad": 0,
-        "hParentStyle": {
-         "__type__": "UIControlHandle",
-         "__typeHash__": 3063971755,
-         "snoUI": null,
-         "szControlName": 0
-        },
-        "unk_441f783": "0",
-        "hOptionalUIControlStyleFields": {},
-        "tConsoleInput": {
-         "__type__": "UIControlConsoleInput",
-         "__typeHash__": 3089331074,
-         "hOptionalUIControlConsoleInputFields": {}
-        },
-        "hOptionalUIWindowStyleFields": {
-         "nWidth": 210
-        },
-        "hOptionalUIStackPanelStyleFields": {
-         "unk_3385ab6": 0,
-         "nStackSpacing": -5
-        }
-       }
-      ],
-      "arChildren": [
-       {
-        "__type__": "UIControlTemplate",
-        "__typeHash__": 641859515,
-        "szName": "Vamptide_Event_Name",
-        "ptInlineStyle": [
-         {
-          "__type__": "UITextStyle",
-          "__typeHash__": 127673428,
-          "dwType": 127673428,
-          "dwPad": 0,
-          "hParentStyle": {
-           "__type__": "UIControlHandle",
-           "__typeHash__": 3063971755,
-           "snoUI": null,
-           "szControlName": 0
-          },
-          "unk_441f783": "0",
-          "hOptionalUIControlStyleFields": {
-           "bActive": 1
-          },
-          "tConsoleInput": {
-           "__type__": "UIControlConsoleInput",
-           "__typeHash__": 3089331074,
-           "hOptionalUIControlConsoleInputFields": {}
-          },
-          "hOptionalUIWindowStyleFields": {
-           "rgbaForeground": {
-            "r": 227,
-            "g": 224,
-            "b": 217,
-            "a": 255
-           },
-           "eHorizontalAnchoring": 1
-          },
-          "tFont": {
-           "__type__": "UIControlFont",
-           "__typeHash__": 1698657718,
-           "hOptionalUIControlFontFields": {
-            "snoFont": {
-             "__raw__": 1302,
-             "__group__": 19,
-             "__type__": "DT_SNO",
-             "__typeHash__": 2764331143,
-             "__targetFileName__": "base/meta/Font/Serif.fnt",
-             "groupName": "Font",
-             "name": "Serif"
-            },
-            "dwFontSize": 18
-           }
-          },
-          "hOptionalUITextStyleFields": {
-           "nOutlineStrength": 5,
-           "hText": {
-            "__type__": "StringLabelHandleEx",
-            "__typeHash__": 721585600,
-            "snoStringList": {
-             "__raw__": 1563855,
-             "__group__": 42,
-             "__type__": "DT_SNO",
-             "__typeHash__": 2764331143,
-             "__targetFileName__": "enUS_Text/meta/StringList/Seasonal_Vampire_UI.stl",
-             "groupName": "StringList",
-             "name": "Seasonal_Vampire_UI"
-            },
-            "szLabel": 1657719450
-           },
-           "eTextJustifyVertical": 2,
-           "eResizeToFit": 1,
-           "eTextJustify": 2,
-           "bTextAllCaps": 1
-          }
-         }
-        ],
-        "arChildren": [],
-        "unk_1cb": []
-       },
-       {
-        "__type__": "UIControlTemplate",
-        "__typeHash__": 641859515,
-        "szName": "Vamptide_Timer",
-        "ptInlineStyle": [
-         {
-          "__type__": "UITextStyle",
-          "__typeHash__": 127673428,
-          "dwType": 127673428,
-          "dwPad": 0,
-          "hParentStyle": {
-           "__type__": "UIControlHandle",
-           "__typeHash__": 3063971755,
-           "snoUI": null,
-           "szControlName": 0
-          },
-          "unk_441f783": "0",
-          "hOptionalUIControlStyleFields": {
-           "bActive": 0
-          },
-          "tConsoleInput": {
-           "__type__": "UIControlConsoleInput",
-           "__typeHash__": 3089331074,
-           "hOptionalUIControlConsoleInputFields": {}
-          },
-          "hOptionalUIWindowStyleFields": {
-           "rgbaForeground": {
-            "r": 191,
-            "g": 107,
-            "b": 49,
-            "a": 255
-           },
-           "eHorizontalAnchoring": 1,
-           "unk_bffade6": 5
-          },
-          "tFont": {
-           "__type__": "UIControlFont",
-           "__typeHash__": 1698657718,
-           "hOptionalUIControlFontFields": {
-            "snoFont": {
-             "__raw__": 1300,
-             "__group__": 19,
-             "__type__": "DT_SNO",
-             "__typeHash__": 2764331143,
-             "__targetFileName__": "base/meta/Font/SansSerif.fnt",
-             "groupName": "Font",
-             "name": "SansSerif"
-            },
-            "dwFontSize": 18
-           }
-          },
-          "hOptionalUITextStyleFields": {
-           "nOutlineStrength": 5,
-           "bShowPreviewText": 1,
-           "hText": {
-            "__type__": "StringLabelHandleEx",
-            "__typeHash__": 721585600,
-            "snoStringList": null,
-            "szLabel": 0
-           },
-           "szPreviewText": "12h 45m 45s",
-           "eTextJustifyVertical": 2,
-           "eResizeToFit": 1,
-           "eTextJustify": 2,
-           "bTextAllCaps": 1
-          }
-         }
-        ],
-        "arChildren": [],
-        "unk_1cb": []
-       },
-       {
-        "__type__": "UIControlTemplate",
-        "__typeHash__": 641859515,
-        "szName": "Vamptide_Entries_Stack",
-        "ptInlineStyle": [
-         {
-          "__type__": "UIStackPanelStyle",
-          "__typeHash__": 287728085,
-          "dwType": 287728085,
-          "dwPad": 0,
-          "hParentStyle": {
-           "__type__": "UIControlHandle",
-           "__typeHash__": 3063971755,
-           "snoUI": null,
-           "szControlName": 0
-          },
-          "unk_441f783": "0",
-          "hOptionalUIControlStyleFields": {},
-          "tConsoleInput": {
-           "__type__": "UIControlConsoleInput",
-           "__typeHash__": 3089331074,
-           "hOptionalUIControlConsoleInputFields": {}
-          },
-          "hOptionalUIWindowStyleFields": {},
-          "hOptionalUIStackPanelStyleFields": {
-           "nStackSpacing": 15,
-           "bHorizontal": 1
-          }
-         }
-        ],
-        "arChildren": [
-         {
-          "__type__": "UIControlTemplate",
-          "__typeHash__": 641859515,
-          "szName": "Vamptide_Lures_Entries_Stack",
-          "ptInlineStyle": [
-           {
-            "__type__": "UIStackPanelStyle",
-            "__typeHash__": 287728085,
-            "dwType": 287728085,
-            "dwPad": 0,
-            "hParentStyle": {
-             "__type__": "UIControlHandle",
-             "__typeHash__": 3063971755,
-             "snoUI": null,
-             "szControlName": 0
-            },
-            "unk_441f783": "0",
-            "hOptionalUIControlStyleFields": {},
-            "tConsoleInput": {
-             "__type__": "UIControlConsoleInput",
-             "__typeHash__": 3089331074,
-             "hOptionalUIControlConsoleInputFields": {}
-            },
-            "hOptionalUIWindowStyleFields": {
-             "eVerticalAnchoring": 0
-            },
-            "hOptionalUIStackPanelStyleFields": {
-             "nStackSpacing": -17,
-             "bHorizontal": 0
-            }
-           }
-          ],
-          "arChildren": [
-           {
-            "__type__": "UIControlTemplate",
-            "__typeHash__": 641859515,
-            "szName": "P1_Vamptide_Lures",
-            "ptInlineStyle": [
-             {
-              "__type__": "UIWindowStyle",
-              "__typeHash__": 506492871,
-              "dwType": 506492871,
-              "dwPad": 0,
-              "hParentStyle": {
-               "__type__": "UIControlHandle",
-               "__typeHash__": 3063971755,
-               "snoUI": null,
-               "szControlName": 0
-              },
-              "unk_441f783": "0",
-              "hOptionalUIControlStyleFields": {
-               "hTemplate": {
-                "__type__": "UIControlHandle",
-                "__typeHash__": 3063971755,
-                "snoUI": {
-                 "__raw__": 4016,
-                 "__group__": 46,
-                 "__type__": "DT_SNO",
-                 "__typeHash__": 2764331143,
-                 "__targetFileName__": "base/meta/UI/Minimap.ui",
-                 "groupName": "UI",
-                 "name": "Minimap"
-                },
-                "szControlName": 712927829
-               }
-              },
-              "tConsoleInput": {
-               "__type__": "UIControlConsoleInput",
-               "__typeHash__": 3089331074,
-               "hOptionalUIControlConsoleInputFields": {}
-              },
-              "hOptionalUIWindowStyleFields": {}
-             }
-            ],
-            "arChildren": [],
-            "unk_1cb": [
-             {
-              "__type__": "Type_1c5ecda5",
-              "__typeHash__": 475975077,
-              "tStyleOverrides": [
-               {
-                "__type__": "UITemplateStyleOverride",
-                "__typeHash__": 2887578027,
-                "szPathToControl": "pvp_status_text",
-                "tStyle": [
-                 {
-                  "__type__": "UITextStyle",
-                  "__typeHash__": 127673428,
-                  "dwType": 127673428,
-                  "dwPad": 0,
-                  "hParentStyle": {
-                   "__type__": "UIControlHandle",
-                   "__typeHash__": 3063971755,
-                   "snoUI": null,
-                   "szControlName": 0
-                  },
-                  "unk_441f783": "0",
-                  "hOptionalUIControlStyleFields": {},
-                  "tConsoleInput": {
-                   "__type__": "UIControlConsoleInput",
-                   "__typeHash__": 3089331074,
-                   "hOptionalUIControlConsoleInputFields": {}
-                  },
-                  "hOptionalUIWindowStyleFields": {},
-                  "tFont": {
-                   "__type__": "UIControlFont",
-                   "__typeHash__": 1698657718,
-                   "hOptionalUIControlFontFields": {}
-                  },
-                  "hOptionalUITextStyleFields": {
-                   "hText": {
-                    "__type__": "StringLabelHandleEx",
-                    "__typeHash__": 721585600,
-                    "snoStringList": {
-                     "__raw__": 397835,
-                     "__group__": 42,
-                     "__type__": "DT_SNO",
-                     "__typeHash__": 2764331143,
-                     "__targetFileName__": "enUS_Text/meta/StringList/ObjectiveTracker.stl",
-                     "groupName": "StringList",
-                     "name": "ObjectiveTracker"
-                    },
-                    "szLabel": 1190187028
-                   }
-                  }
-                 }
-                ]
-               },
-               {
-                "__type__": "UITemplateStyleOverride",
-                "__typeHash__": 2887578027,
-                "szPathToControl": "pvp_shard_icon",
-                "tStyle": [
-                 {
-                  "__type__": "UIWindowStyle",
-                  "__typeHash__": 506492871,
-                  "dwType": 506492871,
-                  "dwPad": 0,
-                  "hParentStyle": {
-                   "__type__": "UIControlHandle",
-                   "__typeHash__": 3063971755,
-                   "snoUI": null,
-                   "szControlName": 0
-                  },
-                  "unk_441f783": "0",
-                  "hOptionalUIControlStyleFields": {},
-                  "tConsoleInput": {
-                   "__type__": "UIControlConsoleInput",
-                   "__typeHash__": 3089331074,
-                   "hOptionalUIControlConsoleInputFields": {}
-                  },
-                  "hOptionalUIWindowStyleFields": {
-                   "nHeight": 60,
-                   "nWidth": 55,
-                   "hImageFrame": {
-                    "__type__": "UIImageHandleReference",
-                    "__typeHash__": 1797021084,
-                    "hImageHandle": 1158575276
-                   }
-                  }
-                 }
-                ]
-               }
-              ]
-             }
-            ]
-           },
-           {
-            "__type__": "UIControlTemplate",
-            "__typeHash__": 641859515,
-            "szName": "P2_Vamptide_Lures",
-            "ptInlineStyle": [
-             {
-              "__type__": "UIWindowStyle",
-              "__typeHash__": 506492871,
-              "dwType": 506492871,
-              "dwPad": 0,
-              "hParentStyle": {
-               "__type__": "UIControlHandle",
-               "__typeHash__": 3063971755,
-               "snoUI": null,
-               "szControlName": 0
-              },
-              "unk_441f783": "0",
-              "hOptionalUIControlStyleFields": {
-               "bActive": 1,
-               "hTemplate": {
-                "__type__": "UIControlHandle",
-                "__typeHash__": 3063971755,
-                "snoUI": {
-                 "__raw__": 4016,
-                 "__group__": 46,
-                 "__type__": "DT_SNO",
-                 "__typeHash__": 2764331143,
-                 "__targetFileName__": "base/meta/UI/Minimap.ui",
-                 "groupName": "UI",
-                 "name": "Minimap"
-                },
-                "szControlName": 712927829
-               }
-              },
-              "tConsoleInput": {
-               "__type__": "UIControlConsoleInput",
-               "__typeHash__": 3089331074,
-               "hOptionalUIControlConsoleInputFields": {}
-              },
-              "hOptionalUIWindowStyleFields": {}
-             }
-            ],
-            "arChildren": [],
-            "unk_1cb": [
-             {
-              "__type__": "Type_1c5ecda5",
-              "__typeHash__": 475975077,
-              "tStyleOverrides": [
-               {
-                "__type__": "UITemplateStyleOverride",
-                "__typeHash__": 2887578027,
-                "szPathToControl": "pvp_shard_icon",
-                "tStyle": [
-                 {
-                  "__type__": "UIWindowStyle",
-                  "__typeHash__": 506492871,
-                  "dwType": 506492871,
-                  "dwPad": 0,
-                  "hParentStyle": {
-                   "__type__": "UIControlHandle",
-                   "__typeHash__": 3063971755,
-                   "snoUI": null,
-                   "szControlName": 0
-                  },
-                  "unk_441f783": "0",
-                  "hOptionalUIControlStyleFields": {},
-                  "tConsoleInput": {
-                   "__type__": "UIControlConsoleInput",
-                   "__typeHash__": 3089331074,
-                   "hOptionalUIControlConsoleInputFields": {}
-                  },
-                  "hOptionalUIWindowStyleFields": {
-                   "nHeight": 60,
-                   "nWidth": 55,
-                   "hImageFrame": {
-                    "__type__": "UIImageHandleReference",
-                    "__typeHash__": 1797021084,
-                    "hImageHandle": 1158575276
-                   }
-                  }
-                 }
-                ]
-               },
-               {
-                "__type__": "UITemplateStyleOverride",
-                "__typeHash__": 2887578027,
-                "szPathToControl": "pvp_shard_coop_frame",
-                "tStyle": [
-                 {
-                  "__type__": "UIWindowStyle",
-                  "__typeHash__": 506492871,
-                  "dwType": 506492871,
-                  "dwPad": 0,
-                  "hParentStyle": {
-                   "__type__": "UIControlHandle",
-                   "__typeHash__": 3063971755,
-                   "snoUI": null,
-                   "szControlName": 0
-                  },
-                  "unk_441f783": "0",
-                  "hOptionalUIControlStyleFields": {
-                   "bActive": 1
-                  },
-                  "tConsoleInput": {
-                   "__type__": "UIControlConsoleInput",
-                   "__typeHash__": 3089331074,
-                   "hOptionalUIControlConsoleInputFields": {}
-                  },
-                  "hOptionalUIWindowStyleFields": {
-                   "nHeight": 0,
-                   "rgbaTint": {
-                    "r": 204,
-                    "g": 158,
-                    "b": 2,
-                    "a": 255
-                   }
-                  }
-                 }
-                ]
-               }
-              ]
-             }
-            ]
-           }
-          ],
-          "unk_1cb": []
-         },
-         {
-          "__type__": "UIControlTemplate",
-          "__typeHash__": 641859515,
-          "szName": "Vamptide_Keys_Entries_Stack",
-          "ptInlineStyle": [
-           {
-            "__type__": "UIStackPanelStyle",
-            "__typeHash__": 287728085,
-            "dwType": 287728085,
-            "dwPad": 0,
-            "hParentStyle": {
-             "__type__": "UIControlHandle",
-             "__typeHash__": 3063971755,
-             "snoUI": null,
-             "szControlName": 0
-            },
-            "unk_441f783": "0",
-            "hOptionalUIControlStyleFields": {},
-            "tConsoleInput": {
-             "__type__": "UIControlConsoleInput",
-             "__typeHash__": 3089331074,
-             "hOptionalUIControlConsoleInputFields": {}
-            },
-            "hOptionalUIWindowStyleFields": {
-             "eVerticalAnchoring": 0
-            },
-            "hOptionalUIStackPanelStyleFields": {
-             "nStackSpacing": -17,
-             "bHorizontal": 0
-            }
-           }
-          ],
-          "arChildren": [
-           {
-            "__type__": "UIControlTemplate",
-            "__typeHash__": 641859515,
-            "szName": "P1_Vamptide_Keys",
-            "ptInlineStyle": [
-             {
-              "__type__": "UIWindowStyle",
-              "__typeHash__": 506492871,
-              "dwType": 506492871,
-              "dwPad": 0,
-              "hParentStyle": {
-               "__type__": "UIControlHandle",
-               "__typeHash__": 3063971755,
-               "snoUI": null,
-               "szControlName": 0
-              },
-              "unk_441f783": "0",
-              "hOptionalUIControlStyleFields": {
-               "hTemplate": {
-                "__type__": "UIControlHandle",
-                "__typeHash__": 3063971755,
-                "snoUI": {
-                 "__raw__": 4016,
-                 "__group__": 46,
-                 "__type__": "DT_SNO",
-                 "__typeHash__": 2764331143,
-                 "__targetFileName__": "base/meta/UI/Minimap.ui",
-                 "groupName": "UI",
-                 "name": "Minimap"
-                },
-                "szControlName": 712927829
-               }
-              },
-              "tConsoleInput": {
-               "__type__": "UIControlConsoleInput",
-               "__typeHash__": 3089331074,
-               "hOptionalUIControlConsoleInputFields": {}
-              },
-              "hOptionalUIWindowStyleFields": {}
-             }
-            ],
-            "arChildren": [],
-            "unk_1cb": [
-             {
-              "__type__": "Type_1c5ecda5",
-              "__typeHash__": 475975077,
-              "tStyleOverrides": [
-               {
-                "__type__": "UITemplateStyleOverride",
-                "__typeHash__": 2887578027,
-                "szPathToControl": "pvp_status_text",
-                "tStyle": [
-                 {
-                  "__type__": "UITextStyle",
-                  "__typeHash__": 127673428,
-                  "dwType": 127673428,
-                  "dwPad": 0,
-                  "hParentStyle": {
-                   "__type__": "UIControlHandle",
-                   "__typeHash__": 3063971755,
-                   "snoUI": null,
-                   "szControlName": 0
-                  },
-                  "unk_441f783": "0",
-                  "hOptionalUIControlStyleFields": {},
-                  "tConsoleInput": {
-                   "__type__": "UIControlConsoleInput",
-                   "__typeHash__": 3089331074,
-                   "hOptionalUIControlConsoleInputFields": {}
-                  },
-                  "hOptionalUIWindowStyleFields": {},
-                  "tFont": {
-                   "__type__": "UIControlFont",
-                   "__typeHash__": 1698657718,
-                   "hOptionalUIControlFontFields": {}
-                  },
-                  "hOptionalUITextStyleFields": {
-                   "hText": {
-                    "__type__": "StringLabelHandleEx",
-                    "__typeHash__": 721585600,
-                    "snoStringList": {
-                     "__raw__": 397835,
-                     "__group__": 42,
-                     "__type__": "DT_SNO",
-                     "__typeHash__": 2764331143,
-                     "__targetFileName__": "enUS_Text/meta/StringList/ObjectiveTracker.stl",
-                     "groupName": "StringList",
-                     "name": "ObjectiveTracker"
-                    },
-                    "szLabel": 1190187028
-                   }
-                  }
-                 }
-                ]
-               },
-               {
-                "__type__": "UITemplateStyleOverride",
-                "__typeHash__": 2887578027,
-                "szPathToControl": "pvp_shard_icon",
-                "tStyle": [
-                 {
-                  "__type__": "UIWindowStyle",
-                  "__typeHash__": 506492871,
-                  "dwType": 506492871,
-                  "dwPad": 0,
-                  "hParentStyle": {
-                   "__type__": "UIControlHandle",
-                   "__typeHash__": 3063971755,
-                   "snoUI": null,
-                   "szControlName": 0
-                  },
-                  "unk_441f783": "0",
-                  "hOptionalUIControlStyleFields": {},
-                  "tConsoleInput": {
-                   "__type__": "UIControlConsoleInput",
-                   "__typeHash__": 3089331074,
-                   "hOptionalUIControlConsoleInputFields": {}
-                  },
-                  "hOptionalUIWindowStyleFields": {
-                   "nHeight": 55,
-                   "nWidth": 48,
-                   "hImageFrame": {
-                    "__type__": "UIImageHandleReference",
-                    "__typeHash__": 1797021084,
-                    "hImageHandle": 821041172
-                   }
-                  }
-                 }
-                ]
-               }
-              ]
-             }
-            ]
-           },
-           {
-            "__type__": "UIControlTemplate",
-            "__typeHash__": 641859515,
-            "szName": "P2_Vamptide_Keys",
-            "ptInlineStyle": [
-             {
-              "__type__": "UIWindowStyle",
-              "__typeHash__": 506492871,
-              "dwType": 506492871,
-              "dwPad": 0,
-              "hParentStyle": {
-               "__type__": "UIControlHandle",
-               "__typeHash__": 3063971755,
-               "snoUI": null,
-               "szControlName": 0
-              },
-              "unk_441f783": "0",
-              "hOptionalUIControlStyleFields": {
-               "bActive": 1,
-               "hTemplate": {
-                "__type__": "UIControlHandle",
-                "__typeHash__": 3063971755,
-                "snoUI": {
-                 "__raw__": 4016,
-                 "__group__": 46,
-                 "__type__": "DT_SNO",
-                 "__typeHash__": 2764331143,
-                 "__targetFileName__": "base/meta/UI/Minimap.ui",
-                 "groupName": "UI",
-                 "name": "Minimap"
-                },
-                "szControlName": 712927829
-               }
-              },
-              "tConsoleInput": {
-               "__type__": "UIControlConsoleInput",
-               "__typeHash__": 3089331074,
-               "hOptionalUIControlConsoleInputFields": {}
-              },
-              "hOptionalUIWindowStyleFields": {}
-             }
-            ],
-            "arChildren": [],
-            "unk_1cb": [
-             {
-              "__type__": "Type_1c5ecda5",
-              "__typeHash__": 475975077,
-              "tStyleOverrides": [
-               {
-                "__type__": "UITemplateStyleOverride",
-                "__typeHash__": 2887578027,
-                "szPathToControl": "pvp_shard_coop_frame",
-                "tStyle": [
-                 {
-                  "__type__": "UIWindowStyle",
-                  "__typeHash__": 506492871,
-                  "dwType": 506492871,
-                  "dwPad": 0,
-                  "hParentStyle": {
-                   "__type__": "UIControlHandle",
-                   "__typeHash__": 3063971755,
-                   "snoUI": null,
-                   "szControlName": 0
-                  },
-                  "unk_441f783": "0",
-                  "hOptionalUIControlStyleFields": {
-                   "bActive": 1
-                  },
-                  "tConsoleInput": {
-                   "__type__": "UIControlConsoleInput",
-                   "__typeHash__": 3089331074,
-                   "hOptionalUIControlConsoleInputFields": {}
-                  },
-                  "hOptionalUIWindowStyleFields": {
-                   "rgbaTint": {
-                    "r": 204,
-                    "g": 158,
-                    "b": 2,
-                    "a": 255
-                   }
-                  }
-                 }
-                ]
-               },
-               {
-                "__type__": "UITemplateStyleOverride",
-                "__typeHash__": 2887578027,
-                "szPathToControl": "pvp_shard_icon",
-                "tStyle": [
-                 {
-                  "__type__": "UIWindowStyle",
-                  "__typeHash__": 506492871,
-                  "dwType": 506492871,
-                  "dwPad": 0,
-                  "hParentStyle": {
-                   "__type__": "UIControlHandle",
-                   "__typeHash__": 3063971755,
-                   "snoUI": null,
-                   "szControlName": 0
-                  },
-                  "unk_441f783": "0",
-                  "hOptionalUIControlStyleFields": {},
-                  "tConsoleInput": {
-                   "__type__": "UIControlConsoleInput",
-                   "__typeHash__": 3089331074,
-                   "hOptionalUIControlConsoleInputFields": {}
-                  },
-                  "hOptionalUIWindowStyleFields": {
-                   "nHeight": 55,
-                   "nWidth": 48,
-                   "hImageFrame": {
-                    "__type__": "UIImageHandleReference",
-                    "__typeHash__": 1797021084,
-                    "hImageHandle": 821041172
-                   }
-                  }
-                 }
-                ]
-               }
-              ]
-             }
-            ]
-           }
-          ],
-          "unk_1cb": []
-         }
-        ],
-        "unk_1cb": []
-       }
-      ],
-      "unk_1cb": []
-     },
-     {
-      "__type__": "UIControlTemplate",
-      "__typeHash__": 641859515,
-      "szName": "Storyboard_Vamptide_FadeOut",
-      "ptInlineStyle": [
-       {
-        "__type__": "UIStoryboard2Style",
-        "__typeHash__": 3193003306,
-        "dwType": 3193003306,
-        "dwPad": 0,
-        "hParentStyle": {
-         "__type__": "UIControlHandle",
-         "__typeHash__": 3063971755,
-         "snoUI": null,
-         "szControlName": 0
-        },
-        "unk_441f783": "0",
-        "hOptionalUIControlStyleFields": {},
-        "snoStoryboard": {
-         "__raw__": 214916,
-         "__group__": 90,
-         "__type__": "DT_SNO",
-         "__typeHash__": 2764331143,
-         "__targetFileName__": "base/meta/Storyboard/FadeOut_Fast.stb",
-         "groupName": "StoryBoard",
-         "name": "FadeOut_Fast"
-        },
-        "eLoadBehavior": 0,
-        "eActivateBehavior": 0,
-        "eFinishBehavior": 0,
-        "hOptionalUIStoryboard2StyleFields": {}
-       }
-      ],
-      "arChildren": [],
-      "unk_1cb": []
-     },
-     {
-      "__type__": "UIControlTemplate",
-      "__typeHash__": 641859515,
-      "szName": "Storyboard_Vamptide_FadeIn",
       "ptInlineStyle": [
        {
         "__type__": "UIStoryboard2Style",
@@ -6774,6 +5954,921 @@
       "__type__": "UIControlTemplate",
       "__typeHash__": 641859515,
       "szName": "Storyboard_FadeIn_Duo",
+      "ptInlineStyle": [
+       {
+        "__type__": "UIStoryboard2Style",
+        "__typeHash__": 3193003306,
+        "dwType": 3193003306,
+        "dwPad": 0,
+        "hParentStyle": {
+         "__type__": "UIControlHandle",
+         "__typeHash__": 3063971755,
+         "snoUI": null,
+         "szControlName": 0
+        },
+        "unk_441f783": "0",
+        "hOptionalUIControlStyleFields": {},
+        "snoStoryboard": {
+         "__raw__": 215041,
+         "__group__": 90,
+         "__type__": "DT_SNO",
+         "__typeHash__": 2764331143,
+         "__targetFileName__": "base/meta/Storyboard/FadeIn_Medium.stb",
+         "groupName": "StoryBoard",
+         "name": "FadeIn_Medium"
+        },
+        "eLoadBehavior": 0,
+        "eActivateBehavior": 1,
+        "eFinishBehavior": 0,
+        "hOptionalUIStoryboard2StyleFields": {}
+       }
+      ],
+      "arChildren": [],
+      "unk_1cb": []
+     }
+    ],
+    "unk_1cb": []
+   },
+   {
+    "__type__": "UIControlTemplate",
+    "__typeHash__": 641859515,
+    "szName": "Vamptide_Area",
+    "ptInlineStyle": [
+     {
+      "__type__": "UIWindowStyle",
+      "__typeHash__": 506492871,
+      "dwType": 506492871,
+      "dwPad": 0,
+      "hParentStyle": {
+       "__type__": "UIControlHandle",
+       "__typeHash__": 3063971755,
+       "snoUI": null,
+       "szControlName": 0
+      },
+      "unk_441f783": "0",
+      "hOptionalUIControlStyleFields": {
+       "bActive": 0
+      },
+      "tConsoleInput": {
+       "__type__": "UIControlConsoleInput",
+       "__typeHash__": 3089331074,
+       "hOptionalUIControlConsoleInputFields": {}
+      },
+      "hOptionalUIWindowStyleFields": {
+       "nTop": 40,
+       "nMaxWidth": 400,
+       "nRight": 370,
+       "nLeft": 0,
+       "eHorizontalAnchoring": 2,
+       "bEncloseChildren": 1
+      }
+     }
+    ],
+    "arChildren": [
+     {
+      "__type__": "UIControlTemplate",
+      "__typeHash__": 641859515,
+      "szName": "Vamptide_Content_Stack",
+      "ptInlineStyle": [
+       {
+        "__type__": "UIStackPanelStyle",
+        "__typeHash__": 287728085,
+        "dwType": 287728085,
+        "dwPad": 0,
+        "hParentStyle": {
+         "__type__": "UIControlHandle",
+         "__typeHash__": 3063971755,
+         "snoUI": null,
+         "szControlName": 0
+        },
+        "unk_441f783": "0",
+        "hOptionalUIControlStyleFields": {},
+        "tConsoleInput": {
+         "__type__": "UIControlConsoleInput",
+         "__typeHash__": 3089331074,
+         "hOptionalUIControlConsoleInputFields": {}
+        },
+        "hOptionalUIWindowStyleFields": {
+         "nWidth": 210
+        },
+        "hOptionalUIStackPanelStyleFields": {
+         "unk_3385ab6": 0,
+         "nStackSpacing": -5
+        }
+       }
+      ],
+      "arChildren": [
+       {
+        "__type__": "UIControlTemplate",
+        "__typeHash__": 641859515,
+        "szName": "Vamptide_Event_Name",
+        "ptInlineStyle": [
+         {
+          "__type__": "UITextStyle",
+          "__typeHash__": 127673428,
+          "dwType": 127673428,
+          "dwPad": 0,
+          "hParentStyle": {
+           "__type__": "UIControlHandle",
+           "__typeHash__": 3063971755,
+           "snoUI": null,
+           "szControlName": 0
+          },
+          "unk_441f783": "0",
+          "hOptionalUIControlStyleFields": {
+           "bActive": 1
+          },
+          "tConsoleInput": {
+           "__type__": "UIControlConsoleInput",
+           "__typeHash__": 3089331074,
+           "hOptionalUIControlConsoleInputFields": {}
+          },
+          "hOptionalUIWindowStyleFields": {
+           "rgbaForeground": {
+            "r": 227,
+            "g": 224,
+            "b": 217,
+            "a": 255
+           },
+           "eHorizontalAnchoring": 1
+          },
+          "tFont": {
+           "__type__": "UIControlFont",
+           "__typeHash__": 1698657718,
+           "hOptionalUIControlFontFields": {
+            "snoFont": {
+             "__raw__": 1302,
+             "__group__": 19,
+             "__type__": "DT_SNO",
+             "__typeHash__": 2764331143,
+             "__targetFileName__": "base/meta/Font/Serif.fnt",
+             "groupName": "Font",
+             "name": "Serif"
+            },
+            "dwFontSize": 18
+           }
+          },
+          "hOptionalUITextStyleFields": {
+           "nOutlineStrength": 5,
+           "hText": {
+            "__type__": "StringLabelHandleEx",
+            "__typeHash__": 721585600,
+            "snoStringList": {
+             "__raw__": 1563855,
+             "__group__": 42,
+             "__type__": "DT_SNO",
+             "__typeHash__": 2764331143,
+             "__targetFileName__": "enUS_Text/meta/StringList/Seasonal_Vampire_UI.stl",
+             "groupName": "StringList",
+             "name": "Seasonal_Vampire_UI"
+            },
+            "szLabel": 1657719450
+           },
+           "eTextJustifyVertical": 2,
+           "eResizeToFit": 1,
+           "eTextJustify": 2,
+           "bTextAllCaps": 1
+          }
+         }
+        ],
+        "arChildren": [],
+        "unk_1cb": []
+       },
+       {
+        "__type__": "UIControlTemplate",
+        "__typeHash__": 641859515,
+        "szName": "Vamptide_Timer",
+        "ptInlineStyle": [
+         {
+          "__type__": "UITextStyle",
+          "__typeHash__": 127673428,
+          "dwType": 127673428,
+          "dwPad": 0,
+          "hParentStyle": {
+           "__type__": "UIControlHandle",
+           "__typeHash__": 3063971755,
+           "snoUI": null,
+           "szControlName": 0
+          },
+          "unk_441f783": "0",
+          "hOptionalUIControlStyleFields": {
+           "bActive": 0
+          },
+          "tConsoleInput": {
+           "__type__": "UIControlConsoleInput",
+           "__typeHash__": 3089331074,
+           "hOptionalUIControlConsoleInputFields": {}
+          },
+          "hOptionalUIWindowStyleFields": {
+           "rgbaForeground": {
+            "r": 191,
+            "g": 107,
+            "b": 49,
+            "a": 255
+           },
+           "eHorizontalAnchoring": 1,
+           "unk_bffade6": 5
+          },
+          "tFont": {
+           "__type__": "UIControlFont",
+           "__typeHash__": 1698657718,
+           "hOptionalUIControlFontFields": {
+            "snoFont": {
+             "__raw__": 1300,
+             "__group__": 19,
+             "__type__": "DT_SNO",
+             "__typeHash__": 2764331143,
+             "__targetFileName__": "base/meta/Font/SansSerif.fnt",
+             "groupName": "Font",
+             "name": "SansSerif"
+            },
+            "dwFontSize": 18
+           }
+          },
+          "hOptionalUITextStyleFields": {
+           "nOutlineStrength": 5,
+           "bShowPreviewText": 1,
+           "hText": {
+            "__type__": "StringLabelHandleEx",
+            "__typeHash__": 721585600,
+            "snoStringList": null,
+            "szLabel": 0
+           },
+           "szPreviewText": "12h 45m 45s",
+           "eTextJustifyVertical": 2,
+           "eResizeToFit": 1,
+           "eTextJustify": 2,
+           "bTextAllCaps": 1
+          }
+         }
+        ],
+        "arChildren": [],
+        "unk_1cb": []
+       },
+       {
+        "__type__": "UIControlTemplate",
+        "__typeHash__": 641859515,
+        "szName": "Vamptide_Entries_Stack",
+        "ptInlineStyle": [
+         {
+          "__type__": "UIStackPanelStyle",
+          "__typeHash__": 287728085,
+          "dwType": 287728085,
+          "dwPad": 0,
+          "hParentStyle": {
+           "__type__": "UIControlHandle",
+           "__typeHash__": 3063971755,
+           "snoUI": null,
+           "szControlName": 0
+          },
+          "unk_441f783": "0",
+          "hOptionalUIControlStyleFields": {},
+          "tConsoleInput": {
+           "__type__": "UIControlConsoleInput",
+           "__typeHash__": 3089331074,
+           "hOptionalUIControlConsoleInputFields": {}
+          },
+          "hOptionalUIWindowStyleFields": {},
+          "hOptionalUIStackPanelStyleFields": {
+           "nStackSpacing": 15,
+           "bHorizontal": 1
+          }
+         }
+        ],
+        "arChildren": [
+         {
+          "__type__": "UIControlTemplate",
+          "__typeHash__": 641859515,
+          "szName": "Vamptide_Lures_Entries_Stack",
+          "ptInlineStyle": [
+           {
+            "__type__": "UIStackPanelStyle",
+            "__typeHash__": 287728085,
+            "dwType": 287728085,
+            "dwPad": 0,
+            "hParentStyle": {
+             "__type__": "UIControlHandle",
+             "__typeHash__": 3063971755,
+             "snoUI": null,
+             "szControlName": 0
+            },
+            "unk_441f783": "0",
+            "hOptionalUIControlStyleFields": {},
+            "tConsoleInput": {
+             "__type__": "UIControlConsoleInput",
+             "__typeHash__": 3089331074,
+             "hOptionalUIControlConsoleInputFields": {}
+            },
+            "hOptionalUIWindowStyleFields": {
+             "eVerticalAnchoring": 0
+            },
+            "hOptionalUIStackPanelStyleFields": {
+             "nStackSpacing": -17,
+             "bHorizontal": 0
+            }
+           }
+          ],
+          "arChildren": [
+           {
+            "__type__": "UIControlTemplate",
+            "__typeHash__": 641859515,
+            "szName": "P1_Vamptide_Lures",
+            "ptInlineStyle": [
+             {
+              "__type__": "UIWindowStyle",
+              "__typeHash__": 506492871,
+              "dwType": 506492871,
+              "dwPad": 0,
+              "hParentStyle": {
+               "__type__": "UIControlHandle",
+               "__typeHash__": 3063971755,
+               "snoUI": null,
+               "szControlName": 0
+              },
+              "unk_441f783": "0",
+              "hOptionalUIControlStyleFields": {
+               "hTemplate": {
+                "__type__": "UIControlHandle",
+                "__typeHash__": 3063971755,
+                "snoUI": {
+                 "__raw__": 4016,
+                 "__group__": 46,
+                 "__type__": "DT_SNO",
+                 "__typeHash__": 2764331143,
+                 "__targetFileName__": "base/meta/UI/Minimap.ui",
+                 "groupName": "UI",
+                 "name": "Minimap"
+                },
+                "szControlName": 712927829
+               }
+              },
+              "tConsoleInput": {
+               "__type__": "UIControlConsoleInput",
+               "__typeHash__": 3089331074,
+               "hOptionalUIControlConsoleInputFields": {}
+              },
+              "hOptionalUIWindowStyleFields": {}
+             }
+            ],
+            "arChildren": [],
+            "unk_1cb": [
+             {
+              "__type__": "Type_1c5ecda5",
+              "__typeHash__": 475975077,
+              "tStyleOverrides": [
+               {
+                "__type__": "UITemplateStyleOverride",
+                "__typeHash__": 2887578027,
+                "szPathToControl": "pvp_status_text",
+                "tStyle": [
+                 {
+                  "__type__": "UITextStyle",
+                  "__typeHash__": 127673428,
+                  "dwType": 127673428,
+                  "dwPad": 0,
+                  "hParentStyle": {
+                   "__type__": "UIControlHandle",
+                   "__typeHash__": 3063971755,
+                   "snoUI": null,
+                   "szControlName": 0
+                  },
+                  "unk_441f783": "0",
+                  "hOptionalUIControlStyleFields": {},
+                  "tConsoleInput": {
+                   "__type__": "UIControlConsoleInput",
+                   "__typeHash__": 3089331074,
+                   "hOptionalUIControlConsoleInputFields": {}
+                  },
+                  "hOptionalUIWindowStyleFields": {},
+                  "tFont": {
+                   "__type__": "UIControlFont",
+                   "__typeHash__": 1698657718,
+                   "hOptionalUIControlFontFields": {}
+                  },
+                  "hOptionalUITextStyleFields": {
+                   "hText": {
+                    "__type__": "StringLabelHandleEx",
+                    "__typeHash__": 721585600,
+                    "snoStringList": {
+                     "__raw__": 397835,
+                     "__group__": 42,
+                     "__type__": "DT_SNO",
+                     "__typeHash__": 2764331143,
+                     "__targetFileName__": "enUS_Text/meta/StringList/ObjectiveTracker.stl",
+                     "groupName": "StringList",
+                     "name": "ObjectiveTracker"
+                    },
+                    "szLabel": 1190187028
+                   }
+                  }
+                 }
+                ]
+               },
+               {
+                "__type__": "UITemplateStyleOverride",
+                "__typeHash__": 2887578027,
+                "szPathToControl": "pvp_shard_icon",
+                "tStyle": [
+                 {
+                  "__type__": "UIWindowStyle",
+                  "__typeHash__": 506492871,
+                  "dwType": 506492871,
+                  "dwPad": 0,
+                  "hParentStyle": {
+                   "__type__": "UIControlHandle",
+                   "__typeHash__": 3063971755,
+                   "snoUI": null,
+                   "szControlName": 0
+                  },
+                  "unk_441f783": "0",
+                  "hOptionalUIControlStyleFields": {},
+                  "tConsoleInput": {
+                   "__type__": "UIControlConsoleInput",
+                   "__typeHash__": 3089331074,
+                   "hOptionalUIControlConsoleInputFields": {}
+                  },
+                  "hOptionalUIWindowStyleFields": {
+                   "nHeight": 60,
+                   "nWidth": 55,
+                   "hImageFrame": {
+                    "__type__": "UIImageHandleReference",
+                    "__typeHash__": 1797021084,
+                    "hImageHandle": 1158575276
+                   }
+                  }
+                 }
+                ]
+               }
+              ]
+             }
+            ]
+           },
+           {
+            "__type__": "UIControlTemplate",
+            "__typeHash__": 641859515,
+            "szName": "P2_Vamptide_Lures",
+            "ptInlineStyle": [
+             {
+              "__type__": "UIWindowStyle",
+              "__typeHash__": 506492871,
+              "dwType": 506492871,
+              "dwPad": 0,
+              "hParentStyle": {
+               "__type__": "UIControlHandle",
+               "__typeHash__": 3063971755,
+               "snoUI": null,
+               "szControlName": 0
+              },
+              "unk_441f783": "0",
+              "hOptionalUIControlStyleFields": {
+               "bActive": 1,
+               "hTemplate": {
+                "__type__": "UIControlHandle",
+                "__typeHash__": 3063971755,
+                "snoUI": {
+                 "__raw__": 4016,
+                 "__group__": 46,
+                 "__type__": "DT_SNO",
+                 "__typeHash__": 2764331143,
+                 "__targetFileName__": "base/meta/UI/Minimap.ui",
+                 "groupName": "UI",
+                 "name": "Minimap"
+                },
+                "szControlName": 712927829
+               }
+              },
+              "tConsoleInput": {
+               "__type__": "UIControlConsoleInput",
+               "__typeHash__": 3089331074,
+               "hOptionalUIControlConsoleInputFields": {}
+              },
+              "hOptionalUIWindowStyleFields": {}
+             }
+            ],
+            "arChildren": [],
+            "unk_1cb": [
+             {
+              "__type__": "Type_1c5ecda5",
+              "__typeHash__": 475975077,
+              "tStyleOverrides": [
+               {
+                "__type__": "UITemplateStyleOverride",
+                "__typeHash__": 2887578027,
+                "szPathToControl": "pvp_shard_icon",
+                "tStyle": [
+                 {
+                  "__type__": "UIWindowStyle",
+                  "__typeHash__": 506492871,
+                  "dwType": 506492871,
+                  "dwPad": 0,
+                  "hParentStyle": {
+                   "__type__": "UIControlHandle",
+                   "__typeHash__": 3063971755,
+                   "snoUI": null,
+                   "szControlName": 0
+                  },
+                  "unk_441f783": "0",
+                  "hOptionalUIControlStyleFields": {},
+                  "tConsoleInput": {
+                   "__type__": "UIControlConsoleInput",
+                   "__typeHash__": 3089331074,
+                   "hOptionalUIControlConsoleInputFields": {}
+                  },
+                  "hOptionalUIWindowStyleFields": {
+                   "nHeight": 60,
+                   "nWidth": 55,
+                   "hImageFrame": {
+                    "__type__": "UIImageHandleReference",
+                    "__typeHash__": 1797021084,
+                    "hImageHandle": 1158575276
+                   }
+                  }
+                 }
+                ]
+               },
+               {
+                "__type__": "UITemplateStyleOverride",
+                "__typeHash__": 2887578027,
+                "szPathToControl": "pvp_shard_coop_frame",
+                "tStyle": [
+                 {
+                  "__type__": "UIWindowStyle",
+                  "__typeHash__": 506492871,
+                  "dwType": 506492871,
+                  "dwPad": 0,
+                  "hParentStyle": {
+                   "__type__": "UIControlHandle",
+                   "__typeHash__": 3063971755,
+                   "snoUI": null,
+                   "szControlName": 0
+                  },
+                  "unk_441f783": "0",
+                  "hOptionalUIControlStyleFields": {
+                   "bActive": 1
+                  },
+                  "tConsoleInput": {
+                   "__type__": "UIControlConsoleInput",
+                   "__typeHash__": 3089331074,
+                   "hOptionalUIControlConsoleInputFields": {}
+                  },
+                  "hOptionalUIWindowStyleFields": {
+                   "nHeight": 0,
+                   "rgbaTint": {
+                    "r": 204,
+                    "g": 158,
+                    "b": 2,
+                    "a": 255
+                   }
+                  }
+                 }
+                ]
+               }
+              ]
+             }
+            ]
+           }
+          ],
+          "unk_1cb": []
+         },
+         {
+          "__type__": "UIControlTemplate",
+          "__typeHash__": 641859515,
+          "szName": "Vamptide_Keys_Entries_Stack",
+          "ptInlineStyle": [
+           {
+            "__type__": "UIStackPanelStyle",
+            "__typeHash__": 287728085,
+            "dwType": 287728085,
+            "dwPad": 0,
+            "hParentStyle": {
+             "__type__": "UIControlHandle",
+             "__typeHash__": 3063971755,
+             "snoUI": null,
+             "szControlName": 0
+            },
+            "unk_441f783": "0",
+            "hOptionalUIControlStyleFields": {},
+            "tConsoleInput": {
+             "__type__": "UIControlConsoleInput",
+             "__typeHash__": 3089331074,
+             "hOptionalUIControlConsoleInputFields": {}
+            },
+            "hOptionalUIWindowStyleFields": {
+             "eVerticalAnchoring": 0
+            },
+            "hOptionalUIStackPanelStyleFields": {
+             "nStackSpacing": -17,
+             "bHorizontal": 0
+            }
+           }
+          ],
+          "arChildren": [
+           {
+            "__type__": "UIControlTemplate",
+            "__typeHash__": 641859515,
+            "szName": "P1_Vamptide_Keys",
+            "ptInlineStyle": [
+             {
+              "__type__": "UIWindowStyle",
+              "__typeHash__": 506492871,
+              "dwType": 506492871,
+              "dwPad": 0,
+              "hParentStyle": {
+               "__type__": "UIControlHandle",
+               "__typeHash__": 3063971755,
+               "snoUI": null,
+               "szControlName": 0
+              },
+              "unk_441f783": "0",
+              "hOptionalUIControlStyleFields": {
+               "hTemplate": {
+                "__type__": "UIControlHandle",
+                "__typeHash__": 3063971755,
+                "snoUI": {
+                 "__raw__": 4016,
+                 "__group__": 46,
+                 "__type__": "DT_SNO",
+                 "__typeHash__": 2764331143,
+                 "__targetFileName__": "base/meta/UI/Minimap.ui",
+                 "groupName": "UI",
+                 "name": "Minimap"
+                },
+                "szControlName": 712927829
+               }
+              },
+              "tConsoleInput": {
+               "__type__": "UIControlConsoleInput",
+               "__typeHash__": 3089331074,
+               "hOptionalUIControlConsoleInputFields": {}
+              },
+              "hOptionalUIWindowStyleFields": {}
+             }
+            ],
+            "arChildren": [],
+            "unk_1cb": [
+             {
+              "__type__": "Type_1c5ecda5",
+              "__typeHash__": 475975077,
+              "tStyleOverrides": [
+               {
+                "__type__": "UITemplateStyleOverride",
+                "__typeHash__": 2887578027,
+                "szPathToControl": "pvp_status_text",
+                "tStyle": [
+                 {
+                  "__type__": "UITextStyle",
+                  "__typeHash__": 127673428,
+                  "dwType": 127673428,
+                  "dwPad": 0,
+                  "hParentStyle": {
+                   "__type__": "UIControlHandle",
+                   "__typeHash__": 3063971755,
+                   "snoUI": null,
+                   "szControlName": 0
+                  },
+                  "unk_441f783": "0",
+                  "hOptionalUIControlStyleFields": {},
+                  "tConsoleInput": {
+                   "__type__": "UIControlConsoleInput",
+                   "__typeHash__": 3089331074,
+                   "hOptionalUIControlConsoleInputFields": {}
+                  },
+                  "hOptionalUIWindowStyleFields": {},
+                  "tFont": {
+                   "__type__": "UIControlFont",
+                   "__typeHash__": 1698657718,
+                   "hOptionalUIControlFontFields": {}
+                  },
+                  "hOptionalUITextStyleFields": {
+                   "hText": {
+                    "__type__": "StringLabelHandleEx",
+                    "__typeHash__": 721585600,
+                    "snoStringList": {
+                     "__raw__": 397835,
+                     "__group__": 42,
+                     "__type__": "DT_SNO",
+                     "__typeHash__": 2764331143,
+                     "__targetFileName__": "enUS_Text/meta/StringList/ObjectiveTracker.stl",
+                     "groupName": "StringList",
+                     "name": "ObjectiveTracker"
+                    },
+                    "szLabel": 1190187028
+                   }
+                  }
+                 }
+                ]
+               },
+               {
+                "__type__": "UITemplateStyleOverride",
+                "__typeHash__": 2887578027,
+                "szPathToControl": "pvp_shard_icon",
+                "tStyle": [
+                 {
+                  "__type__": "UIWindowStyle",
+                  "__typeHash__": 506492871,
+                  "dwType": 506492871,
+                  "dwPad": 0,
+                  "hParentStyle": {
+                   "__type__": "UIControlHandle",
+                   "__typeHash__": 3063971755,
+                   "snoUI": null,
+                   "szControlName": 0
+                  },
+                  "unk_441f783": "0",
+                  "hOptionalUIControlStyleFields": {},
+                  "tConsoleInput": {
+                   "__type__": "UIControlConsoleInput",
+                   "__typeHash__": 3089331074,
+                   "hOptionalUIControlConsoleInputFields": {}
+                  },
+                  "hOptionalUIWindowStyleFields": {
+                   "nHeight": 55,
+                   "nWidth": 48,
+                   "hImageFrame": {
+                    "__type__": "UIImageHandleReference",
+                    "__typeHash__": 1797021084,
+                    "hImageHandle": 821041172
+                   }
+                  }
+                 }
+                ]
+               }
+              ]
+             }
+            ]
+           },
+           {
+            "__type__": "UIControlTemplate",
+            "__typeHash__": 641859515,
+            "szName": "P2_Vamptide_Keys",
+            "ptInlineStyle": [
+             {
+              "__type__": "UIWindowStyle",
+              "__typeHash__": 506492871,
+              "dwType": 506492871,
+              "dwPad": 0,
+              "hParentStyle": {
+               "__type__": "UIControlHandle",
+               "__typeHash__": 3063971755,
+               "snoUI": null,
+               "szControlName": 0
+              },
+              "unk_441f783": "0",
+              "hOptionalUIControlStyleFields": {
+               "bActive": 1,
+               "hTemplate": {
+                "__type__": "UIControlHandle",
+                "__typeHash__": 3063971755,
+                "snoUI": {
+                 "__raw__": 4016,
+                 "__group__": 46,
+                 "__type__": "DT_SNO",
+                 "__typeHash__": 2764331143,
+                 "__targetFileName__": "base/meta/UI/Minimap.ui",
+                 "groupName": "UI",
+                 "name": "Minimap"
+                },
+                "szControlName": 712927829
+               }
+              },
+              "tConsoleInput": {
+               "__type__": "UIControlConsoleInput",
+               "__typeHash__": 3089331074,
+               "hOptionalUIControlConsoleInputFields": {}
+              },
+              "hOptionalUIWindowStyleFields": {}
+             }
+            ],
+            "arChildren": [],
+            "unk_1cb": [
+             {
+              "__type__": "Type_1c5ecda5",
+              "__typeHash__": 475975077,
+              "tStyleOverrides": [
+               {
+                "__type__": "UITemplateStyleOverride",
+                "__typeHash__": 2887578027,
+                "szPathToControl": "pvp_shard_coop_frame",
+                "tStyle": [
+                 {
+                  "__type__": "UIWindowStyle",
+                  "__typeHash__": 506492871,
+                  "dwType": 506492871,
+                  "dwPad": 0,
+                  "hParentStyle": {
+                   "__type__": "UIControlHandle",
+                   "__typeHash__": 3063971755,
+                   "snoUI": null,
+                   "szControlName": 0
+                  },
+                  "unk_441f783": "0",
+                  "hOptionalUIControlStyleFields": {
+                   "bActive": 1
+                  },
+                  "tConsoleInput": {
+                   "__type__": "UIControlConsoleInput",
+                   "__typeHash__": 3089331074,
+                   "hOptionalUIControlConsoleInputFields": {}
+                  },
+                  "hOptionalUIWindowStyleFields": {
+                   "rgbaTint": {
+                    "r": 204,
+                    "g": 158,
+                    "b": 2,
+                    "a": 255
+                   }
+                  }
+                 }
+                ]
+               },
+               {
+                "__type__": "UITemplateStyleOverride",
+                "__typeHash__": 2887578027,
+                "szPathToControl": "pvp_shard_icon",
+                "tStyle": [
+                 {
+                  "__type__": "UIWindowStyle",
+                  "__typeHash__": 506492871,
+                  "dwType": 506492871,
+                  "dwPad": 0,
+                  "hParentStyle": {
+                   "__type__": "UIControlHandle",
+                   "__typeHash__": 3063971755,
+                   "snoUI": null,
+                   "szControlName": 0
+                  },
+                  "unk_441f783": "0",
+                  "hOptionalUIControlStyleFields": {},
+                  "tConsoleInput": {
+                   "__type__": "UIControlConsoleInput",
+                   "__typeHash__": 3089331074,
+                   "hOptionalUIControlConsoleInputFields": {}
+                  },
+                  "hOptionalUIWindowStyleFields": {
+                   "nHeight": 55,
+                   "nWidth": 48,
+                   "hImageFrame": {
+                    "__type__": "UIImageHandleReference",
+                    "__typeHash__": 1797021084,
+                    "hImageHandle": 821041172
+                   }
+                  }
+                 }
+                ]
+               }
+              ]
+             }
+            ]
+           }
+          ],
+          "unk_1cb": []
+         }
+        ],
+        "unk_1cb": []
+       }
+      ],
+      "unk_1cb": []
+     },
+     {
+      "__type__": "UIControlTemplate",
+      "__typeHash__": 641859515,
+      "szName": "Storyboard_Vamptide_FadeOut",
+      "ptInlineStyle": [
+       {
+        "__type__": "UIStoryboard2Style",
+        "__typeHash__": 3193003306,
+        "dwType": 3193003306,
+        "dwPad": 0,
+        "hParentStyle": {
+         "__type__": "UIControlHandle",
+         "__typeHash__": 3063971755,
+         "snoUI": null,
+         "szControlName": 0
+        },
+        "unk_441f783": "0",
+        "hOptionalUIControlStyleFields": {},
+        "snoStoryboard": {
+         "__raw__": 214916,
+         "__group__": 90,
+         "__type__": "DT_SNO",
+         "__typeHash__": 2764331143,
+         "__targetFileName__": "base/meta/Storyboard/FadeOut_Fast.stb",
+         "groupName": "StoryBoard",
+         "name": "FadeOut_Fast"
+        },
+        "eLoadBehavior": 0,
+        "eActivateBehavior": 0,
+        "eFinishBehavior": 0,
+        "hOptionalUIStoryboard2StyleFields": {}
+       }
+      ],
+      "arChildren": [],
+      "unk_1cb": []
+     },
+     {
+      "__type__": "UIControlTemplate",
+      "__typeHash__": 641859515,
+      "szName": "Storyboard_Vamptide_FadeIn",
       "ptInlineStyle": [
        {
         "__type__": "UIStoryboard2Style",
@@ -11078,42 +11173,6 @@
      ],
      "arChildren": [],
      "unk_1cb": []
-    },
-    {
-     "__type__": "UIControlTemplate",
-     "__typeHash__": 641859515,
-     "szName": "Storyboard_PVP_FadeIn",
-     "ptInlineStyle": [
-      {
-       "__type__": "UIStoryboard2Style",
-       "__typeHash__": 3193003306,
-       "dwType": 3193003306,
-       "dwPad": 0,
-       "hParentStyle": {
-        "__type__": "UIControlHandle",
-        "__typeHash__": 3063971755,
-        "snoUI": null,
-        "szControlName": 0
-       },
-       "unk_441f783": "0",
-       "hOptionalUIControlStyleFields": {},
-       "snoStoryboard": {
-        "__raw__": 207437,
-        "__group__": 90,
-        "__type__": "DT_SNO",
-        "__typeHash__": 2764331143,
-        "__targetFileName__": "base/meta/Storyboard/FadeIn_Slow.stb",
-        "groupName": "StoryBoard",
-        "name": "FadeIn_Slow"
-       },
-       "eLoadBehavior": 0,
-       "eActivateBehavior": 0,
-       "eFinishBehavior": 0,
-       "hOptionalUIStoryboard2StyleFields": {}
-      }
-     ],
-     "arChildren": [],
-     "unk_1cb": []
     }
    ],
    "unk_1cb": []
@@ -11639,6 +11698,7 @@
           "hOptionalUIControlConsoleInputFields": {}
          },
          "hOptionalUIWindowStyleFields": {
+          "nWidth": 56,
           "hImageFrame": {
            "__type__": "UIImageHandleReference",
            "__typeHash__": 1797021084,
@@ -11701,13 +11761,13 @@
          "unk_441f783": "0",
          "hOptionalUIControlStyleFields": {},
          "snoStoryboard": {
-          "__raw__": 990932,
+          "__raw__": 1963412,
           "__group__": 90,
           "__type__": "DT_SNO",
           "__typeHash__": 2764331143,
-          "__targetFileName__": "base/meta/Storyboard/PVP_ShardPickup.stb",
+          "__targetFileName__": "base/meta/Storyboard/EventTracker_IconPickup.stb",
           "groupName": "StoryBoard",
-          "name": "PVP_ShardPickup"
+          "name": "EventTracker_IconPickup"
          },
          "eLoadBehavior": 0,
          "eActivateBehavior": 0,
@@ -11987,7 +12047,77 @@
     }
    ],
    "arChildren": [],
-   "unk_1cb": []
+   "unk_1cb": [
+    {
+     "__type__": "Type_1c5ecda5",
+     "__typeHash__": 475975077,
+     "tStyleOverrides": [
+      {
+       "__type__": "UITemplateStyleOverride",
+       "__typeHash__": 2887578027,
+       "szPathToControl": "Storyboard_PVP_Shard_Pickup",
+       "tStyle": [
+        {
+         "__type__": "UIStoryboard2Style",
+         "__typeHash__": 3193003306,
+         "dwType": 3193003306,
+         "dwPad": 0,
+         "hParentStyle": {
+          "__type__": "UIControlHandle",
+          "__typeHash__": 3063971755,
+          "snoUI": null,
+          "szControlName": 0
+         },
+         "unk_441f783": "0",
+         "hOptionalUIControlStyleFields": {},
+         "snoStoryboard": {
+          "__raw__": 1963412,
+          "__group__": 90,
+          "__type__": "DT_SNO",
+          "__typeHash__": 2764331143,
+          "__targetFileName__": "base/meta/Storyboard/EventTracker_IconPickup.stb",
+          "groupName": "StoryBoard",
+          "name": "EventTracker_IconPickup"
+         },
+         "eLoadBehavior": 0,
+         "eActivateBehavior": 0,
+         "eFinishBehavior": 0,
+         "hOptionalUIStoryboard2StyleFields": {}
+        }
+       ]
+      },
+      {
+       "__type__": "UITemplateStyleOverride",
+       "__typeHash__": 2887578027,
+       "szPathToControl": "pvp_shard_icon",
+       "tStyle": [
+        {
+         "__type__": "UIWindowStyle",
+         "__typeHash__": 506492871,
+         "dwType": 506492871,
+         "dwPad": 0,
+         "hParentStyle": {
+          "__type__": "UIControlHandle",
+          "__typeHash__": 3063971755,
+          "snoUI": null,
+          "szControlName": 0
+         },
+         "unk_441f783": "0",
+         "hOptionalUIControlStyleFields": {},
+         "tConsoleInput": {
+          "__type__": "UIControlConsoleInput",
+          "__typeHash__": 3089331074,
+          "hOptionalUIControlConsoleInputFields": {}
+         },
+         "hOptionalUIWindowStyleFields": {
+          "nWidth": 56
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ]
   },
   {
    "__type__": "UIControlTemplate",

@@ -130,7 +130,7 @@
  "unk_4bf03ff": true,
  "tAttackSpeed": {
   "value": "Attacks_Per_Second_Total * 1 + (Mod.UpgradeA ? (SF_17 ? SF_11 : 0) : 0)",
-  "compiled": "BQAAAAAAAADJAAAA/v///wAAAAAGAAAAAACAPw0AAAAFAAAAWgAAAP////8JCRqgAAAAAAUAAAAXAAAAAAAAAAAAAAAAAAAABQAAABEAAAAAAAAAAAAAAAAAAAAGAAAAAAAAABAAAAAGAAAAAAAAABAAAAALAAAAAAAAAA=="
+  "compiled": "BQAAAAAAAADIAAAA/v///wAAAAAGAAAAAACAPw0AAAAFAAAAWgAAAP////8JCRqgAAAAAAUAAAAXAAAAAAAAAAAAAAAAAAAABQAAABEAAAAAAAAAAAAAAAAAAAAGAAAAAAAAABAAAAAGAAAAAAAAABAAAAALAAAAAAAAAA=="
  },
  "unk_6deb090": false,
  "unk_ed2bdad": false,
@@ -182,7 +182,25 @@
  "unk_5e1a52d": true,
  "bCaptionsInside": false,
  "eShapeshiftForm": -1,
- "arResourceCosts": [],
+ "arResourceCosts": [
+  {
+   "__type__": "PowerResourceCost",
+   "__typeHash__": 2616788302,
+   "eType": 6,
+   "tMinRequired": {
+    "value": "SF_20 ? SF_21 : 0",
+    "compiled": "BQAAABoAAAAAAAAAAAAAAAAAAAAFAAAAGwAAAAAAAAAAAAAAAAAAAAYAAAAAAAAAEAAAAAAAAAA="
+   },
+   "tInitialCost": {
+    "value": "SF_20 ? SF_21 : 0",
+    "compiled": "BQAAABoAAAAAAAAAAAAAAAAAAAAFAAAAGwAAAAAAAAAAAAAAAAAAAAYAAAAAAAAAEAAAAAAAAAA="
+   },
+   "tChannellingCost": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   }
+  }
+ ],
  "tHealthCost": {
   "value": "0",
   "compiled": "BgAAAAAAAAAAAAAA"
@@ -734,7 +752,8 @@
      "value": "0",
      "compiled": "BgAAAAAAAAAAAAAA"
     }
-   }
+   },
+   "dwShaderMapOverride": 4294967295
   },
   {
    "__type__": "PowerBuffDefinition",
@@ -832,7 +851,8 @@
      "value": "0",
      "compiled": "BgAAAAAAAAAAAAAA"
     }
-   }
+   },
+   "dwShaderMapOverride": 4294967295
   }
  ],
  "nFormulaCount": 0,
@@ -961,8 +981,8 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "35",
-    "compiled": "BgAAAAAADEIAAAAA"
+    "value": "50",
+    "compiled": "BgAAAAAASEIAAAAA"
    }
   },
   {
@@ -978,7 +998,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Hitpoints_Cur > HealthyPercent",
-    "compiled": "BQAAAAAAAABnAAAA/v///wAAAAAFAAAAXQAAAAAAAAAAAAAAAAAAAAgAAAAAAAAA"
+    "compiled": "BQAAAAAAAABmAAAA/v///wAAAAAFAAAAXQAAAAAAAAAAAAAAAAAAAAgAAAAAAAAA"
    }
   },
   {
@@ -986,7 +1006,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Min(1.5, 1 + (AoE_Size_Bonus_Per_Power#Necromancer_Hemorrhage / 2))",
-    "compiled": "BgAAAAAAwD8GAAAAAACAPwUAAAAAAAAAmwMAADVlBwAAAAAABgAAAAAAAEAOAAAACwAAAAEAAAAAAAAAAAAAAA=="
+    "compiled": "BgAAAAAAwD8GAAAAAACAPwUAAAAAAAAAnAMAADVlBwAAAAAABgAAAAAAAEAOAAAACwAAAAEAAAAAAAAAAAAAAA=="
    }
   },
   {
@@ -994,7 +1014,23 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Blood_Orb_Bonus_Chance_Per_Power#Necromancer_Hemorrhage",
-    "compiled": "BQAAAAAAAAAXAQAANWUHAAAAAAAAAAAA"
+    "compiled": "BQAAAAAAAAAWAQAANWUHAAAAAAAAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "AffixIsEquipped(SNO.Affix.S05_BSK_Generic_004) > 0",
+    "compiled": "BQAAAFkAAACyqx0AAAAAAAAAAAABAAAAJAAAAAYAAAAAAAAACAAAAAAAAAA="
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "Affix.S05_BSK_Generic_004.\"Static Value 1\"",
+    "compiled": "BQAAAGMAAACyqx0AAQAAAAAAAAAAAAAA"
    }
   }
  ],

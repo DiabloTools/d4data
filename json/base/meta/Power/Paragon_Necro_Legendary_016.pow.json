@@ -63,7 +63,7 @@
  "unk_4bf03ff": true,
  "tAttackSpeed": {
   "value": "Attacks_Per_Second_Total",
-  "compiled": "BQAAAAAAAADJAAAA/v///wAAAAAAAAAA"
+  "compiled": "BQAAAAAAAADIAAAA/v///wAAAAAAAAAA"
  },
  "unk_6deb090": false,
  "unk_ed2bdad": false,
@@ -619,7 +619,8 @@
      "value": "0",
      "compiled": "BgAAAAAAAAAAAAAA"
     }
-   }
+   },
+   "dwShaderMapOverride": 4294967295
   }
  ],
  "nFormulaCount": 0,
@@ -637,7 +638,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "(10/3) * ParagonPowerBudgetMultiplierNodeLegendary()",
-    "compiled": "BgAAAAAAIEEGAAAAAABAQA4AAAABAAAAVQAAAA0AAAAAAAAA"
+    "compiled": "BgAAAAAAIEEGAAAAAABAQA4AAAABAAAAVAAAAA0AAAAAAAAA"
    }
   },
   {
@@ -653,7 +654,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "(4/15)* ParagonPowerBudgetMultiplierNodeLegendary()",
-    "compiled": "BgAAAAAAgEAGAAAAAABwQQ4AAAABAAAAVQAAAA0AAAAAAAAA"
+    "compiled": "BgAAAAAAgEAGAAAAAABwQQ4AAAABAAAAVAAAAA0AAAAAAAAA"
    }
   },
   {
@@ -668,16 +669,24 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "floor(Intelligence_Total / SF_4) * SF_3 + SF_1",
-    "compiled": "BQAAAAAAAAARAAAA/v///wAAAAAFAAAACgAAAAAAAAAAAAAAAAAAAA4AAAABAAAABQAAAAUAAAAJAAAAAAAAAAAAAAAAAAAADQAAAAUAAAAHAAAAAAAAAAAAAAAAAAAACwAAAAAAAAA="
+    "value": "floor(min(SF_7, Intelligence_Total) / SF_4) * SF_3 + SF_1",
+    "compiled": "BQAAAA0AAAAAAAAAAAAAAAAAAAAFAAAAAAAAABEAAAD+////AAAAAAEAAAAAAAAABQAAAAoAAAAAAAAAAAAAAAAAAAAOAAAAAQAAAAUAAAAFAAAACQAAAAAAAAAAAAAAAAAAAA0AAAAFAAAABwAAAAAAAAAAAAAAAAAAAAsAAAAAAAAA"
    }
   },
   {
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "floor(Intelligence_Total / SF_4) * SF_2 + SF_0",
-    "compiled": "BQAAAAAAAAARAAAA/v///wAAAAAFAAAACgAAAAAAAAAAAAAAAAAAAA4AAAABAAAABQAAAAUAAAAIAAAAAAAAAAAAAAAAAAAADQAAAAUAAAAGAAAAAAAAAAAAAAAAAAAACwAAAAAAAAA="
+    "value": "floor(min(SF_7, Intelligence_Total) / SF_4) * SF_2 + SF_0",
+    "compiled": "BQAAAA0AAAAAAAAAAAAAAAAAAAAFAAAAAAAAABEAAAD+////AAAAAAEAAAAAAAAABQAAAAoAAAAAAAAAAAAAAAAAAAAOAAAAAQAAAAUAAAAFAAAACAAAAAAAAAAAAAAAAAAAAA0AAAAFAAAABgAAAAAAAAAAAAAAAAAAAAsAAAAAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "1200",
+    "compiled": "BgAAAAAAlkQAAAAA"
    }
   }
  ],
