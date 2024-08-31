@@ -13,6 +13,7 @@ ACDLookAtMessage
 ACDPickupFailedMessage
 ACDPrimaryPowerMessage
 ACDSyncBuffsMessage
+ACDSyncRunewordsMessage
 ACDTranslateAckMessage
 ACDTranslateDetPathMessage
 ACDTranslateDetPathSinMessage
@@ -98,7 +99,10 @@ ActorPlayerData
 ActorPreloadHelper
 ActorProjectileData
 ActorPropData
+ActorResurrection
+ActorResurrection_Table
 ActorServerData
+ActorServiceDefinition
 ActorShaderMapOverrideChangedMessage
 ActorSlotHelper
 ActorSoundTableData
@@ -116,6 +120,7 @@ AdvancedBloomSettingsOptionalFieldMapDefaults
 AffixDefinition
 AffixMessage
 AffixSortGroup
+AfterCreditsScenes
 AimTargetMessage
 AllLogicSubcondition
 AlphaBlendFactors
@@ -187,6 +192,8 @@ AttachCarryableToPlayerMessage
 AttributeFormulaEntry
 AttributeFormulaEntry_Table
 AttributeFormulaRange
+AttributeSelection
+AttributeSelectionWrapper
 AttributeSetValueMessage
 AttributeSpecifier
 AttributeSubcondition
@@ -266,6 +273,10 @@ CampaignCallbackSubcondition
 CampaignChain
 CampaignCodexGroup
 CampaignData
+CampaignSkipFoWs
+CampaignSkipQuests
+CampaignSkipTutorials
+CampaignSkipWaypoints
 CancelGroupTransferMessage
 Capsule
 CapsuleProximityData
@@ -350,6 +361,7 @@ ConditionWrapper
 ConditionalAudioState
 ConditionalAudioStateSetter
 ConditionalMaterialOverride
+ConditionalSkillTag
 ConditionalTemperLimit
 ConfirmDungeonKeyUseMessage
 ConnectionEstablishedMessage
@@ -395,6 +407,9 @@ CraftingMatCategory
 CraftingMatCategory_Table
 CraftingRecipeResultMessage
 CraftingResultsMessage
+CreditsInfo
+CreditsMessage
+CritChanceIncreaseReward
 CriteriaDefinition
 CriteriaEvent
 CriteriaModifier
@@ -500,8 +515,11 @@ DataAttribute_Table
 DataIDDataMessage
 DaytimeSubcondition
 DeathFadeTimeMessage
+DeathKitDefinition
 DeathLookTemplate
 DeathMaterialTemplate
+DeathPowerRemap
+DeathPowerType
 DeathTemplate
 DebugActorTooltipMessage
 DebugDataBlockMessage
@@ -538,6 +556,7 @@ DesignerVariableChanged
 DesignerVariablePayload
 DesignerVariableProgressBar
 DesignerVariableProgressBarIcon
+DesignerVariableProgressBarThreshold
 DesignerVariableProgressBar_Table
 DesignerVariable_Table
 DesignerWorldFeatureFlagSubcondition
@@ -547,6 +566,11 @@ DestroyOnProximityGizmoData
 DestroySceneMessage
 DestroyableObjectGizmoData
 DetachCarryableFromPlayerMessage
+DifficultyTierEntry
+DifficultyTierEntry_Table
+DifficultyTierSubcondition
+DifficultyUI
+DifficultyUIStatsInfo
 DisplayGameTextMessage
 DisplayMode
 DoorGizmoData
@@ -558,6 +582,7 @@ DungeonAffixFamilyEntry
 DungeonAffixFamilyEntry_Table
 DungeonAffixPreloadHelper
 DungeonAffixRange
+DungeonAffixSubcondition
 DungeonArchetypeData
 DungeonArchetypeData_Table
 DungeonFlavorData
@@ -570,6 +595,8 @@ DungeonSpawningPoolEntry_Table
 DungeonStateSubcondition
 DungeonStatesEntry
 DungeonStatesEntry_Table
+DungeonTuningEffect
+DungeonTuningEffect_Table
 DungeonWaveMessage
 DyeDefinition
 DyeParams
@@ -697,11 +724,14 @@ GameFlagSubcondition
 GameFoundForTransferMessage
 GameGuideCategory
 GameGuideCategory_Table
+GameHasGameTagSubcondition
 GameSetupMessage
 GameSyncedData
 GameSyncedDataMessage
 GameSyncedDebugData
 GameSyncedDebugDataMessage
+GameTag
+GameTag_Table
 GameTestingActorDeathSamplingStartMessage
 GameTestingActorUseSkill
 GameTestingBuyItem
@@ -745,8 +775,20 @@ GeneratorToItemResponseMessage
 GenericBlobMessage
 GenericBlobRequestMessage
 GenericBlobResponseMessage
+GenericGraphContainer
+GenericGraphItem
+GenericGraphNode
+GenericGraphNodeContentBase
+GenericGraphNodePlug
+GenericGraphPlugContentBase
 GenericNodeConnection
 GenericNodeGraphDefinition
+GenericSkillTreeAttributes
+GenericSkillTreeData
+GenericSkillTreeHeroSaveData
+GenericSkillTreeMessage
+GenericSkillTreeNodeMessage
+GenericSkillTreeSaveData
 GenericTreeNode
 GenericTreeNodeConnection
 GeoChunk
@@ -770,12 +812,15 @@ GlobalComponentClothCapsule
 GlobalCrafterEvents
 GlobalCustomizationData
 GlobalData
+GlobalDeathKitData
+GlobalDeathPowerRemapData
 GlobalDefinition
 GlobalEmblems
 GlobalEmotes
 GlobalFlippyData
 GlobalFontColor
 GlobalGameGuideData
+GlobalGenericSkillTreeData
 GlobalHealerEvents
 GlobalHealthPotionData
 GlobalIntensityLevels
@@ -785,6 +830,7 @@ GlobalMarkerActorHiddenCacheData
 GlobalMarkerActorPortalData
 GlobalMarkerActorPortalDestData
 GlobalMarkerActorWaypointData
+GlobalMercenaryData
 GlobalNPCCustomizationData
 GlobalNightmareDungeonData
 GlobalPartyFinderData
@@ -804,6 +850,7 @@ GlobalUIData
 GlobalUserDefinedData
 GlobalVendorEvents
 GlobalWaypointData
+GlobalWorldMarkerPingData
 GlobalZoneProgressData
 GoToWaypointMessage
 GroundNormalTests
@@ -923,6 +970,8 @@ ItemDungeonKeyDataMessage
 ItemImageHandleReference
 ItemLabelGroups
 ItemLabelGroups_Table
+ItemLabelSubcondition
+ItemMagicTypeSubcondition
 ItemMasterworkResultMessage
 ItemPVPEarDataMessage
 ItemPowerSubcondition
@@ -933,6 +982,7 @@ ItemQualitySubcondition
 ItemRequirementDefinition
 ItemSalvageLevel
 ItemSalvageLevel_Table
+ItemSourceDifficultyTierSubcondition
 ItemSourceWorldTierSubcondition
 ItemSpecifierData
 ItemTier
@@ -1141,6 +1191,16 @@ Matrix4x4
 MaxArmorPactCount
 MaxKeyedDungeonCompletedSubcondition
 MediumBiomeObject
+MercenariesHeroSaveData
+MercenaryClassDefinition
+MercenaryData
+MercenaryHeroSaveData
+MercenaryInteractMessage
+MercenaryLevelMessage
+MercenaryLevelScalingDefinition
+MercenaryLevelScalingDefinition_Table
+MercenaryReinforcementMessage
+MercenaryReinforcementSaveData
 MergedMsgTriggeredEvent
 ModalButton
 Modifiers
@@ -1169,6 +1229,7 @@ MonsterTags
 MonsterTags_Table
 MountACDInfo
 MountClearMessage
+MountLoadingScreen
 MountPreset
 MountProfile
 MountProfileDefinition
@@ -1303,6 +1364,7 @@ OnStackCountChangedCallback
 OnStartPowerCallback
 OnUnequipPowerCallback
 OpenDungeonForLFDMessage
+OperateRaidDifficultySelectMessage
 OperateRecipeEventMessage
 OperateWorldTierSelectMessage
 OptionalTalentKeys
@@ -1331,6 +1393,8 @@ ParagonEquipBoardMessage
 ParagonGlyphAffixAttribute
 ParagonGlyphAffixAttributeMap
 ParagonGlyphAffixDefinition
+ParagonGlyphChanceUpgradeMessage
+ParagonGlyphChanceUpgradeResultMessage
 ParagonGlyphDefinition
 ParagonGlyphExperience
 ParagonGlyphExperience_Table
@@ -1361,7 +1425,9 @@ ParticleSimKeyFrameScale
 ParticleSimKeyFrameSpin
 PartyFinderTagsEntry
 PartyFinderTagsEntry_Table
+PartyHasTrackedSubzoneSubcondition
 PartyInstanceCompletedMessage
+PartySizeSubcondition
 PartyVoteReplyMessage
 PassivePowerContainer
 PassivePowerContainerDefinition
@@ -1421,6 +1487,7 @@ PlayerClassNecroData
 PlayerClassResourceData
 PlayerClassRogueData
 PlayerClassSorcererData
+PlayerClassSpiritbornData
 PlayerClassSubcondition
 PlayerCodexUnlockCountSubcondition
 PlayerCollectiblePowerLevelSubcondition
@@ -1429,6 +1496,7 @@ PlayerCurrentLevelAreaSubcondition
 PlayerCurrentWorldSubcondition
 PlayerCustomizationMessage
 PlayerDWordDataMessage
+PlayerDurabilitySubcondition
 PlayerEmblemResponseMessage
 PlayerEnterKnownMessage
 PlayerFlagSubcondition
@@ -1438,6 +1506,7 @@ PlayerForceShapeshiftMessage
 PlayerGenderSubcondition
 PlayerHasEarnedAchievementSubcondition
 PlayerHasFollowerSubcondition
+PlayerHasFoundHiddenCacheSubcondition
 PlayerHasLearnedParagonGlyphSubcondition
 PlayerHasSeenTutorialSubcondition
 PlayerHasUnlockedMountsSubcondition
@@ -1454,8 +1523,12 @@ PlayerLevelMessage
 PlayerLevelRangeSubcondition
 PlayerLevelSubcondition
 PlayerLoadingScreens
+PlayerMercenaryClassIsEquipped
+PlayerMercenaryClassUnlocked
 PlayerNonAuthoritativePositionMessage
 PlayerOwnsAMountSubcondition
+PlayerOwnsExpansionSubcondition
+PlayerParagonLevelMessage
 PlayerParagonPointMessage
 PlayerPartitionLevelSubcondition
 PlayerPartySummonReceivedMessage
@@ -1477,7 +1550,9 @@ PlayerStoreEmoteAnimPreloadHelper
 PlayerTalentRankSubcondition
 PlayerTitleDefinition
 PlayerTitleResponseMessage
+PlayerTotalRenownSubcondition
 PlayerTownPortalReturnDestMessage
+PlayerTrackedRewardSubcondition
 PlayerTradeMessage
 PlayerUnpossessActorMessage
 PlayerVariableIsSetSubcondition
@@ -1547,6 +1622,7 @@ PowerConditionIsAutoCast
 PowerConditionIsChannelled
 PowerConditionIsCrowdControlled
 PowerConditionIsDamageType
+PowerConditionIsEmpowered
 PowerConditionIsFortified
 PowerConditionIsFromParentCollectiblePower
 PowerConditionIsHealthy
@@ -1563,7 +1639,9 @@ PowerConditionIsShapeshiftForm
 PowerConditionIsSkillCategory
 PowerConditionIsSkillSlot
 PowerConditionIsSpecificActor
+PowerConditionIsStaggered
 PowerConditionIsStealthed
+PowerConditionIsTormentTier
 PowerConditionIsTrackedActor
 PowerConditionIsValidForWeaponExpertise
 PowerConditionIsVulnerable
@@ -1595,6 +1673,8 @@ PowerPhaseInitialization
 PowerPhaseLoop
 PowerPhaseOneShot
 PowerPhasePreplay
+PowerProjectileOverride
+PowerQueryConditionBase
 PowerResourceCost
 PowerScriptParam
 PowerStartVariant
@@ -1657,6 +1737,7 @@ QuestFollower
 QuestFollowerPhaseInfo
 QuestFollowerSpawnBehavior
 QuestItemCountSubcondition
+QuestItemRemovalData
 QuestKillAllMonstersUpdatedMessage
 QuestObjectiveSet
 QuestObjectiveSetLink
@@ -1681,6 +1762,10 @@ QuestTrackedQuestChangedMessage
 QuestTrainingTreeNode
 QuitGameMessage
 RNGStateData
+RaidBannerGizmoData
+RaidDefinition
+RaidProgressDifficultyPromptMessage
+RaidWingData
 RainSoundSurfaceSet
 RainSplashSurfaceParticle
 RainSplashSurfaceParticleOptionalFieldMapDefaults
@@ -1753,6 +1838,7 @@ RunTimeMaterialValue_int32
 RunTimeMaterialValues
 RunTimeMaterialVectorGraphEntry
 RunTimeMaterialVectorValueEntry
+RunewordTriggeredMessage
 SNOBlocklistDataChanged
 SNODataMessage
 SNODiskEntry
@@ -1808,6 +1894,7 @@ ScriptEventParamGizmoType
 ScriptEventParamHashedString
 ScriptEventParamItem
 ScriptEventParamItemType
+ScriptEventParamKeyedDungeon
 ScriptEventParamLevelArea
 ScriptEventParamLinkedMarkerAny
 ScriptEventParamLinkedMarkerInGroup
@@ -1840,6 +1927,7 @@ ScriptEventParamSubzone
 ScriptEventParamTimeInterval
 ScriptEventParamTrackedReward
 ScriptEventParamWorld
+ScriptEventParamZone
 ScriptFormulaInfo
 ScriptMessageMap
 ScriptMessageMapFilter
@@ -1864,6 +1952,7 @@ ServerLogMessage
 ServerNotificationDataMessage
 ServerSimulationTimeMessage
 ServiceAvailability
+ServiceConditionData
 SetBonusTier
 SetDynamicDistanceCleansingRitualMessage
 SetIdleAnimationMessage
@@ -1889,6 +1978,7 @@ SharedServerWorldPlace
 ShoreWaveSettings
 ShortcutKey
 ShrineGizmoData
+SignGizmoConditionalData
 SignGizmoData
 SimpleCommandFrameMessage
 SimpleMessage
@@ -1943,15 +2033,22 @@ SpeakerActorOverride
 SpeakerDefinition
 SpeedTree8BranchWindLevel
 SpeedTree8RippleGroup
+SpeedTree9BranchWindLevel
+SpeedTree9RippleGroup
 SpeedTreeBranchWindLevel
 SpeedTreeWind
 SpeedTreeWind8
 SpeedTreeWind8Params
+SpeedTreeWind9
+SpeedTreeWind9Params
 SpeedTreeWindBase
 SpeedTreeWindGroup
 SpeedTreeWindParams
 Sphere
 SphereProximityData
+SpiritbornSpiritChangeMessage
+SpiritbornSpiritData
+SpiritbornSpiritTypeData
 SplineEasingWeight
 StackPortionMessage
 StaggerDefinition
@@ -2031,8 +2128,11 @@ SubzoneDefinition
 SubzoneModifierStateMessage
 SubzoneModifierTagsEntry
 SubzoneModifierTagsEntry_Table
+SubzoneModifierWeatherOverride
 SubzoneRelation
 SubzoneTypeSubcondition
+SubzoneUIOverridesData
+SubzoneUIOverridesData_Table
 SubzoneWorldMarkerSetEntry
 SummonActorEntry
 SummonedActorsPreloadHelper
@@ -2046,6 +2146,7 @@ SurveyTypeEntry_Table
 SwitchBehaviorGizmoData
 SwitchGizmoData
 SyncIdleAnimationMessage
+SyncedRunewordData
 TGCoeffs
 TalentRankAssignedMessage
 TelemetryBugEnteredMessage
@@ -2250,6 +2351,7 @@ UIColorPickerStyle
 UIColorPickerStyleOptionalFieldMapDefaults
 UIComboBoxStyle
 UIComboBoxStyleOptionalFieldMapDefaults
+UIConnectorProperties
 UIConsoleEditStyle
 UIContextMenuStyle
 UIControlClickSounds
@@ -2324,6 +2426,7 @@ UIScrollableTextStyleOptionalFieldMapDefaults
 UIScrollbarStyle
 UIScrollbarStyleOptionalFieldMapDefaults
 UISkillTreeStyle
+UISkillTreeStyleOptionalFieldMapDefaults
 UIStackPanelStyle
 UIStackPanelStyleOptionalFieldMapDefaults
 UIStoryboard2Style
@@ -2396,12 +2499,15 @@ WeatherStateParams
 WeatherStateParamsOptionalFieldMapDefaults
 WindowPieces
 WindowPiecesBase
+WorldConditionalData
 WorldDefinition
 WorldDeletedMessage
 WorldEvent
 WorldEventStartingMessage
 WorldEventWarmupWarningMessage
 WorldLocationMessageData
+WorldMarkerPingData
+WorldMarkerUpdateMessage
 WorldRevealedPortalInfo
 WorldServerData
 WorldSetRemainingReviveCountMessage
@@ -2437,6 +2543,7 @@ ZoneDefinition
 ZoneEvent
 ZoneEventStartingMessage
 ZoneMapGridSecretTextures
+ZoneMapMarker
 ZoneMapParams
 ZoneMapSecretCondition
 ZoneMapSecretTexture
