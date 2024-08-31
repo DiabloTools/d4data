@@ -4,7 +4,7 @@
  "__type__": "ParticleDefinition",
  "__typeHash__": 2145577021,
  "eType": 0,
- "dwFlags": 33567784,
+ "dwFlags": 33563688,
  "dwFlagsEx": 507511040,
  "dwFlagsEx2": 0,
  "tSystemDuration": 2,
@@ -63,8 +63,8 @@
     {
      "__type__": "InterpolationNode_float",
      "__typeHash__": 2007685731,
-     "tValueMin": 0.25,
-     "tValueMax": 0.25,
+     "tValueMin": 0.5,
+     "tValueMax": 0.5,
      "tTime": 0
     }
    ]
@@ -150,8 +150,8 @@
     {
      "__type__": "InterpolationNode_float",
      "__typeHash__": 2007685731,
-     "tValueMin": 1,
-     "tValueMax": 1.600000023841858,
+     "tValueMin": 0.7342551946640015,
+     "tValueMax": 0.8721031546592712,
      "tTime": 0
     }
    ]
@@ -347,7 +347,7 @@
      {
       "__type__": "InterpolationScalar",
       "__typeHash__": 991799518,
-      "nScalarFunction": 0,
+      "nScalarFunction": 19,
       "dwFlags": 1,
       "tInputRange": {
        "rangeValue1": 0,
@@ -367,8 +367,8 @@
     {
      "__type__": "InterpolationNode_float",
      "__typeHash__": 2007685731,
-     "tValueMin": 10,
-     "tValueMax": 10,
+     "tValueMin": 12,
+     "tValueMax": 12,
      "tTime": 0
     },
     {
@@ -388,7 +388,48 @@
  "pathNoiseSmoothness": [],
  "pathNoiseAmplitude": [],
  "pathNoiseAmplitudeRange": [],
- "pathCameraOffset": [],
+ "pathCameraOffset": [
+  {
+   "__type__": "InterpolationPath_float",
+   "__typeHash__": 3422409450,
+   "tHeader": {
+    "__type__": "InterpolationPathHeader",
+    "__typeHash__": 2520702334,
+    "tLoopPointStart": 0,
+    "tLoopPointEnd": 1,
+    "nDistributionFunction": 0,
+    "nMinMaxBehavior": 0,
+    "arInterpScalar": [
+     {
+      "__type__": "InterpolationScalar",
+      "__typeHash__": 991799518,
+      "nScalarFunction": 0,
+      "dwFlags": 1,
+      "tInputRange": {
+       "rangeValue1": 0,
+       "rangeValue2": 1
+      },
+      "tRemapRange": {
+       "rangeValue1": 0,
+       "rangeValue2": 1
+      },
+      "eRemapEasing": 0,
+      "szFormulaName": 0
+     }
+    ],
+    "dwFlags": 12
+   },
+   "ptArrayNodes": [
+    {
+     "__type__": "InterpolationNode_float",
+     "__typeHash__": 2007685731,
+     "tValueMin": 0.20000000298023224,
+     "tValueMax": 0.20000000298023224,
+     "tTime": 0
+    }
+   ]
+  }
+ ],
  "snoMaterial": {
   "__raw__": 1091449,
   "__group__": 57,
@@ -399,9 +440,11 @@
   "name": "interactiveVFX_dirt_emerging_gbuffer"
  },
  "snoHoudini": null,
+ "snoAppearance": null,
  "snoPhysics": null,
  "snoSpawnOnCollision": null,
  "flNormalBias": 0,
+ "unk_471cfa5": 0.20000000298023224,
  "flWindFactor": 1,
  "flExplosionFactor": 1,
  "flExplosionFriction": 0.10000000149011612,
@@ -642,9 +685,100 @@
     {
      "__type__": "InterpolationNode_float",
      "__typeHash__": 2007685731,
+     "tValueMin": 0.014360272325575352,
+     "tValueMax": 0.014360272325575352,
+     "tTime": 0.0010140526574105024
+    },
+    {
+     "__type__": "InterpolationNode_float",
+     "__typeHash__": 2007685731,
+     "tValueMin": 0.05459240451455116,
+     "tValueMax": 0.05459240451455116,
+     "tTime": 0.003962616436183453
+    },
+    {
+     "__type__": "InterpolationNode_float",
+     "__typeHash__": 2007685731,
+     "tValueMin": 0.11642336845397949,
+     "tValueMax": 0.11642336845397949,
+     "tTime": 0.008705301210284233
+    },
+    {
+     "__type__": "InterpolationNode_float",
+     "__typeHash__": 2007685731,
+     "tValueMin": 0.19558009505271912,
+     "tValueMax": 0.19558009505271912,
+     "tTime": 0.015101712197065353
+    },
+    {
+     "__type__": "InterpolationNode_float",
+     "__typeHash__": 2007685731,
+     "tValueMin": 0.28778961300849915,
+     "tValueMax": 0.28778961300849915,
+     "tTime": 0.0230114609003067
+    },
+    {
+     "__type__": "InterpolationNode_float",
+     "__typeHash__": 2007685731,
+     "tValueMin": 0.388778954744339,
+     "tValueMax": 0.388778954744339,
+     "tTime": 0.03229416161775589
+    },
+    {
+     "__type__": "InterpolationNode_float",
+     "__typeHash__": 2007685731,
+     "tValueMin": 0.4942748546600342,
+     "tValueMax": 0.4942748546600342,
+     "tTime": 0.04280940443277359
+    },
+    {
+     "__type__": "InterpolationNode_float",
+     "__typeHash__": 2007685731,
+     "tValueMin": 0.6000045537948608,
+     "tValueMax": 0.6000045537948608,
+     "tTime": 0.054416824132204056
+    },
+    {
+     "__type__": "InterpolationNode_float",
+     "__typeHash__": 2007685731,
+     "tValueMin": 0.701694905757904,
+     "tValueMax": 0.701694905757904,
+     "tTime": 0.06697602570056915
+    },
+    {
+     "__type__": "InterpolationNode_float",
+     "__typeHash__": 2007685731,
+     "tValueMin": 0.7950726747512817,
+     "tValueMax": 0.7950726747512817,
+     "tTime": 0.08034657686948776
+    },
+    {
+     "__type__": "InterpolationNode_float",
+     "__typeHash__": 2007685731,
+     "tValueMin": 0.8758652210235596,
+     "tValueMax": 0.8758652210235596,
+     "tTime": 0.09438814222812653
+    },
+    {
+     "__type__": "InterpolationNode_float",
+     "__typeHash__": 2007685731,
+     "tValueMin": 0.9397993683815002,
+     "tValueMax": 0.9397993683815002,
+     "tTime": 0.10896031558513641
+    },
+    {
+     "__type__": "InterpolationNode_float",
+     "__typeHash__": 2007685731,
+     "tValueMin": 0.9826017618179321,
+     "tValueMax": 0.9826017618179321,
+     "tTime": 0.12392265349626541
+    },
+    {
+     "__type__": "InterpolationNode_float",
+     "__typeHash__": 2007685731,
      "tValueMin": 1,
      "tValueMax": 1,
-     "tTime": 0.15981735289096832
+     "tTime": 0.13913483917713165
     },
     {
      "__type__": "InterpolationNode_float",
@@ -712,9 +846,121 @@
     {
      "__type__": "InterpolationNode_float",
      "__typeHash__": 2007685731,
-     "tValueMin": 1,
-     "tValueMax": 1,
-     "tTime": 0
+     "tValueMin": 0.014937362633645535,
+     "tValueMax": 0.014937362633645535,
+     "tTime": 0.001014122972264886
+    },
+    {
+     "__type__": "InterpolationNode_float",
+     "__typeHash__": 2007685731,
+     "tValueMin": 0.05656369775533676,
+     "tValueMax": 0.05656369775533676,
+     "tTime": 0.003884851234033704
+    },
+    {
+     "__type__": "InterpolationNode_float",
+     "__typeHash__": 2007685731,
+     "tValueMin": 0.12010037153959274,
+     "tValueMax": 0.12010037153959274,
+     "tTime": 0.008354724384844303
+    },
+    {
+     "__type__": "InterpolationNode_float",
+     "__typeHash__": 2007685731,
+     "tValueMin": 0.20076876878738403,
+     "tValueMax": 0.20076876878738403,
+     "tTime": 0.014166283421218395
+    },
+    {
+     "__type__": "InterpolationNode_float",
+     "__typeHash__": 2007685731,
+     "tValueMin": 0.29379022121429443,
+     "tValueMax": 0.29379022121429443,
+     "tTime": 0.021062063053250313
+    },
+    {
+     "__type__": "InterpolationNode_float",
+     "__typeHash__": 2007685731,
+     "tValueMin": 0.3943862318992615,
+     "tValueMax": 0.3943862318992615,
+     "tTime": 0.0287846140563488
+    },
+    {
+     "__type__": "InterpolationNode_float",
+     "__typeHash__": 2007685731,
+     "tValueMin": 0.497778058052063,
+     "tValueMax": 0.497778058052063,
+     "tTime": 0.037076469510793686
+    },
+    {
+     "__type__": "InterpolationNode_float",
+     "__typeHash__": 2007685731,
+     "tValueMin": 0.5991870164871216,
+     "tValueMax": 0.5991870164871216,
+     "tTime": 0.04568016529083252
+    },
+    {
+     "__type__": "InterpolationNode_float",
+     "__typeHash__": 2007685731,
+     "tValueMin": 0.6938345432281494,
+     "tValueMax": 0.6938345432281494,
+     "tTime": 0.054338239133358
+    },
+    {
+     "__type__": "InterpolationNode_float",
+     "__typeHash__": 2007685731,
+     "tValueMin": 0.7769418954849243,
+     "tValueMax": 0.7769418954849243,
+     "tTime": 0.06279323250055313
+    },
+    {
+     "__type__": "InterpolationNode_float",
+     "__typeHash__": 2007685731,
+     "tValueMin": 0.8437310457229614,
+     "tValueMax": 0.8437310457229614,
+     "tTime": 0.070787712931633
+    },
+    {
+     "__type__": "InterpolationNode_float",
+     "__typeHash__": 2007685731,
+     "tValueMin": 0.8894225358963013,
+     "tValueMax": 0.8894225358963013,
+     "tTime": 0.07806417346000671
+    },
+    {
+     "__type__": "InterpolationNode_float",
+     "__typeHash__": 2007685731,
+     "tValueMin": 0.9092381000518799,
+     "tValueMax": 0.9092381000518799,
+     "tTime": 0.08436518162488937
+    },
+    {
+     "__type__": "InterpolationNode_float",
+     "__typeHash__": 2007685731,
+     "tValueMin": 0.9560503363609314,
+     "tValueMax": 0.9560503363609314,
+     "tTime": 0.11916862428188324
+    },
+    {
+     "__type__": "InterpolationNode_float",
+     "__typeHash__": 2007685731,
+     "tValueMin": 0.9770991802215576,
+     "tValueMax": 0.9770991802215576,
+     "tTime": 0.16870836913585663
+    },
+    {
+     "__type__": "InterpolationNode_float",
+     "__typeHash__": 2007685731,
+     "tValueMin": 0.9443456530570984,
+     "tValueMax": 0.9443456530570984,
+     "tTime": 0.22963345050811768
+    },
+    {
+     "__type__": "InterpolationNode_float",
+     "__typeHash__": 2007685731,
+     "tValueMin": 0.8955134153366089,
+     "tValueMax": 0.8955134153366089,
+     "tTime": 0.2961951196193695
     },
     {
      "__type__": "InterpolationNode_float",
@@ -770,15 +1016,22 @@
       "szFormulaName": 0
      }
     ],
-    "dwFlags": 12
+    "dwFlags": 4
    },
    "ptArrayNodes": [
     {
      "__type__": "InterpolationNode_float",
      "__typeHash__": 2007685731,
-     "tValueMin": 0.30000001192092896,
-     "tValueMax": 0.30000001192092896,
+     "tValueMin": 0.5748091340065002,
+     "tValueMax": 0.5748091340065002,
      "tTime": 0
+    },
+    {
+     "__type__": "InterpolationNode_float",
+     "__typeHash__": 2007685731,
+     "tValueMin": 0.4198473393917084,
+     "tValueMax": 0.4198473393917084,
+     "tTime": 1
     }
    ]
   }
@@ -832,7 +1085,92 @@
    ]
   }
  ],
- "unk_b92bb9a": [],
+ "unk_b92bb9a": [
+  {
+   "__type__": "VectorPath",
+   "__typeHash__": 2594652800,
+   "tPathData": {
+    "__type__": "InterpolationPath_bcVec3",
+    "__typeHash__": 1102252714,
+    "tHeader": {
+     "__type__": "InterpolationPathHeader",
+     "__typeHash__": 2520702334,
+     "tLoopPointStart": 0,
+     "tLoopPointEnd": 1,
+     "nDistributionFunction": 0,
+     "nMinMaxBehavior": 0,
+     "arInterpScalar": [
+      {
+       "__type__": "InterpolationScalar",
+       "__typeHash__": 991799518,
+       "nScalarFunction": 0,
+       "dwFlags": 1,
+       "tInputRange": {
+        "rangeValue1": 0,
+        "rangeValue2": 1
+       },
+       "tRemapRange": {
+        "rangeValue1": 0,
+        "rangeValue2": 1
+       },
+       "eRemapEasing": 0,
+       "szFormulaName": 0
+      },
+      {
+       "__type__": "InterpolationScalar",
+       "__typeHash__": 991799518,
+       "nScalarFunction": 0,
+       "dwFlags": 1,
+       "tInputRange": {
+        "rangeValue1": 0,
+        "rangeValue2": 1
+       },
+       "tRemapRange": {
+        "rangeValue1": 0,
+        "rangeValue2": 1
+       },
+       "eRemapEasing": 0,
+       "szFormulaName": 0
+      },
+      {
+       "__type__": "InterpolationScalar",
+       "__typeHash__": 991799518,
+       "nScalarFunction": 0,
+       "dwFlags": 1,
+       "tInputRange": {
+        "rangeValue1": 0,
+        "rangeValue2": 1
+       },
+       "tRemapRange": {
+        "rangeValue1": 0,
+        "rangeValue2": 1
+       },
+       "eRemapEasing": 0,
+       "szFormulaName": 0
+      }
+     ],
+     "dwFlags": 12
+    },
+    "ptArrayNodes": [
+     {
+      "__type__": "InterpolationNode_bcVec3",
+      "__typeHash__": 1661010243,
+      "tValueMin": {
+       "x": 0.75,
+       "y": 1,
+       "z": 1
+      },
+      "tValueMax": {
+       "x": 0.75,
+       "y": 1,
+       "z": 1
+      },
+      "tTime": 0
+     }
+    ]
+   }
+  }
+ ],
  "pathAngularPosition": [],
  "pathAngularVelocity": [
   {
@@ -1388,12 +1726,12 @@
       "tValueMin": {
        "x": 0,
        "y": 0,
-       "z": 0
+       "z": 3.6222519874572754
       },
       "tValueMax": {
        "x": 0,
        "y": 0,
-       "z": 0
+       "z": 3.6222519874572754
       },
       "tTime": 0
      },
@@ -1403,12 +1741,12 @@
       "tValueMin": {
        "x": 0,
        "y": 0,
-       "z": 0
+       "z": 3.6222519874572754
       },
       "tValueMax": {
        "x": 0,
        "y": 0,
-       "z": 0
+       "z": 3.6222519874572754
       },
       "tTime": 0.0167427696287632
      },
@@ -1418,12 +1756,12 @@
       "tValueMin": {
        "x": 0,
        "y": 0,
-       "z": -0.11238212138414383
+       "z": 2.831409215927124
       },
       "tValueMax": {
        "x": 0,
        "y": 0,
-       "z": -0.11238212138414383
+       "z": 2.831409215927124
       },
       "tTime": 0.24934206902980804
      },
@@ -1433,14 +1771,14 @@
       "tValueMin": {
        "x": 0,
        "y": 0,
-       "z": -0.29339465498924255
+       "z": 1.5576083660125732
       },
       "tValueMax": {
        "x": 0,
        "y": 0,
-       "z": -0.29339465498924255
+       "z": 1.5576083660125732
       },
-      "tTime": 0.48819878697395325
+      "tTime": 0.48819881677627563
      },
      {
       "__type__": "InterpolationNode_bcVec3",
@@ -1553,7 +1891,7 @@
        "szFormulaName": 0
       }
      ],
-     "dwFlags": 4
+     "dwFlags": 12
     },
     "ptArrayNodes": [
      {
@@ -1562,44 +1900,14 @@
       "tValueMin": {
        "x": 0,
        "y": 0,
-       "z": 0
+       "z": -3
       },
       "tValueMax": {
        "x": 0,
        "y": 0,
-       "z": 0
+       "z": -3
       },
       "tTime": 0
-     },
-     {
-      "__type__": "InterpolationNode_bcVec3",
-      "__typeHash__": 1661010243,
-      "tValueMin": {
-       "x": 0,
-       "y": 0,
-       "z": 0
-      },
-      "tValueMax": {
-       "x": 0,
-       "y": 0,
-       "z": 0
-      },
-      "tTime": 0
-     },
-     {
-      "__type__": "InterpolationNode_bcVec3",
-      "__typeHash__": 1661010243,
-      "tValueMin": {
-       "x": 0,
-       "y": 0,
-       "z": 0
-      },
-      "tValueMax": {
-       "x": 0,
-       "y": 0,
-       "z": 0
-      },
-      "tTime": 3.4028234663852886e+38
      }
     ]
    }
@@ -1870,6 +2178,7 @@
  "unk_8dc0a2c": [],
  "nFacing": 0,
  "eAlignment": 0,
+ "unk_a70d91e": 0,
  "wdBoundingRadius": 10,
  "unk_a79a409": 0.5,
  "unk_daaa964": 10,

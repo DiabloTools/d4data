@@ -15,7 +15,7 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "desc",
-   "szText": "{c_label}Cooldown:{/c_label} {c_resource}{Cooldown Time}{/c_resource} seconds\r\n{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat Effect Chance}|%|]{/c}\r\n{/if}Place a trap that arms after {c_number}{buffduration:ARMING}{/c} seconds. It activates when an enemy moves within range, dealing a total of {c_number}{payload:TOOLTIP_DAMAGE}{/c} damage to each enemy in the area.",
+   "szText": "{c_label}Cooldown:{/c_label} {c_resource}{Cooldown Time}{/c_resource} seconds\r\n{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat Effect Chance}|%|]{/c}\r\n{/if}Place a trap that arms after {c_number}{buffduration:ARMING}{/c} seconds. It activates when an enemy moves within range, dealing a total of {c_number}{payload:TOOLTIP_DAMAGE}{/c} damage to each enemy in the area.\r\n\r\nIf {c_important}Death Trap{/c} kills an enemy, its Cooldown is reduced by {c_number}{SF_17}{/c} seconds.",
    "hLabel": 3707583
   },
   {
@@ -36,7 +36,7 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod1_Description",
-   "szText": "If {c_important}Death Trap{/c} kills an enemy, its Cooldown is reduced by {c_number}{SF_17}{/c} seconds.",
+   "szText": "Enemies that resist {c_important}Death Traps'{/c} Pull In are hit again for {c_number}[SF_20*100|%x|]{/c} of {c_important}Death Traps'{/c} damage.",
    "hLabel": 628601524
   },
   {
@@ -45,6 +45,13 @@
    "szLabel": "Mod1_Name",
    "szText": "Supreme Death Trap",
    "hLabel": 2492006865
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "rankup_desc",
+   "szText": "\r\n{icon:bullet, 1.2} Damage {icon:arrow, 1.2} {c_number}{payload:TOOLTIP_DAMAGE}{/c}\r\n{icon:bullet,1.2} Cooldown {icon:arrow,1.2} {c_number}{Cooldown Time}{/c} seconds",
+   "hLabel": 4074074671
   }
  ],
  "ptMapStringTable": "0"

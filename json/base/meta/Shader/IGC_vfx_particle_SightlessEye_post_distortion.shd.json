@@ -1,0 +1,820 @@
+{
+ "__fileName__": "base/meta/Shader/IGC_vfx_particle_SightlessEye_post_distortion.shd",
+ "__snoID__": 949403,
+ "__type__": "ShaderDefinition",
+ "__typeHash__": 923517792,
+ "dwRenderLayers": 16,
+ "ptPasses": [
+  {
+   "__type__": "RenderPass",
+   "__typeHash__": 3394879799,
+   "eRenderLayer": 4,
+   "eGraphType": 2,
+   "tRenderParams": {
+    "__type__": "RenderParams",
+    "__typeHash__": 3352174724,
+    "nSortPriorityOffset": 0,
+    "eCullMode": 1,
+    "fZBufferWriteEnable": false,
+    "eZBufferCompareFunc": 4,
+    "flZBias": 0,
+    "flZSlopeScaleBias": 0,
+    "unk_88ea918": 1,
+    "unk_86528c3": 1,
+    "tStencilParams": {
+     "__type__": "StencilParams",
+     "__typeHash__": 1922961974,
+     "fStencilBufferEnable": true,
+     "dwStencilBufferRefValue": 1,
+     "dwStencilReadMask": 1,
+     "dwStencilWriteMask": 1,
+     "eFrontStencilBufferCompareFunc": 8,
+     "eFrontStencilOpPass": 3,
+     "eFrontStencilOpFail": 3,
+     "eFrontStencilOpZFail": 3,
+     "eBackStencilBufferCompareFunc": 8,
+     "eBackStencilOpPass": 3,
+     "eBackStencilOpFail": 3,
+     "eBackStencilOpZFail": 3
+    },
+    "fAlphaTestEnable": true,
+    "eAlphaTestCompareFunc": 5,
+    "bAlphaTestRefValue": 0,
+    "fAlphaMaskEnable": false,
+    "eFillMode": 0,
+    "fIndependentAlphaBlendEnable": false,
+    "tAlphaBlend": [
+     {
+      "__type__": "AlphaBlendFactors",
+      "__typeHash__": 3409962653,
+      "fAlphaBlendEnable": true,
+      "eBlendOp": 1,
+      "eSrcBlendFactor": 5,
+      "eDestBlendFactor": 6,
+      "fSeparateAlphaBlendEnable": false,
+      "eBlendOpAlpha": 1,
+      "eSrcBlendFactorAlpha": 5,
+      "eDestBlendFactorAlpha": 6,
+      "fRWriteEnable": true,
+      "fGWriteEnable": true,
+      "fBWriteEnable": true,
+      "fAWriteEnable": false
+     },
+     {
+      "__type__": "AlphaBlendFactors",
+      "__typeHash__": 3409962653,
+      "fAlphaBlendEnable": false,
+      "eBlendOp": 1,
+      "eSrcBlendFactor": 5,
+      "eDestBlendFactor": 6,
+      "fSeparateAlphaBlendEnable": false,
+      "eBlendOpAlpha": 1,
+      "eSrcBlendFactorAlpha": 5,
+      "eDestBlendFactorAlpha": 6,
+      "fRWriteEnable": true,
+      "fGWriteEnable": true,
+      "fBWriteEnable": true,
+      "fAWriteEnable": false
+     },
+     {
+      "__type__": "AlphaBlendFactors",
+      "__typeHash__": 3409962653,
+      "fAlphaBlendEnable": false,
+      "eBlendOp": 1,
+      "eSrcBlendFactor": 5,
+      "eDestBlendFactor": 6,
+      "fSeparateAlphaBlendEnable": false,
+      "eBlendOpAlpha": 1,
+      "eSrcBlendFactorAlpha": 5,
+      "eDestBlendFactorAlpha": 6,
+      "fRWriteEnable": true,
+      "fGWriteEnable": true,
+      "fBWriteEnable": true,
+      "fAWriteEnable": false
+     },
+     {
+      "__type__": "AlphaBlendFactors",
+      "__typeHash__": 3409962653,
+      "fAlphaBlendEnable": false,
+      "eBlendOp": 1,
+      "eSrcBlendFactor": 5,
+      "eDestBlendFactor": 6,
+      "fSeparateAlphaBlendEnable": false,
+      "eBlendOpAlpha": 1,
+      "eSrcBlendFactorAlpha": 5,
+      "eDestBlendFactorAlpha": 6,
+      "fRWriteEnable": true,
+      "fGWriteEnable": true,
+      "fBWriteEnable": true,
+      "fAWriteEnable": false
+     },
+     {
+      "__type__": "AlphaBlendFactors",
+      "__typeHash__": 3409962653,
+      "fAlphaBlendEnable": false,
+      "eBlendOp": 1,
+      "eSrcBlendFactor": 5,
+      "eDestBlendFactor": 6,
+      "fSeparateAlphaBlendEnable": false,
+      "eBlendOpAlpha": 1,
+      "eSrcBlendFactorAlpha": 5,
+      "eDestBlendFactorAlpha": 6,
+      "fRWriteEnable": true,
+      "fGWriteEnable": true,
+      "fBWriteEnable": true,
+      "fAWriteEnable": false
+     },
+     {
+      "__type__": "AlphaBlendFactors",
+      "__typeHash__": 3409962653,
+      "fAlphaBlendEnable": false,
+      "eBlendOp": 1,
+      "eSrcBlendFactor": 5,
+      "eDestBlendFactor": 6,
+      "fSeparateAlphaBlendEnable": false,
+      "eBlendOpAlpha": 1,
+      "eSrcBlendFactorAlpha": 5,
+      "eDestBlendFactorAlpha": 6,
+      "fRWriteEnable": true,
+      "fGWriteEnable": true,
+      "fBWriteEnable": true,
+      "fAWriteEnable": false
+     }
+    ]
+   },
+   "snoShaderEffect": null,
+   "ptInputLayout": [
+    {
+     "__type__": "ShaderInputLayout",
+     "__typeHash__": 9306245,
+     "eVBFormat": 11
+    }
+   ],
+   "dwFlags": 0,
+   "dwDecalWriteFlags": 63,
+   "unk_c23801f": 0,
+   "ptPostprocessed": "0",
+   "dwShaderPermFlags": [
+    0,
+    16
+   ],
+   "ptPerms": [
+    {
+     "__type__": "ShaderPermutation",
+     "__typeHash__": 3001537487,
+     "unk_e3331b5": [
+      97,
+      98,
+      12,
+      94
+     ],
+     "unk_a2b58a8": [],
+     "tPrograms": [
+      {
+       "__type__": "ShaderPermShaderProgram",
+       "__typeHash__": 1801469402,
+       "pShaderProgram": [],
+       "pStateObject": [],
+       "dwKey": "ea673777b03f1d5",
+       "unk_8e5f439": [
+        671105024,
+        33554432,
+        2,
+        50331648,
+        0,
+        0
+       ],
+       "unk_d4d5dbb": [],
+       "ptResourceSlot": [],
+       "unk_6f6dbab": []
+      },
+      {
+       "__type__": "ShaderPermShaderProgram",
+       "__typeHash__": 1801469402,
+       "pShaderProgram": [],
+       "pStateObject": [],
+       "dwKey": "-451a5bb1004e1df5",
+       "unk_8e5f439": [
+        3538946,
+        134283264,
+        128,
+        0,
+        0,
+        0
+       ],
+       "unk_d4d5dbb": [
+        4,
+        5,
+        9
+       ],
+       "ptResourceSlot": [
+        39,
+        98,
+        94,
+        12,
+        97
+       ],
+       "unk_6f6dbab": []
+      },
+      {
+       "__type__": "ShaderPermShaderProgram",
+       "__typeHash__": 1801469402,
+       "pShaderProgram": [],
+       "pStateObject": [],
+       "dwKey": "0",
+       "unk_8e5f439": [],
+       "unk_d4d5dbb": [],
+       "ptResourceSlot": [],
+       "unk_6f6dbab": []
+      },
+      {
+       "__type__": "ShaderPermShaderProgram",
+       "__typeHash__": 1801469402,
+       "pShaderProgram": [],
+       "pStateObject": [],
+       "dwKey": "0",
+       "unk_8e5f439": [],
+       "unk_d4d5dbb": [],
+       "ptResourceSlot": [],
+       "unk_6f6dbab": []
+      }
+     ]
+    },
+    {
+     "__type__": "ShaderPermutation",
+     "__typeHash__": 3001537487,
+     "unk_e3331b5": [
+      105,
+      97,
+      98,
+      12,
+      94
+     ],
+     "unk_a2b58a8": [],
+     "tPrograms": [
+      {
+       "__type__": "ShaderPermShaderProgram",
+       "__typeHash__": 1801469402,
+       "pShaderProgram": [],
+       "pStateObject": [],
+       "dwKey": "-b7b40e9fa156e5f",
+       "unk_8e5f439": [
+        671105024,
+        33554432,
+        2,
+        50331648,
+        0,
+        0
+       ],
+       "unk_d4d5dbb": [],
+       "ptResourceSlot": [],
+       "unk_6f6dbab": []
+      },
+      {
+       "__type__": "ShaderPermShaderProgram",
+       "__typeHash__": 1801469402,
+       "pShaderProgram": [],
+       "pStateObject": [],
+       "dwKey": "-584085fee2d929ae",
+       "unk_8e5f439": [
+        3538946,
+        134283264,
+        128,
+        0,
+        0,
+        0
+       ],
+       "unk_d4d5dbb": [
+        4,
+        5,
+        9
+       ],
+       "ptResourceSlot": [
+        105,
+        39,
+        98,
+        94,
+        12,
+        97
+       ],
+       "unk_6f6dbab": []
+      },
+      {
+       "__type__": "ShaderPermShaderProgram",
+       "__typeHash__": 1801469402,
+       "pShaderProgram": [],
+       "pStateObject": [],
+       "dwKey": "0",
+       "unk_8e5f439": [],
+       "unk_d4d5dbb": [],
+       "ptResourceSlot": [],
+       "unk_6f6dbab": []
+      },
+      {
+       "__type__": "ShaderPermShaderProgram",
+       "__typeHash__": 1801469402,
+       "pShaderProgram": [],
+       "pStateObject": [],
+       "dwKey": "0",
+       "unk_8e5f439": [],
+       "unk_d4d5dbb": [],
+       "ptResourceSlot": [],
+       "unk_6f6dbab": []
+      }
+     ]
+    }
+   ],
+   "tUsedScalarMaterialValues": [
+    {
+     "__type__": "MaterialScalarValuesUsed",
+     "__typeHash__": 3952663046,
+     "snoMaterialValue": {
+      "__raw__": 138973,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/Alpha Dissolve Power Max.mtv",
+      "groupName": "MaterialValue",
+      "name": "Alpha Dissolve Power Max"
+     },
+     "flDefaultValue": 1
+    },
+    {
+     "__type__": "MaterialScalarValuesUsed",
+     "__typeHash__": 3952663046,
+     "snoMaterialValue": {
+      "__raw__": 139177,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/Alpha Brightness Global.mtv",
+      "groupName": "MaterialValue",
+      "name": "Alpha Brightness Global"
+     },
+     "flDefaultValue": 1
+    },
+    {
+     "__type__": "MaterialScalarValuesUsed",
+     "__typeHash__": 3952663046,
+     "snoMaterialValue": {
+      "__raw__": 142897,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/Alpha Noise Multiplier.mtv",
+      "groupName": "MaterialValue",
+      "name": "Alpha Noise Multiplier"
+     },
+     "flDefaultValue": 2
+    },
+    {
+     "__type__": "MaterialScalarValuesUsed",
+     "__typeHash__": 3952663046,
+     "snoMaterialValue": {
+      "__raw__": 144905,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/UV Distortion 1 U Strength.mtv",
+      "groupName": "MaterialValue",
+      "name": "UV Distortion 1 U Strength"
+     },
+     "flDefaultValue": 1
+    },
+    {
+     "__type__": "MaterialScalarValuesUsed",
+     "__typeHash__": 3952663046,
+     "snoMaterialValue": {
+      "__raw__": 144906,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/UV Distortion 1 V Strength.mtv",
+      "groupName": "MaterialValue",
+      "name": "UV Distortion 1 V Strength"
+     },
+     "flDefaultValue": 1
+    },
+    {
+     "__type__": "MaterialScalarValuesUsed",
+     "__typeHash__": 3952663046,
+     "snoMaterialValue": {
+      "__raw__": 151653,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/Alpha Shape-Noise Multiplier.mtv",
+      "groupName": "MaterialValue",
+      "name": "Alpha Shape-Noise Multiplier"
+     },
+     "flDefaultValue": 1
+    },
+    {
+     "__type__": "MaterialScalarValuesUsed",
+     "__typeHash__": 3952663046,
+     "snoMaterialValue": {
+      "__raw__": 152148,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/UV Distortion Shape Strength.mtv",
+      "groupName": "MaterialValue",
+      "name": "UV Distortion Shape Strength"
+     },
+     "flDefaultValue": 1
+    },
+    {
+     "__type__": "MaterialScalarValuesUsed",
+     "__typeHash__": 3952663046,
+     "snoMaterialValue": {
+      "__raw__": 164623,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/PolarUVs Noise U Scroll Speed.mtv",
+      "groupName": "MaterialValue",
+      "name": "PolarUVs Noise U Scroll Speed"
+     },
+     "flDefaultValue": 0
+    },
+    {
+     "__type__": "MaterialScalarValuesUsed",
+     "__typeHash__": 3952663046,
+     "snoMaterialValue": {
+      "__raw__": 164625,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/PolarUVS Noise V Scroll Speed.mtv",
+      "groupName": "MaterialValue",
+      "name": "PolarUVS Noise V Scroll Speed"
+     },
+     "flDefaultValue": 0
+    },
+    {
+     "__type__": "MaterialScalarValuesUsed",
+     "__typeHash__": 3952663046,
+     "snoMaterialValue": {
+      "__raw__": 168440,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/PolarUVS Noise2 V Scroll Speed.mtv",
+      "groupName": "MaterialValue",
+      "name": "PolarUVS Noise2 V Scroll Speed"
+     },
+     "flDefaultValue": 0
+    },
+    {
+     "__type__": "MaterialScalarValuesUsed",
+     "__typeHash__": 3952663046,
+     "snoMaterialValue": {
+      "__raw__": 239823,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/Noise 1 - Alpha lerp to white.mtv",
+      "groupName": "MaterialValue",
+      "name": "Noise 1 - Alpha lerp to white"
+     },
+     "flDefaultValue": 0
+    },
+    {
+     "__type__": "MaterialScalarValuesUsed",
+     "__typeHash__": 3952663046,
+     "snoMaterialValue": {
+      "__raw__": 239839,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/Noise 2 - Alpha lerp to white.mtv",
+      "groupName": "MaterialValue",
+      "name": "Noise 2 - Alpha lerp to white"
+     },
+     "flDefaultValue": 0
+    },
+    {
+     "__type__": "MaterialScalarValuesUsed",
+     "__typeHash__": 3952663046,
+     "snoMaterialValue": {
+      "__raw__": 267033,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/UV Distortion Dissolve Strength.mtv",
+      "groupName": "MaterialValue",
+      "name": "UV Distortion Dissolve Strength"
+     },
+     "flDefaultValue": 0
+    },
+    {
+     "__type__": "MaterialScalarValuesUsed",
+     "__typeHash__": 3952663046,
+     "snoMaterialValue": {
+      "__raw__": 282187,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/UV Distortion Noise1 Strength.mtv",
+      "groupName": "MaterialValue",
+      "name": "UV Distortion Noise1 Strength"
+     },
+     "flDefaultValue": 1
+    },
+    {
+     "__type__": "MaterialScalarValuesUsed",
+     "__typeHash__": 3952663046,
+     "snoMaterialValue": {
+      "__raw__": 282188,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/UV Distortion Noise2 Strength.mtv",
+      "groupName": "MaterialValue",
+      "name": "UV Distortion Noise2 Strength"
+     },
+     "flDefaultValue": 1
+    },
+    {
+     "__type__": "MaterialScalarValuesUsed",
+     "__typeHash__": 3952663046,
+     "snoMaterialValue": {
+      "__raw__": 369968,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/Layer 1 - U Scale.mtv",
+      "groupName": "MaterialValue",
+      "name": "Layer 1 - U Scale"
+     },
+     "flDefaultValue": 1
+    },
+    {
+     "__type__": "MaterialScalarValuesUsed",
+     "__typeHash__": 3952663046,
+     "snoMaterialValue": {
+      "__raw__": 369969,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/Layer 1 - V Scale.mtv",
+      "groupName": "MaterialValue",
+      "name": "Layer 1 - V Scale"
+     },
+     "flDefaultValue": 1
+    },
+    {
+     "__type__": "MaterialScalarValuesUsed",
+     "__typeHash__": 3952663046,
+     "snoMaterialValue": {
+      "__raw__": 369992,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/Layer 2 - U Scale.mtv",
+      "groupName": "MaterialValue",
+      "name": "Layer 2 - U Scale"
+     },
+     "flDefaultValue": 1
+    },
+    {
+     "__type__": "MaterialScalarValuesUsed",
+     "__typeHash__": 3952663046,
+     "snoMaterialValue": {
+      "__raw__": 369993,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/Layer 2 - V Scale.mtv",
+      "groupName": "MaterialValue",
+      "name": "Layer 2 - V Scale"
+     },
+     "flDefaultValue": 1
+    },
+    {
+     "__type__": "MaterialScalarValuesUsed",
+     "__typeHash__": 3952663046,
+     "snoMaterialValue": {
+      "__raw__": 404178,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/PolarUVS Noise2 U Scroll Speed.mtv",
+      "groupName": "MaterialValue",
+      "name": "PolarUVS Noise2 U Scroll Speed"
+     },
+     "flDefaultValue": 0
+    },
+    {
+     "__type__": "MaterialScalarValuesUsed",
+     "__typeHash__": 3952663046,
+     "snoMaterialValue": {
+      "__raw__": 404384,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/deathScreen Layer 2 scale.mtv",
+      "groupName": "MaterialValue",
+      "name": "deathScreen Layer 2 scale"
+     },
+     "flDefaultValue": 1
+    },
+    {
+     "__type__": "MaterialScalarValuesUsed",
+     "__typeHash__": 3952663046,
+     "snoMaterialValue": {
+      "__raw__": 747098,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/IGC Post Distortion Global Strength.mtv",
+      "groupName": "MaterialValue",
+      "name": "IGC Post Distortion Global Strength"
+     },
+     "flDefaultValue": 1
+    },
+    {
+     "__type__": "MaterialScalarValuesUsed",
+     "__typeHash__": 3952663046,
+     "snoMaterialValue": {
+      "__raw__": 1062403,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/Alpha 2 Soft Distance.mtv",
+      "groupName": "MaterialValue",
+      "name": "Alpha 2 Soft Distance"
+     },
+     "flDefaultValue": 0.3499999940395355
+    },
+    {
+     "__type__": "MaterialScalarValuesUsed",
+     "__typeHash__": 3952663046,
+     "snoMaterialValue": {
+      "__raw__": 1066962,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/Use Alpha 2 Soft Distance.mtv",
+      "groupName": "MaterialValue",
+      "name": "Use Alpha 2 Soft Distance"
+     },
+     "flDefaultValue": 0
+    },
+    {
+     "__type__": "MaterialScalarValuesUsed",
+     "__typeHash__": 3952663046,
+     "snoMaterialValue": {
+      "__raw__": 1076922,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/Alpha Dissolve Harshness.mtv",
+      "groupName": "MaterialValue",
+      "name": "Alpha Dissolve Harshness"
+     },
+     "flDefaultValue": 1
+    },
+    {
+     "__type__": "MaterialScalarValuesUsed",
+     "__typeHash__": 3952663046,
+     "snoMaterialValue": {
+      "__raw__": 1846829,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/Alpha 1 Inverse.mtv",
+      "groupName": "MaterialValue",
+      "name": "Alpha 1 Inverse"
+     },
+     "flDefaultValue": 0
+    }
+   ],
+   "tUsedVectorMaterialValues": [],
+   "tUsedStaticBranchMaterialValues": [
+    {
+     "__type__": "StaticBranchMaterialValuesUsed",
+     "__typeHash__": 3622735654,
+     "snoMaterialValue": {
+      "__raw__": 194974,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/zSwitch Particle Distortion Method.mtv",
+      "groupName": "MaterialValue",
+      "name": "zSwitch Particle Distortion Method"
+     },
+     "nBitOffset": 4,
+     "ptBitRangePositions": [
+      0,
+      1
+     ],
+     "flDefaultValue": 0
+    }
+   ],
+   "tDefaultTextures": [
+    {
+     "__type__": "DefaultTextureInfo",
+     "__typeHash__": 3928304546,
+     "eShaderTex": 105,
+     "snoTexture": {
+      "__raw__": 4490,
+      "__group__": 44,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/Texture/flat_NM.tex",
+      "groupName": "Texture",
+      "name": "flat_NM"
+     }
+    },
+    {
+     "__type__": "DefaultTextureInfo",
+     "__typeHash__": 3928304546,
+     "eShaderTex": 94,
+     "snoTexture": {
+      "__raw__": 132595,
+      "__group__": 44,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/Texture/solid_white.tex",
+      "groupName": "Texture",
+      "name": "solid_white"
+     }
+    },
+    {
+     "__type__": "DefaultTextureInfo",
+     "__typeHash__": 3928304546,
+     "eShaderTex": 98,
+     "snoTexture": {
+      "__raw__": 132595,
+      "__group__": 44,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/Texture/solid_white.tex",
+      "groupName": "Texture",
+      "name": "solid_white"
+     }
+    },
+    {
+     "__type__": "DefaultTextureInfo",
+     "__typeHash__": 3928304546,
+     "eShaderTex": 97,
+     "snoTexture": {
+      "__raw__": 132595,
+      "__group__": 44,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/Texture/solid_white.tex",
+      "groupName": "Texture",
+      "name": "solid_white"
+     }
+    },
+    {
+     "__type__": "DefaultTextureInfo",
+     "__typeHash__": 3928304546,
+     "eShaderTex": 12,
+     "snoTexture": {
+      "__raw__": 132595,
+      "__group__": 44,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/Texture/solid_white.tex",
+      "groupName": "Texture",
+      "name": "solid_white"
+     }
+    }
+   ],
+   "pBBEFormulas": [],
+   "hOptionalRenderPassFields": {
+    "unk_3f60c57": 0,
+    "TAG_VS_LIGHTING": 0,
+    "unk_5897d0d": 0,
+    "TAG_VS_USES_TANGENT": 0,
+    "unk_74273ac": 0,
+    "TAG_VS_ENABLE_FOGGING": 0,
+    "unk_cf50d72": 0,
+    "unk_d5cbc82": 0,
+    "unk_f7d4a46": 1,
+    "TAG_VS_USES_INSTANCING": 0
+   }
+  }
+ ],
+ "unk_a0d6c95": false,
+ "unk_860effa": false,
+ "unk_2f4ebc8": false,
+ "arDisabledShaderFX": [],
+ "arRemappedShaderFX": [],
+ "unk_cee0ffd": "IGC_vfx_particle_SightlessEye_post_distortion",
+ "pShaderData": {
+  "__type__": "DT_VARIABLEARRAY",
+  "__typeHash__": 3244749660,
+  "__flags__": 4194304,
+  "__external__": true,
+  "value": {
+   "__typeHash__": 1028015787,
+   "__type__": "DT_BYTE",
+   "dataOffset": 32,
+   "dataSize": 28340
+  }
+ }
+}

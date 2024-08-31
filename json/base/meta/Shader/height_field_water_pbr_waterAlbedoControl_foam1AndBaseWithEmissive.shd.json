@@ -1,0 +1,1339 @@
+{
+ "__fileName__": "base/meta/Shader/height_field_water_pbr_waterAlbedoControl_foam1AndBaseWithEmissive.shd",
+ "__snoID__": 1868559,
+ "__type__": "ShaderDefinition",
+ "__typeHash__": 923517792,
+ "dwRenderLayers": 262144,
+ "ptPasses": [
+  {
+   "__type__": "RenderPass",
+   "__typeHash__": 3394879799,
+   "eRenderLayer": 18,
+   "eGraphType": 4,
+   "tRenderParams": {
+    "__type__": "RenderParams",
+    "__typeHash__": 3352174724,
+    "nSortPriorityOffset": 0,
+    "eCullMode": 2,
+    "fZBufferWriteEnable": true,
+    "eZBufferCompareFunc": 4,
+    "flZBias": 0,
+    "flZSlopeScaleBias": 0,
+    "unk_88ea918": 1,
+    "unk_86528c3": 1,
+    "tStencilParams": {
+     "__type__": "StencilParams",
+     "__typeHash__": 1922961974,
+     "fStencilBufferEnable": true,
+     "dwStencilBufferRefValue": 76,
+     "dwStencilReadMask": 255,
+     "dwStencilWriteMask": 252,
+     "eFrontStencilBufferCompareFunc": 8,
+     "eFrontStencilOpPass": 3,
+     "eFrontStencilOpFail": 1,
+     "eFrontStencilOpZFail": 1,
+     "eBackStencilBufferCompareFunc": 1,
+     "eBackStencilOpPass": 1,
+     "eBackStencilOpFail": 1,
+     "eBackStencilOpZFail": 1
+    },
+    "fAlphaTestEnable": true,
+    "eAlphaTestCompareFunc": 7,
+    "bAlphaTestRefValue": 0,
+    "fAlphaMaskEnable": false,
+    "eFillMode": 0,
+    "fIndependentAlphaBlendEnable": true,
+    "tAlphaBlend": [
+     {
+      "__type__": "AlphaBlendFactors",
+      "__typeHash__": 3409962653,
+      "fAlphaBlendEnable": true,
+      "eBlendOp": 1,
+      "eSrcBlendFactor": 2,
+      "eDestBlendFactor": 1,
+      "fSeparateAlphaBlendEnable": true,
+      "eBlendOpAlpha": 1,
+      "eSrcBlendFactorAlpha": 2,
+      "eDestBlendFactorAlpha": 1,
+      "fRWriteEnable": false,
+      "fGWriteEnable": false,
+      "fBWriteEnable": false,
+      "fAWriteEnable": true
+     },
+     {
+      "__type__": "AlphaBlendFactors",
+      "__typeHash__": 3409962653,
+      "fAlphaBlendEnable": true,
+      "eBlendOp": 1,
+      "eSrcBlendFactor": 5,
+      "eDestBlendFactor": 6,
+      "fSeparateAlphaBlendEnable": true,
+      "eBlendOpAlpha": 1,
+      "eSrcBlendFactorAlpha": 1,
+      "eDestBlendFactorAlpha": 1,
+      "fRWriteEnable": true,
+      "fGWriteEnable": true,
+      "fBWriteEnable": true,
+      "fAWriteEnable": true
+     },
+     {
+      "__type__": "AlphaBlendFactors",
+      "__typeHash__": 3409962653,
+      "fAlphaBlendEnable": true,
+      "eBlendOp": 1,
+      "eSrcBlendFactor": 5,
+      "eDestBlendFactor": 6,
+      "fSeparateAlphaBlendEnable": true,
+      "eBlendOpAlpha": 1,
+      "eSrcBlendFactorAlpha": 1,
+      "eDestBlendFactorAlpha": 1,
+      "fRWriteEnable": true,
+      "fGWriteEnable": true,
+      "fBWriteEnable": true,
+      "fAWriteEnable": true
+     },
+     {
+      "__type__": "AlphaBlendFactors",
+      "__typeHash__": 3409962653,
+      "fAlphaBlendEnable": true,
+      "eBlendOp": 1,
+      "eSrcBlendFactor": 5,
+      "eDestBlendFactor": 6,
+      "fSeparateAlphaBlendEnable": true,
+      "eBlendOpAlpha": 1,
+      "eSrcBlendFactorAlpha": 2,
+      "eDestBlendFactorAlpha": 1,
+      "fRWriteEnable": true,
+      "fGWriteEnable": true,
+      "fBWriteEnable": true,
+      "fAWriteEnable": true
+     },
+     {
+      "__type__": "AlphaBlendFactors",
+      "__typeHash__": 3409962653,
+      "fAlphaBlendEnable": false,
+      "eBlendOp": 1,
+      "eSrcBlendFactor": 5,
+      "eDestBlendFactor": 6,
+      "fSeparateAlphaBlendEnable": false,
+      "eBlendOpAlpha": 1,
+      "eSrcBlendFactorAlpha": 5,
+      "eDestBlendFactorAlpha": 6,
+      "fRWriteEnable": true,
+      "fGWriteEnable": true,
+      "fBWriteEnable": true,
+      "fAWriteEnable": false
+     },
+     {
+      "__type__": "AlphaBlendFactors",
+      "__typeHash__": 3409962653,
+      "fAlphaBlendEnable": false,
+      "eBlendOp": 1,
+      "eSrcBlendFactor": 5,
+      "eDestBlendFactor": 6,
+      "fSeparateAlphaBlendEnable": false,
+      "eBlendOpAlpha": 1,
+      "eSrcBlendFactorAlpha": 5,
+      "eDestBlendFactorAlpha": 6,
+      "fRWriteEnable": true,
+      "fGWriteEnable": true,
+      "fBWriteEnable": true,
+      "fAWriteEnable": false
+     }
+    ]
+   },
+   "snoShaderEffect": null,
+   "ptInputLayout": [
+    {
+     "__type__": "ShaderInputLayout",
+     "__typeHash__": 9306245,
+     "eVBFormat": 13
+    }
+   ],
+   "dwFlags": 0,
+   "dwDecalWriteFlags": 63,
+   "unk_c23801f": 0,
+   "ptPostprocessed": "0",
+   "dwShaderPermFlags": [
+    0,
+    16,
+    65536,
+    65552
+   ],
+   "ptPerms": [
+    {
+     "__type__": "ShaderPermutation",
+     "__typeHash__": 3001537487,
+     "unk_e3331b5": [
+      47,
+      48,
+      1,
+      115,
+      3,
+      52,
+      88,
+      108,
+      62
+     ],
+     "unk_a2b58a8": [],
+     "tPrograms": [
+      {
+       "__type__": "ShaderPermShaderProgram",
+       "__typeHash__": 1801469402,
+       "pShaderProgram": [],
+       "pStateObject": [],
+       "dwKey": "c8e02d820c068cd",
+       "unk_8e5f439": [
+        2684428288,
+        2332033024,
+        50,
+        402702336,
+        264,
+        32768
+       ],
+       "unk_d4d5dbb": [
+        2
+       ],
+       "ptResourceSlot": [
+        140,
+        191
+       ],
+       "unk_6f6dbab": []
+      },
+      {
+       "__type__": "ShaderPermShaderProgram",
+       "__typeHash__": 1801469402,
+       "pShaderProgram": [],
+       "pStateObject": [],
+       "dwKey": "-4447243a2981dc89",
+       "unk_8e5f439": [
+        649535490,
+        402722816,
+        128,
+        536870912,
+        8,
+        0
+       ],
+       "unk_d4d5dbb": [
+        7,
+        0,
+        2,
+        9
+       ],
+       "ptResourceSlot": [
+        211,
+        88,
+        115,
+        20,
+        62,
+        191,
+        1,
+        39,
+        3,
+        52,
+        108,
+        48,
+        47,
+        43,
+        9,
+        86,
+        144,
+        151
+       ],
+       "unk_6f6dbab": []
+      },
+      {
+       "__type__": "ShaderPermShaderProgram",
+       "__typeHash__": 1801469402,
+       "pShaderProgram": [],
+       "pStateObject": [],
+       "dwKey": "0",
+       "unk_8e5f439": [],
+       "unk_d4d5dbb": [],
+       "ptResourceSlot": [],
+       "unk_6f6dbab": []
+      },
+      {
+       "__type__": "ShaderPermShaderProgram",
+       "__typeHash__": 1801469402,
+       "pShaderProgram": [],
+       "pStateObject": [],
+       "dwKey": "0",
+       "unk_8e5f439": [],
+       "unk_d4d5dbb": [],
+       "ptResourceSlot": [],
+       "unk_6f6dbab": []
+      }
+     ]
+    },
+    {
+     "__type__": "ShaderPermutation",
+     "__typeHash__": 3001537487,
+     "unk_e3331b5": [
+      47,
+      48,
+      1,
+      115,
+      3,
+      52,
+      88,
+      108,
+      62
+     ],
+     "unk_a2b58a8": [],
+     "tPrograms": [
+      {
+       "__type__": "ShaderPermShaderProgram",
+       "__typeHash__": 1801469402,
+       "pShaderProgram": [],
+       "pStateObject": [],
+       "dwKey": "c8e02d820c068cd",
+       "unk_8e5f439": [
+        2684428288,
+        2332033024,
+        50,
+        402702336,
+        264,
+        32768
+       ],
+       "unk_d4d5dbb": [
+        2
+       ],
+       "ptResourceSlot": [
+        140,
+        191
+       ],
+       "unk_6f6dbab": []
+      },
+      {
+       "__type__": "ShaderPermShaderProgram",
+       "__typeHash__": 1801469402,
+       "pShaderProgram": [],
+       "pStateObject": [],
+       "dwKey": "-795c76398c7eb497",
+       "unk_8e5f439": [
+        917970946,
+        402722816,
+        128,
+        536870912,
+        8,
+        0
+       ],
+       "unk_d4d5dbb": [
+        7,
+        0,
+        2,
+        3,
+        9
+       ],
+       "ptResourceSlot": [
+        211,
+        88,
+        115,
+        20,
+        62,
+        191,
+        1,
+        39,
+        3,
+        52,
+        108,
+        48,
+        47,
+        43,
+        9,
+        86,
+        144,
+        151
+       ],
+       "unk_6f6dbab": []
+      },
+      {
+       "__type__": "ShaderPermShaderProgram",
+       "__typeHash__": 1801469402,
+       "pShaderProgram": [],
+       "pStateObject": [],
+       "dwKey": "0",
+       "unk_8e5f439": [],
+       "unk_d4d5dbb": [],
+       "ptResourceSlot": [],
+       "unk_6f6dbab": []
+      },
+      {
+       "__type__": "ShaderPermShaderProgram",
+       "__typeHash__": 1801469402,
+       "pShaderProgram": [],
+       "pStateObject": [],
+       "dwKey": "0",
+       "unk_8e5f439": [],
+       "unk_d4d5dbb": [],
+       "ptResourceSlot": [],
+       "unk_6f6dbab": []
+      }
+     ]
+    },
+    {
+     "__type__": "ShaderPermutation",
+     "__typeHash__": 3001537487,
+     "unk_e3331b5": [
+      47,
+      48,
+      1,
+      115,
+      3,
+      52,
+      88,
+      108,
+      62
+     ],
+     "unk_a2b58a8": [],
+     "tPrograms": [
+      {
+       "__type__": "ShaderPermShaderProgram",
+       "__typeHash__": 1801469402,
+       "pShaderProgram": [],
+       "pStateObject": [],
+       "dwKey": "-c89d7df3e0323f7",
+       "unk_8e5f439": [
+        2684428288,
+        2332033024,
+        50,
+        402653184,
+        264,
+        32768
+       ],
+       "unk_d4d5dbb": [
+        2
+       ],
+       "ptResourceSlot": [
+        140,
+        191
+       ],
+       "unk_6f6dbab": []
+      },
+      {
+       "__type__": "ShaderPermShaderProgram",
+       "__typeHash__": 1801469402,
+       "pShaderProgram": [],
+       "pStateObject": [],
+       "dwKey": "-4447243a2981dc89",
+       "unk_8e5f439": [
+        649535490,
+        402722816,
+        128,
+        536870912,
+        8,
+        0
+       ],
+       "unk_d4d5dbb": [
+        7,
+        0,
+        2,
+        9
+       ],
+       "ptResourceSlot": [
+        211,
+        88,
+        115,
+        20,
+        62,
+        191,
+        1,
+        39,
+        3,
+        52,
+        108,
+        48,
+        47,
+        43,
+        9,
+        86,
+        144,
+        151
+       ],
+       "unk_6f6dbab": []
+      },
+      {
+       "__type__": "ShaderPermShaderProgram",
+       "__typeHash__": 1801469402,
+       "pShaderProgram": [],
+       "pStateObject": [],
+       "dwKey": "0",
+       "unk_8e5f439": [],
+       "unk_d4d5dbb": [],
+       "ptResourceSlot": [],
+       "unk_6f6dbab": []
+      },
+      {
+       "__type__": "ShaderPermShaderProgram",
+       "__typeHash__": 1801469402,
+       "pShaderProgram": [],
+       "pStateObject": [],
+       "dwKey": "0",
+       "unk_8e5f439": [],
+       "unk_d4d5dbb": [],
+       "ptResourceSlot": [],
+       "unk_6f6dbab": []
+      }
+     ]
+    },
+    {
+     "__type__": "ShaderPermutation",
+     "__typeHash__": 3001537487,
+     "unk_e3331b5": [
+      47,
+      48,
+      1,
+      115,
+      3,
+      52,
+      88,
+      108,
+      62
+     ],
+     "unk_a2b58a8": [],
+     "tPrograms": [
+      {
+       "__type__": "ShaderPermShaderProgram",
+       "__typeHash__": 1801469402,
+       "pShaderProgram": [],
+       "pStateObject": [],
+       "dwKey": "-c89d7df3e0323f7",
+       "unk_8e5f439": [
+        2684428288,
+        2332033024,
+        50,
+        402653184,
+        264,
+        32768
+       ],
+       "unk_d4d5dbb": [
+        2
+       ],
+       "ptResourceSlot": [
+        140,
+        191
+       ],
+       "unk_6f6dbab": []
+      },
+      {
+       "__type__": "ShaderPermShaderProgram",
+       "__typeHash__": 1801469402,
+       "pShaderProgram": [],
+       "pStateObject": [],
+       "dwKey": "-795c76398c7eb497",
+       "unk_8e5f439": [
+        917970946,
+        402722816,
+        128,
+        536870912,
+        8,
+        0
+       ],
+       "unk_d4d5dbb": [
+        7,
+        0,
+        2,
+        3,
+        9
+       ],
+       "ptResourceSlot": [
+        211,
+        88,
+        115,
+        20,
+        62,
+        191,
+        1,
+        39,
+        3,
+        52,
+        108,
+        48,
+        47,
+        43,
+        9,
+        86,
+        144,
+        151
+       ],
+       "unk_6f6dbab": []
+      },
+      {
+       "__type__": "ShaderPermShaderProgram",
+       "__typeHash__": 1801469402,
+       "pShaderProgram": [],
+       "pStateObject": [],
+       "dwKey": "0",
+       "unk_8e5f439": [],
+       "unk_d4d5dbb": [],
+       "ptResourceSlot": [],
+       "unk_6f6dbab": []
+      },
+      {
+       "__type__": "ShaderPermShaderProgram",
+       "__typeHash__": 1801469402,
+       "pShaderProgram": [],
+       "pStateObject": [],
+       "dwKey": "0",
+       "unk_8e5f439": [],
+       "unk_d4d5dbb": [],
+       "ptResourceSlot": [],
+       "unk_6f6dbab": []
+      }
+     ]
+    }
+   ],
+   "tUsedScalarMaterialValues": [
+    {
+     "__type__": "MaterialScalarValuesUsed",
+     "__typeHash__": 3952663046,
+     "snoMaterialValue": {
+      "__raw__": 138947,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/emissive multiplier.mtv",
+      "groupName": "MaterialValue",
+      "name": "emissive multiplier"
+     },
+     "flDefaultValue": 1
+    },
+    {
+     "__type__": "MaterialScalarValuesUsed",
+     "__typeHash__": 3952663046,
+     "snoMaterialValue": {
+      "__raw__": 139114,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/flow power.mtv",
+      "groupName": "MaterialValue",
+      "name": "flow power"
+     },
+     "flDefaultValue": 1
+    },
+    {
+     "__type__": "MaterialScalarValuesUsed",
+     "__typeHash__": 3952663046,
+     "snoMaterialValue": {
+      "__raw__": 139115,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/flow speed.mtv",
+      "groupName": "MaterialValue",
+      "name": "flow speed"
+     },
+     "flDefaultValue": 1
+    },
+    {
+     "__type__": "MaterialScalarValuesUsed",
+     "__typeHash__": 3952663046,
+     "snoMaterialValue": {
+      "__raw__": 139171,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/normal 1 speed multiplier.mtv",
+      "groupName": "MaterialValue",
+      "name": "normal 1 speed multiplier"
+     },
+     "flDefaultValue": 1
+    },
+    {
+     "__type__": "MaterialScalarValuesUsed",
+     "__typeHash__": 3952663046,
+     "snoMaterialValue": {
+      "__raw__": 206540,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/Env Soft Alpha Power.mtv",
+      "groupName": "MaterialValue",
+      "name": "Env Soft Alpha Power"
+     },
+     "flDefaultValue": 0.30000001192092896
+    },
+    {
+     "__type__": "MaterialScalarValuesUsed",
+     "__typeHash__": 3952663046,
+     "snoMaterialValue": {
+      "__raw__": 287599,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/Env Soft Alpha Distance.mtv",
+      "groupName": "MaterialValue",
+      "name": "Env Soft Alpha Distance"
+     },
+     "flDefaultValue": 0.5
+    },
+    {
+     "__type__": "MaterialScalarValuesUsed",
+     "__typeHash__": 3952663046,
+     "snoMaterialValue": {
+      "__raw__": 290397,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/Env Soft Alpha Distance - Water Albedo.mtv",
+      "groupName": "MaterialValue",
+      "name": "Env Soft Alpha Distance - Water Albedo"
+     },
+     "flDefaultValue": 0.3499999940395355
+    },
+    {
+     "__type__": "MaterialScalarValuesUsed",
+     "__typeHash__": 3952663046,
+     "snoMaterialValue": {
+      "__raw__": 290398,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/Env Soft Alpha Power - Water Albedo.mtv",
+      "groupName": "MaterialValue",
+      "name": "Env Soft Alpha Power - Water Albedo"
+     },
+     "flDefaultValue": 0.30000001192092896
+    },
+    {
+     "__type__": "MaterialScalarValuesUsed",
+     "__typeHash__": 3952663046,
+     "snoMaterialValue": {
+      "__raw__": 290400,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/Water Albedo - Shallow Depth.mtv",
+      "groupName": "MaterialValue",
+      "name": "Water Albedo - Shallow Depth"
+     },
+     "flDefaultValue": 0.5
+    },
+    {
+     "__type__": "MaterialScalarValuesUsed",
+     "__typeHash__": 3952663046,
+     "snoMaterialValue": {
+      "__raw__": 290401,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/Water Albedo - Deep Depth.mtv",
+      "groupName": "MaterialValue",
+      "name": "Water Albedo - Deep Depth"
+     },
+     "flDefaultValue": 5
+    },
+    {
+     "__type__": "MaterialScalarValuesUsed",
+     "__typeHash__": 3952663046,
+     "snoMaterialValue": {
+      "__raw__": 290405,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/Water Albedo - Shallow Blend.mtv",
+      "groupName": "MaterialValue",
+      "name": "Water Albedo - Shallow Blend"
+     },
+     "flDefaultValue": 1
+    },
+    {
+     "__type__": "MaterialScalarValuesUsed",
+     "__typeHash__": 3952663046,
+     "snoMaterialValue": {
+      "__raw__": 290408,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/Water Albedo - Deep Blend.mtv",
+      "groupName": "MaterialValue",
+      "name": "Water Albedo - Deep Blend"
+     },
+     "flDefaultValue": 1
+    },
+    {
+     "__type__": "MaterialScalarValuesUsed",
+     "__typeHash__": 3952663046,
+     "snoMaterialValue": {
+      "__raw__": 294498,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/Shadow Distance.mtv",
+      "groupName": "MaterialValue",
+      "name": "Shadow Distance"
+     },
+     "flDefaultValue": 0.5
+    },
+    {
+     "__type__": "MaterialScalarValuesUsed",
+     "__typeHash__": 3952663046,
+     "snoMaterialValue": {
+      "__raw__": 294499,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/Env Soft Alpha Distance - Shadow.mtv",
+      "groupName": "MaterialValue",
+      "name": "Env Soft Alpha Distance - Shadow"
+     },
+     "flDefaultValue": 0.5
+    },
+    {
+     "__type__": "MaterialScalarValuesUsed",
+     "__typeHash__": 3952663046,
+     "snoMaterialValue": {
+      "__raw__": 294500,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/Env Soft Alpha Power - Shadow.mtv",
+      "groupName": "MaterialValue",
+      "name": "Env Soft Alpha Power - Shadow"
+     },
+     "flDefaultValue": 0.6000000238418579
+    },
+    {
+     "__type__": "MaterialScalarValuesUsed",
+     "__typeHash__": 3952663046,
+     "snoMaterialValue": {
+      "__raw__": 300731,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/Shadow Mip Level.mtv",
+      "groupName": "MaterialValue",
+      "name": "Shadow Mip Level"
+     },
+     "flDefaultValue": 4
+    },
+    {
+     "__type__": "MaterialScalarValuesUsed",
+     "__typeHash__": 3952663046,
+     "snoMaterialValue": {
+      "__raw__": 386769,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/Env Water Normal Intensity.mtv",
+      "groupName": "MaterialValue",
+      "name": "Env Water Normal Intensity"
+     },
+     "flDefaultValue": 1
+    },
+    {
+     "__type__": "MaterialScalarValuesUsed",
+     "__typeHash__": 3952663046,
+     "snoMaterialValue": {
+      "__raw__": 387559,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/Env Roughness Lerp.mtv",
+      "groupName": "MaterialValue",
+      "name": "Env Roughness Lerp"
+     },
+     "flDefaultValue": 0.5
+    },
+    {
+     "__type__": "MaterialScalarValuesUsed",
+     "__typeHash__": 3952663046,
+     "snoMaterialValue": {
+      "__raw__": 413944,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/Env Force Sim Strength.mtv",
+      "groupName": "MaterialValue",
+      "name": "Env Force Sim Strength"
+     },
+     "flDefaultValue": 1
+    },
+    {
+     "__type__": "MaterialScalarValuesUsed",
+     "__typeHash__": 3952663046,
+     "snoMaterialValue": {
+      "__raw__": 418243,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/Env Force Sim Multiplier.mtv",
+      "groupName": "MaterialValue",
+      "name": "Env Force Sim Multiplier"
+     },
+     "flDefaultValue": 1
+    },
+    {
+     "__type__": "MaterialScalarValuesUsed",
+     "__typeHash__": 3952663046,
+     "snoMaterialValue": {
+      "__raw__": 523078,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/Env Static Use Roughness Texture.mtv",
+      "groupName": "MaterialValue",
+      "name": "Env Static Use Roughness Texture"
+     },
+     "flDefaultValue": 0
+    },
+    {
+     "__type__": "MaterialScalarValuesUsed",
+     "__typeHash__": 3952663046,
+     "snoMaterialValue": {
+      "__raw__": 754068,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/emissive multiplier 2.mtv",
+      "groupName": "MaterialValue",
+      "name": "emissive multiplier 2"
+     },
+     "flDefaultValue": 1
+    },
+    {
+     "__type__": "MaterialScalarValuesUsed",
+     "__typeHash__": 3952663046,
+     "snoMaterialValue": {
+      "__raw__": 1207187,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/Env Emissive Mask Power.mtv",
+      "groupName": "MaterialValue",
+      "name": "Env Emissive Mask Power"
+     },
+     "flDefaultValue": 1
+    },
+    {
+     "__type__": "MaterialScalarValuesUsed",
+     "__typeHash__": 3952663046,
+     "snoMaterialValue": {
+      "__raw__": 1218951,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/Env Water Four Way Normal Intensity.mtv",
+      "groupName": "MaterialValue",
+      "name": "Env Water Four Way Normal Intensity"
+     },
+     "flDefaultValue": 2
+    },
+    {
+     "__type__": "MaterialScalarValuesUsed",
+     "__typeHash__": 3952663046,
+     "snoMaterialValue": {
+      "__raw__": 1218953,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/Env Water Four Way Normal Tiling.mtv",
+      "groupName": "MaterialValue",
+      "name": "Env Water Four Way Normal Tiling"
+     },
+     "flDefaultValue": 0.33000001311302185
+    },
+    {
+     "__type__": "MaterialScalarValuesUsed",
+     "__typeHash__": 3952663046,
+     "snoMaterialValue": {
+      "__raw__": 1218957,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/Env Water Four Way Normal Speed.mtv",
+      "groupName": "MaterialValue",
+      "name": "Env Water Four Way Normal Speed"
+     },
+     "flDefaultValue": 0.25
+    },
+    {
+     "__type__": "MaterialScalarValuesUsed",
+     "__typeHash__": 3952663046,
+     "snoMaterialValue": {
+      "__raw__": 1220728,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/Env Water Foam 1 Spec Reflectance.mtv",
+      "groupName": "MaterialValue",
+      "name": "Env Water Foam 1 Spec Reflectance"
+     },
+     "flDefaultValue": 0.33000001311302185
+    },
+    {
+     "__type__": "MaterialScalarValuesUsed",
+     "__typeHash__": 3952663046,
+     "snoMaterialValue": {
+      "__raw__": 1220744,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/Env Use Foam Spec Reflectance.mtv",
+      "groupName": "MaterialValue",
+      "name": "Env Use Foam Spec Reflectance"
+     },
+     "flDefaultValue": 0
+    },
+    {
+     "__type__": "MaterialScalarValuesUsed",
+     "__typeHash__": 3952663046,
+     "snoMaterialValue": {
+      "__raw__": 1222915,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/Env Water Normal Intensity Multiplier - Day.mtv",
+      "groupName": "MaterialValue",
+      "name": "Env Water Normal Intensity Multiplier - Day"
+     },
+     "flDefaultValue": 1
+    },
+    {
+     "__type__": "MaterialScalarValuesUsed",
+     "__typeHash__": 3952663046,
+     "snoMaterialValue": {
+      "__raw__": 1222916,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/Env Water Normal Intensity Multiplier - Night.mtv",
+      "groupName": "MaterialValue",
+      "name": "Env Water Normal Intensity Multiplier - Night"
+     },
+     "flDefaultValue": 1
+    },
+    {
+     "__type__": "MaterialScalarValuesUsed",
+     "__typeHash__": 3952663046,
+     "snoMaterialValue": {
+      "__raw__": 1367225,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/Env Clutter Cut Influence.mtv",
+      "groupName": "MaterialValue",
+      "name": "Env Clutter Cut Influence"
+     },
+     "flDefaultValue": 1
+    }
+   ],
+   "tUsedVectorMaterialValues": [
+    {
+     "__type__": "MaterialVectorValuesUsed",
+     "__typeHash__": 4119790019,
+     "snoMaterialValue": {
+      "__raw__": 204855,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/emissive color.mtv",
+      "groupName": "MaterialValue",
+      "name": "emissive color"
+     },
+     "vDefaultValue": {
+      "x": 1,
+      "y": 1,
+      "z": 1,
+      "w": 1
+     }
+    },
+    {
+     "__type__": "MaterialVectorValuesUsed",
+     "__typeHash__": 4119790019,
+     "snoMaterialValue": {
+      "__raw__": 290403,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/Water Albedo - Shallow Color Override.mtv",
+      "groupName": "MaterialValue",
+      "name": "Water Albedo - Shallow Color Override"
+     },
+     "vDefaultValue": {
+      "x": 1,
+      "y": 1,
+      "z": 1,
+      "w": 1
+     }
+    },
+    {
+     "__type__": "MaterialVectorValuesUsed",
+     "__typeHash__": 4119790019,
+     "snoMaterialValue": {
+      "__raw__": 290404,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/Water Albedo - Deep Color Override.mtv",
+      "groupName": "MaterialValue",
+      "name": "Water Albedo - Deep Color Override"
+     },
+     "vDefaultValue": {
+      "x": 1,
+      "y": 1,
+      "z": 1,
+      "w": 1
+     }
+    },
+    {
+     "__type__": "MaterialVectorValuesUsed",
+     "__typeHash__": 4119790019,
+     "snoMaterialValue": {
+      "__raw__": 290409,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/Water Albedo - Deep Water Translucency.mtv",
+      "groupName": "MaterialValue",
+      "name": "Water Albedo - Deep Water Translucency"
+     },
+     "vDefaultValue": {
+      "x": 1,
+      "y": 1,
+      "z": 1,
+      "w": 1
+     }
+    },
+    {
+     "__type__": "MaterialVectorValuesUsed",
+     "__typeHash__": 4119790019,
+     "snoMaterialValue": {
+      "__raw__": 290410,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/Water Albedo - Shallow Water Translucency.mtv",
+      "groupName": "MaterialValue",
+      "name": "Water Albedo - Shallow Water Translucency"
+     },
+     "vDefaultValue": {
+      "x": 1,
+      "y": 1,
+      "z": 1,
+      "w": 1
+     }
+    },
+    {
+     "__type__": "MaterialVectorValuesUsed",
+     "__typeHash__": 4119790019,
+     "snoMaterialValue": {
+      "__raw__": 294493,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/Shadow Tint.mtv",
+      "groupName": "MaterialValue",
+      "name": "Shadow Tint"
+     },
+     "vDefaultValue": {
+      "x": 0.5859730839729309,
+      "y": 0.5859730839729309,
+      "z": 0.5859730839729309,
+      "w": 1
+     }
+    },
+    {
+     "__type__": "MaterialVectorValuesUsed",
+     "__typeHash__": 4119790019,
+     "snoMaterialValue": {
+      "__raw__": 1629422,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/emissive color 2.mtv",
+      "groupName": "MaterialValue",
+      "name": "emissive color 2"
+     },
+     "vDefaultValue": {
+      "x": 1,
+      "y": 1,
+      "z": 1,
+      "w": 1
+     }
+    }
+   ],
+   "tUsedStaticBranchMaterialValues": [
+    {
+     "__type__": "StaticBranchMaterialValuesUsed",
+     "__typeHash__": 3622735654,
+     "snoMaterialValue": {
+      "__raw__": 294501,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/Env Static Use Shadow.mtv",
+      "groupName": "MaterialValue",
+      "name": "Env Static Use Shadow"
+     },
+     "nBitOffset": 4,
+     "ptBitRangePositions": [],
+     "flDefaultValue": 0
+    }
+   ],
+   "tDefaultTextures": [
+    {
+     "__type__": "DefaultTextureInfo",
+     "__typeHash__": 3928304546,
+     "eShaderTex": 52,
+     "snoTexture": {
+      "__raw__": 254158,
+      "__group__": 44,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/Texture/JMan_ocean_foam_01_normal.tex",
+      "groupName": "Texture",
+      "name": "JMan_ocean_foam_01_normal"
+     }
+    },
+    {
+     "__type__": "DefaultTextureInfo",
+     "__typeHash__": 3928304546,
+     "eShaderTex": 52,
+     "snoTexture": {
+      "__raw__": 254158,
+      "__group__": 44,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/Texture/JMan_ocean_foam_01_normal.tex",
+      "groupName": "Texture",
+      "name": "JMan_ocean_foam_01_normal"
+     }
+    },
+    {
+     "__type__": "DefaultTextureInfo",
+     "__typeHash__": 3928304546,
+     "eShaderTex": 52,
+     "snoTexture": {
+      "__raw__": 254158,
+      "__group__": 44,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/Texture/JMan_ocean_foam_01_normal.tex",
+      "groupName": "Texture",
+      "name": "JMan_ocean_foam_01_normal"
+     }
+    },
+    {
+     "__type__": "DefaultTextureInfo",
+     "__typeHash__": 3928304546,
+     "eShaderTex": 52,
+     "snoTexture": {
+      "__raw__": 254158,
+      "__group__": 44,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/Texture/JMan_ocean_foam_01_normal.tex",
+      "groupName": "Texture",
+      "name": "JMan_ocean_foam_01_normal"
+     }
+    },
+    {
+     "__type__": "DefaultTextureInfo",
+     "__typeHash__": 3928304546,
+     "eShaderTex": 115,
+     "snoTexture": {
+      "__raw__": 4678,
+      "__group__": 44,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/Texture/black.tex",
+      "groupName": "Texture",
+      "name": "black"
+     }
+    },
+    {
+     "__type__": "DefaultTextureInfo",
+     "__typeHash__": 3928304546,
+     "eShaderTex": 115,
+     "snoTexture": {
+      "__raw__": 4678,
+      "__group__": 44,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/Texture/black.tex",
+      "groupName": "Texture",
+      "name": "black"
+     }
+    },
+    {
+     "__type__": "DefaultTextureInfo",
+     "__typeHash__": 3928304546,
+     "eShaderTex": 62,
+     "snoTexture": {
+      "__raw__": 4678,
+      "__group__": 44,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/Texture/black.tex",
+      "groupName": "Texture",
+      "name": "black"
+     }
+    },
+    {
+     "__type__": "DefaultTextureInfo",
+     "__typeHash__": 3928304546,
+     "eShaderTex": 62,
+     "snoTexture": {
+      "__raw__": 4678,
+      "__group__": 44,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/Texture/black.tex",
+      "groupName": "Texture",
+      "name": "black"
+     }
+    },
+    {
+     "__type__": "DefaultTextureInfo",
+     "__typeHash__": 3928304546,
+     "eShaderTex": 43,
+     "snoTexture": {
+      "__raw__": 130027,
+      "__group__": 44,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/Texture/BlueNoise_0.tex",
+      "groupName": "Texture",
+      "name": "BlueNoise_0"
+     }
+    }
+   ],
+   "pBBEFormulas": [],
+   "hOptionalRenderPassFields": {
+    "unk_3f60c57": 0,
+    "TAG_VS_LIGHTING": 0,
+    "unk_5897d0d": 0,
+    "unk_5a0096e": 1,
+    "unk_74273ac": 0,
+    "TAG_VS_USES_LIGHTMAP": 0,
+    "unk_bc87fa3": 1,
+    "unk_c159e29": 1,
+    "TAG_VS_ENABLE_FOGGING": 0,
+    "unk_f7d4a46": 1,
+    "TAG_VS_USES_INSTANCING": 0,
+    "unk_ffc104e": 1
+   }
+  }
+ ],
+ "unk_a0d6c95": false,
+ "unk_860effa": false,
+ "unk_2f4ebc8": false,
+ "arDisabledShaderFX": [],
+ "arRemappedShaderFX": [],
+ "unk_cee0ffd": "height_field_water_pbr_waterAlbedoControl_foam1AndBaseWithEmissive",
+ "pShaderData": {
+  "__type__": "DT_VARIABLEARRAY",
+  "__typeHash__": 3244749660,
+  "__flags__": 4194304,
+  "__external__": true,
+  "value": {
+   "__typeHash__": 1028015787,
+   "__type__": "DT_BYTE",
+   "dataOffset": 32,
+   "dataSize": 52082
+  }
+ }
+}

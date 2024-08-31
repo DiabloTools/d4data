@@ -31,6 +31,7 @@
  "arStoreAnimSets": [],
  "snoAnimTree": null,
  "arActorAppearanceAddOnEntries": [],
+ "snoDamageRemap": null,
  "arUniqueSubObjectNameInfoPerAppearance": [],
  "tAnimTreeOverride": {
   "__type__": "AnimTreeOverride",
@@ -113,13 +114,14 @@
  },
  "ePickStyle": 0,
  "flAttachmentScaleFactor": 1,
- "eDefaultTeam": 0,
+ "eDefaultTeam": 1,
  "eCullingLevel": 0,
+ "unk_b7a6ddf": false,
  "flFadeCorpseTimeUntilFade": 10,
  "flFadeCorpseTime": 2,
  "aAbsoluteOrientation": 0,
- "flHitFlashPower": 2,
- "flHitFlashMultiplier": 0.6000000238418579,
+ "flHitFlashPower": 1,
+ "flHitFlashMultiplier": 1,
  "flOverlayPower": 1,
  "eTopology": 1,
  "ptMsgTriggeredEvents": [
@@ -158,7 +160,7 @@
      "dwParentActorID": 4294967295,
      "tDuration": 0,
      "dwTriggerFlags": 2097152,
-     "dwTriggerFlagsEx": 0,
+     "dwTriggerFlagsEx": 4,
      "tCleanup": {
       "__type__": "TriggerCleanup",
       "__typeHash__": 2029186460,
@@ -175,13 +177,13 @@
      "fPlayOnOwner": true,
      "dwActorID": 0,
      "snoname": {
-      "__raw__": 339926,
-      "__group__": 27,
+      "__raw__": 1103785,
+      "__group__": 1,
       "__type__": "DT_SNO_NAME",
       "__typeHash__": 3339108615,
-      "__targetFileName__": "base/meta/Particle/Decal_Spawner_Blood_00.prt",
-      "groupName": "Particle",
-      "name": "Decal_Spawner_Blood_00"
+      "__targetFileName__": "base/meta/Actor/Generic_Corpse_Proxy.acr",
+      "groupName": "Actor",
+      "name": "Generic_Corpse_Proxy"
      },
      "dwID": 0,
      "tHardpointLinks": [
@@ -220,6 +222,9 @@
      "unk_773852b": false,
      "unk_62ab747": true,
      "unk_cb43646": false,
+     "unk_a6c42b7": 0,
+     "unk_bfc7ac5": -1,
+     "snoAppearanceOverride": null,
      "fRandomLook": false,
      "tLookLink": {
       "__type__": "LookLink",
@@ -320,7 +325,7 @@
     }
    ],
    "tCooldown": 0,
-   "dwID": 1985104423
+   "dwID": 1995118762
   },
   {
    "__type__": "MsgTriggeredEvent",
@@ -389,7 +394,7 @@
       }
      ],
      "dwTriggerFlags": 0,
-     "dwTriggerFlagsEx": 0,
+     "dwTriggerFlagsEx": 4,
      "fRandomLook": false,
      "tLookLink": {
       "__type__": "LookLink",
@@ -489,7 +494,15 @@
   {
    "__type__": "ActorPhysicsData",
    "__typeHash__": 1364074038,
-   "snoPhysics": null,
+   "snoPhysics": {
+    "__raw__": 282280,
+    "__group__": 28,
+    "__type__": "DT_SNO",
+    "__typeHash__": 2764331143,
+    "__targetFileName__": "base/meta/Physics/RagdollBreakable_medium.phy",
+    "groupName": "Physics",
+    "name": "RagdollBreakable_medium"
+   },
    "snoPartialRagdollPhysics": null,
    "eMaterial": 0,
    "flExplosionFactor": 1,
@@ -505,15 +518,24 @@
    "tCollisionSettings": {
     "__type__": "CollisionSettings",
     "__typeHash__": 3066352125,
-    "snoCollision": null,
+    "snoCollision": {
+     "__raw__": 1255762,
+     "__group__": 127,
+     "__type__": "DT_SNO",
+     "__typeHash__": 2764331143,
+     "__targetFileName__": "base/meta/CollisionSettings/World_Clicky_Ground.col",
+     "groupName": "CollisionSettings",
+     "name": "World_Clicky_Ground"
+    },
     "tCustomCollFlags": {
      "__type__": "ActorCollisionFlags",
      "__typeHash__": 2766662738,
-     "uDynamicFlagsNoOverlap": 8763,
-     "uDynamicMyFlags": 4113
+     "uDynamicFlagsNoOverlap": 8192,
+     "uDynamicMyFlags": 0
     },
     "unk_a882afd": false,
-    "unk_54403ff": false
+    "unk_54403ff": false,
+    "unk_eab2483": false
    },
    "eCollisionShape": 1,
    "wcylCollision": {
@@ -578,7 +600,8 @@
      "z": 0
     }
    },
-   "unk_c627b16": false
+   "unk_c627b16": false,
+   "unk_7e60e04": false
   }
  ],
  "eActorGizmoType": 1,
@@ -597,13 +620,22 @@
    "flOperationRadius": 0,
    "unk_d0b1df5": 0,
    "flGizmoUseTime": 0,
+   "unk_c61db5a": true,
    "snoChannelingEffect": null,
    "unk_2767229": false,
    "fGizmoShowProgressBar": false,
    "unk_6d9ebe1": false,
    "unk_5456245": false,
    "unk_af5815a": false,
-   "snoOnClickEffect": null,
+   "snoOnClickEffect": {
+    "__raw__": 1008922,
+    "__group__": 14,
+    "__type__": "DT_SNO",
+    "__typeHash__": 2764331143,
+    "__targetFileName__": "base/meta/EffectGroup/SoundGroup_QUE_FracPrologue_PriestCorpse_Interact.efg",
+    "groupName": "EffectGroup",
+    "name": "SoundGroup_QUE_FracPrologue_PriestCorpse_Interact"
+   },
    "snoPickedUpEffect": null,
    "snoDropOnGroundEffect": null,
    "tConditionData": {
@@ -628,6 +660,7 @@
    "hGizmoOperateDescriptionMsgLabel": 0,
    "flGizmoOperateOffset": 0,
    "unk_ab58cd3": 0,
+   "unk_695b5e1": false,
    "unk_91a3966": 0,
    "hGizmoChannelingLabel": 0,
    "unk_4be4371": false,
@@ -659,6 +692,8 @@
    "fChestLight": true,
    "unk_51b0c11": false,
    "unk_6b4a81d": 1,
+   "eChestGizmoType": 0,
+   "unk_c3861c3": 0,
    "dwPad": 0
   }
  ],
@@ -676,7 +711,7 @@
    "__typeHash__": 1245693876,
    "fIsCorpse": true,
    "fIsTraversalExit": false,
-   "eCrafterType": 0,
+   "eCrafterType": -1,
    "fIsTraversalRope": false,
    "flTraversalRopeLength": 9
   }
@@ -695,7 +730,8 @@
    "fDisableDamage": false,
    "fCannotDie": false,
    "unk_9ad1b04": false,
-   "flNoSpawnRadius": 0
+   "flNoSpawnRadius": 0,
+   "snoPhasingVisibilityCondition": null
   }
  ],
  "ptUIData": [
@@ -719,12 +755,20 @@
    "unk_fab46e5": 0,
    "flMinimapMaxVisRange": 0,
    "flMinimapDiscoveryRadius": 0,
+   "unk_75577b8": {
+    "__type__": "AttributeSelection",
+    "__typeHash__": 3088752698,
+    "eAttribute": -1,
+    "nParam": -1
+   },
    "unk_c6ec070": {
     "__type__": "ConditionWrapper",
     "__typeHash__": 3742548360,
     "snoCondition": null,
     "ptInlineCondition": []
-   }
+   },
+   "unk_f190641": false,
+   "unk_557e468": false
   }
  ],
  "ptAIData": [
@@ -732,9 +776,44 @@
    "__type__": "ActorAIData",
    "__typeHash__": 2314008733,
    "ptAIBroadcasts": [],
-   "gbidAIPropType": null,
-   "unk_af0baa5": 1,
-   "arAIPropPowerPairings": []
+   "gbidAIPropType": {
+    "__raw__": 2242476997,
+    "__type__": "DT_GBID",
+    "__typeHash__": 1028170061,
+    "group": 21,
+    "name": "AISMP_Corpse"
+   },
+   "unk_af0baa5": 3,
+   "arAIPropPowerPairings": [
+    {
+     "__type__": "AIPropPowerPairing",
+     "__typeHash__": 1733186626,
+     "snoPowerActivator": {
+      "__raw__": 1182910,
+      "__group__": 29,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/Power/AISMP_Eat.pow",
+      "groupName": "Power",
+      "name": "AISMP_Eat"
+     },
+     "snoPowerSelf": null,
+     "snoSummonedEncounterOverridePower": {
+      "__raw__": 448276,
+      "__group__": 29,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/Power/AI_MoveTo.pow",
+      "groupName": "Power",
+      "name": "AI_MoveTo"
+     },
+     "flDefaultActivateRange": 0.25,
+     "ePowerSyncType": 0,
+     "unk_c0c1492": -1,
+     "sPropPairingName": 1225447941,
+     "unk_c7bd259": 0
+    }
+   ]
   }
  ],
  "ptVOData": [
@@ -751,7 +830,7 @@
   {
    "__type__": "ActorNPCData",
    "__typeHash__": 3228758260,
-   "unk_370e8c2": false,
+   "unk_370e8c2": true,
    "tGeneratedLooks": [],
    "snoNPCComponentSet": null,
    "ptLoadOuts": [],
@@ -764,8 +843,9 @@
  "ptPostprocessed": "0",
  "snoPrefabAttachment": null,
  "unk_d2b5e35": 1,
+ "snoActorService": null,
  "szPrefabLookOverride": 0,
  "dwPrefabShaderMapOverride": 4294967295,
  "arRTPCOverrides": [],
- "unk_3d2df8c": null
+ "gbidForcedPreloadList": null
 }

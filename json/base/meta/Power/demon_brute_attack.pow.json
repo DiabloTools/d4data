@@ -6,21 +6,16 @@
  "szInternalName": "",
  "bDefensive": false,
  "unk_bd561bf": false,
+ "unk_db863a5": false,
  "tPrimaryTag": {
   "__type__": "SkillTagStruct",
   "__typeHash__": 4000554560,
-  "gbidSkillTag": {
-   "__raw__": 2015265136,
-   "__type__": "DT_GBID",
-   "__typeHash__": 1028170061,
-   "group": 56,
-   "name": "Monster_Basic_Melee"
-  },
+  "gbidSkillTag": null,
   "bSearchOnly": false
  },
  "arSkillTags": [],
  "eSkillCat": -1,
- "eType": 0,
+ "eType": 3,
  "eCategory": 0,
  "ePowerAnimPriority": 0,
  "unk_9a3836e": 2,
@@ -50,6 +45,7 @@
  "bUsesWeaponExpertise": false,
  "unk_fca3b69": false,
  "bIgnoreSkillRanks": false,
+ "unk_f27ef43": false,
  "snoPowerAnimationOverride": null,
  "bPreplayAnimation": true,
  "unk_99e0ced": false,
@@ -60,6 +56,7 @@
  "bSetLookAtTarget": false,
  "bForceSheath": false,
  "unk_48531b6": false,
+ "unk_f234087": -1,
  "arEndingPreplayed": [],
  "ptPhaseInitialization": [
   {
@@ -217,6 +214,7 @@
  ],
  "unk_92fea1c": false,
  "unk_8cdde38": false,
+ "unk_3dff6b0": false,
  "arFacingWindows": [
   {
    "__type__": "PowerFacingWindow",
@@ -232,7 +230,7 @@
  "unk_4bf03ff": false,
  "tAttackSpeed": {
   "value": "Attacks_Per_Second_Total",
-  "compiled": "BQAAAAAAAADIAAAA/v///wAAAAAAAAAA"
+  "compiled": "BQAAAAAAAADUAAAA/v///wAAAAAAAAAA"
  },
  "unk_6deb090": false,
  "unk_ed2bdad": false,
@@ -257,7 +255,7 @@
  "nAudioImportance": 0,
  "snoConversation": null,
  "unk_97eadb8": 0,
- "unk_5e1a52d": true,
+ "bMustBeLearned": true,
  "bCaptionsInside": false,
  "eShapeshiftForm": -1,
  "arResourceCosts": [],
@@ -276,6 +274,10 @@
  "tRechargeTime": {
   "value": "0",
   "compiled": "BgAAAAAAAAAAAAAA"
+ },
+ "tRechargeAmount": {
+  "value": "1",
+  "compiled": "BgAAAAAAgD8AAAAA"
  },
  "tCooldownTime": {
   "value": "0",
@@ -650,6 +652,7 @@
  "unk_9aaab79": false,
  "unk_b15bf7f": false,
  "unk_8fe39cf": 0,
+ "unk_4e0f1a": false,
  "bPassabilityDuringEnabled": false,
  "bPassabilityDestEnabled": false,
  "arCollisionSettings": [
@@ -664,7 +667,8 @@
     "uDynamicMyFlags": 1
    },
    "unk_a882afd": false,
-   "unk_54403ff": false
+   "unk_54403ff": false,
+   "unk_eab2483": false
   },
   {
    "__type__": "CollisionSettings",
@@ -677,7 +681,8 @@
     "uDynamicMyFlags": 1
    },
    "unk_a882afd": false,
-   "unk_54403ff": false
+   "unk_54403ff": false,
+   "unk_eab2483": false
   }
  ],
  "fCannotLMBAssign": false,
@@ -714,8 +719,8 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "0.04",
-    "compiled": "BgAAAArXIz0AAAAA"
+    "value": "0.06",
+    "compiled": "BgAAAI/CdT0AAAAA"
    }
   },
   {
@@ -782,6 +787,7 @@
    "snoItemTypeMainHandEffectsOverride": null,
    "snoItemTypeOffHandEffectsOverride": null,
    "dwID": 2969709282,
+   "dwPayloadId": 0,
    "eForcedDamageType": -1,
    "tDamage": {
     "__type__": "HitpointSpecifier",
@@ -801,6 +807,7 @@
     "value": "0",
     "compiled": "BgAAAAAAAAAAAAAA"
    },
+   "unk_f0290f2": [],
    "unk_c1c7b04": false,
    "tVulnerableDurationSecondsOverride": {
     "value": "0",
@@ -863,6 +870,7 @@
     "groupName": "EffectGroup",
     "name": "demon_brute_impact"
    },
+   "unk_f381067": false,
    "flHitFlashDurationScalar": 1,
    "iPowerNeedTarget": false,
    "bPlayNormalHitSoundPayload": false,
@@ -883,6 +891,7 @@
    "snoItemTypeMainHandEffectsOverride": null,
    "snoItemTypeOffHandEffectsOverride": null,
    "dwID": 2969709276,
+   "dwPayloadId": 1,
    "eForcedDamageType": -1,
    "tDamage": {
     "__type__": "HitpointSpecifier",
@@ -902,7 +911,8 @@
     "value": "0",
     "compiled": "BgAAAAAAAAAAAAAA"
    },
-   "unk_c1c7b04": true,
+   "unk_f0290f2": [],
+   "unk_c1c7b04": false,
    "tVulnerableDurationSecondsOverride": {
     "value": "SF_8",
     "compiled": "BQAAAA4AAAAAAAAAAAAAAAAAAAAAAAAA"
@@ -964,6 +974,7 @@
     "groupName": "EffectGroup",
     "name": "demon_brute_impact"
    },
+   "unk_f381067": false,
    "flHitFlashDurationScalar": 1,
    "iPowerNeedTarget": false,
    "bPlayNormalHitSoundPayload": false,
@@ -994,5 +1005,19 @@
  },
  "flCastingEffectGroupDuration": 0.5,
  "arCastingEffectOverrides": [],
- "arPetSpawns": []
+ "arPetSpawns": [],
+ "unk_143fe9f": {
+  "value": "10",
+  "compiled": "BgAAAAAAIEEAAAAA"
+ },
+ "unk_b76598c": {
+  "value": "0",
+  "compiled": "BgAAAAAAAAAAAAAA"
+ },
+ "unk_c99c7cb": false,
+ "unk_fad91a3": false,
+ "unk_376802e": false,
+ "unk_bf25f64": 0,
+ "unk_5b1a2bb": [],
+ "arProjectileOverrides": []
 }

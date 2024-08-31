@@ -107,7 +107,7 @@
         "nIndexBufferIndex": 0,
         "nBaseLODSubObjectIndex": -1,
         "unk_a1b71f5": -1,
-        "nSubObjectMaxLOD": -1,
+        "nSubObjectMaxLOD": 2,
         "dwShaderMapOverride": 4294967295,
         "snoCampaignVisibilityCondition": null,
         "aabbBounds": {
@@ -225,7 +225,7 @@
         "nIndexBufferIndex": 0,
         "nBaseLODSubObjectIndex": -1,
         "unk_a1b71f5": -1,
-        "nSubObjectMaxLOD": -1,
+        "nSubObjectMaxLOD": 2,
         "dwShaderMapOverride": 4294967295,
         "snoCampaignVisibilityCondition": null,
         "aabbBounds": {
@@ -398,9 +398,9 @@
           "__type__": "SubObjectSegment",
           "__typeHash__": 1370930836,
           "pBoneIDs": [],
-          "nVertCount": 67,
+          "nVertCount": 88,
           "nVertOffset": 0,
-          "nIndexCount": 306,
+          "nIndexCount": 420,
           "nIndexOffset": 0
          }
         ],
@@ -516,10 +516,10 @@
           "__type__": "SubObjectSegment",
           "__typeHash__": 1370930836,
           "pBoneIDs": [],
-          "nVertCount": 68,
-          "nVertOffset": 2412,
-          "nIndexCount": 294,
-          "nIndexOffset": 306
+          "nVertCount": 89,
+          "nVertOffset": 3168,
+          "nIndexCount": 417,
+          "nIndexOffset": 420
          }
         ],
         "wpFixedPointPosOffset": {
@@ -534,8 +534,11 @@
         }
        }
       ],
-      "ptBaseSubObjectIndexMap": [],
-      "flLODDistance": 131.88128662109375
+      "ptBaseSubObjectIndexMap": [
+       0,
+       1
+      ],
+      "flLODDistance": 116.47349548339844
      },
      {
       "__type__": "GeoSet",
@@ -642,10 +645,10 @@
           "__type__": "SubObjectSegment",
           "__typeHash__": 1370930836,
           "pBoneIDs": [],
-          "nVertCount": 40,
-          "nVertOffset": 4860,
-          "nIndexCount": 159,
-          "nIndexOffset": 600
+          "nVertCount": 67,
+          "nVertOffset": 6372,
+          "nIndexCount": 300,
+          "nIndexOffset": 837
          }
         ],
         "wpFixedPointPosOffset": {
@@ -760,10 +763,10 @@
           "__type__": "SubObjectSegment",
           "__typeHash__": 1370930836,
           "pBoneIDs": [],
-          "nVertCount": 37,
-          "nVertOffset": 6300,
-          "nIndexCount": 141,
-          "nIndexOffset": 759
+          "nVertCount": 69,
+          "nVertOffset": 8784,
+          "nIndexCount": 300,
+          "nIndexOffset": 1137
          }
         ],
         "wpFixedPointPosOffset": {
@@ -778,8 +781,11 @@
         }
        }
       ],
-      "ptBaseSubObjectIndexMap": [],
-      "flLODDistance": 181.7809600830078
+      "ptBaseSubObjectIndexMap": [
+       0,
+       1
+      ],
+      "flLODDistance": 130.9674530029297
      }
     ],
     "ptChunkVertexBuffers": [
@@ -861,7 +867,7 @@
        "value": {
         "__typeHash__": 1028015787,
         "__type__": "DT_BYTE",
-        "dataOffset": 9472,
+        "dataOffset": 14192,
         "dataSize": 9072
        }
       },
@@ -949,7 +955,7 @@
         "__typeHash__": 1028015787,
         "__type__": "DT_BYTE",
         "dataOffset": 32,
-        "dataSize": 7632
+        "dataSize": 11268
        }
       },
       "vbid": -1,
@@ -970,7 +976,7 @@
        "value": {
         "__typeHash__": 1028759507,
         "__type__": "DT_WORD",
-        "dataOffset": 18544,
+        "dataOffset": 23264,
         "dataSize": 2400
        }
       },
@@ -988,15 +994,22 @@
        "value": {
         "__typeHash__": 1028759507,
         "__type__": "DT_WORD",
-        "dataOffset": 7664,
-        "dataSize": 1800
+        "dataOffset": 11312,
+        "dataSize": 2874
        }
       },
       "ibid": -1,
       "fOptional": false
      }
     ],
-    "unk_8c8b576": []
+    "unk_8c8b576": [
+     97.03569030761719,
+     115.77071380615234,
+     130.62461853027344,
+     98.2976303100586,
+     117.18550872802734,
+     131.31097412109375
+    ]
    }
   ],
   "ptSceneData": [],
@@ -1208,7 +1221,7 @@
   "nLowQualityLOD": 1,
   "ptPostprocessed": "0"
  },
- "dwFlags": 1310720,
+ "dwFlags": 3407872,
  "ptAppearanceLooks": [
   {
    "__type__": "AppearanceLook",
@@ -1229,6 +1242,11 @@
    "__type__": "AppearanceLook",
    "__typeHash__": 3138400357,
    "szLookName": 1060303606
+  },
+  {
+   "__type__": "AppearanceLook",
+   "__typeHash__": 3138400357,
+   "szLookName": 1433476114
   }
  ],
  "ptAppearanceMaterials": [
@@ -1334,6 +1352,30 @@
      "snoEffectGroup": null,
      "arAnimClothOverrides": [],
      "arVariantMaterials": []
+    },
+    {
+     "__type__": "SubObjectAppearance",
+     "__typeHash__": 2088474641,
+     "dwFlags": 0,
+     "snoMaterial": {
+      "__raw__": 1777117,
+      "__group__": 57,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/Material/dreg_melee_hookshotLeap_swipe.mat",
+      "groupName": "Material",
+      "name": "dreg_melee_hookshotLeap_swipe"
+     },
+     "snoOverrideMaterial": null,
+     "snoCloth": null,
+     "snoHighQualityClothOverride": null,
+     "arMountedClothOverrides": [
+      null,
+      null
+     ],
+     "snoEffectGroup": null,
+     "arAnimClothOverrides": [],
+     "arVariantMaterials": []
     }
    ]
   },
@@ -1396,6 +1438,30 @@
      "__type__": "SubObjectAppearance",
      "__typeHash__": 2088474641,
      "dwFlags": 0,
+     "snoMaterial": {
+      "__raw__": 1068679,
+      "__group__": 57,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/Material/cannibal_twoHand_miniboss_attack_edge_child.mat",
+      "groupName": "Material",
+      "name": "cannibal_twoHand_miniboss_attack_edge_child"
+     },
+     "snoOverrideMaterial": null,
+     "snoCloth": null,
+     "snoHighQualityClothOverride": null,
+     "arMountedClothOverrides": [
+      null,
+      null
+     ],
+     "snoEffectGroup": null,
+     "arAnimClothOverrides": [],
+     "arVariantMaterials": []
+    },
+    {
+     "__type__": "SubObjectAppearance",
+     "__typeHash__": 2088474641,
+     "dwFlags": 1,
      "snoMaterial": {
       "__raw__": 1068679,
       "__group__": 57,

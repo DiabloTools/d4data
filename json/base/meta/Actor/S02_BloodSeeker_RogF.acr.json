@@ -47,7 +47,30 @@
   "groupName": "AnimTree",
   "name": "Monster_Ranged_AnimTree"
  },
- "arActorAppearanceAddOnEntries": [],
+ "arActorAppearanceAddOnEntries": [
+  {
+   "__type__": "ActorAppearanceAddOnEntry",
+   "__typeHash__": 2518845729,
+   "gbidAddOnType": {
+    "__raw__": 850138493,
+    "__type__": "DT_GBID",
+    "__typeHash__": 1028170061,
+    "group": 77,
+    "name": "E01_Hatred"
+   },
+   "snoAppearance": {
+    "__raw__": 2058454,
+    "__group__": 9,
+    "__type__": "DT_SNO",
+    "__typeHash__": 2764331143,
+    "__targetFileName__": "base/meta/Appearance/S02_BloodSeeker_RogF_hatred.app",
+    "groupName": "Appearance",
+    "name": "S02_BloodSeeker_RogF_hatred"
+   },
+   "dwShaderMapOverride": 4294967295
+  }
+ ],
+ "snoDamageRemap": null,
  "arUniqueSubObjectNameInfoPerAppearance": [],
  "tAnimTreeOverride": {
   "__type__": "AnimTreeOverride",
@@ -131,6 +154,7 @@
  "flAttachmentScaleFactor": 0.800000011920929,
  "eDefaultTeam": 19,
  "eCullingLevel": 0,
+ "unk_b7a6ddf": false,
  "flFadeCorpseTimeUntilFade": 10,
  "flFadeCorpseTime": 2,
  "aAbsoluteOrientation": 0,
@@ -174,7 +198,7 @@
      "dwParentActorID": 4294967295,
      "tDuration": 0,
      "dwTriggerFlags": 4194304,
-     "dwTriggerFlagsEx": 0,
+     "dwTriggerFlagsEx": 4,
      "tCleanup": {
       "__type__": "TriggerCleanup",
       "__typeHash__": 2029186460,
@@ -236,6 +260,9 @@
      "unk_773852b": false,
      "unk_62ab747": true,
      "unk_cb43646": false,
+     "unk_a6c42b7": 0,
+     "unk_bfc7ac5": -1,
+     "snoAppearanceOverride": null,
      "fRandomLook": false,
      "tLookLink": {
       "__type__": "LookLink",
@@ -383,7 +410,8 @@
      "uDynamicMyFlags": 1
     },
     "unk_a882afd": false,
-    "unk_54403ff": false
+    "unk_54403ff": false,
+    "unk_eab2483": false
    },
    "eCollisionShape": 1,
    "wcylCollision": {
@@ -464,7 +492,8 @@
      "z": 0
     }
    },
-   "unk_c627b16": false
+   "unk_c627b16": false,
+   "unk_7e60e04": false
   }
  ],
  "eActorGizmoType": -1,
@@ -515,15 +544,10 @@
    "eBaseElement": -1,
    "snoMainHand": null,
    "snoOffHand": null,
-   "tLevelScaling": {
-    "__type__": "LevelScalingData",
-    "__typeHash__": 2289366803,
-    "nLevelScalingMin": 0,
-    "nLevelScalingMatchUntilLevel": 0,
-    "nLevelScalingDelta": 0,
-    "nLevelScalingMax": 0
-   },
+   "unk_f8ee66e": false,
    "nGoldGranted": 0,
+   "unk_64df7b": true,
+   "unk_aee2307": false,
    "snoTreasureClass": {
     "__raw__": 1702931,
     "__group__": 52,
@@ -545,6 +569,7 @@
     "__typeHash__": 2764331143,
     "groupName": "TreasureClass"
    },
+   "unk_c3861c3": 0,
    "flSummonLifetime": 0,
    "nSummonMaxConcurrent": 10,
    "nSummonMaxTotal": 99,
@@ -727,6 +752,12 @@
    "unk_50569ba": false,
    "dwCCImmunityFlags": 0,
    "snoMount": null,
+   "flMountScale": 1,
+   "vMountAttachOffset": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+   },
    "snoPowerPossessed": null,
    "snoFootsteps": null,
    "eOverriddenMonsterRarity": -1,
@@ -735,6 +766,7 @@
    "unk_bc58cee": false,
    "unk_7fdab9c": 10,
    "unk_e7ee8f1": 3,
+   "unk_828c56a": false,
    "unk_e4c90d3": false,
    "unk_12ecd6a": true,
    "unk_c0565bf": true,
@@ -857,9 +889,7 @@
      "name": "actor_death_shadow"
     }
    ],
-   "snoPowerDeath": null,
-   "unk_2a26311": null,
-   "bLootExplodes": false
+   "gbidActorResurrectDataOverride": null
   }
  ],
  "ptEffectData": [
@@ -1168,7 +1198,8 @@
    "fDisableDamage": false,
    "fCannotDie": false,
    "unk_9ad1b04": false,
-   "flNoSpawnRadius": 0
+   "flNoSpawnRadius": 0,
+   "snoPhasingVisibilityCondition": null
   }
  ],
  "ptUIData": [
@@ -1192,12 +1223,20 @@
    "unk_fab46e5": 0,
    "flMinimapMaxVisRange": 0,
    "flMinimapDiscoveryRadius": 0,
+   "unk_75577b8": {
+    "__type__": "AttributeSelection",
+    "__typeHash__": 3088752698,
+    "eAttribute": -1,
+    "nParam": -1
+   },
    "unk_c6ec070": {
     "__type__": "ConditionWrapper",
     "__typeHash__": 3742548360,
     "snoCondition": null,
     "ptInlineCondition": []
-   }
+   },
+   "unk_f190641": false,
+   "unk_557e468": false
   }
  ],
  "ptAIData": [
@@ -1311,8 +1350,9 @@
  "ptPostprocessed": "0",
  "snoPrefabAttachment": null,
  "unk_d2b5e35": 1,
+ "snoActorService": null,
  "szPrefabLookOverride": 0,
  "dwPrefabShaderMapOverride": 4294967295,
  "arRTPCOverrides": [],
- "unk_3d2df8c": null
+ "gbidForcedPreloadList": null
 }

@@ -77,8 +77,51 @@
     "name": "Cultist_Melee_Male_malignant"
    },
    "dwShaderMapOverride": 47
+  },
+  {
+   "__type__": "ActorAppearanceAddOnEntry",
+   "__typeHash__": 2518845729,
+   "gbidAddOnType": {
+    "__raw__": 850138493,
+    "__type__": "DT_GBID",
+    "__typeHash__": 1028170061,
+    "group": 77,
+    "name": "E01_Hatred"
+   },
+   "snoAppearance": {
+    "__raw__": 1773994,
+    "__group__": 9,
+    "__type__": "DT_SNO",
+    "__typeHash__": 2764331143,
+    "__targetFileName__": "base/meta/Appearance/Cultist_Melee_Male_hatred.app",
+    "groupName": "Appearance",
+    "name": "Cultist_Melee_Male_hatred"
+   },
+   "dwShaderMapOverride": 4294967295
+  },
+  {
+   "__type__": "ActorAppearanceAddOnEntry",
+   "__typeHash__": 2518845729,
+   "gbidAddOnType": {
+    "__raw__": 3817010410,
+    "__type__": "DT_GBID",
+    "__typeHash__": 1028170061,
+    "group": 77,
+    "name": "E01_Vines"
+   },
+   "snoAppearance": {
+    "__raw__": 1922775,
+    "__group__": 9,
+    "__type__": "DT_SNO",
+    "__typeHash__": 2764331143,
+    "__targetFileName__": "base/meta/Appearance/Cultist_Melee_Male_vines.app",
+    "groupName": "Appearance",
+    "name": "Cultist_Melee_Male_vines"
+   },
+   "dwShaderMapOverride": 4294967295
   }
  ],
+ "snoDamageRemap": null,
  "arUniqueSubObjectNameInfoPerAppearance": [],
  "tAnimTreeOverride": {
   "__type__": "AnimTreeOverride",
@@ -879,6 +922,7 @@
  "flAttachmentScaleFactor": 1,
  "eDefaultTeam": 19,
  "eCullingLevel": 0,
+ "unk_b7a6ddf": false,
  "flFadeCorpseTimeUntilFade": 10,
  "flFadeCorpseTime": 2,
  "aAbsoluteOrientation": 0,
@@ -1299,6 +1343,9 @@
      "unk_773852b": false,
      "unk_62ab747": true,
      "unk_cb43646": false,
+     "unk_a6c42b7": 0,
+     "unk_bfc7ac5": -1,
+     "snoAppearanceOverride": null,
      "fRandomLook": false,
      "tLookLink": {
       "__type__": "LookLink",
@@ -1438,7 +1485,8 @@
      "uDynamicMyFlags": 1
     },
     "unk_a882afd": false,
-    "unk_54403ff": false
+    "unk_54403ff": false,
+    "unk_eab2483": false
    },
    "eCollisionShape": 1,
    "wcylCollision": {
@@ -1519,7 +1567,8 @@
      "z": 0
     }
    },
-   "unk_c627b16": false
+   "unk_c627b16": false,
+   "unk_7e60e04": false
   }
  ],
  "eActorGizmoType": -1,
@@ -1578,15 +1627,10 @@
     "name": "Dagger"
    },
    "snoOffHand": null,
-   "tLevelScaling": {
-    "__type__": "LevelScalingData",
-    "__typeHash__": 2289366803,
-    "nLevelScalingMin": 0,
-    "nLevelScalingMatchUntilLevel": 0,
-    "nLevelScalingDelta": 0,
-    "nLevelScalingMax": 0
-   },
+   "unk_f8ee66e": false,
    "nGoldGranted": 0,
+   "unk_64df7b": true,
+   "unk_aee2307": false,
    "snoTreasureClass": {
     "__raw__": 73701,
     "__group__": 52,
@@ -1602,6 +1646,7 @@
     "groupName": "TreasureClass"
    },
    "snoTreasureClassSuperElite": null,
+   "unk_c3861c3": 0,
    "flSummonLifetime": 0,
    "nSummonMaxConcurrent": 6,
    "nSummonMaxTotal": 9,
@@ -1760,6 +1805,12 @@
    "unk_50569ba": false,
    "dwCCImmunityFlags": 0,
    "snoMount": null,
+   "flMountScale": 1,
+   "vMountAttachOffset": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+   },
    "snoPowerPossessed": null,
    "snoFootsteps": null,
    "eOverriddenMonsterRarity": -1,
@@ -1768,6 +1819,7 @@
    "unk_bc58cee": false,
    "unk_7fdab9c": 10,
    "unk_e7ee8f1": 3,
+   "unk_828c56a": false,
    "unk_e4c90d3": false,
    "unk_12ecd6a": false,
    "unk_c0565bf": false,
@@ -1812,7 +1864,7 @@
    "unk_c0cc954": 45,
    "flBossCameraZoomIntroTime": 3,
    "flBossCameraZoomOutroTime": 3,
-   "unk_dec81bb": 2.200000047683716
+   "unk_dec81bb": 2
   }
  ],
  "ptCritterData": [],
@@ -1898,9 +1950,7 @@
      "name": "actor_death_shadow"
     }
    ],
-   "snoPowerDeath": null,
-   "unk_2a26311": null,
-   "bLootExplodes": false
+   "gbidActorResurrectDataOverride": null
   }
  ],
  "ptEffectData": [],
@@ -1947,7 +1997,8 @@
    "fDisableDamage": false,
    "fCannotDie": false,
    "unk_9ad1b04": false,
-   "flNoSpawnRadius": 0
+   "flNoSpawnRadius": 0,
+   "snoPhasingVisibilityCondition": null
   }
  ],
  "ptUIData": [
@@ -1971,12 +2022,20 @@
    "unk_fab46e5": 0,
    "flMinimapMaxVisRange": 0,
    "flMinimapDiscoveryRadius": 0,
+   "unk_75577b8": {
+    "__type__": "AttributeSelection",
+    "__typeHash__": 3088752698,
+    "eAttribute": -1,
+    "nParam": -1
+   },
    "unk_c6ec070": {
     "__type__": "ConditionWrapper",
     "__typeHash__": 3742548360,
     "snoCondition": null,
     "ptInlineCondition": []
-   }
+   },
+   "unk_f190641": false,
+   "unk_557e468": false
   }
  ],
  "ptAIData": [
@@ -2027,23 +2086,15 @@
    "bOverrideImportanceScore": false,
    "nImportanceScoreOverride": 50,
    "snoRunSoundTable": {
-    "__raw__": 511575,
+    "__raw__": 320814,
     "__group__": 79,
     "__type__": "DT_SNO",
     "__typeHash__": 2764331143,
-    "__targetFileName__": "base/meta/SoundTable/FOOT_MON_Cultist_Melee_Run.sdt",
+    "__targetFileName__": "base/meta/SoundTable/FOOT_MON_Global_Grunt_Terrain.sdt",
     "groupName": "SoundTable",
-    "name": "FOOT_MON_Cultist_Melee_Run"
+    "name": "FOOT_MON_Global_Grunt_Terrain"
    },
-   "snoWalkSoundTable": {
-    "__raw__": 511576,
-    "__group__": 79,
-    "__type__": "DT_SNO",
-    "__typeHash__": 2764331143,
-    "__targetFileName__": "base/meta/SoundTable/FOOT_MON_Cultist_Melee_Walk.sdt",
-    "groupName": "SoundTable",
-    "name": "FOOT_MON_Cultist_Melee_Walk"
-   },
+   "snoWalkSoundTable": null,
    "snoSlideSoundTable": null,
    "snoLandSoundTable": null,
    "snoNPCBarefootRunSoundTable": null,
@@ -2098,8 +2149,9 @@
  "ptPostprocessed": "0",
  "snoPrefabAttachment": null,
  "unk_d2b5e35": 1,
+ "snoActorService": null,
  "szPrefabLookOverride": 0,
  "dwPrefabShaderMapOverride": 4294967295,
  "arRTPCOverrides": [],
- "unk_3d2df8c": null
+ "gbidForcedPreloadList": null
 }

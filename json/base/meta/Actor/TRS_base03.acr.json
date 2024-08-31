@@ -21,6 +21,7 @@
  "arStoreAnimSets": [],
  "snoAnimTree": null,
  "arActorAppearanceAddOnEntries": [],
+ "snoDamageRemap": null,
  "arUniqueSubObjectNameInfoPerAppearance": [],
  "tAnimTreeOverride": {
   "__type__": "AnimTreeOverride",
@@ -102,6 +103,7 @@
  "flAttachmentScaleFactor": 1,
  "eDefaultTeam": 0,
  "eCullingLevel": 0,
+ "unk_b7a6ddf": false,
  "flFadeCorpseTimeUntilFade": 10,
  "flFadeCorpseTime": 2,
  "aAbsoluteOrientation": 0,
@@ -146,7 +148,8 @@
      "uDynamicMyFlags": 128
     },
     "unk_a882afd": false,
-    "unk_54403ff": false
+    "unk_54403ff": false,
+    "unk_eab2483": false
    },
    "eCollisionShape": 1,
    "wcylCollision": {
@@ -211,7 +214,8 @@
      "z": 0
     }
    },
-   "unk_c627b16": false
+   "unk_c627b16": false,
+   "unk_7e60e04": false
   }
  ],
  "eActorGizmoType": -1,
@@ -313,6 +317,11 @@
      "__type__": "FoleyMaterialTag",
      "__typeHash__": 2077459498,
      "szTag": 1313786378
+    },
+    {
+     "__type__": "FoleyMaterialTag",
+     "__typeHash__": 2077459498,
+     "szTag": 2899227881
     }
    ],
    "unk_472eb5b": null,
@@ -402,9 +411,29 @@
      "ePersonaState": 0,
      "eEyeState": 1,
      "eMouthState": 1
+    },
+    {
+     "__type__": "HairAndBeardState",
+     "__typeHash__": 1271971574,
+     "eHairState": 0,
+     "eBeardState": 0,
+     "eJewelryState": 0,
+     "ePersonaState": 0,
+     "eEyeState": 1,
+     "eMouthState": 1
     }
    ],
    "tClassHairStateGenderOverrides": [
+    {
+     "__type__": "HairStateGenderOverrides",
+     "__typeHash__": 2872085037,
+     "eHairStateGenderOverride": 0,
+     "eBeardStateGenderOverride": 0,
+     "eJewleryStateGenderOverride": 0,
+     "ePersonaStateGenderOverride": 0,
+     "eEyeStateGenderOverride": 0,
+     "eMouthStateGenderOverride": 0
+    },
     {
      "__type__": "HairStateGenderOverrides",
      "__typeHash__": 2872085037,
@@ -1258,9 +1287,9 @@
         "__type__": "bcQuat",
         "__typeHash__": 3955716320,
         "x": 0,
-        "y": 0,
+        "y": 0.06104854494333267,
         "z": 0,
-        "w": 1
+        "w": 0.9981347918510437
        }
       },
       {
@@ -1368,9 +1397,9 @@
         "__type__": "bcQuat",
         "__typeHash__": 3955716320,
         "x": 0,
-        "y": 0,
+        "y": 0.04361938685178757,
         "z": 0,
-        "w": 1
+        "w": 0.9990482330322266
        }
       },
       {
@@ -1455,6 +1484,13 @@
        }
       }
      ]
+    },
+    {
+     "__type__": "HardpointOffsets",
+     "__typeHash__": 1755847107,
+     "fHardpointOffsetsHinting": true,
+     "arMaleOffsets": [],
+     "arFemaleOffsets": []
     }
    ],
    "tHardpointMountedOffsets": [
@@ -1930,6 +1966,13 @@
        }
       }
      ]
+    },
+    {
+     "__type__": "HardpointOffsets",
+     "__typeHash__": 1755847107,
+     "fHardpointOffsetsHinting": true,
+     "arMaleOffsets": [],
+     "arFemaleOffsets": []
     }
    ],
    "unk_def7f43": [],
@@ -1955,9 +1998,13 @@
      null,
      null,
      null,
+     null,
+     null,
      null
     ],
     "snoActor2": [
+     null,
+     null,
      null,
      null,
      null,
@@ -2003,12 +2050,20 @@
    "unk_fab46e5": 0,
    "flMinimapMaxVisRange": 0,
    "flMinimapDiscoveryRadius": 0,
+   "unk_75577b8": {
+    "__type__": "AttributeSelection",
+    "__typeHash__": 3088752698,
+    "eAttribute": -1,
+    "nParam": -1
+   },
    "unk_c6ec070": {
     "__type__": "ConditionWrapper",
     "__typeHash__": 3742548360,
     "snoCondition": null,
     "ptInlineCondition": []
-   }
+   },
+   "unk_f190641": false,
+   "unk_557e468": false
   }
  ],
  "ptAIData": [],
@@ -2028,8 +2083,9 @@
  "ptPostprocessed": "0",
  "snoPrefabAttachment": null,
  "unk_d2b5e35": 1,
+ "snoActorService": null,
  "szPrefabLookOverride": 0,
  "dwPrefabShaderMapOverride": 4294967295,
  "arRTPCOverrides": [],
- "unk_3d2df8c": null
+ "gbidForcedPreloadList": null
 }

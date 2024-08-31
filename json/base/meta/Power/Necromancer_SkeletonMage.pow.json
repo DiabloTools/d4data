@@ -6,6 +6,7 @@
  "szInternalName": "",
  "bDefensive": false,
  "unk_bd561bf": false,
+ "unk_db863a5": false,
  "tPrimaryTag": {
   "__type__": "SkillTagStruct",
   "__typeHash__": 4000554560,
@@ -44,6 +45,7 @@
  "bUsesWeaponExpertise": false,
  "unk_fca3b69": false,
  "bIgnoreSkillRanks": true,
+ "unk_f27ef43": false,
  "snoPowerAnimationOverride": null,
  "bPreplayAnimation": true,
  "unk_99e0ced": false,
@@ -54,16 +56,18 @@
  "bSetLookAtTarget": false,
  "bForceSheath": false,
  "unk_48531b6": false,
+ "unk_f234087": -1,
  "arEndingPreplayed": [],
  "ptPhaseInitialization": [],
  "arPhases": [],
  "unk_92fea1c": true,
  "unk_8cdde38": false,
+ "unk_3dff6b0": false,
  "arFacingWindows": [],
  "unk_4bf03ff": true,
  "tAttackSpeed": {
   "value": "Attacks_Per_Second_Total",
-  "compiled": "BQAAAAAAAADIAAAA/v///wAAAAAAAAAA"
+  "compiled": "BQAAAAAAAADUAAAA/v///wAAAAAAAAAA"
  },
  "unk_6deb090": false,
  "unk_ed2bdad": false,
@@ -88,7 +92,7 @@
  "nAudioImportance": 0,
  "snoConversation": null,
  "unk_97eadb8": 0,
- "unk_5e1a52d": true,
+ "bMustBeLearned": true,
  "bCaptionsInside": false,
  "eShapeshiftForm": -1,
  "arResourceCosts": [],
@@ -107,6 +111,10 @@
  "tRechargeTime": {
   "value": "0",
   "compiled": "BgAAAAAAAAAAAAAA"
+ },
+ "tRechargeAmount": {
+  "value": "1",
+  "compiled": "BgAAAAAAgD8AAAAA"
  },
  "tCooldownTime": {
   "value": "0",
@@ -481,6 +489,7 @@
  "unk_9aaab79": false,
  "unk_b15bf7f": false,
  "unk_8fe39cf": 0,
+ "unk_4e0f1a": false,
  "bPassabilityDuringEnabled": false,
  "bPassabilityDestEnabled": false,
  "arCollisionSettings": [
@@ -495,7 +504,8 @@
     "uDynamicMyFlags": 1
    },
    "unk_a882afd": false,
-   "unk_54403ff": false
+   "unk_54403ff": false,
+   "unk_eab2483": false
   },
   {
    "__type__": "CollisionSettings",
@@ -508,7 +518,8 @@
     "uDynamicMyFlags": 1
    },
    "unk_a882afd": false,
-   "unk_54403ff": false
+   "unk_54403ff": false,
+   "unk_eab2483": false
   }
  ],
  "fCannotLMBAssign": false,
@@ -542,6 +553,12 @@
     "value": "1",
     "compiled": "BgAAAAAAgD8AAAAA"
    },
+   "unk_deea7e8": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "unk_4393f38": false,
+   "unk_dcb22bd": false,
    "tMaxStackCount": {
     "value": "1",
     "compiled": "BgAAAAAAgD8AAAAA"
@@ -551,11 +568,15 @@
    "bCancellable": false,
    "unk_99b5752": false,
    "unk_93cd85f": false,
+   "unk_4bdaef2": false,
    "bVisibleInHotbarUI": false,
    "bShowsActiveStateOnHotbar": false,
    "bShowsDurationOnHotbar": false,
    "bShowsStackCountOnHotbar": false,
    "unk_71ba554": false,
+   "unk_1375622": false,
+   "unk_d2dd47": false,
+   "unk_8a5f69e": false,
    "hIcon": 0,
    "hFloatingIcon": 0,
    "hFloatingTextLabel": 0,
@@ -593,7 +614,6 @@
     "bHideDamageEffects": false,
     "bHideGlobalApplicationEffect": false
    },
-   "unk_dcb22bd": false,
    "tCrowdControl": {
     "__type__": "PowerBuffCrowdControl",
     "__typeHash__": 4138865712,
@@ -637,8 +657,8 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "SF_40*(0.6 * Table(34, sLevel))/1.15",
-    "compiled": "BQAAAC4AAAAAAAAAAAAAAAAAAAAGAAAAmpkZPwYAAAAAAAhCBQAAAAEAAAAAAAAAAAAAAAAAAAABAAAACwAAAA0AAAANAAAABgAAADMzkz8OAAAAAAAAAA=="
+    "value": "(0.6 * Table(34, sLevel))/1.15",
+    "compiled": "BgAAAJqZGT8GAAAAAAAIQgUAAAABAAAAAAAAAAAAAAAAAAAAAQAAAAsAAAANAAAABgAAADMzkz8OAAAAAAAAAA=="
    }
   },
   {
@@ -653,8 +673,8 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "(.41 * SF_38 * Table(34, sLevel)) * (1 + .1 * SkillRank(SNO.Power.Necromancer_Talent_SkeletonMage))",
-    "compiled": "BgAAAIXr0T4FAAAALAAAAAAAAAAAAAAAAAAAAA0AAAAGAAAAAAAIQgUAAAABAAAAAAAAAAAAAAAAAAAAAQAAAAsAAAANAAAABgAAAAAAgD8GAAAAzczMPQUAAABZAAAAgWYOAAAAAAAAAAAAAQAAABQAAAANAAAACwAAAA0AAAAAAAAA"
+    "value": "(.41 * Table(34, sLevel)) * (1 + .1 * SkillRank(SNO.Power.Necromancer_Talent_SkeletonMage))",
+    "compiled": "BgAAAIXr0T4GAAAAAAAIQgUAAAABAAAAAAAAAAAAAAAAAAAAAQAAAAsAAAANAAAABgAAAAAAgD8GAAAAzczMPQUAAABZAAAAgWYOAAAAAAAAAAAAAQAAABQAAAANAAAACwAAAA0AAAAAAAAA"
    }
   },
   {
@@ -685,8 +705,8 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "SF_40*(0.6 * Table(34, sLevel)) * SF_33/1.15",
-    "compiled": "BQAAAC4AAAAAAAAAAAAAAAAAAAAGAAAAmpkZPwYAAAAAAAhCBQAAAAEAAAAAAAAAAAAAAAAAAAABAAAACwAAAA0AAAANAAAABQAAACcAAAAAAAAAAAAAAAAAAAANAAAABgAAADMzkz8OAAAAAAAAAA=="
+    "value": "(0.6 * Table(34, sLevel)) * SF_33/1.15",
+    "compiled": "BgAAAJqZGT8GAAAAAAAIQgUAAAABAAAAAAAAAAAAAAAAAAAAAQAAAAsAAAANAAAABQAAACcAAAAAAAAAAAAAAAAAAAANAAAABgAAADMzkz8OAAAAAAAAAA=="
    }
   },
   {
@@ -701,8 +721,8 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "SF_40*(0.9 * Table(34, sLevel))/1.15",
-    "compiled": "BQAAAC4AAAAAAAAAAAAAAAAAAAAGAAAAZmZmPwYAAAAAAAhCBQAAAAEAAAAAAAAAAAAAAAAAAAABAAAACwAAAA0AAAANAAAABgAAADMzkz8OAAAAAAAAAA=="
+    "value": "(0.9 * Table(34, sLevel))/1.15",
+    "compiled": "BgAAAGZmZj8GAAAAAAAIQgUAAAABAAAAAAAAAAAAAAAAAAAAAQAAAAsAAAANAAAABgAAADMzkz8OAAAAAAAAAA=="
    }
   },
   {
@@ -710,7 +730,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "NecroPetPassiveIsActive(SNO.Power.Necromancer_SkeletonMage_Sacrifice_Passive_UpgradeA) ? SF_25 : SF_31",
-    "compiled": "BQAAAFkAAAAENw4AAAAAAAAAAAABAAAALQAAAAUAAAAfAAAAAAAAAAAAAAAAAAAABQAAACUAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAA=="
+    "compiled": "BQAAAFkAAAAENw4AAAAAAAAAAAABAAAALwAAAAUAAAAfAAAAAAAAAAAAAAAAAAAABQAAACUAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAA=="
    }
   },
   {
@@ -718,7 +738,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "NecroArmy_Spec_For_Pet_Type#1==0",
-    "compiled": "BQAAAAAAAAAAAgAAAQAAAAAAAAAGAAAAAAAAAAkAAAAAAAAA"
+    "compiled": "BQAAAAAAAAAbAgAAAQAAAAAAAAAGAAAAAAAAAAkAAAAAAAAA"
    }
   },
   {
@@ -726,7 +746,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "NecroArmy_Spec_For_Pet_Type#1==1",
-    "compiled": "BQAAAAAAAAAAAgAAAQAAAAAAAAAGAAAAAACAPwkAAAAAAAAA"
+    "compiled": "BQAAAAAAAAAbAgAAAQAAAAAAAAAGAAAAAACAPwkAAAAAAAAA"
    }
   },
   {
@@ -734,7 +754,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "NecroArmy_Spec_For_Pet_Type#1==2",
-    "compiled": "BQAAAAAAAAAAAgAAAQAAAAAAAAAGAAAAAAAAQAkAAAAAAAAA"
+    "compiled": "BQAAAAAAAAAbAgAAAQAAAAAAAAAGAAAAAAAAQAkAAAAAAAAA"
    }
   },
   {
@@ -902,7 +922,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "NecroPetPassiveIsActive(SNO.Power.Necromancer_SkeletonWarrior_Reaper_Passive_Sacrifice) ? SF_34 : 1",
-    "compiled": "BQAAAFkAAADuNg4AAAAAAAAAAAABAAAALQAAAAUAAAAoAAAAAAAAAAAAAAAAAAAABgAAAAAAgD8QAAAAAAAAAA=="
+    "compiled": "BQAAAFkAAADuNg4AAAAAAAAAAAABAAAALwAAAAUAAAAoAAAAAAAAAAAAAAAAAAAABgAAAAAAgD8QAAAAAAAAAA=="
    }
   },
   {
@@ -926,7 +946,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Affix_Value_1#legendary_necro_031",
-    "compiled": "BQAAAAAAAAAZBAAABWMJAAAAAAAAAAAA"
+    "compiled": "BQAAAAAAAABKBAAABWMJAAAAAAAAAAAA"
    }
   },
   {
@@ -942,7 +962,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Min(1,1-Min(SF_37*(50-Level), 0.25))",
-    "compiled": "BgAAAAAAgD8GAAAAAACAPwUAAAArAAAAAAAAAAAAAAAAAAAABgAAAAAASEIFAAAAAAAAACUAAAD+////AAAAAAwAAAANAAAABgAAAAAAgD4BAAAAAAAAAAwAAAABAAAAAAAAAAAAAAA="
+    "compiled": "BgAAAAAAgD8GAAAAAACAPwUAAAArAAAAAAAAAAAAAAAAAAAABgAAAAAASEIFAAAAAAAAACcAAAD+////AAAAAAwAAAANAAAABgAAAAAAgD4BAAAAAAAAAAwAAAABAAAAAAAAAAAAAAA="
    }
   },
   {
@@ -958,7 +978,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Min(1,1-Min(SF_39*(50-Level), 0.35))",
-    "compiled": "BgAAAAAAgD8GAAAAAACAPwUAAAAtAAAAAAAAAAAAAAAAAAAABgAAAAAASEIFAAAAAAAAACUAAAD+////AAAAAAwAAAANAAAABgAAADQzsz4BAAAAAAAAAAwAAAABAAAAAAAAAAAAAAA="
+    "compiled": "BgAAAAAAgD8GAAAAAACAPwUAAAAtAAAAAAAAAAAAAAAAAAAABgAAAAAASEIFAAAAAAAAACcAAAD+////AAAAAAwAAAANAAAABgAAADQzsz4BAAAAAAAAAAwAAAABAAAAAAAAAAAAAAA="
    }
   },
   {
@@ -977,6 +997,7 @@
    "snoItemTypeMainHandEffectsOverride": null,
    "snoItemTypeOffHandEffectsOverride": null,
    "dwID": 2469785676,
+   "dwPayloadId": 0,
    "eForcedDamageType": -1,
    "tDamage": {
     "__type__": "HitpointSpecifier",
@@ -996,6 +1017,7 @@
     "value": "0",
     "compiled": "BgAAAAAAAAAAAAAA"
    },
+   "unk_f0290f2": [],
    "unk_c1c7b04": false,
    "tVulnerableDurationSecondsOverride": {
     "value": "0",
@@ -1050,6 +1072,7 @@
    "ePayloadDefaultHitEffectType": 2,
    "snoNormalHitEffectGroup": null,
    "snoTargetImpactEffectGroup": null,
+   "unk_f381067": false,
    "flHitFlashDurationScalar": 1,
    "iPowerNeedTarget": false,
    "bPlayNormalHitSoundPayload": false,
@@ -1070,6 +1093,7 @@
    "snoItemTypeMainHandEffectsOverride": null,
    "snoItemTypeOffHandEffectsOverride": null,
    "dwID": 259630707,
+   "dwPayloadId": 1,
    "eForcedDamageType": -1,
    "tDamage": {
     "__type__": "HitpointSpecifier",
@@ -1089,6 +1113,7 @@
     "value": "0",
     "compiled": "BgAAAAAAAAAAAAAA"
    },
+   "unk_f0290f2": [],
    "unk_c1c7b04": false,
    "tVulnerableDurationSecondsOverride": {
     "value": "0",
@@ -1143,6 +1168,7 @@
    "ePayloadDefaultHitEffectType": 2,
    "snoNormalHitEffectGroup": null,
    "snoTargetImpactEffectGroup": null,
+   "unk_f381067": false,
    "flHitFlashDurationScalar": 1,
    "iPowerNeedTarget": false,
    "bPlayNormalHitSoundPayload": false,
@@ -1163,6 +1189,7 @@
    "snoItemTypeMainHandEffectsOverride": null,
    "snoItemTypeOffHandEffectsOverride": null,
    "dwID": 1564547184,
+   "dwPayloadId": 2,
    "eForcedDamageType": -1,
    "tDamage": {
     "__type__": "HitpointSpecifier",
@@ -1182,6 +1209,7 @@
     "value": "0",
     "compiled": "BgAAAAAAAAAAAAAA"
    },
+   "unk_f0290f2": [],
    "unk_c1c7b04": false,
    "tVulnerableDurationSecondsOverride": {
     "value": "0",
@@ -1236,6 +1264,7 @@
    "ePayloadDefaultHitEffectType": 2,
    "snoNormalHitEffectGroup": null,
    "snoTargetImpactEffectGroup": null,
+   "unk_f381067": false,
    "flHitFlashDurationScalar": 1,
    "iPowerNeedTarget": false,
    "bPlayNormalHitSoundPayload": false,
@@ -1383,5 +1412,19 @@
     }
    }
   }
- ]
+ ],
+ "unk_143fe9f": {
+  "value": "10",
+  "compiled": "BgAAAAAAIEEAAAAA"
+ },
+ "unk_b76598c": {
+  "value": "0",
+  "compiled": "BgAAAAAAAAAAAAAA"
+ },
+ "unk_c99c7cb": false,
+ "unk_fad91a3": false,
+ "unk_376802e": false,
+ "unk_bf25f64": 0,
+ "unk_5b1a2bb": [],
+ "arProjectileOverrides": []
 }

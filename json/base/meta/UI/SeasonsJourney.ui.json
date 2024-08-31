@@ -9213,7 +9213,7 @@
         "hOptionalUIHotkeyStyleFields": {
          "eFixedControllerButton": 1,
          "unk_ccd9967": "UI_SeasonPass_Close",
-         "eHotkey": 123
+         "eHotkey": 124
         }
        }
       ],
@@ -10616,9 +10616,92 @@
         "hOptionalUIControlConsoleInputFields": {}
        },
        "hOptionalUIWindowStyleFields": {
-        "eClipBehavior": 1
+        "eClipBehavior": 2
        },
        "hOptionalUIRActorStyleFields": {}
+      }
+     ],
+     "arChildren": [],
+     "unk_1cb": []
+    },
+    {
+     "__type__": "UIControlTemplate",
+     "__typeHash__": 641859515,
+     "szName": "RewardTier_VFX_FavorUnlock",
+     "ptInlineStyle": [
+      {
+       "__type__": "UIWindowStyle",
+       "__typeHash__": 506492871,
+       "dwType": 506492871,
+       "dwPad": 0,
+       "hParentStyle": {
+        "__type__": "UIControlHandle",
+        "__typeHash__": 3063971755,
+        "snoUI": null,
+        "szControlName": 0
+       },
+       "unk_441f783": "0",
+       "hOptionalUIControlStyleFields": {
+        "bActive": 0
+       },
+       "tConsoleInput": {
+        "__type__": "UIControlConsoleInput",
+        "__typeHash__": 3089331074,
+        "hOptionalUIControlConsoleInputFields": {}
+       },
+       "hOptionalUIWindowStyleFields": {
+        "eClipBehavior": 0,
+        "eVerticalAnchoring": 3,
+        "eHorizontalAnchoring": 3,
+        "tOnActivateEffects": [
+         {
+          "__type__": "UIEffect",
+          "__typeHash__": 228221451,
+          "snoEffectGroup": {
+           "__raw__": 1558584,
+           "__group__": 14,
+           "__type__": "DT_SNO",
+           "__typeHash__": 2764331143,
+           "__targetFileName__": "base/meta/EffectGroup/store_bp_ui_vfx_rewardTier_Claimed_bg.efg",
+           "groupName": "EffectGroup",
+           "name": "store_bp_ui_vfx_rewardTier_Claimed_bg"
+          },
+          "szUIRActorPath": ".RewardTier_VFX_background",
+          "eScaleMethod": 1,
+          "vecScale": {
+           "x": 1,
+           "y": 1
+          },
+          "unk_4a73e5": {
+           "x": -1,
+           "y": -1
+          }
+         },
+         {
+          "__type__": "UIEffect",
+          "__typeHash__": 228221451,
+          "snoEffectGroup": {
+           "__raw__": 1514878,
+           "__group__": 14,
+           "__type__": "DT_SNO",
+           "__typeHash__": 2764331143,
+           "__targetFileName__": "base/meta/EffectGroup/store_bp_ui_vfx_rewardTier_Unlocked.efg",
+           "groupName": "EffectGroup",
+           "name": "store_bp_ui_vfx_rewardTier_Unlocked"
+          },
+          "szUIRActorPath": ".RewardTier_VFX_foreground",
+          "eScaleMethod": 1,
+          "vecScale": {
+           "x": 1,
+           "y": 1
+          },
+          "unk_4a73e5": {
+           "x": -1,
+           "y": -1
+          }
+         }
+        ]
+       }
       }
      ],
      "arChildren": [],
@@ -12577,6 +12660,48 @@
           }
          ],
          "unk_1cb": []
+        },
+        {
+         "__type__": "UIControlTemplate",
+         "__typeHash__": 641859515,
+         "szName": "VFXIndicator",
+         "ptInlineStyle": [
+          {
+           "__type__": "UIWindowStyle",
+           "__typeHash__": 506492871,
+           "dwType": 506492871,
+           "dwPad": 0,
+           "hParentStyle": {
+            "__type__": "UIControlHandle",
+            "__typeHash__": 3063971755,
+            "snoUI": null,
+            "szControlName": 0
+           },
+           "unk_441f783": "0",
+           "hOptionalUIControlStyleFields": {
+            "bActive": 0
+           },
+           "tConsoleInput": {
+            "__type__": "UIControlConsoleInput",
+            "__typeHash__": 3089331074,
+            "hOptionalUIControlConsoleInputFields": {}
+           },
+           "hOptionalUIWindowStyleFields": {
+            "nTop": 16,
+            "nHeight": 20,
+            "nRight": 15,
+            "nWidth": 20,
+            "eHorizontalAnchoring": 2,
+            "hImageFrame": {
+             "__type__": "UIImageHandleReference",
+             "__typeHash__": 1797021084,
+             "hImageHandle": 3669708328
+            }
+           }
+          }
+         ],
+         "arChildren": [],
+         "unk_1cb": []
         }
        ],
        "unk_1cb": []
@@ -12818,6 +12943,85 @@
     {
      "__type__": "UIControlTemplate",
      "__typeHash__": 641859515,
+     "szName": "FavorBackGlow",
+     "ptInlineStyle": [
+      {
+       "__type__": "UIWindowStyle",
+       "__typeHash__": 506492871,
+       "dwType": 506492871,
+       "dwPad": 0,
+       "hParentStyle": {
+        "__type__": "UIControlHandle",
+        "__typeHash__": 3063971755,
+        "snoUI": null,
+        "szControlName": 0
+       },
+       "unk_441f783": "0",
+       "hOptionalUIControlStyleFields": {
+        "bActive": 0
+       },
+       "tConsoleInput": {
+        "__type__": "UIControlConsoleInput",
+        "__typeHash__": 3089331074,
+        "hOptionalUIControlConsoleInputFields": {}
+       },
+       "hOptionalUIWindowStyleFields": {
+        "nTop": -1,
+        "nHeight": 37,
+        "eVerticalAnchoring": 2,
+        "nBottom": 1,
+        "nRight": -12,
+        "nWidth": 49,
+        "nLeft": 0,
+        "eHorizontalAnchoring": 2,
+        "hImageFrame": {
+         "__type__": "UIImageHandleReference",
+         "__typeHash__": 1797021084,
+         "hImageHandle": 1905421380
+        }
+       }
+      }
+     ],
+     "arChildren": [
+      {
+       "__type__": "UIControlTemplate",
+       "__typeHash__": 641859515,
+       "szName": "FavorBackGlow_VFX",
+       "ptInlineStyle": [
+        {
+         "__type__": "UIRActorStyle",
+         "__typeHash__": 2564089914,
+         "dwType": 2564089914,
+         "dwPad": 0,
+         "hParentStyle": {
+          "__type__": "UIControlHandle",
+          "__typeHash__": 3063971755,
+          "snoUI": null,
+          "szControlName": 0
+         },
+         "unk_441f783": "0",
+         "hOptionalUIControlStyleFields": {},
+         "tConsoleInput": {
+          "__type__": "UIControlConsoleInput",
+          "__typeHash__": 3089331074,
+          "hOptionalUIControlConsoleInputFields": {}
+         },
+         "hOptionalUIWindowStyleFields": {
+          "eVerticalAnchoring": 3,
+          "eHorizontalAnchoring": 3
+         },
+         "hOptionalUIRActorStyleFields": {}
+        }
+       ],
+       "arChildren": [],
+       "unk_1cb": []
+      }
+     ],
+     "unk_1cb": []
+    },
+    {
+     "__type__": "UIControlTemplate",
+     "__typeHash__": 641859515,
      "szName": "FavorSocket",
      "ptInlineStyle": [
       {
@@ -12924,6 +13128,12 @@
         "nWidth": 49,
         "nLeft": 1,
         "eHorizontalAnchoring": 2,
+        "rgbaTint": {
+         "r": 255,
+         "g": 255,
+         "b": 255,
+         "a": 255
+        },
         "hImageFrame": {
          "__type__": "UIImageHandleReference",
          "__typeHash__": 1797021084,
@@ -12957,7 +13167,11 @@
           "hOptionalUIControlConsoleInputFields": {}
          },
          "hOptionalUIWindowStyleFields": {
+          "nTop": 0,
           "eVerticalAnchoring": 3,
+          "nBottom": 0,
+          "nRight": 0,
+          "nLeft": 0,
           "eHorizontalAnchoring": 3
          },
          "hOptionalUIRActorStyleFields": {}
@@ -12987,7 +13201,7 @@
        },
        "unk_441f783": "0",
        "hOptionalUIControlStyleFields": {
-        "bActive": 0
+        "bActive": 1
        },
        "tConsoleInput": {
         "__type__": "UIControlConsoleInput",
@@ -12999,7 +13213,6 @@
         "eVerticalAnchoring": 2,
         "nBottom": 3,
         "nWidth": 25,
-        "nLeft": 0,
         "eHorizontalAnchoring": 0,
         "hImageFrame": {
          "__type__": "UIImageHandleReference",
@@ -13014,6 +13227,162 @@
        "__type__": "UIControlTemplate",
        "__typeHash__": 641859515,
        "szName": "FavorPuckHighlight_VFX",
+       "ptInlineStyle": [
+        {
+         "__type__": "UIRActorStyle",
+         "__typeHash__": 2564089914,
+         "dwType": 2564089914,
+         "dwPad": 0,
+         "hParentStyle": {
+          "__type__": "UIControlHandle",
+          "__typeHash__": 3063971755,
+          "snoUI": null,
+          "szControlName": 0
+         },
+         "unk_441f783": "0",
+         "hOptionalUIControlStyleFields": {
+          "bActive": 0
+         },
+         "tConsoleInput": {
+          "__type__": "UIControlConsoleInput",
+          "__typeHash__": 3089331074,
+          "hOptionalUIControlConsoleInputFields": {}
+         },
+         "hOptionalUIWindowStyleFields": {
+          "nTop": -3,
+          "nHeight": 100,
+          "eClipBehavior": 2,
+          "eVerticalAnchoring": 1,
+          "nWidth": 100,
+          "snoMaterial": {
+           "__raw__": 2096833,
+           "__group__": 57,
+           "__type__": "DT_SNO",
+           "__typeHash__": 2764331143,
+           "__targetFileName__": "base/meta/Material/vfx_ui_bp_puck_glow.mat",
+           "groupName": "Material",
+           "name": "vfx_ui_bp_puck_glow"
+          },
+          "eHorizontalAnchoring": 1,
+          "tOnActivateEffects": [
+           {
+            "__type__": "UIEffect",
+            "__typeHash__": 228221451,
+            "snoEffectGroup": {
+             "__raw__": 2095781,
+             "__group__": 14,
+             "__type__": "DT_SNO",
+             "__typeHash__": 2764331143,
+             "__targetFileName__": "base/meta/EffectGroup/store_ui_bp_puck_FlashGlow.efg",
+             "groupName": "EffectGroup",
+             "name": "store_ui_bp_puck_FlashGlow"
+            },
+            "szUIRActorPath": ".FavorPuckHighlight_VFX",
+            "eScaleMethod": 2,
+            "vecScale": {
+             "x": 1,
+             "y": 1
+            },
+            "unk_4a73e5": {
+             "x": -1,
+             "y": -1
+            }
+           }
+          ]
+         },
+         "hOptionalUIRActorStyleFields": {}
+        }
+       ],
+       "arChildren": [],
+       "unk_1cb": []
+      },
+      {
+       "__type__": "UIControlTemplate",
+       "__typeHash__": 641859515,
+       "szName": "FavorPuckHighlight_Storyboard",
+       "ptInlineStyle": [
+        {
+         "__type__": "UIStoryboard2Style",
+         "__typeHash__": 3193003306,
+         "dwType": 3193003306,
+         "dwPad": 0,
+         "hParentStyle": {
+          "__type__": "UIControlHandle",
+          "__typeHash__": 3063971755,
+          "snoUI": null,
+          "szControlName": 0
+         },
+         "unk_441f783": "0",
+         "hOptionalUIControlStyleFields": {},
+         "snoStoryboard": {
+          "__raw__": 2096848,
+          "__group__": 90,
+          "__type__": "DT_SNO",
+          "__typeHash__": 2764331143,
+          "__targetFileName__": "base/meta/Storyboard/Favor_PuckHighlight.stb",
+          "groupName": "StoryBoard",
+          "name": "Favor_PuckHighlight"
+         },
+         "eLoadBehavior": 0,
+         "eActivateBehavior": 0,
+         "eFinishBehavior": 0,
+         "hOptionalUIStoryboard2StyleFields": {}
+        }
+       ],
+       "arChildren": [],
+       "unk_1cb": []
+      }
+     ],
+     "unk_1cb": []
+    },
+    {
+     "__type__": "UIControlTemplate",
+     "__typeHash__": 641859515,
+     "szName": "FavorFrontGlow",
+     "ptInlineStyle": [
+      {
+       "__type__": "UIWindowStyle",
+       "__typeHash__": 506492871,
+       "dwType": 506492871,
+       "dwPad": 0,
+       "hParentStyle": {
+        "__type__": "UIControlHandle",
+        "__typeHash__": 3063971755,
+        "snoUI": null,
+        "szControlName": 0
+       },
+       "unk_441f783": "0",
+       "hOptionalUIControlStyleFields": {
+        "bActive": 0
+       },
+       "tConsoleInput": {
+        "__type__": "UIControlConsoleInput",
+        "__typeHash__": 3089331074,
+        "hOptionalUIControlConsoleInputFields": {}
+       },
+       "hOptionalUIWindowStyleFields": {
+        "nTop": -1,
+        "nHeight": 37,
+        "eVerticalAnchoring": 2,
+        "nBottom": 1,
+        "nRight": -12,
+        "nWidth": 49,
+        "nLeft": 0,
+        "eHorizontalAnchoring": 2,
+        "hImageFrame": {
+         "__type__": "UIImageHandleReference",
+         "__typeHash__": 1797021084,
+         "hImageHandle": 1905421380
+        },
+        "dwAlpha": 255
+       }
+      }
+     ],
+     "arChildren": [
+      {
+       "__type__": "UIControlTemplate",
+       "__typeHash__": 641859515,
+       "szName": "FavorFrontGlow_VFX",
        "ptInlineStyle": [
         {
          "__type__": "UIRActorStyle",
@@ -13697,6 +14066,42 @@
         "__targetFileName__": "base/meta/Storyboard/SeasonsJourney_RewardGlow.stb",
         "groupName": "StoryBoard",
         "name": "SeasonsJourney_RewardGlow"
+       },
+       "eLoadBehavior": 0,
+       "eActivateBehavior": 0,
+       "eFinishBehavior": 0,
+       "hOptionalUIStoryboard2StyleFields": {}
+      }
+     ],
+     "arChildren": [],
+     "unk_1cb": []
+    },
+    {
+     "__type__": "UIControlTemplate",
+     "__typeHash__": 641859515,
+     "szName": "Favor_Transition_Storyboard",
+     "ptInlineStyle": [
+      {
+       "__type__": "UIStoryboard2Style",
+       "__typeHash__": 3193003306,
+       "dwType": 3193003306,
+       "dwPad": 0,
+       "hParentStyle": {
+        "__type__": "UIControlHandle",
+        "__typeHash__": 3063971755,
+        "snoUI": null,
+        "szControlName": 0
+       },
+       "unk_441f783": "0",
+       "hOptionalUIControlStyleFields": {},
+       "snoStoryboard": {
+        "__raw__": 2091609,
+        "__group__": 90,
+        "__type__": "DT_SNO",
+        "__typeHash__": 2764331143,
+        "__targetFileName__": "base/meta/Storyboard/Favor_TransitionGlow.stb",
+        "groupName": "StoryBoard",
+        "name": "Favor_TransitionGlow"
        },
        "eLoadBehavior": 0,
        "eActivateBehavior": 0,
@@ -28125,7 +28530,7 @@
                "hOptionalUIHotkeyStyleFields": {
                 "eFixedControllerButton": 1,
                 "unk_ccd9967": "ModalNotification_OnClick_OkButton",
-                "eHotkey": 123,
+                "eHotkey": 124,
                 "snoOnActionSound": null
                }
               }
@@ -30063,7 +30468,7 @@
                "b": 255,
                "a": 255
               },
-              "eHotkey": 122
+              "eHotkey": 123
              }
             }
            ],
@@ -30156,7 +30561,7 @@
                "b": 255,
                "a": 255
               },
-              "eHotkey": 122
+              "eHotkey": 123
              }
             }
            ],
@@ -30249,7 +30654,7 @@
                "b": 255,
                "a": 255
               },
-              "eHotkey": 122
+              "eHotkey": 123
              }
             }
            ],
@@ -32728,7 +33133,7 @@
                "b": 255,
                "a": 255
               },
-              "eHotkey": 122
+              "eHotkey": 123
              }
             }
            ],

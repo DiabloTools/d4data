@@ -21,6 +21,7 @@
  "arStoreAnimSets": [],
  "snoAnimTree": null,
  "arActorAppearanceAddOnEntries": [],
+ "snoDamageRemap": null,
  "arUniqueSubObjectNameInfoPerAppearance": [],
  "tAnimTreeOverride": {
   "__type__": "AnimTreeOverride",
@@ -111,6 +112,7 @@
  "flAttachmentScaleFactor": 1,
  "eDefaultTeam": 0,
  "eCullingLevel": 0,
+ "unk_b7a6ddf": false,
  "flFadeCorpseTimeUntilFade": 10,
  "flFadeCorpseTime": 2,
  "aAbsoluteOrientation": 0,
@@ -201,7 +203,7 @@
       }
      ],
      "dwTriggerFlags": 0,
-     "dwTriggerFlagsEx": 0,
+     "dwTriggerFlagsEx": 4,
      "tEffectGroupAttachPointsOverride": [
       {
        "__type__": "EffectGroupAttachPointOverride",
@@ -354,7 +356,7 @@
       }
      ],
      "dwTriggerFlags": 0,
-     "dwTriggerFlagsEx": 0,
+     "dwTriggerFlagsEx": 4,
      "tEffectGroupAttachPointsOverride": [
       {
        "__type__": "EffectGroupAttachPointOverride",
@@ -492,7 +494,7 @@
       }
      ],
      "dwTriggerFlags": 0,
-     "dwTriggerFlagsEx": 0,
+     "dwTriggerFlagsEx": 4,
      "fRandomLook": false,
      "tLookLink": {
       "__type__": "LookLink",
@@ -654,7 +656,7 @@
       }
      ],
      "dwTriggerFlags": 0,
-     "dwTriggerFlagsEx": 0,
+     "dwTriggerFlagsEx": 4,
      "fRandomLook": false,
      "tLookLink": {
       "__type__": "LookLink",
@@ -784,7 +786,7 @@
      "dwParentActorID": 4294967295,
      "tDuration": 0,
      "dwTriggerFlags": 0,
-     "dwTriggerFlagsEx": 0,
+     "dwTriggerFlagsEx": 4,
      "tCleanup": {
       "__type__": "TriggerCleanup",
       "__typeHash__": 2029186460,
@@ -846,6 +848,9 @@
      "unk_773852b": false,
      "unk_62ab747": true,
      "unk_cb43646": false,
+     "unk_a6c42b7": 0,
+     "unk_bfc7ac5": -1,
+     "snoAppearanceOverride": null,
      "fRandomLook": false,
      "tLookLink": {
       "__type__": "LookLink",
@@ -983,7 +988,7 @@
      "dwParentActorID": 4294967295,
      "tDuration": 0,
      "dwTriggerFlags": 0,
-     "dwTriggerFlagsEx": 0,
+     "dwTriggerFlagsEx": 4,
      "tCleanup": {
       "__type__": "TriggerCleanup",
       "__typeHash__": 2029186460,
@@ -1045,6 +1050,9 @@
      "unk_773852b": false,
      "unk_62ab747": true,
      "unk_cb43646": false,
+     "unk_a6c42b7": 0,
+     "unk_bfc7ac5": -1,
+     "snoAppearanceOverride": null,
      "fRandomLook": false,
      "tLookLink": {
       "__type__": "LookLink",
@@ -1214,7 +1222,7 @@
       }
      ],
      "dwTriggerFlags": 0,
-     "dwTriggerFlagsEx": 0,
+     "dwTriggerFlagsEx": 4,
      "fRandomLook": false,
      "tLookLink": {
       "__type__": "LookLink",
@@ -1376,7 +1384,7 @@
       }
      ],
      "dwTriggerFlags": 0,
-     "dwTriggerFlagsEx": 0,
+     "dwTriggerFlagsEx": 4,
      "fRandomLook": false,
      "tLookLink": {
       "__type__": "LookLink",
@@ -1500,7 +1508,8 @@
      "uDynamicMyFlags": 1
     },
     "unk_a882afd": false,
-    "unk_54403ff": false
+    "unk_54403ff": false,
+    "unk_eab2483": false
    },
    "eCollisionShape": 1,
    "wcylCollision": {
@@ -1565,7 +1574,8 @@
      "z": 0
     }
    },
-   "unk_c627b16": false
+   "unk_c627b16": false,
+   "unk_7e60e04": false
   }
  ],
  "eActorGizmoType": 18,
@@ -1585,6 +1595,7 @@
    "flOperationRadius": 0,
    "unk_d0b1df5": 0,
    "flGizmoUseTime": 0,
+   "unk_c61db5a": true,
    "snoChannelingEffect": null,
    "unk_2767229": false,
    "fGizmoShowProgressBar": false,
@@ -1616,6 +1627,7 @@
    "hGizmoOperateDescriptionMsgLabel": 0,
    "flGizmoOperateOffset": 0,
    "unk_ab58cd3": 0,
+   "unk_695b5e1": false,
    "unk_91a3966": 0,
    "hGizmoChannelingLabel": 0,
    "unk_4be4371": false,
@@ -1658,7 +1670,8 @@
    "fDisableDamage": false,
    "fCannotDie": false,
    "unk_9ad1b04": false,
-   "flNoSpawnRadius": 0
+   "flNoSpawnRadius": 0,
+   "snoPhasingVisibilityCondition": null
   }
  ],
  "ptUIData": [
@@ -1682,12 +1695,20 @@
    "unk_fab46e5": 0,
    "flMinimapMaxVisRange": 0,
    "flMinimapDiscoveryRadius": 0,
+   "unk_75577b8": {
+    "__type__": "AttributeSelection",
+    "__typeHash__": 3088752698,
+    "eAttribute": -1,
+    "nParam": -1
+   },
    "unk_c6ec070": {
     "__type__": "ConditionWrapper",
     "__typeHash__": 3742548360,
     "snoCondition": null,
     "ptInlineCondition": []
-   }
+   },
+   "unk_f190641": false,
+   "unk_557e468": false
   }
  ],
  "ptAIData": [
@@ -1727,8 +1748,9 @@
  "ptPostprocessed": "0",
  "snoPrefabAttachment": null,
  "unk_d2b5e35": 1,
+ "snoActorService": null,
  "szPrefabLookOverride": 0,
  "dwPrefabShaderMapOverride": 4294967295,
  "arRTPCOverrides": [],
- "unk_3d2df8c": null
+ "gbidForcedPreloadList": null
 }

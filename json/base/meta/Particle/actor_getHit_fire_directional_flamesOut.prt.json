@@ -4,7 +4,7 @@
  "__type__": "ParticleDefinition",
  "__typeHash__": 2145577021,
  "eType": 0,
- "dwFlags": 1057824,
+ "dwFlags": 1074799648,
  "dwFlagsEx": 503324992,
  "dwFlagsEx2": 0,
  "tSystemDuration": 0.20000000298023224,
@@ -63,8 +63,8 @@
     {
      "__type__": "InterpolationNode_float",
      "__typeHash__": 2007685731,
-     "tValueMin": 1.2999999523162842,
-     "tValueMax": 1.2999999523162842,
+     "tValueMin": 1.2668561935424805,
+     "tValueMax": 1.2668561935424805,
      "tTime": 0
     }
    ]
@@ -481,9 +481,11 @@
   "name": "sorcerer_fireball_cast_fire"
  },
  "snoHoudini": null,
+ "snoAppearance": null,
  "snoPhysics": null,
  "snoSpawnOnCollision": null,
  "flNormalBias": 0,
+ "unk_471cfa5": 0.20000000298023224,
  "flWindFactor": 1,
  "flExplosionFactor": 1,
  "flExplosionFriction": 0.10000000149011612,
@@ -764,8 +766,8 @@
     {
      "__type__": "InterpolationNode_float",
      "__typeHash__": 2007685731,
-     "tValueMin": 0.11872146278619766,
-     "tValueMax": 0.11872146278619766,
+     "tValueMin": 0,
+     "tValueMax": 0,
      "tTime": 1
     }
    ]
@@ -843,7 +845,7 @@
     "__typeHash__": 2520702334,
     "tLoopPointStart": 0,
     "tLoopPointEnd": 1,
-    "nDistributionFunction": 0,
+    "nDistributionFunction": 4,
     "nMinMaxBehavior": 0,
     "arInterpScalar": [
      {
@@ -863,14 +865,14 @@
       "szFormulaName": 0
      }
     ],
-    "dwFlags": 8
+    "dwFlags": 12
    },
    "ptArrayNodes": [
     {
      "__type__": "InterpolationNode_float",
      "__typeHash__": 2007685731,
-     "tValueMin": 0,
-     "tValueMax": 1,
+     "tValueMin": 0.30000001192092896,
+     "tValueMax": 0.30000001192092896,
      "tTime": 0
     }
    ]
@@ -1034,7 +1036,48 @@
   }
  ],
  "pathAngularPosition": [],
- "pathAngularVelocity": [],
+ "pathAngularVelocity": [
+  {
+   "__type__": "InterpolationPath_float",
+   "__typeHash__": 3422409450,
+   "tHeader": {
+    "__type__": "InterpolationPathHeader",
+    "__typeHash__": 2520702334,
+    "tLoopPointStart": 0,
+    "tLoopPointEnd": 1,
+    "nDistributionFunction": 0,
+    "nMinMaxBehavior": 0,
+    "arInterpScalar": [
+     {
+      "__type__": "InterpolationScalar",
+      "__typeHash__": 991799518,
+      "nScalarFunction": 0,
+      "dwFlags": 1,
+      "tInputRange": {
+       "rangeValue1": 0,
+       "rangeValue2": 1
+      },
+      "tRemapRange": {
+       "rangeValue1": 0,
+       "rangeValue2": 1
+      },
+      "eRemapEasing": 0,
+      "szFormulaName": 0
+     }
+    ],
+    "dwFlags": 8
+   },
+   "ptArrayNodes": [
+    {
+     "__type__": "InterpolationNode_float",
+     "__typeHash__": 2007685731,
+     "tValueMin": -0.9932178854942322,
+     "tValueMax": -0.38636690378189087,
+     "tTime": 0
+    }
+   ]
+  }
+ ],
  "pathOrientationVelocity": [],
  "pathOrientationVelocity2": [],
  "pathOrientationPosition": [],
@@ -1942,6 +1985,7 @@
  "unk_8dc0a2c": [],
  "nFacing": 2,
  "eAlignment": 2,
+ "unk_a70d91e": 0,
  "wdBoundingRadius": 10,
  "unk_a79a409": 0.5,
  "unk_daaa964": 0,

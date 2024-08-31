@@ -6,6 +6,7 @@
  "szInternalName": "",
  "bDefensive": false,
  "unk_bd561bf": false,
+ "unk_db863a5": false,
  "tPrimaryTag": {
   "__type__": "SkillTagStruct",
   "__typeHash__": 4000554560,
@@ -44,6 +45,7 @@
  "bUsesWeaponExpertise": false,
  "unk_fca3b69": false,
  "bIgnoreSkillRanks": false,
+ "unk_f27ef43": false,
  "snoPowerAnimationOverride": {
   "__raw__": 356162,
   "__group__": 29,
@@ -62,16 +64,18 @@
  "bSetLookAtTarget": false,
  "bForceSheath": false,
  "unk_48531b6": false,
+ "unk_f234087": -1,
  "arEndingPreplayed": [],
  "ptPhaseInitialization": [],
  "arPhases": [],
  "unk_92fea1c": true,
  "unk_8cdde38": false,
+ "unk_3dff6b0": false,
  "arFacingWindows": [],
  "unk_4bf03ff": true,
  "tAttackSpeed": {
   "value": "Attacks_Per_Second_Total",
-  "compiled": "BQAAAAAAAADIAAAA/v///wAAAAAAAAAA"
+  "compiled": "BQAAAAAAAADUAAAA/v///wAAAAAAAAAA"
  },
  "unk_6deb090": false,
  "unk_ed2bdad": false,
@@ -96,7 +100,7 @@
  "nAudioImportance": 0,
  "snoConversation": null,
  "unk_97eadb8": 0,
- "unk_5e1a52d": true,
+ "bMustBeLearned": true,
  "bCaptionsInside": false,
  "eShapeshiftForm": -1,
  "arResourceCosts": [],
@@ -115,6 +119,10 @@
  "tRechargeTime": {
   "value": "0",
   "compiled": "BgAAAAAAAAAAAAAA"
+ },
+ "tRechargeAmount": {
+  "value": "1",
+  "compiled": "BgAAAAAAgD8AAAAA"
  },
  "tCooldownTime": {
   "value": "0",
@@ -467,7 +475,15 @@
   }
  ],
  "unk_6afae78": false,
- "snoClassRequirement": null,
+ "snoClassRequirement": {
+  "__raw__": 199275,
+  "__group__": 74,
+  "__type__": "DT_SNO",
+  "__typeHash__": 2764331143,
+  "__targetFileName__": "base/meta/PlayerClass/Rogue.pcl",
+  "groupName": "PlayerClass",
+  "name": "Rogue"
+ },
  "snoSkillRequirement": null,
  "snoItemRequirement": null,
  "snoHeroConditionRequirement": null,
@@ -481,6 +497,7 @@
  "unk_9aaab79": false,
  "unk_b15bf7f": false,
  "unk_8fe39cf": 0,
+ "unk_4e0f1a": false,
  "bPassabilityDuringEnabled": false,
  "bPassabilityDestEnabled": false,
  "arCollisionSettings": [
@@ -495,7 +512,8 @@
     "uDynamicMyFlags": 1
    },
    "unk_a882afd": false,
-   "unk_54403ff": false
+   "unk_54403ff": false,
+   "unk_eab2483": false
   },
   {
    "__type__": "CollisionSettings",
@@ -508,7 +526,8 @@
     "uDynamicMyFlags": 1
    },
    "unk_a882afd": false,
-   "unk_54403ff": false
+   "unk_54403ff": false,
+   "unk_eab2483": false
   }
  ],
  "fCannotLMBAssign": false,
@@ -542,6 +561,12 @@
     "value": "1",
     "compiled": "BgAAAAAAgD8AAAAA"
    },
+   "unk_deea7e8": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "unk_4393f38": false,
+   "unk_dcb22bd": false,
    "tMaxStackCount": {
     "value": "5",
     "compiled": "BgAAAAAAoEAAAAAA"
@@ -551,11 +576,15 @@
    "bCancellable": false,
    "unk_99b5752": false,
    "unk_93cd85f": false,
+   "unk_4bdaef2": false,
    "bVisibleInHotbarUI": false,
    "bShowsActiveStateOnHotbar": false,
    "bShowsDurationOnHotbar": false,
    "bShowsStackCountOnHotbar": false,
    "unk_71ba554": false,
+   "unk_1375622": false,
+   "unk_d2dd47": false,
+   "unk_8a5f69e": false,
    "hIcon": 3340286619,
    "hFloatingIcon": 0,
    "hFloatingTextLabel": 0,
@@ -593,7 +622,6 @@
     "bHideDamageEffects": false,
     "bHideGlobalApplicationEffect": false
    },
-   "unk_dcb22bd": false,
    "tCrowdControl": {
     "__type__": "PowerBuffCrowdControl",
     "__typeHash__": 4138865712,
@@ -641,6 +669,12 @@
     "value": "0.1",
     "compiled": "BgAAAM3MzD0AAAAA"
    },
+   "unk_deea7e8": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "unk_4393f38": false,
+   "unk_dcb22bd": false,
    "tMaxStackCount": {
     "value": "1",
     "compiled": "BgAAAAAAgD8AAAAA"
@@ -650,11 +684,15 @@
    "bCancellable": false,
    "unk_99b5752": false,
    "unk_93cd85f": false,
+   "unk_4bdaef2": false,
    "bVisibleInHotbarUI": false,
    "bShowsActiveStateOnHotbar": false,
    "bShowsDurationOnHotbar": false,
    "bShowsStackCountOnHotbar": false,
    "unk_71ba554": false,
+   "unk_1375622": false,
+   "unk_d2dd47": false,
+   "unk_8a5f69e": false,
    "hIcon": 0,
    "hFloatingIcon": 0,
    "hFloatingTextLabel": 0,
@@ -692,7 +730,6 @@
     "bHideDamageEffects": false,
     "bHideGlobalApplicationEffect": false
    },
-   "unk_dcb22bd": false,
    "tCrowdControl": {
     "__type__": "PowerBuffCrowdControl",
     "__typeHash__": 4138865712,
@@ -740,6 +777,12 @@
     "value": "1",
     "compiled": "BgAAAAAAgD8AAAAA"
    },
+   "unk_deea7e8": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "unk_4393f38": false,
+   "unk_dcb22bd": false,
    "tMaxStackCount": {
     "value": "1",
     "compiled": "BgAAAAAAgD8AAAAA"
@@ -749,11 +792,15 @@
    "bCancellable": false,
    "unk_99b5752": false,
    "unk_93cd85f": false,
+   "unk_4bdaef2": false,
    "bVisibleInHotbarUI": false,
    "bShowsActiveStateOnHotbar": false,
    "bShowsDurationOnHotbar": false,
    "bShowsStackCountOnHotbar": false,
    "unk_71ba554": false,
+   "unk_1375622": false,
+   "unk_d2dd47": false,
+   "unk_8a5f69e": false,
    "hIcon": 0,
    "hFloatingIcon": 0,
    "hFloatingTextLabel": 0,
@@ -791,7 +838,6 @@
     "bHideDamageEffects": false,
     "bHideGlobalApplicationEffect": false
    },
-   "unk_dcb22bd": false,
    "tCrowdControl": {
     "__type__": "PowerBuffCrowdControl",
     "__typeHash__": 4138865712,
@@ -839,6 +885,12 @@
     "value": "1",
     "compiled": "BgAAAAAAgD8AAAAA"
    },
+   "unk_deea7e8": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "unk_4393f38": false,
+   "unk_dcb22bd": false,
    "tMaxStackCount": {
     "value": "1",
     "compiled": "BgAAAAAAgD8AAAAA"
@@ -848,11 +900,15 @@
    "bCancellable": false,
    "unk_99b5752": false,
    "unk_93cd85f": false,
+   "unk_4bdaef2": false,
    "bVisibleInHotbarUI": false,
    "bShowsActiveStateOnHotbar": false,
    "bShowsDurationOnHotbar": false,
    "bShowsStackCountOnHotbar": false,
    "unk_71ba554": false,
+   "unk_1375622": false,
+   "unk_d2dd47": false,
+   "unk_8a5f69e": false,
    "hIcon": 0,
    "hFloatingIcon": 0,
    "hFloatingTextLabel": 0,
@@ -890,7 +946,6 @@
     "bHideDamageEffects": false,
     "bHideGlobalApplicationEffect": false
    },
-   "unk_dcb22bd": false,
    "tCrowdControl": {
     "__type__": "PowerBuffCrowdControl",
     "__typeHash__": 4138865712,
@@ -938,6 +993,12 @@
     "value": "1",
     "compiled": "BgAAAAAAgD8AAAAA"
    },
+   "unk_deea7e8": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "unk_4393f38": false,
+   "unk_dcb22bd": false,
    "tMaxStackCount": {
     "value": "1",
     "compiled": "BgAAAAAAgD8AAAAA"
@@ -947,11 +1008,15 @@
    "bCancellable": false,
    "unk_99b5752": false,
    "unk_93cd85f": false,
+   "unk_4bdaef2": false,
    "bVisibleInHotbarUI": false,
    "bShowsActiveStateOnHotbar": false,
    "bShowsDurationOnHotbar": false,
    "bShowsStackCountOnHotbar": false,
    "unk_71ba554": false,
+   "unk_1375622": false,
+   "unk_d2dd47": false,
+   "unk_8a5f69e": false,
    "hIcon": 0,
    "hFloatingIcon": 0,
    "hFloatingTextLabel": 0,
@@ -989,7 +1054,6 @@
     "bHideDamageEffects": false,
     "bHideGlobalApplicationEffect": false
    },
-   "unk_dcb22bd": false,
    "tCrowdControl": {
     "__type__": "PowerBuffCrowdControl",
     "__typeHash__": 4138865712,
@@ -1037,6 +1101,12 @@
     "value": "1",
     "compiled": "BgAAAAAAgD8AAAAA"
    },
+   "unk_deea7e8": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "unk_4393f38": false,
+   "unk_dcb22bd": false,
    "tMaxStackCount": {
     "value": "1",
     "compiled": "BgAAAAAAgD8AAAAA"
@@ -1046,11 +1116,15 @@
    "bCancellable": false,
    "unk_99b5752": false,
    "unk_93cd85f": false,
+   "unk_4bdaef2": false,
    "bVisibleInHotbarUI": false,
    "bShowsActiveStateOnHotbar": false,
    "bShowsDurationOnHotbar": false,
    "bShowsStackCountOnHotbar": false,
    "unk_71ba554": false,
+   "unk_1375622": false,
+   "unk_d2dd47": false,
+   "unk_8a5f69e": false,
    "hIcon": 0,
    "hFloatingIcon": 0,
    "hFloatingTextLabel": 0,
@@ -1088,7 +1162,6 @@
     "bHideDamageEffects": false,
     "bHideGlobalApplicationEffect": false
    },
-   "unk_dcb22bd": false,
    "tCrowdControl": {
     "__type__": "PowerBuffCrowdControl",
     "__typeHash__": 4138865712,
@@ -1136,6 +1209,12 @@
     "value": "1",
     "compiled": "BgAAAAAAgD8AAAAA"
    },
+   "unk_deea7e8": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "unk_4393f38": false,
+   "unk_dcb22bd": false,
    "tMaxStackCount": {
     "value": "1",
     "compiled": "BgAAAAAAgD8AAAAA"
@@ -1145,11 +1224,15 @@
    "bCancellable": false,
    "unk_99b5752": false,
    "unk_93cd85f": false,
+   "unk_4bdaef2": false,
    "bVisibleInHotbarUI": false,
    "bShowsActiveStateOnHotbar": false,
    "bShowsDurationOnHotbar": false,
    "bShowsStackCountOnHotbar": false,
    "unk_71ba554": false,
+   "unk_1375622": false,
+   "unk_d2dd47": false,
+   "unk_8a5f69e": false,
    "hIcon": 0,
    "hFloatingIcon": 0,
    "hFloatingTextLabel": 0,
@@ -1187,7 +1270,6 @@
     "bHideDamageEffects": false,
     "bHideGlobalApplicationEffect": false
    },
-   "unk_dcb22bd": false,
    "tCrowdControl": {
     "__type__": "PowerBuffCrowdControl",
     "__typeHash__": 4138865712,
@@ -1235,6 +1317,12 @@
     "value": "1",
     "compiled": "BgAAAAAAgD8AAAAA"
    },
+   "unk_deea7e8": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "unk_4393f38": false,
+   "unk_dcb22bd": false,
    "tMaxStackCount": {
     "value": "1",
     "compiled": "BgAAAAAAgD8AAAAA"
@@ -1244,11 +1332,15 @@
    "bCancellable": false,
    "unk_99b5752": false,
    "unk_93cd85f": false,
+   "unk_4bdaef2": false,
    "bVisibleInHotbarUI": false,
    "bShowsActiveStateOnHotbar": false,
    "bShowsDurationOnHotbar": false,
    "bShowsStackCountOnHotbar": false,
    "unk_71ba554": false,
+   "unk_1375622": false,
+   "unk_d2dd47": false,
+   "unk_8a5f69e": false,
    "hIcon": 0,
    "hFloatingIcon": 0,
    "hFloatingTextLabel": 0,
@@ -1286,7 +1378,6 @@
     "bHideDamageEffects": false,
     "bHideGlobalApplicationEffect": false
    },
-   "unk_dcb22bd": false,
    "tCrowdControl": {
     "__type__": "PowerBuffCrowdControl",
     "__typeHash__": 4138865712,
@@ -1334,6 +1425,12 @@
     "value": "1",
     "compiled": "BgAAAAAAgD8AAAAA"
    },
+   "unk_deea7e8": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "unk_4393f38": false,
+   "unk_dcb22bd": false,
    "tMaxStackCount": {
     "value": "1",
     "compiled": "BgAAAAAAgD8AAAAA"
@@ -1343,11 +1440,15 @@
    "bCancellable": false,
    "unk_99b5752": false,
    "unk_93cd85f": false,
+   "unk_4bdaef2": false,
    "bVisibleInHotbarUI": false,
    "bShowsActiveStateOnHotbar": false,
    "bShowsDurationOnHotbar": false,
    "bShowsStackCountOnHotbar": false,
    "unk_71ba554": false,
+   "unk_1375622": false,
+   "unk_d2dd47": false,
+   "unk_8a5f69e": false,
    "hIcon": 0,
    "hFloatingIcon": 0,
    "hFloatingTextLabel": 0,
@@ -1385,7 +1486,6 @@
     "bHideDamageEffects": false,
     "bHideGlobalApplicationEffect": false
    },
-   "unk_dcb22bd": false,
    "tCrowdControl": {
     "__type__": "PowerBuffCrowdControl",
     "__typeHash__": 4138865712,
@@ -1433,6 +1533,12 @@
     "value": "1",
     "compiled": "BgAAAAAAgD8AAAAA"
    },
+   "unk_deea7e8": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "unk_4393f38": false,
+   "unk_dcb22bd": false,
    "tMaxStackCount": {
     "value": "1",
     "compiled": "BgAAAAAAgD8AAAAA"
@@ -1442,11 +1548,15 @@
    "bCancellable": false,
    "unk_99b5752": false,
    "unk_93cd85f": false,
+   "unk_4bdaef2": false,
    "bVisibleInHotbarUI": false,
    "bShowsActiveStateOnHotbar": false,
    "bShowsDurationOnHotbar": false,
    "bShowsStackCountOnHotbar": false,
    "unk_71ba554": false,
+   "unk_1375622": false,
+   "unk_d2dd47": false,
+   "unk_8a5f69e": false,
    "hIcon": 0,
    "hFloatingIcon": 0,
    "hFloatingTextLabel": 0,
@@ -1484,7 +1594,6 @@
     "bHideDamageEffects": false,
     "bHideGlobalApplicationEffect": false
    },
-   "unk_dcb22bd": false,
    "tCrowdControl": {
     "__type__": "PowerBuffCrowdControl",
     "__typeHash__": 4138865712,
@@ -1532,6 +1641,12 @@
     "value": "1",
     "compiled": "BgAAAAAAgD8AAAAA"
    },
+   "unk_deea7e8": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "unk_4393f38": false,
+   "unk_dcb22bd": false,
    "tMaxStackCount": {
     "value": "SF_0",
     "compiled": "BQAAAAYAAAAAAAAAAAAAAAAAAAAAAAAA"
@@ -1541,11 +1656,15 @@
    "bCancellable": false,
    "unk_99b5752": false,
    "unk_93cd85f": false,
+   "unk_4bdaef2": false,
    "bVisibleInHotbarUI": false,
    "bShowsActiveStateOnHotbar": false,
    "bShowsDurationOnHotbar": false,
    "bShowsStackCountOnHotbar": false,
    "unk_71ba554": false,
+   "unk_1375622": false,
+   "unk_d2dd47": false,
+   "unk_8a5f69e": false,
    "hIcon": 0,
    "hFloatingIcon": 0,
    "hFloatingTextLabel": 0,
@@ -1583,7 +1702,6 @@
     "bHideDamageEffects": false,
     "bHideGlobalApplicationEffect": false
    },
-   "unk_dcb22bd": false,
    "tCrowdControl": {
     "__type__": "PowerBuffCrowdControl",
     "__typeHash__": 4138865712,
@@ -1631,6 +1749,12 @@
     "value": "1",
     "compiled": "BgAAAAAAgD8AAAAA"
    },
+   "unk_deea7e8": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "unk_4393f38": false,
+   "unk_dcb22bd": false,
    "tMaxStackCount": {
     "value": "1",
     "compiled": "BgAAAAAAgD8AAAAA"
@@ -1640,11 +1764,15 @@
    "bCancellable": false,
    "unk_99b5752": false,
    "unk_93cd85f": false,
+   "unk_4bdaef2": false,
    "bVisibleInHotbarUI": false,
    "bShowsActiveStateOnHotbar": false,
    "bShowsDurationOnHotbar": false,
    "bShowsStackCountOnHotbar": false,
    "unk_71ba554": false,
+   "unk_1375622": false,
+   "unk_d2dd47": false,
+   "unk_8a5f69e": false,
    "hIcon": 0,
    "hFloatingIcon": 0,
    "hFloatingTextLabel": 0,
@@ -1682,7 +1810,6 @@
     "bHideDamageEffects": false,
     "bHideGlobalApplicationEffect": false
    },
-   "unk_dcb22bd": false,
    "tCrowdControl": {
     "__type__": "PowerBuffCrowdControl",
     "__typeHash__": 4138865712,
@@ -1730,6 +1857,12 @@
     "value": "1",
     "compiled": "BgAAAAAAgD8AAAAA"
    },
+   "unk_deea7e8": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "unk_4393f38": false,
+   "unk_dcb22bd": false,
    "tMaxStackCount": {
     "value": "1",
     "compiled": "BgAAAAAAgD8AAAAA"
@@ -1739,11 +1872,15 @@
    "bCancellable": false,
    "unk_99b5752": false,
    "unk_93cd85f": false,
+   "unk_4bdaef2": false,
    "bVisibleInHotbarUI": false,
    "bShowsActiveStateOnHotbar": false,
    "bShowsDurationOnHotbar": false,
    "bShowsStackCountOnHotbar": false,
    "unk_71ba554": false,
+   "unk_1375622": false,
+   "unk_d2dd47": false,
+   "unk_8a5f69e": false,
    "hIcon": 0,
    "hFloatingIcon": 0,
    "hFloatingTextLabel": 0,
@@ -1781,7 +1918,6 @@
     "bHideDamageEffects": false,
     "bHideGlobalApplicationEffect": false
    },
-   "unk_dcb22bd": false,
    "tCrowdControl": {
     "__type__": "PowerBuffCrowdControl",
     "__typeHash__": 4138865712,
@@ -1829,6 +1965,12 @@
     "value": "SF_17",
     "compiled": "BQAAABcAAAAAAAAAAAAAAAAAAAAAAAAA"
    },
+   "unk_deea7e8": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "unk_4393f38": false,
+   "unk_dcb22bd": false,
    "tMaxStackCount": {
     "value": "1",
     "compiled": "BgAAAAAAgD8AAAAA"
@@ -1838,11 +1980,15 @@
    "bCancellable": false,
    "unk_99b5752": false,
    "unk_93cd85f": false,
+   "unk_4bdaef2": false,
    "bVisibleInHotbarUI": false,
    "bShowsActiveStateOnHotbar": false,
    "bShowsDurationOnHotbar": false,
    "bShowsStackCountOnHotbar": false,
    "unk_71ba554": false,
+   "unk_1375622": false,
+   "unk_d2dd47": false,
+   "unk_8a5f69e": false,
    "hIcon": 0,
    "hFloatingIcon": 0,
    "hFloatingTextLabel": 0,
@@ -1880,7 +2026,6 @@
     "bHideDamageEffects": false,
     "bHideGlobalApplicationEffect": false
    },
-   "unk_dcb22bd": false,
    "tCrowdControl": {
     "__type__": "PowerBuffCrowdControl",
     "__typeHash__": 4138865712,
@@ -1928,6 +2073,12 @@
     "value": "1",
     "compiled": "BgAAAAAAgD8AAAAA"
    },
+   "unk_deea7e8": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "unk_4393f38": false,
+   "unk_dcb22bd": false,
    "tMaxStackCount": {
     "value": "5",
     "compiled": "BgAAAAAAoEAAAAAA"
@@ -1937,11 +2088,15 @@
    "bCancellable": false,
    "unk_99b5752": false,
    "unk_93cd85f": false,
+   "unk_4bdaef2": false,
    "bVisibleInHotbarUI": false,
    "bShowsActiveStateOnHotbar": false,
    "bShowsDurationOnHotbar": false,
    "bShowsStackCountOnHotbar": false,
    "unk_71ba554": false,
+   "unk_1375622": false,
+   "unk_d2dd47": false,
+   "unk_8a5f69e": false,
    "hIcon": 0,
    "hFloatingIcon": 0,
    "hFloatingTextLabel": 0,
@@ -1979,7 +2134,6 @@
     "bHideDamageEffects": false,
     "bHideGlobalApplicationEffect": false
    },
-   "unk_dcb22bd": false,
    "tCrowdControl": {
     "__type__": "PowerBuffCrowdControl",
     "__typeHash__": 4138865712,
@@ -2027,6 +2181,12 @@
     "value": "1",
     "compiled": "BgAAAAAAgD8AAAAA"
    },
+   "unk_deea7e8": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "unk_4393f38": false,
+   "unk_dcb22bd": false,
    "tMaxStackCount": {
     "value": "1",
     "compiled": "BgAAAAAAgD8AAAAA"
@@ -2036,11 +2196,15 @@
    "bCancellable": false,
    "unk_99b5752": false,
    "unk_93cd85f": false,
+   "unk_4bdaef2": false,
    "bVisibleInHotbarUI": false,
    "bShowsActiveStateOnHotbar": false,
    "bShowsDurationOnHotbar": false,
    "bShowsStackCountOnHotbar": false,
    "unk_71ba554": false,
+   "unk_1375622": false,
+   "unk_d2dd47": false,
+   "unk_8a5f69e": false,
    "hIcon": 0,
    "hFloatingIcon": 0,
    "hFloatingTextLabel": 0,
@@ -2078,7 +2242,6 @@
     "bHideDamageEffects": false,
     "bHideGlobalApplicationEffect": false
    },
-   "unk_dcb22bd": false,
    "tCrowdControl": {
     "__type__": "PowerBuffCrowdControl",
     "__typeHash__": 4138865712,
@@ -2126,6 +2289,12 @@
     "value": "1",
     "compiled": "BgAAAAAAgD8AAAAA"
    },
+   "unk_deea7e8": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "unk_4393f38": false,
+   "unk_dcb22bd": false,
    "tMaxStackCount": {
     "value": "1",
     "compiled": "BgAAAAAAgD8AAAAA"
@@ -2135,11 +2304,15 @@
    "bCancellable": false,
    "unk_99b5752": false,
    "unk_93cd85f": false,
+   "unk_4bdaef2": false,
    "bVisibleInHotbarUI": false,
    "bShowsActiveStateOnHotbar": false,
    "bShowsDurationOnHotbar": false,
    "bShowsStackCountOnHotbar": false,
    "unk_71ba554": false,
+   "unk_1375622": false,
+   "unk_d2dd47": false,
+   "unk_8a5f69e": false,
    "hIcon": 0,
    "hFloatingIcon": 0,
    "hFloatingTextLabel": 0,
@@ -2177,7 +2350,6 @@
     "bHideDamageEffects": false,
     "bHideGlobalApplicationEffect": false
    },
-   "unk_dcb22bd": false,
    "tCrowdControl": {
     "__type__": "PowerBuffCrowdControl",
     "__typeHash__": 4138865712,
@@ -2262,7 +2434,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Affix_Value_1#legendary_rogue_013 * (Owner.Weapon_Damage_Min_Total + Owner.Weapon_Damage_Delta_Total)",
-    "compiled": "BQAAAAAAAAAZBAAAJtUIAAAAAAAFAAAAAAAAAJ4BAAD+////AwAAAAUAAAAAAAAAnwEAAP7///8DAAAACwAAAA0AAAAAAAAA"
+    "compiled": "BQAAAAAAAABKBAAAJtUIAAAAAAAFAAAAAAAAALMBAAD+////AwAAAAUAAAAAAAAAtAEAAP7///8DAAAACwAAAA0AAAAAAAAA"
    }
   },
   {
@@ -2326,7 +2498,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Affix_Value_1#legendary_rogue_004 / 100",
-    "compiled": "BQAAAAAAAAAZBAAALNUIAAAAAAAGAAAAAADIQg4AAAAAAAAA"
+    "compiled": "BQAAAAAAAABKBAAALNUIAAAAAAAGAAAAAADIQg4AAAAAAAAA"
    }
   },
   {
@@ -2342,7 +2514,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Percent_Bonus_Projectiles_Per_Power#Rogue_DarkShroud",
-    "compiled": "BQAAAAAAAAB8AwAAzf8LAAAAAAAAAAAA"
+    "compiled": "BQAAAAAAAAClAwAAzf8LAAAAAAAAAAAA"
    }
   },
   {
@@ -2374,7 +2546,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Affix_Value_1#Chest_Unique_Rogue_101 * (Weapon_Damage_Min_Total + Weapon_Damage_Delta_Total) * (1 + Main_Hand_Damage_Percent_Bonus)",
-    "compiled": "BQAAAAAAAAAZBAAAZ4QdAAAAAAAFAAAAAAAAAJ4BAAD+////AAAAAAUAAAAAAAAAnwEAAP7///8AAAAACwAAAA0AAAAGAAAAAACAPwUAAAAAAAAA5AAAAP7///8AAAAACwAAAA0AAAAAAAAA"
+    "compiled": "BQAAAAAAAABKBAAAZ4QdAAAAAAAFAAAAAAAAALMBAAD+////AAAAAAUAAAAAAAAAtAEAAP7///8AAAAACwAAAA0AAAAGAAAAAACAPwUAAAAAAAAA8gAAAP7///8AAAAACwAAAA0AAAAAAAAA"
    }
   },
   {
@@ -2409,6 +2581,7 @@
    "snoItemTypeMainHandEffectsOverride": null,
    "snoItemTypeOffHandEffectsOverride": null,
    "dwID": 3204315597,
+   "dwPayloadId": 0,
    "eForcedDamageType": 5,
    "tDamage": {
     "__type__": "HitpointSpecifier",
@@ -2428,6 +2601,7 @@
     "value": "0",
     "compiled": "BgAAAAAAAAAAAAAA"
    },
+   "unk_f0290f2": [],
    "unk_c1c7b04": false,
    "tVulnerableDurationSecondsOverride": {
     "value": "0",
@@ -2482,6 +2656,7 @@
    "ePayloadDefaultHitEffectType": 2,
    "snoNormalHitEffectGroup": null,
    "snoTargetImpactEffectGroup": null,
+   "unk_f381067": false,
    "flHitFlashDurationScalar": 1,
    "iPowerNeedTarget": false,
    "bPlayNormalHitSoundPayload": false,
@@ -2502,6 +2677,7 @@
    "snoItemTypeMainHandEffectsOverride": null,
    "snoItemTypeOffHandEffectsOverride": null,
    "dwID": 2076459878,
+   "dwPayloadId": 1,
    "eForcedDamageType": -1,
    "tDamage": {
     "__type__": "HitpointSpecifier",
@@ -2521,6 +2697,7 @@
     "value": "0",
     "compiled": "BgAAAAAAAAAAAAAA"
    },
+   "unk_f0290f2": [],
    "unk_c1c7b04": false,
    "tVulnerableDurationSecondsOverride": {
     "value": "0",
@@ -2575,6 +2752,7 @@
    "ePayloadDefaultHitEffectType": 2,
    "snoNormalHitEffectGroup": null,
    "snoTargetImpactEffectGroup": null,
+   "unk_f381067": false,
    "flHitFlashDurationScalar": 1,
    "iPowerNeedTarget": false,
    "bPlayNormalHitSoundPayload": false,
@@ -2605,5 +2783,19 @@
  },
  "flCastingEffectGroupDuration": 0.5,
  "arCastingEffectOverrides": [],
- "arPetSpawns": []
+ "arPetSpawns": [],
+ "unk_143fe9f": {
+  "value": "10",
+  "compiled": "BgAAAAAAIEEAAAAA"
+ },
+ "unk_b76598c": {
+  "value": "0",
+  "compiled": "BgAAAAAAAAAAAAAA"
+ },
+ "unk_c99c7cb": false,
+ "unk_fad91a3": false,
+ "unk_376802e": false,
+ "unk_bf25f64": 0,
+ "unk_5b1a2bb": [],
+ "arProjectileOverrides": []
 }

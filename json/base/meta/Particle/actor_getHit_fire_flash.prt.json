@@ -10,7 +10,7 @@
  "tSystemDuration": 0.20000000298023224,
  "tOutroDuration": 0.5,
  "tPrepumpDuration": 0,
- "eRenderDistance": 2,
+ "eRenderDistance": 1,
  "eUVFlippingMode": 0,
  "tSystemDurationScalar": {
   "__type__": "InterpolationScalar",
@@ -206,54 +206,13 @@
      "__type__": "InterpolationNode_float",
      "__typeHash__": 2007685731,
      "tValueMin": 0.12386443465948105,
-     "tValueMax": 0.1526460200548172,
+     "tValueMax": 0.17690764367580414,
      "tTime": 0
     }
    ]
   }
  ],
- "pathInitialScale": [
-  {
-   "__type__": "InterpolationPath_float",
-   "__typeHash__": 3422409450,
-   "tHeader": {
-    "__type__": "InterpolationPathHeader",
-    "__typeHash__": 2520702334,
-    "tLoopPointStart": 0,
-    "tLoopPointEnd": 1,
-    "nDistributionFunction": 0,
-    "nMinMaxBehavior": 0,
-    "arInterpScalar": [
-     {
-      "__type__": "InterpolationScalar",
-      "__typeHash__": 991799518,
-      "nScalarFunction": 0,
-      "dwFlags": 1,
-      "tInputRange": {
-       "rangeValue1": 0,
-       "rangeValue2": 1
-      },
-      "tRemapRange": {
-       "rangeValue1": 0,
-       "rangeValue2": 1
-      },
-      "eRemapEasing": 0,
-      "szFormulaName": 0
-     }
-    ],
-    "dwFlags": 12
-   },
-   "ptArrayNodes": [
-    {
-     "__type__": "InterpolationNode_float",
-     "__typeHash__": 2007685731,
-     "tValueMin": 0.75,
-     "tValueMax": 0.75,
-     "tTime": 0
-    }
-   ]
-  }
- ],
+ "pathInitialScale": [],
  "pathInitialSourceRelativeSpread": [],
  "pathInitialSourceRelativeVelocity": [
   {
@@ -488,9 +447,11 @@
   "name": "sorcerer_fireball_payload_flash"
  },
  "snoHoudini": null,
+ "snoAppearance": null,
  "snoPhysics": null,
  "snoSpawnOnCollision": null,
  "flNormalBias": 0,
+ "unk_471cfa5": 0.20000000298023224,
  "flWindFactor": 1,
  "flExplosionFactor": 1,
  "flExplosionFriction": 0.10000000149011612,
@@ -564,9 +525,86 @@
     {
      "__type__": "InterpolationNode_float",
      "__typeHash__": 2007685731,
-     "tValueMin": 2.373603343963623,
-     "tValueMax": 2.373603343963623,
-     "tTime": 0.3128306269645691
+     "tValueMin": 1,
+     "tValueMax": 1,
+     "tTime": 0.998826265335083
+    }
+   ]
+  }
+ ],
+ "pathParticleAlpha": [
+  {
+   "__type__": "InterpolationPath_float",
+   "__typeHash__": 3422409450,
+   "tHeader": {
+    "__type__": "InterpolationPathHeader",
+    "__typeHash__": 2520702334,
+    "tLoopPointStart": 0,
+    "tLoopPointEnd": 1,
+    "nDistributionFunction": 0,
+    "nMinMaxBehavior": 0,
+    "arInterpScalar": [
+     {
+      "__type__": "InterpolationScalar",
+      "__typeHash__": 991799518,
+      "nScalarFunction": 0,
+      "dwFlags": 1,
+      "tInputRange": {
+       "rangeValue1": 0,
+       "rangeValue2": 1
+      },
+      "tRemapRange": {
+       "rangeValue1": 0,
+       "rangeValue2": 1
+      },
+      "eRemapEasing": 0,
+      "szFormulaName": 0
+     }
+    ],
+    "dwFlags": 4
+   },
+   "ptArrayNodes": [
+    {
+     "__type__": "InterpolationNode_float",
+     "__typeHash__": 2007685731,
+     "tValueMin": 1,
+     "tValueMax": 1,
+     "tTime": 0
+    },
+    {
+     "__type__": "InterpolationNode_float",
+     "__typeHash__": 2007685731,
+     "tValueMin": 0.9589827656745911,
+     "tValueMax": 0.9589827656745911,
+     "tTime": 0.1165686845779419
+    },
+    {
+     "__type__": "InterpolationNode_float",
+     "__typeHash__": 2007685731,
+     "tValueMin": 0.8394928574562073,
+     "tValueMax": 0.8394928574562073,
+     "tTime": 0.23764942586421967
+    },
+    {
+     "__type__": "InterpolationNode_float",
+     "__typeHash__": 2007685731,
+     "tValueMin": 0.5446828007698059,
+     "tValueMax": 0.5446828007698059,
+     "tTime": 0.37357690930366516
+    },
+    {
+     "__type__": "InterpolationNode_float",
+     "__typeHash__": 2007685731,
+     "tValueMin": 0.3054077625274658,
+     "tValueMax": 0.3054077625274658,
+     "tTime": 0.5363132357597351
+    },
+    {
+     "__type__": "InterpolationNode_float",
+     "__typeHash__": 2007685731,
+     "tValueMin": 0.14560221135616302,
+     "tValueMax": 0.14560221135616302,
+     "tTime": 0.7099955081939697
     },
     {
      "__type__": "InterpolationNode_float",
@@ -578,7 +616,6 @@
    ]
   }
  ],
- "pathParticleAlpha": [],
  "pathParticleAlphaAux": [],
  "pathParticleDistortionFactor": [
   {
@@ -794,12 +831,12 @@
       "__typeHash__": 1661010243,
       "tValueMin": {
        "x": 1,
-       "y": 0.9604179859161377,
+       "y": 0.800000011920929,
        "z": 1
       },
       "tValueMax": {
        "x": 1,
-       "y": 1.3604180812835693,
+       "y": 1.2000000476837158,
        "z": 1
       },
       "tTime": 0.9980000257492065
@@ -1576,6 +1613,7 @@
  "unk_8dc0a2c": [],
  "nFacing": 13,
  "eAlignment": 0,
+ "unk_a70d91e": 0,
  "wdBoundingRadius": 10,
  "unk_a79a409": 0.5,
  "unk_daaa964": 0,
