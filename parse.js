@@ -14,6 +14,7 @@ process.chdir(__dirname);
 
 let toc = {};
 let tocflat = {};
+let formatHashes = {};
 let replacedSnos = {};
 let encryptedSnos = {};
 let snoPayloadMap = {};
@@ -75,12 +76,24 @@ if (!fs.existsSync('json/base/')) {
 
 if (fs.existsSync('data/base/CoreTOC.dat')) {
   let file = fs.readFileSync('data/base/CoreTOC.dat');
+  let tocOffset = 4;
+  let newFormat = false;
   let snoGroupsCount = file.readUInt32LE(0);
-  let entryCounts = new Uint32Array(file.buffer.slice(4, 4 + 4 * snoGroupsCount));
-  let entryOffsets = new Uint32Array(file.buffer.slice(4 + 4 * snoGroupsCount, 4 + 8 * snoGroupsCount));
-  // let entryUnk = new Uint32Array(file.buffer.slice(4 + 8 * snoGroupsCount, 4 + 12 * snoGroupsCount));
-  // let i0 = file.readUInt32LE(4 + 12 * snoGroupsCount);
-  let dataStart = 8 + 12 * snoGroupsCount;
+  if (snoGroupsCount == 0xbcde6611) {
+    newFormat = true;
+    tocOffset = 8;
+    snoGroupsCount = file.readUInt32LE(4);
+  }
+  const entryCounts = new Uint32Array(file.buffer.slice(tocOffset, tocOffset + 4 * snoGroupsCount));
+  const entryOffsets = new Uint32Array(file.buffer.slice(tocOffset + 4 * snoGroupsCount, tocOffset + 8 * snoGroupsCount));
+  // const entryUnk = new Uint32Array(file.buffer.slice(tocOffset + 8 * snoGroupsCount, tocOffset + 12 * snoGroupsCount));
+  const entryFormatHashes = new Uint32Array(file.buffer.slice(tocOffset + 12 * snoGroupsCount, tocOffset + 16 * snoGroupsCount));
+  // let i0 = file.readUInt32LE(tocOffset + 12 * snoGroupsCount);
+  let dataStart = (newFormat ? 12 : 8) + (newFormat ? 16 : 12) * snoGroupsCount;
+
+  for (let c = 1; c < snoGroupsCount; c++) {
+    formatHashes[c] = entryFormatHashes[c];
+  }
 
   for (let c = 0; c < snoGroupsCount; c++) {
     for (let i = 0, offset = dataStart + entryOffsets[c]; i < entryCounts[c]; i++, offset += 12) {
@@ -960,13 +973,19 @@ function collectGameBalanceReferences(fileName, index) {
       file = file.subarray(16);
 
       const dwSignature = header.readUInt32LE(0);
+      let dwFormatHash = header.readUInt32LE(4);
+      if (dwFormatHash == 0) {
+        const snoId = file.readUInt32LE(0);
+        const snoGroup = tocflat[snoId][1];
+        dwFormatHash = formatHashes[snoGroup];
+      }
 
       if (dwSignature === 0xdeadbeef) {
         let globals = {
           test: true,
         };
 
-        const data = readStructure.bind(globals)(file, [getTypeHashFromFormatHash(header.readUInt32LE(4))], 0, null, [fileName]);
+        const data = readStructure.bind(globals)(file, [getTypeHashFromFormatHash(dwFormatHash)], 0, null, [fileName]);
 
         if (!Object.keys(data).length) {
           debugger;
@@ -1001,6 +1020,12 @@ function parseFile(fileName, index) {
       file = file.subarray(16);
 
       let dwSignature = header.readUInt32LE(0);
+      let dwFormatHash = header.readUInt32LE(4);
+      if (dwFormatHash == 0) {
+        const snoId = file.readUInt32LE(0);
+        const snoGroup = tocflat[snoId][1];
+        dwFormatHash = formatHashes[snoGroup];
+      }
 
       if (dwSignature === 0xdeadbeef) {
         let globals = {
@@ -1009,7 +1034,7 @@ function parseFile(fileName, index) {
 
         //console.log('#' + index, newFileName);
 
-        let data = readStructure.bind(globals)(file, [getTypeHashFromFormatHash(header.readUInt32LE(4))], 0, null, [fileName]);
+        let data = readStructure.bind(globals)(file, [getTypeHashFromFormatHash(dwFormatHash)], 0, null, [fileName]);
         let snoID = file.readUInt32LE(0);
 
         if (globals.references) {
