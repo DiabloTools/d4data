@@ -1020,14 +1020,13 @@ function parseFile(fileName, index) {
       file = file.subarray(16);
 
       let dwSignature = header.readUInt32LE(0);
-      let dwFormatHash = header.readUInt32LE(4);
-      if (dwFormatHash == 0) {
-        const snoId = file.readUInt32LE(0);
-        const snoGroup = tocflat[snoId][1];
-        dwFormatHash = formatHashes[snoGroup];
-      }
-
       if (dwSignature === 0xdeadbeef) {
+        const snoID = file.readUInt32LE(0);
+        let dwFormatHash = header.readUInt32LE(4);
+        if (dwFormatHash == 0) {
+          const snoGroup = tocflat[snoID][1];
+          dwFormatHash = formatHashes[snoGroup];
+        }
         let globals = {
           test: true,
         };
@@ -1035,7 +1034,6 @@ function parseFile(fileName, index) {
         //console.log('#' + index, newFileName);
 
         let data = readStructure.bind(globals)(file, [getTypeHashFromFormatHash(dwFormatHash)], 0, null, [fileName]);
-        let snoID = file.readUInt32LE(0);
 
         if (globals.references) {
           let refs = Object.values(globals.references);
