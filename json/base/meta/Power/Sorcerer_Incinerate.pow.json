@@ -671,6 +671,7 @@
  "hIconRound": 0,
  "gbidHotbarCountPetType": null,
  "unk_159fc50": 0,
+ "bForceLearned": false,
  "fCancelOnDamage": false,
  "fCancelOnDamageThreshold": false,
  "fCancelOnUsePower": false,
@@ -3062,7 +3063,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Affix_Value_1#legendary_sorc_100 / 100",
-    "compiled": "BQAAAAAAAABKBAAAOoASAAAAAAAGAAAAAADIQg4AAAAAAAAA"
+    "compiled": "BQAAAAAAAABSBAAAOoASAAAAAAAGAAAAAADIQg4AAAAAAAAA"
    }
   },
   {
@@ -3190,7 +3191,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Affix_Value_1#1HWand_Unique_Sorc_100 * (Weapon_Damage_Min_Total + Weapon_Damage_Delta_Total)",
-    "compiled": "BQAAAAAAAABKBAAASokSAAAAAAAFAAAAAAAAALMBAAD+////AAAAAAUAAAAAAAAAtAEAAP7///8AAAAACwAAAA0AAAAAAAAA"
+    "compiled": "BQAAAAAAAABSBAAASokSAAAAAAAFAAAAAAAAALkBAAD+////AAAAAAUAAAAAAAAAugEAAP7///8AAAAACwAAAA0AAAAAAAAA"
    }
   },
   {
@@ -3206,7 +3207,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Affix_Value_1#legendary_sorc_139 / 100",
-    "compiled": "BQAAAAAAAABKBAAAhccaAAAAAAAGAAAAAADIQg4AAAAAAAAA"
+    "compiled": "BQAAAAAAAABSBAAAhccaAAAAAAAGAAAAAADIQg4AAAAAAAAA"
    }
   },
   {
@@ -3221,8 +3222,8 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "20",
-    "compiled": "BgAAAAAAoEEAAAAA"
+    "value": "20 * SF_50",
+    "compiled": "BgAAAAAAoEEFAAAAOAAAAAAAAAAAAAAAAAAAAA0AAAAAAAAA"
    }
   },
   {
@@ -3245,8 +3246,8 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "Min(1.5, 1 + (AoE_Size_Bonus_Per_Power#Sorcerer_Incinerate / 2))",
-    "compiled": "BgAAAAAAwD8GAAAAAACAPwUAAAAAAAAAxQMAAIF3BAAAAAAABgAAAAAAAEAOAAAACwAAAAEAAAAAAAAAAAAAAA=="
+    "value": "Min(2, 1 + AoE_Size_Bonus_Per_Power#Sorcerer_Incinerate)",
+    "compiled": "BgAAAAAAAEAGAAAAAACAPwUAAAAAAAAAzQMAAIF3BAAAAAAACwAAAAEAAAAAAAAAAAAAAA=="
    }
   },
   {
@@ -3270,7 +3271,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Affix_Value_2#legendary_sorc_100 * (Weapon_Damage_Min_Total + Weapon_Damage_Delta_Total)",
-    "compiled": "BQAAAAAAAABLBAAAOoASAAAAAAAFAAAAAAAAALMBAAD+////AAAAAAUAAAAAAAAAtAEAAP7///8AAAAACwAAAA0AAAAAAAAA"
+    "compiled": "BQAAAAAAAABTBAAAOoASAAAAAAAFAAAAAAAAALkBAAD+////AAAAAAUAAAAAAAAAugEAAP7///8AAAAACwAAAA0AAAAAAAAA"
    }
   },
   {
@@ -3294,7 +3295,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Affix_Value_1#x1_legendary_sorc_142 * (Weapon_Damage_Min_Total + Weapon_Damage_Delta_Total)",
-    "compiled": "BQAAAAAAAABKBAAAS5EdAAAAAAAFAAAAAAAAALMBAAD+////AAAAAAUAAAAAAAAAtAEAAP7///8AAAAACwAAAA0AAAAAAAAA"
+    "compiled": "BQAAAAAAAABSBAAAS5EdAAAAAAAFAAAAAAAAALkBAAD+////AAAAAAUAAAAAAAAAugEAAP7///8AAAAACwAAAA0AAAAAAAAA"
    }
   },
   {
@@ -3302,7 +3303,15 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Chance_For_Double_Damage_Per_Power#Sorcerer_Incinerate",
-    "compiled": "BQAAAAAAAABGAACAgXcEAAAAAAAAAAAA"
+    "compiled": "BQAAAAAAAABMAACAgXcEAAAAAAAAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "3",
+    "compiled": "BgAAAAAAQEAAAAAA"
    }
   }
  ],

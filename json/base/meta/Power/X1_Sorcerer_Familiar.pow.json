@@ -79,42 +79,6 @@
     "name": "Search_Damage"
    },
    "bSearchOnly": false
-  },
-  {
-   "__type__": "SkillTagStruct",
-   "__typeHash__": 4000554560,
-   "gbidSkillTag": {
-    "__raw__": 3828504356,
-    "__type__": "DT_GBID",
-    "__typeHash__": 1028170061,
-    "group": 56,
-    "name": "Skill_Fire"
-   },
-   "bSearchOnly": false
-  },
-  {
-   "__type__": "SkillTagStruct",
-   "__typeHash__": 4000554560,
-   "gbidSkillTag": {
-    "__raw__": 3828402880,
-    "__type__": "DT_GBID",
-    "__typeHash__": 1028170061,
-    "group": 56,
-    "name": "Skill_Cold"
-   },
-   "bSearchOnly": false
-  },
-  {
-   "__type__": "SkillTagStruct",
-   "__typeHash__": 4000554560,
-   "gbidSkillTag": {
-    "__raw__": 332737186,
-    "__type__": "DT_GBID",
-    "__typeHash__": 1028170061,
-    "group": 56,
-    "name": "Skill_Lightning"
-   },
-   "bSearchOnly": false
   }
  ],
  "eSkillCat": -1,
@@ -664,6 +628,7 @@
  "hIconRound": 0,
  "gbidHotbarCountPetType": null,
  "unk_159fc50": 0,
+ "bForceLearned": false,
  "fCancelOnDamage": false,
  "fCancelOnDamageThreshold": false,
  "fCancelOnUsePower": false,
@@ -2298,7 +2263,7 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "8 * (1+SF_16)",
+    "value": "8 * (1 + SF_16)",
     "compiled": "BgAAAAAAAEEGAAAAAACAPwUAAAAWAAAAAAAAAAAAAAAAAAAACwAAAA0AAAAAAAAA"
    }
   },
@@ -2354,8 +2319,8 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "0.4 * Table(34,sLevel) / SF_4",
-    "compiled": "BgAAAM3MzD4GAAAAAAAIQgUAAAABAAAAAAAAAAAAAAAAAAAAAQAAAAsAAAANAAAABQAAAAoAAAAAAAAAAAAAAAAAAAAOAAAAAAAAAA=="
+    "value": "0.4 / SF_6",
+    "compiled": "BgAAAM3MzD4FAAAADAAAAAAAAAAAAAAAAAAAAA4AAAAAAAAA"
    }
   },
   {
@@ -2403,7 +2368,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "1 + AoE_Size_Bonus_Per_Power#X1_Sorcerer_Familiar",
-    "compiled": "BgAAAAAAgD8FAAAAAAAAAMUDAADD0xgAAAAAAAsAAAAAAAAA"
+    "compiled": "BgAAAAAAgD8FAAAAAAAAAM0DAADD0xgAAAAAAAsAAAAAAAAA"
    }
   },
   {
@@ -2427,7 +2392,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Affix_Value_1#x1_unique_sorc_143/100",
-    "compiled": "BQAAAAAAAABKBAAAdSQfAAAAAAAGAAAAAADIQg4AAAAAAAAA"
+    "compiled": "BQAAAAAAAABSBAAAdSQfAAAAAAAGAAAAAADIQg4AAAAAAAAA"
    }
   },
   {
@@ -2450,8 +2415,32 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "PowerTag.Sorcerer_Familiar_Attack.\"Script Formula 8\"",
-    "compiled": "BQAAAAUAAABvgx0ACAAAAAAAAAAAAAAA"
+    "value": "0.5",
+    "compiled": "BgAAAAAAAD8AAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "Power_Duration_Bonus_Pct#X1_Sorcerer_Familiar",
+    "compiled": "BQAAAAAAAACgAwAAw9MYAAAAAAAAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "",
+    "compiled": ""
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "5",
+    "compiled": "BgAAAAAAoEAAAAAA"
    }
   }
  ],
@@ -2566,7 +2555,68 @@
    "unk_3b9e118": true,
    "unk_7b47c37": false,
    "unk_b1d89c5": false,
-   "arSkillTags": [],
+   "arSkillTags": [
+    {
+     "__type__": "SkillTagStruct",
+     "__typeHash__": 4000554560,
+     "gbidSkillTag": {
+      "__raw__": 3537867514,
+      "__type__": "DT_GBID",
+      "__typeHash__": 1028170061,
+      "group": 56,
+      "name": "Search_Cooldown"
+     },
+     "bSearchOnly": false
+    },
+    {
+     "__type__": "SkillTagStruct",
+     "__typeHash__": 4000554560,
+     "gbidSkillTag": {
+      "__raw__": 1901128789,
+      "__type__": "DT_GBID",
+      "__typeHash__": 1028170061,
+      "group": 56,
+      "name": "Search_CrowdControl"
+     },
+     "bSearchOnly": false
+    },
+    {
+     "__type__": "SkillTagStruct",
+     "__typeHash__": 4000554560,
+     "gbidSkillTag": {
+      "__raw__": 340908880,
+      "__type__": "DT_GBID",
+      "__typeHash__": 1028170061,
+      "group": 56,
+      "name": "Keyword_Chill"
+     },
+     "bSearchOnly": false
+    },
+    {
+     "__type__": "SkillTagStruct",
+     "__typeHash__": 4000554560,
+     "gbidSkillTag": {
+      "__raw__": 2543133100,
+      "__type__": "DT_GBID",
+      "__typeHash__": 1028170061,
+      "group": 56,
+      "name": "Search_Burn"
+     },
+     "bSearchOnly": false
+    },
+    {
+     "__type__": "SkillTagStruct",
+     "__typeHash__": 4000554560,
+     "gbidSkillTag": {
+      "__raw__": 1838231677,
+      "__type__": "DT_GBID",
+      "__typeHash__": 1028170061,
+      "group": 56,
+      "name": "Search_NonPhysical"
+     },
+     "bSearchOnly": false
+    }
+   ],
    "eModType": 1,
    "hIconNormalOverride": 0,
    "hIconMouseoverOverride": 0,
@@ -2585,7 +2635,20 @@
    "unk_3b9e118": true,
    "unk_7b47c37": false,
    "unk_b1d89c5": false,
-   "arSkillTags": [],
+   "arSkillTags": [
+    {
+     "__type__": "SkillTagStruct",
+     "__typeHash__": 4000554560,
+     "gbidSkillTag": {
+      "__raw__": 4011612737,
+      "__type__": "DT_GBID",
+      "__typeHash__": 1028170061,
+      "group": 56,
+      "name": "Search_DamageReduction"
+     },
+     "bSearchOnly": false
+    }
+   ],
    "eModType": 2,
    "hIconNormalOverride": 0,
    "hIconMouseoverOverride": 0,
@@ -2604,7 +2667,20 @@
    "unk_3b9e118": true,
    "unk_7b47c37": false,
    "unk_b1d89c5": false,
-   "arSkillTags": [],
+   "arSkillTags": [
+    {
+     "__type__": "SkillTagStruct",
+     "__typeHash__": 4000554560,
+     "gbidSkillTag": {
+      "__raw__": 3567369300,
+      "__type__": "DT_GBID",
+      "__typeHash__": 1028170061,
+      "group": 56,
+      "name": "Search_Damage"
+     },
+     "bSearchOnly": false
+    }
+   ],
    "eModType": 3,
    "hIconNormalOverride": 0,
    "hIconMouseoverOverride": 0,

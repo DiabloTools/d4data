@@ -25,6 +25,18 @@
     "name": "Evade_Power"
    },
    "bSearchOnly": false
+  },
+  {
+   "__type__": "SkillTagStruct",
+   "__typeHash__": 4000554560,
+   "gbidSkillTag": {
+    "__raw__": 4109264583,
+    "__type__": "DT_GBID",
+    "__typeHash__": 1028170061,
+    "group": 56,
+    "name": "Skill_Mobility"
+   },
+   "bSearchOnly": false
   }
  ],
  "eSkillCat": -1,
@@ -50,8 +62,8 @@
  "bAimedPower": false,
  "unk_1f1fcc": true,
  "ePowerFallback": 0,
- "unk_49572b0": 0,
- "ePowerTargetingType": 0,
+ "unk_49572b0": 1,
+ "ePowerTargetingType": 4,
  "arLinkedPassivePowers": [],
  "snoEnchantmentPower": null,
  "snoMountedRiderPower": null,
@@ -201,8 +213,8 @@
  "ePowerCancelCapability": 1,
  "unk_44bbb8e": true,
  "tAttackRadius": {
-  "value": "13",
-  "compiled": "BgAAAAAAUEEAAAAA"
+  "value": "SF_4",
+  "compiled": "BQAAAAoAAAAAAAAAAAAAAAAAAAAAAAAA"
  },
  "bRequiresPathToTarget": true,
  "bIsApproachPower": false,
@@ -214,8 +226,8 @@
   "__type__": "ActorMovementPowerData",
   "__typeHash__": 2543084619,
   "unk_b1f0f4e": {
-   "value": "13",
-   "compiled": "BgAAAAAAUEEAAAAA"
+   "value": "SF_4",
+   "compiled": "BQAAAAoAAAAAAAAAAAAAAAAAAAAAAAAA"
   },
   "aFacingAngleThreshold": 1.0471975803375244,
   "flFacingDistanceThreshold": 1,
@@ -503,13 +515,21 @@
  "unk_b15bf7f": false,
  "unk_8fe39cf": 0,
  "unk_4e0f1a": false,
- "bPassabilityDuringEnabled": false,
- "bPassabilityDestEnabled": false,
+ "bPassabilityDuringEnabled": true,
+ "bPassabilityDestEnabled": true,
  "arCollisionSettings": [
   {
    "__type__": "CollisionSettings",
    "__typeHash__": 3066352125,
-   "snoCollision": null,
+   "snoCollision": {
+    "__raw__": 2120220,
+    "__group__": 127,
+    "__type__": "DT_SNO",
+    "__typeHash__": 2764331143,
+    "__targetFileName__": "base/meta/CollisionSettings/Player_Movement.col",
+    "groupName": "CollisionSettings",
+    "name": "Player_Movement"
+   },
    "tCustomCollFlags": {
     "__type__": "ActorCollisionFlags",
     "__typeHash__": 2766662738,
@@ -523,7 +543,15 @@
   {
    "__type__": "CollisionSettings",
    "__typeHash__": 3066352125,
-   "snoCollision": null,
+   "snoCollision": {
+    "__raw__": 2120220,
+    "__group__": 127,
+    "__type__": "DT_SNO",
+    "__typeHash__": 2764331143,
+    "__targetFileName__": "base/meta/CollisionSettings/Player_Movement.col",
+    "groupName": "CollisionSettings",
+    "name": "Player_Movement"
+   },
    "tCustomCollFlags": {
     "__type__": "ActorCollisionFlags",
     "__typeHash__": 2766662738,
@@ -548,6 +576,7 @@
  "hIconRound": 0,
  "gbidHotbarCountPetType": null,
  "unk_159fc50": 0,
+ "bForceLearned": false,
  "fCancelOnDamage": false,
  "fCancelOnDamageThreshold": false,
  "fCancelOnUsePower": false,
@@ -662,6 +691,114 @@
     }
    },
    "dwShaderMapOverride": 4294967295
+  },
+  {
+   "__type__": "PowerBuffDefinition",
+   "__typeHash__": 1071057721,
+   "dwID": 106786416,
+   "dwBuffId": 10,
+   "bHarmful": false,
+   "bInfinite": false,
+   "tDuration": {
+    "value": "10",
+    "compiled": "BgAAAAAAIEEAAAAA"
+   },
+   "unk_deea7e8": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "unk_4393f38": false,
+   "unk_dcb22bd": false,
+   "tMaxStackCount": {
+    "value": "1",
+    "compiled": "BgAAAAAAgD8AAAAA"
+   },
+   "bVisibleInUI": false,
+   "bShowDuration": false,
+   "bCancellable": false,
+   "unk_99b5752": false,
+   "unk_93cd85f": false,
+   "unk_4bdaef2": false,
+   "bVisibleInHotbarUI": false,
+   "bShowsActiveStateOnHotbar": false,
+   "bShowsDurationOnHotbar": false,
+   "bShowsStackCountOnHotbar": false,
+   "unk_71ba554": false,
+   "unk_1375622": false,
+   "unk_d2dd47": false,
+   "unk_8a5f69e": false,
+   "hIcon": 0,
+   "hFloatingIcon": 0,
+   "hFloatingTextLabel": 0,
+   "flFloatingTextIconRange": 0,
+   "unk_395ccd6": false,
+   "bDealsDOT": false,
+   "tDOT": {
+    "__type__": "PowerBuffDOTDamage",
+    "__typeHash__": 3824324374,
+    "eDamageType": -1,
+    "tDamage": {
+     "__type__": "HitpointSpecifier",
+     "__typeHash__": 1185241065,
+     "eType": 0,
+     "tHitpointScalar": {
+      "value": "0",
+      "compiled": "BgAAAAAAAAAAAAAA"
+     },
+     "tFlatLevel": {
+      "value": "0",
+      "compiled": "BgAAAAAAAAAAAAAA"
+     }
+    },
+    "unk_89dc285": false,
+    "flFlatDamageBonusScalar": 1,
+    "unk_f551941": -1,
+    "bDamageIgnoresInvulnerable": false,
+    "bDamageIgnoresBonuses": false,
+    "unk_b8f2b": -1,
+    "bHasCombatEffectOverride": false,
+    "tCombatEffectOverride": {
+     "value": "100",
+     "compiled": "BgAAAAAAyEIAAAAA"
+    },
+    "bHideDamageEffects": false,
+    "bHideGlobalApplicationEffect": false
+   },
+   "tCrowdControl": {
+    "__type__": "PowerBuffCrowdControl",
+    "__typeHash__": 4138865712,
+    "unk_c63f49e": true,
+    "dwCCFlags": 0,
+    "bUseGlobalSlowAmount": false,
+    "eGlobalSlowAmountType": 0,
+    "tSlowAmount": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    },
+    "tChillAmount": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    },
+    "tStaggerMultiplier": {
+     "value": "1",
+     "compiled": "BgAAAAAAgD8AAAAA"
+    }
+   },
+   "bHasDamageShield": false,
+   "tDamageShield": {
+    "__type__": "HitpointSpecifier",
+    "__typeHash__": 1185241065,
+    "eType": 0,
+    "tHitpointScalar": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    },
+    "tFlatLevel": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    }
+   },
+   "dwShaderMapOverride": 4294967295
   }
  ],
  "nFormulaCount": 0,
@@ -670,16 +807,16 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "PowerTag.Spiritborn_Eagle_Focus2.\"Script Formula 0\"",
-    "compiled": "BQAAAAUAAADNjxwAAAAAAAAAAAAAAAAA"
+    "value": "PowerTag.Spiritborn_Eagle_Focus2.\"Script Formula 0\" * SF_1",
+    "compiled": "BQAAAAUAAADNjxwAAAAAAAAAAAAFAAAABwAAAAAAAAAAAAAAAAAAAA0AAAAAAAAA"
    }
   },
   {
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "",
-    "compiled": ""
+    "value": "1 - Power_Cooldown_Reduction_Percent#Spiritborn_Eagle_Focus2",
+    "compiled": "BgAAAAAAgD8FAAAAAAAAANwAAADNjxwAAAAAAAwAAAAAAAAA"
    }
   },
   {
@@ -687,7 +824,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Evade_Reduce_Cooldown_On_Attack",
-    "compiled": "BQAAAAAAAADZAwAA/v///wAAAAAAAAAA"
+    "compiled": "BQAAAAAAAADhAwAA/v///wAAAAAAAAAA"
    }
   },
   {
@@ -702,8 +839,8 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "",
-    "compiled": ""
+    "value": "PowerTag.SystemsTuningGlobals.\"Script Formula 1\"",
+    "compiled": "BQAAAAUAAADNbRAAAQAAAAAAAAAAAAAA"
    }
   },
   {
@@ -727,7 +864,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Evade_Max_Charges",
-    "compiled": "BQAAAAAAAADYAwAA/v///wAAAAAAAAAA"
+    "compiled": "BQAAAAAAAADgAwAA/v///wAAAAAAAAAA"
    }
   },
   {

@@ -81,7 +81,15 @@
         "__typeHash__": 2935055576,
         "eEventType": 52,
         "dwListenerFlags": 0,
-        "snoCondition": null,
+        "snoCondition": {
+         "__raw__": 2083745,
+         "__group__": 51,
+         "__type__": "DT_SNO",
+         "__typeHash__": 2764331143,
+         "__targetFileName__": "base/meta/Condition/QST_Naha_Cowsplosion_SpiritEnter.cnd",
+         "groupName": "Condition",
+         "name": "QST_Naha_Cowsplosion_SpiritEnter"
+        },
         "unk_c3ba01d": false,
         "flCooldownSeconds": 0,
         "arEventFilters": [
@@ -108,12 +116,25 @@
           "eVariableType": 1,
           "pMessageFilter": [
            {
-            "__type__": "ScriptEventParamSelf",
-            "__typeHash__": 1210992754,
-            "dwType": 1210992754,
-            "eParamType": 11,
+            "__type__": "ScriptEventParamMarkerHandle",
+            "__typeHash__": 3311139638,
+            "dwType": 3311139638,
+            "eParamType": 34,
             "dwPad": 0,
-            "idValue": 0
+            "tMarkerHandle": {
+             "__type__": "MarkerHandle",
+             "__typeHash__": 3934284334,
+             "snoMarkerSet": {
+              "__raw__": 1828379,
+              "__group__": 24,
+              "__type__": "DT_SNO",
+              "__typeHash__": 2764331143,
+              "__targetFileName__": "base/meta/MarkerSet/VGN_QST_Cowsplosion.mrk",
+              "groupName": "MarkerSet",
+              "name": "VGN_QST_Cowsplosion"
+             },
+             "nID": 8
+            }
            }
           ]
          }
@@ -322,8 +343,8 @@
    "unk_1907e03": false,
    "hOverrideIconTracked": 0,
    "hOverrideIconUntracked": 0,
-   "unk_87ae7b7": null,
-   "unk_f22d01a": null,
+   "snoOverrideParticleOverheadQuestProgressTracked": null,
+   "snoOverrideParticleOverheadQuestProgressUntracked": null,
    "unk_564e7d5": false,
    "unk_eff642d": false,
    "unk_fc27941": false,
@@ -363,7 +384,7 @@
        "tScriptMessageMap": {
         "__type__": "ScriptMessageMap",
         "__typeHash__": 2935055576,
-        "eEventType": 89,
+        "eEventType": 0,
         "dwListenerFlags": 0,
         "snoCondition": null,
         "unk_c3ba01d": false,
@@ -391,19 +412,17 @@
           "eVariableType": 1,
           "pMessageFilter": [
            {
-            "__type__": "ScriptEventParamActor",
-            "__typeHash__": 1286645889,
-            "dwType": 1286645889,
-            "eParamType": 4,
+            "__type__": "ScriptEventParamActorGroup",
+            "__typeHash__": 3481819086,
+            "dwType": 3481819086,
+            "eParamType": 36,
             "dwPad": 0,
-            "snoActor": {
-             "__raw__": 1839985,
-             "__group__": 1,
-             "__type__": "DT_SNO",
-             "__typeHash__": 2764331143,
-             "__targetFileName__": "base/meta/Actor/NPC_QST_Naha_Cowsplosion_AngryAncientSpirit.acr",
-             "groupName": "Actor",
-             "name": "NPC_QST_Naha_Cowsplosion_AngryAncientSpirit"
+            "gbidActorGroup": {
+             "__raw__": 4172589659,
+             "__type__": "DT_GBID",
+             "__typeHash__": 1028170061,
+             "group": 24,
+             "name": "VGN_QST_Cowsplosion_Spirit"
             }
            }
           ]
@@ -440,17 +459,7 @@
         "hImageHandle": 0
        },
        "unk_7dd76d1": 0,
-       "arSnonameTokens": [
-        {
-         "__raw__": 1839985,
-         "__group__": 1,
-         "__type__": "DT_SNO_NAME",
-         "__typeHash__": 3339108615,
-         "__targetFileName__": "base/meta/Actor/NPC_QST_Naha_Cowsplosion_AngryAncientSpirit.acr",
-         "groupName": "Actor",
-         "name": "NPC_QST_Naha_Cowsplosion_AngryAncientSpirit"
-        }
-       ],
+       "arSnonameTokens": [],
        "szFontColorOverride": "",
        "snoOptionalPreloadCondition": null,
        "unk_9c1ea4f": 0,
@@ -491,8 +500,8 @@
    "unk_1907e03": false,
    "hOverrideIconTracked": 0,
    "hOverrideIconUntracked": 0,
-   "unk_87ae7b7": null,
-   "unk_f22d01a": null,
+   "snoOverrideParticleOverheadQuestProgressTracked": null,
+   "snoOverrideParticleOverheadQuestProgressUntracked": null,
    "unk_564e7d5": false,
    "unk_eff642d": false,
    "unk_fc27941": false,
@@ -521,6 +530,8 @@
  },
  "dwRestrictions": 0,
  "unk_9c72d73": [],
+ "gbidZoneEventConfig": null,
+ "unk_376dcd8": false,
  "eSimQuestPhase": 0,
  "snoAudioContext": null,
  "arAllReferencedItems": [],
@@ -533,7 +544,6 @@
  "nPhasePreloadDepth": 1,
  "dwRegionSourceCallbackUID": 4294967295,
  "snoDPOWorld": null,
- "unk_376dcd8": false,
  "unk_2229d23": 0,
  "snoOnCompleteTutorial": null,
  "unk_dff9117": null

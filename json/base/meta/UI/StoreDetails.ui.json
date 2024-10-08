@@ -208,6 +208,42 @@
       ],
       "arChildren": [],
       "ptTemplateInstanceConfig": []
+     },
+     {
+      "__type__": "UIControlTemplate",
+      "__typeHash__": 641859515,
+      "szName": "2d_display_transition_in",
+      "ptInlineStyle": [
+       {
+        "__type__": "UIStoryboard2Style",
+        "__typeHash__": 3193003306,
+        "dwType": 3193003306,
+        "dwPad": 0,
+        "hParentStyle": {
+         "__type__": "UIControlHandle",
+         "__typeHash__": 3063971755,
+         "snoUI": null,
+         "szControlName": 0
+        },
+        "unk_441f783": "0",
+        "hOptionalUIControlStyleFields": {},
+        "snoStoryboard": {
+         "__raw__": 207471,
+         "__group__": 90,
+         "__type__": "DT_SNO",
+         "__typeHash__": 2764331143,
+         "__targetFileName__": "base/meta/Storyboard/FadeIn_Fast.stb",
+         "groupName": "StoryBoard",
+         "name": "FadeIn_Fast"
+        },
+        "eLoadBehavior": 0,
+        "eActivateBehavior": 2,
+        "eFinishBehavior": 0,
+        "hOptionalUIStoryboard2StyleFields": {}
+       }
+      ],
+      "arChildren": [],
+      "ptTemplateInstanceConfig": []
      }
     ],
     "ptTemplateInstanceConfig": []
@@ -387,7 +423,7 @@
       },
       "unk_441f783": "0",
       "hOptionalUIControlStyleFields": {
-       "bActive": 1,
+       "bActive": 0,
        "hTemplate": {
         "__type__": "UIControlHandle",
         "__typeHash__": 3063971755,
@@ -437,7 +473,9 @@
          "szControlName": 904113487
         },
         "unk_441f783": "0",
-        "hOptionalUIControlStyleFields": {},
+        "hOptionalUIControlStyleFields": {
+         "bActive": 1
+        },
         "tConsoleInput": {
          "__type__": "UIControlConsoleInput",
          "__typeHash__": 3089331074,
@@ -4343,7 +4381,7 @@
         "hOptionalUIHotkeyStyleFields": {
          "szOnController": "UI_BundleOverview_GoBack",
          "unk_ccd9967": "",
-         "eHotkey": 124
+         "eHotkey": 125
         }
        }
       ],
@@ -7336,7 +7374,7 @@
         "hOptionalUIHotkeyStyleFields": {
          "szOnController": "UI_ItemInspection_GoBack",
          "unk_ccd9967": "UI_ItemInspection_GoBack",
-         "eHotkey": 124
+         "eHotkey": 125
         }
        }
       ],
@@ -7780,9 +7818,8 @@
             "hOptionalUIWindowStyleFields": {
              "nTooltip": "UIStoreDetails_OnEntryPurchaseContainer_Tooltip",
              "eClipBehavior": 0,
-             "eVerticalAnchoring": 3,
-             "nLeft": 0,
-             "eHorizontalAnchoring": 3,
+             "eVerticalAnchoring": 1,
+             "eHorizontalAnchoring": 1,
              "rgbaTint": {
               "r": 255,
               "g": 255,
@@ -7833,8 +7870,10 @@
              }
             },
             "hOptionalUIButtonStyleFields": {
-             "szOnHitRegionExit": "UIStoreDetails_Tracking_OnMouseAway_Button",
-             "szOnHitRegionEnter": "UIStoreDetails_OnMouseOver_Bundle"
+             "szOnHitRegionExit": "UIStoreDetails_OnMouseAway_BundleButton",
+             "szOnGainedFocus": "UIStoreDetails_OnMouseOver_BundleButton",
+             "szOnLostFocus": "UIStoreDetails_OnMouseAway_BundleButton",
+             "szOnHitRegionEnter": "UIStoreDetails_OnMouseOver_BundleButton"
             }
            }
           ],
@@ -8294,8 +8333,10 @@
                  "hOptionalUIControlClickSoundsFields": {}
                 },
                 "hOptionalUIButtonStyleFields": {
-                 "szOnGainedFocus": "UIStoreDetails_OnMouseOver_Bundle",
-                 "szOnHitRegionEnter": "UIStoreDetails_OnMouseOver_Bundle"
+                 "szOnHitRegionExit": "UIStoreDetails_OnMouseAway_BundleButton",
+                 "szOnGainedFocus": "UIStoreDetails_OnMouseOver_BundleButton",
+                 "szOnLostFocus": "UIStoreDetails_OnMouseAway_BundleButton",
+                 "szOnHitRegionEnter": "UIStoreDetails_OnMouseOver_BundleButton"
                 }
                }
               ],
@@ -8439,8 +8480,10 @@
                  }
                 },
                 "hOptionalUIButtonStyleFields": {
-                 "szOnGainedFocus": "UIStoreDetails_OnMouseOver_Bundle",
-                 "szOnHitRegionEnter": "UIStoreDetails_OnMouseOver_Bundle"
+                 "szOnHitRegionExit": "UIStoreDetails_OnMouseAway_BundleButton",
+                 "szOnGainedFocus": "UIStoreDetails_OnMouseOver_BundleButton",
+                 "szOnLostFocus": "UIStoreDetails_OnMouseAway_BundleButton",
+                 "szOnHitRegionEnter": "UIStoreDetails_OnMouseOver_BundleButton"
                 }
                }
               ],
@@ -9159,8 +9202,10 @@
                  }
                 },
                 "hOptionalUIButtonStyleFields": {
-                 "szOnGainedFocus": "UIStoreDetails_OnMouseOver_Bundle",
-                 "szOnHitRegionEnter": "UIStoreDetails_OnMouseOver_Bundle"
+                 "szOnHitRegionExit": "UIStoreDetails_OnMouseAway_BundleButton",
+                 "szOnGainedFocus": "UIStoreDetails_OnMouseOver_BundleButton",
+                 "szOnLostFocus": "UIStoreDetails_OnMouseAway_BundleButton",
+                 "szOnHitRegionEnter": "UIStoreDetails_OnMouseOver_BundleButton"
                 }
                }
               ],
@@ -11318,7 +11363,7 @@
       },
       "hOptionalUIHotkeyStyleFields": {
        "unk_ccd9967": "UIStoreDetails_Back_OnClick",
-       "eHotkey": 124
+       "eHotkey": 125
       }
      }
     ],

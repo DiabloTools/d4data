@@ -293,8 +293,8 @@
  "eDamageType": 4,
  "unk_752edeb": false,
  "tCombatEffectChance": {
-  "value": "25",
-  "compiled": "BgAAAAAAyEEAAAAA"
+  "value": "SF_24",
+  "compiled": "BQAAAB4AAAAAAAAAAAAAAAAAAAAAAAAA"
  },
  "unk_923b5fb": false,
  "bPlayNormalHitSound": false,
@@ -495,7 +495,7 @@
  "bInvulnerableDuring": false,
  "bUntargetableDuring": false,
  "bCannotDieDuring": false,
- "bCannotBeInterruptedDuring": false,
+ "bCannotBeInterruptedDuring": true,
  "unk_160bc26": false,
  "bIgnoreGravityDuring": false,
  "unk_7a416a6": false,
@@ -763,7 +763,15 @@
   {
    "__type__": "CollisionSettings",
    "__typeHash__": 3066352125,
-   "snoCollision": null,
+   "snoCollision": {
+    "__raw__": 2120220,
+    "__group__": 127,
+    "__type__": "DT_SNO",
+    "__typeHash__": 2764331143,
+    "__targetFileName__": "base/meta/CollisionSettings/Player_Movement.col",
+    "groupName": "CollisionSettings",
+    "name": "Player_Movement"
+   },
    "tCustomCollFlags": {
     "__type__": "ActorCollisionFlags",
     "__typeHash__": 2766662738,
@@ -777,7 +785,15 @@
   {
    "__type__": "CollisionSettings",
    "__typeHash__": 3066352125,
-   "snoCollision": null,
+   "snoCollision": {
+    "__raw__": 2120220,
+    "__group__": 127,
+    "__type__": "DT_SNO",
+    "__typeHash__": 2764331143,
+    "__targetFileName__": "base/meta/CollisionSettings/Player_Movement.col",
+    "groupName": "CollisionSettings",
+    "name": "Player_Movement"
+   },
    "tCustomCollFlags": {
     "__type__": "ActorCollisionFlags",
     "__typeHash__": 2766662738,
@@ -802,6 +818,7 @@
  "hIconRound": 0,
  "gbidHotbarCountPetType": null,
  "unk_159fc50": 0,
+ "bForceLearned": false,
  "fCancelOnDamage": false,
  "fCancelOnDamageThreshold": false,
  "fCancelOnUsePower": false,
@@ -1199,8 +1216,8 @@
     "unk_b8f2b": 5,
     "bHasCombatEffectOverride": true,
     "tCombatEffectOverride": {
-     "value": "SF_10",
-     "compiled": "BQAAABAAAAAAAAAAAAAAAAAAAAAAAAAA"
+     "value": "SF_25",
+     "compiled": "BQAAAB8AAAAAAAAAAAAAAAAAAAAAAAAA"
     },
     "bHideDamageEffects": false,
     "bHideGlobalApplicationEffect": true
@@ -1736,16 +1753,16 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "6 * SF_22",
-    "compiled": "BgAAAAAAwEAFAAAAHAAAAAAAAAAAAAAAAAAAAA0AAAAAAAAA"
+    "value": "6",
+    "compiled": "BgAAAAAAwEAAAAAA"
    }
   },
   {
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "0.30 * Table(34, sLevel) * SF_25",
-    "compiled": "BgAAAJqZmT4GAAAAAAAIQgUAAAABAAAAAAAAAAAAAAAAAAAAAQAAAAsAAAANAAAABQAAAB8AAAAAAAAAAAAAAAAAAAANAAAAAAAAAA=="
+    "value": "0.30 * Table(34, sLevel)",
+    "compiled": "BgAAAJqZmT4GAAAAAAAIQgUAAAABAAAAAAAAAAAAAAAAAAAAAQAAAAsAAAANAAAAAAAAAA=="
    }
   },
   {
@@ -1849,15 +1866,55 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Min(1 + (AoE_Size_Bonus_Per_Power#Spiritborn_Centipede_Basic / 2), PowerTag.SystemsTuningGlobals.\"Script Formula 3\")",
-    "compiled": "BgAAAAAAgD8FAAAAAAAAAMUDAADn/RsAAAAAAAYAAAAAAABADgAAAAsAAAAFAAAABQAAAM1tEAADAAAAAAAAAAEAAAAAAAAAAAAAAA=="
+    "compiled": "BgAAAAAAgD8FAAAAAAAAAM0DAADn/RsAAAAAAAYAAAAAAABADgAAAAsAAAAFAAAABQAAAM1tEAADAAAAAAAAAAEAAAAAAAAAAAAAAA=="
    }
   },
   {
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "1 + Bonus_Percent_Per_Power#Spiritborn_Centipede_Basic",
-    "compiled": "BgAAAAAAgD8FAAAAAAAAAJsDAADn/RsAAAAAAAsAAAAAAAAA"
+    "value": "Bonus_Percent_Per_Power#Spiritborn_Centipede_Basic + SF_27",
+    "compiled": "BQAAAAAAAACjAwAA5/0bAAAAAAAFAAAAIQAAAAAAAAAAAAAAAAAAAAsAAAAAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "25",
+    "compiled": "BgAAAAAAyEEAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "(1-POW(1-SF_23/100,1/2))*100",
+    "compiled": "BgAAAAAAgD8GAAAAAACAPwUAAAAdAAAAAAAAAAAAAAAAAAAABgAAAAAAyEIOAAAADAAAAAYAAAAAAIA/BgAAAAAAAEAOAAAAAQAAAAcAAAAMAAAABgAAAAAAyEINAAAAAAAAAA=="
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "(1-POW(1-SF_24/100,1/(SF_7*2)))*100",
+    "compiled": "BgAAAAAAgD8GAAAAAACAPwUAAAAeAAAAAAAAAAAAAAAAAAAABgAAAAAAyEIOAAAADAAAAAYAAAAAAIA/BQAAAA0AAAAAAAAAAAAAAAAAAAAGAAAAAAAAQA0AAAAOAAAAAQAAAAcAAAAMAAAABgAAAAAAyEINAAAAAAAAAA=="
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "",
+    "compiled": ""
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "Generic_Chance_For_Double_Damage_Per_SkillTag#Skill_Primary_Basic",
+    "compiled": "BQAAAAAAAABBAACAo2IUxwAAAAAAAAAA"
    }
   }
  ],

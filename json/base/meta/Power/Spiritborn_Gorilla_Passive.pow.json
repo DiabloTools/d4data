@@ -527,6 +527,7 @@
  "hIconRound": 0,
  "gbidHotbarCountPetType": null,
  "unk_159fc50": 0,
+ "bForceLearned": false,
  "fCancelOnDamage": false,
  "fCancelOnDamageThreshold": false,
  "fCancelOnUsePower": false,
@@ -857,6 +858,114 @@
     }
    },
    "dwShaderMapOverride": 4294967295
+  },
+  {
+   "__type__": "PowerBuffDefinition",
+   "__typeHash__": 1071057721,
+   "dwID": 3758559310,
+   "dwBuffId": 6,
+   "bHarmful": false,
+   "bInfinite": false,
+   "tDuration": {
+    "value": "SF_12",
+    "compiled": "BQAAABIAAAAAAAAAAAAAAAAAAAAAAAAA"
+   },
+   "unk_deea7e8": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "unk_4393f38": false,
+   "unk_dcb22bd": false,
+   "tMaxStackCount": {
+    "value": "1",
+    "compiled": "BgAAAAAAgD8AAAAA"
+   },
+   "bVisibleInUI": false,
+   "bShowDuration": false,
+   "bCancellable": false,
+   "unk_99b5752": false,
+   "unk_93cd85f": false,
+   "unk_4bdaef2": false,
+   "bVisibleInHotbarUI": false,
+   "bShowsActiveStateOnHotbar": false,
+   "bShowsDurationOnHotbar": false,
+   "bShowsStackCountOnHotbar": false,
+   "unk_71ba554": false,
+   "unk_1375622": false,
+   "unk_d2dd47": false,
+   "unk_8a5f69e": false,
+   "hIcon": 0,
+   "hFloatingIcon": 0,
+   "hFloatingTextLabel": 0,
+   "flFloatingTextIconRange": 0,
+   "unk_395ccd6": false,
+   "bDealsDOT": false,
+   "tDOT": {
+    "__type__": "PowerBuffDOTDamage",
+    "__typeHash__": 3824324374,
+    "eDamageType": -1,
+    "tDamage": {
+     "__type__": "HitpointSpecifier",
+     "__typeHash__": 1185241065,
+     "eType": 0,
+     "tHitpointScalar": {
+      "value": "0",
+      "compiled": "BgAAAAAAAAAAAAAA"
+     },
+     "tFlatLevel": {
+      "value": "0",
+      "compiled": "BgAAAAAAAAAAAAAA"
+     }
+    },
+    "unk_89dc285": false,
+    "flFlatDamageBonusScalar": 1,
+    "unk_f551941": -1,
+    "bDamageIgnoresInvulnerable": false,
+    "bDamageIgnoresBonuses": false,
+    "unk_b8f2b": -1,
+    "bHasCombatEffectOverride": false,
+    "tCombatEffectOverride": {
+     "value": "100",
+     "compiled": "BgAAAAAAyEIAAAAA"
+    },
+    "bHideDamageEffects": false,
+    "bHideGlobalApplicationEffect": false
+   },
+   "tCrowdControl": {
+    "__type__": "PowerBuffCrowdControl",
+    "__typeHash__": 4138865712,
+    "unk_c63f49e": true,
+    "dwCCFlags": 0,
+    "bUseGlobalSlowAmount": false,
+    "eGlobalSlowAmountType": 0,
+    "tSlowAmount": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    },
+    "tChillAmount": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    },
+    "tStaggerMultiplier": {
+     "value": "1",
+     "compiled": "BgAAAAAAgD8AAAAA"
+    }
+   },
+   "bHasDamageShield": false,
+   "tDamageShield": {
+    "__type__": "HitpointSpecifier",
+    "__typeHash__": 1185241065,
+    "eType": 0,
+    "tHitpointScalar": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    },
+    "tFlatLevel": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    }
+   },
+   "dwShaderMapOverride": 4294967295
   }
  ],
  "nFormulaCount": 0,
@@ -898,7 +1007,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "(Spiritborn_Chosen_Moon_Spirit == GorillaSpirit) ? PowerTag.spiritborn_gorilla_moon_passive.\"Script Formula  0\" : 0",
-    "compiled": "BQAAAAAAAAD5AgAA/v///wAAAAAFAAAAbAAAAAAAAAAAAAAAAAAAAAkAAAAFAAAABQAAAMhmHAAAAAAAAAAAAAYAAAAAAAAAEAAAAAAAAAA="
+    "compiled": "BQAAAAAAAAAAAwAA/v///wAAAAAFAAAAbAAAAAAAAAAAAAAAAAAAAAkAAAAFAAAABQAAAMhmHAAAAAAAAAAAAAYAAAAAAAAAEAAAAAAAAAA="
    }
   },
   {
@@ -914,7 +1023,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Affix_Value_1#legendary_spiritborn_029_x1",
-    "compiled": "BQAAAAAAAABKBAAAyEseAAAAAAAAAAAA"
+    "compiled": "BQAAAAAAAABSBAAAyEseAAAAAAAAAAAA"
    }
   },
   {
@@ -922,7 +1031,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Affix_Value_1#legendary_spiritborn_030_x1",
-    "compiled": "BQAAAAAAAABKBAAAf1seAAAAAAAAAAAA"
+    "compiled": "BQAAAAAAAABSBAAAf1seAAAAAAAAAAAA"
    }
   },
   {
@@ -938,7 +1047,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "MaxStacks#Spiritborn_Gorilla_Passive",
-    "compiled": "BQAAAAAAAABEAACA7x8cAAAAAAAAAAAA"
+    "compiled": "BQAAAAAAAABKAACA7x8cAAAAAAAAAAAA"
    }
   },
   {
@@ -946,7 +1055,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Bonus_Percent_Per_Power#Spiritborn_Gorilla_Passive",
-    "compiled": "BQAAAAAAAACbAwAA7x8cAAAAAAAAAAAA"
+    "compiled": "BQAAAAAAAACjAwAA7x8cAAAAAAAAAAAA"
    }
   },
   {
@@ -955,6 +1064,22 @@
    "tFormula": {
     "value": "0.5",
     "compiled": "BgAAAAAAAD8AAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "4",
+    "compiled": "BgAAAAAAgEAAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "Spiritborn_Resolve_DamageForDuration",
+    "compiled": "BQAAAAAAAAA0AACA/v///wAAAAAAAAAA"
    }
   }
  ],

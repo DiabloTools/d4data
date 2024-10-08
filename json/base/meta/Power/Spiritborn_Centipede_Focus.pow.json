@@ -165,8 +165,8 @@
  "eDamageType": 4,
  "unk_752edeb": false,
  "tCombatEffectChance": {
-  "value": "20",
-  "compiled": "BgAAAAAAoEEAAAAA"
+  "value": "SF_21",
+  "compiled": "BQAAABsAAAAAAAAAAAAAAAAAAAAAAAAA"
  },
  "unk_923b5fb": false,
  "bPlayNormalHitSound": false,
@@ -632,6 +632,7 @@
  "hIconRound": 0,
  "gbidHotbarCountPetType": null,
  "unk_159fc50": 0,
+ "bForceLearned": false,
  "fCancelOnDamage": false,
  "fCancelOnDamageThreshold": false,
  "fCancelOnUsePower": false,
@@ -705,8 +706,8 @@
     "unk_b8f2b": 5,
     "bHasCombatEffectOverride": true,
     "tCombatEffectOverride": {
-     "value": "SF_5",
-     "compiled": "BQAAAAsAAAAAAAAAAAAAAAAAAAAAAAAA"
+     "value": "SF_22",
+     "compiled": "BQAAABwAAAAAAAAAAAAAAAAAAAAAAAAA"
     },
     "bHideDamageEffects": false,
     "bHideGlobalApplicationEffect": true
@@ -813,8 +814,8 @@
     "unk_b8f2b": 5,
     "bHasCombatEffectOverride": true,
     "tCombatEffectOverride": {
-     "value": "SF_5",
-     "compiled": "BQAAAAsAAAAAAAAAAAAAAAAAAAAAAAAA"
+     "value": "SF_22",
+     "compiled": "BQAAABwAAAAAAAAAAAAAAAAAAAAAAAAA"
     },
     "bHideDamageEffects": false,
     "bHideGlobalApplicationEffect": false
@@ -1298,8 +1299,8 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "0.25",
-    "compiled": "BgAAAAAAgD4AAAAA"
+    "value": "0.5",
+    "compiled": "BgAAAAAAAD8AAAAA"
    }
   },
   {
@@ -1332,6 +1333,38 @@
    "tFormula": {
     "value": "SF_15 + Ceil((sLevel)/5) * SF_16",
     "compiled": "BQAAABUAAAAAAAAAAAAAAAAAAAAFAAAAAQAAAAAAAAAAAAAAAAAAAAYAAAAAAKBADgAAAAEAAAAgAAAABQAAABYAAAAAAAAAAAAAAAAAAAANAAAACwAAAAAAAAA="
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "(ComputeCritDamageScalar() * (1+ Crit_Damage_Percent))",
+    "compiled": "AQAAADQAAAAGAAAAAACAPwUAAAAAAAAABwEAAP7///8AAAAACwAAAA0AAAAAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "20",
+    "compiled": "BgAAAAAAoEEAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "(1-POW(1-SF_20/100,1/2))*100",
+    "compiled": "BgAAAAAAgD8GAAAAAACAPwUAAAAaAAAAAAAAAAAAAAAAAAAABgAAAAAAyEIOAAAADAAAAAYAAAAAAIA/BgAAAAAAAEAOAAAAAQAAAAcAAAAMAAAABgAAAAAAyEINAAAAAAAAAA=="
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "(1-POW(1-SF_21/100,1/(SF_1*2)))*100",
+    "compiled": "BgAAAAAAgD8GAAAAAACAPwUAAAAbAAAAAAAAAAAAAAAAAAAABgAAAAAAyEIOAAAADAAAAAYAAAAAAIA/BQAAAAcAAAAAAAAAAAAAAAAAAAAGAAAAAAAAQA0AAAAOAAAAAQAAAAcAAAAMAAAABgAAAAAAyEINAAAAAAAAAA=="
    }
   }
  ],
@@ -1514,10 +1547,10 @@
    "unk_15c6c03": false,
    "unk_e842c84": false,
    "unk_b8f2b": 5,
-   "bHasCombatEffectOverride": false,
+   "bHasCombatEffectOverride": true,
    "tCombatEffectOverride": {
-    "value": "100",
-    "compiled": "BgAAAAAAyEIAAAAA"
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
    },
    "ePayloadDefaultHitEffectType": 2,
    "snoNormalHitEffectGroup": null,
@@ -1619,10 +1652,10 @@
    "unk_15c6c03": false,
    "unk_e842c84": false,
    "unk_b8f2b": 5,
-   "bHasCombatEffectOverride": false,
+   "bHasCombatEffectOverride": true,
    "tCombatEffectOverride": {
-    "value": "100",
-    "compiled": "BgAAAAAAyEIAAAAA"
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
    },
    "ePayloadDefaultHitEffectType": 2,
    "snoNormalHitEffectGroup": null,
@@ -1839,7 +1872,7 @@
    "bAppendDescription": true,
    "unk_3b9e118": true,
    "unk_7b47c37": false,
-   "unk_b1d89c5": false,
+   "unk_b1d89c5": true,
    "arSkillTags": [
     {
      "__type__": "SkillTagStruct",

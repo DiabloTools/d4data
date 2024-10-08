@@ -157,7 +157,7 @@
  "unk_ed2bdad": false,
  "bOverkillStacked": true,
  "unk_7a86b64": true,
- "eDamageType": 0,
+ "eDamageType": 3,
  "unk_752edeb": false,
  "tCombatEffectChance": {
   "value": "100",
@@ -619,6 +619,7 @@
  "hIconRound": 0,
  "gbidHotbarCountPetType": null,
  "unk_159fc50": 0,
+ "bForceLearned": false,
  "fCancelOnDamage": false,
  "fCancelOnDamageThreshold": false,
  "fCancelOnUsePower": false,
@@ -847,11 +848,119 @@
    "__typeHash__": 1071057721,
    "dwID": 3252817754,
    "dwBuffId": 5,
-   "bHarmful": true,
+   "bHarmful": false,
    "bInfinite": false,
    "tDuration": {
     "value": "SF_7",
     "compiled": "BQAAAA0AAAAAAAAAAAAAAAAAAAAAAAAA"
+   },
+   "unk_deea7e8": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "unk_4393f38": false,
+   "unk_dcb22bd": false,
+   "tMaxStackCount": {
+    "value": "1",
+    "compiled": "BgAAAAAAgD8AAAAA"
+   },
+   "bVisibleInUI": false,
+   "bShowDuration": false,
+   "bCancellable": false,
+   "unk_99b5752": false,
+   "unk_93cd85f": false,
+   "unk_4bdaef2": false,
+   "bVisibleInHotbarUI": false,
+   "bShowsActiveStateOnHotbar": false,
+   "bShowsDurationOnHotbar": false,
+   "bShowsStackCountOnHotbar": false,
+   "unk_71ba554": false,
+   "unk_1375622": false,
+   "unk_d2dd47": false,
+   "unk_8a5f69e": false,
+   "hIcon": 0,
+   "hFloatingIcon": 0,
+   "hFloatingTextLabel": 0,
+   "flFloatingTextIconRange": 0,
+   "unk_395ccd6": false,
+   "bDealsDOT": false,
+   "tDOT": {
+    "__type__": "PowerBuffDOTDamage",
+    "__typeHash__": 3824324374,
+    "eDamageType": 3,
+    "tDamage": {
+     "__type__": "HitpointSpecifier",
+     "__typeHash__": 1185241065,
+     "eType": 0,
+     "tHitpointScalar": {
+      "value": "(SF_6 * 0.5) / SF_7",
+      "compiled": "BQAAAAwAAAAAAAAAAAAAAAAAAAAGAAAAAAAAPw0AAAAFAAAADQAAAAAAAAAAAAAAAAAAAA4AAAAAAAAA"
+     },
+     "tFlatLevel": {
+      "value": "0",
+      "compiled": "BgAAAAAAAAAAAAAA"
+     }
+    },
+    "unk_89dc285": true,
+    "flFlatDamageBonusScalar": 1,
+    "unk_f551941": -1,
+    "bDamageIgnoresInvulnerable": false,
+    "bDamageIgnoresBonuses": false,
+    "unk_b8f2b": -1,
+    "bHasCombatEffectOverride": false,
+    "tCombatEffectOverride": {
+     "value": "100",
+     "compiled": "BgAAAAAAyEIAAAAA"
+    },
+    "bHideDamageEffects": false,
+    "bHideGlobalApplicationEffect": false
+   },
+   "tCrowdControl": {
+    "__type__": "PowerBuffCrowdControl",
+    "__typeHash__": 4138865712,
+    "unk_c63f49e": true,
+    "dwCCFlags": 0,
+    "bUseGlobalSlowAmount": false,
+    "eGlobalSlowAmountType": 0,
+    "tSlowAmount": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    },
+    "tChillAmount": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    },
+    "tStaggerMultiplier": {
+     "value": "1",
+     "compiled": "BgAAAAAAgD8AAAAA"
+    }
+   },
+   "bHasDamageShield": false,
+   "tDamageShield": {
+    "__type__": "HitpointSpecifier",
+    "__typeHash__": 1185241065,
+    "eType": 0,
+    "tHitpointScalar": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    },
+    "tFlatLevel": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    }
+   },
+   "dwShaderMapOverride": 4294967295
+  },
+  {
+   "__type__": "PowerBuffDefinition",
+   "__typeHash__": 1071057721,
+   "dwID": 505695314,
+   "dwBuffId": 6,
+   "bHarmful": true,
+   "bInfinite": false,
+   "tDuration": {
+    "value": "SF_15",
+    "compiled": "BQAAABUAAAAAAAAAAAAAAAAAAAAAAAAA"
    },
    "unk_deea7e8": {
     "value": "0",
@@ -892,15 +1001,15 @@
      "__typeHash__": 1185241065,
      "eType": 0,
      "tHitpointScalar": {
-      "value": "(SF_6 * 0.5) / SF_7",
-      "compiled": "BQAAAAwAAAAAAAAAAAAAAAAAAAAGAAAAAAAAPw0AAAAFAAAADQAAAAAAAAAAAAAAAAAAAA4AAAAAAAAA"
+      "value": "(SF_6 * SF_16) / SF_15",
+      "compiled": "BQAAAAwAAAAAAAAAAAAAAAAAAAAFAAAAFgAAAAAAAAAAAAAAAAAAAA0AAAAFAAAAFQAAAAAAAAAAAAAAAAAAAA4AAAAAAAAA"
      },
      "tFlatLevel": {
       "value": "0",
       "compiled": "BgAAAAAAAAAAAAAA"
      }
     },
-    "unk_89dc285": true,
+    "unk_89dc285": false,
     "flFlatDamageBonusScalar": 1,
     "unk_f551941": -1,
     "bDamageIgnoresInvulnerable": false,
@@ -1005,8 +1114,8 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "0.3",
-    "compiled": "BgAAAJqZmT4AAAAA"
+    "value": "1.2",
+    "compiled": "BgAAAJqZmT8AAAAA"
    }
   },
   {
@@ -1072,6 +1181,22 @@
     "value": "SF_7 * 2.5",
     "compiled": "BQAAAA0AAAAAAAAAAAAAAAAAAAAGAAAAAAAgQA0AAAAAAAAA"
    }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "2",
+    "compiled": "BgAAAAAAAEAAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "0.5",
+    "compiled": "BgAAAAAAAD8AAAAA"
+   }
   }
  ],
  "arPayloads": [
@@ -1088,8 +1213,8 @@
     "__typeHash__": 1185241065,
     "eType": 0,
     "tHitpointScalar": {
-     "value": "SF_6",
-     "compiled": "BQAAAAwAAAAAAAAAAAAAAAAAAAAAAAAA"
+     "value": "SF_6 * (1 - SF_16)",
+     "compiled": "BQAAAAwAAAAAAAAAAAAAAAAAAAAGAAAAAACAPwUAAAAWAAAAAAAAAAAAAAAAAAAADAAAAA0AAAAAAAAA"
     },
     "tFlatLevel": {
      "value": "0",
@@ -1106,6 +1231,14 @@
      "__type__": "Type_4de0b8e8",
      "__typeHash__": 1306573032,
      "unk_c347fae": 3252817754,
+     "unk_45cb7c4": false,
+     "unk_984edf3": false,
+     "unk_b8e877a": false
+    },
+    {
+     "__type__": "Type_4de0b8e8",
+     "__typeHash__": 1306573032,
+     "unk_c347fae": 505695314,
      "unk_45cb7c4": false,
      "unk_984edf3": false,
      "unk_b8e877a": false

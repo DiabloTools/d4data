@@ -13,7 +13,44 @@
   "gbidSkillTag": null,
   "bSearchOnly": false
  },
- "arSkillTags": [],
+ "arSkillTags": [
+  {
+   "__type__": "SkillTagStruct",
+   "__typeHash__": 4000554560,
+   "gbidSkillTag": {
+    "__raw__": 478896208,
+    "__type__": "DT_GBID",
+    "__typeHash__": 1028170061,
+    "group": 56,
+    "name": "Subpower_SpiritFeather"
+   },
+   "bSearchOnly": false
+  },
+  {
+   "__type__": "SkillTagStruct",
+   "__typeHash__": 4000554560,
+   "gbidSkillTag": {
+    "__raw__": 2507415870,
+    "__type__": "DT_GBID",
+    "__typeHash__": 1028170061,
+    "group": 56,
+    "name": "Keyword_SpiritFeather"
+   },
+   "bSearchOnly": false
+  },
+  {
+   "__type__": "SkillTagStruct",
+   "__typeHash__": 4000554560,
+   "gbidSkillTag": {
+    "__raw__": 2603877807,
+    "__type__": "DT_GBID",
+    "__typeHash__": 1028170061,
+    "group": 56,
+    "name": "Skill_Spirit_Sky"
+   },
+   "bSearchOnly": false
+  }
+ ],
  "eSkillCat": -1,
  "eType": 0,
  "eCategory": -1,
@@ -535,6 +572,7 @@
  "hIconRound": 0,
  "gbidHotbarCountPetType": null,
  "unk_159fc50": 0,
+ "bForceLearned": false,
  "fCancelOnDamage": false,
  "fCancelOnDamageThreshold": false,
  "fCancelOnUsePower": false,
@@ -765,8 +803,8 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "22 * (1+SF_3)",
-    "compiled": "BgAAAAAAsEEGAAAAAACAPwUAAAAJAAAAAAAAAAAAAAAAAAAACwAAAA0AAAAAAAAA"
+    "value": "22",
+    "compiled": "BgAAAAAAsEEAAAAA"
    }
   },
   {
@@ -789,16 +827,16 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "PowerTag.Spiritborn_Talent_Combo_SkyPlains.\"Script Formula 4\"",
-    "compiled": "BQAAAAUAAAC1DhkABAAAAAAAAAAAAAAA"
+    "value": "SF_10 * SF_12",
+    "compiled": "BQAAABAAAAAAAAAAAAAAAAAAAAAFAAAAEgAAAAAAAAAAAAAAAAAAAA0AAAAAAAAA"
    }
   },
   {
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "1.25 * SF_10",
-    "compiled": "BgAAAAAAoD8FAAAAEAAAAAAAAAAAAAAAAAAAAA0AAAAAAAAA"
+    "value": "1.25",
+    "compiled": "BgAAAAAAoD8AAAAA"
    }
   },
   {
@@ -813,8 +851,8 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "2",
-    "compiled": "BgAAAAAAAEAAAAAA"
+    "value": "4 * SF_10",
+    "compiled": "BgAAAAAAgEAFAAAAEAAAAAAAAAAAAAAAAAAAAA0AAAAAAAAA"
    }
   },
   {
@@ -846,7 +884,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "1 + Spiritborn_Spirit_Bonus#spiritborn_eagle_sun_passive_alternate",
-    "compiled": "BgAAAAAAgD8FAAAAAAAAAEEAAIAZ0B0AAAAAAAsAAAAAAAAA"
+    "compiled": "BgAAAAAAgD8FAAAAAAAAAEcAAIAZ0B0AAAAAAAsAAAAAAAAA"
    }
   },
   {
@@ -855,6 +893,14 @@
    "tFormula": {
     "value": "8",
     "compiled": "BgAAAAAAAEEAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "1 + Bonus_Percent_Per_Power#Spiritborn_Feather_Spawn",
+    "compiled": "BgAAAAAAgD8FAAAAAAAAAKMDAAAJIx4AAAAAAAsAAAAAAAAA"
    }
   }
  ],

@@ -57,22 +57,22 @@
  "fPrioritySideQuest": false,
  "ePrioritySideQuestType": 0,
  "snoBountySubzone": {
-  "__raw__": 445423,
+  "__raw__": 445431,
   "__group__": 80,
   "__type__": "DT_SNO",
   "__typeHash__": 2764331143,
-  "__targetFileName__": "base/meta/Subzone/Frac_GaleValley.sbz",
+  "__targetFileName__": "base/meta/Subzone/Frac_Underworld.sbz",
   "groupName": "SubZone",
-  "name": "Frac_GaleValley"
+  "name": "Frac_Underworld"
  },
  "eBountyTier": 2,
  "eBountyType": 1,
  "gbidBountyDefinition": {
-  "__raw__": 2240158865,
+  "__raw__": 3569117508,
   "__type__": "DT_GBID",
   "__typeHash__": 1028170061,
   "group": 75,
-  "name": "Bounty_Type_Dungeon"
+  "name": "Bounty_Type_LadderBoss"
  },
  "gbidPartyFinderTag": null,
  "dwFlags": 4,
@@ -195,8 +195,8 @@
    "unk_1907e03": false,
    "hOverrideIconTracked": 0,
    "hOverrideIconUntracked": 0,
-   "unk_87ae7b7": null,
-   "unk_f22d01a": null,
+   "snoOverrideParticleOverheadQuestProgressTracked": null,
+   "snoOverrideParticleOverheadQuestProgressUntracked": null,
    "unk_564e7d5": false,
    "unk_eff642d": false,
    "unk_fc27941": false,
@@ -243,7 +243,7 @@
        "tScriptMessageMap": {
         "__type__": "ScriptMessageMap",
         "__typeHash__": 2935055576,
-        "eEventType": 87,
+        "eEventType": 89,
         "dwListenerFlags": 0,
         "snoCondition": null,
         "unk_c3ba01d": false,
@@ -252,86 +252,56 @@
          {
           "__type__": "ScriptMessageMapFilter",
           "__typeHash__": 3179414430,
-          "tKey": 1387993843,
+          "tKey": 1189140265,
           "eVariableType": 1,
           "pMessageFilter": [
            {
-            "__type__": "ScriptEventParamPlayer",
-            "__typeHash__": 106673333,
-            "dwType": 106673333,
-            "eParamType": 7,
+            "__type__": "ScriptEventParamSelf",
+            "__typeHash__": 1210992754,
+            "dwType": 1210992754,
+            "eParamType": 11,
             "dwPad": 0,
-            "bIsPlayer": true
+            "idValue": 0
            }
           ]
          },
          {
           "__type__": "ScriptMessageMapFilter",
           "__typeHash__": 3179414430,
-          "tKey": 4215937142,
-          "eVariableType": 21,
+          "tKey": 1189140251,
+          "eVariableType": 1,
           "pMessageFilter": [
            {
-            "__type__": "ScriptEventParamSubzone",
-            "__typeHash__": 3453107854,
-            "dwType": 3453107854,
-            "eParamType": 40,
+            "__type__": "ScriptEventParamActor",
+            "__typeHash__": 1286645889,
+            "dwType": 1286645889,
+            "eParamType": 4,
             "dwPad": 0,
-            "snoSubzone": {
-             "__raw__": 1496146,
-             "__group__": 80,
+            "snoActor": {
+             "__raw__": 1862650,
+             "__group__": 1,
              "__type__": "DT_SNO",
              "__typeHash__": 2764331143,
-             "__targetFileName__": "base/meta/Subzone/Boss_WT4_S2VampireLord.sbz",
-             "groupName": "SubZone",
-             "name": "Boss_WT4_S2VampireLord"
+             "__targetFileName__": "base/meta/Actor/EGB_Rank_3_S02_boss.acr",
+             "groupName": "Actor",
+             "name": "EGB_Rank_3_S02_boss"
             }
-           }
-          ]
-         },
-         {
-          "__type__": "ScriptMessageMapFilter",
-          "__typeHash__": 3179414430,
-          "tKey": 955203533,
-          "eVariableType": 11,
-          "pMessageFilter": [
-           {
-            "__type__": "ScriptEventParamAllowAny",
-            "__typeHash__": 1295852463,
-            "dwType": 1295852463,
-            "eParamType": 0,
-            "dwPad": 0
-           }
-          ]
-         },
-         {
-          "__type__": "ScriptMessageMapFilter",
-          "__typeHash__": 3179414430,
-          "tKey": 955185759,
-          "eVariableType": 11,
-          "pMessageFilter": [
-           {
-            "__type__": "ScriptEventParamAllowAny",
-            "__typeHash__": 1295852463,
-            "dwType": 1295852463,
-            "eParamType": 0,
-            "dwPad": 0
            }
           ]
          }
         ],
         "unk_492729e": [],
-        "dwEventEntryHash": 834349117
+        "dwEventEntryHash": 1776065304
        },
        "eIndicatorType": 3,
        "snoWorld": {
-        "__raw__": 69068,
+        "__raw__": 1496144,
         "__group__": 48,
         "__type__": "DT_SNO",
         "__typeHash__": 2764331143,
-        "__targetFileName__": "base/meta/World/Sanctuary_Eastern_Continent.wrl",
+        "__targetFileName__": "base/meta/World/Boss_WT4_S2VampireLord.wrl",
         "groupName": "World",
-        "name": "Sanctuary_Eastern_Continent"
+        "name": "Boss_WT4_S2VampireLord"
        },
        "tRegionDefault": {
         "__type__": "QuestCallbackRegion",
@@ -388,7 +358,17 @@
         "hImageHandle": 0
        },
        "unk_7dd76d1": 0,
-       "arSnonameTokens": [],
+       "arSnonameTokens": [
+        {
+         "__raw__": 1862650,
+         "__group__": 1,
+         "__type__": "DT_SNO_NAME",
+         "__typeHash__": 3339108615,
+         "__targetFileName__": "base/meta/Actor/EGB_Rank_3_S02_boss.acr",
+         "groupName": "Actor",
+         "name": "EGB_Rank_3_S02_boss"
+        }
+       ],
        "szFontColorOverride": "",
        "snoOptionalPreloadCondition": null,
        "unk_9c1ea4f": 0,
@@ -429,8 +409,8 @@
    "unk_1907e03": false,
    "hOverrideIconTracked": 0,
    "hOverrideIconUntracked": 0,
-   "unk_87ae7b7": null,
-   "unk_f22d01a": null,
+   "snoOverrideParticleOverheadQuestProgressTracked": null,
+   "snoOverrideParticleOverheadQuestProgressUntracked": null,
    "unk_564e7d5": false,
    "unk_eff642d": false,
    "unk_fc27941": false,
@@ -548,8 +528,8 @@
    "unk_1907e03": false,
    "hOverrideIconTracked": 0,
    "hOverrideIconUntracked": 0,
-   "unk_87ae7b7": null,
-   "unk_f22d01a": null,
+   "snoOverrideParticleOverheadQuestProgressTracked": null,
+   "snoOverrideParticleOverheadQuestProgressUntracked": null,
    "unk_564e7d5": false,
    "unk_eff642d": false,
    "unk_fc27941": false,
@@ -589,8 +569,8 @@
    "unk_1907e03": false,
    "hOverrideIconTracked": 0,
    "hOverrideIconUntracked": 0,
-   "unk_87ae7b7": null,
-   "unk_f22d01a": null,
+   "snoOverrideParticleOverheadQuestProgressTracked": null,
+   "snoOverrideParticleOverheadQuestProgressUntracked": null,
    "unk_564e7d5": false,
    "unk_eff642d": false,
    "unk_fc27941": false,
@@ -630,8 +610,8 @@
    "unk_1907e03": false,
    "hOverrideIconTracked": 0,
    "hOverrideIconUntracked": 0,
-   "unk_87ae7b7": null,
-   "unk_f22d01a": null,
+   "snoOverrideParticleOverheadQuestProgressTracked": null,
+   "snoOverrideParticleOverheadQuestProgressUntracked": null,
    "unk_564e7d5": false,
    "unk_eff642d": false,
    "unk_fc27941": false,
@@ -671,8 +651,8 @@
    "unk_1907e03": false,
    "hOverrideIconTracked": 0,
    "hOverrideIconUntracked": 0,
-   "unk_87ae7b7": null,
-   "unk_f22d01a": null,
+   "snoOverrideParticleOverheadQuestProgressTracked": null,
+   "snoOverrideParticleOverheadQuestProgressUntracked": null,
    "unk_564e7d5": false,
    "unk_eff642d": false,
    "unk_fc27941": false,
@@ -712,8 +692,8 @@
    "unk_1907e03": false,
    "hOverrideIconTracked": 0,
    "hOverrideIconUntracked": 0,
-   "unk_87ae7b7": null,
-   "unk_f22d01a": null,
+   "snoOverrideParticleOverheadQuestProgressTracked": null,
+   "snoOverrideParticleOverheadQuestProgressUntracked": null,
    "unk_564e7d5": false,
    "unk_eff642d": false,
    "unk_fc27941": false,
@@ -753,8 +733,8 @@
    "unk_1907e03": false,
    "hOverrideIconTracked": 0,
    "hOverrideIconUntracked": 0,
-   "unk_87ae7b7": null,
-   "unk_f22d01a": null,
+   "snoOverrideParticleOverheadQuestProgressTracked": null,
+   "snoOverrideParticleOverheadQuestProgressUntracked": null,
    "unk_564e7d5": false,
    "unk_eff642d": false,
    "unk_fc27941": false,
@@ -783,6 +763,8 @@
  },
  "dwRestrictions": 0,
  "unk_9c72d73": [],
+ "gbidZoneEventConfig": null,
+ "unk_376dcd8": false,
  "eSimQuestPhase": 0,
  "snoAudioContext": null,
  "arAllReferencedItems": [],
@@ -795,7 +777,6 @@
  "nPhasePreloadDepth": 1,
  "dwRegionSourceCallbackUID": 4294967295,
  "snoDPOWorld": null,
- "unk_376dcd8": false,
  "unk_2229d23": 0,
  "snoOnCompleteTutorial": null,
  "unk_dff9117": null

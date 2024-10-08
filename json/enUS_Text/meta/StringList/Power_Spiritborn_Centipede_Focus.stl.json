@@ -15,7 +15,7 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "desc",
-   "szText": "{c_label}Cooldown:{/c_label} {c_resource}{Cooldown Time}{/c_resource} seconds\r\n{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat_Effect_Chance_Script_Formula_Override:5}|%|]{/c}\r\n{/if}{c_label}Passive:{/c} Enemies that attack you are Poisoned for {c_number}{dot:POISON_DOT}{/c} damage over {c_number}[{buffduration:POISON_DOT}]{/c} seconds.\r\n\r\n{c_label}Active:{/c} Your toxins overflow, applying the Poisoning in a trail and making you {c_important}{u}Unhindered{/u}{/c} for {c_number}[{buffduration:ACTIVE_PERIODIC}|1|]{/c} seconds.",
+   "szText": "{c_label}Cooldown:{/c_label} {c_resource}{Cooldown Time}{/c_resource} seconds\r\n{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat_Effect_Chance_Script_Formula_Override:20}|%|]{/c}\r\n{/if}{c_label}Passive:{/c} Enemies that attack you are Poisoned for {c_number}{dot:POISON_DOT}{/c} damage over {c_number}[{buffduration:POISON_DOT}]{/c} seconds.\r\n\r\n{c_label}Active:{/c} Your toxins overflow, applying the Poisoning in a trail and making you {c_important}{u}Unhindered{/u}{/c} for {c_number}[{buffduration:ACTIVE_PERIODIC}|1|]{/c} seconds.",
    "hLabel": 3707583
   },
   {
@@ -57,7 +57,7 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod2_Description",
-   "szText": "While {c_important}Toxic Skin{/c} is active, your Poisoning deals an additional {c_number}[{SF_14}*100|%|]{/c} of its damage over time as Critical Strikes to {c_important}{u}Vulnerable{/u}{/c} enemies.",
+   "szText": "While {c_important}Toxic Skin{/c} is active, you deal an additional {c_number}{payload:POISON_CRIT}{/c} Poison damage as Critical Strikes to Nearby {c_important}{u}Vulnerable{/u}{/c} Poisoned enemies every second.",
    "hLabel": 1960229941
   },
   {

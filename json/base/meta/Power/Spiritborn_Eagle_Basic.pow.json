@@ -743,8 +743,8 @@
  "unk_b15bf7f": false,
  "unk_8fe39cf": 0,
  "unk_4e0f1a": false,
- "bPassabilityDuringEnabled": true,
- "bPassabilityDestEnabled": true,
+ "bPassabilityDuringEnabled": false,
+ "bPassabilityDestEnabled": false,
  "arCollisionSettings": [
   {
    "__type__": "CollisionSettings",
@@ -753,7 +753,7 @@
    "tCustomCollFlags": {
     "__type__": "ActorCollisionFlags",
     "__typeHash__": 2766662738,
-    "uDynamicFlagsNoOverlap": 8736,
+    "uDynamicFlagsNoOverlap": 8763,
     "uDynamicMyFlags": 1
    },
    "unk_a882afd": false,
@@ -767,7 +767,7 @@
    "tCustomCollFlags": {
     "__type__": "ActorCollisionFlags",
     "__typeHash__": 2766662738,
-    "uDynamicFlagsNoOverlap": 8752,
+    "uDynamicFlagsNoOverlap": 8763,
     "uDynamicMyFlags": 1
    },
    "unk_a882afd": false,
@@ -788,6 +788,7 @@
  "hIconRound": 0,
  "gbidHotbarCountPetType": null,
  "unk_159fc50": 0,
+ "bForceLearned": false,
  "fCancelOnDamage": false,
  "fCancelOnDamageThreshold": false,
  "fCancelOnUsePower": false,
@@ -1711,15 +1712,31 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Min(1 + (AoE_Size_Bonus_Per_Power#Spiritborn_Eagle_Basic / 2), PowerTag.SystemsTuningGlobals.\"Script Formula 3\")",
-    "compiled": "BgAAAAAAgD8FAAAAAAAAAMUDAADs/RsAAAAAAAYAAAAAAABADgAAAAsAAAAFAAAABQAAAM1tEAADAAAAAAAAAAEAAAAAAAAAAAAAAA=="
+    "compiled": "BgAAAAAAgD8FAAAAAAAAAM0DAADs/RsAAAAAAAYAAAAAAABADgAAAAsAAAAFAAAABQAAAM1tEAADAAAAAAAAAAEAAAAAAAAAAAAAAA=="
    }
   },
   {
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "Bonus_Percent_Per_Power#Spiritborn_Eagle_Basic",
-    "compiled": "BQAAAAAAAACbAwAA7P0bAAAAAAAAAAAA"
+    "value": "Bonus_Percent_Per_Power#Spiritborn_Eagle_Basic + SF_22",
+    "compiled": "BQAAAAAAAACjAwAA7P0bAAAAAAAFAAAAHAAAAAAAAAAAAAAAAAAAAAsAAAAAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "",
+    "compiled": ""
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "Generic_Chance_For_Double_Damage_Per_SkillTag#Skill_Primary_Basic",
+    "compiled": "BQAAAAAAAABBAACAo2IUxwAAAAAAAAAA"
    }
   }
  ],

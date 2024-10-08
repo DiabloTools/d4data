@@ -670,6 +670,7 @@
  "hIconRound": 0,
  "gbidHotbarCountPetType": null,
  "unk_159fc50": 0,
+ "bForceLearned": false,
  "fCancelOnDamage": false,
  "fCancelOnDamageThreshold": false,
  "fCancelOnUsePower": false,
@@ -1340,8 +1341,8 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "(2 * SF_13)*SF_21",
-    "compiled": "BgAAAAAAAEAFAAAAEwAAAAAAAAAAAAAAAAAAAA0AAAAFAAAAGwAAAAAAAAAAAAAAAAAAAA0AAAAAAAAA"
+    "value": "2 * SF_13",
+    "compiled": "BgAAAAAAAEAFAAAAEwAAAAAAAAAAAAAAAAAAAA0AAAAAAAAA"
    }
   },
   {
@@ -1380,8 +1381,8 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "SF_1/SF_2",
-    "compiled": "BQAAAAcAAAAAAAAAAAAAAAAAAAAFAAAACAAAAAAAAAAAAAAAAAAAAA4AAAAAAAAA"
+    "value": "SF_21 ? ((SF_1*SF_21)/SF_2) : (SF_1/SF_2)",
+    "compiled": "BQAAABsAAAAAAAAAAAAAAAAAAAAFAAAABwAAAAAAAAAAAAAAAAAAAAUAAAAbAAAAAAAAAAAAAAAAAAAADQAAAAUAAAAIAAAAAAAAAAAAAAAAAAAADgAAAAUAAAAHAAAAAAAAAAAAAAAAAAAABQAAAAgAAAAAAAAAAAAAAAAAAAAOAAAAEAAAAAAAAAA="
    }
   },
   {
@@ -1501,7 +1502,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "1 + Power_Duration_Bonus_Pct#Druid_Lacerate",
-    "compiled": "BgAAAAAAgD8FAAAAAAAAAJgDAAALBAYAAAAAAAsAAAAAAAAA"
+    "compiled": "BgAAAAAAgD8FAAAAAAAAAKADAAALBAYAAAAAAAsAAAAAAAAA"
    }
   }
  ],

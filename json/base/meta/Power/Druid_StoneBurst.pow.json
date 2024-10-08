@@ -725,6 +725,7 @@
  "hIconRound": 0,
  "gbidHotbarCountPetType": null,
  "unk_159fc50": 0,
+ "bForceLearned": false,
  "fCancelOnDamage": false,
  "fCancelOnDamageThreshold": false,
  "fCancelOnUsePower": false,
@@ -1179,8 +1180,8 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "0.8 * Table(34,sLevel)",
-    "compiled": "BgAAAM3MTD8GAAAAAAAIQgUAAAABAAAAAAAAAAAAAAAAAAAAAQAAAAsAAAANAAAAAAAAAA=="
+    "value": "1.2 * Table(34,sLevel)",
+    "compiled": "BgAAAJqZmT8GAAAAAAAIQgUAAAABAAAAAAAAAAAAAAAAAAAAAQAAAAsAAAANAAAAAAAAAA=="
    }
   },
   {
@@ -1268,7 +1269,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Percent_Bonus_Projectiles_Per_Power#Druid_StoneBurst + Percent_Bonus_Projectiles_All",
-    "compiled": "BQAAAAAAAAClAwAAVn0WAAAAAAAFAAAAAAAAAKQDAAD+////AAAAAAsAAAAAAAAA"
+    "compiled": "BQAAAAAAAACtAwAAVn0WAAAAAAAFAAAAAAAAAKwDAAD+////AAAAAAsAAAAAAAAA"
    }
   },
   {
@@ -1300,15 +1301,15 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Affix_Value_1#x1_unique_druid_127/100",
-    "compiled": "BQAAAAAAAABKBAAAcSQfAAAAAAAGAAAAAADIQg4AAAAAAAAA"
+    "compiled": "BQAAAAAAAABSBAAAcSQfAAAAAAAGAAAAAADIQg4AAAAAAAAA"
    }
   },
   {
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "",
-    "compiled": ""
+    "value": "Mod.\"Enhanced\" ? (SF_21 + 1) : 1",
+    "compiled": "BQAAAFoAAAD/////NuYwQwAAAAAFAAAAGwAAAAAAAAAAAAAAAAAAAAYAAAAAAIA/CwAAAAYAAAAAAIA/EAAAAAAAAAA="
    }
   },
   {
@@ -1339,7 +1340,7 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "0.25",
+    "value": ".25",
     "compiled": "BgAAAAAAgD4AAAAA"
    }
   },
@@ -1404,7 +1405,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Affix_Value_1#legendary_druid_128/100",
-    "compiled": "BQAAAAAAAABKBAAAQAYgAAAAAAAGAAAAAADIQg4AAAAAAAAA"
+    "compiled": "BQAAAAAAAABSBAAAQAYgAAAAAAAGAAAAAADIQg4AAAAAAAAA"
    }
   },
   {
@@ -1428,7 +1429,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Affix_Value_1#legendary_druid_129/100",
-    "compiled": "BQAAAAAAAABKBAAA8gggAAAAAAAGAAAAAADIQg4AAAAAAAAA"
+    "compiled": "BQAAAAAAAABSBAAA8gggAAAAAAAGAAAAAADIQg4AAAAAAAAA"
    }
   },
   {
@@ -1656,7 +1657,20 @@
    "unk_3b9e118": true,
    "unk_7b47c37": false,
    "unk_b1d89c5": false,
-   "arSkillTags": [],
+   "arSkillTags": [
+    {
+     "__type__": "SkillTagStruct",
+     "__typeHash__": 4000554560,
+     "gbidSkillTag": {
+      "__raw__": 3567369300,
+      "__type__": "DT_GBID",
+      "__typeHash__": 1028170061,
+      "group": 56,
+      "name": "Search_Damage"
+     },
+     "bSearchOnly": false
+    }
+   ],
    "eModType": 0,
    "hIconNormalOverride": 0,
    "hIconMouseoverOverride": 0,
@@ -1707,7 +1721,32 @@
    "unk_3b9e118": true,
    "unk_7b47c37": false,
    "unk_b1d89c5": false,
-   "arSkillTags": [],
+   "arSkillTags": [
+    {
+     "__type__": "SkillTagStruct",
+     "__typeHash__": 4000554560,
+     "gbidSkillTag": {
+      "__raw__": 3567369300,
+      "__type__": "DT_GBID",
+      "__typeHash__": 1028170061,
+      "group": 56,
+      "name": "Search_Damage"
+     },
+     "bSearchOnly": false
+    },
+    {
+     "__type__": "SkillTagStruct",
+     "__typeHash__": 4000554560,
+     "gbidSkillTag": {
+      "__raw__": 1622453880,
+      "__type__": "DT_GBID",
+      "__typeHash__": 1028170061,
+      "group": 56,
+      "name": "Search_ResourceSpirit"
+     },
+     "bSearchOnly": false
+    }
+   ],
    "eModType": 0,
    "hIconNormalOverride": 0,
    "hIconMouseoverOverride": 0,

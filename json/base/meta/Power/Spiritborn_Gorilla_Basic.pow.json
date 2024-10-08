@@ -493,7 +493,7 @@
  "bInvulnerableDuring": false,
  "bUntargetableDuring": false,
  "bCannotDieDuring": false,
- "bCannotBeInterruptedDuring": false,
+ "bCannotBeInterruptedDuring": true,
  "unk_160bc26": false,
  "bIgnoreGravityDuring": false,
  "unk_7a416a6": false,
@@ -761,7 +761,15 @@
   {
    "__type__": "CollisionSettings",
    "__typeHash__": 3066352125,
-   "snoCollision": null,
+   "snoCollision": {
+    "__raw__": 2120220,
+    "__group__": 127,
+    "__type__": "DT_SNO",
+    "__typeHash__": 2764331143,
+    "__targetFileName__": "base/meta/CollisionSettings/Player_Movement.col",
+    "groupName": "CollisionSettings",
+    "name": "Player_Movement"
+   },
    "tCustomCollFlags": {
     "__type__": "ActorCollisionFlags",
     "__typeHash__": 2766662738,
@@ -775,7 +783,15 @@
   {
    "__type__": "CollisionSettings",
    "__typeHash__": 3066352125,
-   "snoCollision": null,
+   "snoCollision": {
+    "__raw__": 2120220,
+    "__group__": 127,
+    "__type__": "DT_SNO",
+    "__typeHash__": 2764331143,
+    "__targetFileName__": "base/meta/CollisionSettings/Player_Movement.col",
+    "groupName": "CollisionSettings",
+    "name": "Player_Movement"
+   },
    "tCustomCollFlags": {
     "__type__": "ActorCollisionFlags",
     "__typeHash__": 2766662738,
@@ -800,6 +816,7 @@
  "hIconRound": 0,
  "gbidHotbarCountPetType": null,
  "unk_159fc50": 0,
+ "bForceLearned": false,
  "fCancelOnDamage": false,
  "fCancelOnDamageThreshold": false,
  "fCancelOnUsePower": false,
@@ -1559,7 +1576,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Thorns_Flat + Thorns_Flat_Unscaled_By_Player_Health",
-    "compiled": "BQAAAAAAAABWAQAA/v///wAAAAAFAAAAAAAAAFcBAAD+////AAAAAAsAAAAAAAAA"
+    "compiled": "BQAAAAAAAABZAQAA/v///wAAAAAFAAAAAAAAAFoBAAD+////AAAAAAsAAAAAAAAA"
    }
   },
   {
@@ -1591,7 +1608,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Bonus_Percent_Per_Power_2#Spiritborn_Gorilla_Basic",
-    "compiled": "BQAAAAAAAABCAACA1bkbAAAAAAAAAAAA"
+    "compiled": "BQAAAAAAAABIAACA1bkbAAAAAAAAAAAA"
    }
   },
   {
@@ -1599,15 +1616,31 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Min(1 + (AoE_Size_Bonus_Per_Power#Spiritborn_Gorilla_Basic / 2), PowerTag.SystemsTuningGlobals.\"Script Formula 3\")",
-    "compiled": "BgAAAAAAgD8FAAAAAAAAAMUDAADVuRsAAAAAAAYAAAAAAABADgAAAAsAAAAFAAAABQAAAM1tEAADAAAAAAAAAAEAAAAAAAAAAAAAAA=="
+    "compiled": "BgAAAAAAgD8FAAAAAAAAAM0DAADVuRsAAAAAAAYAAAAAAABADgAAAAsAAAAFAAAABQAAAM1tEAADAAAAAAAAAAEAAAAAAAAAAAAAAA=="
    }
   },
   {
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "Bonus_Percent_Per_Power#Spiritborn_Gorilla_Basic",
-    "compiled": "BQAAAAAAAACbAwAA1bkbAAAAAAAAAAAA"
+    "value": "Bonus_Percent_Per_Power#Spiritborn_Gorilla_Basic + SF_20",
+    "compiled": "BQAAAAAAAACjAwAA1bkbAAAAAAAFAAAAGgAAAAAAAAAAAAAAAAAAAAsAAAAAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "",
+    "compiled": ""
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "Generic_Chance_For_Double_Damage_Per_SkillTag#Skill_Primary_Basic",
+    "compiled": "BQAAAAAAAABBAACAo2IUxwAAAAAAAAAA"
    }
   }
  ],

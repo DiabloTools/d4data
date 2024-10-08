@@ -656,6 +656,7 @@
  "hIconRound": 0,
  "gbidHotbarCountPetType": null,
  "unk_159fc50": 0,
+ "bForceLearned": false,
  "fCancelOnDamage": false,
  "fCancelOnDamageThreshold": false,
  "fCancelOnUsePower": false,
@@ -2198,16 +2199,16 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "0.42",
-    "compiled": "BgAAAD4K1z4AAAAA"
+    "value": "0.58",
+    "compiled": "BgAAAOF6FD8AAAAA"
    }
   },
   {
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "SF_2 * Table(34, sLevel)",
-    "compiled": "BQAAAAgAAAAAAAAAAAAAAAAAAAAGAAAAAAAIQgUAAAABAAAAAAAAAAAAAAAAAAAAAQAAAAsAAAANAAAAAAAAAA=="
+    "value": "SF_2 * Table(34, sLevel) * PowerFinalizedAttackSpeed",
+    "compiled": "BQAAAAgAAAAAAAAAAAAAAAAAAAAGAAAAAAAIQgUAAAABAAAAAAAAAAAAAAAAAAAAAQAAAAsAAAANAAAABQAAAGUAAAAAAAAAAAAAAAAAAAANAAAAAAAAAA=="
    }
   },
   {
@@ -2270,16 +2271,16 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "5 * PowerFinalizedAttackSpeed",
-    "compiled": "BgAAAAAAoEAFAAAAZQAAAAAAAAAAAAAAAAAAAA0AAAAAAAAA"
+    "value": "5",
+    "compiled": "BgAAAAAAoEAAAAAA"
    }
   },
   {
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "20",
-    "compiled": "BgAAAAAAoEEAAAAA"
+    "value": "35",
+    "compiled": "BgAAAAAADEIAAAAA"
    }
   },
   {
@@ -2310,8 +2311,8 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "Percent_Bonus_Projectiles_Per_Power#Rogue_DanceOFKnives + Percent_Bonus_Projectiles_All",
-    "compiled": "BQAAAAAAAAClAwAAHssZAAAAAAAFAAAAAAAAAKQDAAD+////AAAAAAsAAAAAAAAA"
+    "value": "Chance_For_Double_Damage_Per_Power#Rogue_DanceOFKnives",
+    "compiled": "BQAAAAAAAABMAACAHssZAAAAAAAAAAAA"
    }
   },
   {
@@ -2382,8 +2383,8 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "0.2 * (1/PowerFinalizedAttackSpeed )",
-    "compiled": "BgAAAM3MTD4GAAAAAACAPwUAAABlAAAAAAAAAAAAAAAAAAAADgAAAA0AAAAAAAAA"
+    "value": "0.2",
+    "compiled": "BgAAAM3MTD4AAAAA"
    }
   },
   {
@@ -2415,7 +2416,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Affix_Value_2#x1_legendary_rogue_131",
-    "compiled": "BQAAAAAAAABLBAAAbSQfAAAAAAAAAAAA"
+    "compiled": "BQAAAAAAAABTBAAAbSQfAAAAAAAAAAAA"
    }
   },
   {
@@ -2448,6 +2449,14 @@
    "tFormula": {
     "value": "SF_6*SF_31",
     "compiled": "BQAAAAwAAAAAAAAAAAAAAAAAAAAFAAAAJQAAAAAAAAAAAAAAAAAAAA0AAAAAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "Mod.\"Enhanced\" ? 1 : 0",
+    "compiled": "BQAAAFoAAAD/////NuYwQwAAAAAGAAAAAACAPwYAAAAAAAAAEAAAAAAAAAA="
    }
   }
  ],
@@ -2754,7 +2763,20 @@
    "unk_3b9e118": true,
    "unk_7b47c37": false,
    "unk_b1d89c5": false,
-   "arSkillTags": [],
+   "arSkillTags": [
+    {
+     "__type__": "SkillTagStruct",
+     "__typeHash__": 4000554560,
+     "gbidSkillTag": {
+      "__raw__": 1901128789,
+      "__type__": "DT_GBID",
+      "__typeHash__": 1028170061,
+      "group": 56,
+      "name": "Search_CrowdControl"
+     },
+     "bSearchOnly": false
+    }
+   ],
    "eModType": 0,
    "hIconNormalOverride": 0,
    "hIconMouseoverOverride": 0,
@@ -2773,7 +2795,44 @@
    "unk_3b9e118": true,
    "unk_7b47c37": false,
    "unk_b1d89c5": false,
-   "arSkillTags": [],
+   "arSkillTags": [
+    {
+     "__type__": "SkillTagStruct",
+     "__typeHash__": 4000554560,
+     "gbidSkillTag": {
+      "__raw__": 1901128789,
+      "__type__": "DT_GBID",
+      "__typeHash__": 1028170061,
+      "group": 56,
+      "name": "Search_CrowdControl"
+     },
+     "bSearchOnly": false
+    },
+    {
+     "__type__": "SkillTagStruct",
+     "__typeHash__": 4000554560,
+     "gbidSkillTag": {
+      "__raw__": 3395618537,
+      "__type__": "DT_GBID",
+      "__typeHash__": 1028170061,
+      "group": 56,
+      "name": "Subpower_StunGrenades"
+     },
+     "bSearchOnly": false
+    },
+    {
+     "__type__": "SkillTagStruct",
+     "__typeHash__": 4000554560,
+     "gbidSkillTag": {
+      "__raw__": 1901128789,
+      "__type__": "DT_GBID",
+      "__typeHash__": 1028170061,
+      "group": 56,
+      "name": "Search_CrowdControl"
+     },
+     "bSearchOnly": false
+    }
+   ],
    "eModType": 0,
    "hIconNormalOverride": 0,
    "hIconMouseoverOverride": 0,
@@ -2792,20 +2851,7 @@
    "unk_3b9e118": true,
    "unk_7b47c37": false,
    "unk_b1d89c5": false,
-   "arSkillTags": [
-    {
-     "__type__": "SkillTagStruct",
-     "__typeHash__": 4000554560,
-     "gbidSkillTag": {
-      "__raw__": 2322588634,
-      "__type__": "DT_GBID",
-      "__typeHash__": 1028170061,
-      "group": 56,
-      "name": "Search_Evade"
-     },
-     "bSearchOnly": false
-    }
-   ],
+   "arSkillTags": [],
    "eModType": 1,
    "hIconNormalOverride": 0,
    "hIconMouseoverOverride": 0,
