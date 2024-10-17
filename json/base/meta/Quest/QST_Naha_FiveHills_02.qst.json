@@ -76,7 +76,6 @@
  "eBountyTier": -1,
  "eBountyType": -1,
  "gbidBountyDefinition": null,
- "gbidPartyFinderTag": null,
  "dwFlags": 4,
  "arQuestPhases": [
   {
@@ -442,83 +441,29 @@
     {
      "__type__": "QuestObjectiveSet",
      "__typeHash__": 297390777,
-     "dwUID": 73,
+     "dwUID": 210,
      "ptLink": [],
      "arCallbacks": [
       {
        "__type__": "QuestCallback",
        "__typeHash__": 3067360607,
-       "dwUID": 74,
-       "dwFlags": 3,
+       "dwUID": 211,
+       "dwFlags": 0,
        "nNeeded": 1,
        "tScriptMessageMap": {
         "__type__": "ScriptMessageMap",
         "__typeHash__": 2935055576,
-        "eEventType": 52,
+        "eEventType": 74,
         "dwListenerFlags": 0,
         "snoCondition": null,
         "unk_c3ba01d": false,
         "flCooldownSeconds": 0,
-        "arEventFilters": [
-         {
-          "__type__": "ScriptMessageMapFilter",
-          "__typeHash__": 3179414430,
-          "tKey": 2197444774,
-          "eVariableType": 1,
-          "pMessageFilter": [
-           {
-            "__type__": "ScriptEventParamPlayer",
-            "__typeHash__": 106673333,
-            "dwType": 106673333,
-            "eParamType": 7,
-            "dwPad": 0,
-            "bIsPlayer": true
-           }
-          ]
-         },
-         {
-          "__type__": "ScriptMessageMapFilter",
-          "__typeHash__": 3179414430,
-          "tKey": 3941013568,
-          "eVariableType": 1,
-          "pMessageFilter": [
-           {
-            "__type__": "ScriptEventParamMarkerHandle",
-            "__typeHash__": 3311139638,
-            "dwType": 3311139638,
-            "eParamType": 34,
-            "dwPad": 0,
-            "tMarkerHandle": {
-             "__type__": "MarkerHandle",
-             "__typeHash__": 3934284334,
-             "snoMarkerSet": {
-              "__raw__": 1895817,
-              "__group__": 24,
-              "__type__": "DT_SNO",
-              "__typeHash__": 2764331143,
-              "__targetFileName__": "base/meta/MarkerSet/Naha_FiveHills (Naha_FiveHIlls_02).mrk",
-              "groupName": "MarkerSet",
-              "name": "Naha_FiveHills (Naha_FiveHIlls_02)"
-             },
-             "nID": 31
-            }
-           }
-          ]
-         }
-        ],
+        "arEventFilters": [],
         "unk_492729e": [],
-        "dwEventEntryHash": 3442249050
+        "dwEventEntryHash": 58
        },
        "eIndicatorType": 3,
-       "snoWorld": {
-        "__raw__": 69068,
-        "__group__": 48,
-        "__type__": "DT_SNO",
-        "__typeHash__": 2764331143,
-        "__targetFileName__": "base/meta/World/Sanctuary_Eastern_Continent.wrl",
-        "groupName": "World",
-        "name": "Sanctuary_Eastern_Continent"
-       },
+       "snoWorld": null,
        "tRegionDefault": {
         "__type__": "QuestCallbackRegion",
         "__typeHash__": 2884204419,
@@ -559,17 +504,33 @@
        "unk_77b5dc7": false,
        "unk_146ba45": 0,
        "snoHeaderDisplayCondition": null
-      },
+      }
+     ],
+     "bGiveFirstTimeReward": false,
+     "tFirstTimeReward": {
+      "__type__": "QuestReward",
+      "__typeHash__": 3387295447,
+      "snoTrackedReward": null
+     },
+     "arQuestItemsToRemove": [],
+     "snoFirstTimeRewardDisplayItem": null
+    },
+    {
+     "__type__": "QuestObjectiveSet",
+     "__typeHash__": 297390777,
+     "dwUID": 73,
+     "ptLink": [],
+     "arCallbacks": [
       {
        "__type__": "QuestCallback",
        "__typeHash__": 3067360607,
-       "dwUID": 75,
+       "dwUID": 74,
        "dwFlags": 3,
        "nNeeded": 1,
        "tScriptMessageMap": {
         "__type__": "ScriptMessageMap",
         "__typeHash__": 2935055576,
-        "eEventType": 53,
+        "eEventType": 52,
         "dwListenerFlags": 0,
         "snoCondition": null,
         "unk_c3ba01d": false,
@@ -582,12 +543,20 @@
           "eVariableType": 1,
           "pMessageFilter": [
            {
-            "__type__": "ScriptEventParamPlayer",
-            "__typeHash__": 106673333,
-            "dwType": 106673333,
-            "eParamType": 7,
+            "__type__": "ScriptEventParamActor",
+            "__typeHash__": 1286645889,
+            "dwType": 1286645889,
+            "eParamType": 4,
             "dwPad": 0,
-            "bIsPlayer": true
+            "snoActor": {
+             "__raw__": 1931910,
+             "__group__": 1,
+             "__type__": "DT_SNO",
+             "__typeHash__": 2764331143,
+             "__targetFileName__": "base/meta/Actor/NPC_QST_X1_Neyrelle_NonCombat_Frail_Follower.acr",
+             "groupName": "Actor",
+             "name": "NPC_QST_X1_Neyrelle_NonCombat_Frail_Follower"
+            }
            }
           ]
          },
@@ -660,7 +629,150 @@
         "hImageHandle": 0
        },
        "unk_7dd76d1": 0,
-       "arSnonameTokens": [],
+       "arSnonameTokens": [
+        {
+         "__raw__": 1931910,
+         "__group__": 1,
+         "__type__": "DT_SNO_NAME",
+         "__typeHash__": 3339108615,
+         "__targetFileName__": "base/meta/Actor/NPC_QST_X1_Neyrelle_NonCombat_Frail_Follower.acr",
+         "groupName": "Actor",
+         "name": "NPC_QST_X1_Neyrelle_NonCombat_Frail_Follower"
+        }
+       ],
+       "szFontColorOverride": "",
+       "snoOptionalPreloadCondition": null,
+       "unk_9c1ea4f": 0,
+       "vecPositionOffset": {
+        "x": 0,
+        "y": 0
+       },
+       "unk_9d6e5b3": false,
+       "unk_b3ec93": 0,
+       "unk_5698d08": false,
+       "unk_77b5dc7": false,
+       "unk_146ba45": 0,
+       "snoHeaderDisplayCondition": null
+      },
+      {
+       "__type__": "QuestCallback",
+       "__typeHash__": 3067360607,
+       "dwUID": 75,
+       "dwFlags": 3,
+       "nNeeded": 1,
+       "tScriptMessageMap": {
+        "__type__": "ScriptMessageMap",
+        "__typeHash__": 2935055576,
+        "eEventType": 53,
+        "dwListenerFlags": 0,
+        "snoCondition": null,
+        "unk_c3ba01d": false,
+        "flCooldownSeconds": 0,
+        "arEventFilters": [
+         {
+          "__type__": "ScriptMessageMapFilter",
+          "__typeHash__": 3179414430,
+          "tKey": 2197444774,
+          "eVariableType": 1,
+          "pMessageFilter": [
+           {
+            "__type__": "ScriptEventParamActor",
+            "__typeHash__": 1286645889,
+            "dwType": 1286645889,
+            "eParamType": 4,
+            "dwPad": 0,
+            "snoActor": {
+             "__raw__": 1931910,
+             "__group__": 1,
+             "__type__": "DT_SNO",
+             "__typeHash__": 2764331143,
+             "__targetFileName__": "base/meta/Actor/NPC_QST_X1_Neyrelle_NonCombat_Frail_Follower.acr",
+             "groupName": "Actor",
+             "name": "NPC_QST_X1_Neyrelle_NonCombat_Frail_Follower"
+            }
+           }
+          ]
+         },
+         {
+          "__type__": "ScriptMessageMapFilter",
+          "__typeHash__": 3179414430,
+          "tKey": 3941013568,
+          "eVariableType": 1,
+          "pMessageFilter": [
+           {
+            "__type__": "ScriptEventParamMarkerHandle",
+            "__typeHash__": 3311139638,
+            "dwType": 3311139638,
+            "eParamType": 34,
+            "dwPad": 0,
+            "tMarkerHandle": {
+             "__type__": "MarkerHandle",
+             "__typeHash__": 3934284334,
+             "snoMarkerSet": {
+              "__raw__": 1895817,
+              "__group__": 24,
+              "__type__": "DT_SNO",
+              "__typeHash__": 2764331143,
+              "__targetFileName__": "base/meta/MarkerSet/Naha_FiveHills (Naha_FiveHIlls_02).mrk",
+              "groupName": "MarkerSet",
+              "name": "Naha_FiveHills (Naha_FiveHIlls_02)"
+             },
+             "nID": 31
+            }
+           }
+          ]
+         }
+        ],
+        "unk_492729e": [],
+        "dwEventEntryHash": 3442249050
+       },
+       "eIndicatorType": 3,
+       "snoWorld": {
+        "__raw__": 69068,
+        "__group__": 48,
+        "__type__": "DT_SNO",
+        "__typeHash__": 2764331143,
+        "__targetFileName__": "base/meta/World/Sanctuary_Eastern_Continent.wrl",
+        "groupName": "World",
+        "name": "Sanctuary_Eastern_Continent"
+       },
+       "tRegionDefault": {
+        "__type__": "QuestCallbackRegion",
+        "__typeHash__": 2884204419,
+        "eType": 0,
+        "vPolygonPoints": [],
+        "vCenterPos": {
+         "x": 0,
+         "y": 0
+        },
+        "flRadius": 0,
+        "bValid": false,
+        "bManuallySpecified": false
+       },
+       "arRegionOverrides": [],
+       "nValidRegionOverrides": 0,
+       "arLevelAreas": [],
+       "arSubzones": [],
+       "eProgressDisplayStyle": 0,
+       "eProgressBarSource": 0,
+       "unk_301d18": false,
+       "unk_896a0c5": {
+        "__type__": "UIImageHandleReference",
+        "__typeHash__": 1797021084,
+        "hImageHandle": 0
+       },
+       "unk_7dd76d1": 0,
+       "arSnonameTokens": [
+        {
+         "__raw__": 1931910,
+         "__group__": 1,
+         "__type__": "DT_SNO_NAME",
+         "__typeHash__": 3339108615,
+         "__targetFileName__": "base/meta/Actor/NPC_QST_X1_Neyrelle_NonCombat_Frail_Follower.acr",
+         "groupName": "Actor",
+         "name": "NPC_QST_X1_Neyrelle_NonCombat_Frail_Follower"
+        }
+       ],
        "szFontColorOverride": "",
        "snoOptionalPreloadCondition": null,
        "unk_9c1ea4f": 0,
@@ -713,12 +825,20 @@
           "eVariableType": 1,
           "pMessageFilter": [
            {
-            "__type__": "ScriptEventParamPlayer",
-            "__typeHash__": 106673333,
-            "dwType": 106673333,
-            "eParamType": 7,
+            "__type__": "ScriptEventParamActor",
+            "__typeHash__": 1286645889,
+            "dwType": 1286645889,
+            "eParamType": 4,
             "dwPad": 0,
-            "bIsPlayer": true
+            "snoActor": {
+             "__raw__": 1931910,
+             "__group__": 1,
+             "__type__": "DT_SNO",
+             "__typeHash__": 2764331143,
+             "__targetFileName__": "base/meta/Actor/NPC_QST_X1_Neyrelle_NonCombat_Frail_Follower.acr",
+             "groupName": "Actor",
+             "name": "NPC_QST_X1_Neyrelle_NonCombat_Frail_Follower"
+            }
            }
           ]
          },
@@ -791,7 +911,17 @@
         "hImageHandle": 0
        },
        "unk_7dd76d1": 0,
-       "arSnonameTokens": [],
+       "arSnonameTokens": [
+        {
+         "__raw__": 1931910,
+         "__group__": 1,
+         "__type__": "DT_SNO_NAME",
+         "__typeHash__": 3339108615,
+         "__targetFileName__": "base/meta/Actor/NPC_QST_X1_Neyrelle_NonCombat_Frail_Follower.acr",
+         "groupName": "Actor",
+         "name": "NPC_QST_X1_Neyrelle_NonCombat_Frail_Follower"
+        }
+       ],
        "szFontColorOverride": "",
        "snoOptionalPreloadCondition": null,
        "unk_9c1ea4f": 0,
@@ -828,12 +958,20 @@
           "eVariableType": 1,
           "pMessageFilter": [
            {
-            "__type__": "ScriptEventParamPlayer",
-            "__typeHash__": 106673333,
-            "dwType": 106673333,
-            "eParamType": 7,
+            "__type__": "ScriptEventParamActor",
+            "__typeHash__": 1286645889,
+            "dwType": 1286645889,
+            "eParamType": 4,
             "dwPad": 0,
-            "bIsPlayer": true
+            "snoActor": {
+             "__raw__": 1931910,
+             "__group__": 1,
+             "__type__": "DT_SNO",
+             "__typeHash__": 2764331143,
+             "__targetFileName__": "base/meta/Actor/NPC_QST_X1_Neyrelle_NonCombat_Frail_Follower.acr",
+             "groupName": "Actor",
+             "name": "NPC_QST_X1_Neyrelle_NonCombat_Frail_Follower"
+            }
            }
           ]
          },
@@ -906,7 +1044,17 @@
         "hImageHandle": 0
        },
        "unk_7dd76d1": 0,
-       "arSnonameTokens": [],
+       "arSnonameTokens": [
+        {
+         "__raw__": 1931910,
+         "__group__": 1,
+         "__type__": "DT_SNO_NAME",
+         "__typeHash__": 3339108615,
+         "__targetFileName__": "base/meta/Actor/NPC_QST_X1_Neyrelle_NonCombat_Frail_Follower.acr",
+         "groupName": "Actor",
+         "name": "NPC_QST_X1_Neyrelle_NonCombat_Frail_Follower"
+        }
+       ],
        "szFontColorOverride": "",
        "snoOptionalPreloadCondition": null,
        "unk_9c1ea4f": 0,
@@ -959,12 +1107,20 @@
           "eVariableType": 1,
           "pMessageFilter": [
            {
-            "__type__": "ScriptEventParamPlayer",
-            "__typeHash__": 106673333,
-            "dwType": 106673333,
-            "eParamType": 7,
+            "__type__": "ScriptEventParamActor",
+            "__typeHash__": 1286645889,
+            "dwType": 1286645889,
+            "eParamType": 4,
             "dwPad": 0,
-            "bIsPlayer": true
+            "snoActor": {
+             "__raw__": 1931910,
+             "__group__": 1,
+             "__type__": "DT_SNO",
+             "__typeHash__": 2764331143,
+             "__targetFileName__": "base/meta/Actor/NPC_QST_X1_Neyrelle_NonCombat_Frail_Follower.acr",
+             "groupName": "Actor",
+             "name": "NPC_QST_X1_Neyrelle_NonCombat_Frail_Follower"
+            }
            }
           ]
          },
@@ -1037,7 +1193,17 @@
         "hImageHandle": 0
        },
        "unk_7dd76d1": 0,
-       "arSnonameTokens": [],
+       "arSnonameTokens": [
+        {
+         "__raw__": 1931910,
+         "__group__": 1,
+         "__type__": "DT_SNO_NAME",
+         "__typeHash__": 3339108615,
+         "__targetFileName__": "base/meta/Actor/NPC_QST_X1_Neyrelle_NonCombat_Frail_Follower.acr",
+         "groupName": "Actor",
+         "name": "NPC_QST_X1_Neyrelle_NonCombat_Frail_Follower"
+        }
+       ],
        "szFontColorOverride": "",
        "snoOptionalPreloadCondition": null,
        "unk_9c1ea4f": 0,
@@ -1074,12 +1240,20 @@
           "eVariableType": 1,
           "pMessageFilter": [
            {
-            "__type__": "ScriptEventParamPlayer",
-            "__typeHash__": 106673333,
-            "dwType": 106673333,
-            "eParamType": 7,
+            "__type__": "ScriptEventParamActor",
+            "__typeHash__": 1286645889,
+            "dwType": 1286645889,
+            "eParamType": 4,
             "dwPad": 0,
-            "bIsPlayer": true
+            "snoActor": {
+             "__raw__": 1931910,
+             "__group__": 1,
+             "__type__": "DT_SNO",
+             "__typeHash__": 2764331143,
+             "__targetFileName__": "base/meta/Actor/NPC_QST_X1_Neyrelle_NonCombat_Frail_Follower.acr",
+             "groupName": "Actor",
+             "name": "NPC_QST_X1_Neyrelle_NonCombat_Frail_Follower"
+            }
            }
           ]
          },
@@ -1152,7 +1326,17 @@
         "hImageHandle": 0
        },
        "unk_7dd76d1": 0,
-       "arSnonameTokens": [],
+       "arSnonameTokens": [
+        {
+         "__raw__": 1931910,
+         "__group__": 1,
+         "__type__": "DT_SNO_NAME",
+         "__typeHash__": 3339108615,
+         "__targetFileName__": "base/meta/Actor/NPC_QST_X1_Neyrelle_NonCombat_Frail_Follower.acr",
+         "groupName": "Actor",
+         "name": "NPC_QST_X1_Neyrelle_NonCombat_Frail_Follower"
+        }
+       ],
        "szFontColorOverride": "",
        "snoOptionalPreloadCondition": null,
        "unk_9c1ea4f": 0,
@@ -1626,20 +1810,35 @@
      "__type__": "QuestObjectiveSet",
      "__typeHash__": 297390777,
      "dwUID": 153,
-     "ptLink": [],
+     "ptLink": [
+      {
+       "__type__": "QuestObjectiveSetLink",
+       "__typeHash__": 730988871,
+       "dwDestinationPhaseUID": 45,
+       "eLinkType": 1
+      }
+     ],
      "arCallbacks": [
       {
        "__type__": "QuestCallback",
        "__typeHash__": 3067360607,
        "dwUID": 167,
-       "dwFlags": 2,
+       "dwFlags": 7,
        "nNeeded": 1,
        "tScriptMessageMap": {
         "__type__": "ScriptMessageMap",
         "__typeHash__": 2935055576,
         "eEventType": 83,
         "dwListenerFlags": 0,
-        "snoCondition": null,
+        "snoCondition": {
+         "__raw__": 2147847,
+         "__group__": 51,
+         "__type__": "DT_SNO",
+         "__typeHash__": 2764331143,
+         "__targetFileName__": "base/meta/Condition/QST_Naha_FiveHills_02_IsNeyInStatueVol_01.cnd",
+         "groupName": "Condition",
+         "name": "QST_Naha_FiveHills_02_IsNeyInStatueVol_01"
+        },
         "unk_c3ba01d": false,
         "flCooldownSeconds": 0,
         "arEventFilters": [
@@ -1751,263 +1950,23 @@
       {
        "__type__": "QuestCallback",
        "__typeHash__": 3067360607,
-       "dwUID": 170,
-       "dwFlags": 6,
-       "nNeeded": 1,
-       "tScriptMessageMap": {
-        "__type__": "ScriptMessageMap",
-        "__typeHash__": 2935055576,
-        "eEventType": 11,
-        "dwListenerFlags": 8,
-        "snoCondition": null,
-        "unk_c3ba01d": false,
-        "flCooldownSeconds": 0,
-        "arEventFilters": [
-         {
-          "__type__": "ScriptMessageMapFilter",
-          "__typeHash__": 3179414430,
-          "tKey": 2304262567,
-          "eVariableType": 1,
-          "pMessageFilter": [
-           {
-            "__type__": "ScriptEventParamAllowAny",
-            "__typeHash__": 1295852463,
-            "dwType": 1295852463,
-            "eParamType": 0,
-            "dwPad": 0
-           }
-          ]
-         },
-         {
-          "__type__": "ScriptMessageMapFilter",
-          "__typeHash__": 3179414430,
-          "tKey": 1739417742,
-          "eVariableType": 4,
-          "pMessageFilter": [
-           {
-            "__type__": "ScriptEventParamConversation",
-            "__typeHash__": 2087454851,
-            "dwType": 2087454851,
-            "eParamType": 10,
-            "dwPad": 0,
-            "snoConversation": {
-             "__raw__": 1896604,
-             "__group__": 12,
-             "__type__": "DT_SNO",
-             "__typeHash__": 2764331143,
-             "__targetFileName__": "base/meta/Conversation/QST_Naha_FiveHills_LStatue1.cnv",
-             "groupName": "Conversation",
-             "name": "QST_Naha_FiveHills_LStatue1"
-            }
-           }
-          ]
-         },
-         {
-          "__type__": "ScriptMessageMapFilter",
-          "__typeHash__": 3179414430,
-          "tKey": 1387993843,
-          "eVariableType": 1,
-          "pMessageFilter": [
-           {
-            "__type__": "ScriptEventParamAllowAny",
-            "__typeHash__": 1295852463,
-            "dwType": 1295852463,
-            "eParamType": 0,
-            "dwPad": 0
-           }
-          ]
-         }
-        ],
-        "unk_492729e": [],
-        "dwEventEntryHash": 4035304214
-       },
-       "eIndicatorType": 3,
-       "snoWorld": {
-        "__raw__": 69068,
-        "__group__": 48,
-        "__type__": "DT_SNO",
-        "__typeHash__": 2764331143,
-        "__targetFileName__": "base/meta/World/Sanctuary_Eastern_Continent.wrl",
-        "groupName": "World",
-        "name": "Sanctuary_Eastern_Continent"
-       },
-       "tRegionDefault": {
-        "__type__": "QuestCallbackRegion",
-        "__typeHash__": 2884204419,
-        "eType": 0,
-        "vPolygonPoints": [],
-        "vCenterPos": {
-         "x": 0,
-         "y": 0
-        },
-        "flRadius": 0,
-        "bValid": false,
-        "bManuallySpecified": false
-       },
-       "arRegionOverrides": [],
-       "nValidRegionOverrides": 0,
-       "arLevelAreas": [],
-       "arSubzones": [],
-       "eProgressDisplayStyle": 0,
-       "eProgressBarSource": 0,
-       "unk_301d18": false,
-       "unk_896a0c5": {
-        "__type__": "UIImageHandleReference",
-        "__typeHash__": 1797021084,
-        "hImageHandle": 0
-       },
-       "unk_7dd76d1": 0,
-       "arSnonameTokens": [],
-       "szFontColorOverride": "",
-       "snoOptionalPreloadCondition": null,
-       "unk_9c1ea4f": 0,
-       "vecPositionOffset": {
-        "x": 0,
-        "y": 0
-       },
-       "unk_9d6e5b3": false,
-       "unk_b3ec93": 0,
-       "unk_5698d08": false,
-       "unk_77b5dc7": false,
-       "unk_146ba45": 0,
-       "snoHeaderDisplayCondition": null
-      },
-      {
-       "__type__": "QuestCallback",
-       "__typeHash__": 3067360607,
-       "dwUID": 204,
-       "dwFlags": 6,
-       "nNeeded": 1,
-       "tScriptMessageMap": {
-        "__type__": "ScriptMessageMap",
-        "__typeHash__": 2935055576,
-        "eEventType": 11,
-        "dwListenerFlags": 8,
-        "snoCondition": null,
-        "unk_c3ba01d": false,
-        "flCooldownSeconds": 0,
-        "arEventFilters": [
-         {
-          "__type__": "ScriptMessageMapFilter",
-          "__typeHash__": 3179414430,
-          "tKey": 2304262567,
-          "eVariableType": 1,
-          "pMessageFilter": [
-           {
-            "__type__": "ScriptEventParamAllowAny",
-            "__typeHash__": 1295852463,
-            "dwType": 1295852463,
-            "eParamType": 0,
-            "dwPad": 0
-           }
-          ]
-         },
-         {
-          "__type__": "ScriptMessageMapFilter",
-          "__typeHash__": 3179414430,
-          "tKey": 1739417742,
-          "eVariableType": 4,
-          "pMessageFilter": [
-           {
-            "__type__": "ScriptEventParamConversation",
-            "__typeHash__": 2087454851,
-            "dwType": 2087454851,
-            "eParamType": 10,
-            "dwPad": 0,
-            "snoConversation": {
-             "__raw__": 2104005,
-             "__group__": 12,
-             "__type__": "DT_SNO",
-             "__typeHash__": 2764331143,
-             "__targetFileName__": "base/meta/Conversation/QST_Naha_FiveHills_LStatue1a.cnv",
-             "groupName": "Conversation",
-             "name": "QST_Naha_FiveHills_LStatue1a"
-            }
-           }
-          ]
-         },
-         {
-          "__type__": "ScriptMessageMapFilter",
-          "__typeHash__": 3179414430,
-          "tKey": 1387993843,
-          "eVariableType": 1,
-          "pMessageFilter": [
-           {
-            "__type__": "ScriptEventParamAllowAny",
-            "__typeHash__": 1295852463,
-            "dwType": 1295852463,
-            "eParamType": 0,
-            "dwPad": 0
-           }
-          ]
-         }
-        ],
-        "unk_492729e": [],
-        "dwEventEntryHash": 4035304214
-       },
-       "eIndicatorType": 3,
-       "snoWorld": {
-        "__raw__": 69068,
-        "__group__": 48,
-        "__type__": "DT_SNO",
-        "__typeHash__": 2764331143,
-        "__targetFileName__": "base/meta/World/Sanctuary_Eastern_Continent.wrl",
-        "groupName": "World",
-        "name": "Sanctuary_Eastern_Continent"
-       },
-       "tRegionDefault": {
-        "__type__": "QuestCallbackRegion",
-        "__typeHash__": 2884204419,
-        "eType": 0,
-        "vPolygonPoints": [],
-        "vCenterPos": {
-         "x": 0,
-         "y": 0
-        },
-        "flRadius": 0,
-        "bValid": false,
-        "bManuallySpecified": false
-       },
-       "arRegionOverrides": [],
-       "nValidRegionOverrides": 0,
-       "arLevelAreas": [],
-       "arSubzones": [],
-       "eProgressDisplayStyle": 0,
-       "eProgressBarSource": 0,
-       "unk_301d18": false,
-       "unk_896a0c5": {
-        "__type__": "UIImageHandleReference",
-        "__typeHash__": 1797021084,
-        "hImageHandle": 0
-       },
-       "unk_7dd76d1": 0,
-       "arSnonameTokens": [],
-       "szFontColorOverride": "",
-       "snoOptionalPreloadCondition": null,
-       "unk_9c1ea4f": 0,
-       "vecPositionOffset": {
-        "x": 0,
-        "y": 0
-       },
-       "unk_9d6e5b3": false,
-       "unk_b3ec93": 0,
-       "unk_5698d08": false,
-       "unk_77b5dc7": false,
-       "unk_146ba45": 0,
-       "snoHeaderDisplayCondition": null
-      },
-      {
-       "__type__": "QuestCallback",
-       "__typeHash__": 3067360607,
        "dwUID": 168,
-       "dwFlags": 2,
+       "dwFlags": 7,
        "nNeeded": 1,
        "tScriptMessageMap": {
         "__type__": "ScriptMessageMap",
         "__typeHash__": 2935055576,
         "eEventType": 83,
         "dwListenerFlags": 0,
-        "snoCondition": null,
+        "snoCondition": {
+         "__raw__": 2147848,
+         "__group__": 51,
+         "__type__": "DT_SNO",
+         "__typeHash__": 2764331143,
+         "__targetFileName__": "base/meta/Condition/QST_Naha_FiveHills_02_IsNeyInStatueVol_02.cnd",
+         "groupName": "Condition",
+         "name": "QST_Naha_FiveHills_02_IsNeyInStatueVol_02"
+        },
         "unk_c3ba01d": false,
         "flCooldownSeconds": 0,
         "arEventFilters": [
@@ -2119,263 +2078,23 @@
       {
        "__type__": "QuestCallback",
        "__typeHash__": 3067360607,
-       "dwUID": 205,
-       "dwFlags": 6,
-       "nNeeded": 1,
-       "tScriptMessageMap": {
-        "__type__": "ScriptMessageMap",
-        "__typeHash__": 2935055576,
-        "eEventType": 11,
-        "dwListenerFlags": 8,
-        "snoCondition": null,
-        "unk_c3ba01d": false,
-        "flCooldownSeconds": 0,
-        "arEventFilters": [
-         {
-          "__type__": "ScriptMessageMapFilter",
-          "__typeHash__": 3179414430,
-          "tKey": 2304262567,
-          "eVariableType": 1,
-          "pMessageFilter": [
-           {
-            "__type__": "ScriptEventParamAllowAny",
-            "__typeHash__": 1295852463,
-            "dwType": 1295852463,
-            "eParamType": 0,
-            "dwPad": 0
-           }
-          ]
-         },
-         {
-          "__type__": "ScriptMessageMapFilter",
-          "__typeHash__": 3179414430,
-          "tKey": 1739417742,
-          "eVariableType": 4,
-          "pMessageFilter": [
-           {
-            "__type__": "ScriptEventParamConversation",
-            "__typeHash__": 2087454851,
-            "dwType": 2087454851,
-            "eParamType": 10,
-            "dwPad": 0,
-            "snoConversation": {
-             "__raw__": 1896608,
-             "__group__": 12,
-             "__type__": "DT_SNO",
-             "__typeHash__": 2764331143,
-             "__targetFileName__": "base/meta/Conversation/QST_Naha_FiveHills_LStatue2.cnv",
-             "groupName": "Conversation",
-             "name": "QST_Naha_FiveHills_LStatue2"
-            }
-           }
-          ]
-         },
-         {
-          "__type__": "ScriptMessageMapFilter",
-          "__typeHash__": 3179414430,
-          "tKey": 1387993843,
-          "eVariableType": 1,
-          "pMessageFilter": [
-           {
-            "__type__": "ScriptEventParamAllowAny",
-            "__typeHash__": 1295852463,
-            "dwType": 1295852463,
-            "eParamType": 0,
-            "dwPad": 0
-           }
-          ]
-         }
-        ],
-        "unk_492729e": [],
-        "dwEventEntryHash": 4035304214
-       },
-       "eIndicatorType": 3,
-       "snoWorld": {
-        "__raw__": 69068,
-        "__group__": 48,
-        "__type__": "DT_SNO",
-        "__typeHash__": 2764331143,
-        "__targetFileName__": "base/meta/World/Sanctuary_Eastern_Continent.wrl",
-        "groupName": "World",
-        "name": "Sanctuary_Eastern_Continent"
-       },
-       "tRegionDefault": {
-        "__type__": "QuestCallbackRegion",
-        "__typeHash__": 2884204419,
-        "eType": 0,
-        "vPolygonPoints": [],
-        "vCenterPos": {
-         "x": 0,
-         "y": 0
-        },
-        "flRadius": 0,
-        "bValid": false,
-        "bManuallySpecified": false
-       },
-       "arRegionOverrides": [],
-       "nValidRegionOverrides": 0,
-       "arLevelAreas": [],
-       "arSubzones": [],
-       "eProgressDisplayStyle": 0,
-       "eProgressBarSource": 0,
-       "unk_301d18": false,
-       "unk_896a0c5": {
-        "__type__": "UIImageHandleReference",
-        "__typeHash__": 1797021084,
-        "hImageHandle": 0
-       },
-       "unk_7dd76d1": 0,
-       "arSnonameTokens": [],
-       "szFontColorOverride": "",
-       "snoOptionalPreloadCondition": null,
-       "unk_9c1ea4f": 0,
-       "vecPositionOffset": {
-        "x": 0,
-        "y": 0
-       },
-       "unk_9d6e5b3": false,
-       "unk_b3ec93": 0,
-       "unk_5698d08": false,
-       "unk_77b5dc7": false,
-       "unk_146ba45": 0,
-       "snoHeaderDisplayCondition": null
-      },
-      {
-       "__type__": "QuestCallback",
-       "__typeHash__": 3067360607,
-       "dwUID": 206,
-       "dwFlags": 6,
-       "nNeeded": 1,
-       "tScriptMessageMap": {
-        "__type__": "ScriptMessageMap",
-        "__typeHash__": 2935055576,
-        "eEventType": 11,
-        "dwListenerFlags": 8,
-        "snoCondition": null,
-        "unk_c3ba01d": false,
-        "flCooldownSeconds": 0,
-        "arEventFilters": [
-         {
-          "__type__": "ScriptMessageMapFilter",
-          "__typeHash__": 3179414430,
-          "tKey": 2304262567,
-          "eVariableType": 1,
-          "pMessageFilter": [
-           {
-            "__type__": "ScriptEventParamAllowAny",
-            "__typeHash__": 1295852463,
-            "dwType": 1295852463,
-            "eParamType": 0,
-            "dwPad": 0
-           }
-          ]
-         },
-         {
-          "__type__": "ScriptMessageMapFilter",
-          "__typeHash__": 3179414430,
-          "tKey": 1739417742,
-          "eVariableType": 4,
-          "pMessageFilter": [
-           {
-            "__type__": "ScriptEventParamConversation",
-            "__typeHash__": 2087454851,
-            "dwType": 2087454851,
-            "eParamType": 10,
-            "dwPad": 0,
-            "snoConversation": {
-             "__raw__": 2104009,
-             "__group__": 12,
-             "__type__": "DT_SNO",
-             "__typeHash__": 2764331143,
-             "__targetFileName__": "base/meta/Conversation/QST_Naha_FiveHills_LStatue2a.cnv",
-             "groupName": "Conversation",
-             "name": "QST_Naha_FiveHills_LStatue2a"
-            }
-           }
-          ]
-         },
-         {
-          "__type__": "ScriptMessageMapFilter",
-          "__typeHash__": 3179414430,
-          "tKey": 1387993843,
-          "eVariableType": 1,
-          "pMessageFilter": [
-           {
-            "__type__": "ScriptEventParamAllowAny",
-            "__typeHash__": 1295852463,
-            "dwType": 1295852463,
-            "eParamType": 0,
-            "dwPad": 0
-           }
-          ]
-         }
-        ],
-        "unk_492729e": [],
-        "dwEventEntryHash": 4035304214
-       },
-       "eIndicatorType": 3,
-       "snoWorld": {
-        "__raw__": 69068,
-        "__group__": 48,
-        "__type__": "DT_SNO",
-        "__typeHash__": 2764331143,
-        "__targetFileName__": "base/meta/World/Sanctuary_Eastern_Continent.wrl",
-        "groupName": "World",
-        "name": "Sanctuary_Eastern_Continent"
-       },
-       "tRegionDefault": {
-        "__type__": "QuestCallbackRegion",
-        "__typeHash__": 2884204419,
-        "eType": 0,
-        "vPolygonPoints": [],
-        "vCenterPos": {
-         "x": 0,
-         "y": 0
-        },
-        "flRadius": 0,
-        "bValid": false,
-        "bManuallySpecified": false
-       },
-       "arRegionOverrides": [],
-       "nValidRegionOverrides": 0,
-       "arLevelAreas": [],
-       "arSubzones": [],
-       "eProgressDisplayStyle": 0,
-       "eProgressBarSource": 0,
-       "unk_301d18": false,
-       "unk_896a0c5": {
-        "__type__": "UIImageHandleReference",
-        "__typeHash__": 1797021084,
-        "hImageHandle": 0
-       },
-       "unk_7dd76d1": 0,
-       "arSnonameTokens": [],
-       "szFontColorOverride": "",
-       "snoOptionalPreloadCondition": null,
-       "unk_9c1ea4f": 0,
-       "vecPositionOffset": {
-        "x": 0,
-        "y": 0
-       },
-       "unk_9d6e5b3": false,
-       "unk_b3ec93": 0,
-       "unk_5698d08": false,
-       "unk_77b5dc7": false,
-       "unk_146ba45": 0,
-       "snoHeaderDisplayCondition": null
-      },
-      {
-       "__type__": "QuestCallback",
-       "__typeHash__": 3067360607,
        "dwUID": 169,
-       "dwFlags": 2,
+       "dwFlags": 7,
        "nNeeded": 1,
        "tScriptMessageMap": {
         "__type__": "ScriptMessageMap",
         "__typeHash__": 2935055576,
         "eEventType": 83,
         "dwListenerFlags": 0,
-        "snoCondition": null,
+        "snoCondition": {
+         "__raw__": 2147849,
+         "__group__": 51,
+         "__type__": "DT_SNO",
+         "__typeHash__": 2764331143,
+         "__targetFileName__": "base/meta/Condition/QST_Naha_FiveHills_02_IsNeyInStatueVol_03.cnd",
+         "groupName": "Condition",
+         "name": "QST_Naha_FiveHills_02_IsNeyInStatueVol_03"
+        },
         "unk_c3ba01d": false,
         "flCooldownSeconds": 0,
         "arEventFilters": [
@@ -2487,256 +2206,8 @@
       {
        "__type__": "QuestCallback",
        "__typeHash__": 3067360607,
-       "dwUID": 207,
-       "dwFlags": 6,
-       "nNeeded": 1,
-       "tScriptMessageMap": {
-        "__type__": "ScriptMessageMap",
-        "__typeHash__": 2935055576,
-        "eEventType": 11,
-        "dwListenerFlags": 8,
-        "snoCondition": null,
-        "unk_c3ba01d": false,
-        "flCooldownSeconds": 0,
-        "arEventFilters": [
-         {
-          "__type__": "ScriptMessageMapFilter",
-          "__typeHash__": 3179414430,
-          "tKey": 2304262567,
-          "eVariableType": 1,
-          "pMessageFilter": [
-           {
-            "__type__": "ScriptEventParamAllowAny",
-            "__typeHash__": 1295852463,
-            "dwType": 1295852463,
-            "eParamType": 0,
-            "dwPad": 0
-           }
-          ]
-         },
-         {
-          "__type__": "ScriptMessageMapFilter",
-          "__typeHash__": 3179414430,
-          "tKey": 1739417742,
-          "eVariableType": 4,
-          "pMessageFilter": [
-           {
-            "__type__": "ScriptEventParamConversation",
-            "__typeHash__": 2087454851,
-            "dwType": 2087454851,
-            "eParamType": 10,
-            "dwPad": 0,
-            "snoConversation": {
-             "__raw__": 1896612,
-             "__group__": 12,
-             "__type__": "DT_SNO",
-             "__typeHash__": 2764331143,
-             "__targetFileName__": "base/meta/Conversation/QST_Naha_FiveHills_LStatue3.cnv",
-             "groupName": "Conversation",
-             "name": "QST_Naha_FiveHills_LStatue3"
-            }
-           }
-          ]
-         },
-         {
-          "__type__": "ScriptMessageMapFilter",
-          "__typeHash__": 3179414430,
-          "tKey": 1387993843,
-          "eVariableType": 1,
-          "pMessageFilter": [
-           {
-            "__type__": "ScriptEventParamAllowAny",
-            "__typeHash__": 1295852463,
-            "dwType": 1295852463,
-            "eParamType": 0,
-            "dwPad": 0
-           }
-          ]
-         }
-        ],
-        "unk_492729e": [],
-        "dwEventEntryHash": 4035304214
-       },
-       "eIndicatorType": 3,
-       "snoWorld": {
-        "__raw__": 69068,
-        "__group__": 48,
-        "__type__": "DT_SNO",
-        "__typeHash__": 2764331143,
-        "__targetFileName__": "base/meta/World/Sanctuary_Eastern_Continent.wrl",
-        "groupName": "World",
-        "name": "Sanctuary_Eastern_Continent"
-       },
-       "tRegionDefault": {
-        "__type__": "QuestCallbackRegion",
-        "__typeHash__": 2884204419,
-        "eType": 0,
-        "vPolygonPoints": [],
-        "vCenterPos": {
-         "x": 0,
-         "y": 0
-        },
-        "flRadius": 0,
-        "bValid": false,
-        "bManuallySpecified": false
-       },
-       "arRegionOverrides": [],
-       "nValidRegionOverrides": 0,
-       "arLevelAreas": [],
-       "arSubzones": [],
-       "eProgressDisplayStyle": 0,
-       "eProgressBarSource": 0,
-       "unk_301d18": false,
-       "unk_896a0c5": {
-        "__type__": "UIImageHandleReference",
-        "__typeHash__": 1797021084,
-        "hImageHandle": 0
-       },
-       "unk_7dd76d1": 0,
-       "arSnonameTokens": [],
-       "szFontColorOverride": "",
-       "snoOptionalPreloadCondition": null,
-       "unk_9c1ea4f": 0,
-       "vecPositionOffset": {
-        "x": 0,
-        "y": 0
-       },
-       "unk_9d6e5b3": false,
-       "unk_b3ec93": 0,
-       "unk_5698d08": false,
-       "unk_77b5dc7": false,
-       "unk_146ba45": 0,
-       "snoHeaderDisplayCondition": null
-      },
-      {
-       "__type__": "QuestCallback",
-       "__typeHash__": 3067360607,
-       "dwUID": 208,
-       "dwFlags": 6,
-       "nNeeded": 1,
-       "tScriptMessageMap": {
-        "__type__": "ScriptMessageMap",
-        "__typeHash__": 2935055576,
-        "eEventType": 11,
-        "dwListenerFlags": 8,
-        "snoCondition": null,
-        "unk_c3ba01d": false,
-        "flCooldownSeconds": 0,
-        "arEventFilters": [
-         {
-          "__type__": "ScriptMessageMapFilter",
-          "__typeHash__": 3179414430,
-          "tKey": 2304262567,
-          "eVariableType": 1,
-          "pMessageFilter": [
-           {
-            "__type__": "ScriptEventParamAllowAny",
-            "__typeHash__": 1295852463,
-            "dwType": 1295852463,
-            "eParamType": 0,
-            "dwPad": 0
-           }
-          ]
-         },
-         {
-          "__type__": "ScriptMessageMapFilter",
-          "__typeHash__": 3179414430,
-          "tKey": 1739417742,
-          "eVariableType": 4,
-          "pMessageFilter": [
-           {
-            "__type__": "ScriptEventParamConversation",
-            "__typeHash__": 2087454851,
-            "dwType": 2087454851,
-            "eParamType": 10,
-            "dwPad": 0,
-            "snoConversation": {
-             "__raw__": 2104013,
-             "__group__": 12,
-             "__type__": "DT_SNO",
-             "__typeHash__": 2764331143,
-             "__targetFileName__": "base/meta/Conversation/QST_Naha_FiveHills_LStatue3a.cnv",
-             "groupName": "Conversation",
-             "name": "QST_Naha_FiveHills_LStatue3a"
-            }
-           }
-          ]
-         },
-         {
-          "__type__": "ScriptMessageMapFilter",
-          "__typeHash__": 3179414430,
-          "tKey": 1387993843,
-          "eVariableType": 1,
-          "pMessageFilter": [
-           {
-            "__type__": "ScriptEventParamAllowAny",
-            "__typeHash__": 1295852463,
-            "dwType": 1295852463,
-            "eParamType": 0,
-            "dwPad": 0
-           }
-          ]
-         }
-        ],
-        "unk_492729e": [],
-        "dwEventEntryHash": 4035304214
-       },
-       "eIndicatorType": 3,
-       "snoWorld": {
-        "__raw__": 69068,
-        "__group__": 48,
-        "__type__": "DT_SNO",
-        "__typeHash__": 2764331143,
-        "__targetFileName__": "base/meta/World/Sanctuary_Eastern_Continent.wrl",
-        "groupName": "World",
-        "name": "Sanctuary_Eastern_Continent"
-       },
-       "tRegionDefault": {
-        "__type__": "QuestCallbackRegion",
-        "__typeHash__": 2884204419,
-        "eType": 0,
-        "vPolygonPoints": [],
-        "vCenterPos": {
-         "x": 0,
-         "y": 0
-        },
-        "flRadius": 0,
-        "bValid": false,
-        "bManuallySpecified": false
-       },
-       "arRegionOverrides": [],
-       "nValidRegionOverrides": 0,
-       "arLevelAreas": [],
-       "arSubzones": [],
-       "eProgressDisplayStyle": 0,
-       "eProgressBarSource": 0,
-       "unk_301d18": false,
-       "unk_896a0c5": {
-        "__type__": "UIImageHandleReference",
-        "__typeHash__": 1797021084,
-        "hImageHandle": 0
-       },
-       "unk_7dd76d1": 0,
-       "arSnonameTokens": [],
-       "szFontColorOverride": "",
-       "snoOptionalPreloadCondition": null,
-       "unk_9c1ea4f": 0,
-       "vecPositionOffset": {
-        "x": 0,
-        "y": 0
-       },
-       "unk_9d6e5b3": false,
-       "unk_b3ec93": 0,
-       "unk_5698d08": false,
-       "unk_77b5dc7": false,
-       "unk_146ba45": 0,
-       "snoHeaderDisplayCondition": null
-      },
-      {
-       "__type__": "QuestCallback",
-       "__typeHash__": 3067360607,
        "dwUID": 154,
-       "dwFlags": 0,
+       "dwFlags": 32,
        "nNeeded": 3,
        "tScriptMessageMap": {
         "__type__": "ScriptMessageMap",
@@ -2822,450 +2293,6 @@
         }
        ],
        "nValidRegionOverrides": 1,
-       "arLevelAreas": [],
-       "arSubzones": [],
-       "eProgressDisplayStyle": 0,
-       "eProgressBarSource": 0,
-       "unk_301d18": false,
-       "unk_896a0c5": {
-        "__type__": "UIImageHandleReference",
-        "__typeHash__": 1797021084,
-        "hImageHandle": 0
-       },
-       "unk_7dd76d1": 0,
-       "arSnonameTokens": [],
-       "szFontColorOverride": "",
-       "snoOptionalPreloadCondition": null,
-       "unk_9c1ea4f": 0,
-       "vecPositionOffset": {
-        "x": 0,
-        "y": 0
-       },
-       "unk_9d6e5b3": false,
-       "unk_b3ec93": 0,
-       "unk_5698d08": false,
-       "unk_77b5dc7": false,
-       "unk_146ba45": 0,
-       "snoHeaderDisplayCondition": null
-      }
-     ],
-     "bGiveFirstTimeReward": false,
-     "tFirstTimeReward": {
-      "__type__": "QuestReward",
-      "__typeHash__": 3387295447,
-      "snoTrackedReward": null
-     },
-     "arQuestItemsToRemove": [],
-     "snoFirstTimeRewardDisplayItem": null
-    },
-    {
-     "__type__": "QuestObjectiveSet",
-     "__typeHash__": 297390777,
-     "dwUID": 195,
-     "ptLink": [
-      {
-       "__type__": "QuestObjectiveSetLink",
-       "__typeHash__": 730988871,
-       "dwDestinationPhaseUID": 45,
-       "eLinkType": 1
-      }
-     ],
-     "arCallbacks": [
-      {
-       "__type__": "QuestCallback",
-       "__typeHash__": 3067360607,
-       "dwUID": 194,
-       "dwFlags": 2,
-       "nNeeded": 1,
-       "tScriptMessageMap": {
-        "__type__": "ScriptMessageMap",
-        "__typeHash__": 2935055576,
-        "eEventType": 11,
-        "dwListenerFlags": 8,
-        "snoCondition": null,
-        "unk_c3ba01d": false,
-        "flCooldownSeconds": 0,
-        "arEventFilters": [
-         {
-          "__type__": "ScriptMessageMapFilter",
-          "__typeHash__": 3179414430,
-          "tKey": 2304262567,
-          "eVariableType": 1,
-          "pMessageFilter": [
-           {
-            "__type__": "ScriptEventParamAllowAny",
-            "__typeHash__": 1295852463,
-            "dwType": 1295852463,
-            "eParamType": 0,
-            "dwPad": 0
-           }
-          ]
-         },
-         {
-          "__type__": "ScriptMessageMapFilter",
-          "__typeHash__": 3179414430,
-          "tKey": 1739417742,
-          "eVariableType": 4,
-          "pMessageFilter": [
-           {
-            "__type__": "ScriptEventParamConversation",
-            "__typeHash__": 2087454851,
-            "dwType": 2087454851,
-            "eParamType": 10,
-            "dwPad": 0,
-            "snoConversation": {
-             "__raw__": 2104005,
-             "__group__": 12,
-             "__type__": "DT_SNO",
-             "__typeHash__": 2764331143,
-             "__targetFileName__": "base/meta/Conversation/QST_Naha_FiveHills_LStatue1a.cnv",
-             "groupName": "Conversation",
-             "name": "QST_Naha_FiveHills_LStatue1a"
-            }
-           }
-          ]
-         },
-         {
-          "__type__": "ScriptMessageMapFilter",
-          "__typeHash__": 3179414430,
-          "tKey": 1387993843,
-          "eVariableType": 1,
-          "pMessageFilter": [
-           {
-            "__type__": "ScriptEventParamPlayer",
-            "__typeHash__": 106673333,
-            "dwType": 106673333,
-            "eParamType": 7,
-            "dwPad": 0,
-            "bIsPlayer": true
-           }
-          ]
-         }
-        ],
-        "unk_492729e": [],
-        "dwEventEntryHash": 4035304214
-       },
-       "eIndicatorType": 3,
-       "snoWorld": {
-        "__raw__": 69068,
-        "__group__": 48,
-        "__type__": "DT_SNO",
-        "__typeHash__": 2764331143,
-        "__targetFileName__": "base/meta/World/Sanctuary_Eastern_Continent.wrl",
-        "groupName": "World",
-        "name": "Sanctuary_Eastern_Continent"
-       },
-       "tRegionDefault": {
-        "__type__": "QuestCallbackRegion",
-        "__typeHash__": 2884204419,
-        "eType": 0,
-        "vPolygonPoints": [],
-        "vCenterPos": {
-         "x": 0,
-         "y": 0
-        },
-        "flRadius": 0,
-        "bValid": false,
-        "bManuallySpecified": false
-       },
-       "arRegionOverrides": [],
-       "nValidRegionOverrides": 0,
-       "arLevelAreas": [],
-       "arSubzones": [],
-       "eProgressDisplayStyle": 0,
-       "eProgressBarSource": 0,
-       "unk_301d18": false,
-       "unk_896a0c5": {
-        "__type__": "UIImageHandleReference",
-        "__typeHash__": 1797021084,
-        "hImageHandle": 0
-       },
-       "unk_7dd76d1": 0,
-       "arSnonameTokens": [],
-       "szFontColorOverride": "",
-       "snoOptionalPreloadCondition": null,
-       "unk_9c1ea4f": 0,
-       "vecPositionOffset": {
-        "x": 0,
-        "y": 0
-       },
-       "unk_9d6e5b3": false,
-       "unk_b3ec93": 0,
-       "unk_5698d08": false,
-       "unk_77b5dc7": false,
-       "unk_146ba45": 0,
-       "snoHeaderDisplayCondition": null
-      }
-     ],
-     "bGiveFirstTimeReward": false,
-     "tFirstTimeReward": {
-      "__type__": "QuestReward",
-      "__typeHash__": 3387295447,
-      "snoTrackedReward": null
-     },
-     "arQuestItemsToRemove": [],
-     "snoFirstTimeRewardDisplayItem": null
-    },
-    {
-     "__type__": "QuestObjectiveSet",
-     "__typeHash__": 297390777,
-     "dwUID": 197,
-     "ptLink": [
-      {
-       "__type__": "QuestObjectiveSetLink",
-       "__typeHash__": 730988871,
-       "dwDestinationPhaseUID": 45,
-       "eLinkType": 1
-      }
-     ],
-     "arCallbacks": [
-      {
-       "__type__": "QuestCallback",
-       "__typeHash__": 3067360607,
-       "dwUID": 198,
-       "dwFlags": 2,
-       "nNeeded": 1,
-       "tScriptMessageMap": {
-        "__type__": "ScriptMessageMap",
-        "__typeHash__": 2935055576,
-        "eEventType": 11,
-        "dwListenerFlags": 8,
-        "snoCondition": null,
-        "unk_c3ba01d": false,
-        "flCooldownSeconds": 0,
-        "arEventFilters": [
-         {
-          "__type__": "ScriptMessageMapFilter",
-          "__typeHash__": 3179414430,
-          "tKey": 2304262567,
-          "eVariableType": 1,
-          "pMessageFilter": [
-           {
-            "__type__": "ScriptEventParamAllowAny",
-            "__typeHash__": 1295852463,
-            "dwType": 1295852463,
-            "eParamType": 0,
-            "dwPad": 0
-           }
-          ]
-         },
-         {
-          "__type__": "ScriptMessageMapFilter",
-          "__typeHash__": 3179414430,
-          "tKey": 1739417742,
-          "eVariableType": 4,
-          "pMessageFilter": [
-           {
-            "__type__": "ScriptEventParamConversation",
-            "__typeHash__": 2087454851,
-            "dwType": 2087454851,
-            "eParamType": 10,
-            "dwPad": 0,
-            "snoConversation": {
-             "__raw__": 2104009,
-             "__group__": 12,
-             "__type__": "DT_SNO",
-             "__typeHash__": 2764331143,
-             "__targetFileName__": "base/meta/Conversation/QST_Naha_FiveHills_LStatue2a.cnv",
-             "groupName": "Conversation",
-             "name": "QST_Naha_FiveHills_LStatue2a"
-            }
-           }
-          ]
-         },
-         {
-          "__type__": "ScriptMessageMapFilter",
-          "__typeHash__": 3179414430,
-          "tKey": 1387993843,
-          "eVariableType": 1,
-          "pMessageFilter": [
-           {
-            "__type__": "ScriptEventParamPlayer",
-            "__typeHash__": 106673333,
-            "dwType": 106673333,
-            "eParamType": 7,
-            "dwPad": 0,
-            "bIsPlayer": true
-           }
-          ]
-         }
-        ],
-        "unk_492729e": [],
-        "dwEventEntryHash": 4035304214
-       },
-       "eIndicatorType": 3,
-       "snoWorld": {
-        "__raw__": 69068,
-        "__group__": 48,
-        "__type__": "DT_SNO",
-        "__typeHash__": 2764331143,
-        "__targetFileName__": "base/meta/World/Sanctuary_Eastern_Continent.wrl",
-        "groupName": "World",
-        "name": "Sanctuary_Eastern_Continent"
-       },
-       "tRegionDefault": {
-        "__type__": "QuestCallbackRegion",
-        "__typeHash__": 2884204419,
-        "eType": 0,
-        "vPolygonPoints": [],
-        "vCenterPos": {
-         "x": 0,
-         "y": 0
-        },
-        "flRadius": 0,
-        "bValid": false,
-        "bManuallySpecified": false
-       },
-       "arRegionOverrides": [],
-       "nValidRegionOverrides": 0,
-       "arLevelAreas": [],
-       "arSubzones": [],
-       "eProgressDisplayStyle": 0,
-       "eProgressBarSource": 0,
-       "unk_301d18": false,
-       "unk_896a0c5": {
-        "__type__": "UIImageHandleReference",
-        "__typeHash__": 1797021084,
-        "hImageHandle": 0
-       },
-       "unk_7dd76d1": 0,
-       "arSnonameTokens": [],
-       "szFontColorOverride": "",
-       "snoOptionalPreloadCondition": null,
-       "unk_9c1ea4f": 0,
-       "vecPositionOffset": {
-        "x": 0,
-        "y": 0
-       },
-       "unk_9d6e5b3": false,
-       "unk_b3ec93": 0,
-       "unk_5698d08": false,
-       "unk_77b5dc7": false,
-       "unk_146ba45": 0,
-       "snoHeaderDisplayCondition": null
-      }
-     ],
-     "bGiveFirstTimeReward": false,
-     "tFirstTimeReward": {
-      "__type__": "QuestReward",
-      "__typeHash__": 3387295447,
-      "snoTrackedReward": null
-     },
-     "arQuestItemsToRemove": [],
-     "snoFirstTimeRewardDisplayItem": null
-    },
-    {
-     "__type__": "QuestObjectiveSet",
-     "__typeHash__": 297390777,
-     "dwUID": 199,
-     "ptLink": [
-      {
-       "__type__": "QuestObjectiveSetLink",
-       "__typeHash__": 730988871,
-       "dwDestinationPhaseUID": 45,
-       "eLinkType": 1
-      }
-     ],
-     "arCallbacks": [
-      {
-       "__type__": "QuestCallback",
-       "__typeHash__": 3067360607,
-       "dwUID": 200,
-       "dwFlags": 2,
-       "nNeeded": 1,
-       "tScriptMessageMap": {
-        "__type__": "ScriptMessageMap",
-        "__typeHash__": 2935055576,
-        "eEventType": 11,
-        "dwListenerFlags": 8,
-        "snoCondition": null,
-        "unk_c3ba01d": false,
-        "flCooldownSeconds": 0,
-        "arEventFilters": [
-         {
-          "__type__": "ScriptMessageMapFilter",
-          "__typeHash__": 3179414430,
-          "tKey": 2304262567,
-          "eVariableType": 1,
-          "pMessageFilter": [
-           {
-            "__type__": "ScriptEventParamAllowAny",
-            "__typeHash__": 1295852463,
-            "dwType": 1295852463,
-            "eParamType": 0,
-            "dwPad": 0
-           }
-          ]
-         },
-         {
-          "__type__": "ScriptMessageMapFilter",
-          "__typeHash__": 3179414430,
-          "tKey": 1739417742,
-          "eVariableType": 4,
-          "pMessageFilter": [
-           {
-            "__type__": "ScriptEventParamConversation",
-            "__typeHash__": 2087454851,
-            "dwType": 2087454851,
-            "eParamType": 10,
-            "dwPad": 0,
-            "snoConversation": {
-             "__raw__": 2104013,
-             "__group__": 12,
-             "__type__": "DT_SNO",
-             "__typeHash__": 2764331143,
-             "__targetFileName__": "base/meta/Conversation/QST_Naha_FiveHills_LStatue3a.cnv",
-             "groupName": "Conversation",
-             "name": "QST_Naha_FiveHills_LStatue3a"
-            }
-           }
-          ]
-         },
-         {
-          "__type__": "ScriptMessageMapFilter",
-          "__typeHash__": 3179414430,
-          "tKey": 1387993843,
-          "eVariableType": 1,
-          "pMessageFilter": [
-           {
-            "__type__": "ScriptEventParamPlayer",
-            "__typeHash__": 106673333,
-            "dwType": 106673333,
-            "eParamType": 7,
-            "dwPad": 0,
-            "bIsPlayer": true
-           }
-          ]
-         }
-        ],
-        "unk_492729e": [],
-        "dwEventEntryHash": 4035304214
-       },
-       "eIndicatorType": 3,
-       "snoWorld": {
-        "__raw__": 69068,
-        "__group__": 48,
-        "__type__": "DT_SNO",
-        "__typeHash__": 2764331143,
-        "__targetFileName__": "base/meta/World/Sanctuary_Eastern_Continent.wrl",
-        "groupName": "World",
-        "name": "Sanctuary_Eastern_Continent"
-       },
-       "tRegionDefault": {
-        "__type__": "QuestCallbackRegion",
-        "__typeHash__": 2884204419,
-        "eType": 0,
-        "vPolygonPoints": [],
-        "vCenterPos": {
-         "x": 0,
-         "y": 0
-        },
-        "flRadius": 0,
-        "bValid": false,
-        "bManuallySpecified": false
-       },
-       "arRegionOverrides": [],
-       "nValidRegionOverrides": 0,
        "arLevelAreas": [],
        "arSubzones": [],
        "eProgressDisplayStyle": 0,
@@ -5868,7 +4895,7 @@
        "__type__": "QuestCallback",
        "__typeHash__": 3067360607,
        "dwUID": 180,
-       "dwFlags": 2,
+       "dwFlags": 130,
        "nNeeded": 1,
        "tScriptMessageMap": {
         "__type__": "ScriptMessageMap",
@@ -6762,5 +5789,6 @@
  "snoDPOWorld": null,
  "unk_2229d23": 0,
  "snoOnCompleteTutorial": null,
- "unk_dff9117": null
+ "unk_dff9117": null,
+ "gbidPartyFinderTag": null
 }

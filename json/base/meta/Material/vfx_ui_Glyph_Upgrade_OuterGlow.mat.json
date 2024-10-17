@@ -411,15 +411,7 @@
     "tMatTex": {
      "__type__": "MaterialTexture",
      "__typeHash__": 3890408608,
-     "snoTex": {
-      "__raw__": 506368,
-      "__group__": 44,
-      "__type__": "DT_SNO",
-      "__typeHash__": 2764331143,
-      "__targetFileName__": "base/meta/Texture/FrontEnd_CharacterCreate_Campfire_uvDist_flameSquiggles.tex",
-      "groupName": "Texture",
-      "name": "FrontEnd_CharacterCreate_Campfire_uvDist_flameSquiggles"
-     },
+     "snoTex": null,
      "ptTexAnim": [
       {
        "__type__": "TexAnimTranslation",
@@ -559,13 +551,13 @@
      "__type__": "MaterialTexture",
      "__typeHash__": 3890408608,
      "snoTex": {
-      "__raw__": 2092419,
+      "__raw__": 2133762,
       "__group__": 44,
       "__type__": "DT_SNO",
       "__typeHash__": 2764331143,
-      "__targetFileName__": "base/meta/Texture/Glyph_Upgrade_VFX_OuterGlow.tex",
+      "__targetFileName__": "base/meta/Texture/Glyph_Upgrade_VFX_OuterGlow_V2.tex",
       "groupName": "Texture",
-      "name": "Glyph_Upgrade_VFX_OuterGlow"
+      "name": "Glyph_Upgrade_VFX_OuterGlow_V2"
      },
      "ptTexAnim": [
       {
@@ -662,7 +654,7 @@
         "groupName": "MaterialValue",
         "name": "Alpha 2"
        },
-       "value": 0.20000000298023224,
+       "value": 1,
        "unk_2362b28": -1,
        "eLightGroup": 0
       }
@@ -802,7 +794,7 @@
         "groupName": "MaterialValue",
         "name": "ui_layers"
        },
-       "value": 0,
+       "value": 1,
        "unk_2362b28": -1,
        "eLightGroup": 0
       }
@@ -822,8 +814,8 @@
         "groupName": "MaterialValue",
         "name": "Gradient Color Mid Pos 1"
        },
-       "value": 0.6299999952316284,
-       "unk_2362b28": -1,
+       "value": 1,
+       "unk_2362b28": 1,
        "eLightGroup": 0
       }
      },
@@ -882,7 +874,7 @@
         "groupName": "MaterialValue",
         "name": "Distortion Map 1 Global Mul"
        },
-       "value": 0.10000000149011612,
+       "value": 0.20000000298023224,
        "unk_2362b28": -1,
        "eLightGroup": 0
       }
@@ -942,7 +934,7 @@
         "groupName": "MaterialValue",
         "name": "Distortion Map 2 Global Mul"
        },
-       "value": 0.4300000071525574,
+       "value": 0.36000001430511475,
        "unk_2362b28": -1,
        "eLightGroup": 0
       }
@@ -1002,7 +994,7 @@
         "groupName": "MaterialValue",
         "name": "Gradient Color Mid Pos 2"
        },
-       "value": 0.699999988079071,
+       "value": 1,
        "unk_2362b28": -1,
        "eLightGroup": 0
       }
@@ -1193,16 +1185,95 @@
         {
          "__type__": "InterpolationNode_float",
          "__typeHash__": 2007685731,
-         "tValueMin": 1.5,
-         "tValueMax": 1.5,
+         "tValueMin": 1,
+         "tValueMax": 1,
          "tTime": 0.019999999552965164
+        },
+        {
+         "__type__": "InterpolationNode_float",
+         "__typeHash__": 2007685731,
+         "tValueMin": 1,
+         "tValueMax": 1,
+         "tTime": 0.6596183776855469
         },
         {
          "__type__": "InterpolationNode_float",
          "__typeHash__": 2007685731,
          "tValueMin": 0,
          "tValueMax": 0,
-         "tTime": 0.32608696818351746
+         "tTime": 0.9492753744125366
+        }
+       ]
+      }
+     },
+     {
+      "__type__": "RunTimeMaterialScalarGraphEntry",
+      "__typeHash__": 1621969581,
+      "pathValGraph": {
+       "__type__": "InterpolationPath_float",
+       "__typeHash__": 3422409450,
+       "tHeader": {
+        "__type__": "InterpolationPathHeader",
+        "__typeHash__": 2520702334,
+        "tLoopPointStart": 0,
+        "tLoopPointEnd": 1,
+        "nDistributionFunction": 0,
+        "nMinMaxBehavior": 0,
+        "arInterpScalar": [
+         {
+          "__type__": "InterpolationScalar",
+          "__typeHash__": 991799518,
+          "nScalarFunction": 0,
+          "dwFlags": 1,
+          "tInputRange": {
+           "rangeValue1": 0,
+           "rangeValue2": 1
+          },
+          "tRemapRange": {
+           "rangeValue1": 0,
+           "rangeValue2": 0
+          },
+          "eRemapEasing": 0,
+          "szFormulaName": 0
+         }
+        ],
+        "dwFlags": 4
+       },
+       "ptArrayNodes": [
+        {
+         "__type__": "InterpolationNode_float",
+         "__typeHash__": 2007685731,
+         "tValueMin": 0.32824429869651794,
+         "tValueMax": 0.32824429869651794,
+         "tTime": 0
+        },
+        {
+         "__type__": "InterpolationNode_float",
+         "__typeHash__": 2007685731,
+         "tValueMin": 0.4294228255748749,
+         "tValueMax": 0.4294228255748749,
+         "tTime": 0.33996492624282837
+        },
+        {
+         "__type__": "InterpolationNode_float",
+         "__typeHash__": 2007685731,
+         "tValueMin": 0.517243504524231,
+         "tValueMax": 0.517243504524231,
+         "tTime": 0.5767921209335327
+        },
+        {
+         "__type__": "InterpolationNode_float",
+         "__typeHash__": 2007685731,
+         "tValueMin": 0.7394345998764038,
+         "tValueMax": 0.7394345998764038,
+         "tTime": 0.7705780267715454
+        },
+        {
+         "__type__": "InterpolationNode_float",
+         "__typeHash__": 2007685731,
+         "tValueMin": 1,
+         "tValueMax": 1,
+         "tTime": 0.8811594247817993
         }
        ]
       }
@@ -1226,8 +1297,8 @@
        },
        "value": {
         "x": 1,
-        "y": 0.42050793766975403,
-        "z": 0.17677433788776398,
+        "y": 0.6320427060127258,
+        "z": 0.17343905568122864,
         "w": 1
        },
        "unk_2362b28": -1,
@@ -1250,9 +1321,9 @@
         "name": "Gradient Color Bottom 1"
        },
        "value": {
-        "x": 0.7667437195777893,
+        "x": 1,
         "y": 0.18698853254318237,
-        "z": 0.0004925037501379848,
+        "z": 0,
         "w": 1
        },
        "unk_2362b28": -1,
@@ -1275,9 +1346,9 @@
         "name": "Gradient Color Mid 1"
        },
        "value": {
-        "x": 1,
-        "y": 0.28445208072662354,
-        "z": 0.03423020988702774,
+        "x": 0.91575026512146,
+        "y": 0.14799804985523224,
+        "z": 0.01891298219561577,
         "w": 1
        },
        "unk_2362b28": -1,
@@ -1300,9 +1371,9 @@
         "name": "Gradient Color Top 2"
        },
        "value": {
-        "x": 0.9075473546981812,
-        "y": 1,
-        "z": 0.00005692176637239754,
+        "x": 0.9743003249168396,
+        "y": 0.06575388461351395,
+        "z": 0.0008046584553085268,
         "w": 1
        },
        "unk_2362b28": -1,
@@ -1325,9 +1396,9 @@
         "name": "Gradient Color Bottom 2"
        },
        "value": {
-        "x": 0.9828264117240906,
-        "y": 1,
-        "z": 0,
+        "x": 0.91575026512146,
+        "y": 0.07805658876895905,
+        "z": 0.0016869154060259461,
         "w": 1
        },
        "unk_2362b28": -1,
@@ -1350,8 +1421,8 @@
         "name": "Gradient Color Mid 2"
        },
        "value": {
-        "x": 0.8671356439590454,
-        "y": 1,
+        "x": 1,
+        "y": 0.3250369727611542,
         "z": 0,
         "w": 1
        },
@@ -1479,7 +1550,7 @@
  "unk_ce6fe3b": 0,
  "unk_245935": 0,
  "unk_6d58226": 1,
- "flDuration": 2,
+ "flDuration": 2.5,
  "tOutroDuration": 0.5,
  "unk_a08119e": 0.009999999776482582,
  "unk_5b1ce37": 0.8999999761581421,

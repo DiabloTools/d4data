@@ -68,7 +68,6 @@
  "eBountyTier": -1,
  "eBountyType": -1,
  "gbidBountyDefinition": null,
- "gbidPartyFinderTag": null,
  "dwFlags": 4,
  "arQuestPhases": [
   {
@@ -1455,6 +1454,93 @@
       {
        "__type__": "QuestCallback",
        "__typeHash__": 3067360607,
+       "dwUID": 525,
+       "dwFlags": 0,
+       "nNeeded": 1,
+       "tScriptMessageMap": {
+        "__type__": "ScriptMessageMap",
+        "__typeHash__": 2935055576,
+        "eEventType": 74,
+        "dwListenerFlags": 0,
+        "snoCondition": {
+         "__raw__": 2136616,
+         "__group__": 51,
+         "__type__": "DT_SNO",
+         "__typeHash__": 2764331143,
+         "__targetFileName__": "base/meta/Condition/EGB_MercQuests_Started.cnd",
+         "groupName": "Condition",
+         "name": "EGB_MercQuests_Started"
+        },
+        "unk_c3ba01d": false,
+        "flCooldownSeconds": 0,
+        "arEventFilters": [],
+        "unk_492729e": [],
+        "dwEventEntryHash": 58
+       },
+       "eIndicatorType": 3,
+       "snoWorld": {
+        "__raw__": 1472231,
+        "__group__": 48,
+        "__type__": "DT_SNO",
+        "__typeHash__": 2764331143,
+        "__targetFileName__": "base/meta/World/Mercenary_Hideout.wrl",
+        "groupName": "World",
+        "name": "Mercenary_Hideout"
+       },
+       "tRegionDefault": {
+        "__type__": "QuestCallbackRegion",
+        "__typeHash__": 2884204419,
+        "eType": 0,
+        "vPolygonPoints": [],
+        "vCenterPos": {
+         "x": 0,
+         "y": 0
+        },
+        "flRadius": 0,
+        "bValid": false,
+        "bManuallySpecified": false
+       },
+       "arRegionOverrides": [],
+       "nValidRegionOverrides": 0,
+       "arLevelAreas": [
+        {
+         "__raw__": 1402640,
+         "__group__": 22,
+         "__type__": "DT_SNO",
+         "__typeHash__": 2764331143,
+         "__targetFileName__": "base/meta/LevelArea/MERC_Hideout.lvl",
+         "groupName": "LevelArea",
+         "name": "MERC_Hideout"
+        }
+       ],
+       "arSubzones": [],
+       "eProgressDisplayStyle": 0,
+       "eProgressBarSource": 0,
+       "unk_301d18": false,
+       "unk_896a0c5": {
+        "__type__": "UIImageHandleReference",
+        "__typeHash__": 1797021084,
+        "hImageHandle": 0
+       },
+       "unk_7dd76d1": 0,
+       "arSnonameTokens": [],
+       "szFontColorOverride": "",
+       "snoOptionalPreloadCondition": null,
+       "unk_9c1ea4f": 0,
+       "vecPositionOffset": {
+        "x": 0,
+        "y": 0
+       },
+       "unk_9d6e5b3": false,
+       "unk_b3ec93": 0,
+       "unk_5698d08": false,
+       "unk_77b5dc7": false,
+       "unk_146ba45": 0,
+       "snoHeaderDisplayCondition": null
+      },
+      {
+       "__type__": "QuestCallback",
+       "__typeHash__": 3067360607,
        "dwUID": 334,
        "dwFlags": 0,
        "nNeeded": 1,
@@ -2833,12 +2919,29 @@
        "tScriptMessageMap": {
         "__type__": "ScriptMessageMap",
         "__typeHash__": 2935055576,
-        "eEventType": 41,
+        "eEventType": 36,
         "dwListenerFlags": 0,
         "snoCondition": null,
         "unk_c3ba01d": false,
         "flCooldownSeconds": 0,
         "arEventFilters": [
+         {
+          "__type__": "ScriptMessageMapFilter",
+          "__typeHash__": 3179414430,
+          "tKey": 334654326,
+          "eVariableType": 7,
+          "pMessageFilter": [
+           {
+            "__type__": "ScriptEventParamString",
+            "__typeHash__": 234160671,
+            "dwType": 234160671,
+            "eParamType": 6,
+            "dwPad": 0,
+            "dwStringHash": 2684172609,
+            "szString": "EGB_Whisper_Reward_Claimed"
+           }
+          ]
+         },
          {
           "__type__": "ScriptMessageMapFilter",
           "__typeHash__": 3179414430,
@@ -2858,30 +2961,21 @@
          {
           "__type__": "ScriptMessageMapFilter",
           "__typeHash__": 3179414430,
-          "tKey": 1078202370,
-          "eVariableType": 15,
+          "tKey": 2344914334,
+          "eVariableType": 11,
           "pMessageFilter": [
            {
-            "__type__": "ScriptEventParamQuest",
-            "__typeHash__": 1306251290,
-            "dwType": 1306251290,
-            "eParamType": 27,
-            "dwPad": 0,
-            "snoQuest": {
-             "__raw__": 597351,
-             "__group__": 31,
-             "__type__": "DT_SNO",
-             "__typeHash__": 2764331143,
-             "__targetFileName__": "base/meta/Quest/Bounty_Meta_Quest.qst",
-             "groupName": "Quest",
-             "name": "Bounty_Meta_Quest"
-            }
+            "__type__": "ScriptEventParamAllowAny",
+            "__typeHash__": 1295852463,
+            "dwType": 1295852463,
+            "eParamType": 0,
+            "dwPad": 0
            }
           ]
          }
         ],
         "unk_492729e": [],
-        "dwEventEntryHash": 579437852
+        "dwEventEntryHash": 1212553832
        },
        "eIndicatorType": 3,
        "snoWorld": {
@@ -3337,7 +3431,7 @@
         "unk_492729e": [],
         "dwEventEntryHash": 4035304214
        },
-       "eIndicatorType": 2,
+       "eIndicatorType": 3,
        "snoWorld": {
         "__raw__": 69068,
         "__group__": 48,
@@ -3351,26 +3445,13 @@
         "__type__": "QuestCallbackRegion",
         "__typeHash__": 2884204419,
         "eType": 0,
-        "vPolygonPoints": [
-         {
-          "x": 998.447998046875,
-          "y": 185.59500122070312
-         },
-         {
-          "x": 970.8610229492188,
-          "y": 204.77499389648438
-         },
-         {
-          "x": 969.7550048828125,
-          "y": 208.98800659179688
-         }
-        ],
+        "vPolygonPoints": [],
         "vCenterPos": {
-         "x": 984.1015014648438,
-         "y": 197.29150390625
+         "x": 0,
+         "y": 0
         },
-        "flRadius": 18.510271072387695,
-        "bValid": true,
+        "flRadius": 0,
+        "bValid": false,
         "bManuallySpecified": false
        },
        "arRegionOverrides": [],
@@ -3467,6 +3548,636 @@
        "__type__": "QuestCallback",
        "__typeHash__": 3067360607,
        "dwUID": 505,
+       "dwFlags": 2,
+       "nNeeded": 1,
+       "tScriptMessageMap": {
+        "__type__": "ScriptMessageMap",
+        "__typeHash__": 2935055576,
+        "eEventType": 84,
+        "dwListenerFlags": 0,
+        "snoCondition": {
+         "__raw__": 2133471,
+         "__group__": 51,
+         "__type__": "DT_SNO",
+         "__typeHash__": 2764331143,
+         "__targetFileName__": "base/meta/Condition/EGB_Sihek_Not_Undercity03.cnd",
+         "groupName": "Condition",
+         "name": "EGB_Sihek_Not_Undercity03"
+        },
+        "unk_c3ba01d": false,
+        "flCooldownSeconds": 0,
+        "arEventFilters": [
+         {
+          "__type__": "ScriptMessageMapFilter",
+          "__typeHash__": 3179414430,
+          "tKey": 2197444774,
+          "eVariableType": 1,
+          "pMessageFilter": [
+           {
+            "__type__": "ScriptEventParamActorGroup",
+            "__typeHash__": 3481819086,
+            "dwType": 3481819086,
+            "eParamType": 36,
+            "dwPad": 0,
+            "gbidActorGroup": {
+             "__raw__": 2079644506,
+             "__type__": "DT_GBID",
+             "__typeHash__": 1028170061,
+             "group": 24,
+             "name": "EGB_Sihek_Pins"
+            }
+           }
+          ]
+         }
+        ],
+        "unk_492729e": [],
+        "dwEventEntryHash": 2197444832
+       },
+       "eIndicatorType": 2,
+       "snoWorld": {
+        "__raw__": 69068,
+        "__group__": 48,
+        "__type__": "DT_SNO",
+        "__typeHash__": 2764331143,
+        "__targetFileName__": "base/meta/World/Sanctuary_Eastern_Continent.wrl",
+        "groupName": "World",
+        "name": "Sanctuary_Eastern_Continent"
+       },
+       "tRegionDefault": {
+        "__type__": "QuestCallbackRegion",
+        "__typeHash__": 2884204419,
+        "eType": 0,
+        "vPolygonPoints": [
+         {
+          "x": 987.614990234375,
+          "y": 236.3350067138672
+         },
+         {
+          "x": 970.8610229492188,
+          "y": 204.77499389648438
+         },
+         {
+          "x": 969.7550048828125,
+          "y": 208.98800659179688
+         }
+        ],
+        "vCenterPos": {
+         "x": 978.6849975585938,
+         "y": 220.55499267578125
+        },
+        "flRadius": 18.131563186645508,
+        "bValid": true,
+        "bManuallySpecified": false
+       },
+       "arRegionOverrides": [],
+       "nValidRegionOverrides": 0,
+       "arLevelAreas": [
+        {
+         "__raw__": 1381480,
+         "__group__": 22,
+         "__type__": "DT_SNO",
+         "__typeHash__": 2764331143,
+         "__targetFileName__": "base/meta/LevelArea/Naha_Kurast.lvl",
+         "groupName": "LevelArea",
+         "name": "Naha_Kurast"
+        },
+        {
+         "__raw__": 1478722,
+         "__group__": 22,
+         "__type__": "DT_SNO",
+         "__typeHash__": 2764331143,
+         "__targetFileName__": "base/meta/LevelArea/Naha_Kurast_ThroneRoom.lvl",
+         "groupName": "LevelArea",
+         "name": "Naha_Kurast_ThroneRoom"
+        },
+        {
+         "__raw__": 1630653,
+         "__group__": 22,
+         "__type__": "DT_SNO",
+         "__typeHash__": 2764331143,
+         "__targetFileName__": "base/meta/LevelArea/Naha_Kurast_ThroneRoom_Throne.lvl",
+         "groupName": "LevelArea",
+         "name": "Naha_Kurast_ThroneRoom_Throne"
+        },
+        {
+         "__raw__": 2009804,
+         "__group__": 22,
+         "__type__": "DT_SNO",
+         "__typeHash__": 2764331143,
+         "__targetFileName__": "base/meta/LevelArea/Naha_Kurast_Bazaar.lvl",
+         "groupName": "LevelArea",
+         "name": "Naha_Kurast_Bazaar"
+        },
+        {
+         "__raw__": 1630646,
+         "__group__": 22,
+         "__type__": "DT_SNO",
+         "__typeHash__": 2764331143,
+         "__targetFileName__": "base/meta/LevelArea/Naha_Kurast_ThroneRoom_Garden.lvl",
+         "groupName": "LevelArea",
+         "name": "Naha_Kurast_ThroneRoom_Garden"
+        }
+       ],
+       "arSubzones": [],
+       "eProgressDisplayStyle": 0,
+       "eProgressBarSource": 0,
+       "unk_301d18": false,
+       "unk_896a0c5": {
+        "__type__": "UIImageHandleReference",
+        "__typeHash__": 1797021084,
+        "hImageHandle": 0
+       },
+       "unk_7dd76d1": 0,
+       "arSnonameTokens": [],
+       "szFontColorOverride": "",
+       "snoOptionalPreloadCondition": null,
+       "unk_9c1ea4f": 117,
+       "vecPositionOffset": {
+        "x": 0,
+        "y": 0
+       },
+       "unk_9d6e5b3": false,
+       "unk_b3ec93": 0,
+       "unk_5698d08": false,
+       "unk_77b5dc7": false,
+       "unk_146ba45": 0,
+       "snoHeaderDisplayCondition": null
+      },
+      {
+       "__type__": "QuestCallback",
+       "__typeHash__": 3067360607,
+       "dwUID": 516,
+       "dwFlags": 2,
+       "nNeeded": 1,
+       "tScriptMessageMap": {
+        "__type__": "ScriptMessageMap",
+        "__typeHash__": 2935055576,
+        "eEventType": 84,
+        "dwListenerFlags": 0,
+        "snoCondition": {
+         "__raw__": 2132719,
+         "__group__": 51,
+         "__type__": "DT_SNO",
+         "__typeHash__": 2764331143,
+         "__targetFileName__": "base/meta/Condition/EGB_Sihek_Undercity03_PreRiot.cnd",
+         "groupName": "Condition",
+         "name": "EGB_Sihek_Undercity03_PreRiot"
+        },
+        "unk_c3ba01d": false,
+        "flCooldownSeconds": 0,
+        "arEventFilters": [
+         {
+          "__type__": "ScriptMessageMapFilter",
+          "__typeHash__": 3179414430,
+          "tKey": 2197444774,
+          "eVariableType": 1,
+          "pMessageFilter": [
+           {
+            "__type__": "ScriptEventParamActorGroup",
+            "__typeHash__": 3481819086,
+            "dwType": 3481819086,
+            "eParamType": 36,
+            "dwPad": 0,
+            "gbidActorGroup": {
+             "__raw__": 4284783255,
+             "__type__": "DT_GBID",
+             "__typeHash__": 1028170061,
+             "group": 24,
+             "name": "EGB_Sihek_Riot_Pins"
+            }
+           }
+          ]
+         }
+        ],
+        "unk_492729e": [],
+        "dwEventEntryHash": 2197444832
+       },
+       "eIndicatorType": 2,
+       "snoWorld": {
+        "__raw__": 69068,
+        "__group__": 48,
+        "__type__": "DT_SNO",
+        "__typeHash__": 2764331143,
+        "__targetFileName__": "base/meta/World/Sanctuary_Eastern_Continent.wrl",
+        "groupName": "World",
+        "name": "Sanctuary_Eastern_Continent"
+       },
+       "tRegionDefault": {
+        "__type__": "QuestCallbackRegion",
+        "__typeHash__": 2884204419,
+        "eType": 0,
+        "vPolygonPoints": [],
+        "vCenterPos": {
+         "x": 0,
+         "y": 0
+        },
+        "flRadius": 0,
+        "bValid": false,
+        "bManuallySpecified": false
+       },
+       "arRegionOverrides": [],
+       "nValidRegionOverrides": 0,
+       "arLevelAreas": [
+        {
+         "__raw__": 1381480,
+         "__group__": 22,
+         "__type__": "DT_SNO",
+         "__typeHash__": 2764331143,
+         "__targetFileName__": "base/meta/LevelArea/Naha_Kurast.lvl",
+         "groupName": "LevelArea",
+         "name": "Naha_Kurast"
+        },
+        {
+         "__raw__": 2009804,
+         "__group__": 22,
+         "__type__": "DT_SNO",
+         "__typeHash__": 2764331143,
+         "__targetFileName__": "base/meta/LevelArea/Naha_Kurast_Bazaar.lvl",
+         "groupName": "LevelArea",
+         "name": "Naha_Kurast_Bazaar"
+        },
+        {
+         "__raw__": 1478722,
+         "__group__": 22,
+         "__type__": "DT_SNO",
+         "__typeHash__": 2764331143,
+         "__targetFileName__": "base/meta/LevelArea/Naha_Kurast_ThroneRoom.lvl",
+         "groupName": "LevelArea",
+         "name": "Naha_Kurast_ThroneRoom"
+        },
+        {
+         "__raw__": 1630646,
+         "__group__": 22,
+         "__type__": "DT_SNO",
+         "__typeHash__": 2764331143,
+         "__targetFileName__": "base/meta/LevelArea/Naha_Kurast_ThroneRoom_Garden.lvl",
+         "groupName": "LevelArea",
+         "name": "Naha_Kurast_ThroneRoom_Garden"
+        },
+        {
+         "__raw__": 1630653,
+         "__group__": 22,
+         "__type__": "DT_SNO",
+         "__typeHash__": 2764331143,
+         "__targetFileName__": "base/meta/LevelArea/Naha_Kurast_ThroneRoom_Throne.lvl",
+         "groupName": "LevelArea",
+         "name": "Naha_Kurast_ThroneRoom_Throne"
+        }
+       ],
+       "arSubzones": [],
+       "eProgressDisplayStyle": 0,
+       "eProgressBarSource": 0,
+       "unk_301d18": false,
+       "unk_896a0c5": {
+        "__type__": "UIImageHandleReference",
+        "__typeHash__": 1797021084,
+        "hImageHandle": 0
+       },
+       "unk_7dd76d1": 0,
+       "arSnonameTokens": [],
+       "szFontColorOverride": "",
+       "snoOptionalPreloadCondition": null,
+       "unk_9c1ea4f": 117,
+       "vecPositionOffset": {
+        "x": 0,
+        "y": 0
+       },
+       "unk_9d6e5b3": false,
+       "unk_b3ec93": 0,
+       "unk_5698d08": false,
+       "unk_77b5dc7": false,
+       "unk_146ba45": 0,
+       "snoHeaderDisplayCondition": null
+      },
+      {
+       "__type__": "QuestCallback",
+       "__typeHash__": 3067360607,
+       "dwUID": 524,
+       "dwFlags": 2,
+       "nNeeded": 1,
+       "tScriptMessageMap": {
+        "__type__": "ScriptMessageMap",
+        "__typeHash__": 2935055576,
+        "eEventType": 84,
+        "dwListenerFlags": 0,
+        "snoCondition": {
+         "__raw__": 2135866,
+         "__group__": 51,
+         "__type__": "DT_SNO",
+         "__typeHash__": 2764331143,
+         "__targetFileName__": "base/meta/Condition/EGB_Sihek_Undercity03_PostRiot.cnd",
+         "groupName": "Condition",
+         "name": "EGB_Sihek_Undercity03_PostRiot"
+        },
+        "unk_c3ba01d": false,
+        "flCooldownSeconds": 0,
+        "arEventFilters": [
+         {
+          "__type__": "ScriptMessageMapFilter",
+          "__typeHash__": 3179414430,
+          "tKey": 2197444774,
+          "eVariableType": 1,
+          "pMessageFilter": [
+           {
+            "__type__": "ScriptEventParamActorGroup",
+            "__typeHash__": 3481819086,
+            "dwType": 3481819086,
+            "eParamType": 36,
+            "dwPad": 0,
+            "gbidActorGroup": {
+             "__raw__": 67407767,
+             "__type__": "DT_GBID",
+             "__typeHash__": 1028170061,
+             "group": 24,
+             "name": "X1_Undercity_PlayerQuest_03_SihekSanc"
+            }
+           }
+          ]
+         }
+        ],
+        "unk_492729e": [],
+        "dwEventEntryHash": 2197444832
+       },
+       "eIndicatorType": 2,
+       "snoWorld": {
+        "__raw__": 69068,
+        "__group__": 48,
+        "__type__": "DT_SNO",
+        "__typeHash__": 2764331143,
+        "__targetFileName__": "base/meta/World/Sanctuary_Eastern_Continent.wrl",
+        "groupName": "World",
+        "name": "Sanctuary_Eastern_Continent"
+       },
+       "tRegionDefault": {
+        "__type__": "QuestCallbackRegion",
+        "__typeHash__": 2884204419,
+        "eType": 0,
+        "vPolygonPoints": [],
+        "vCenterPos": {
+         "x": 0,
+         "y": 0
+        },
+        "flRadius": 0,
+        "bValid": false,
+        "bManuallySpecified": false
+       },
+       "arRegionOverrides": [],
+       "nValidRegionOverrides": 0,
+       "arLevelAreas": [
+        {
+         "__raw__": 1381480,
+         "__group__": 22,
+         "__type__": "DT_SNO",
+         "__typeHash__": 2764331143,
+         "__targetFileName__": "base/meta/LevelArea/Naha_Kurast.lvl",
+         "groupName": "LevelArea",
+         "name": "Naha_Kurast"
+        },
+        {
+         "__raw__": 2009804,
+         "__group__": 22,
+         "__type__": "DT_SNO",
+         "__typeHash__": 2764331143,
+         "__targetFileName__": "base/meta/LevelArea/Naha_Kurast_Bazaar.lvl",
+         "groupName": "LevelArea",
+         "name": "Naha_Kurast_Bazaar"
+        },
+        {
+         "__raw__": 1478722,
+         "__group__": 22,
+         "__type__": "DT_SNO",
+         "__typeHash__": 2764331143,
+         "__targetFileName__": "base/meta/LevelArea/Naha_Kurast_ThroneRoom.lvl",
+         "groupName": "LevelArea",
+         "name": "Naha_Kurast_ThroneRoom"
+        },
+        {
+         "__raw__": 1630646,
+         "__group__": 22,
+         "__type__": "DT_SNO",
+         "__typeHash__": 2764331143,
+         "__targetFileName__": "base/meta/LevelArea/Naha_Kurast_ThroneRoom_Garden.lvl",
+         "groupName": "LevelArea",
+         "name": "Naha_Kurast_ThroneRoom_Garden"
+        },
+        {
+         "__raw__": 1630653,
+         "__group__": 22,
+         "__type__": "DT_SNO",
+         "__typeHash__": 2764331143,
+         "__targetFileName__": "base/meta/LevelArea/Naha_Kurast_ThroneRoom_Throne.lvl",
+         "groupName": "LevelArea",
+         "name": "Naha_Kurast_ThroneRoom_Throne"
+        }
+       ],
+       "arSubzones": [],
+       "eProgressDisplayStyle": 0,
+       "eProgressBarSource": 0,
+       "unk_301d18": false,
+       "unk_896a0c5": {
+        "__type__": "UIImageHandleReference",
+        "__typeHash__": 1797021084,
+        "hImageHandle": 0
+       },
+       "unk_7dd76d1": 0,
+       "arSnonameTokens": [],
+       "szFontColorOverride": "",
+       "snoOptionalPreloadCondition": null,
+       "unk_9c1ea4f": 117,
+       "vecPositionOffset": {
+        "x": 0,
+        "y": 0
+       },
+       "unk_9d6e5b3": false,
+       "unk_b3ec93": 0,
+       "unk_5698d08": false,
+       "unk_77b5dc7": false,
+       "unk_146ba45": 0,
+       "snoHeaderDisplayCondition": null
+      },
+      {
+       "__type__": "QuestCallback",
+       "__typeHash__": 3067360607,
+       "dwUID": 528,
+       "dwFlags": 2,
+       "nNeeded": 1,
+       "tScriptMessageMap": {
+        "__type__": "ScriptMessageMap",
+        "__typeHash__": 2935055576,
+        "eEventType": 84,
+        "dwListenerFlags": 0,
+        "snoCondition": {
+         "__raw__": 2137930,
+         "__group__": 51,
+         "__type__": "DT_SNO",
+         "__typeHash__": 2764331143,
+         "__targetFileName__": "base/meta/Condition/EGB_Sihek_OutsideKurast.cnd",
+         "groupName": "Condition",
+         "name": "EGB_Sihek_OutsideKurast"
+        },
+        "unk_c3ba01d": false,
+        "flCooldownSeconds": 0,
+        "arEventFilters": [
+         {
+          "__type__": "ScriptMessageMapFilter",
+          "__typeHash__": 3179414430,
+          "tKey": 2197444774,
+          "eVariableType": 1,
+          "pMessageFilter": [
+           {
+            "__type__": "ScriptEventParamActor",
+            "__typeHash__": 1286645889,
+            "dwType": 1286645889,
+            "eParamType": 4,
+            "dwPad": 0,
+            "snoActor": {
+             "__raw__": 2096386,
+             "__group__": 1,
+             "__type__": "DT_SNO",
+             "__typeHash__": 2764331143,
+             "__targetFileName__": "base/meta/Actor/X1_Undercity_QST_NPC_Sihek_Toxified_Major.acr",
+             "groupName": "Actor",
+             "name": "X1_Undercity_QST_NPC_Sihek_Toxified_Major"
+            }
+           }
+          ]
+         }
+        ],
+        "unk_492729e": [],
+        "dwEventEntryHash": 2197444832
+       },
+       "eIndicatorType": 2,
+       "snoWorld": {
+        "__raw__": 69068,
+        "__group__": 48,
+        "__type__": "DT_SNO",
+        "__typeHash__": 2764331143,
+        "__targetFileName__": "base/meta/World/Sanctuary_Eastern_Continent.wrl",
+        "groupName": "World",
+        "name": "Sanctuary_Eastern_Continent"
+       },
+       "tRegionDefault": {
+        "__type__": "QuestCallbackRegion",
+        "__typeHash__": 2884204419,
+        "eType": 1,
+        "vPolygonPoints": [
+         {
+          "x": 969.7550048828125,
+          "y": 208.98800659179688
+         }
+        ],
+        "vCenterPos": {
+         "x": 969.7550048828125,
+         "y": 208.98800659179688
+        },
+        "flRadius": 12,
+        "bValid": true,
+        "bManuallySpecified": false
+       },
+       "arRegionOverrides": [],
+       "nValidRegionOverrides": 0,
+       "arLevelAreas": [
+        {
+         "__raw__": 1381480,
+         "__group__": 22,
+         "__type__": "DT_SNO",
+         "__typeHash__": 2764331143,
+         "__targetFileName__": "base/meta/LevelArea/Naha_Kurast.lvl",
+         "groupName": "LevelArea",
+         "name": "Naha_Kurast"
+        },
+        {
+         "__raw__": 2009804,
+         "__group__": 22,
+         "__type__": "DT_SNO",
+         "__typeHash__": 2764331143,
+         "__targetFileName__": "base/meta/LevelArea/Naha_Kurast_Bazaar.lvl",
+         "groupName": "LevelArea",
+         "name": "Naha_Kurast_Bazaar"
+        },
+        {
+         "__raw__": 1478722,
+         "__group__": 22,
+         "__type__": "DT_SNO",
+         "__typeHash__": 2764331143,
+         "__targetFileName__": "base/meta/LevelArea/Naha_Kurast_ThroneRoom.lvl",
+         "groupName": "LevelArea",
+         "name": "Naha_Kurast_ThroneRoom"
+        },
+        {
+         "__raw__": 1630646,
+         "__group__": 22,
+         "__type__": "DT_SNO",
+         "__typeHash__": 2764331143,
+         "__targetFileName__": "base/meta/LevelArea/Naha_Kurast_ThroneRoom_Garden.lvl",
+         "groupName": "LevelArea",
+         "name": "Naha_Kurast_ThroneRoom_Garden"
+        },
+        {
+         "__raw__": 1630653,
+         "__group__": 22,
+         "__type__": "DT_SNO",
+         "__typeHash__": 2764331143,
+         "__targetFileName__": "base/meta/LevelArea/Naha_Kurast_ThroneRoom_Throne.lvl",
+         "groupName": "LevelArea",
+         "name": "Naha_Kurast_ThroneRoom_Throne"
+        }
+       ],
+       "arSubzones": [],
+       "eProgressDisplayStyle": 0,
+       "eProgressBarSource": 0,
+       "unk_301d18": false,
+       "unk_896a0c5": {
+        "__type__": "UIImageHandleReference",
+        "__typeHash__": 1797021084,
+        "hImageHandle": 0
+       },
+       "unk_7dd76d1": 0,
+       "arSnonameTokens": [
+        {
+         "__raw__": 2096386,
+         "__group__": 1,
+         "__type__": "DT_SNO_NAME",
+         "__typeHash__": 3339108615,
+         "__targetFileName__": "base/meta/Actor/X1_Undercity_QST_NPC_Sihek_Toxified_Major.acr",
+         "groupName": "Actor",
+         "name": "X1_Undercity_QST_NPC_Sihek_Toxified_Major"
+        }
+       ],
+       "szFontColorOverride": "",
+       "snoOptionalPreloadCondition": null,
+       "unk_9c1ea4f": 117,
+       "vecPositionOffset": {
+        "x": 0,
+        "y": 0
+       },
+       "unk_9d6e5b3": false,
+       "unk_b3ec93": 0,
+       "unk_5698d08": false,
+       "unk_77b5dc7": false,
+       "unk_146ba45": 0,
+       "snoHeaderDisplayCondition": null
+      }
+     ],
+     "bGiveFirstTimeReward": false,
+     "tFirstTimeReward": {
+      "__type__": "QuestReward",
+      "__typeHash__": 3387295447,
+      "snoTrackedReward": null
+     },
+     "arQuestItemsToRemove": [],
+     "snoFirstTimeRewardDisplayItem": null
+    },
+    {
+     "__type__": "QuestObjectiveSet",
+     "__typeHash__": 297390777,
+     "dwUID": 530,
+     "ptLink": [],
+     "arCallbacks": [
+      {
+       "__type__": "QuestCallback",
+       "__typeHash__": 3067360607,
+       "dwUID": 531,
        "dwFlags": 0,
        "nNeeded": 1,
        "tScriptMessageMap": {
@@ -4539,7 +5250,7 @@
        "__type__": "QuestCallback",
        "__typeHash__": 3067360607,
        "dwUID": 499,
-       "dwFlags": 0,
+       "dwFlags": 2,
        "nNeeded": 1,
        "tScriptMessageMap": {
         "__type__": "ScriptMessageMap",
@@ -4645,7 +5356,7 @@
        "arSnonameTokens": [],
        "szFontColorOverride": "",
        "snoOptionalPreloadCondition": null,
-       "unk_9c1ea4f": 0,
+       "unk_9c1ea4f": 119,
        "vecPositionOffset": {
         "x": 0,
         "y": 0
@@ -4728,6 +5439,134 @@
        "__typeHash__": 3067360607,
        "dwUID": 123,
        "dwFlags": 0,
+       "nNeeded": 1,
+       "tScriptMessageMap": {
+        "__type__": "ScriptMessageMap",
+        "__typeHash__": 2935055576,
+        "eEventType": 36,
+        "dwListenerFlags": 0,
+        "snoCondition": null,
+        "unk_c3ba01d": false,
+        "flCooldownSeconds": 0,
+        "arEventFilters": [
+         {
+          "__type__": "ScriptMessageMapFilter",
+          "__typeHash__": 3179414430,
+          "tKey": 334654326,
+          "eVariableType": 7,
+          "pMessageFilter": [
+           {
+            "__type__": "ScriptEventParamString",
+            "__typeHash__": 234160671,
+            "dwType": 234160671,
+            "eParamType": 6,
+            "dwPad": 0,
+            "dwStringHash": 536517328,
+            "szString": "EGB_Undercity_Quest_00_Completed"
+           }
+          ]
+         },
+         {
+          "__type__": "ScriptMessageMapFilter",
+          "__typeHash__": 3179414430,
+          "tKey": 2197444774,
+          "eVariableType": 1,
+          "pMessageFilter": [
+           {
+            "__type__": "ScriptEventParamSelf",
+            "__typeHash__": 1210992754,
+            "dwType": 1210992754,
+            "eParamType": 11,
+            "dwPad": 0,
+            "idValue": 0
+           }
+          ]
+         },
+         {
+          "__type__": "ScriptMessageMapFilter",
+          "__typeHash__": 3179414430,
+          "tKey": 2344914334,
+          "eVariableType": 11,
+          "pMessageFilter": [
+           {
+            "__type__": "ScriptEventParamAllowAny",
+            "__typeHash__": 1295852463,
+            "dwType": 1295852463,
+            "eParamType": 0,
+            "dwPad": 0
+           }
+          ]
+         }
+        ],
+        "unk_492729e": [],
+        "dwEventEntryHash": 1212553832
+       },
+       "eIndicatorType": 3,
+       "snoWorld": {
+        "__raw__": 69068,
+        "__group__": 48,
+        "__type__": "DT_SNO",
+        "__typeHash__": 2764331143,
+        "__targetFileName__": "base/meta/World/Sanctuary_Eastern_Continent.wrl",
+        "groupName": "World",
+        "name": "Sanctuary_Eastern_Continent"
+       },
+       "tRegionDefault": {
+        "__type__": "QuestCallbackRegion",
+        "__typeHash__": 2884204419,
+        "eType": 0,
+        "vPolygonPoints": [],
+        "vCenterPos": {
+         "x": 0,
+         "y": 0
+        },
+        "flRadius": 0,
+        "bValid": false,
+        "bManuallySpecified": false
+       },
+       "arRegionOverrides": [],
+       "nValidRegionOverrides": 0,
+       "arLevelAreas": [
+        {
+         "__raw__": 1478722,
+         "__group__": 22,
+         "__type__": "DT_SNO",
+         "__typeHash__": 2764331143,
+         "__targetFileName__": "base/meta/LevelArea/Naha_Kurast_ThroneRoom.lvl",
+         "groupName": "LevelArea",
+         "name": "Naha_Kurast_ThroneRoom"
+        }
+       ],
+       "arSubzones": [],
+       "eProgressDisplayStyle": 0,
+       "eProgressBarSource": 0,
+       "unk_301d18": false,
+       "unk_896a0c5": {
+        "__type__": "UIImageHandleReference",
+        "__typeHash__": 1797021084,
+        "hImageHandle": 0
+       },
+       "unk_7dd76d1": 0,
+       "arSnonameTokens": [],
+       "szFontColorOverride": "",
+       "snoOptionalPreloadCondition": null,
+       "unk_9c1ea4f": 0,
+       "vecPositionOffset": {
+        "x": 0,
+        "y": 0
+       },
+       "unk_9d6e5b3": false,
+       "unk_b3ec93": 0,
+       "unk_5698d08": false,
+       "unk_77b5dc7": false,
+       "unk_146ba45": 0,
+       "snoHeaderDisplayCondition": null
+      },
+      {
+       "__type__": "QuestCallback",
+       "__typeHash__": 3067360607,
+       "dwUID": 532,
+       "dwFlags": 2,
        "nNeeded": 1,
        "tScriptMessageMap": {
         "__type__": "ScriptMessageMap",
@@ -4841,7 +5680,15 @@
        "unk_5698d08": false,
        "unk_77b5dc7": false,
        "unk_146ba45": 0,
-       "snoHeaderDisplayCondition": null
+       "snoHeaderDisplayCondition": {
+        "__raw__": 2060188,
+        "__group__": 51,
+        "__type__": "DT_SNO",
+        "__typeHash__": 2764331143,
+        "__targetFileName__": "base/meta/Condition/EGB_Header.cnd",
+        "groupName": "Condition",
+        "name": "EGB_Header"
+       }
       }
      ],
      "bGiveFirstTimeReward": false,
@@ -4864,6 +5711,134 @@
        "__typeHash__": 3067360607,
        "dwUID": 380,
        "dwFlags": 0,
+       "nNeeded": 1,
+       "tScriptMessageMap": {
+        "__type__": "ScriptMessageMap",
+        "__typeHash__": 2935055576,
+        "eEventType": 36,
+        "dwListenerFlags": 0,
+        "snoCondition": null,
+        "unk_c3ba01d": false,
+        "flCooldownSeconds": 0,
+        "arEventFilters": [
+         {
+          "__type__": "ScriptMessageMapFilter",
+          "__typeHash__": 3179414430,
+          "tKey": 334654326,
+          "eVariableType": 7,
+          "pMessageFilter": [
+           {
+            "__type__": "ScriptEventParamString",
+            "__typeHash__": 234160671,
+            "dwType": 234160671,
+            "eParamType": 6,
+            "dwPad": 0,
+            "dwStringHash": 2773962769,
+            "szString": "EGB_Undercity_Quest_01_Completed"
+           }
+          ]
+         },
+         {
+          "__type__": "ScriptMessageMapFilter",
+          "__typeHash__": 3179414430,
+          "tKey": 2197444774,
+          "eVariableType": 1,
+          "pMessageFilter": [
+           {
+            "__type__": "ScriptEventParamSelf",
+            "__typeHash__": 1210992754,
+            "dwType": 1210992754,
+            "eParamType": 11,
+            "dwPad": 0,
+            "idValue": 0
+           }
+          ]
+         },
+         {
+          "__type__": "ScriptMessageMapFilter",
+          "__typeHash__": 3179414430,
+          "tKey": 2344914334,
+          "eVariableType": 11,
+          "pMessageFilter": [
+           {
+            "__type__": "ScriptEventParamAllowAny",
+            "__typeHash__": 1295852463,
+            "dwType": 1295852463,
+            "eParamType": 0,
+            "dwPad": 0
+           }
+          ]
+         }
+        ],
+        "unk_492729e": [],
+        "dwEventEntryHash": 1212553832
+       },
+       "eIndicatorType": 3,
+       "snoWorld": {
+        "__raw__": 69068,
+        "__group__": 48,
+        "__type__": "DT_SNO",
+        "__typeHash__": 2764331143,
+        "__targetFileName__": "base/meta/World/Sanctuary_Eastern_Continent.wrl",
+        "groupName": "World",
+        "name": "Sanctuary_Eastern_Continent"
+       },
+       "tRegionDefault": {
+        "__type__": "QuestCallbackRegion",
+        "__typeHash__": 2884204419,
+        "eType": 0,
+        "vPolygonPoints": [],
+        "vCenterPos": {
+         "x": 0,
+         "y": 0
+        },
+        "flRadius": 0,
+        "bValid": false,
+        "bManuallySpecified": false
+       },
+       "arRegionOverrides": [],
+       "nValidRegionOverrides": 0,
+       "arLevelAreas": [
+        {
+         "__raw__": 1478722,
+         "__group__": 22,
+         "__type__": "DT_SNO",
+         "__typeHash__": 2764331143,
+         "__targetFileName__": "base/meta/LevelArea/Naha_Kurast_ThroneRoom.lvl",
+         "groupName": "LevelArea",
+         "name": "Naha_Kurast_ThroneRoom"
+        }
+       ],
+       "arSubzones": [],
+       "eProgressDisplayStyle": 0,
+       "eProgressBarSource": 0,
+       "unk_301d18": false,
+       "unk_896a0c5": {
+        "__type__": "UIImageHandleReference",
+        "__typeHash__": 1797021084,
+        "hImageHandle": 0
+       },
+       "unk_7dd76d1": 0,
+       "arSnonameTokens": [],
+       "szFontColorOverride": "",
+       "snoOptionalPreloadCondition": null,
+       "unk_9c1ea4f": 0,
+       "vecPositionOffset": {
+        "x": 0,
+        "y": 0
+       },
+       "unk_9d6e5b3": false,
+       "unk_b3ec93": 0,
+       "unk_5698d08": false,
+       "unk_77b5dc7": false,
+       "unk_146ba45": 0,
+       "snoHeaderDisplayCondition": null
+      },
+      {
+       "__type__": "QuestCallback",
+       "__typeHash__": 3067360607,
+       "dwUID": 533,
+       "dwFlags": 2,
        "nNeeded": 1,
        "tScriptMessageMap": {
         "__type__": "ScriptMessageMap",
@@ -4977,7 +5952,15 @@
        "unk_5698d08": false,
        "unk_77b5dc7": false,
        "unk_146ba45": 0,
-       "snoHeaderDisplayCondition": null
+       "snoHeaderDisplayCondition": {
+        "__raw__": 2060188,
+        "__group__": 51,
+        "__type__": "DT_SNO",
+        "__typeHash__": 2764331143,
+        "__targetFileName__": "base/meta/Condition/EGB_Header.cnd",
+        "groupName": "Condition",
+        "name": "EGB_Header"
+       }
       }
      ],
      "bGiveFirstTimeReward": false,
@@ -8913,7 +9896,7 @@
        "__type__": "QuestCallback",
        "__typeHash__": 3067360607,
        "dwUID": 458,
-       "dwFlags": 0,
+       "dwFlags": 2,
        "nNeeded": 1,
        "tScriptMessageMap": {
         "__type__": "ScriptMessageMap",
@@ -9017,13 +10000,21 @@
        "unk_5698d08": false,
        "unk_77b5dc7": false,
        "unk_146ba45": 0,
-       "snoHeaderDisplayCondition": null
+       "snoHeaderDisplayCondition": {
+        "__raw__": 2060188,
+        "__group__": 51,
+        "__type__": "DT_SNO",
+        "__typeHash__": 2764331143,
+        "__targetFileName__": "base/meta/Condition/EGB_Header.cnd",
+        "groupName": "Condition",
+        "name": "EGB_Header"
+       }
       },
       {
        "__type__": "QuestCallback",
        "__typeHash__": 3067360607,
        "dwUID": 459,
-       "dwFlags": 0,
+       "dwFlags": 2,
        "nNeeded": 1,
        "tScriptMessageMap": {
         "__type__": "ScriptMessageMap",
@@ -9127,13 +10118,21 @@
        "unk_5698d08": false,
        "unk_77b5dc7": false,
        "unk_146ba45": 0,
-       "snoHeaderDisplayCondition": null
+       "snoHeaderDisplayCondition": {
+        "__raw__": 2060188,
+        "__group__": 51,
+        "__type__": "DT_SNO",
+        "__typeHash__": 2764331143,
+        "__targetFileName__": "base/meta/Condition/EGB_Header.cnd",
+        "groupName": "Condition",
+        "name": "EGB_Header"
+       }
       },
       {
        "__type__": "QuestCallback",
        "__typeHash__": 3067360607,
        "dwUID": 460,
-       "dwFlags": 0,
+       "dwFlags": 2,
        "nNeeded": 1,
        "tScriptMessageMap": {
         "__type__": "ScriptMessageMap",
@@ -9237,13 +10236,21 @@
        "unk_5698d08": false,
        "unk_77b5dc7": false,
        "unk_146ba45": 0,
-       "snoHeaderDisplayCondition": null
+       "snoHeaderDisplayCondition": {
+        "__raw__": 2060188,
+        "__group__": 51,
+        "__type__": "DT_SNO",
+        "__typeHash__": 2764331143,
+        "__targetFileName__": "base/meta/Condition/EGB_Header.cnd",
+        "groupName": "Condition",
+        "name": "EGB_Header"
+       }
       },
       {
        "__type__": "QuestCallback",
        "__typeHash__": 3067360607,
        "dwUID": 461,
-       "dwFlags": 0,
+       "dwFlags": 2,
        "nNeeded": 1,
        "tScriptMessageMap": {
         "__type__": "ScriptMessageMap",
@@ -9347,7 +10354,15 @@
        "unk_5698d08": false,
        "unk_77b5dc7": false,
        "unk_146ba45": 0,
-       "snoHeaderDisplayCondition": null
+       "snoHeaderDisplayCondition": {
+        "__raw__": 2060188,
+        "__group__": 51,
+        "__type__": "DT_SNO",
+        "__typeHash__": 2764331143,
+        "__targetFileName__": "base/meta/Condition/EGB_Header.cnd",
+        "groupName": "Condition",
+        "name": "EGB_Header"
+       }
       },
       {
        "__type__": "QuestCallback",
@@ -9471,7 +10486,7 @@
        "__type__": "QuestCallback",
        "__typeHash__": 3067360607,
        "dwUID": 503,
-       "dwFlags": 0,
+       "dwFlags": 2,
        "nNeeded": 1,
        "tScriptMessageMap": {
         "__type__": "ScriptMessageMap",
@@ -10584,7 +11599,7 @@
         "unk_492729e": [],
         "dwEventEntryHash": 4035304214
        },
-       "eIndicatorType": 3,
+       "eIndicatorType": 2,
        "snoWorld": {
         "__raw__": 69068,
         "__group__": 48,
@@ -10597,14 +11612,19 @@
        "tRegionDefault": {
         "__type__": "QuestCallbackRegion",
         "__typeHash__": 2884204419,
-        "eType": 0,
-        "vPolygonPoints": [],
+        "eType": 1,
+        "vPolygonPoints": [
+         {
+          "x": 966.9739990234375,
+          "y": 205.76499938964844
+         }
+        ],
         "vCenterPos": {
-         "x": 0,
-         "y": 0
+         "x": 966.9739990234375,
+         "y": 205.76499938964844
         },
-        "flRadius": 0,
-        "bValid": false,
+        "flRadius": 12,
+        "bValid": true,
         "bManuallySpecified": false
        },
        "arRegionOverrides": [],
@@ -11948,5 +12968,6 @@
   "__targetFileName__": "base/meta/Condition/Season_Active_Any.cnd",
   "groupName": "Condition",
   "name": "Season_Active_Any"
- }
+ },
+ "gbidPartyFinderTag": null
 }
