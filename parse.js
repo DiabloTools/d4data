@@ -957,7 +957,6 @@ dirNames.forEach(dirName => {
 
   if (!fs.existsSync(dirName)) {
     fs.mkdirSync(dirName, { recursive: true });
-    fs.writeFileSync(dirName + '/.gitkeep', '');
   }
 });
 
