@@ -5,13 +5,59 @@
  "__typeHash__": 250193936,
  "ptRootCondition": [
   {
-   "__type__": "AnyLogicSubcondition",
-   "__typeHash__": 3494179431,
-   "dwType": 3494179431,
+   "__type__": "AtLeastLogicSubcondition",
+   "__typeHash__": 1775775341,
+   "dwType": 1775775341,
    "dwPad": 0,
    "bNegate": false,
    "nMaxDepth": 12,
    "arConditions": [
+    {
+     "__type__": "AnyLogicSubcondition",
+     "__typeHash__": 3494179431,
+     "dwType": 3494179431,
+     "dwPad": 0,
+     "bNegate": false,
+     "nMaxDepth": 12,
+     "arConditions": [
+      {
+       "__type__": "QuestChainSubcondition",
+       "__typeHash__": 3176841574,
+       "dwType": 3176841574,
+       "dwPad": 0,
+       "bNegate": false,
+       "nMaxDepth": 12,
+       "snoQuestChain": {
+        "__raw__": 587725,
+        "__group__": 96,
+        "__type__": "DT_SNO",
+        "__typeHash__": 2764331143,
+        "__targetFileName__": "base/meta/QuestChain/Hawe_Finale2.qc",
+        "groupName": "QuestChain",
+        "name": "Hawe_Finale2"
+       },
+       "eState": 2
+      },
+      {
+       "__type__": "QuestChainSubcondition",
+       "__typeHash__": 3176841574,
+       "dwType": 3176841574,
+       "dwPad": 0,
+       "bNegate": true,
+       "nMaxDepth": 12,
+       "snoQuestChain": {
+        "__raw__": 577795,
+        "__group__": 96,
+        "__type__": "DT_SNO",
+        "__typeHash__": 2764331143,
+        "__targetFileName__": "base/meta/QuestChain/Conv_Kehj2.qc",
+        "groupName": "QuestChain",
+        "name": "Conv_Kehj2"
+       },
+       "eState": 2
+      }
+     ]
+    },
     {
      "__type__": "QuestChainSubcondition",
      "__typeHash__": 3176841574,
@@ -20,13 +66,13 @@
      "bNegate": true,
      "nMaxDepth": 12,
      "snoQuestChain": {
-      "__raw__": 577795,
+      "__raw__": 961842,
       "__group__": 96,
       "__type__": "DT_SNO",
       "__typeHash__": 2764331143,
-      "__targetFileName__": "base/meta/QuestChain/Conv_Kehj2.qc",
+      "__targetFileName__": "base/meta/QuestChain/Scos_Epilogue.qc",
       "groupName": "QuestChain",
-      "name": "Conv_Kehj2"
+      "name": "Scos_Epilogue"
      },
      "eState": 2
     },
@@ -38,17 +84,26 @@
      "bNegate": false,
      "nMaxDepth": 12,
      "snoQuestChain": {
-      "__raw__": 587725,
+      "__raw__": 1473729,
       "__group__": 96,
       "__type__": "DT_SNO",
       "__typeHash__": 2764331143,
-      "__targetFileName__": "base/meta/QuestChain/Hawe_Finale2.qc",
+      "__targetFileName__": "base/meta/QuestChain/X1_Naha_FiveHills.qc",
       "groupName": "QuestChain",
-      "name": "Hawe_Finale2"
+      "name": "X1_Naha_FiveHills"
      },
      "eState": 2
+    },
+    {
+     "__type__": "PlayerOwnsExpansionSubcondition",
+     "__typeHash__": 2163233882,
+     "dwType": 2163233882,
+     "dwPad": 0,
+     "bNegate": true,
+     "nMaxDepth": 12
     }
-   ]
+   ],
+   "nMinimum": 2
   }
  ]
 }
