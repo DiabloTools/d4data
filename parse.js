@@ -317,13 +317,9 @@ let basicTypes = {
   "DT_OPTIONAL": function (ret, file, typeHashes, offset, field, fieldPath, results = { readLength: 0 }) {
     //readLog.push({fieldPath: fieldPath.join('.') + ' @ ' + offset, value: ret});
 
+    const value = readStructure.bind(this)(file, typeHashes.slice(1), offset, field, [...fieldPath, c], results);
+    ret.value = file.readInt32LE(offset) ? value : null;
     results.readLength += 4;
-    if (file.readInt32LE(offset)) {
-      ret.value = readStructure.bind(this)(file, typeHashes.slice(1), offset + 4, field, [...fieldPath, c], results);
-    }
-    else {
-      ret.value = null;
-    }
   },
   "DT_SNO": function (ret, file, typeHashes, offset, field, fieldPath, results = { readLength: 0 }) {
     //readLog.push({fieldPath: fieldPath.join('.') + ' @ ' + offset, value: ret});
