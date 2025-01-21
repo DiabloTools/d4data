@@ -485,13 +485,15 @@ let basicTypes = {
     }
 
     if (dataOffset < 1) {
-      ret.__error__ = 'Something is wrong.';
+      ret.__error__ = `Error: DT_TAGMAP: Invalid offset: ${dataOffset}, size: ${dataSize}`;
+      console.error('      @', offset, 'DT_TAGMAP', field.name, ': Invalid dataOffset:', dataOffset, 'dataSize:', dataSize, 'next int:', file.readInt32LE(offset + 16), 'fieldPath:', fieldPath.slice(-3).join('.'));
       return;
     }
 
     if (dataOffset) {
       if (dataOffset + dataSize > file.length) {
-        ret.__error__ = "Invalid Length: " + dataSize;
+        ret.__error__ = "Error: DT_TAGMAP: Reading beyond EOF: dataOffset: " + dataOffset + " dataSize: " + dataSize + " fileSize: " + file.length;
+        console.error('      @', offset, 'DT_TAGMAP', field.name, ': Reading beyond EOF: dataOffset:', dataOffset, 'dataSize:', dataSize, 'next int:', file.readInt32LE(offset + 16), 'fieldPath:', fieldPath.slice(-3).join('.'));
         ret.value = null;
       }
       else {
@@ -570,7 +572,8 @@ let basicTypes = {
     results.readLength += 16;
 
     if (padding1 || padding2) {
-      ret.__error__ = 'Unexpected value in padding!';
+      ret.__error__ = 'Error: DT_VARIABLEARRAY: Unexpected value in padding!';
+      console.error('      @', offset, 'DT_VARIABLEARRAY[', getType(typeHashes[1]).name, ']', field.name, ': Unexpected value in padding! padding1:', padding1, "padding2:", padding2, "dataOffset:", dataOffset, 'dataSize:', dataSize, 'fieldPath:', fieldPath.slice(-3).join('.'));
       return;
     }
 
@@ -602,7 +605,8 @@ let basicTypes = {
     }
 
     if (dataOffset < 1) {
-      ret.__error__ = 'Something is wrong.';
+      ret.__error__ = `Error: DT_VARIABLEARRAY: Invalid offset: ${dataOffset}, size: ${dataSize}`;
+      console.error('      @', offset, 'DT_VARIABLEARRAY[', getType(typeHashes[1]).name, ']', field.name, ': Invalid dataOffset:', dataOffset, 'dataSize:', dataSize, 'next int:', file.readInt32LE(offset + 16), 'fieldPath:', fieldPath.slice(-3).join('.'));
       return;
     }
 
@@ -610,7 +614,8 @@ let basicTypes = {
 
     if (dataOffset) {
       if (dataOffset + dataSize > file.length) {
-        ret.__error__ = "Invalid Length: " + dataSize;
+        ret.__error__ = "Error: DT_VARIABLEARRAY: Reading beyond EOF: dataOffset: " + dataOffset + " dataSize: " + dataSize + " fileSize: " + file.length;
+        console.error('      @', offset, 'DT_VARIABLEARRAY[', getType(typeHashes[1]).name, ']', field.name, ': Reading beyond EOF: dataOffset:', dataOffset, 'dataSize:', dataSize, 'next int:', file.readInt32LE(offset + 16), 'fieldPath:', fieldPath.slice(-3).join('.'));
         ret.value = null;
       }
       else {
@@ -642,12 +647,14 @@ let basicTypes = {
     results.readLength += 24;
 
     if (padding1 || padding2 || padding3) {
-      ret.__error__ = 'Unexpected value in padding!';
+      ret.__error__ = 'Error: DT_POLYMORPHIC_VARIABLEARRAY: Unexpected value in padding!';
+      console.error('      @', offset, 'DT_POLYMORPHIC_VARIABLEARRAY[', getType(typeHashes[1]).name, ']: Unexpected value in padding! padding1:', padding1, "padding2:", padding2, "dataOffset:", dataOffset, 'dataSize:', dataSize, 'fieldPath:', fieldPath.slice(-3).join('.'));
       return;
     }
 
     if (dataCount >= 1000) {
-      ret.__error__ = 'Something is wrong.';
+      ret.__error__ = 'Error: DT_POLYMORPHIC_VARIABLEARRAY: dataCount (' + dataCount + ') >= 1000: ';
+      console.warn('      @', offset, 'DT_POLYMORPHIC_VARIABLEARRAY[', getType(typeHashes[1]).name, ']: dataCount >= 1000:', dataCount, 'dataOffset:', dataOffset, 'dataSize:', dataSize, 'next int:', file.readInt32LE(offset + 16), 'fieldPath:', fieldPath.slice(-3).join('.'));
       return;
     }
 
@@ -680,7 +687,8 @@ let basicTypes = {
     }
 
     if (dataOffset < 1) {
-      ret.__error__ = 'Something is wrong.';
+      ret.__error__ = `Error: DT_POLYMORPHIC_VARIABLEARRAY: Invalid offset: ${dataOffset}, size: ${dataSize}`;
+      console.error('      @', offset, 'DT_POLYMORPHIC_VARIABLEARRAY[', getType(typeHashes[1]).name, ']: Invalid dataOffset:', dataOffset, 'dataSize:', dataSize, 'next int:', file.readInt32LE(offset + 16), 'fieldPath:', fieldPath.slice(-3).join('.'));
       return;
     }
 
@@ -688,7 +696,8 @@ let basicTypes = {
 
     if (dataOffset && dataCount > 0) {
       if (dataOffset + dataSize > file.length) {
-        ret.__error__ = "Invalid Length: " + dataSize;
+        ret.__error__ = "Error: DT_POLYMORPHIC_VARIABLEARRAY: Reading beyond EOF: dataOffset: " + dataOffset + " dataSize: " + dataSize + " fileSize: " + file.length;
+        console.error('      @', offset, 'DT_POLYMORPHIC_VARIABLEARRAY[', getType(typeHashes[1]).name, ']', field.name, ': Reading beyond EOF: dataOffset:', dataOffset, 'dataSize:', dataSize, 'next int:', file.readInt32LE(offset + 16), 'fieldPath:', fieldPath.slice(-3).join('.'));
         ret.value = null;
       }
       else {
@@ -736,7 +745,8 @@ let basicTypes = {
     results.readLength += 16;
 
     if (padding) {
-      ret.__error__ = 'Unexpected value in padding!';
+      ret.__error__ = 'Error: DT_CSTRING: Unexpected value in padding!';
+      console.error('      @', offset, 'DT_CSTRING: Unexpected value in padding! padding:', padding, "stringOffset:", stringOffset, 'stringSize:', stringSize, 'fieldPath:', fieldPath.slice(-3).join('.'));
       return;
     }
 
@@ -746,7 +756,8 @@ let basicTypes = {
     }
 
     if (stringOffset < 1) {
-      ret.__error__ = 'Something is wrong';
+      ret.__error__ = `Error: DT_CSTRING: Invalid offset: ${stringOffset}, size: ${stringSize}`;
+      console.error('      @', offset, 'DT_CSTRING: Invalid stringOffset:', stringOffset, 'stringSize:', stringSize, 'next int:', file.readInt32LE(offset + 16), 'fieldPath:', fieldPath.slice(-3).join('.'));
       return;
     }
 
