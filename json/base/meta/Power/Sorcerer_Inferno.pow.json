@@ -1403,7 +1403,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Affix_Value_1#legendary_sorc_043 * (Owner.Weapon_Damage_Min_Total + Owner.Weapon_Damage_Delta_Total)",
-    "compiled": "BQAAAAAAAABTBAAAOOIPAAAAAAAFAAAAAAAAALoBAAD+////AwAAAAUAAAAAAAAAuwEAAP7///8DAAAACwAAAA0AAAAAAAAA"
+    "compiled": "BQAAAAAAAABQBAAAOOIPAAAAAAAFAAAAAAAAALoBAAD+////AwAAAAUAAAAAAAAAuwEAAP7///8DAAAACwAAAA0AAAAAAAAA"
    }
   },
   {
@@ -1468,6 +1468,38 @@
    "tFormula": {
     "value": "(1-POW(1-SF_23/100,1/(SF_5*2)))*100",
     "compiled": "BgAAAAAAgD8GAAAAAACAPwUAAAAdAAAAAAAAAAAAAAAAAAAABgAAAAAAyEIOAAAADAAAAAYAAAAAAIA/BQAAAAsAAAAAAAAAAAAAAAAAAAAGAAAAAAAAQA0AAAAOAAAAAQAAAAcAAAAMAAAABgAAAAAAyEINAAAAAAAAAA=="
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "(Floor((sLevel)/5))? 1 : 0",
+    "compiled": "BQAAAAEAAAAAAAAAAAAAAAAAAAAGAAAAAACgQA4AAAABAAAABQAAAAYAAAAAAIA/BgAAAAAAAAAQAAAAAAAAAA=="
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "1",
+    "compiled": "BgAAAAAAgD8AAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "((Affix_Value_1#legendary_sorc_043)*(Affix_Value_2#legendary_sorc_043))",
+    "compiled": "BQAAAAAAAABQBAAAOOIPAAAAAAAFAAAAAAAAAFEEAAA44g8AAAAAAA0AAAAAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "0.5",
+    "compiled": "BgAAAAAAAD8AAAAA"
    }
   }
  ],
@@ -1599,6 +1631,102 @@
    "tVulnerableDurationSecondsOverride": {
     "value": "0",
     "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "tFortifiedHealth": {
+    "__type__": "HitpointSpecifier",
+    "__typeHash__": 1185241065,
+    "eType": 0,
+    "tHitpointScalar": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    },
+    "tFlatLevel": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    }
+   },
+   "tApplyFreeze": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "tApplyChillAmount": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "unk_e659b0f": -1,
+   "tHeal": {
+    "__type__": "HitpointSpecifier",
+    "__typeHash__": 1185241065,
+    "eType": 0,
+    "tHitpointScalar": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    },
+    "tFlatLevel": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    }
+   },
+   "eHealType": 0,
+   "bPlayHealEffect": true,
+   "unk_8bc45f2": false,
+   "unk_15c6c03": false,
+   "unk_e842c84": false,
+   "unk_b8f2b": -1,
+   "bHasCombatEffectOverride": false,
+   "tCombatEffectOverride": {
+    "value": "100",
+    "compiled": "BgAAAAAAyEIAAAAA"
+   },
+   "ePayloadDefaultHitEffectType": 2,
+   "snoNormalHitEffectGroup": null,
+   "snoTargetImpactEffectGroup": null,
+   "unk_f381067": false,
+   "flHitFlashDurationScalar": 1,
+   "iPowerNeedTarget": false,
+   "bPlayNormalHitSoundPayload": false,
+   "unk_969096b": false,
+   "unk_5885b8": 0,
+   "unk_f38eac9": false,
+   "tOnHitSoundsPayload": {
+    "__type__": "OnHitSounds",
+    "__typeHash__": 960545022,
+    "sno1P": null,
+    "sno3PEnemy": null,
+    "sno3PFriendly": null
+   }
+  },
+  {
+   "__type__": "PowerPayloadDefinition",
+   "__typeHash__": 812993760,
+   "snoItemTypeMainHandEffectsOverride": null,
+   "snoItemTypeOffHandEffectsOverride": null,
+   "dwID": 2322683310,
+   "dwPayloadId": 2,
+   "eForcedDamageType": -1,
+   "tDamage": {
+    "__type__": "HitpointSpecifier",
+    "__typeHash__": 1185241065,
+    "eType": 0,
+    "tHitpointScalar": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    },
+    "tFlatLevel": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    }
+   },
+   "bHasCustomDamageVariance": false,
+   "tDamageVariance": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "unk_f0290f2": [],
+   "unk_c1c7b04": true,
+   "tVulnerableDurationSecondsOverride": {
+    "value": "SF_26",
+    "compiled": "BQAAACAAAAAAAAAAAAAAAAAAAAAAAAAA"
    },
    "tFortifiedHealth": {
     "__type__": "HitpointSpecifier",

@@ -145,8 +145,8 @@
  "arFacingWindows": [],
  "unk_4bf03ff": true,
  "tAttackSpeed": {
-  "value": "Attacks_Per_Second_Total * 1.5",
-  "compiled": "BQAAAAAAAADUAAAA/v///wAAAAAGAAAAAADAPw0AAAAAAAAA"
+  "value": "Attacks_Per_Second_Total * 3",
+  "compiled": "BQAAAAAAAADUAAAA/v///wAAAAAGAAAAAABAQA0AAAAAAAAA"
  },
  "unk_6deb090": false,
  "unk_ed2bdad": false,
@@ -288,7 +288,7 @@
  "unk_61e06df": false,
  "unk_787b722": 0,
  "unk_b2d506d": 0,
- "ePowerCancelCapability": 3,
+ "ePowerCancelCapability": 4,
  "unk_44bbb8e": false,
  "tAttackRadius": {
   "value": "0",
@@ -663,8 +663,8 @@
    "bHarmful": false,
    "bInfinite": false,
    "tDuration": {
-    "value": "1",
-    "compiled": "BgAAAAAAgD8AAAAA"
+    "value": "0.25",
+    "compiled": "BgAAAAAAgD4AAAAA"
    },
    "unk_deea7e8": {
     "value": "0",
@@ -1210,16 +1210,16 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "2.2 * Table(34, sLevel)",
-    "compiled": "BgAAAM3MDEAGAAAAAAAIQgUAAAABAAAAAAAAAAAAAAAAAAAAAQAAAAsAAAANAAAAAAAAAA=="
+    "value": "(SF_27 == 0)? (4.5 * Table(34, sLevel)) : (4.5 * Table(34, sLevel)*(1+( SF_26)))",
+    "compiled": "BQAAACEAAAAAAAAAAAAAAAAAAAAGAAAAAAAAAAkAAAAGAAAAAACQQAYAAAAAAAhCBQAAAAEAAAAAAAAAAAAAAAAAAAABAAAACwAAAA0AAAAGAAAAAACQQAYAAAAAAAhCBQAAAAEAAAAAAAAAAAAAAAAAAAABAAAACwAAAA0AAAAGAAAAAACAPwUAAAAgAAAAAAAAAAAAAAAAAAAACwAAAA0AAAAQAAAAAAAAAA=="
    }
   },
   {
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "0.25",
-    "compiled": "BgAAAAAAgD4AAAAA"
+    "value": "0.5",
+    "compiled": "BgAAAAAAAD8AAAAA"
    }
   },
   {
@@ -1258,8 +1258,8 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "4",
-    "compiled": "BgAAAAAAgEAAAAAA"
+    "value": "12",
+    "compiled": "BgAAAAAAQEEAAAAA"
    }
   },
   {
@@ -1306,8 +1306,8 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "0.5",
-    "compiled": "BgAAAAAAAD8AAAAA"
+    "value": "0.25",
+    "compiled": "BgAAAAAAgD4AAAAA"
    }
   },
   {
@@ -1346,8 +1346,8 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "2",
-    "compiled": "BgAAAAAAAEAAAAAA"
+    "value": "1",
+    "compiled": "BgAAAAAAgD8AAAAA"
    }
   },
   {
@@ -1371,7 +1371,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Percent_Bonus_Projectiles_Per_Power#Rogue_RainofArrows + Percent_Bonus_Projectiles_All + Percent_Bonus_Projectiles_Per_Skill_Tag#Skill_Marksman",
-    "compiled": "BQAAAAAAAACtAwAAaBsGAAAAAAAFAAAAAAAAAKwDAAD+////AAAAAAsAAAAFAAAAAAAAAK4DAAB4tLnkAAAAAAsAAAAAAAAA"
+    "compiled": "BQAAAAAAAACpAwAAaBsGAAAAAAAFAAAAAAAAAKgDAAD+////AAAAAAsAAAAFAAAAAAAAAKoDAAB4tLnkAAAAAAsAAAAAAAAA"
    }
   },
   {
@@ -1395,7 +1395,31 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Chance_For_Double_Damage_Per_Power#Rogue_RainofArrows",
-    "compiled": "BQAAAAAAAABNAACAaBsGAAAAAAAAAAAA"
+    "compiled": "BQAAAAAAAAB2AACAaBsGAAAAAAAAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "1",
+    "compiled": "BgAAAAAAgD8AAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "((1+Multiplicative_Damage_Bonus_To_Far)*(1+Damage_Bonus_To_Far) - 1)*(SF_25)",
+    "compiled": "BgAAAAAAgD8FAAAAAAAAAA4EAAD+////AAAAAAsAAAAGAAAAAACAPwUAAAAAAAAADQQAAP7///8AAAAACwAAAA0AAAAGAAAAAACAPwwAAAAFAAAAHwAAAAAAAAAAAAAAAAAAAA0AAAAAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "(Floor((sLevel)/5))? 1 : 0",
+    "compiled": "BQAAAAEAAAAAAAAAAAAAAAAAAAAGAAAAAACgQA4AAAABAAAABQAAAAYAAAAAAIA/BgAAAAAAAAAQAAAAAAAAAA=="
    }
   }
  ],

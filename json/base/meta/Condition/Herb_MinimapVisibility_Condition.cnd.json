@@ -1,0 +1,77 @@
+{
+ "__fileName__": "base/meta/Condition/Herb_MinimapVisibility_Condition.cnd",
+ "__snoID__": 1685679,
+ "__type__": "ConditionDefinition",
+ "__typeHash__": 250193936,
+ "ptRootCondition": [
+  {
+   "__type__": "AllLogicSubcondition",
+   "__typeHash__": 1466985016,
+   "dwType": 1466985016,
+   "bNegate": false,
+   "nMaxDepth": 12,
+   "arConditions": [
+    {
+     "__type__": "AttributeSubcondition",
+     "__typeHash__": 3477503045,
+     "dwType": 3477503045,
+     "bNegate": false,
+     "nMaxDepth": 12,
+     "eComparisonOp": 0,
+     "eAttribute": 518,
+     "__eAttribute_name__": "Gizmo_Has_Been_Operated",
+     "flValue": 0,
+     "nParam": -1,
+     "eActorToEvaluate": 0
+    },
+    {
+     "__type__": "AnyLogicSubcondition",
+     "__typeHash__": 3494179431,
+     "dwType": 3494179431,
+     "bNegate": false,
+     "nMaxDepth": 12,
+     "arConditions": [
+      {
+       "__type__": "BuffSubcondition",
+       "__typeHash__": 3762407828,
+       "dwType": 3762407828,
+       "bNegate": false,
+       "nMaxDepth": 12,
+       "snoBuffPower": {
+        "__raw__": 1684569,
+        "__group__": 29,
+        "__type__": "DT_SNO",
+        "__typeHash__": 2764331143,
+        "__targetFileName__": "base/meta/Power/NPC_Mercenary_BountyHunter_Perk.pow",
+        "groupName": "Power",
+        "name": "NPC_Mercenary_BountyHunter_Perk"
+       },
+       "szBuffDataID": 4232737229,
+       "eActorToEvaluate": 1
+      },
+      {
+       "__type__": "QuestSubcondition",
+       "__typeHash__": 3938938339,
+       "dwType": 3938938339,
+       "bNegate": false,
+       "nMaxDepth": 12,
+       "snoQuest": {
+        "__raw__": 2133138,
+        "__group__": 31,
+        "__type__": "DT_SNO",
+        "__typeHash__": 2764331143,
+        "__targetFileName__": "base/meta/Quest/S07_Bounty_HerbalRemedy_Controller.qst",
+        "groupName": "Quest",
+        "name": "S07_Bounty_HerbalRemedy_Controller"
+       },
+       "eState": 2,
+       "eStepComparison": 0,
+       "nStepUID": -1,
+       "dwPaddingSub": 0
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

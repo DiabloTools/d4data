@@ -652,6 +652,114 @@
   {
    "__type__": "PowerBuffDefinition",
    "__typeHash__": 1071057721,
+   "dwID": 1635228259,
+   "dwBuffId": 22,
+   "bHarmful": true,
+   "bInfinite": false,
+   "tDuration": {
+    "value": "SF_30",
+    "compiled": "BQAAACQAAAAAAAAAAAAAAAAAAAAAAAAA"
+   },
+   "unk_deea7e8": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "unk_4393f38": false,
+   "unk_dcb22bd": false,
+   "tMaxStackCount": {
+    "value": "1",
+    "compiled": "BgAAAAAAgD8AAAAA"
+   },
+   "bVisibleInUI": false,
+   "bShowDuration": false,
+   "bCancellable": false,
+   "unk_99b5752": false,
+   "unk_93cd85f": false,
+   "unk_4bdaef2": false,
+   "bVisibleInHotbarUI": false,
+   "bShowsActiveStateOnHotbar": false,
+   "bShowsDurationOnHotbar": false,
+   "bShowsStackCountOnHotbar": false,
+   "unk_71ba554": false,
+   "unk_1375622": false,
+   "unk_d2dd47": false,
+   "unk_8a5f69e": false,
+   "hIcon": 0,
+   "hFloatingIcon": 0,
+   "hFloatingTextLabel": 0,
+   "flFloatingTextIconRange": 0,
+   "unk_395ccd6": false,
+   "bDealsDOT": true,
+   "tDOT": {
+    "__type__": "PowerBuffDOTDamage",
+    "__typeHash__": 3824324374,
+    "eDamageType": 4,
+    "tDamage": {
+     "__type__": "HitpointSpecifier",
+     "__typeHash__": 1185241065,
+     "eType": 0,
+     "tHitpointScalar": {
+      "value": "SF_31",
+      "compiled": "BQAAACUAAAAAAAAAAAAAAAAAAAAAAAAA"
+     },
+     "tFlatLevel": {
+      "value": "0",
+      "compiled": "BgAAAAAAAAAAAAAA"
+     }
+    },
+    "unk_89dc285": false,
+    "flFlatDamageBonusScalar": 1,
+    "unk_f551941": -1,
+    "bDamageIgnoresInvulnerable": false,
+    "bDamageIgnoresBonuses": false,
+    "unk_b8f2b": 1,
+    "bHasCombatEffectOverride": false,
+    "tCombatEffectOverride": {
+     "value": "100",
+     "compiled": "BgAAAAAAyEIAAAAA"
+    },
+    "bHideDamageEffects": false,
+    "bHideGlobalApplicationEffect": false
+   },
+   "tCrowdControl": {
+    "__type__": "PowerBuffCrowdControl",
+    "__typeHash__": 4138865712,
+    "unk_c63f49e": true,
+    "dwCCFlags": 0,
+    "bUseGlobalSlowAmount": false,
+    "eGlobalSlowAmountType": 0,
+    "tSlowAmount": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    },
+    "tChillAmount": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    },
+    "tStaggerMultiplier": {
+     "value": "1",
+     "compiled": "BgAAAAAAgD8AAAAA"
+    }
+   },
+   "bHasDamageShield": false,
+   "tDamageShield": {
+    "__type__": "HitpointSpecifier",
+    "__typeHash__": 1185241065,
+    "eType": 0,
+    "tHitpointScalar": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    },
+    "tFlatLevel": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    }
+   },
+   "dwShaderMapOverride": 2
+  },
+  {
+   "__type__": "PowerBuffDefinition",
+   "__typeHash__": 1071057721,
    "dwID": 3586781664,
    "dwBuffId": 0,
    "bHarmful": false,
@@ -1737,7 +1845,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Percent_Bonus_Projectiles_Per_Power#Druid_Boulder + Percent_Bonus_Projectiles_All",
-    "compiled": "BQAAAAAAAACtAwAACaMDAAAAAAAFAAAAAAAAAKwDAAD+////AAAAAAsAAAAAAAAA"
+    "compiled": "BQAAAAAAAACpAwAACaMDAAAAAAAFAAAAAAAAAKgDAAD+////AAAAAAsAAAAAAAAA"
    }
   },
   {
@@ -1745,7 +1853,31 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Affix_Value_1#Amulet_Unique_Druid_100",
-    "compiled": "BQAAAAAAAABTBAAAK40YAAAAAAAAAAAA"
+    "compiled": "BQAAAAAAAABQBAAAK40YAAAAAAAAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "SF_0*0.8",
+    "compiled": "BQAAAAYAAAAAAAAAAAAAAAAAAAAGAAAAzcxMPw0AAAAAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "4",
+    "compiled": "BgAAAAAAgEAAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "SF_29/SF_30",
+    "compiled": "BQAAACMAAAAAAAAAAAAAAAAAAAAFAAAAJAAAAAAAAAAAAAAAAAAAAA4AAAAAAAAA"
    }
   }
  ],
@@ -2235,17 +2367,17 @@
    "bAppendDescription": true,
    "bBulletPointDescription": true,
    "bAffectsEnchantmentDescription": false,
-   "unk_b1d89c5": false,
+   "unk_b1d89c5": true,
    "arSkillTags": [
     {
      "__type__": "SkillTagStruct",
      "__typeHash__": 4000554560,
      "gbidSkillTag": {
-      "__raw__": 2892145024,
+      "__raw__": 4053473037,
       "__type__": "DT_GBID",
       "__typeHash__": 1028170061,
       "group": 56,
-      "name": "Search_Critical"
+      "name": "Search_Poison"
      },
      "bSearchOnly": false
     }

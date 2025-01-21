@@ -3,9 +3,9 @@
  "__snoID__": 1229701,
  "__type__": "AffixDefinition",
  "__typeHash__": 216509239,
- "dwFlags": 3,
+ "dwFlags": 0,
  "eMagicType": 1,
- "eCategory": 0,
+ "eCategory": 2,
  "nItemPowerMin": 391,
  "nItemPowerMax": 2000,
  "tCost": {
@@ -31,20 +31,46 @@
   0
  ],
  "arAllowedItemLabels": [
-  19,
-  0,
+  16,
+  17,
+  29,
   28,
-  26
+  26,
+  30
  ],
  "unk_5e84277": 0,
  "dwAllowedQualityLevels": 0,
  "eAffixType": 0,
  "arMaxLegendaryRanks": [
-  16,
-  13,
-  21
+  4,
+  4,
+  6
  ],
  "ptItemAffixAttributes": [
+  {
+   "__type__": "ItemAffixAttribute",
+   "__typeHash__": 501899601,
+   "bIgnoreLegendaryScaling": false,
+   "bLowerIsBetter": true,
+   "unk_1cbe733": false,
+   "tAttribute": {
+    "__type__": "AttributeSpecifier",
+    "__typeHash__": 3218190286,
+    "eAttribute": 1104,
+    "__eAttribute_name__": "Affix_Value_1",
+    "dwID": 0,
+    "nParam": -1,
+    "szAttributeFormula": {
+     "value": "8 - (CurrentLegendaryRank()-1)*1",
+     "compiled": "BgAAAAAAAEEBAAAAUAAAAAYAAAAAAIA/DAAAAAYAAAAAAIA/DQAAAAwAAAAAAAAA"
+    },
+    "gbidFormula": null,
+    "unk_dffdf28": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    }
+   }
+  },
   {
    "__type__": "ItemAffixAttribute",
    "__typeHash__": 501899601,
@@ -54,12 +80,13 @@
    "tAttribute": {
     "__type__": "AttributeSpecifier",
     "__typeHash__": 3218190286,
-    "eAttribute": 1107,
-    "__eAttribute_name__": "Affix_Value_1",
+    "eAttribute": 1105,
+    "__eAttribute_name__": "Affix_Value_2",
+    "dwID": 0,
     "nParam": -1,
     "szAttributeFormula": {
-     "value": "10+(CurrentLegendaryRank()-1)*1",
-     "compiled": "BgAAAAAAIEEBAAAAUAAAAAYAAAAAAIA/DAAAAAYAAAAAAIA/DQAAAAsAAAAAAAAA"
+     "value": "[Affix_Value_1]",
+     "compiled": ""
     },
     "gbidFormula": null,
     "unk_dffdf28": {
@@ -70,19 +97,18 @@
   }
  ],
  "arStaticValues": [
-  10,
-  0.10000000149011612
+  0.8999999761581421
  ],
- "snoPassivePower": null,
- "snoClassRequirement": {
-  "__raw__": 131965,
-  "__group__": 74,
+ "snoPassivePower": {
+  "__raw__": 2154528,
+  "__group__": 29,
   "__type__": "DT_SNO",
   "__typeHash__": 2764331143,
-  "__targetFileName__": "base/meta/PlayerClass/Sorcerer.pcl",
-  "groupName": "PlayerClass",
-  "name": "Sorcerer"
+  "__targetFileName__": "base/meta/Power/legendary_sorc_119.pow",
+  "groupName": "Power",
+  "name": "legendary_sorc_119"
  },
+ "snoClassRequirement": null,
  "arAffixSkillTags": [
   {
    "__raw__": 2145797928,
@@ -106,11 +132,11 @@
    "name": "Search_Lightning"
   },
   {
-   "__raw__": 3821995300,
+   "__raw__": 3054612403,
    "__type__": "DT_GBID",
    "__typeHash__": 1028170061,
    "group": 56,
-   "name": "FILTER_Legendary_Offensive"
+   "name": "FILTER_Legendary_Utility"
   },
   {
    "__raw__": 746476422,
@@ -139,12 +165,18 @@
    "__typeHash__": 1028170061,
    "group": 56,
    "name": "Search_Damage"
+  },
+  {
+   "__raw__": 1020644017,
+   "__type__": "DT_GBID",
+   "__typeHash__": 1028170061,
+   "group": 56,
+   "name": "Archetype_Sorcerer_Shock_Signature"
   }
  ],
  "arPowerToModify": [],
  "arSkillTagsToAdd": [],
  "arSkillTagsToRemove": [],
  "arConditionalSkillTags": [],
- "gbidMalignantColor": null,
  "bIsTemperedAffix": false
 }

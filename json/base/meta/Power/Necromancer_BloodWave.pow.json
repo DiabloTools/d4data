@@ -137,8 +137,90 @@
  "unk_48531b6": false,
  "unk_f234087": -1,
  "arEndingPreplayed": [],
- "ptPhaseInitialization": [],
- "arPhases": [],
+ "ptPhaseInitialization": [
+  {
+   "__type__": "PowerPhaseInitialization",
+   "__typeHash__": 3796435398,
+   "dwType": 3796435398,
+   "tPhaseName": 3627236824,
+   "arPhaseJumps": [
+    {
+     "__type__": "PhaseJumpImmediate",
+     "__typeHash__": 3485436892,
+     "dwType": 3485436892,
+     "tPhaseToJumpTo": 4276271527,
+     "arConditions": [
+      {
+       "__type__": "PowerConditionHasAffixEquipped",
+       "__typeHash__": 619659323,
+       "dwType": 619659323,
+       "bInverse": false,
+       "eSubject": 0,
+       "snoAffix": {
+        "__raw__": 2110237,
+        "__group__": 104,
+        "__type__": "DT_SNO",
+        "__typeHash__": 2764331143,
+        "__targetFileName__": "base/meta/Affix/Pants_Unique_Necro_101.aff",
+        "groupName": "Affix",
+        "name": "Pants_Unique_Necro_101"
+       }
+      }
+     ],
+     "bEnd": false
+    },
+    {
+     "__type__": "PhaseJumpImmediate",
+     "__typeHash__": 3485436892,
+     "dwType": 3485436892,
+     "tPhaseToJumpTo": 632831769,
+     "arConditions": [
+      {
+       "__type__": "PowerConditionHasAffixEquipped",
+       "__typeHash__": 619659323,
+       "dwType": 619659323,
+       "bInverse": true,
+       "eSubject": 0,
+       "snoAffix": {
+        "__raw__": 2110237,
+        "__group__": 104,
+        "__type__": "DT_SNO",
+        "__typeHash__": 2764331143,
+        "__targetFileName__": "base/meta/Affix/Pants_Unique_Necro_101.aff",
+        "groupName": "Affix",
+        "name": "Pants_Unique_Necro_101"
+       }
+      }
+     ],
+     "bEnd": false
+    }
+   ],
+   "unk_d0d932b": false,
+   "unk_9a8200e": false
+  }
+ ],
+ "arPhases": [
+  {
+   "__type__": "PowerPhaseOneShot",
+   "__typeHash__": 582599742,
+   "dwType": 582599742,
+   "tPhaseName": 4276271527,
+   "arPhaseJumps": [],
+   "unk_d0d932b": false,
+   "unk_9a8200e": false,
+   "bScalableDuration": false
+  },
+  {
+   "__type__": "PowerPhaseOneShot",
+   "__typeHash__": 582599742,
+   "dwType": 582599742,
+   "tPhaseName": 632831769,
+   "arPhaseJumps": [],
+   "unk_d0d932b": false,
+   "unk_9a8200e": false,
+   "bScalableDuration": false
+  }
+ ],
  "unk_92fea1c": true,
  "unk_8cdde38": false,
  "unk_3dff6b0": false,
@@ -846,6 +928,438 @@
     }
    },
    "dwShaderMapOverride": 4294967295
+  },
+  {
+   "__type__": "PowerBuffDefinition",
+   "__typeHash__": 1071057721,
+   "dwID": 3511804951,
+   "dwBuffId": 6,
+   "bHarmful": false,
+   "bInfinite": true,
+   "tDuration": {
+    "value": "1",
+    "compiled": "BgAAAAAAgD8AAAAA"
+   },
+   "unk_deea7e8": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "unk_4393f38": false,
+   "unk_dcb22bd": false,
+   "tMaxStackCount": {
+    "value": "SF_20",
+    "compiled": "BQAAABoAAAAAAAAAAAAAAAAAAAAAAAAA"
+   },
+   "bVisibleInUI": false,
+   "bShowDuration": false,
+   "bCancellable": false,
+   "unk_99b5752": false,
+   "unk_93cd85f": false,
+   "unk_4bdaef2": false,
+   "bVisibleInHotbarUI": false,
+   "bShowsActiveStateOnHotbar": false,
+   "bShowsDurationOnHotbar": false,
+   "bShowsStackCountOnHotbar": false,
+   "unk_71ba554": false,
+   "unk_1375622": false,
+   "unk_d2dd47": false,
+   "unk_8a5f69e": false,
+   "hIcon": 0,
+   "hFloatingIcon": 0,
+   "hFloatingTextLabel": 0,
+   "flFloatingTextIconRange": 0,
+   "unk_395ccd6": false,
+   "bDealsDOT": false,
+   "tDOT": {
+    "__type__": "PowerBuffDOTDamage",
+    "__typeHash__": 3824324374,
+    "eDamageType": -1,
+    "tDamage": {
+     "__type__": "HitpointSpecifier",
+     "__typeHash__": 1185241065,
+     "eType": 0,
+     "tHitpointScalar": {
+      "value": "0",
+      "compiled": "BgAAAAAAAAAAAAAA"
+     },
+     "tFlatLevel": {
+      "value": "0",
+      "compiled": "BgAAAAAAAAAAAAAA"
+     }
+    },
+    "unk_89dc285": false,
+    "flFlatDamageBonusScalar": 1,
+    "unk_f551941": -1,
+    "bDamageIgnoresInvulnerable": false,
+    "bDamageIgnoresBonuses": false,
+    "unk_b8f2b": -1,
+    "bHasCombatEffectOverride": false,
+    "tCombatEffectOverride": {
+     "value": "100",
+     "compiled": "BgAAAAAAyEIAAAAA"
+    },
+    "bHideDamageEffects": false,
+    "bHideGlobalApplicationEffect": false
+   },
+   "tCrowdControl": {
+    "__type__": "PowerBuffCrowdControl",
+    "__typeHash__": 4138865712,
+    "unk_c63f49e": true,
+    "dwCCFlags": 0,
+    "bUseGlobalSlowAmount": false,
+    "eGlobalSlowAmountType": 0,
+    "tSlowAmount": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    },
+    "tChillAmount": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    },
+    "tStaggerMultiplier": {
+     "value": "1",
+     "compiled": "BgAAAAAAgD8AAAAA"
+    }
+   },
+   "bHasDamageShield": false,
+   "tDamageShield": {
+    "__type__": "HitpointSpecifier",
+    "__typeHash__": 1185241065,
+    "eType": 0,
+    "tHitpointScalar": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    },
+    "tFlatLevel": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    }
+   },
+   "dwShaderMapOverride": 4294967295
+  },
+  {
+   "__type__": "PowerBuffDefinition",
+   "__typeHash__": 1071057721,
+   "dwID": 2967876694,
+   "dwBuffId": 7,
+   "bHarmful": false,
+   "bInfinite": false,
+   "tDuration": {
+    "value": "SF_21",
+    "compiled": "BQAAABsAAAAAAAAAAAAAAAAAAAAAAAAA"
+   },
+   "unk_deea7e8": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "unk_4393f38": false,
+   "unk_dcb22bd": false,
+   "tMaxStackCount": {
+    "value": "1",
+    "compiled": "BgAAAAAAgD8AAAAA"
+   },
+   "bVisibleInUI": false,
+   "bShowDuration": false,
+   "bCancellable": false,
+   "unk_99b5752": false,
+   "unk_93cd85f": false,
+   "unk_4bdaef2": false,
+   "bVisibleInHotbarUI": false,
+   "bShowsActiveStateOnHotbar": false,
+   "bShowsDurationOnHotbar": false,
+   "bShowsStackCountOnHotbar": false,
+   "unk_71ba554": false,
+   "unk_1375622": false,
+   "unk_d2dd47": false,
+   "unk_8a5f69e": false,
+   "hIcon": 0,
+   "hFloatingIcon": 0,
+   "hFloatingTextLabel": 0,
+   "flFloatingTextIconRange": 0,
+   "unk_395ccd6": false,
+   "bDealsDOT": false,
+   "tDOT": {
+    "__type__": "PowerBuffDOTDamage",
+    "__typeHash__": 3824324374,
+    "eDamageType": -1,
+    "tDamage": {
+     "__type__": "HitpointSpecifier",
+     "__typeHash__": 1185241065,
+     "eType": 0,
+     "tHitpointScalar": {
+      "value": "0",
+      "compiled": "BgAAAAAAAAAAAAAA"
+     },
+     "tFlatLevel": {
+      "value": "0",
+      "compiled": "BgAAAAAAAAAAAAAA"
+     }
+    },
+    "unk_89dc285": false,
+    "flFlatDamageBonusScalar": 1,
+    "unk_f551941": -1,
+    "bDamageIgnoresInvulnerable": false,
+    "bDamageIgnoresBonuses": false,
+    "unk_b8f2b": -1,
+    "bHasCombatEffectOverride": false,
+    "tCombatEffectOverride": {
+     "value": "100",
+     "compiled": "BgAAAAAAyEIAAAAA"
+    },
+    "bHideDamageEffects": false,
+    "bHideGlobalApplicationEffect": false
+   },
+   "tCrowdControl": {
+    "__type__": "PowerBuffCrowdControl",
+    "__typeHash__": 4138865712,
+    "unk_c63f49e": true,
+    "dwCCFlags": 0,
+    "bUseGlobalSlowAmount": false,
+    "eGlobalSlowAmountType": 0,
+    "tSlowAmount": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    },
+    "tChillAmount": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    },
+    "tStaggerMultiplier": {
+     "value": "1",
+     "compiled": "BgAAAAAAgD8AAAAA"
+    }
+   },
+   "bHasDamageShield": false,
+   "tDamageShield": {
+    "__type__": "HitpointSpecifier",
+    "__typeHash__": 1185241065,
+    "eType": 0,
+    "tHitpointScalar": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    },
+    "tFlatLevel": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    }
+   },
+   "dwShaderMapOverride": 4294967295
+  },
+  {
+   "__type__": "PowerBuffDefinition",
+   "__typeHash__": 1071057721,
+   "dwID": 778774,
+   "dwBuffId": 8,
+   "bHarmful": false,
+   "bInfinite": false,
+   "tDuration": {
+    "value": "SF_3 / SF_2",
+    "compiled": "BQAAAAkAAAAAAAAAAAAAAAAAAAAFAAAACAAAAAAAAAAAAAAAAAAAAA4AAAAAAAAA"
+   },
+   "unk_deea7e8": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "unk_4393f38": false,
+   "unk_dcb22bd": false,
+   "tMaxStackCount": {
+    "value": "1",
+    "compiled": "BgAAAAAAgD8AAAAA"
+   },
+   "bVisibleInUI": false,
+   "bShowDuration": false,
+   "bCancellable": false,
+   "unk_99b5752": false,
+   "unk_93cd85f": false,
+   "unk_4bdaef2": false,
+   "bVisibleInHotbarUI": false,
+   "bShowsActiveStateOnHotbar": false,
+   "bShowsDurationOnHotbar": false,
+   "bShowsStackCountOnHotbar": false,
+   "unk_71ba554": false,
+   "unk_1375622": false,
+   "unk_d2dd47": false,
+   "unk_8a5f69e": false,
+   "hIcon": 0,
+   "hFloatingIcon": 0,
+   "hFloatingTextLabel": 0,
+   "flFloatingTextIconRange": 0,
+   "unk_395ccd6": false,
+   "bDealsDOT": false,
+   "tDOT": {
+    "__type__": "PowerBuffDOTDamage",
+    "__typeHash__": 3824324374,
+    "eDamageType": -1,
+    "tDamage": {
+     "__type__": "HitpointSpecifier",
+     "__typeHash__": 1185241065,
+     "eType": 0,
+     "tHitpointScalar": {
+      "value": "0",
+      "compiled": "BgAAAAAAAAAAAAAA"
+     },
+     "tFlatLevel": {
+      "value": "0",
+      "compiled": "BgAAAAAAAAAAAAAA"
+     }
+    },
+    "unk_89dc285": false,
+    "flFlatDamageBonusScalar": 1,
+    "unk_f551941": -1,
+    "bDamageIgnoresInvulnerable": false,
+    "bDamageIgnoresBonuses": false,
+    "unk_b8f2b": -1,
+    "bHasCombatEffectOverride": false,
+    "tCombatEffectOverride": {
+     "value": "100",
+     "compiled": "BgAAAAAAyEIAAAAA"
+    },
+    "bHideDamageEffects": false,
+    "bHideGlobalApplicationEffect": false
+   },
+   "tCrowdControl": {
+    "__type__": "PowerBuffCrowdControl",
+    "__typeHash__": 4138865712,
+    "unk_c63f49e": true,
+    "dwCCFlags": 0,
+    "bUseGlobalSlowAmount": false,
+    "eGlobalSlowAmountType": 0,
+    "tSlowAmount": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    },
+    "tChillAmount": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    },
+    "tStaggerMultiplier": {
+     "value": "1",
+     "compiled": "BgAAAAAAgD8AAAAA"
+    }
+   },
+   "bHasDamageShield": false,
+   "tDamageShield": {
+    "__type__": "HitpointSpecifier",
+    "__typeHash__": 1185241065,
+    "eType": 0,
+    "tHitpointScalar": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    },
+    "tFlatLevel": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    }
+   },
+   "dwShaderMapOverride": 4294967295
+  },
+  {
+   "__type__": "PowerBuffDefinition",
+   "__typeHash__": 1071057721,
+   "dwID": 3938339438,
+   "dwBuffId": 10,
+   "bHarmful": false,
+   "bInfinite": false,
+   "tDuration": {
+    "value": "(SF_22 / 3) +1",
+    "compiled": "BQAAABwAAAAAAAAAAAAAAAAAAAAGAAAAAABAQA4AAAAGAAAAAACAPwsAAAAAAAAA"
+   },
+   "unk_deea7e8": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "unk_4393f38": false,
+   "unk_dcb22bd": false,
+   "tMaxStackCount": {
+    "value": "1",
+    "compiled": "BgAAAAAAgD8AAAAA"
+   },
+   "bVisibleInUI": false,
+   "bShowDuration": false,
+   "bCancellable": false,
+   "unk_99b5752": false,
+   "unk_93cd85f": false,
+   "unk_4bdaef2": false,
+   "bVisibleInHotbarUI": false,
+   "bShowsActiveStateOnHotbar": false,
+   "bShowsDurationOnHotbar": false,
+   "bShowsStackCountOnHotbar": false,
+   "unk_71ba554": false,
+   "unk_1375622": false,
+   "unk_d2dd47": false,
+   "unk_8a5f69e": false,
+   "hIcon": 0,
+   "hFloatingIcon": 0,
+   "hFloatingTextLabel": 0,
+   "flFloatingTextIconRange": 0,
+   "unk_395ccd6": false,
+   "bDealsDOT": false,
+   "tDOT": {
+    "__type__": "PowerBuffDOTDamage",
+    "__typeHash__": 3824324374,
+    "eDamageType": -1,
+    "tDamage": {
+     "__type__": "HitpointSpecifier",
+     "__typeHash__": 1185241065,
+     "eType": 0,
+     "tHitpointScalar": {
+      "value": "0",
+      "compiled": "BgAAAAAAAAAAAAAA"
+     },
+     "tFlatLevel": {
+      "value": "0",
+      "compiled": "BgAAAAAAAAAAAAAA"
+     }
+    },
+    "unk_89dc285": false,
+    "flFlatDamageBonusScalar": 1,
+    "unk_f551941": -1,
+    "bDamageIgnoresInvulnerable": false,
+    "bDamageIgnoresBonuses": false,
+    "unk_b8f2b": -1,
+    "bHasCombatEffectOverride": false,
+    "tCombatEffectOverride": {
+     "value": "100",
+     "compiled": "BgAAAAAAyEIAAAAA"
+    },
+    "bHideDamageEffects": false,
+    "bHideGlobalApplicationEffect": false
+   },
+   "tCrowdControl": {
+    "__type__": "PowerBuffCrowdControl",
+    "__typeHash__": 4138865712,
+    "unk_c63f49e": true,
+    "dwCCFlags": 0,
+    "bUseGlobalSlowAmount": false,
+    "eGlobalSlowAmountType": 0,
+    "tSlowAmount": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    },
+    "tChillAmount": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    },
+    "tStaggerMultiplier": {
+     "value": "1",
+     "compiled": "BgAAAAAAgD8AAAAA"
+    }
+   },
+   "bHasDamageShield": false,
+   "tDamageShield": {
+    "__type__": "HitpointSpecifier",
+    "__typeHash__": 1185241065,
+    "eType": 0,
+    "tHitpointScalar": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    },
+    "tFlatLevel": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    }
+   },
+   "dwShaderMapOverride": 4294967295
   }
  ],
  "nFormulaCount": 0,
@@ -854,8 +1368,8 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "4.5  * Table(34, sLevel)",
-    "compiled": "BgAAAAAAkEAGAAAAAAAIQgUAAAABAAAAAAAAAAAAAAAAAAAAAQAAAAsAAAANAAAAAAAAAA=="
+    "value": "(SF_29 == 0)? (4.5 * Table(34, sLevel)) : (4.5 * Table(34, sLevel)*(1+( SF_25)))",
+    "compiled": "BQAAACMAAAAAAAAAAAAAAAAAAAAGAAAAAAAAAAkAAAAGAAAAAACQQAYAAAAAAAhCBQAAAAEAAAAAAAAAAAAAAAAAAAABAAAACwAAAA0AAAAGAAAAAACQQAYAAAAAAAhCBQAAAAEAAAAAAAAAAAAAAAAAAAABAAAACwAAAA0AAAAGAAAAAACAPwUAAAAfAAAAAAAAAAAAAAAAAAAACwAAAA0AAAAQAAAAAAAAAA=="
    }
   },
   {
@@ -935,7 +1449,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Affix_Value_1#legendary_necro_109 / 100",
-    "compiled": "BQAAAAAAAABTBAAAbqwSAAAAAAAGAAAAAADIQg4AAAAAAAAA"
+    "compiled": "BQAAAAAAAABQBAAAbqwSAAAAAAAGAAAAAADIQg4AAAAAAAAA"
    }
   },
   {
@@ -967,7 +1481,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Affix_Value_1#Legendary_Necro_121 * Affix.Legendary_Necro_121.\"Static Value 0\"",
-    "compiled": "BQAAAAAAAABTBAAAjGYJAAAAAAAFAAAAYwAAAIxmCQAAAAAAAAAAAA0AAAAAAAAA"
+    "compiled": "BQAAAAAAAABQBAAAjGYJAAAAAAAFAAAAYwAAAIxmCQAAAAAAAAAAAA0AAAAAAAAA"
    }
   },
   {
@@ -999,7 +1513,95 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Chance_For_Double_Damage_Per_Power#Necromancer_BloodWave",
-    "compiled": "BQAAAAAAAABNAACAKAsKAAAAAAAAAAAA"
+    "compiled": "BQAAAAAAAAB2AACAKAsKAAAAAAAAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "Affix_Value_1#Pants_Unique_Necro_101 / 100",
+    "compiled": "BQAAAAAAAABQBAAAHTMgAAAAAAAGAAAAAADIQg4AAAAAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "Affix.Pants_Unique_Necro_101.\"Static Value 0\"",
+    "compiled": "BQAAAGMAAAAdMyAAAAAAAAAAAAAAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "2",
+    "compiled": "BgAAAAAAAEAAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "5",
+    "compiled": "BgAAAAAAoEAAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "Necro_BloodWave_Fortify",
+    "compiled": "BQAAAAAAAAAfAACA/v///wAAAAAAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "0.6",
+    "compiled": "BgAAAJqZGT8AAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "((1+Multiplicative_Damage_Bonus_At_High_Health)*(1+Damage_Bonus_At_High_Health)*(1+Damage_Percent_Bonus_When_Fortified) - 1)*(SF_24)",
+    "compiled": "BgAAAAAAgD8FAAAAAAAAAB4EAAD+////AAAAAAsAAAAGAAAAAACAPwUAAAAAAAAAHQQAAP7///8AAAAACwAAAA0AAAAGAAAAAACAPwUAAAAAAAAAvwIAAP7///8AAAAACwAAAA0AAAAGAAAAAACAPwwAAAAFAAAAHgAAAAAAAAAAAAAAAAAAAA0AAAAAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "4",
+    "compiled": "BgAAAAAAgEAAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "Affix_Value_2#Pants_Unique_Necro_101 * (Weapon_Damage_Min_Total + Weapon_Damage_Delta_Total) * (1 + Main_Hand_Damage_Percent_Bonus)",
+    "compiled": "BQAAAAAAAABRBAAAHTMgAAAAAAAFAAAAAAAAALoBAAD+////AAAAAAUAAAAAAAAAuwEAAP7///8AAAAACwAAAA0AAAAGAAAAAACAPwUAAAAAAAAA9QAAAP7///8AAAAACwAAAA0AAAAAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "7",
+    "compiled": "BgAAAAAA4EAAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "(Floor((sLevel)/5))? 1 : 0",
+    "compiled": "BQAAAAEAAAAAAAAAAAAAAAAAAAAGAAAAAACgQA4AAAABAAAABQAAAAYAAAAAAIA/BgAAAAAAAAAQAAAAAAAAAA=="
    }
   }
  ],
@@ -1232,6 +1834,591 @@
      "unk_b8e877a": false
     }
    ],
+   "unk_c1c7b04": false,
+   "tVulnerableDurationSecondsOverride": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "tFortifiedHealth": {
+    "__type__": "HitpointSpecifier",
+    "__typeHash__": 1185241065,
+    "eType": 0,
+    "tHitpointScalar": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    },
+    "tFlatLevel": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    }
+   },
+   "tApplyFreeze": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "tApplyChillAmount": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "unk_e659b0f": -1,
+   "tHeal": {
+    "__type__": "HitpointSpecifier",
+    "__typeHash__": 1185241065,
+    "eType": 0,
+    "tHitpointScalar": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    },
+    "tFlatLevel": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    }
+   },
+   "eHealType": 0,
+   "bPlayHealEffect": true,
+   "unk_8bc45f2": false,
+   "unk_15c6c03": false,
+   "unk_e842c84": false,
+   "unk_b8f2b": -1,
+   "bHasCombatEffectOverride": true,
+   "tCombatEffectOverride": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "ePayloadDefaultHitEffectType": 2,
+   "snoNormalHitEffectGroup": null,
+   "snoTargetImpactEffectGroup": null,
+   "unk_f381067": false,
+   "flHitFlashDurationScalar": 1,
+   "iPowerNeedTarget": false,
+   "bPlayNormalHitSoundPayload": false,
+   "unk_969096b": false,
+   "unk_5885b8": 0,
+   "unk_f38eac9": false,
+   "tOnHitSoundsPayload": {
+    "__type__": "OnHitSounds",
+    "__typeHash__": 960545022,
+    "sno1P": null,
+    "sno3PEnemy": null,
+    "sno3PFriendly": null
+   }
+  },
+  {
+   "__type__": "PowerPayloadDefinition",
+   "__typeHash__": 812993760,
+   "snoItemTypeMainHandEffectsOverride": null,
+   "snoItemTypeOffHandEffectsOverride": null,
+   "dwID": 327335901,
+   "dwPayloadId": 4,
+   "eForcedDamageType": -1,
+   "tDamage": {
+    "__type__": "HitpointSpecifier",
+    "__typeHash__": 1185241065,
+    "eType": 0,
+    "tHitpointScalar": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    },
+    "tFlatLevel": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    }
+   },
+   "bHasCustomDamageVariance": false,
+   "tDamageVariance": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "unk_f0290f2": [
+    {
+     "__type__": "Type_4de0b8e8",
+     "__typeHash__": 1306573032,
+     "unk_c347fae": 3511804951,
+     "unk_45cb7c4": false,
+     "unk_984edf3": true,
+     "unk_b8e877a": false
+    }
+   ],
+   "unk_c1c7b04": false,
+   "tVulnerableDurationSecondsOverride": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "tFortifiedHealth": {
+    "__type__": "HitpointSpecifier",
+    "__typeHash__": 1185241065,
+    "eType": 0,
+    "tHitpointScalar": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    },
+    "tFlatLevel": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    }
+   },
+   "tApplyFreeze": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "tApplyChillAmount": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "unk_e659b0f": -1,
+   "tHeal": {
+    "__type__": "HitpointSpecifier",
+    "__typeHash__": 1185241065,
+    "eType": 0,
+    "tHitpointScalar": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    },
+    "tFlatLevel": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    }
+   },
+   "eHealType": 0,
+   "bPlayHealEffect": true,
+   "unk_8bc45f2": false,
+   "unk_15c6c03": false,
+   "unk_e842c84": false,
+   "unk_b8f2b": -1,
+   "bHasCombatEffectOverride": true,
+   "tCombatEffectOverride": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "ePayloadDefaultHitEffectType": 2,
+   "snoNormalHitEffectGroup": null,
+   "snoTargetImpactEffectGroup": null,
+   "unk_f381067": false,
+   "flHitFlashDurationScalar": 1,
+   "iPowerNeedTarget": false,
+   "bPlayNormalHitSoundPayload": false,
+   "unk_969096b": false,
+   "unk_5885b8": 0,
+   "unk_f38eac9": false,
+   "tOnHitSoundsPayload": {
+    "__type__": "OnHitSounds",
+    "__typeHash__": 960545022,
+    "sno1P": null,
+    "sno3PEnemy": null,
+    "sno3PFriendly": null
+   }
+  },
+  {
+   "__type__": "PowerPayloadDefinition",
+   "__typeHash__": 812993760,
+   "snoItemTypeMainHandEffectsOverride": null,
+   "snoItemTypeOffHandEffectsOverride": null,
+   "dwID": 2637193077,
+   "dwPayloadId": 5,
+   "eForcedDamageType": -1,
+   "tDamage": {
+    "__type__": "HitpointSpecifier",
+    "__typeHash__": 1185241065,
+    "eType": 0,
+    "tHitpointScalar": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    },
+    "tFlatLevel": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    }
+   },
+   "bHasCustomDamageVariance": false,
+   "tDamageVariance": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "unk_f0290f2": [],
+   "unk_c1c7b04": false,
+   "tVulnerableDurationSecondsOverride": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "tFortifiedHealth": {
+    "__type__": "HitpointSpecifier",
+    "__typeHash__": 1185241065,
+    "eType": 5,
+    "tHitpointScalar": {
+     "value": "SF_23",
+     "compiled": "BQAAAB0AAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "tFlatLevel": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    }
+   },
+   "tApplyFreeze": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "tApplyChillAmount": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "unk_e659b0f": -1,
+   "tHeal": {
+    "__type__": "HitpointSpecifier",
+    "__typeHash__": 1185241065,
+    "eType": 0,
+    "tHitpointScalar": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    },
+    "tFlatLevel": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    }
+   },
+   "eHealType": 0,
+   "bPlayHealEffect": true,
+   "unk_8bc45f2": false,
+   "unk_15c6c03": false,
+   "unk_e842c84": false,
+   "unk_b8f2b": -1,
+   "bHasCombatEffectOverride": false,
+   "tCombatEffectOverride": {
+    "value": "100",
+    "compiled": "BgAAAAAAyEIAAAAA"
+   },
+   "ePayloadDefaultHitEffectType": 2,
+   "snoNormalHitEffectGroup": null,
+   "snoTargetImpactEffectGroup": null,
+   "unk_f381067": false,
+   "flHitFlashDurationScalar": 1,
+   "iPowerNeedTarget": false,
+   "bPlayNormalHitSoundPayload": false,
+   "unk_969096b": false,
+   "unk_5885b8": 0,
+   "unk_f38eac9": false,
+   "tOnHitSoundsPayload": {
+    "__type__": "OnHitSounds",
+    "__typeHash__": 960545022,
+    "sno1P": null,
+    "sno3PEnemy": null,
+    "sno3PFriendly": null
+   }
+  },
+  {
+   "__type__": "PowerPayloadDefinition",
+   "__typeHash__": 812993760,
+   "snoItemTypeMainHandEffectsOverride": null,
+   "snoItemTypeOffHandEffectsOverride": null,
+   "dwID": 566439056,
+   "dwPayloadId": 6,
+   "eForcedDamageType": 0,
+   "tDamage": {
+    "__type__": "HitpointSpecifier",
+    "__typeHash__": 1185241065,
+    "eType": 3,
+    "tHitpointScalar": {
+     "value": "SF_27",
+     "compiled": "BQAAACEAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "tFlatLevel": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    }
+   },
+   "bHasCustomDamageVariance": false,
+   "tDamageVariance": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "unk_f0290f2": [],
+   "unk_c1c7b04": false,
+   "tVulnerableDurationSecondsOverride": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "tFortifiedHealth": {
+    "__type__": "HitpointSpecifier",
+    "__typeHash__": 1185241065,
+    "eType": 0,
+    "tHitpointScalar": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    },
+    "tFlatLevel": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    }
+   },
+   "tApplyFreeze": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "tApplyChillAmount": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "unk_e659b0f": -1,
+   "tHeal": {
+    "__type__": "HitpointSpecifier",
+    "__typeHash__": 1185241065,
+    "eType": 0,
+    "tHitpointScalar": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    },
+    "tFlatLevel": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    }
+   },
+   "eHealType": 0,
+   "bPlayHealEffect": true,
+   "unk_8bc45f2": false,
+   "unk_15c6c03": false,
+   "unk_e842c84": false,
+   "unk_b8f2b": -1,
+   "bHasCombatEffectOverride": true,
+   "tCombatEffectOverride": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "ePayloadDefaultHitEffectType": 2,
+   "snoNormalHitEffectGroup": null,
+   "snoTargetImpactEffectGroup": null,
+   "unk_f381067": false,
+   "flHitFlashDurationScalar": 1,
+   "iPowerNeedTarget": false,
+   "bPlayNormalHitSoundPayload": false,
+   "unk_969096b": false,
+   "unk_5885b8": 0,
+   "unk_f38eac9": false,
+   "tOnHitSoundsPayload": {
+    "__type__": "OnHitSounds",
+    "__typeHash__": 960545022,
+    "sno1P": null,
+    "sno3PEnemy": null,
+    "sno3PFriendly": null
+   }
+  },
+  {
+   "__type__": "PowerPayloadDefinition",
+   "__typeHash__": 812993760,
+   "snoItemTypeMainHandEffectsOverride": null,
+   "snoItemTypeOffHandEffectsOverride": null,
+   "dwID": 1650021510,
+   "dwPayloadId": 9,
+   "eForcedDamageType": 5,
+   "tDamage": {
+    "__type__": "HitpointSpecifier",
+    "__typeHash__": 1185241065,
+    "eType": 3,
+    "tHitpointScalar": {
+     "value": "SF_27",
+     "compiled": "BQAAACEAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "tFlatLevel": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    }
+   },
+   "bHasCustomDamageVariance": false,
+   "tDamageVariance": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "unk_f0290f2": [],
+   "unk_c1c7b04": false,
+   "tVulnerableDurationSecondsOverride": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "tFortifiedHealth": {
+    "__type__": "HitpointSpecifier",
+    "__typeHash__": 1185241065,
+    "eType": 0,
+    "tHitpointScalar": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    },
+    "tFlatLevel": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    }
+   },
+   "tApplyFreeze": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "tApplyChillAmount": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "unk_e659b0f": -1,
+   "tHeal": {
+    "__type__": "HitpointSpecifier",
+    "__typeHash__": 1185241065,
+    "eType": 0,
+    "tHitpointScalar": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    },
+    "tFlatLevel": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    }
+   },
+   "eHealType": 0,
+   "bPlayHealEffect": true,
+   "unk_8bc45f2": false,
+   "unk_15c6c03": false,
+   "unk_e842c84": false,
+   "unk_b8f2b": -1,
+   "bHasCombatEffectOverride": true,
+   "tCombatEffectOverride": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "ePayloadDefaultHitEffectType": 2,
+   "snoNormalHitEffectGroup": null,
+   "snoTargetImpactEffectGroup": null,
+   "unk_f381067": false,
+   "flHitFlashDurationScalar": 1,
+   "iPowerNeedTarget": false,
+   "bPlayNormalHitSoundPayload": false,
+   "unk_969096b": false,
+   "unk_5885b8": 0,
+   "unk_f38eac9": false,
+   "tOnHitSoundsPayload": {
+    "__type__": "OnHitSounds",
+    "__typeHash__": 960545022,
+    "sno1P": null,
+    "sno3PEnemy": null,
+    "sno3PFriendly": null
+   }
+  },
+  {
+   "__type__": "PowerPayloadDefinition",
+   "__typeHash__": 812993760,
+   "snoItemTypeMainHandEffectsOverride": null,
+   "snoItemTypeOffHandEffectsOverride": null,
+   "dwID": 2076459878,
+   "dwPayloadId": 10,
+   "eForcedDamageType": -1,
+   "tDamage": {
+    "__type__": "HitpointSpecifier",
+    "__typeHash__": 1185241065,
+    "eType": 1,
+    "tHitpointScalar": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    },
+    "tFlatLevel": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    }
+   },
+   "bHasCustomDamageVariance": false,
+   "tDamageVariance": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "unk_f0290f2": [],
+   "unk_c1c7b04": false,
+   "tVulnerableDurationSecondsOverride": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "tFortifiedHealth": {
+    "__type__": "HitpointSpecifier",
+    "__typeHash__": 1185241065,
+    "eType": 0,
+    "tHitpointScalar": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    },
+    "tFlatLevel": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    }
+   },
+   "tApplyFreeze": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "tApplyChillAmount": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "unk_e659b0f": -1,
+   "tHeal": {
+    "__type__": "HitpointSpecifier",
+    "__typeHash__": 1185241065,
+    "eType": 0,
+    "tHitpointScalar": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    },
+    "tFlatLevel": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    }
+   },
+   "eHealType": 0,
+   "bPlayHealEffect": true,
+   "unk_8bc45f2": false,
+   "unk_15c6c03": false,
+   "unk_e842c84": false,
+   "unk_b8f2b": -1,
+   "bHasCombatEffectOverride": true,
+   "tCombatEffectOverride": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "ePayloadDefaultHitEffectType": 2,
+   "snoNormalHitEffectGroup": null,
+   "snoTargetImpactEffectGroup": null,
+   "unk_f381067": false,
+   "flHitFlashDurationScalar": 1,
+   "iPowerNeedTarget": false,
+   "bPlayNormalHitSoundPayload": false,
+   "unk_969096b": false,
+   "unk_5885b8": 0,
+   "unk_f38eac9": false,
+   "tOnHitSoundsPayload": {
+    "__type__": "OnHitSounds",
+    "__typeHash__": 960545022,
+    "sno1P": null,
+    "sno3PEnemy": null,
+    "sno3PFriendly": null
+   }
+  },
+  {
+   "__type__": "PowerPayloadDefinition",
+   "__typeHash__": 812993760,
+   "snoItemTypeMainHandEffectsOverride": null,
+   "snoItemTypeOffHandEffectsOverride": null,
+   "dwID": 457370788,
+   "dwPayloadId": 12,
+   "eForcedDamageType": -1,
+   "tDamage": {
+    "__type__": "HitpointSpecifier",
+    "__typeHash__": 1185241065,
+    "eType": 1,
+    "tHitpointScalar": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    },
+    "tFlatLevel": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    }
+   },
+   "bHasCustomDamageVariance": false,
+   "tDamageVariance": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "unk_f0290f2": [],
    "unk_c1c7b04": false,
    "tVulnerableDurationSecondsOverride": {
     "value": "0",

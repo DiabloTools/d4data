@@ -1972,7 +1972,7 @@
     "value": "1",
     "compiled": "BgAAAAAAgD8AAAAA"
    },
-   "bVisibleInUI": false,
+   "bVisibleInUI": true,
    "bShowDuration": false,
    "bCancellable": false,
    "unk_99b5752": false,
@@ -1986,7 +1986,7 @@
    "unk_1375622": false,
    "unk_d2dd47": false,
    "unk_8a5f69e": false,
-   "hIcon": 0,
+   "hIcon": 2844267581,
    "hFloatingIcon": 0,
    "hFloatingTextLabel": 0,
    "flFloatingTextIconRange": 0,
@@ -2214,8 +2214,8 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "3  * Table(34, sLevel)",
-    "compiled": "BgAAAAAAQEAGAAAAAAAIQgUAAAABAAAAAAAAAAAAAAAAAAAAAQAAAAsAAAANAAAAAAAAAA=="
+    "value": "(SF_28 == 0)? (3 * Table(34, sLevel)) : (3 * Table(34, sLevel)*(1+( SF_26)))",
+    "compiled": "BQAAACIAAAAAAAAAAAAAAAAAAAAGAAAAAAAAAAkAAAAGAAAAAABAQAYAAAAAAAhCBQAAAAEAAAAAAAAAAAAAAAAAAAABAAAACwAAAA0AAAAGAAAAAABAQAYAAAAAAAhCBQAAAAEAAAAAAAAAAAAAAAAAAAABAAAACwAAAA0AAAAGAAAAAACAPwUAAAAgAAAAAAAAAAAAAAAAAAAACwAAAA0AAAAQAAAAAAAAAA=="
    }
   },
   {
@@ -2279,7 +2279,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "0.15 + Necro_BoneStorm_DamageReduction",
-    "compiled": "BgAAAJqZGT4FAAAAAAAAACoAAID+////AAAAAAsAAAAAAAAA"
+    "compiled": "BgAAAJqZGT4FAAAAAAAAAE8AAID+////AAAAAAsAAAAAAAAA"
    }
   },
   {
@@ -2287,7 +2287,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Affix_Value_1#legendary_necro_102",
-    "compiled": "BQAAAAAAAABTBAAAOJ8SAAAAAAAAAAAA"
+    "compiled": "BQAAAAAAAABQBAAAOJ8SAAAAAAAAAAAA"
    }
   },
   {
@@ -2295,7 +2295,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "AffixIsEquipped(SNO.Affix.legendary_necro_102) ? Affix_Value_2#legendary_necro_102 : 0",
-    "compiled": "BQAAAFkAAAA4nxIAAAAAAAAAAAABAAAAJAAAAAUAAAAAAAAAVAQAADifEgAAAAAABgAAAAAAAAAQAAAAAAAAAA=="
+    "compiled": "BQAAAFkAAAA4nxIAAAAAAAAAAAABAAAAJAAAAAUAAAAAAAAAUQQAADifEgAAAAAABgAAAAAAAAAQAAAAAAAAAA=="
    }
   },
   {
@@ -2327,7 +2327,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Affix_Value_1#Legendary_Necro_121 * (Weapon_Damage_Min_Total + Weapon_Damage_Delta_Total) * (1 + Main_Hand_Damage_Percent_Bonus)",
-    "compiled": "BQAAAAAAAABTBAAAjGYJAAAAAAAFAAAAAAAAALoBAAD+////AAAAAAUAAAAAAAAAuwEAAP7///8AAAAACwAAAA0AAAAGAAAAAACAPwUAAAAAAAAA9QAAAP7///8AAAAACwAAAA0AAAAAAAAA"
+    "compiled": "BQAAAAAAAABQBAAAjGYJAAAAAAAFAAAAAAAAALoBAAD+////AAAAAAUAAAAAAAAAuwEAAP7///8AAAAACwAAAA0AAAAGAAAAAACAPwUAAAAAAAAA9QAAAP7///8AAAAACwAAAA0AAAAAAAAA"
    }
   },
   {
@@ -2351,7 +2351,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "1 + Power_Duration_Bonus_Pct#Necromancer_BoneStorm",
-    "compiled": "BgAAAAAAgD8FAAAAAAAAAKADAABRngcAAAAAAAsAAAAAAAAA"
+    "compiled": "BgAAAAAAgD8FAAAAAAAAAJwDAABRngcAAAAAAAsAAAAAAAAA"
    }
   },
   {
@@ -2359,7 +2359,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Chance_For_Double_Damage_Per_Power#Necromancer_BoneStorm",
-    "compiled": "BQAAAAAAAABNAACAUZ4HAAAAAAAAAAAA"
+    "compiled": "BQAAAAAAAAB2AACAUZ4HAAAAAAAAAAAA"
    }
   },
   {
@@ -2368,6 +2368,38 @@
    "tFormula": {
     "value": "60  * (Table(35,sLevel))",
     "compiled": "BgAAAAAAcEIGAAAAAAAMQgUAAAABAAAAAAAAAAAAAAAAAAAAAQAAAAsAAAANAAAAAAAAAA=="
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "0.4",
+    "compiled": "BgAAAM3MzD4AAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "((1+Crit_Damage_Percent)*(1+Multiplicative_Crit_Damage_Percent)*(1+0.5)+(-1))* (SF_25)",
+    "compiled": "BgAAAAAAgD8FAAAAAAAAAAcBAAD+////AAAAAAsAAAAGAAAAAACAPwUAAAAAAAAACAEAAP7///8AAAAACwAAAA0AAAAGAAAAAACAPwYAAAAAAAA/CwAAAA0AAAAGAAAAAACAPxEAAAALAAAABQAAAB8AAAAAAAAAAAAAAAAAAAANAAAAAAAAAA=="
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "Affix.1HShield_Unique_Necro_100.\"Static Value 1\" / 100",
+    "compiled": "BQAAAGMAAAAj+BUAAQAAAAAAAAAGAAAAAADIQg4AAAAAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "(Floor((sLevel)/5))? 1 : 0",
+    "compiled": "BQAAAAEAAAAAAAAAAAAAAAAAAAAGAAAAAACgQA4AAAABAAAABQAAAAYAAAAAAIA/BgAAAAAAAAAQAAAAAAAAAA=="
    }
   }
  ],

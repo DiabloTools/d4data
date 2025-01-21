@@ -174,7 +174,25 @@
  "bMustBeLearned": true,
  "bCaptionsInside": false,
  "eShapeshiftForm": -1,
- "arResourceCosts": [],
+ "arResourceCosts": [
+  {
+   "__type__": "PowerResourceCost",
+   "__typeHash__": 2616788302,
+   "eType": 7,
+   "tMinRequired": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "tInitialCost": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "tChannellingCost": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   }
+  }
+ ],
  "tHealthCost": {
   "value": "0",
   "compiled": "BgAAAAAAAAAAAAAA"
@@ -1703,7 +1721,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "3  + GetBonusMaxChargesForPower(SNO.Power.Spiritborn_Eagle_Potency1)",
-    "compiled": "BgAAAAAAQEAFAAAAWQAAAL+PHAAAAAAAAAAAAAEAAABzAAAACwAAAAAAAAA="
+    "compiled": "BgAAAAAAQEAFAAAAWQAAAL+PHAAAAAAAAAAAAAEAAAB1AAAACwAAAAAAAAA="
    }
   },
   {
@@ -1711,15 +1729,15 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Affix_Value_1#legendary_spiritborn_024_x1",
-    "compiled": "BQAAAAAAAABTBAAAaxkeAAAAAAAAAAAA"
+    "compiled": "BQAAAAAAAABQBAAAaxkeAAAAAAAAAAAA"
    }
   },
   {
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "6",
-    "compiled": "BgAAAAAAwEAAAAAA"
+    "value": "30",
+    "compiled": "BgAAAAAA8EEAAAAA"
    }
   },
   {
@@ -1734,8 +1752,16 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "Percent_Bonus_Projectiles_Per_Power#Spiritborn_Eagle_Potency1",
-    "compiled": "BQAAAAAAAACtAwAAv48cAAAAAAAAAAAA"
+    "value": "Percent_Bonus_Projectiles_Per_Power#Spiritborn_Eagle_Potency1 + SF_30",
+    "compiled": "BQAAAAAAAACpAwAAv48cAAAAAAAFAAAAJAAAAAAAAAAAAAAAAAAAAAsAAAAAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "Generic_Chance_For_Double_Damage_Per_SkillTag#Skill_Primary_Potency",
+    "compiled": "BQAAAAAAAABqAACAw0UfNAAAAAAAAAAA"
    }
   }
  ],

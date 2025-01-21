@@ -4,13 +4,13 @@
  "__type__": "ParticleDefinition",
  "__typeHash__": 2145577021,
  "eType": 0,
- "dwFlags": 34612264,
+ "dwFlags": 34628648,
  "dwFlagsEx": 503324936,
  "dwFlagsEx2": 0,
- "tSystemDuration": 5,
- "tOutroDuration": 0.5,
+ "tSystemDuration": 0.5,
+ "tOutroDuration": 1,
  "tPrepumpDuration": 0,
- "eRenderDistance": 1,
+ "eRenderDistance": 3,
  "eUVFlippingMode": 5,
  "tSystemDurationScalar": {
   "__type__": "InterpolationScalar",
@@ -28,7 +28,48 @@
   "eRemapEasing": 0,
   "szFormulaName": 0
  },
- "pathSystemScale": [],
+ "pathSystemScale": [
+  {
+   "__type__": "InterpolationPath_float",
+   "__typeHash__": 3422409450,
+   "tHeader": {
+    "__type__": "InterpolationPathHeader",
+    "__typeHash__": 2520702334,
+    "tLoopPointStart": 0,
+    "tLoopPointEnd": 1,
+    "nDistributionFunction": 0,
+    "nMinMaxBehavior": 0,
+    "arInterpScalar": [
+     {
+      "__type__": "InterpolationScalar",
+      "__typeHash__": 991799518,
+      "nScalarFunction": 25,
+      "dwFlags": 1,
+      "tInputRange": {
+       "rangeValue1": 0,
+       "rangeValue2": 10
+      },
+      "tRemapRange": {
+       "rangeValue1": 0.5,
+       "rangeValue2": 0.5
+      },
+      "eRemapEasing": 0,
+      "szFormulaName": 0
+     }
+    ],
+    "dwFlags": 4
+   },
+   "ptArrayNodes": [
+    {
+     "__type__": "InterpolationNode_float",
+     "__typeHash__": 2007685731,
+     "tValueMin": 3,
+     "tValueMax": 3,
+     "tTime": 0
+    }
+   ]
+  }
+ ],
  "pathSystemCount": [
   {
    "__type__": "InterpolationPath_int32",
@@ -106,8 +147,8 @@
     {
      "__type__": "InterpolationNode_int32",
      "__typeHash__": 2011319229,
-     "tValueMin": 0,
-     "tValueMax": 0,
+     "tValueMin": 1,
+     "tValueMax": 1,
      "tTime": 0
     }
    ]
@@ -199,15 +240,29 @@
       "szFormulaName": 0
      }
     ],
-    "dwFlags": 8
+    "dwFlags": 0
    },
    "ptArrayNodes": [
     {
      "__type__": "InterpolationNode_float",
      "__typeHash__": 2007685731,
-     "tValueMin": 0.9754387736320496,
-     "tValueMax": 1.3368966579437256,
+     "tValueMin": 1.0348691940307617,
+     "tValueMax": 1.241791844367981,
      "tTime": 0
+    },
+    {
+     "__type__": "InterpolationNode_float",
+     "__typeHash__": 2007685731,
+     "tValueMin": 0.8302265405654907,
+     "tValueMax": 1.065676212310791,
+     "tTime": 0.8132661581039429
+    },
+    {
+     "__type__": "InterpolationNode_float",
+     "__typeHash__": 2007685731,
+     "tValueMin": 0,
+     "tValueMax": 0,
+     "tTime": 0.9986824989318848
     }
    ]
   }
@@ -548,23 +603,30 @@
     {
      "__type__": "InterpolationNode_float",
      "__typeHash__": 2007685731,
-     "tValueMin": 3,
-     "tValueMax": 3,
-     "tTime": 0
+     "tValueMin": 4.27887487411499,
+     "tValueMax": 4.27887487411499,
+     "tTime": 0.07024206966161728
     },
     {
      "__type__": "InterpolationNode_float",
      "__typeHash__": 2007685731,
-     "tValueMin": 3,
-     "tValueMax": 3,
-     "tTime": 0.05999999865889549
+     "tValueMin": 2.657047986984253,
+     "tValueMax": 2.657047986984253,
+     "tTime": 0.22243082523345947
+    },
+    {
+     "__type__": "InterpolationNode_float",
+     "__typeHash__": 2007685731,
+     "tValueMin": 1.042914867401123,
+     "tValueMax": 1.042914867401123,
+     "tTime": 0.49361610412597656
     },
     {
      "__type__": "InterpolationNode_float",
      "__typeHash__": 2007685731,
      "tValueMin": 0,
      "tValueMax": 0,
-     "tTime": 0.07999999821186066
+     "tTime": 0.7710647583007812
     }
    ]
   }
@@ -637,8 +699,8 @@
  "flExplosionFactor": 1,
  "flExplosionFriction": 0.10000000149011612,
  "flMass": 0.45399999618530273,
- "dwMaxSystems": 5,
- "flLowFXMultiplier": 1,
+ "dwMaxSystems": 0,
+ "flLowFXMultiplier": 0.5,
  "flClutterZOffset": 0,
  "snoActor": null,
  "tLookLink": {
@@ -731,13 +793,13 @@
        "__type__": "InterpolationNode_bcVec3",
        "__typeHash__": 1661010243,
        "tValueMin": {
-        "x": -0.11624880880117416,
-        "y": -0.25,
+        "x": 0.05895841121673584,
+        "y": -0.20000000298023224,
         "z": 0
        },
        "tValueMax": {
-        "x": -0.11624880880117416,
-        "y": 0.23595917224884033,
+        "x": 0.05895841121673584,
+        "y": 0.20000000298023224,
         "z": 0.3642857074737549
        },
        "tTime": 0
@@ -746,16 +808,31 @@
        "__type__": "InterpolationNode_bcVec3",
        "__typeHash__": 1661010243,
        "tValueMin": {
-        "x": 0.734158992767334,
-        "y": -0.25,
+        "x": 0.5463066101074219,
+        "y": -0.20000000298023224,
         "z": 0
        },
        "tValueMax": {
-        "x": 0.734158992767334,
-        "y": 0.23595917224884033,
+        "x": 0.5463066101074219,
+        "y": 0.20000000298023224,
         "z": 0.3642857074737549
        },
-       "tTime": 0.07296764850616455
+       "tTime": 0.14200901985168457
+      },
+      {
+       "__type__": "InterpolationNode_bcVec3",
+       "__typeHash__": 1661010243,
+       "tValueMin": {
+        "x": 0.9320014715194702,
+        "y": -0.20000000298023224,
+        "z": 0
+       },
+       "tValueMax": {
+        "x": 0.9320014715194702,
+        "y": 0.20000000298023224,
+        "z": 0.3642857074737549
+       },
+       "tTime": 0.9299824237823486
       }
      ]
     }
@@ -805,7 +882,7 @@
      },
      "tValueMax": {
       "r": 255,
-      "g": 247,
+      "g": 213,
       "b": 128,
       "a": 255
      },
@@ -900,205 +977,205 @@
     {
      "__type__": "InterpolationNode_float",
      "__typeHash__": 2007685731,
-     "tValueMin": 56.989990234375,
-     "tValueMax": 56.989990234375,
-     "tTime": 0.004114403389394283
+     "tValueMin": 33.227542877197266,
+     "tValueMax": 33.227542877197266,
+     "tTime": 0.004376472905278206
     },
     {
      "__type__": "InterpolationNode_float",
      "__typeHash__": 2007685731,
-     "tValueMin": 53.754051208496094,
-     "tValueMax": 53.754051208496094,
-     "tTime": 0.007972151041030884
+     "tValueMin": 30.661521911621094,
+     "tValueMax": 30.661521911621094,
+     "tTime": 0.008943201042711735
     },
     {
      "__type__": "InterpolationNode_float",
      "__typeHash__": 2007685731,
-     "tValueMin": 50.34330749511719,
-     "tValueMax": 50.34330749511719,
-     "tTime": 0.011701790615916252
+     "tValueMin": 28.28866195678711,
+     "tValueMax": 28.28866195678711,
+     "tTime": 0.013712887652218342
     },
     {
      "__type__": "InterpolationNode_float",
      "__typeHash__": 2007685731,
-     "tValueMin": 46.808895111083984,
-     "tValueMax": 46.808895111083984,
-     "tTime": 0.01543186791241169
+     "tValueMin": 26.095754623413086,
+     "tValueMax": 26.095754623413086,
+     "tTime": 0.01869823783636093
     },
     {
      "__type__": "InterpolationNode_float",
      "__typeHash__": 2007685731,
-     "tValueMin": 43.201934814453125,
-     "tValueMax": 43.201934814453125,
-     "tTime": 0.019290927797555923
+     "tValueMin": 24.069583892822266,
+     "tValueMax": 24.069583892822266,
+     "tTime": 0.02391195297241211
     },
     {
      "__type__": "InterpolationNode_float",
      "__typeHash__": 2007685731,
-     "tValueMin": 39.573570251464844,
-     "tValueMax": 39.573570251464844,
-     "tTime": 0.023407522588968277
+     "tValueMin": 22.196935653686523,
+     "tValueMax": 22.196935653686523,
+     "tTime": 0.029366742819547653
     },
     {
      "__type__": "InterpolationNode_float",
      "__typeHash__": 2007685731,
-     "tValueMin": 35.97491455078125,
-     "tValueMax": 35.97491455078125,
-     "tTime": 0.027910195291042328
+     "tValueMin": 20.464588165283203,
+     "tValueMax": 20.464588165283203,
+     "tTime": 0.03507530316710472
     },
     {
      "__type__": "InterpolationNode_float",
      "__typeHash__": 2007685731,
-     "tValueMin": 32.45710754394531,
-     "tValueMax": 32.45710754394531,
-     "tTime": 0.0329274944961071
+     "tValueMin": 18.85933494567871,
+     "tValueMax": 18.85933494567871,
+     "tTime": 0.041050348430871964
     },
     {
      "__type__": "InterpolationNode_float",
      "__typeHash__": 2007685731,
-     "tValueMin": 29.07127571105957,
-     "tValueMax": 29.07127571105957,
-     "tTime": 0.038587965071201324
+     "tValueMin": 17.367956161499023,
+     "tValueMax": 17.367956161499023,
+     "tTime": 0.04730456694960594
     },
     {
      "__type__": "InterpolationNode_float",
      "__typeHash__": 2007685731,
-     "tValueMin": 25.868549346923828,
-     "tValueMax": 25.868549346923828,
-     "tTime": 0.045020148158073425
+     "tValueMin": 15.977239608764648,
+     "tValueMax": 15.977239608764648,
+     "tTime": 0.053850673139095306
     },
     {
      "__type__": "InterpolationNode_float",
      "__typeHash__": 2007685731,
-     "tValueMin": 22.90005874633789,
-     "tValueMax": 22.90005874633789,
-     "tTime": 0.052352599799633026
+     "tValueMin": 14.673965454101562,
+     "tValueMax": 14.673965454101562,
+     "tTime": 0.06070137396454811
     },
     {
      "__type__": "InterpolationNode_float",
      "__typeHash__": 2007685731,
-     "tValueMin": 20.216930389404297,
-     "tValueMax": 20.216930389404297,
-     "tTime": 0.06071387231349945
+     "tValueMin": 13.444923400878906,
+     "tValueMax": 13.444923400878906,
+     "tTime": 0.06786937266588211
     },
     {
      "__type__": "InterpolationNode_float",
      "__typeHash__": 2007685731,
-     "tValueMin": 17.870296478271484,
-     "tValueMax": 17.870296478271484,
-     "tTime": 0.07023250311613083
+     "tValueMin": 12.276895523071289,
+     "tValueMax": 12.276895523071289,
+     "tTime": 0.07536736875772476
     },
     {
      "__type__": "InterpolationNode_float",
      "__typeHash__": 2007685731,
-     "tValueMin": 15.91128158569336,
-     "tValueMax": 15.91128158569336,
-     "tTime": 0.08103703707456589
+     "tValueMin": 11.156669616699219,
+     "tValueMax": 11.156669616699219,
+     "tTime": 0.08320806920528412
     },
     {
      "__type__": "InterpolationNode_float",
      "__typeHash__": 2007685731,
-     "tValueMin": 14.391021728515625,
-     "tValueMax": 14.391021728515625,
-     "tTime": 0.09325601160526276
+     "tValueMin": 10.071027755737305,
+     "tValueMax": 10.071027755737305,
+     "tTime": 0.09140416234731674
     },
     {
      "__type__": "InterpolationNode_float",
      "__typeHash__": 2007685731,
-     "tValueMin": 11.70043659210205,
-     "tValueMax": 11.70043659210205,
-     "tTime": 0.12067944556474686
+     "tValueMin": 9.008227348327637,
+     "tValueMax": 9.008227348327637,
+     "tTime": 0.1008218377828598
     },
     {
      "__type__": "InterpolationNode_float",
      "__typeHash__": 2007685731,
-     "tValueMin": 9.36802864074707,
-     "tValueMax": 9.36802864074707,
-     "tTime": 0.1451094001531601
+     "tValueMin": 7.97013521194458,
+     "tValueMax": 7.97013521194458,
+     "tTime": 0.11225610971450806
     },
     {
      "__type__": "InterpolationNode_float",
      "__typeHash__": 2007685731,
-     "tValueMin": 7.368211269378662,
-     "tValueMax": 7.368211269378662,
-     "tTime": 0.1670103371143341
+     "tValueMin": 6.963953018188477,
+     "tValueMax": 6.963953018188477,
+     "tTime": 0.12561291456222534
     },
     {
      "__type__": "InterpolationNode_float",
      "__typeHash__": 2007685731,
-     "tValueMin": 5.675401210784912,
-     "tValueMax": 5.675401210784912,
-     "tTime": 0.18684673309326172
+     "tValueMin": 5.996881484985352,
+     "tValueMax": 5.996881484985352,
+     "tTime": 0.14079824090003967
     },
     {
      "__type__": "InterpolationNode_float",
      "__typeHash__": 2007685731,
-     "tValueMin": 4.264016628265381,
-     "tValueMax": 4.264016628265381,
-     "tTime": 0.20508301258087158
+     "tValueMin": 5.076122760772705,
+     "tValueMax": 5.076122760772705,
+     "tTime": 0.15771803259849548
     },
     {
      "__type__": "InterpolationNode_float",
      "__typeHash__": 2007685731,
-     "tValueMin": 3.1084704399108887,
-     "tValueMax": 3.1084704399108887,
-     "tTime": 0.2221837192773819
+     "tValueMin": 4.208877086639404,
+     "tValueMax": 4.208877086639404,
+     "tTime": 0.17627829313278198
     },
     {
      "__type__": "InterpolationNode_float",
      "__typeHash__": 2007685731,
-     "tValueMin": 2.1831798553466797,
-     "tValueMax": 2.1831798553466797,
-     "tTime": 0.2386132776737213
+     "tValueMin": 3.402346611022949,
+     "tValueMax": 3.402346611022949,
+     "tTime": 0.1963849663734436
     },
     {
      "__type__": "InterpolationNode_float",
      "__typeHash__": 2007685731,
-     "tValueMin": 1.4625613689422607,
-     "tValueMax": 1.4625613689422607,
-     "tTime": 0.25483617186546326
+     "tValueMin": 2.6637320518493652,
+     "tValueMax": 2.6637320518493652,
+     "tTime": 0.21794399619102478
     },
     {
      "__type__": "InterpolationNode_float",
      "__typeHash__": 2007685731,
-     "tValueMin": 0.9210309982299805,
-     "tValueMax": 0.9210309982299805,
-     "tTime": 0.27131685614585876
+     "tValueMin": 2.0002357959747314,
+     "tValueMax": 2.0002357959747314,
+     "tTime": 0.24086137115955353
     },
     {
      "__type__": "InterpolationNode_float",
      "__typeHash__": 2007685731,
-     "tValueMin": 0.5330075025558472,
-     "tValueMax": 0.5330075025558472,
-     "tTime": 0.2885197401046753
+     "tValueMin": 1.4190584421157837,
+     "tValueMax": 1.4190584421157837,
+     "tTime": 0.2650430500507355
     },
     {
      "__type__": "InterpolationNode_float",
      "__typeHash__": 2007685731,
-     "tValueMin": 0.27289921045303345,
-     "tValueMax": 0.27289921045303345,
-     "tTime": 0.3069094121456146
+     "tValueMin": 0.9274008870124817,
+     "tValueMax": 0.9274008870124817,
+     "tTime": 0.29039496183395386
     },
     {
      "__type__": "InterpolationNode_float",
      "__typeHash__": 2007685731,
-     "tValueMin": 0.11513137072324753,
-     "tValueMax": 0.11513137072324753,
-     "tTime": 0.3269502818584442
+     "tValueMin": 0.5324655175209045,
+     "tValueMax": 0.5324655175209045,
+     "tTime": 0.31682315468788147
     },
     {
      "__type__": "InterpolationNode_float",
      "__typeHash__": 2007685731,
-     "tValueMin": 0.03411202132701874,
-     "tValueMax": 0.03411202132701874,
-     "tTime": 0.34910687804222107
+     "tValueMin": 0.24145230650901794,
+     "tValueMax": 0.24145230650901794,
+     "tTime": 0.34423357248306274
     },
     {
      "__type__": "InterpolationNode_float",
      "__typeHash__": 2007685731,
-     "tValueMin": 0.004264255985617638,
-     "tValueMax": 0.004264255985617638,
-     "tTime": 0.3738435208797455
+     "tValueMin": 0.06156344339251518,
+     "tValueMax": 0.06156344339251518,
+     "tTime": 0.37253209948539734
     },
     {
      "__type__": "InterpolationNode_float",
@@ -1145,8 +1222,8 @@
     {
      "__type__": "InterpolationNode_float",
      "__typeHash__": 2007685731,
-     "tValueMin": 1,
-     "tValueMax": 1,
+     "tValueMin": 0,
+     "tValueMax": 0,
      "tTime": 0
     },
     {
@@ -1154,14 +1231,14 @@
      "__typeHash__": 2007685731,
      "tValueMin": 1,
      "tValueMax": 1,
-     "tTime": 0.8599439859390259
+     "tTime": 0.12178537249565125
     },
     {
      "__type__": "InterpolationNode_float",
      "__typeHash__": 2007685731,
      "tValueMin": 1,
      "tValueMax": 1,
-     "tTime": 1
+     "tTime": 0.8117958903312683
     }
    ]
   }
@@ -1174,7 +1251,7 @@
     "__type__": "InterpolationPathHeader",
     "__typeHash__": 2520702334,
     "tLoopPointStart": 0,
-    "tLoopPointEnd": 1,
+    "tLoopPointEnd": 0.4870370328426361,
     "nDistributionFunction": 0,
     "nMinMaxBehavior": 0,
     "arInterpScalar": [
@@ -1195,169 +1272,106 @@
       "szFormulaName": 0
      }
     ],
-    "dwFlags": 4
+    "dwFlags": 36
    },
    "ptArrayNodes": [
     {
      "__type__": "InterpolationNode_float",
      "__typeHash__": 2007685731,
-     "tValueMin": 0.9972854852676392,
-     "tValueMax": 0.9972854852676392,
-     "tTime": 0.07504250854253769
+     "tValueMin": 0.988567590713501,
+     "tValueMax": 0.988567590713501,
+     "tTime": 0.04882856830954552
     },
     {
      "__type__": "InterpolationNode_float",
      "__typeHash__": 2007685731,
-     "tValueMin": 0.9959174990653992,
-     "tValueMax": 0.9959174990653992,
-     "tTime": 0.15680640935897827
+     "tValueMin": 0.9598895311355591,
+     "tValueMax": 0.9598895311355591,
+     "tTime": 0.10928778350353241
     },
     {
      "__type__": "InterpolationNode_float",
      "__typeHash__": 2007685731,
-     "tValueMin": 0.9956096410751343,
-     "tValueMax": 0.9956096410751343,
-     "tTime": 0.2418193221092224
+     "tValueMin": 0.9161246418952942,
+     "tValueMax": 0.9161246418952942,
+     "tTime": 0.17928171157836914
     },
     {
      "__type__": "InterpolationNode_float",
      "__typeHash__": 2007685731,
-     "tValueMin": 0.9960758686065674,
-     "tValueMax": 0.9960758686065674,
-     "tTime": 0.3266087770462036
+     "tValueMin": 0.8594316840171814,
+     "tValueMax": 0.8594316840171814,
+     "tTime": 0.25671446323394775
     },
     {
      "__type__": "InterpolationNode_float",
      "__typeHash__": 2007685731,
-     "tValueMin": 0.9970298409461975,
-     "tValueMax": 0.9970298409461975,
-     "tTime": 0.4077025055885315
+     "tValueMin": 0.7919696569442749,
+     "tValueMax": 0.7919696569442749,
+     "tTime": 0.33949002623558044
     },
     {
      "__type__": "InterpolationNode_float",
      "__typeHash__": 2007685731,
-     "tValueMin": 0.9981854557991028,
-     "tValueMax": 0.9981854557991028,
-     "tTime": 0.4816279709339142
+     "tValueMin": 0.7158974409103394,
+     "tValueMax": 0.7158974409103394,
+     "tTime": 0.42551255226135254
     },
     {
      "__type__": "InterpolationNode_float",
      "__typeHash__": 2007685731,
-     "tValueMin": 0.9992565512657166,
-     "tValueMax": 0.9992565512657166,
-     "tTime": 0.5449128746986389
+     "tValueMin": 0.6333737969398499,
+     "tValueMax": 0.6333737969398499,
+     "tTime": 0.5126861333847046
     },
     {
      "__type__": "InterpolationNode_float",
      "__typeHash__": 2007685731,
-     "tValueMin": 0.9999567270278931,
-     "tValueMax": 0.9999567270278931,
-     "tTime": 0.594084620475769
+     "tValueMin": 0.546557605266571,
+     "tValueMax": 0.546557605266571,
+     "tTime": 0.5989147424697876
     },
     {
      "__type__": "InterpolationNode_float",
      "__typeHash__": 2007685731,
-     "tValueMin": 1,
-     "tValueMax": 1,
-     "tTime": 0.6256710290908813
+     "tValueMin": 0.4576079249382019,
+     "tValueMax": 0.4576079249382019,
+     "tTime": 0.6821025609970093
     },
     {
      "__type__": "InterpolationNode_float",
      "__typeHash__": 2007685731,
-     "tValueMin": 0.9901891350746155,
-     "tValueMax": 0.9901891350746155,
-     "tTime": 0.6409758925437927
+     "tValueMin": 0.3686833381652832,
+     "tValueMax": 0.3686833381652832,
+     "tTime": 0.7601536512374878
     },
     {
      "__type__": "InterpolationNode_float",
      "__typeHash__": 2007685731,
-     "tValueMin": 0.9626859426498413,
-     "tValueMax": 0.9626859426498413,
-     "tTime": 0.6604913473129272
+     "tValueMin": 0.28194305300712585,
+     "tValueMax": 0.28194305300712585,
+     "tTime": 0.8309718370437622
     },
     {
      "__type__": "InterpolationNode_float",
      "__typeHash__": 2007685731,
-     "tValueMin": 0.9196986556053162,
-     "tValueMax": 0.9196986556053162,
-     "tTime": 0.6835638284683228
+     "tValueMin": 0.19954559206962585,
+     "tValueMax": 0.19954559206962585,
+     "tTime": 0.8924616575241089
     },
     {
      "__type__": "InterpolationNode_float",
      "__typeHash__": 2007685731,
-     "tValueMin": 0.8634359836578369,
-     "tValueMax": 0.8634359836578369,
-     "tTime": 0.7095398306846619
+     "tValueMin": 0.12365011870861053,
+     "tValueMax": 0.12365011870861053,
+     "tTime": 0.9425267577171326
     },
     {
      "__type__": "InterpolationNode_float",
      "__typeHash__": 2007685731,
-     "tValueMin": 0.7961062788963318,
-     "tValueMax": 0.7961062788963318,
-     "tTime": 0.737765908241272
-    },
-    {
-     "__type__": "InterpolationNode_float",
-     "__typeHash__": 2007685731,
-     "tValueMin": 0.7199181914329529,
-     "tValueMax": 0.7199181914329529,
-     "tTime": 0.7675883769989014
-    },
-    {
-     "__type__": "InterpolationNode_float",
-     "__typeHash__": 2007685731,
-     "tValueMin": 0.637080192565918,
-     "tValueMax": 0.637080192565918,
-     "tTime": 0.7983538508415222
-    },
-    {
-     "__type__": "InterpolationNode_float",
-     "__typeHash__": 2007685731,
-     "tValueMin": 0.5498006939888,
-     "tValueMax": 0.5498006939888,
-     "tTime": 0.8294086456298828
-    },
-    {
-     "__type__": "InterpolationNode_float",
-     "__typeHash__": 2007685731,
-     "tValueMin": 0.46028846502304077,
-     "tValueMax": 0.46028846502304077,
-     "tTime": 0.8600994348526001
-    },
-    {
-     "__type__": "InterpolationNode_float",
-     "__typeHash__": 2007685731,
-     "tValueMin": 0.37075161933898926,
-     "tValueMax": 0.37075161933898926,
-     "tTime": 0.8897725343704224
-    },
-    {
-     "__type__": "InterpolationNode_float",
-     "__typeHash__": 2007685731,
-     "tValueMin": 0.28339913487434387,
-     "tValueMax": 0.28339913487434387,
-     "tTime": 0.9177744388580322
-    },
-    {
-     "__type__": "InterpolationNode_float",
-     "__typeHash__": 2007685731,
-     "tValueMin": 0.20043909549713135,
-     "tValueMax": 0.20043909549713135,
-     "tTime": 0.9434517025947571
-    },
-    {
-     "__type__": "InterpolationNode_float",
-     "__typeHash__": 2007685731,
-     "tValueMin": 0.12408033013343811,
-     "tValueMax": 0.12408033013343811,
-     "tTime": 0.96615070104599
-    },
-    {
-     "__type__": "InterpolationNode_float",
-     "__typeHash__": 2007685731,
-     "tValueMin": 0.056531041860580444,
-     "tValueMax": 0.056531041860580444,
-     "tTime": 0.9852179884910583
+     "tValueMin": 0.056415215134620667,
+     "tValueMax": 0.056415215134620667,
+     "tTime": 0.9790716171264648
     },
     {
      "__type__": "InterpolationNode_float",
@@ -1579,217 +1593,197 @@
     {
      "__type__": "InterpolationNode_float",
      "__typeHash__": 2007685731,
-     "tValueMin": 0.31742244958877563,
-     "tValueMax": 0.8529267907142639,
-     "tTime": 0.003889789804816246
+     "tValueMin": 1.0897698402404785,
+     "tValueMax": 1.434011459350586,
+     "tTime": 0.01918191835284233
     },
     {
      "__type__": "InterpolationNode_float",
      "__typeHash__": 2007685731,
-     "tValueMin": 0.591966986656189,
-     "tValueMax": 1.1413336992263794,
-     "tTime": 0.00700789550319314
+     "tValueMin": 1.1707630157470703,
+     "tValueMax": 1.511855125427246,
+     "tTime": 0.05610624700784683
     },
     {
      "__type__": "InterpolationNode_float",
      "__typeHash__": 2007685731,
-     "tValueMin": 0.828217625617981,
-     "tValueMax": 1.399007797241211,
-     "tTime": 0.009643061086535454
+     "tValueMin": 1.257138967514038,
+     "tValueMax": 1.593363642692566,
+     "tTime": 0.10824402421712875
     },
     {
      "__type__": "InterpolationNode_float",
      "__typeHash__": 2007685731,
-     "tValueMin": 1.0297582149505615,
-     "tValueMax": 1.628158450126648,
-     "tTime": 0.012084032408893108
+     "tValueMin": 1.347015380859375,
+     "tValueMax": 1.676966905593872,
+     "tTime": 0.17306625843048096
     },
     {
      "__type__": "InterpolationNode_float",
      "__typeHash__": 2007685731,
-     "tValueMin": 1.2001725435256958,
-     "tValueMax": 1.8309946060180664,
-     "tTime": 0.014619549736380577
+     "tValueMin": 1.4385102987289429,
+     "tValueMax": 1.761095404624939,
+     "tTime": 0.2480439841747284
     },
     {
      "__type__": "InterpolationNode_float",
      "__typeHash__": 2007685731,
-     "tValueMin": 1.3430447578430176,
-     "tValueMax": 2.009725570678711,
-     "tTime": 0.017538364976644516
+     "tValueMin": 1.5297412872314453,
+     "tValueMax": 1.8441789150238037,
+     "tTime": 0.3306482434272766
     },
     {
      "__type__": "InterpolationNode_float",
      "__typeHash__": 2007685731,
-     "tValueMin": 1.461958885192871,
-     "tValueMax": 2.166560411453247,
-     "tTime": 0.021129218861460686
+     "tValueMin": 1.618825912475586,
+     "tValueMax": 1.9246478080749512,
+     "tTime": 0.41835007071495056
     },
     {
      "__type__": "InterpolationNode_float",
      "__typeHash__": 2007685731,
-     "tValueMin": 1.560498595237732,
-     "tValueMax": 2.30370831489563,
-     "tTime": 0.025680851191282272
+     "tValueMin": 1.7038822174072266,
+     "tValueMax": 2.000931978225708,
+     "tTime": 0.5086205005645752
     },
     {
      "__type__": "InterpolationNode_float",
      "__typeHash__": 2007685731,
-     "tValueMin": 1.6422477960586548,
-     "tValueMax": 2.4233782291412354,
-     "tTime": 0.031482014805078506
+     "tValueMin": 1.7830275297164917,
+     "tValueMax": 2.0714614391326904,
+     "tTime": 0.5989304780960083
     },
     {
      "__type__": "InterpolationNode_float",
      "__typeHash__": 2007685731,
-     "tValueMin": 1.7107901573181152,
-     "tValueMax": 2.5277795791625977,
-     "tTime": 0.038821443915367126
+     "tValueMin": 1.8543801307678223,
+     "tValueMax": 2.134666681289673,
+     "tTime": 0.6867511868476868
     },
     {
      "__type__": "InterpolationNode_float",
      "__typeHash__": 2007685731,
-     "tValueMin": 1.7697105407714844,
-     "tValueMax": 2.619121551513672,
-     "tTime": 0.047987889498472214
+     "tValueMin": 1.9160573482513428,
+     "tValueMax": 2.1889772415161133,
+     "tTime": 0.7695533633232117
     },
     {
      "__type__": "InterpolationNode_float",
      "__typeHash__": 2007685731,
-     "tValueMin": 1.8225915431976318,
-     "tValueMax": 2.699612617492676,
-     "tTime": 0.05927010998129845
+     "tValueMin": 1.966177225112915,
+     "tValueMax": 2.2328238487243652,
+     "tTime": 0.8448084592819214
     },
     {
      "__type__": "InterpolationNode_float",
      "__typeHash__": 2007685731,
-     "tValueMin": 1.8730186223983765,
-     "tValueMax": 2.771462917327881,
-     "tTime": 0.07295683026313782
+     "tValueMin": 2.002857208251953,
+     "tValueMax": 2.264636754989624,
+     "tTime": 0.9099870920181274
     },
     {
      "__type__": "InterpolationNode_float",
      "__typeHash__": 2007685731,
-     "tValueMin": 1.9245741367340088,
-     "tValueMax": 2.836880922317505,
-     "tTime": 0.08933679014444351
+     "tValueMin": 2.0242154598236084,
+     "tValueMax": 2.2828450202941895,
+     "tTime": 0.9625607132911682
     },
     {
      "__type__": "InterpolationNode_float",
      "__typeHash__": 2007685731,
-     "tValueMin": 1.9808429479599,
-     "tValueMax": 2.898076057434082,
-     "tTime": 0.10869872570037842
-    },
-    {
-     "__type__": "InterpolationNode_float",
-     "__typeHash__": 2007685731,
-     "tValueMin": 2.0761916637420654,
-     "tValueMax": 3.00075626373291,
-     "tTime": 0.14819641411304474
-    },
-    {
-     "__type__": "InterpolationNode_float",
-     "__typeHash__": 2007685731,
-     "tValueMin": 2.165785074234009,
-     "tValueMax": 3.1109812259674072,
-     "tTime": 0.19694559276103973
-    },
-    {
-     "__type__": "InterpolationNode_float",
-     "__typeHash__": 2007685731,
-     "tValueMin": 2.249448776245117,
-     "tValueMax": 3.226529598236084,
-     "tTime": 0.2534680962562561
-    },
-    {
-     "__type__": "InterpolationNode_float",
-     "__typeHash__": 2007685731,
-     "tValueMin": 2.327009916305542,
-     "tValueMax": 3.3451828956604004,
-     "tTime": 0.31628578901290894
-    },
-    {
-     "__type__": "InterpolationNode_float",
-     "__typeHash__": 2007685731,
-     "tValueMin": 2.3982949256896973,
-     "tValueMax": 3.4647216796875,
-     "tTime": 0.3839203715324402
-    },
-    {
-     "__type__": "InterpolationNode_float",
-     "__typeHash__": 2007685731,
-     "tValueMin": 2.463130474090576,
-     "tValueMax": 3.582925796508789,
-     "tTime": 0.4548938274383545
-    },
-    {
-     "__type__": "InterpolationNode_float",
-     "__typeHash__": 2007685731,
-     "tValueMin": 2.521343231201172,
-     "tValueMax": 3.6975762844085693,
-     "tTime": 0.5277278423309326
-    },
-    {
-     "__type__": "InterpolationNode_float",
-     "__typeHash__": 2007685731,
-     "tValueMin": 2.5727601051330566,
-     "tValueMax": 3.8064537048339844,
-     "tTime": 0.6009442806243896
-    },
-    {
-     "__type__": "InterpolationNode_float",
-     "__typeHash__": 2007685731,
-     "tValueMin": 2.6172068119049072,
-     "tValueMax": 3.9073381423950195,
-     "tTime": 0.6730649471282959
-    },
-    {
-     "__type__": "InterpolationNode_float",
-     "__typeHash__": 2007685731,
-     "tValueMin": 2.654510498046875,
-     "tValueMax": 3.9980106353759766,
-     "tTime": 0.7426117062568665
-    },
-    {
-     "__type__": "InterpolationNode_float",
-     "__typeHash__": 2007685731,
-     "tValueMin": 2.684497594833374,
-     "tValueMax": 4.076251029968262,
-     "tTime": 0.8081062436103821
-    },
-    {
-     "__type__": "InterpolationNode_float",
-     "__typeHash__": 2007685731,
-     "tValueMin": 2.7069947719573975,
-     "tValueMax": 4.139840602874756,
-     "tTime": 0.868070662021637
-    },
-    {
-     "__type__": "InterpolationNode_float",
-     "__typeHash__": 2007685731,
-     "tValueMin": 2.7218291759490967,
-     "tValueMax": 4.186559677124023,
-     "tTime": 0.9210264086723328
-    },
-    {
-     "__type__": "InterpolationNode_float",
-     "__typeHash__": 2007685731,
-     "tValueMin": 2.7288262844085693,
-     "tValueMax": 4.214188098907471,
-     "tTime": 0.9654956459999084
-    },
-    {
-     "__type__": "InterpolationNode_float",
-     "__typeHash__": 2007685731,
-     "tValueMin": 2.727813720703125,
-     "tValueMax": 4.2205071449279785,
+     "tValueMin": 2.028369426727295,
+     "tValueMax": 2.2858798503875732,
      "tTime": 1
     }
    ]
   }
  ],
- "unk_b92bb9a": [],
+ "unk_b92bb9a": [
+  {
+   "__type__": "VectorPath",
+   "__typeHash__": 2594652800,
+   "tPathData": {
+    "__type__": "InterpolationPath_bcVec3",
+    "__typeHash__": 1102252714,
+    "tHeader": {
+     "__type__": "InterpolationPathHeader",
+     "__typeHash__": 2520702334,
+     "tLoopPointStart": 0,
+     "tLoopPointEnd": 1,
+     "nDistributionFunction": 0,
+     "nMinMaxBehavior": 0,
+     "arInterpScalar": [
+      {
+       "__type__": "InterpolationScalar",
+       "__typeHash__": 991799518,
+       "nScalarFunction": 0,
+       "dwFlags": 1,
+       "tInputRange": {
+        "rangeValue1": 0,
+        "rangeValue2": 1
+       },
+       "tRemapRange": {
+        "rangeValue1": 0,
+        "rangeValue2": 1
+       },
+       "eRemapEasing": 0,
+       "szFormulaName": 0
+      },
+      {
+       "__type__": "InterpolationScalar",
+       "__typeHash__": 991799518,
+       "nScalarFunction": 0,
+       "dwFlags": 1,
+       "tInputRange": {
+        "rangeValue1": 0,
+        "rangeValue2": 1
+       },
+       "tRemapRange": {
+        "rangeValue1": 0,
+        "rangeValue2": 1
+       },
+       "eRemapEasing": 0,
+       "szFormulaName": 0
+      },
+      {
+       "__type__": "InterpolationScalar",
+       "__typeHash__": 991799518,
+       "nScalarFunction": 0,
+       "dwFlags": 1,
+       "tInputRange": {
+        "rangeValue1": 0,
+        "rangeValue2": 1
+       },
+       "tRemapRange": {
+        "rangeValue1": 0,
+        "rangeValue2": 1
+       },
+       "eRemapEasing": 0,
+       "szFormulaName": 0
+      }
+     ],
+     "dwFlags": 8
+    },
+    "ptArrayNodes": [
+     {
+      "__type__": "InterpolationNode_bcVec3",
+      "__typeHash__": 1661010243,
+      "tValueMin": {
+       "x": 1,
+       "y": 0.8857142925262451,
+       "z": 1
+      },
+      "tValueMax": {
+       "x": 1.2717714309692383,
+       "y": 1.159999966621399,
+       "z": 1
+      },
+      "tTime": 0
+     }
+    ]
+   }
+  }
+ ],
  "pathAngularPosition": [],
  "pathAngularVelocity": [],
  "pathOrientationVelocity": [],
@@ -1920,8 +1914,8 @@
     {
      "__type__": "InterpolationNode_float",
      "__typeHash__": 2007685731,
-     "tValueMin": 0.10000000149011612,
-     "tValueMax": 0.10000000149011612,
+     "tValueMin": 0,
+     "tValueMax": 0,
      "tTime": 0
     }
    ]
@@ -2005,14 +1999,14 @@
       "__type__": "InterpolationNode_bcVec3",
       "__typeHash__": 1661010243,
       "tValueMin": {
-       "x": 0.10000000149011612,
+       "x": 0,
        "y": 0,
-       "z": 0
+       "z": 0.10000000149011612
       },
       "tValueMax": {
-       "x": 0.10000000149011612,
+       "x": 0,
        "y": 0,
-       "z": 0
+       "z": 0.10000000149011612
       },
       "tTime": 0
      }
@@ -2084,7 +2078,7 @@
        "szFormulaName": 0
       }
      ],
-     "dwFlags": 12
+     "dwFlags": 8
     },
     "ptArrayNodes": [
      {
@@ -2096,7 +2090,7 @@
        "z": 0
       },
       "tValueMax": {
-       "x": 0.5,
+       "x": 0.854285717010498,
        "y": 0,
        "z": 0
       },
