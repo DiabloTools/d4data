@@ -246,6 +246,8 @@ function getBasicTypeAlignment (typeDef, typeHashes, inTagMap = false) {
       return 4;
     case 3877855748: // DT_RANGE
       return getTypeAlignment(typeHashes[1]);
+    case 322094989: // DT_BINDABLEPROPERTY
+      return 8;
     default:
       return typeDef.size;
   }
@@ -516,6 +518,13 @@ let basicTypes = {
           for (let typeIndex = 0; typeIndex < 2; typeIndex++) {
             const type = getType(fieldInfo.fieldTypeHashes[typeIndex]);
             if (!(type.flags & 0x8000)) {
+              break;
+            }
+            if (typeIndex >= 1
+                && fieldInfo.fieldTypeHashes[0] == 322094989 // DT_BINDABLEPROPERTY
+                && fieldInfo.fieldTypeHashes[1] == 3846829457 // DT_CSTRING
+            ) {
+              // DT_BINDABLEPROPERTY<DT_CSTRING> does not have an entry for DT_BYTE
               break;
             }
 
@@ -834,6 +843,53 @@ let basicTypes = {
       w: file.readFloatLE(offset + 12),
     };
     results.readLength += 16;
+  },
+  "DT_BINDABLEPROPERTY": function (ret, file, typeHashes, offset, field, fieldPath, results = { readLength: 0 }) {
+    //readLog.push({fieldPath: fieldPath.join('.') + ' @ ' + offset, value: ret});
+
+    // DT_CSTRING
+    const datastore = readStructure.bind(this)(file, [3846829457], offset, field, [...fieldPath, "datastore"]);
+    if (datastore) {
+      ret.datastore = datastore;
+    }
+    offset += 16;
+
+    // DT_CSTRING
+    const property = readStructure.bind(this)(file, [3846829457], offset, field, [...fieldPath, "property"]);
+    if (property) {
+      ret.property = property;
+    }
+    offset += 16;
+
+
+    const flags = file.readInt32LE(offset);
+    if (flags & 0xffcd != 0) {
+    //if (flags != 2 && flags != 16 && flags != 18 && flags != 32 && flags != 34 && flags != 50) {
+      console.warn('      @', offset, 'DT_BINDABLEPROPERTY[', getType(typeHashes[1]).name, ']: Unexpected flag:', flags, 'next int:', file.readInt32LE(offset + 16), 'fieldPath:', fieldPath.slice(-3).join('.'));
+    }
+    offset += 4;
+
+    const padding = file.readInt32LE(offset);
+    if (padding != 0) {
+      ret.__error__ = 'Error: DT_BINDABLEPROPERTY: Unexpected value in padding!';
+      console.error('      @', offset, 'DT_BINDABLEPROPERTY[', getType(typeHashes[1]).name, ']: Unexpected value in padding:', padding, 'fieldPath:', fieldPath.slice(-3).join('.'));
+    }
+    offset += 4;
+    results.readLength += 40;
+
+    let subresults = { readLength: 0 };
+    ret.value = readStructure.bind(this)(file, typeHashes.slice(1), offset, field, [...fieldPath, "value"], subresults);
+    results.readLength += subresults.readLength;
+
+    offset += subresults.readLength;
+    if (offset % 8) {
+      const padding2 = file.readInt32LE(offset);
+      if (padding2 != 0) {
+        ret.__error__ = 'Error: DT_BINDABLEPROPERTY: Unexpected value in padding!';
+        console.error('      @', offset, 'DT_BINDABLEPROPERTY[', getType(typeHashes[1]).name, ']: Unexpected value in padding2:', padding2, 'fieldPath:', fieldPath.slice(-3).join('.'));
+      }
+      results.readLength += 4;
+    }
   },
 };
 
