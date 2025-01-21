@@ -55,6 +55,13 @@
       "unk_441f783": "0",
       "hOptionalUIControlStyleFields": {
        "szOnClose": "UI_Reputation_OnClose",
+       "tObjectBinding": {
+        "__type__": "BindingPath",
+        "__typeHash__": 4229676584,
+        "sDataStore": "PlayersDataStore",
+        "sDataPath": "Players:[0]:Reputation",
+        "dwFlags": 16
+       },
        "bActive": 0,
        "hTemplate": {
         "__type__": "UIControlHandle",
@@ -100,6 +107,13 @@
       "unk_441f783": "0",
       "hOptionalUIControlStyleFields": {
        "szOnClose": "UI_Reputation_OnClose",
+       "tObjectBinding": {
+        "__type__": "BindingPath",
+        "__typeHash__": 4229676584,
+        "sDataStore": "PlayersDataStore",
+        "sDataPath": "Players:[1]:Reputation",
+        "dwFlags": 16
+       },
        "bActive": 0,
        "hTemplate": {
         "__type__": "UIControlHandle",
@@ -190,6 +204,13 @@
       "unk_441f783": "0",
       "hOptionalUIControlStyleFields": {
        "szOnClose": "UI_Reputation_OnClose",
+       "tObjectBinding": {
+        "__type__": "BindingPath",
+        "__typeHash__": 4229676584,
+        "sDataStore": "PlayersDataStore",
+        "sDataPath": "Players:[0]:Reputation",
+        "dwFlags": 16
+       },
        "bActive": 0,
        "hTemplate": {
         "__type__": "UIControlHandle",
@@ -447,6 +468,7 @@
           "nLeft": 0,
           "eHorizontalAnchoring": 3
          },
+         "unk_4e673ad": {},
          "hOptionalUIStackPanelStyleFields": {
           "unk_3385ab6": 0,
           "nStackSpacing": 10,
@@ -513,6 +535,16 @@
            },
            "hOptionalUITextStyleFields": {
             "bShowPreviewText": 1,
+            "hText": {
+             "datastore": "SeasonsDataStore",
+             "property": "ReputationBoard:ModalHeader",
+             "value": {
+              "__type__": "StringLabelHandleEx",
+              "__typeHash__": 721585600,
+              "snoStringList": null,
+              "szLabel": 0
+             }
+            },
             "szPreviewText": "(PH)Modal Text",
             "eResizeToFit": 0
            }
@@ -763,6 +795,7 @@
               "nWidth": 700,
               "eHorizontalAnchoring": 1
              },
+             "unk_4e673ad": {},
              "hOptionalUIStackPanelStyleFields": {
               "unk_3385ab6": 0,
               "nStackSpacing": 8,
@@ -929,7 +962,15 @@
                   "szControlName": 0
                  },
                  "unk_441f783": "0",
-                 "hOptionalUIControlStyleFields": {},
+                 "hOptionalUIControlStyleFields": {
+                  "tObjectBinding": {
+                   "__type__": "BindingPath",
+                   "__typeHash__": 4229676584,
+                   "sDataStore": "",
+                   "sDataPath": "Banners",
+                   "dwFlags": 18
+                  }
+                 },
                  "tConsoleInput": {
                   "__type__": "UIControlConsoleInput",
                   "__typeHash__": 3089331074,
@@ -943,6 +984,22 @@
                   "unk_adda2c4": 1,
                   "unk_bffade6": 0,
                   "bEncloseChildren": 1
+                 },
+                 "unk_4e673ad": {
+                  "hItemTemplate": {
+                   "__type__": "UIControlHandle",
+                   "__typeHash__": 3063971755,
+                   "snoUI": {
+                    "__raw__": 1582768,
+                    "__group__": 46,
+                    "__type__": "DT_SNO",
+                    "__typeHash__": 2764331143,
+                    "__targetFileName__": "base/meta/UI/Seasonal_Reputation.ui",
+                    "groupName": "UI",
+                    "name": "Seasonal_Reputation"
+                   },
+                   "szControlName": 189218809
+                  }
                  },
                  "hOptionalUIWrapPanelStyleFields": {
                   "nVerticalSpacing": -11,
@@ -958,309 +1015,7 @@
                  }
                 }
                ],
-               "arChildren": [
-                {
-                 "__type__": "UIControlTemplate",
-                 "__typeHash__": 641859515,
-                 "szName": "Reward_Item_TEST_1",
-                 "ptInlineStyle": [
-                  {
-                   "__type__": "UIWindowStyle",
-                   "__typeHash__": 506492871,
-                   "dwType": 506492871,
-                   "hParentStyle": {
-                    "__type__": "UIControlHandle",
-                    "__typeHash__": 3063971755,
-                    "snoUI": null,
-                    "szControlName": 0
-                   },
-                   "unk_441f783": "0",
-                   "hOptionalUIControlStyleFields": {
-                    "hTemplate": {
-                     "__type__": "UIControlHandle",
-                     "__typeHash__": 3063971755,
-                     "snoUI": {
-                      "__raw__": 1582768,
-                      "__group__": 46,
-                      "__type__": "DT_SNO",
-                      "__typeHash__": 2764331143,
-                      "__targetFileName__": "base/meta/UI/Seasonal_Reputation.ui",
-                      "groupName": "UI",
-                      "name": "Seasonal_Reputation"
-                     },
-                     "szControlName": 189218809
-                    }
-                   },
-                   "tConsoleInput": {
-                    "__type__": "UIControlConsoleInput",
-                    "__typeHash__": 3089331074,
-                    "hOptionalUIControlConsoleInputFields": {}
-                   },
-                   "hOptionalUIWindowStyleFields": {}
-                  }
-                 ],
-                 "arChildren": [],
-                 "ptTemplateInstanceConfig": []
-                },
-                {
-                 "__type__": "UIControlTemplate",
-                 "__typeHash__": 641859515,
-                 "szName": "Reward_Item_TEST_2",
-                 "ptInlineStyle": [
-                  {
-                   "__type__": "UIWindowStyle",
-                   "__typeHash__": 506492871,
-                   "dwType": 506492871,
-                   "hParentStyle": {
-                    "__type__": "UIControlHandle",
-                    "__typeHash__": 3063971755,
-                    "snoUI": null,
-                    "szControlName": 0
-                   },
-                   "unk_441f783": "0",
-                   "hOptionalUIControlStyleFields": {
-                    "hTemplate": {
-                     "__type__": "UIControlHandle",
-                     "__typeHash__": 3063971755,
-                     "snoUI": {
-                      "__raw__": 1582768,
-                      "__group__": 46,
-                      "__type__": "DT_SNO",
-                      "__typeHash__": 2764331143,
-                      "__targetFileName__": "base/meta/UI/Seasonal_Reputation.ui",
-                      "groupName": "UI",
-                      "name": "Seasonal_Reputation"
-                     },
-                     "szControlName": 189218809
-                    }
-                   },
-                   "tConsoleInput": {
-                    "__type__": "UIControlConsoleInput",
-                    "__typeHash__": 3089331074,
-                    "hOptionalUIControlConsoleInputFields": {}
-                   },
-                   "hOptionalUIWindowStyleFields": {}
-                  }
-                 ],
-                 "arChildren": [],
-                 "ptTemplateInstanceConfig": []
-                },
-                {
-                 "__type__": "UIControlTemplate",
-                 "__typeHash__": 641859515,
-                 "szName": "Reward_Item_TEST_3",
-                 "ptInlineStyle": [
-                  {
-                   "__type__": "UIWindowStyle",
-                   "__typeHash__": 506492871,
-                   "dwType": 506492871,
-                   "hParentStyle": {
-                    "__type__": "UIControlHandle",
-                    "__typeHash__": 3063971755,
-                    "snoUI": null,
-                    "szControlName": 0
-                   },
-                   "unk_441f783": "0",
-                   "hOptionalUIControlStyleFields": {
-                    "hTemplate": {
-                     "__type__": "UIControlHandle",
-                     "__typeHash__": 3063971755,
-                     "snoUI": {
-                      "__raw__": 1582768,
-                      "__group__": 46,
-                      "__type__": "DT_SNO",
-                      "__typeHash__": 2764331143,
-                      "__targetFileName__": "base/meta/UI/Seasonal_Reputation.ui",
-                      "groupName": "UI",
-                      "name": "Seasonal_Reputation"
-                     },
-                     "szControlName": 189218809
-                    }
-                   },
-                   "tConsoleInput": {
-                    "__type__": "UIControlConsoleInput",
-                    "__typeHash__": 3089331074,
-                    "hOptionalUIControlConsoleInputFields": {}
-                   },
-                   "hOptionalUIWindowStyleFields": {}
-                  }
-                 ],
-                 "arChildren": [],
-                 "ptTemplateInstanceConfig": []
-                },
-                {
-                 "__type__": "UIControlTemplate",
-                 "__typeHash__": 641859515,
-                 "szName": "Reward_Item_TEST_4",
-                 "ptInlineStyle": [
-                  {
-                   "__type__": "UIWindowStyle",
-                   "__typeHash__": 506492871,
-                   "dwType": 506492871,
-                   "hParentStyle": {
-                    "__type__": "UIControlHandle",
-                    "__typeHash__": 3063971755,
-                    "snoUI": null,
-                    "szControlName": 0
-                   },
-                   "unk_441f783": "0",
-                   "hOptionalUIControlStyleFields": {
-                    "hTemplate": {
-                     "__type__": "UIControlHandle",
-                     "__typeHash__": 3063971755,
-                     "snoUI": {
-                      "__raw__": 1582768,
-                      "__group__": 46,
-                      "__type__": "DT_SNO",
-                      "__typeHash__": 2764331143,
-                      "__targetFileName__": "base/meta/UI/Seasonal_Reputation.ui",
-                      "groupName": "UI",
-                      "name": "Seasonal_Reputation"
-                     },
-                     "szControlName": 189218809
-                    }
-                   },
-                   "tConsoleInput": {
-                    "__type__": "UIControlConsoleInput",
-                    "__typeHash__": 3089331074,
-                    "hOptionalUIControlConsoleInputFields": {}
-                   },
-                   "hOptionalUIWindowStyleFields": {}
-                  }
-                 ],
-                 "arChildren": [],
-                 "ptTemplateInstanceConfig": []
-                },
-                {
-                 "__type__": "UIControlTemplate",
-                 "__typeHash__": 641859515,
-                 "szName": "Reward_Item_TEST_5",
-                 "ptInlineStyle": [
-                  {
-                   "__type__": "UIWindowStyle",
-                   "__typeHash__": 506492871,
-                   "dwType": 506492871,
-                   "hParentStyle": {
-                    "__type__": "UIControlHandle",
-                    "__typeHash__": 3063971755,
-                    "snoUI": null,
-                    "szControlName": 0
-                   },
-                   "unk_441f783": "0",
-                   "hOptionalUIControlStyleFields": {
-                    "hTemplate": {
-                     "__type__": "UIControlHandle",
-                     "__typeHash__": 3063971755,
-                     "snoUI": {
-                      "__raw__": 1582768,
-                      "__group__": 46,
-                      "__type__": "DT_SNO",
-                      "__typeHash__": 2764331143,
-                      "__targetFileName__": "base/meta/UI/Seasonal_Reputation.ui",
-                      "groupName": "UI",
-                      "name": "Seasonal_Reputation"
-                     },
-                     "szControlName": 189218809
-                    }
-                   },
-                   "tConsoleInput": {
-                    "__type__": "UIControlConsoleInput",
-                    "__typeHash__": 3089331074,
-                    "hOptionalUIControlConsoleInputFields": {}
-                   },
-                   "hOptionalUIWindowStyleFields": {}
-                  }
-                 ],
-                 "arChildren": [],
-                 "ptTemplateInstanceConfig": []
-                },
-                {
-                 "__type__": "UIControlTemplate",
-                 "__typeHash__": 641859515,
-                 "szName": "Reward_Item_TEST_6",
-                 "ptInlineStyle": [
-                  {
-                   "__type__": "UIWindowStyle",
-                   "__typeHash__": 506492871,
-                   "dwType": 506492871,
-                   "hParentStyle": {
-                    "__type__": "UIControlHandle",
-                    "__typeHash__": 3063971755,
-                    "snoUI": null,
-                    "szControlName": 0
-                   },
-                   "unk_441f783": "0",
-                   "hOptionalUIControlStyleFields": {
-                    "hTemplate": {
-                     "__type__": "UIControlHandle",
-                     "__typeHash__": 3063971755,
-                     "snoUI": {
-                      "__raw__": 1582768,
-                      "__group__": 46,
-                      "__type__": "DT_SNO",
-                      "__typeHash__": 2764331143,
-                      "__targetFileName__": "base/meta/UI/Seasonal_Reputation.ui",
-                      "groupName": "UI",
-                      "name": "Seasonal_Reputation"
-                     },
-                     "szControlName": 189218809
-                    }
-                   },
-                   "tConsoleInput": {
-                    "__type__": "UIControlConsoleInput",
-                    "__typeHash__": 3089331074,
-                    "hOptionalUIControlConsoleInputFields": {}
-                   },
-                   "hOptionalUIWindowStyleFields": {}
-                  }
-                 ],
-                 "arChildren": [],
-                 "ptTemplateInstanceConfig": []
-                },
-                {
-                 "__type__": "UIControlTemplate",
-                 "__typeHash__": 641859515,
-                 "szName": "Reward_Item_TEST_7",
-                 "ptInlineStyle": [
-                  {
-                   "__type__": "UIWindowStyle",
-                   "__typeHash__": 506492871,
-                   "dwType": 506492871,
-                   "hParentStyle": {
-                    "__type__": "UIControlHandle",
-                    "__typeHash__": 3063971755,
-                    "snoUI": null,
-                    "szControlName": 0
-                   },
-                   "unk_441f783": "0",
-                   "hOptionalUIControlStyleFields": {
-                    "hTemplate": {
-                     "__type__": "UIControlHandle",
-                     "__typeHash__": 3063971755,
-                     "snoUI": {
-                      "__raw__": 1582768,
-                      "__group__": 46,
-                      "__type__": "DT_SNO",
-                      "__typeHash__": 2764331143,
-                      "__targetFileName__": "base/meta/UI/Seasonal_Reputation.ui",
-                      "groupName": "UI",
-                      "name": "Seasonal_Reputation"
-                     },
-                     "szControlName": 189218809
-                    }
-                   },
-                   "tConsoleInput": {
-                    "__type__": "UIControlConsoleInput",
-                    "__typeHash__": 3089331074,
-                    "hOptionalUIControlConsoleInputFields": {}
-                   },
-                   "hOptionalUIWindowStyleFields": {}
-                  }
-                 ],
-                 "arChildren": [],
-                 "ptTemplateInstanceConfig": []
-                }
-               ],
+               "arChildren": [],
                "ptTemplateInstanceConfig": []
               }
              ],
@@ -1340,6 +1095,7 @@
                   "unk_bffade6": 0,
                   "bEncloseChildren": 1
                  },
+                 "unk_4e673ad": {},
                  "hOptionalUIWrapPanelStyleFields": {
                   "nVerticalSpacing": -11,
                   "nHorizontalSpacing": 20,
@@ -1373,6 +1129,7 @@
                    "unk_441f783": "0",
                    "hOptionalUIControlStyleFields": {
                     "bActive": 0,
+                    "unk_6e5f347": 1,
                     "hTemplate": {
                      "__type__": "UIControlHandle",
                      "__typeHash__": 3063971755,
@@ -1417,6 +1174,7 @@
                    "unk_441f783": "0",
                    "hOptionalUIControlStyleFields": {
                     "bActive": 0,
+                    "unk_6e5f347": 1,
                     "hTemplate": {
                      "__type__": "UIControlHandle",
                      "__typeHash__": 3063971755,
@@ -1461,6 +1219,7 @@
                    "unk_441f783": "0",
                    "hOptionalUIControlStyleFields": {
                     "bActive": 0,
+                    "unk_6e5f347": 1,
                     "hTemplate": {
                      "__type__": "UIControlHandle",
                      "__typeHash__": 3063971755,
@@ -1675,20 +1434,6 @@
               }
              },
              "hOptionalUITextStyleFields": {
-              "hText": {
-               "__type__": "StringLabelHandleEx",
-               "__typeHash__": 721585600,
-               "snoStringList": {
-                "__raw__": 1583666,
-                "__group__": 42,
-                "__type__": "DT_SNO",
-                "__typeHash__": 2764331143,
-                "__targetFileName__": "enUS_Text/meta/StringList/Seasonal_Reputation_UI.stl",
-                "groupName": "StringList",
-                "name": "Seasonal_Reputation_UI"
-               },
-               "szLabel": 1752474258
-              },
               "eTextJustifyVertical": 6,
               "eResizeToFit": 0,
               "eTextJustify": 2,
@@ -1744,13 +1489,24 @@
              "hOptionalUITextStyleFields": {
               "bShowPreviewText": 1,
               "hText": {
-               "__type__": "StringLabelHandleEx",
-               "__typeHash__": 721585600,
-               "snoStringList": null,
-               "szLabel": 0
+               "datastore": "SeasonsDataStore",
+               "property": "ReputationBoard:HowToDescription",
+               "value": {
+                "__type__": "StringLabelHandleEx",
+                "__typeHash__": 721585600,
+                "snoStringList": null,
+                "szLabel": 0
+               }
               },
               "szPreviewText": "(ph) This text is being generated by code. The actual How-to string needs to be added in the corresponding reputation SNO",
               "bShrinkToFit": 1,
+              "tTextParamsBinding": {
+               "__type__": "BindingPath",
+               "__typeHash__": 4229676584,
+               "sDataStore": "",
+               "sDataPath": "",
+               "dwFlags": 18
+              },
               "eTextJustifyVertical": 6,
               "eResizeToFit": 0,
               "eTextJustify": 2
@@ -1803,6 +1559,7 @@
             "nLeft": 0,
             "eHorizontalAnchoring": 3
            },
+           "unk_4e673ad": {},
            "hOptionalUIStackPanelStyleFields": {
             "unk_3385ab6": 0,
             "nStackSpacing": 8,
@@ -2023,6 +1780,7 @@
               "eHorizontalAnchoring": 1,
               "dwAlpha": 255
              },
+             "unk_4e673ad": {},
              "hOptionalUIStackPanelStyleFields": {
               "nStackSpacing": 15
              }
@@ -2052,6 +1810,7 @@
                 "hOptionalUIControlConsoleInputFields": {}
                },
                "hOptionalUIWindowStyleFields": {},
+               "unk_4e673ad": {},
                "hOptionalUIStackPanelStyleFields": {
                 "nStackSpacing": 15,
                 "bHorizontal": 1
@@ -2265,7 +2024,9 @@
             "szControlName": 0
            },
            "unk_441f783": "0",
-           "hOptionalUIControlStyleFields": {},
+           "hOptionalUIControlStyleFields": {
+            "bActive": 1
+           },
            "tConsoleInput": {
             "__type__": "UIControlConsoleInput",
             "__typeHash__": 3089331074,
@@ -2407,17 +2168,22 @@
              "hOptionalUITextStyleFields": {
               "bShowPreviewText": 1,
               "hText": {
-               "__type__": "StringLabelHandleEx",
-               "__typeHash__": 721585600,
-               "snoStringList": null,
-               "szLabel": 0
+               "datastore": "SeasonsDataStore",
+               "property": "ReputationBoard:HowToDescription",
+               "value": {
+                "__type__": "StringLabelHandleEx",
+                "__typeHash__": 721585600,
+                "snoStringList": null,
+                "szLabel": 0
+               }
               },
               "szPreviewText": "(ph) This text is being generated by code. The actual How-to string needs to be added in the corresponding reputation SNO",
               "bShrinkToFit": 1,
               "eTextJustifyVertical": 6,
               "eResizeToFit": 0,
               "bSelectable": 1,
-              "eTextJustify": 2
+              "eTextJustify": 2,
+              "bTextAllCaps": 1
              }
             }
            ],
@@ -2621,6 +2387,7 @@
             "eHorizontalAnchoring": 1,
             "dwAlpha": 0
            },
+           "unk_4e673ad": {},
            "hOptionalUIStackPanelStyleFields": {
             "nStackSpacing": 15
            }
@@ -2650,6 +2417,7 @@
               "hOptionalUIControlConsoleInputFields": {}
              },
              "hOptionalUIWindowStyleFields": {},
+             "unk_4e673ad": {},
              "hOptionalUIStackPanelStyleFields": {
               "nStackSpacing": 15,
               "bHorizontal": 1
@@ -2812,6 +2580,7 @@
               "hOptionalUIControlConsoleInputFields": {}
              },
              "hOptionalUIWindowStyleFields": {},
+             "unk_4e673ad": {},
              "hOptionalUIStackPanelStyleFields": {
               "nStackSpacing": 15,
               "bHorizontal": 1
@@ -3485,6 +3254,7 @@
           "nLeft": 4,
           "eHorizontalAnchoring": 3
          },
+         "unk_4e673ad": {},
          "hOptionalUIStackPanelStyleFields": {
           "unk_3385ab6": 0
          }
@@ -3601,19 +3371,15 @@
             }
            },
            "hOptionalUITextStyleFields": {
+            "nFontSizeFallback": 39,
             "hText": {
-             "__type__": "StringLabelHandleEx",
-             "__typeHash__": 721585600,
-             "snoStringList": {
-              "__raw__": 1583666,
-              "__group__": 42,
-              "__type__": "DT_SNO",
-              "__typeHash__": 2764331143,
-              "__targetFileName__": "enUS_Text/meta/StringList/Seasonal_Reputation_UI.stl",
-              "groupName": "StringList",
-              "name": "Seasonal_Reputation_UI"
-             },
-             "szLabel": 2075952439
+             "property": "CurrentReputationTier",
+             "value": {
+              "__type__": "StringLabelHandleEx",
+              "__typeHash__": 721585600,
+              "snoStringList": null,
+              "szLabel": 0
+             }
             },
             "eTextJustifyVertical": 6,
             "eResizeToFit": 0,
@@ -3710,18 +3476,20 @@
            "hOptionalUITextStyleFields": {
             "flTextPaddingL": 0,
             "hText": {
-             "__type__": "StringLabelHandleEx",
-             "__typeHash__": 721585600,
-             "snoStringList": {
-              "__raw__": 1583666,
-              "__group__": 42,
-              "__type__": "DT_SNO",
-              "__typeHash__": 2764331143,
-              "__targetFileName__": "enUS_Text/meta/StringList/Seasonal_Reputation_UI.stl",
-              "groupName": "StringList",
-              "name": "Seasonal_Reputation_UI"
-             },
-             "szLabel": 811191651
+             "property": "NextReward",
+             "value": {
+              "__type__": "StringLabelHandleEx",
+              "__typeHash__": 721585600,
+              "snoStringList": null,
+              "szLabel": 0
+             }
+            },
+            "tTextParamsBinding": {
+             "__type__": "BindingPath",
+             "__typeHash__": 4229676584,
+             "sDataStore": "",
+             "sDataPath": "NextRewardParams",
+             "dwFlags": 18
             },
             "eTextJustifyVertical": 6,
             "eResizeToFit": 3,
@@ -3774,6 +3542,12 @@
             "__type__": "UIProgressBarBase",
             "__typeHash__": 4134908163,
             "hOptionalUIProgressBarBaseFields": {
+             "flProgressMax": 1,
+             "bForceSnap": 0,
+             "flProgressCurrent": {
+              "property": "ProgressBarCurrentProgress",
+              "value": 0
+             },
              "hProgressForegroundImage": {
               "__type__": "UIImageHandleReference",
               "__typeHash__": 1797021084,
@@ -3852,7 +3626,9 @@
               "szControlName": 0
              },
              "unk_441f783": "0",
-             "hOptionalUIControlStyleFields": {},
+             "hOptionalUIControlStyleFields": {
+              "unk_da4ff10": 0
+             },
              "tConsoleInput": {
               "__type__": "UIControlConsoleInput",
               "__typeHash__": 3089331074,
@@ -3865,9 +3641,13 @@
               "nWidth": 185,
               "eHorizontalAnchoring": 3,
               "hImageFrame": {
-               "__type__": "UIImageHandleReference",
-               "__typeHash__": 1797021084,
-               "hImageHandle": 609218635
+               "datastore": "SeasonsDataStore",
+               "property": "ReputationBoard:OrganizationLogo",
+               "value": {
+                "__type__": "UIImageHandleReference",
+                "__typeHash__": 1797021084,
+                "hImageHandle": 0
+               }
               }
              }
             }
@@ -3906,13 +3686,9 @@
               "nBottom": 0,
               "nRight": 0,
               "nWidth": 184,
+              "snoTiledStyle": null,
               "nLeft": 4,
               "eHorizontalAnchoring": 1,
-              "hImageFrame": {
-               "__type__": "UIImageHandleReference",
-               "__typeHash__": 1797021084,
-               "hImageHandle": 0
-              },
               "dwAlpha": 255
              }
             }
@@ -4062,7 +3838,19 @@
             "szControlName": 0
            },
            "unk_441f783": "0",
-           "hOptionalUIControlStyleFields": {},
+           "hOptionalUIControlStyleFields": {
+            "tObjectBinding": {
+             "__type__": "BindingPath",
+             "__typeHash__": 4229676584,
+             "sDataStore": "",
+             "sDataPath": "TierContainer",
+             "dwFlags": 18
+            },
+            "bActive": {
+             "property": "Active",
+             "value": 1
+            }
+           },
            "tConsoleInput": {
             "__type__": "UIControlConsoleInput",
             "__typeHash__": 3089331074,
@@ -4109,9 +3897,13 @@
               "nWidth": 99,
               "eHorizontalAnchoring": 1,
               "hImageFrame": {
-               "__type__": "UIImageHandleReference",
-               "__typeHash__": 1797021084,
-               "hImageHandle": 2394147668
+               "datastore": "SeasonsDataStore",
+               "property": "ReputationBoard:TierBanner",
+               "value": {
+                "__type__": "UIImageHandleReference",
+                "__typeHash__": 1797021084,
+                "hImageHandle": 2394147668
+               }
               }
              }
             }
@@ -4180,10 +3972,13 @@
              "hOptionalUITextStyleFields": {
               "bShowPreviewText": 1,
               "hText": {
-               "__type__": "StringLabelHandleEx",
-               "__typeHash__": 721585600,
-               "snoStringList": null,
-               "szLabel": 0
+               "property": "Text",
+               "value": {
+                "__type__": "StringLabelHandleEx",
+                "__typeHash__": 721585600,
+                "snoStringList": null,
+                "szLabel": 0
+               }
               },
               "szPreviewText": "XVIII",
               "bShrinkToFit": 1,
@@ -4216,7 +4011,10 @@
            },
            "unk_441f783": "0",
            "hOptionalUIControlStyleFields": {
-            "bActive": 1,
+            "bActive": {
+             "property": "RepeatableAwardActive",
+             "value": 1
+            },
             "hTemplate": {
              "__type__": "UIControlHandle",
              "__typeHash__": 3063971755,
@@ -4243,7 +4041,16 @@
             "eVerticalAnchoring": 1,
             "nRight": 53,
             "nWidth": 98,
-            "eHorizontalAnchoring": 2
+            "eHorizontalAnchoring": 2,
+            "hImageFrame": {
+             "datastore": "SeasonsDataStore",
+             "property": "ReputationBoard:TierBanner",
+             "value": {
+              "__type__": "UIImageHandleReference",
+              "__typeHash__": 1797021084,
+              "hImageHandle": 0
+             }
+            }
            }
           }
          ],
@@ -4685,7 +4492,17 @@
          },
          "unk_441f783": "0",
          "hOptionalUIControlStyleFields": {
-          "bActive": 0
+          "tObjectBinding": {
+           "__type__": "BindingPath",
+           "__typeHash__": 4229676584,
+           "sDataStore": "",
+           "sDataPath": "Currency",
+           "dwFlags": 18
+          },
+          "bActive": {
+           "property": "ButtonActive",
+           "value": 0
+          }
          },
          "tConsoleInput": {
           "__type__": "UIControlConsoleInput",
@@ -4720,7 +4537,10 @@
            },
            "unk_441f783": "0",
            "hOptionalUIControlStyleFields": {
-            "bActive": 1
+            "bActive": {
+             "property": "IconActive",
+             "value": 1
+            }
            },
            "tConsoleInput": {
             "__type__": "UIControlConsoleInput",
@@ -4739,7 +4559,7 @@
             "hImageFrame": {
              "__type__": "UIImageHandleReference",
              "__typeHash__": 1797021084,
-             "hImageHandle": 1309685333
+             "hImageHandle": 0
             }
            }
           }
@@ -4768,7 +4588,10 @@
          "unk_441f783": "0",
          "hOptionalUIControlStyleFields": {
           "bIgnoreInputFocus": 1,
-          "bActive": 0
+          "bActive": {
+           "property": "RewardItemActive",
+           "value": 0
+          }
          },
          "tConsoleInput": {
           "__type__": "UIControlConsoleInput",
@@ -4802,7 +4625,11 @@
          },
          "hOptionalUIButtonStyleFields": {},
          "hOptionalUIItemButtonStyleFields": {
-          "bAutoItemTooltip": 0
+          "bAutoItemTooltip": 0,
+          "snoItem": {
+           "property": "StateItem",
+           "value": null
+          }
          }
         }
        ],
@@ -5075,7 +4902,17 @@
          },
          "unk_441f783": "0",
          "hOptionalUIControlStyleFields": {
-          "bActive": 0
+          "tObjectBinding": {
+           "__type__": "BindingPath",
+           "__typeHash__": 4229676584,
+           "sDataStore": "",
+           "sDataPath": "Storyboard",
+           "dwFlags": 18
+          },
+          "bActive": {
+           "property": "ClaimableGlowActive",
+           "value": 0
+          }
          },
          "tConsoleInput": {
           "__type__": "UIControlConsoleInput",
@@ -5083,11 +4920,11 @@
           "hOptionalUIControlConsoleInputFields": {}
          },
          "hOptionalUIWindowStyleFields": {
-          "nTop": 5,
+          "nTop": 25,
           "eVerticalAnchoring": 3,
-          "nBottom": 5,
-          "nRight": 5,
-          "nLeft": 5,
+          "nBottom": 65,
+          "nRight": 28,
+          "nLeft": 25,
           "eHorizontalAnchoring": 3,
           "hImageFrame": {
            "__type__": "UIImageHandleReference",
@@ -5131,7 +4968,10 @@
        },
        "unk_441f783": "0",
        "hOptionalUIControlStyleFields": {
-        "bActive": 1
+        "bActive": {
+         "property": "StateTextActive",
+         "value": 1
+        }
        },
        "tConsoleInput": {
         "__type__": "UIControlConsoleInput",
@@ -5169,6 +5009,15 @@
        },
        "hOptionalUITextStyleFields": {
         "bShowPreviewText": 1,
+        "hText": {
+         "property": "StateText",
+         "value": {
+          "__type__": "StringLabelHandleEx",
+          "__typeHash__": 721585600,
+          "snoStringList": null,
+          "szLabel": 0
+         }
+        },
         "szPreviewText": "XXXXX",
         "bShrinkToFit": 1,
         "eTextJustifyVertical": 2,
@@ -5197,7 +5046,17 @@
        },
        "unk_441f783": "0",
        "hOptionalUIControlStyleFields": {
-        "bActive": 0
+        "tObjectBinding": {
+         "__type__": "BindingPath",
+         "__typeHash__": 4229676584,
+         "sDataStore": "",
+         "sDataPath": "Storyboard",
+         "dwFlags": 18
+        },
+        "bActive": {
+         "property": "ClaimedOverlayActive",
+         "value": 0
+        }
        },
        "tConsoleInput": {
         "__type__": "UIControlConsoleInput",
@@ -5239,7 +5098,17 @@
        },
        "unk_441f783": "0",
        "hOptionalUIControlStyleFields": {
-        "bActive": 0
+        "tObjectBinding": {
+         "__type__": "BindingPath",
+         "__typeHash__": 4229676584,
+         "sDataStore": "",
+         "sDataPath": "Storyboard",
+         "dwFlags": 18
+        },
+        "bActive": {
+         "property": "checkmarkActive",
+         "value": 0
+        }
        },
        "tConsoleInput": {
         "__type__": "UIControlConsoleInput",
@@ -5290,7 +5159,17 @@
        },
        "unk_441f783": "0",
        "hOptionalUIControlStyleFields": {
-        "bActive": 0
+        "tObjectBinding": {
+         "__type__": "BindingPath",
+         "__typeHash__": 4229676584,
+         "sDataStore": "",
+         "sDataPath": "Storyboard",
+         "dwFlags": 18
+        },
+        "bActive": {
+         "property": "ClaimableIndicatorActive",
+         "value": 0
+        }
        },
        "tConsoleInput": {
         "__type__": "UIControlConsoleInput",
@@ -5420,7 +5299,9 @@
         "szControlName": 0
        },
        "unk_441f783": "0",
-       "hOptionalUIControlStyleFields": {},
+       "hOptionalUIControlStyleFields": {
+        "bActive": 1
+       },
        "snoStoryboard": {
         "__raw__": 1647127,
         "__group__": 90,
@@ -5455,7 +5336,9 @@
         "szControlName": 0
        },
        "unk_441f783": "0",
-       "hOptionalUIControlStyleFields": {},
+       "hOptionalUIControlStyleFields": {
+        "bActive": 1
+       },
        "snoStoryboard": {
         "__raw__": 1647126,
         "__group__": 90,
@@ -5490,7 +5373,9 @@
         "szControlName": 0
        },
        "unk_441f783": "0",
-       "hOptionalUIControlStyleFields": {},
+       "hOptionalUIControlStyleFields": {
+        "bActive": 1
+       },
        "snoStoryboard": {
         "__raw__": 1651129,
         "__group__": 90,
@@ -6354,6 +6239,7 @@
            "hOptionalUIWindowStyleFields": {
             "nTop": 10
            },
+           "unk_4e673ad": {},
            "hOptionalUIStackPanelStyleFields": {}
           }
          ]
@@ -6567,6 +6453,24 @@
           "nButtonPressHorizontal": 3
          },
          "hOptionalUICheckBoxStyleFields": {
+          "snoSelectedCheckBoxSound": {
+           "__raw__": 137607,
+           "__group__": 40,
+           "__type__": "DT_SNO",
+           "__typeHash__": 2764331143,
+           "__targetFileName__": "base/meta/Sound/Play_UI_Menu_Generic_Button_Click.snd",
+           "groupName": "Sound",
+           "name": "Play_UI_Menu_Generic_Button_Click"
+          },
+          "snoDeselectedCheckBoxSound": {
+           "__raw__": 137607,
+           "__group__": 40,
+           "__type__": "DT_SNO",
+           "__typeHash__": 2764331143,
+           "__targetFileName__": "base/meta/Sound/Play_UI_Menu_Generic_Button_Click.snd",
+           "groupName": "Sound",
+           "name": "Play_UI_Menu_Generic_Button_Click"
+          },
           "hImageFrameUncheckedMouseOver": {
            "__type__": "UIImageHandleReference",
            "__typeHash__": 1797021084,
@@ -7190,6 +7094,7 @@
           "nTop": 0,
           "eVerticalAnchoring": 3
          },
+         "unk_4e673ad": {},
          "hOptionalUIStackPanelStyleFields": {
           "unk_f89660f": 0,
           "tMargins": {
@@ -7825,6 +7730,7 @@
         "nLeft": 5,
         "eHorizontalAnchoring": 3
        },
+       "unk_4e673ad": {},
        "hOptionalUIStackPanelStyleFields": {
         "unk_3385ab6": 0,
         "unk_f89660f": 0

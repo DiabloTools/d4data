@@ -966,8 +966,8 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "0.35 * Table(34, sLevel)",
-    "compiled": "BgAAADQzsz4GAAAAAAAIQgUAAAABAAAAAAAAAAAAAAAAAAAAAQAAAAsAAAANAAAAAAAAAA=="
+    "value": "(SF_18 == 0)? (0.35 * Table(34, sLevel)) : (0.35 * Table(34, sLevel)*(1+( SF_17)))",
+    "compiled": "BQAAABgAAAAAAAAAAAAAAAAAAAAGAAAAAAAAAAkAAAAGAAAANDOzPgYAAAAAAAhCBQAAAAEAAAAAAAAAAAAAAAAAAAABAAAACwAAAA0AAAAGAAAANDOzPgYAAAAAAAhCBQAAAAEAAAAAAAAAAAAAAAAAAAABAAAACwAAAA0AAAAGAAAAAACAPwUAAAAXAAAAAAAAAAAAAAAAAAAACwAAAA0AAAAQAAAAAAAAAA=="
    }
   },
   {
@@ -982,8 +982,8 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "3 * Table(34, sLevel)",
-    "compiled": "BgAAAAAAQEAGAAAAAAAIQgUAAAABAAAAAAAAAAAAAAAAAAAAAQAAAAsAAAANAAAAAAAAAA=="
+    "value": "(SF_18 == 0)? (3 * Table(34, sLevel)) : (3 * Table(34, sLevel)*(1+( SF_17)))",
+    "compiled": "BQAAABgAAAAAAAAAAAAAAAAAAAAGAAAAAAAAAAkAAAAGAAAAAABAQAYAAAAAAAhCBQAAAAEAAAAAAAAAAAAAAAAAAAABAAAACwAAAA0AAAAGAAAAAABAQAYAAAAAAAhCBQAAAAEAAAAAAAAAAAAAAAAAAAABAAAACwAAAA0AAAAGAAAAAACAPwUAAAAXAAAAAAAAAAAAAAAAAAAACwAAAA0AAAAQAAAAAAAAAA=="
    }
   },
   {
@@ -1039,7 +1039,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "3  + GetBonusMaxChargesForPower(SNO.Power.Spiritborn_Eagle_Ultimate)",
-    "compiled": "BgAAAAAAQEAFAAAAWQAAAORgGQAAAAAAAAAAAAEAAABzAAAACwAAAAAAAAA="
+    "compiled": "BgAAAAAAQEAFAAAAWQAAAORgGQAAAAAAAAAAAAEAAAB1AAAACwAAAAAAAAA="
    }
   },
   {
@@ -1071,7 +1071,31 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Bonus_Percent_Per_Power#Spiritborn_Eagle_Ultimate",
-    "compiled": "BQAAAAAAAACjAwAA5GAZAAAAAAAAAAAA"
+    "compiled": "BQAAAAAAAACfAwAA5GAZAAAAAAAAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "0.15",
+    "compiled": "BgAAAJqZGT4AAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "(((1+Crit_Damage_Percent)*(1+Multiplicative_Crit_Damage_Percent)*(1+0.5))+((1 + Vulnerable_Health_Damage_Bonus)*(1+Multiplicative_Vulnerable_Health_Damage_Bonus)*(1+0.2)) - 2)*(SF_16)",
+    "compiled": "BgAAAAAAgD8FAAAAAAAAAAcBAAD+////AAAAAAsAAAAGAAAAAACAPwUAAAAAAAAACAEAAP7///8AAAAACwAAAA0AAAAGAAAAAACAPwYAAAAAAAA/CwAAAA0AAAAGAAAAAACAPwUAAAAAAAAAuAIAAP7///8AAAAACwAAAAYAAAAAAIA/BQAAAAAAAAC5AgAA/v///wAAAAALAAAADQAAAAYAAAAAAIA/BgAAAM3MTD4LAAAADQAAAAsAAAAGAAAAAAAAQAwAAAAFAAAAFgAAAAAAAAAAAAAAAAAAAA0AAAAAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "(Floor((sLevel)/5))? 1 : 0",
+    "compiled": "BQAAAAEAAAAAAAAAAAAAAAAAAAAGAAAAAACgQA4AAAABAAAABQAAAAYAAAAAAIA/BgAAAAAAAAAQAAAAAAAAAA=="
    }
   }
  ],

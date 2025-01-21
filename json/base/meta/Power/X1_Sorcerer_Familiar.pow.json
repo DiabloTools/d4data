@@ -79,6 +79,18 @@
     "name": "Search_Damage"
    },
    "bSearchOnly": false
+  },
+  {
+   "__type__": "SkillTagStruct",
+   "__typeHash__": 4000554560,
+   "gbidSkillTag": {
+    "__raw__": 2549193150,
+    "__type__": "DT_GBID",
+    "__typeHash__": 1028170061,
+    "group": 56,
+    "name": "Skill_Primary_Summoning"
+   },
+   "bSearchOnly": false
   }
  ],
  "eSkillCat": 2,
@@ -2256,6 +2268,114 @@
     }
    },
    "dwShaderMapOverride": 4294967295
+  },
+  {
+   "__type__": "PowerBuffDefinition",
+   "__typeHash__": 1071057721,
+   "dwID": 1592686712,
+   "dwBuffId": 42,
+   "bHarmful": false,
+   "bInfinite": false,
+   "tDuration": {
+    "value": "SF_21",
+    "compiled": "BQAAABsAAAAAAAAAAAAAAAAAAAAAAAAA"
+   },
+   "unk_deea7e8": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "unk_4393f38": false,
+   "unk_dcb22bd": false,
+   "tMaxStackCount": {
+    "value": "SF_15",
+    "compiled": "BQAAABUAAAAAAAAAAAAAAAAAAAAAAAAA"
+   },
+   "bVisibleInUI": false,
+   "bShowDuration": false,
+   "bCancellable": false,
+   "unk_99b5752": false,
+   "unk_93cd85f": false,
+   "unk_4bdaef2": false,
+   "bVisibleInHotbarUI": true,
+   "bShowsActiveStateOnHotbar": false,
+   "bShowsDurationOnHotbar": false,
+   "bShowsStackCountOnHotbar": true,
+   "unk_71ba554": false,
+   "unk_1375622": false,
+   "unk_d2dd47": false,
+   "unk_8a5f69e": false,
+   "hIcon": 0,
+   "hFloatingIcon": 0,
+   "hFloatingTextLabel": 0,
+   "flFloatingTextIconRange": 0,
+   "unk_395ccd6": false,
+   "bDealsDOT": false,
+   "tDOT": {
+    "__type__": "PowerBuffDOTDamage",
+    "__typeHash__": 3824324374,
+    "eDamageType": -1,
+    "tDamage": {
+     "__type__": "HitpointSpecifier",
+     "__typeHash__": 1185241065,
+     "eType": 0,
+     "tHitpointScalar": {
+      "value": "0",
+      "compiled": "BgAAAAAAAAAAAAAA"
+     },
+     "tFlatLevel": {
+      "value": "0",
+      "compiled": "BgAAAAAAAAAAAAAA"
+     }
+    },
+    "unk_89dc285": false,
+    "flFlatDamageBonusScalar": 1,
+    "unk_f551941": -1,
+    "bDamageIgnoresInvulnerable": false,
+    "bDamageIgnoresBonuses": false,
+    "unk_b8f2b": -1,
+    "bHasCombatEffectOverride": false,
+    "tCombatEffectOverride": {
+     "value": "100",
+     "compiled": "BgAAAAAAyEIAAAAA"
+    },
+    "bHideDamageEffects": false,
+    "bHideGlobalApplicationEffect": false
+   },
+   "tCrowdControl": {
+    "__type__": "PowerBuffCrowdControl",
+    "__typeHash__": 4138865712,
+    "unk_c63f49e": true,
+    "dwCCFlags": 0,
+    "bUseGlobalSlowAmount": false,
+    "eGlobalSlowAmountType": 0,
+    "tSlowAmount": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    },
+    "tChillAmount": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    },
+    "tStaggerMultiplier": {
+     "value": "1",
+     "compiled": "BgAAAAAAgD8AAAAA"
+    }
+   },
+   "bHasDamageShield": false,
+   "tDamageShield": {
+    "__type__": "HitpointSpecifier",
+    "__typeHash__": 1185241065,
+    "eType": 0,
+    "tHitpointScalar": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    },
+    "tFlatLevel": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    }
+   },
+   "dwShaderMapOverride": 4294967295
   }
  ],
  "nFormulaCount": 0,
@@ -2320,8 +2440,8 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "0.4 / SF_6",
-    "compiled": "BgAAAM3MzD4FAAAADAAAAAAAAAAAAAAAAAAAAA4AAAAAAAAA"
+    "value": "(0.4 / SF_6) * Table(34,sLevel)",
+    "compiled": "BgAAAM3MzD4FAAAADAAAAAAAAAAAAAAAAAAAAA4AAAAGAAAAAAAIQgUAAAABAAAAAAAAAAAAAAAAAAAAAQAAAAsAAAANAAAAAAAAAA=="
    }
   },
   {
@@ -2369,7 +2489,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "1 + AoE_Size_Bonus_Per_Power#X1_Sorcerer_Familiar",
-    "compiled": "BgAAAAAAgD8FAAAAAAAAAM0DAADD0xgAAAAAAAsAAAAAAAAA"
+    "compiled": "BgAAAAAAgD8FAAAAAAAAAMoDAADD0xgAAAAAAAsAAAAAAAAA"
    }
   },
   {
@@ -2393,7 +2513,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Affix_Value_1#x1_unique_sorc_143/100",
-    "compiled": "BQAAAAAAAABTBAAAdSQfAAAAAAAGAAAAAADIQg4AAAAAAAAA"
+    "compiled": "BQAAAAAAAABQBAAAdSQfAAAAAAAGAAAAAADIQg4AAAAAAAAA"
    }
   },
   {
@@ -2425,7 +2545,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Power_Duration_Bonus_Pct#X1_Sorcerer_Familiar",
-    "compiled": "BQAAAAAAAACgAwAAw9MYAAAAAAAAAAAA"
+    "compiled": "BQAAAAAAAACcAwAAw9MYAAAAAAAAAAAA"
    }
   },
   {
@@ -2442,6 +2562,14 @@
    "tFormula": {
     "value": "5",
     "compiled": "BgAAAAAAoEAAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "SF_5 * (1 + Combat_Effect_Chance_Bonus_Per_Skill#Sorcerer_Familiar_Attack)",
+    "compiled": "BQAAAAsAAAAAAAAAAAAAAAAAAAAGAAAAAACAPwUAAAAAAAAAcwQAAG+DHQAAAAAACwAAAA0AAAAAAAAA"
    }
   }
  ],
@@ -2555,7 +2683,7 @@
    "bAppendDescription": true,
    "bBulletPointDescription": true,
    "bAffectsEnchantmentDescription": false,
-   "unk_b1d89c5": false,
+   "unk_b1d89c5": true,
    "arSkillTags": [
     {
      "__type__": "SkillTagStruct",

@@ -21,6 +21,22 @@
     "unk_441f783": "0",
     "hOptionalUIControlStyleFields": {
      "szOnOpen": "UI_Blessings_OnOpen",
+     "unk_33fa5cf": {
+      "__raw__": 1369483,
+      "__group__": 40,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/Sound/Play_UI_Menu_Open_Medium.snd",
+      "groupName": "Sound",
+      "name": "Play_UI_Menu_Open_Medium"
+     },
+     "tObjectBinding": {
+      "__type__": "BindingPath",
+      "__typeHash__": 4229676584,
+      "sDataStore": "SeasonsDataStore",
+      "sDataPath": "SeasonsBlessings",
+      "dwFlags": 0
+     },
      "bActive": 0,
      "snoOnOpenSound": {
       "__raw__": 1369483,
@@ -225,6 +241,7 @@
           "a": 255
          }
         },
+        "unk_4e673ad": {},
         "hOptionalUIStackPanelStyleFields": {
          "nStackSpacing": 0
         }
@@ -332,18 +349,21 @@
              "flTextPaddingB": 0,
              "nOutlineStrength": 0,
              "hText": {
-              "__type__": "StringLabelHandleEx",
-              "__typeHash__": 721585600,
-              "snoStringList": {
-               "__raw__": 505691,
-               "__group__": 42,
-               "__type__": "DT_SNO",
-               "__typeHash__": 2764331143,
-               "__targetFileName__": "enUS_Text/meta/StringList/Seasons.stl",
-               "groupName": "StringList",
-               "name": "Seasons"
-              },
-              "szLabel": 3609344594
+              "property": "TitleName",
+              "value": {
+               "__type__": "StringLabelHandleEx",
+               "__typeHash__": 721585600,
+               "snoStringList": {
+                "__raw__": 505691,
+                "__group__": 42,
+                "__type__": "DT_SNO",
+                "__typeHash__": 2764331143,
+                "__targetFileName__": "enUS_Text/meta/StringList/Seasons.stl",
+                "groupName": "StringList",
+                "name": "Seasons"
+               },
+               "szLabel": 3609344594
+              }
              },
              "eTextJustifyVertical": 4,
              "eTextJustify": 2,
@@ -646,6 +666,7 @@
               "a": 255
              }
             },
+            "unk_4e673ad": {},
             "hOptionalUIStackPanelStyleFields": {}
            }
           ],
@@ -720,6 +741,7 @@
                  "eVerticalAnchoring": 3,
                  "eHorizontalAnchoring": 1
                 },
+                "unk_4e673ad": {},
                 "hOptionalUIStackPanelStyleFields": {
                  "unk_3385ab6": 0,
                  "bHorizontal": 1
@@ -793,18 +815,21 @@
                    "bWordWrap": 1,
                    "nOutlineStrength": 0,
                    "hText": {
-                    "__type__": "StringLabelHandleEx",
-                    "__typeHash__": 721585600,
-                    "snoStringList": {
-                     "__raw__": 505691,
-                     "__group__": 42,
-                     "__type__": "DT_SNO",
-                     "__typeHash__": 2764331143,
-                     "__targetFileName__": "enUS_Text/meta/StringList/Seasons.stl",
-                     "groupName": "StringList",
-                     "name": "Seasons"
-                    },
-                    "szLabel": 2354466363
+                    "property": "UpgradePoints",
+                    "value": {
+                     "__type__": "StringLabelHandleEx",
+                     "__typeHash__": 721585600,
+                     "snoStringList": {
+                      "__raw__": 505691,
+                      "__group__": 42,
+                      "__type__": "DT_SNO",
+                      "__typeHash__": 2764331143,
+                      "__targetFileName__": "enUS_Text/meta/StringList/Seasons.stl",
+                      "groupName": "StringList",
+                      "name": "Seasons"
+                     },
+                     "szLabel": 2354466363
+                    }
                    },
                    "eTextJustifyVertical": 2,
                    "eResizeToFit": 1,
@@ -839,7 +864,12 @@
                    "szControlName": 900609833
                   },
                   "unk_441f783": "0",
-                  "hOptionalUIControlStyleFields": {},
+                  "hOptionalUIControlStyleFields": {
+                   "bActive": {
+                    "property": "EnableIndicator",
+                    "value": 1
+                   }
+                  },
                   "tConsoleInput": {
                    "__type__": "UIControlConsoleInput",
                    "__typeHash__": 3089331074,
@@ -916,7 +946,10 @@
                 },
                 "unk_441f783": "0",
                 "hOptionalUIControlStyleFields": {
-                 "bActive": 1
+                 "bActive": {
+                  "property": "EnableNextUpgrade",
+                  "value": 1
+                 }
                 },
                 "tConsoleInput": {
                  "__type__": "UIControlConsoleInput",
@@ -1082,7 +1115,15 @@
                "szControlName": 0
               },
               "unk_441f783": "0",
-              "hOptionalUIControlStyleFields": {},
+              "hOptionalUIControlStyleFields": {
+               "tObjectBinding": {
+                "__type__": "BindingPath",
+                "__typeHash__": 4229676584,
+                "sDataStore": "",
+                "sDataPath": "Upgrades",
+                "dwFlags": 2
+               }
+              },
               "tConsoleInput": {
                "__type__": "UIControlConsoleInput",
                "__typeHash__": 3089331074,
@@ -1156,6 +1197,7 @@
                 "unk_441f783": "0",
                 "hOptionalUIControlStyleFields": {
                  "bActive": 0,
+                 "unk_6e5f347": 1,
                  "hTemplate": {
                   "__type__": "UIControlHandle",
                   "__typeHash__": 3063971755,
@@ -1315,6 +1357,7 @@
                 "hOptionalUIWindowStyleFields": {
                  "eVisibilityCondition": 0
                 },
+                "unk_4e673ad": {},
                 "hOptionalUIStackPanelStyleFields": {}
                }
               ],
@@ -1424,6 +1467,7 @@
                  "nWidth": 0,
                  "eVisibilityCondition": 1
                 },
+                "unk_4e673ad": {},
                 "hOptionalUIStackPanelStyleFields": {}
                }
               ],
@@ -1583,6 +1627,7 @@
              "nRight": 0,
              "eVisibilityCondition": 0
             },
+            "unk_4e673ad": {},
             "hOptionalUIStackPanelStyleFields": {
              "unk_3a57c53": 0,
              "tMargins": {
@@ -1714,6 +1759,7 @@
             "hOptionalUIWindowStyleFields": {
              "eVisibilityCondition": 1
             },
+            "unk_4e673ad": {},
             "hOptionalUIStackPanelStyleFields": {
              "tMargins": {
               "__type__": "UIMargins",
@@ -1826,6 +1872,7 @@
              "nWidth": 0,
              "eVisibilityCondition": 1
             },
+            "unk_4e673ad": {},
             "hOptionalUIStackPanelStyleFields": {}
            }
           ],
@@ -2446,7 +2493,10 @@
          },
          "unk_441f783": "0",
          "hOptionalUIControlStyleFields": {
-          "bActive": 1,
+          "bActive": {
+           "property": "Progress1",
+           "value": 1
+          },
           "hTemplate": {
            "__type__": "UIControlHandle",
            "__typeHash__": 3063971755,
@@ -2521,7 +2571,10 @@
          },
          "unk_441f783": "0",
          "hOptionalUIControlStyleFields": {
-          "bActive": 1,
+          "bActive": {
+           "property": "Progress2",
+           "value": 1
+          },
           "hTemplate": {
            "__type__": "UIControlHandle",
            "__typeHash__": 3063971755,
@@ -2592,7 +2645,10 @@
          },
          "unk_441f783": "0",
          "hOptionalUIControlStyleFields": {
-          "bActive": 1,
+          "bActive": {
+           "property": "Progress3",
+           "value": 1
+          },
           "hTemplate": {
            "__type__": "UIControlHandle",
            "__typeHash__": 3063971755,
@@ -2668,7 +2724,10 @@
          },
          "unk_441f783": "0",
          "hOptionalUIControlStyleFields": {
-          "bActive": 1,
+          "bActive": {
+           "property": "Progress4",
+           "value": 1
+          },
           "hTemplate": {
            "__type__": "UIControlHandle",
            "__typeHash__": 3063971755,
@@ -2838,9 +2897,12 @@
         "nWidth": 88,
         "eHorizontalAnchoring": 1,
         "hImageFrame": {
-         "__type__": "UIImageHandleReference",
-         "__typeHash__": 1797021084,
-         "hImageHandle": 3540540384
+         "property": "IconHandle",
+         "value": {
+          "__type__": "UIImageHandleReference",
+          "__typeHash__": 1797021084,
+          "hImageHandle": 3540540384
+         }
         }
        }
       }
@@ -2994,6 +3056,7 @@
        "hOptionalUIWindowStyleFields": {
         "eClipBehavior": 1
        },
+       "unk_4e673ad": {},
        "hOptionalUIStackPanelStyleFields": {
         "tMargins": {
          "__type__": "UIMargins",
@@ -3302,6 +3365,7 @@
             "nLeft": 20,
             "eHorizontalAnchoring": 3
            },
+           "unk_4e673ad": {},
            "hOptionalUIStackPanelStyleFields": {
             "unk_3385ab6": 0,
             "nStackSpacing": 0,
@@ -3365,18 +3429,21 @@
               "bWordWrap": 1,
               "nOutlineStrength": 0,
               "hText": {
-               "__type__": "StringLabelHandleEx",
-               "__typeHash__": 721585600,
-               "snoStringList": {
-                "__raw__": 505691,
-                "__group__": 42,
-                "__type__": "DT_SNO",
-                "__typeHash__": 2764331143,
-                "__targetFileName__": "enUS_Text/meta/StringList/Seasons.stl",
-                "groupName": "StringList",
-                "name": "Seasons"
-               },
-               "szLabel": 3421791084
+               "property": "TitleName",
+               "value": {
+                "__type__": "StringLabelHandleEx",
+                "__typeHash__": 721585600,
+                "snoStringList": {
+                 "__raw__": 505691,
+                 "__group__": 42,
+                 "__type__": "DT_SNO",
+                 "__typeHash__": 2764331143,
+                 "__targetFileName__": "enUS_Text/meta/StringList/Seasons.stl",
+                 "groupName": "StringList",
+                 "name": "Seasons"
+                },
+                "szLabel": 3421791084
+               }
               },
               "bShrinkToFit": 1,
               "eTextJustifyVertical": 2,
@@ -3603,6 +3670,7 @@
                 "eVerticalAnchoring": 0,
                 "eHorizontalAnchoring": 3
                },
+               "unk_4e673ad": {},
                "hOptionalUIStackPanelStyleFields": {
                 "unk_3385ab6": 0,
                 "unk_f89660f": 0
@@ -3699,18 +3767,21 @@
                    "hOptionalUITextStyleFields": {
                     "nOutlineStrength": 0,
                     "hText": {
-                     "__type__": "StringLabelHandleEx",
-                     "__typeHash__": 721585600,
-                     "snoStringList": {
-                      "__raw__": 505691,
-                      "__group__": 42,
-                      "__type__": "DT_SNO",
-                      "__typeHash__": 2764331143,
-                      "__targetFileName__": "enUS_Text/meta/StringList/Seasons.stl",
-                      "groupName": "StringList",
-                      "name": "Seasons"
-                     },
-                     "szLabel": 2280366255
+                     "property": "CurrentLevel",
+                     "value": {
+                      "__type__": "StringLabelHandleEx",
+                      "__typeHash__": 721585600,
+                      "snoStringList": {
+                       "__raw__": 505691,
+                       "__group__": 42,
+                       "__type__": "DT_SNO",
+                       "__typeHash__": 2764331143,
+                       "__targetFileName__": "enUS_Text/meta/StringList/Seasons.stl",
+                       "groupName": "StringList",
+                       "name": "Seasons"
+                      },
+                      "szLabel": 2280366255
+                     }
                     },
                     "eTextJustifyVertical": 2,
                     "eResizeToFit": 1,
@@ -3872,18 +3943,21 @@
                   "flTextPaddingT": 10,
                   "nOutlineStrength": 0,
                   "hText": {
-                   "__type__": "StringLabelHandleEx",
-                   "__typeHash__": 721585600,
-                   "snoStringList": {
-                    "__raw__": 505691,
-                    "__group__": 42,
-                    "__type__": "DT_SNO",
-                    "__typeHash__": 2764331143,
-                    "__targetFileName__": "enUS_Text/meta/StringList/Seasons.stl",
-                    "groupName": "StringList",
-                    "name": "Seasons"
-                   },
-                   "szLabel": 3242757845
+                   "property": "BonusPercent",
+                   "value": {
+                    "__type__": "StringLabelHandleEx",
+                    "__typeHash__": 721585600,
+                    "snoStringList": {
+                     "__raw__": 505691,
+                     "__group__": 42,
+                     "__type__": "DT_SNO",
+                     "__typeHash__": 2764331143,
+                     "__targetFileName__": "enUS_Text/meta/StringList/Seasons.stl",
+                     "groupName": "StringList",
+                     "name": "Seasons"
+                    },
+                    "szLabel": 3242757845
+                   }
                   },
                   "eResizeToFit": 3,
                   "eTextJustify": 2
@@ -3952,18 +4026,21 @@
                   "flTextPaddingT": 0,
                   "bWordWrap": 1,
                   "hText": {
-                   "__type__": "StringLabelHandleEx",
-                   "__typeHash__": 721585600,
-                   "snoStringList": {
-                    "__raw__": 505691,
-                    "__group__": 42,
-                    "__type__": "DT_SNO",
-                    "__typeHash__": 2764331143,
-                    "__targetFileName__": "enUS_Text/meta/StringList/Seasons.stl",
-                    "groupName": "StringList",
-                    "name": "Seasons"
-                   },
-                   "szLabel": 2753091015
+                   "property": "Description",
+                   "value": {
+                    "__type__": "StringLabelHandleEx",
+                    "__typeHash__": 721585600,
+                    "snoStringList": {
+                     "__raw__": 505691,
+                     "__group__": 42,
+                     "__type__": "DT_SNO",
+                     "__typeHash__": 2764331143,
+                     "__targetFileName__": "enUS_Text/meta/StringList/Seasons.stl",
+                     "groupName": "StringList",
+                     "name": "Seasons"
+                    },
+                    "szLabel": 2753091015
+                   }
                   },
                   "bShrinkToFit": 1,
                   "eTextJustifyVertical": 1,
@@ -4216,6 +4293,7 @@
             "nBottom": 15,
             "eHorizontalAnchoring": 3
            },
+           "unk_4e673ad": {},
            "hOptionalUIStackPanelStyleFields": {
             "unk_3385ab6": 0,
             "nStackSpacing": 5
@@ -5086,6 +5164,7 @@
               "nBottom": 15,
               "eHorizontalAnchoring": 3
              },
+             "unk_4e673ad": {},
              "hOptionalUIStackPanelStyleFields": {
               "unk_3385ab6": 0
              }
@@ -6428,6 +6507,7 @@
         },
         "eHorizontalAnchoring": 0
        },
+       "unk_4e673ad": {},
        "hOptionalUIStackPanelStyleFields": {
         "unk_3385ab6": 0,
         "tMargins": {
@@ -6755,6 +6835,7 @@
            "hOptionalUIWindowStyleFields": {
             "eVisibilityCondition": 0
            },
+           "unk_4e673ad": {},
            "hOptionalUIStackPanelStyleFields": {}
           }
          ],
@@ -6977,6 +7058,7 @@
             "eHorizontalAnchoring": 1,
             "eVisibilityCondition": 1
            },
+           "unk_4e673ad": {},
            "hOptionalUIStackPanelStyleFields": {
             "unk_3385ab6": 1,
             "bHorizontal": 1,

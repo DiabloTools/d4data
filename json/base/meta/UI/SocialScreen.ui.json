@@ -1077,6 +1077,34 @@
      {
       "__type__": "UIControlTemplate",
       "__typeHash__": 641859515,
+      "szName": "Hotkey_Close",
+      "ptInlineStyle": [
+       {
+        "__type__": "UIHotkeyStyle",
+        "__typeHash__": 2577181091,
+        "dwType": 2577181091,
+        "hParentStyle": {
+         "__type__": "UIControlHandle",
+         "__typeHash__": 3063971755,
+         "snoUI": null,
+         "szControlName": 0
+        },
+        "unk_441f783": "0",
+        "hOptionalUIControlStyleFields": {},
+        "hOptionalUIHotkeyStyleFields": {
+         "szOnController": "UIScreenManager_OnClose",
+         "unk_ccd9967": "UIScreenManager_OnClose",
+         "eHotkey": 125,
+         "szHotkeyClickPredicate": "UI_Profile_NotVisiblePredicate"
+        }
+       }
+      ],
+      "arChildren": [],
+      "ptTemplateInstanceConfig": []
+     },
+     {
+      "__type__": "UIControlTemplate",
+      "__typeHash__": 641859515,
       "szName": "Social_Content_Stack",
       "ptInlineStyle": [
        {
@@ -1179,7 +1207,7 @@
              "eVerticalAnchoring": 0,
              "nBottom": 100,
              "nRight": -3,
-             "nWidth": 1100,
+             "nWidth": 1150,
              "snoTiledStyle": {
               "__raw__": 576389,
               "__group__": 103,
@@ -1190,9 +1218,12 @@
               "name": "Breakline_Bottom"
              },
              "nLeft": 23,
+             "unk_90fbd84": 1,
              "eHorizontalAnchoring": 0,
+             "unk_adda2c4": 1,
              "bEncloseChildren": 1
             },
+            "unk_4e673ad": {},
             "hOptionalUIWrapPanelStyleFields": {
              "nHorizontalSpacing": 10,
              "bWrapPanelVertical": 0,
@@ -1243,6 +1274,7 @@
                 "hImageHandle": 0
                }
               },
+              "unk_4e673ad": {},
               "hOptionalUIStackPanelStyleFields": {
                "unk_3385ab6": 1,
                "nStackSpacing": 10,
@@ -1426,6 +1458,7 @@
                  "eVerticalAnchoring": 1,
                  "eVisibilityCondition": 1
                 },
+                "unk_4e673ad": {},
                 "hOptionalUIStackPanelStyleFields": {}
                }
               ],
@@ -1460,6 +1493,7 @@
                      "hOptionalUIControlConsoleInputFields": {}
                     },
                     "hOptionalUIWindowStyleFields": {},
+                    "unk_4e673ad": {},
                     "hOptionalUIStackPanelStyleFields": {}
                    }
                   ]
@@ -1586,6 +1620,7 @@
                "nLeft": -5,
                "eHorizontalAnchoring": 1
               },
+              "unk_4e673ad": {},
               "hOptionalUIStackPanelStyleFields": {
                "unk_3385ab6": 0,
                "nStackSpacing": 10,
@@ -2152,6 +2187,7 @@
                "nHeight": 50,
                "eVerticalAnchoring": 1
               },
+              "unk_4e673ad": {},
               "hOptionalUIStackPanelStyleFields": {
                "unk_3385ab6": 0,
                "nStackSpacing": 10,
@@ -2395,6 +2431,7 @@
              "nWidth": 0,
              "eHorizontalAnchoring": 1
             },
+            "unk_4e673ad": {},
             "hOptionalUIStackPanelStyleFields": {
              "unk_3385ab6": 1,
              "unk_f89660f": 1
@@ -2429,6 +2466,7 @@
                "nWidth": 0,
                "eHorizontalAnchoring": 1
               },
+              "unk_4e673ad": {},
               "hOptionalUIStackPanelStyleFields": {
                "unk_3385ab6": 0,
                "bHorizontal": 1,
@@ -2563,6 +2601,7 @@
                "nWidth": 0,
                "eHorizontalAnchoring": 1
               },
+              "unk_4e673ad": {},
               "hOptionalUIStackPanelStyleFields": {
                "unk_3385ab6": 0,
                "bHorizontal": 1,
@@ -2787,6 +2826,7 @@
                "eVerticalAnchoring": 3,
                "eHorizontalAnchoring": 3
               },
+              "unk_4e673ad": {},
               "hOptionalUIStackPanelStyleFields": {
                "unk_3385ab6": 0,
                "unk_f89660f": 0
@@ -2822,6 +2862,7 @@
                  "nTop": 40,
                  "eHorizontalAnchoring": 3
                 },
+                "unk_4e673ad": {},
                 "hOptionalUIStackPanelStyleFields": {
                  "unk_3385ab6": 0,
                  "tMargins": {
@@ -2905,6 +2946,7 @@
                       "hImageHandle": 0
                      }
                     },
+                    "unk_4e673ad": {},
                     "hOptionalUIStackPanelStyleFields": {
                      "nStackSpacing": 5,
                      "bHorizontal": 1
@@ -3844,11 +3886,11 @@
                      "hOptionalUIControlConsoleInputFields": {}
                     },
                     "hOptionalUIWindowStyleFields": {
-                     "nTop": 15,
+                     "nTop": 16,
                      "nRight": 15,
                      "nWidth": 592,
                      "nLeft": 15,
-                     "eHorizontalAnchoring": 3
+                     "eHorizontalAnchoring": 0
                     },
                     "tFont": {
                      "__type__": "UIControlFont",
@@ -4069,7 +4111,11 @@
                     },
                     "unk_441f783": "0",
                     "hOptionalUIControlStyleFields": {
-                     "bActive": 0,
+                     "unk_8ab8d6": "SocialScreen_main.TextFilter",
+                     "unk_33fa5cf": null,
+                     "bActive": 1,
+                     "snoOnOpenSound": null,
+                     "snoOnCloseSound": null,
                      "hTemplate": {
                       "__type__": "UIControlHandle",
                       "__typeHash__": 3063971755,
@@ -4091,7 +4137,8 @@
                      "hOptionalUIControlConsoleInputFields": {}
                     },
                     "hOptionalUIWindowStyleFields": {
-                     "nTop": 2,
+                     "nTop": 1,
+                     "szOnClick": "Social_OnClickSortButton",
                      "eVerticalAnchoring": 1,
                      "nRight": 8,
                      "eHorizontalAnchoring": 2
@@ -4110,7 +4157,26 @@
                     "tClickSounds": {
                      "__type__": "UIControlClickSounds",
                      "__typeHash__": 2562866241,
-                     "hOptionalUIControlClickSoundsFields": {}
+                     "hOptionalUIControlClickSoundsFields": {
+                      "snoClickSound": {
+                       "__raw__": 1438750,
+                       "__group__": 40,
+                       "__type__": "DT_SNO",
+                       "__typeHash__": 2764331143,
+                       "__targetFileName__": "base/meta/Sound/Play_UI_Menu_DropDown_Select.snd",
+                       "groupName": "Sound",
+                       "name": "Play_UI_Menu_DropDown_Select"
+                      },
+                      "snoMouseOverSound": {
+                       "__raw__": 157384,
+                       "__group__": 40,
+                       "__type__": "DT_SNO",
+                       "__typeHash__": 2764331143,
+                       "__targetFileName__": "base/meta/Sound/Play_UI_Menu_Generic_Button_Hover.snd",
+                       "groupName": "Sound",
+                       "name": "Play_UI_Menu_Generic_Button_Hover"
+                      }
+                     }
                     },
                     "hOptionalUIButtonStyleFields": {}
                    }
@@ -5168,6 +5234,7 @@
                  "eVerticalAnchoring": 1,
                  "eHorizontalAnchoring": 1
                 },
+                "unk_4e673ad": {},
                 "hOptionalUIStackPanelStyleFields": {
                  "unk_3385ab6": 1,
                  "bHorizontal": 1,
@@ -5387,6 +5454,7 @@
                    "unk_bffade6": 33,
                    "eVisibilityCondition": 1
                   },
+                  "unk_4e673ad": {},
                   "hOptionalUIStackPanelStyleFields": {}
                  }
                 ],
@@ -5421,6 +5489,7 @@
                        "hOptionalUIControlConsoleInputFields": {}
                       },
                       "hOptionalUIWindowStyleFields": {},
+                      "unk_4e673ad": {},
                       "hOptionalUIStackPanelStyleFields": {}
                      }
                     ]
@@ -5628,6 +5697,16 @@
             "unk_441f783": "0",
             "hOptionalUIControlStyleFields": {
              "bActive": 0,
+             "snoOnOpenSound": null,
+             "snoOnCloseSound": {
+              "__raw__": 157387,
+              "__group__": 40,
+              "__type__": "DT_SNO",
+              "__typeHash__": 2764331143,
+              "__targetFileName__": "base/meta/Sound/Play_UI_Menu_DropDown_Close.snd",
+              "groupName": "Sound",
+              "name": "Play_UI_Menu_DropDown_Close"
+             },
              "hTemplate": {
               "__type__": "UIControlHandle",
               "__typeHash__": 3063971755,
@@ -5651,12 +5730,75 @@
             "hOptionalUIWindowStyleFields": {
              "nTop": 272,
              "nRight": 44,
+             "bWindowIsInputFocusGroup": 1,
              "eHorizontalAnchoring": 2
             }
            }
           ],
           "arChildren": [],
-          "ptTemplateInstanceConfig": []
+          "ptTemplateInstanceConfig": [
+           {
+            "__type__": "UITemplateInstanceConfig",
+            "__typeHash__": 475975077,
+            "tStyleOverrides": [
+             {
+              "__type__": "UITemplateStyleOverride",
+              "__typeHash__": 2887578027,
+              "szPathToControl": "Filter_Controller_HotkeyClose",
+              "tStyle": [
+               {
+                "__type__": "UIHotkeyStyle",
+                "__typeHash__": 2577181091,
+                "dwType": 2577181091,
+                "hParentStyle": {
+                 "__type__": "UIControlHandle",
+                 "__typeHash__": 3063971755,
+                 "snoUI": null,
+                 "szControlName": 0
+                },
+                "unk_441f783": "0",
+                "hOptionalUIControlStyleFields": {},
+                "hOptionalUIHotkeyStyleFields": {
+                 "eFixedControllerButton": 1,
+                 "unk_ccd9967": "Social_CloseFilterPopup",
+                 "eHotkey": 125,
+                 "snoOnActionSound": null
+                }
+               }
+              ]
+             },
+             {
+              "__type__": "UITemplateStyleOverride",
+              "__typeHash__": 2887578027,
+              "szPathToControl": "Filter_RadioButtonGroup",
+              "tStyle": [
+               {
+                "__type__": "UIRadioButtonGroupStyle",
+                "__typeHash__": 2890825383,
+                "dwType": 2890825383,
+                "hParentStyle": {
+                 "__type__": "UIControlHandle",
+                 "__typeHash__": 3063971755,
+                 "snoUI": null,
+                 "szControlName": 0
+                },
+                "unk_441f783": "0",
+                "hOptionalUIControlStyleFields": {
+                 "unk_40ae369": 0,
+                 "szOnSelChange": "Social_OnSearchFilterChange",
+                 "snoOnOpenSound": null
+                },
+                "hOptionalUIRadioButtonGroupStyleFields": {
+                 "unk_3f72ed9": 0,
+                 "unk_707e4bc": 0,
+                 "unk_a27d70b": 0
+                }
+               }
+              ]
+             }
+            ]
+           }
+          ]
          }
         ],
         "ptTemplateInstanceConfig": []
@@ -5781,6 +5923,7 @@
            "eHorizontalAnchoring": 1,
            "eVisibilityCondition": 0
           },
+          "unk_4e673ad": {},
           "hOptionalUIStackPanelStyleFields": {
            "nStackSpacing": 20,
            "bHorizontal": 1
@@ -5851,34 +5994,6 @@
         ]
        }
       ]
-     },
-     {
-      "__type__": "UIControlTemplate",
-      "__typeHash__": 641859515,
-      "szName": "Hotkey_Close",
-      "ptInlineStyle": [
-       {
-        "__type__": "UIHotkeyStyle",
-        "__typeHash__": 2577181091,
-        "dwType": 2577181091,
-        "hParentStyle": {
-         "__type__": "UIControlHandle",
-         "__typeHash__": 3063971755,
-         "snoUI": null,
-         "szControlName": 0
-        },
-        "unk_441f783": "0",
-        "hOptionalUIControlStyleFields": {},
-        "hOptionalUIHotkeyStyleFields": {
-         "szOnController": "UIScreenManager_OnClose",
-         "unk_ccd9967": "UIScreenManager_OnClose",
-         "eHotkey": 125,
-         "szHotkeyClickPredicate": "UI_Profile_NotVisiblePredicate"
-        }
-       }
-      ],
-      "arChildren": [],
-      "ptTemplateInstanceConfig": []
      },
      {
       "__type__": "UIControlTemplate",
@@ -6119,6 +6234,7 @@
         "eVerticalAnchoring": 2,
         "eHorizontalAnchoring": 1
        },
+       "unk_4e673ad": {},
        "hOptionalUIStackPanelStyleFields": {
         "unk_3385ab6": 1,
         "unk_3a57c53": 0,
@@ -6194,6 +6310,7 @@
             "hOptionalUIControlConsoleInputFields": {}
            },
            "hOptionalUIWindowStyleFields": {},
+           "unk_4e673ad": {},
            "hOptionalUIStackPanelStyleFields": {
             "nStackSpacing": -2
            }
@@ -6669,6 +6786,7 @@
                 "eVerticalAnchoring": 1,
                 "eHorizontalAnchoring": 1
                },
+               "unk_4e673ad": {},
                "hOptionalUIStackPanelStyleFields": {
                 "nStackSpacing": -4,
                 "bHorizontal": 0,
@@ -6710,6 +6828,7 @@
                  "hOptionalUIWindowStyleFields": {
                   "eHorizontalAnchoring": 1
                  },
+                 "unk_4e673ad": {},
                  "hOptionalUIStackPanelStyleFields": {
                   "nStackSpacing": 5,
                   "bHorizontal": 1
@@ -6973,6 +7092,7 @@
                   "eHorizontalAnchoring": 1,
                   "unk_bffade6": 2
                  },
+                 "unk_4e673ad": {},
                  "hOptionalUIStackPanelStyleFields": {
                   "nStackSpacing": 8,
                   "bHorizontal": 1,
@@ -7128,6 +7248,7 @@
                   "nBottom": -40,
                   "eHorizontalAnchoring": 1
                  },
+                 "unk_4e673ad": {},
                  "hOptionalUIStackPanelStyleFields": {
                   "nStackSpacing": 10,
                   "bHorizontal": 1,
@@ -7636,6 +7757,7 @@
             "nWidth": 55,
             "eHorizontalAnchoring": 1
            },
+           "unk_4e673ad": {},
            "hOptionalUIStackPanelStyleFields": {
             "unk_3385ab6": 0,
             "bHorizontal": 0,
@@ -7841,6 +7963,7 @@
         "unk_902601b": 0,
         "eHorizontalAnchoring": 0
        },
+       "unk_4e673ad": {},
        "hOptionalUIStackPanelStyleFields": {
         "unk_3385ab6": 0,
         "tMargins": {
@@ -8115,6 +8238,7 @@
             "eHorizontalAnchoring": 0,
             "nMinHeight": 110
            },
+           "unk_4e673ad": {},
            "hOptionalUIStackPanelStyleFields": {
             "unk_3385ab6": 1,
             "nStackSpacing": 10,
@@ -8194,6 +8318,7 @@
                 "eVerticalAnchoring": 3,
                 "nLeft": 0
                },
+               "unk_4e673ad": {},
                "hOptionalUIStackPanelStyleFields": {
                 "unk_3385ab6": 0,
                 "nStackSpacing": -8,
@@ -8814,6 +8939,7 @@
                     "nRight": 8,
                     "eHorizontalAnchoring": 2
                    },
+                   "unk_4e673ad": {},
                    "hOptionalUIStackPanelStyleFields": {
                     "nStackSpacing": 4
                    }
@@ -9360,6 +9486,7 @@
               "eHorizontalAnchoring": 0,
               "nMinHeight": 105
              },
+             "unk_4e673ad": {},
              "hOptionalUIStackPanelStyleFields": {
               "unk_3385ab6": 0,
               "nStackSpacing": 0,
@@ -9412,6 +9539,7 @@
                 },
                 "bEncloseChildren": 1
                },
+               "unk_4e673ad": {},
                "hOptionalUIWrapPanelStyleFields": {
                 "tMargins": {
                  "__type__": "UIMargins",
@@ -9613,6 +9741,7 @@
                   "nHeight": 30,
                   "eClipBehavior": 1
                  },
+                 "unk_4e673ad": {},
                  "hOptionalUIStackPanelStyleFields": {
                   "unk_3385ab6": 1,
                   "nStackSpacing": 6,
@@ -9780,6 +9909,7 @@
                 "hOptionalUIControlConsoleInputFields": {}
                },
                "hOptionalUIWindowStyleFields": {},
+               "unk_4e673ad": {},
                "hOptionalUIStackPanelStyleFields": {
                 "nStackSpacing": 6,
                 "bHorizontal": 1
@@ -9941,6 +10071,7 @@
                 "hOptionalUIControlConsoleInputFields": {}
                },
                "hOptionalUIWindowStyleFields": {},
+               "unk_4e673ad": {},
                "hOptionalUIStackPanelStyleFields": {
                 "nStackSpacing": 6,
                 "bHorizontal": 1
@@ -9974,6 +10105,7 @@
                   "eVerticalAnchoring": 1,
                   "nLeft": 2
                  },
+                 "unk_4e673ad": {},
                  "hOptionalUIStackPanelStyleFields": {
                   "nStackSpacing": 6,
                   "bHorizontal": 1
@@ -10262,6 +10394,7 @@
             "nWidth": 38,
             "eHorizontalAnchoring": 2
            },
+           "unk_4e673ad": {},
            "hOptionalUIStackPanelStyleFields": {
             "unk_3385ab6": 1,
             "nStackSpacing": 8,
@@ -10560,6 +10693,7 @@
           "unk_902601b": 0,
           "eHorizontalAnchoring": 0
          },
+         "unk_4e673ad": {},
          "hOptionalUIStackPanelStyleFields": {
           "unk_3385ab6": 0,
           "nStackSpacing": -4,
@@ -10663,6 +10797,7 @@
               "nWidth": 620,
               "eHorizontalAnchoring": 0
              },
+             "unk_4e673ad": {},
              "hOptionalUIStackPanelStyleFields": {
               "unk_3385ab6": 1,
               "bReverseOrder": 0,
@@ -10702,6 +10837,7 @@
                 "nHeight": 176,
                 "eVerticalAnchoring": 1
                },
+               "unk_4e673ad": {},
                "hOptionalUIStackPanelStyleFields": {
                 "unk_3385ab6": 1,
                 "nStackSpacing": -8,
@@ -10940,6 +11076,7 @@
                 "nMaxWidth": 440,
                 "nMinWidth": 440
                },
+               "unk_4e673ad": {},
                "hOptionalUIStackPanelStyleFields": {
                 "unk_3385ab6": 0,
                 "nStackSpacing": -2,
@@ -11258,6 +11395,7 @@
               "eHorizontalAnchoring": 1,
               "eVisibilityCondition": 1
              },
+             "unk_4e673ad": {},
              "hOptionalUIStackPanelStyleFields": {
               "unk_3385ab6": 1,
               "nStackSpacing": 40,
@@ -11321,6 +11459,7 @@
                 "unk_bffade6": 33,
                 "eVisibilityCondition": 1
                },
+               "unk_4e673ad": {},
                "hOptionalUIStackPanelStyleFields": {}
               }
              ],
@@ -11355,6 +11494,7 @@
                     "hOptionalUIControlConsoleInputFields": {}
                    },
                    "hOptionalUIWindowStyleFields": {},
+                   "unk_4e673ad": {},
                    "hOptionalUIStackPanelStyleFields": {}
                   }
                  ]
@@ -11646,6 +11786,7 @@
           },
           "eVisibilityCondition": 0
          },
+         "unk_4e673ad": {},
          "hOptionalUIStackPanelStyleFields": {
           "unk_3385ab6": 1,
           "nStackSpacing": -14,

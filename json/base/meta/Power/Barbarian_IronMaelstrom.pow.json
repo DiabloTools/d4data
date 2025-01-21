@@ -1244,8 +1244,8 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "0.6 * Table(34, sLevel)",
-    "compiled": "BgAAAJqZGT8GAAAAAAAIQgUAAAABAAAAAAAAAAAAAAAAAAAAAQAAAAsAAAANAAAAAAAAAA=="
+    "value": "(SF_21 == 0)? (0.75 * Table(34, sLevel)) : (0.75 * Table(34, sLevel)*(1+( SF_20)))",
+    "compiled": "BQAAABsAAAAAAAAAAAAAAAAAAAAGAAAAAAAAAAkAAAAGAAAAAABAPwYAAAAAAAhCBQAAAAEAAAAAAAAAAAAAAAAAAAABAAAACwAAAA0AAAAGAAAAAABAPwYAAAAAAAhCBQAAAAEAAAAAAAAAAAAAAAAAAAABAAAACwAAAA0AAAAGAAAAAACAPwUAAAAaAAAAAAAAAAAAAAAAAAAACwAAAA0AAAAQAAAAAAAAAA=="
    }
   },
   {
@@ -1276,16 +1276,16 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "0.2 * Table(34, sLevel)",
-    "compiled": "BgAAAM3MTD4GAAAAAAAIQgUAAAABAAAAAAAAAAAAAAAAAAAAAQAAAAsAAAANAAAAAAAAAA=="
+    "value": "(SF_21 == 0)? (0.2 * Table(34, sLevel)) : (0.2 * Table(34, sLevel)*(1+( SF_20)))",
+    "compiled": "BQAAABsAAAAAAAAAAAAAAAAAAAAGAAAAAAAAAAkAAAAGAAAAzcxMPgYAAAAAAAhCBQAAAAEAAAAAAAAAAAAAAAAAAAABAAAACwAAAA0AAAAGAAAAzcxMPgYAAAAAAAhCBQAAAAEAAAAAAAAAAAAAAAAAAAABAAAACwAAAA0AAAAGAAAAAACAPwUAAAAaAAAAAAAAAAAAAAAAAAAACwAAAA0AAAAQAAAAAAAAAA=="
    }
   },
   {
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "1.2 * Table(34, sLevel)",
-    "compiled": "BgAAAJqZmT8GAAAAAAAIQgUAAAABAAAAAAAAAAAAAAAAAAAAAQAAAAsAAAANAAAAAAAAAA=="
+    "value": "(SF_21 == 0)? (1.2 * Table(34, sLevel)) : (1.2 * Table(34, sLevel)*(1+( SF_20)))",
+    "compiled": "BQAAABsAAAAAAAAAAAAAAAAAAAAGAAAAAAAAAAkAAAAGAAAAmpmZPwYAAAAAAAhCBQAAAAEAAAAAAAAAAAAAAAAAAAABAAAACwAAAA0AAAAGAAAAmpmZPwYAAAAAAAhCBQAAAAEAAAAAAAAAAAAAAAAAAAABAAAACwAAAA0AAAAGAAAAAACAPwUAAAAaAAAAAAAAAAAAAAAAAAAACwAAAA0AAAAQAAAAAAAAAA=="
    }
   },
   {
@@ -1300,8 +1300,8 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "0.325 * Table(34, sLevel)",
-    "compiled": "BgAAAGdmpj4GAAAAAAAIQgUAAAABAAAAAAAAAAAAAAAAAAAAAQAAAAsAAAANAAAAAAAAAA=="
+    "value": "(SF_21 == 0)? (0.425 * Table(34, sLevel)) : (0.425 * Table(34, sLevel)*(1+( SF_20)))",
+    "compiled": "BQAAABsAAAAAAAAAAAAAAAAAAAAGAAAAAAAAAAkAAAAGAAAAmpnZPgYAAAAAAAhCBQAAAAEAAAAAAAAAAAAAAAAAAAABAAAACwAAAA0AAAAGAAAAmpnZPgYAAAAAAAhCBQAAAAEAAAAAAAAAAAAAAAAAAAABAAAACwAAAA0AAAAGAAAAAACAPwUAAAAaAAAAAAAAAAAAAAAAAAAACwAAAA0AAAAQAAAAAAAAAA=="
    }
   },
   {
@@ -1324,8 +1324,8 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": ".4",
-    "compiled": "BgAAAM3MzD4AAAAA"
+    "value": ".5",
+    "compiled": "BgAAAAAAAD8AAAAA"
    }
   },
   {
@@ -1381,7 +1381,31 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Chance_To_Hit_Twice_Per_Power#Barbarian_IronMaelstrom",
-    "compiled": "BQAAAAAAAABPAACAV1ADAAAAAAAAAAAA"
+    "compiled": "BQAAAAAAAAB4AACAV1ADAAAAAAAAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "0.6",
+    "compiled": "BgAAAJqZGT8AAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "(((1+ Multiplicative_Damage_Bonus_To_High_Health)*(1+Damage_Bonus_To_High_Health))+((1+Multiplicative_Damage_Bonus_To_Low_Health)*(1+Damage_Bonus_To_Low_Health)) - 2)*(SF_19)",
+    "compiled": "BgAAAAAAgD8FAAAAAAAAABoEAAD+////AAAAAAsAAAAGAAAAAACAPwUAAAAAAAAAGQQAAP7///8AAAAACwAAAA0AAAAGAAAAAACAPwUAAAAAAAAAGAQAAP7///8AAAAACwAAAAYAAAAAAIA/BQAAAAAAAAAXBAAA/v///wAAAAALAAAADQAAAAsAAAAGAAAAAAAAQAwAAAAFAAAAGQAAAAAAAAAAAAAAAAAAAA0AAAAAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "(Floor((sLevel)/5))? 1 : 0",
+    "compiled": "BQAAAAEAAAAAAAAAAAAAAAAAAAAGAAAAAACgQA4AAAABAAAABQAAAAYAAAAAAIA/BgAAAAAAAAAQAAAAAAAAAA=="
    }
   }
  ],

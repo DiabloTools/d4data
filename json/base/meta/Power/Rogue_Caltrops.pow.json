@@ -79,18 +79,6 @@
     "name": "Search_Cooldown"
    },
    "bSearchOnly": false
-  },
-  {
-   "__type__": "SkillTagStruct",
-   "__typeHash__": 4000554560,
-   "gbidSkillTag": {
-    "__raw__": 4109264583,
-    "__type__": "DT_GBID",
-    "__typeHash__": 1028170061,
-    "group": 56,
-    "name": "Skill_Mobility"
-   },
-   "bSearchOnly": false
   }
  ],
  "eSkillCat": 23,
@@ -117,7 +105,7 @@
  "unk_1f1fcc": true,
  "ePowerFallback": 0,
  "unk_49572b0": 0,
- "ePowerTargetingType": 1,
+ "ePowerTargetingType": 3,
  "arLinkedPassivePowers": [],
  "snoEnchantmentPower": null,
  "snoMountedRiderPower": null,
@@ -137,8 +125,48 @@
  "unk_48531b6": false,
  "unk_f234087": -1,
  "arEndingPreplayed": [],
- "ptPhaseInitialization": [],
- "arPhases": [],
+ "ptPhaseInitialization": [
+  {
+   "__type__": "PowerPhaseInitialization",
+   "__typeHash__": 3796435398,
+   "dwType": 3796435398,
+   "tPhaseName": 3627236824,
+   "arPhaseJumps": [
+    {
+     "__type__": "PhaseJumpImmediate",
+     "__typeHash__": 3485436892,
+     "dwType": 3485436892,
+     "tPhaseToJumpTo": 141432212,
+     "arConditions": [],
+     "bEnd": false
+    }
+   ],
+   "unk_d0d932b": false,
+   "unk_9a8200e": false
+  }
+ ],
+ "arPhases": [
+  {
+   "__type__": "PowerPhaseOneShot",
+   "__typeHash__": 582599742,
+   "dwType": 582599742,
+   "tPhaseName": 141432212,
+   "arPhaseJumps": [],
+   "unk_d0d932b": false,
+   "unk_9a8200e": false,
+   "bScalableDuration": false
+  },
+  {
+   "__type__": "PowerPhaseOneShot",
+   "__typeHash__": 582599742,
+   "dwType": 582599742,
+   "tPhaseName": 3940444,
+   "arPhaseJumps": [],
+   "unk_d0d932b": false,
+   "unk_9a8200e": false,
+   "bScalableDuration": false
+  }
+ ],
  "unk_92fea1c": true,
  "unk_8cdde38": false,
  "unk_3dff6b0": false,
@@ -267,8 +295,8 @@
  "ePowerCancelCapability": 1,
  "unk_44bbb8e": false,
  "tAttackRadius": {
-  "value": "0",
-  "compiled": "BgAAAAAAAAAAAAAA"
+  "value": "SF_26",
+  "compiled": "BQAAACAAAAAAAAAAAAAAAAAAAAAAAAAA"
  },
  "bRequiresPathToTarget": true,
  "bIsApproachPower": false,
@@ -280,8 +308,8 @@
   "__type__": "ActorMovementPowerData",
   "__typeHash__": 2543084619,
   "unk_b1f0f4e": {
-   "value": "0",
-   "compiled": "BgAAAAAAAAAAAAAA"
+   "value": "SF_26",
+   "compiled": "BQAAACAAAAAAAAAAAAAAAAAAAAAAAAAA"
   },
   "aFacingAngleThreshold": 1.0471975803375244,
   "flFacingDistanceThreshold": 1,
@@ -1602,6 +1630,114 @@
     }
    },
    "dwShaderMapOverride": 4294967295
+  },
+  {
+   "__type__": "PowerBuffDefinition",
+   "__typeHash__": 1071057721,
+   "dwID": 3277915111,
+   "dwBuffId": 11,
+   "bHarmful": false,
+   "bInfinite": false,
+   "tDuration": {
+    "value": "2",
+    "compiled": "BgAAAAAAAEAAAAAA"
+   },
+   "unk_deea7e8": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "unk_4393f38": false,
+   "unk_dcb22bd": false,
+   "tMaxStackCount": {
+    "value": "1",
+    "compiled": "BgAAAAAAgD8AAAAA"
+   },
+   "bVisibleInUI": false,
+   "bShowDuration": false,
+   "bCancellable": false,
+   "unk_99b5752": false,
+   "unk_93cd85f": false,
+   "unk_4bdaef2": false,
+   "bVisibleInHotbarUI": false,
+   "bShowsActiveStateOnHotbar": false,
+   "bShowsDurationOnHotbar": false,
+   "bShowsStackCountOnHotbar": false,
+   "unk_71ba554": false,
+   "unk_1375622": false,
+   "unk_d2dd47": false,
+   "unk_8a5f69e": false,
+   "hIcon": 0,
+   "hFloatingIcon": 0,
+   "hFloatingTextLabel": 0,
+   "flFloatingTextIconRange": 0,
+   "unk_395ccd6": false,
+   "bDealsDOT": false,
+   "tDOT": {
+    "__type__": "PowerBuffDOTDamage",
+    "__typeHash__": 3824324374,
+    "eDamageType": -1,
+    "tDamage": {
+     "__type__": "HitpointSpecifier",
+     "__typeHash__": 1185241065,
+     "eType": 0,
+     "tHitpointScalar": {
+      "value": "0",
+      "compiled": "BgAAAAAAAAAAAAAA"
+     },
+     "tFlatLevel": {
+      "value": "0",
+      "compiled": "BgAAAAAAAAAAAAAA"
+     }
+    },
+    "unk_89dc285": false,
+    "flFlatDamageBonusScalar": 1,
+    "unk_f551941": -1,
+    "bDamageIgnoresInvulnerable": false,
+    "bDamageIgnoresBonuses": false,
+    "unk_b8f2b": -1,
+    "bHasCombatEffectOverride": false,
+    "tCombatEffectOverride": {
+     "value": "100",
+     "compiled": "BgAAAAAAyEIAAAAA"
+    },
+    "bHideDamageEffects": false,
+    "bHideGlobalApplicationEffect": false
+   },
+   "tCrowdControl": {
+    "__type__": "PowerBuffCrowdControl",
+    "__typeHash__": 4138865712,
+    "unk_c63f49e": true,
+    "dwCCFlags": 4,
+    "bUseGlobalSlowAmount": false,
+    "eGlobalSlowAmountType": 0,
+    "tSlowAmount": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    },
+    "tChillAmount": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    },
+    "tStaggerMultiplier": {
+     "value": "1",
+     "compiled": "BgAAAAAAgD8AAAAA"
+    }
+   },
+   "bHasDamageShield": false,
+   "tDamageShield": {
+    "__type__": "HitpointSpecifier",
+    "__typeHash__": 1185241065,
+    "eType": 0,
+    "tHitpointScalar": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    },
+    "tFlatLevel": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    }
+   },
+   "dwShaderMapOverride": 4294967295
   }
  ],
  "nFormulaCount": 0,
@@ -1779,7 +1915,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Min(1.5, 1 + (AoE_Size_Bonus_Per_Power#Rogue_Caltrops / 2))",
-    "compiled": "BgAAAAAAwD8GAAAAAACAPwUAAAAAAAAAzQMAACPyBQAAAAAABgAAAAAAAEAOAAAACwAAAAEAAAAAAAAAAAAAAA=="
+    "compiled": "BgAAAAAAwD8GAAAAAACAPwUAAAAAAAAAygMAACPyBQAAAAAABgAAAAAAAEAOAAAACwAAAAEAAAAAAAAAAAAAAA=="
    }
   },
   {
@@ -1787,7 +1923,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "1 + Power_Duration_Bonus_Pct#Rogue_Caltrops",
-    "compiled": "BgAAAAAAgD8FAAAAAAAAAKADAAAj8gUAAAAAAAsAAAAAAAAA"
+    "compiled": "BgAAAAAAgD8FAAAAAAAAAJwDAAAj8gUAAAAAAAsAAAAAAAAA"
    }
   },
   {
@@ -1810,8 +1946,8 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "20",
-    "compiled": "BgAAAAAAoEEAAAAA"
+    "value": "50",
+    "compiled": "BgAAAAAASEIAAAAA"
    }
   },
   {
@@ -1851,7 +1987,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Affix_Value_1#legendary_rogue_134",
-    "compiled": "BQAAAAAAAABTBAAAJDkeAAAAAAAAAAAA"
+    "compiled": "BQAAAAAAAABQBAAAJDkeAAAAAAAAAAAA"
    }
   },
   {
@@ -1875,7 +2011,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "AffixIsEquipped(SNO.Affix.legendary_rogue_134) ? Affix_Value_2#legendary_rogue_134 : 1",
-    "compiled": "BQAAAFkAAAAkOR4AAAAAAAAAAAABAAAAJAAAAAUAAAAAAAAAVAQAACQ5HgAAAAAABgAAAAAAgD8QAAAAAAAAAA=="
+    "compiled": "BQAAAFkAAAAkOR4AAAAAAAAAAAABAAAAJAAAAAUAAAAAAAAAUQQAACQ5HgAAAAAABgAAAAAAgD8QAAAAAAAAAA=="
    }
   },
   {
@@ -1891,7 +2027,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "AffixIsEquipped(SNO.Affix.legendary_rogue_019) ? Rogue_StunGrenade_ResourceOnExplode : 0",
-    "compiled": "BQAAAFkAAABO1QgAAAAAAAAAAAABAAAAJAAAAAUAAAAAAAAAGQAAgP7///8AAAAABgAAAAAAAAAQAAAAAAAAAA=="
+    "compiled": "BQAAAFkAAABO1QgAAAAAAAAAAAABAAAAJAAAAAUAAAAAAAAAOQAAgP7///8AAAAABgAAAAAAAAAQAAAAAAAAAA=="
    }
   },
   {
@@ -1899,7 +2035,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Percent_Bonus_Projectiles_Per_Power#Rogue_Caltrops + (AffixIsEquipped(SNO.Affix.legendary_rogue_134) ? Percent_Bonus_Projectiles_Per_Skill_Tag#Skill_Marksman : 0)",
-    "compiled": "BQAAAAAAAACtAwAAI/IFAAAAAAAFAAAAWQAAACQ5HgAAAAAAAAAAAAEAAAAkAAAABQAAAAAAAACuAwAAeLS55AAAAAAGAAAAAAAAABAAAAALAAAAAAAAAA=="
+    "compiled": "BQAAAAAAAACpAwAAI/IFAAAAAAAFAAAAWQAAACQ5HgAAAAAAAAAAAAEAAAAkAAAABQAAAAAAAACqAwAAeLS55AAAAAAGAAAAAAAAABAAAAALAAAAAAAAAA=="
    }
   },
   {
@@ -1915,7 +2051,23 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Chance_To_Consume_No_Charges_Per_Power#Rogue_Caltrops",
-    "compiled": "BQAAAAAAAABOAACAI/IFAAAAAAAAAAAA"
+    "compiled": "BQAAAAAAAAB3AACAI/IFAAAAAAAAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "1",
+    "compiled": "BgAAAAAAgD8AAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "Affix_Value_1#legendary_rogue_019 * (Weapon_Damage_Min_Total + Weapon_Damage_Delta_Total)",
+    "compiled": "BQAAAAAAAABQBAAATtUIAAAAAAAFAAAAAAAAALoBAAD+////AAAAAAUAAAAAAAAAuwEAAP7///8AAAAACwAAAA0AAAAAAAAA"
    }
   }
  ],

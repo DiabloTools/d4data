@@ -1761,6 +1761,114 @@
     }
    },
    "dwShaderMapOverride": 4294967295
+  },
+  {
+   "__type__": "PowerBuffDefinition",
+   "__typeHash__": 1071057721,
+   "dwID": 2278110540,
+   "dwBuffId": 16,
+   "bHarmful": false,
+   "bInfinite": false,
+   "tDuration": {
+    "value": "SF_17",
+    "compiled": "BQAAABcAAAAAAAAAAAAAAAAAAAAAAAAA"
+   },
+   "unk_deea7e8": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "unk_4393f38": false,
+   "unk_dcb22bd": false,
+   "tMaxStackCount": {
+    "value": "1",
+    "compiled": "BgAAAAAAgD8AAAAA"
+   },
+   "bVisibleInUI": false,
+   "bShowDuration": false,
+   "bCancellable": false,
+   "unk_99b5752": false,
+   "unk_93cd85f": false,
+   "unk_4bdaef2": false,
+   "bVisibleInHotbarUI": false,
+   "bShowsActiveStateOnHotbar": false,
+   "bShowsDurationOnHotbar": false,
+   "bShowsStackCountOnHotbar": false,
+   "unk_71ba554": false,
+   "unk_1375622": false,
+   "unk_d2dd47": false,
+   "unk_8a5f69e": false,
+   "hIcon": 0,
+   "hFloatingIcon": 0,
+   "hFloatingTextLabel": 0,
+   "flFloatingTextIconRange": 0,
+   "unk_395ccd6": false,
+   "bDealsDOT": false,
+   "tDOT": {
+    "__type__": "PowerBuffDOTDamage",
+    "__typeHash__": 3824324374,
+    "eDamageType": -1,
+    "tDamage": {
+     "__type__": "HitpointSpecifier",
+     "__typeHash__": 1185241065,
+     "eType": 0,
+     "tHitpointScalar": {
+      "value": "0",
+      "compiled": "BgAAAAAAAAAAAAAA"
+     },
+     "tFlatLevel": {
+      "value": "0",
+      "compiled": "BgAAAAAAAAAAAAAA"
+     }
+    },
+    "unk_89dc285": false,
+    "flFlatDamageBonusScalar": 1,
+    "unk_f551941": -1,
+    "bDamageIgnoresInvulnerable": false,
+    "bDamageIgnoresBonuses": false,
+    "unk_b8f2b": -1,
+    "bHasCombatEffectOverride": false,
+    "tCombatEffectOverride": {
+     "value": "100",
+     "compiled": "BgAAAAAAyEIAAAAA"
+    },
+    "bHideDamageEffects": false,
+    "bHideGlobalApplicationEffect": false
+   },
+   "tCrowdControl": {
+    "__type__": "PowerBuffCrowdControl",
+    "__typeHash__": 4138865712,
+    "unk_c63f49e": true,
+    "dwCCFlags": 0,
+    "bUseGlobalSlowAmount": false,
+    "eGlobalSlowAmountType": 0,
+    "tSlowAmount": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    },
+    "tChillAmount": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    },
+    "tStaggerMultiplier": {
+     "value": "1",
+     "compiled": "BgAAAAAAgD8AAAAA"
+    }
+   },
+   "bHasDamageShield": false,
+   "tDamageShield": {
+    "__type__": "HitpointSpecifier",
+    "__typeHash__": 1185241065,
+    "eType": 0,
+    "tHitpointScalar": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    },
+    "tFlatLevel": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    }
+   },
+   "dwShaderMapOverride": 4294967295
   }
  ],
  "nFormulaCount": 0,
@@ -1769,8 +1877,8 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "2 * Table(34, sLevel)",
-    "compiled": "BgAAAAAAAEAGAAAAAAAIQgUAAAABAAAAAAAAAAAAAAAAAAAAAQAAAAsAAAANAAAAAAAAAA=="
+    "value": "(SF_21 == 0)? (2 * Table(34, sLevel)) : (2 * Table(34, sLevel)*(1+( SF_20)))",
+    "compiled": "BQAAABsAAAAAAAAAAAAAAAAAAAAGAAAAAAAAAAkAAAAGAAAAAAAAQAYAAAAAAAhCBQAAAAEAAAAAAAAAAAAAAAAAAAABAAAACwAAAA0AAAAGAAAAAAAAQAYAAAAAAAhCBQAAAAEAAAAAAAAAAAAAAAAAAAABAAAACwAAAA0AAAAGAAAAAACAPwUAAAAaAAAAAAAAAAAAAAAAAAAACwAAAA0AAAAQAAAAAAAAAA=="
    }
   },
   {
@@ -1833,8 +1941,8 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "1 * Table(34, sLevel)",
-    "compiled": "BgAAAAAAgD8GAAAAAAAIQgUAAAABAAAAAAAAAAAAAAAAAAAAAQAAAAsAAAANAAAAAAAAAA=="
+    "value": "(SF_21 == 0)? (1.25 * Table(34, sLevel)) : (1.25 * Table(34, sLevel)*(1+( SF_20)))",
+    "compiled": "BQAAABsAAAAAAAAAAAAAAAAAAAAGAAAAAAAAAAkAAAAGAAAAAACgPwYAAAAAAAhCBQAAAAEAAAAAAAAAAAAAAAAAAAABAAAACwAAAA0AAAAGAAAAAACgPwYAAAAAAAhCBQAAAAEAAAAAAAAAAAAAAAAAAAABAAAACwAAAA0AAAAGAAAAAACAPwUAAAAaAAAAAAAAAAAAAAAAAAAACwAAAA0AAAAQAAAAAAAAAA=="
    }
   },
   {
@@ -1881,8 +1989,8 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "0.1",
-    "compiled": "BgAAAM3MzD0AAAAA"
+    "value": "0.5",
+    "compiled": "BgAAAAAAAD8AAAAA"
    }
   },
   {
@@ -1914,7 +2022,39 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Chance_For_Double_Damage_Per_Power#Sorcerer_DeepFreeze",
-    "compiled": "BQAAAAAAAABNAACA83MEAAAAAAAAAAAA"
+    "compiled": "BQAAAAAAAAB2AACA83MEAAAAAAAAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "0.3",
+    "compiled": "BgAAAJqZmT4AAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "((1 + Vulnerable_Health_Damage_Bonus)*(1+Multiplicative_Vulnerable_Health_Damage_Bonus) * 1.2 + (-1)) * (SF_19)",
+    "compiled": "BgAAAAAAgD8FAAAAAAAAALgCAAD+////AAAAAAsAAAAGAAAAAACAPwUAAAAAAAAAuQIAAP7///8AAAAACwAAAA0AAAAGAAAAmpmZPw0AAAAGAAAAAACAPxEAAAALAAAABQAAABkAAAAAAAAAAAAAAAAAAAANAAAAAAAAAA=="
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "(Floor((sLevel)/5))? 1 : 0",
+    "compiled": "BQAAAAEAAAAAAAAAAAAAAAAAAAAGAAAAAACgQA4AAAABAAAABQAAAAYAAAAAAIA/BgAAAAAAAAAQAAAAAAAAAA=="
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "0.25",
+    "compiled": "BgAAAAAAgD4AAAAA"
    }
   }
  ],

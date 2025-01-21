@@ -98,7 +98,7 @@
  "eCategory": 4,
  "ePowerAnimPriority": 0,
  "unk_9a3836e": 2,
- "ePowerAnimMovement": 1,
+ "ePowerAnimMovement": 2,
  "unk_1450715": false,
  "bChannelled": false,
  "bChannelledMovement": false,
@@ -137,8 +137,107 @@
  "unk_48531b6": false,
  "unk_f234087": -1,
  "arEndingPreplayed": [],
- "ptPhaseInitialization": [],
- "arPhases": [],
+ "ptPhaseInitialization": [
+  {
+   "__type__": "PowerPhaseInitialization",
+   "__typeHash__": 3796435398,
+   "dwType": 3796435398,
+   "tPhaseName": 3627236824,
+   "arPhaseJumps": [
+    {
+     "__type__": "PhaseJumpImmediate",
+     "__typeHash__": 3485436892,
+     "dwType": 3485436892,
+     "tPhaseToJumpTo": 1393426113,
+     "arConditions": [
+      {
+       "__type__": "PowerConditionHasAffixEquipped",
+       "__typeHash__": 619659323,
+       "dwType": 619659323,
+       "bInverse": true,
+       "eSubject": 0,
+       "snoAffix": {
+        "__raw__": 1609003,
+        "__group__": 104,
+        "__type__": "DT_SNO",
+        "__typeHash__": 2764331143,
+        "__targetFileName__": "base/meta/Affix/Amulet_Unique_Druid_100.aff",
+        "groupName": "Affix",
+        "name": "Amulet_Unique_Druid_100"
+       }
+      }
+     ],
+     "bEnd": false
+    },
+    {
+     "__type__": "PhaseJumpImmediate",
+     "__typeHash__": 3485436892,
+     "dwType": 3485436892,
+     "tPhaseToJumpTo": 2977038816,
+     "arConditions": [
+      {
+       "__type__": "PowerConditionHasAffixEquipped",
+       "__typeHash__": 619659323,
+       "dwType": 619659323,
+       "bInverse": false,
+       "eSubject": 0,
+       "snoAffix": {
+        "__raw__": 1609003,
+        "__group__": 104,
+        "__type__": "DT_SNO",
+        "__typeHash__": 2764331143,
+        "__targetFileName__": "base/meta/Affix/Amulet_Unique_Druid_100.aff",
+        "groupName": "Affix",
+        "name": "Amulet_Unique_Druid_100"
+       }
+      },
+      {
+       "__type__": "PowerConditionHasBuff",
+       "__typeHash__": 2554403987,
+       "dwType": 2554403987,
+       "bInverse": false,
+       "eSubject": 0,
+       "snoPower": {
+        "__raw__": 258990,
+        "__group__": 29,
+        "__type__": "DT_SNO",
+        "__typeHash__": 2764331143,
+        "__targetFileName__": "base/meta/Power/Druid_Hurricane.pow",
+        "groupName": "Power",
+        "name": "Druid_Hurricane"
+       },
+       "dwBuffDataID": 2160209649
+      }
+     ],
+     "bEnd": false
+    }
+   ],
+   "unk_d0d932b": false,
+   "unk_9a8200e": true
+  }
+ ],
+ "arPhases": [
+  {
+   "__type__": "PowerPhaseOneShot",
+   "__typeHash__": 582599742,
+   "dwType": 582599742,
+   "tPhaseName": 1393426113,
+   "arPhaseJumps": [],
+   "unk_d0d932b": false,
+   "unk_9a8200e": true,
+   "bScalableDuration": false
+  },
+  {
+   "__type__": "PowerPhaseOneShot",
+   "__typeHash__": 582599742,
+   "dwType": 582599742,
+   "tPhaseName": 2977038816,
+   "arPhaseJumps": [],
+   "unk_d0d932b": false,
+   "unk_9a8200e": false,
+   "bScalableDuration": false
+  }
+ ],
  "unk_92fea1c": true,
  "unk_8cdde38": true,
  "unk_3dff6b0": false,
@@ -649,6 +748,114 @@
  "fCancelOnEvade": false,
  "arHitReactionOverrides": [],
  "arBuffs": [
+  {
+   "__type__": "PowerBuffDefinition",
+   "__typeHash__": 1071057721,
+   "dwID": 1635228259,
+   "dwBuffId": 22,
+   "bHarmful": true,
+   "bInfinite": false,
+   "tDuration": {
+    "value": "SF_30",
+    "compiled": "BQAAACQAAAAAAAAAAAAAAAAAAAAAAAAA"
+   },
+   "unk_deea7e8": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "unk_4393f38": false,
+   "unk_dcb22bd": false,
+   "tMaxStackCount": {
+    "value": "1",
+    "compiled": "BgAAAAAAgD8AAAAA"
+   },
+   "bVisibleInUI": false,
+   "bShowDuration": false,
+   "bCancellable": false,
+   "unk_99b5752": false,
+   "unk_93cd85f": false,
+   "unk_4bdaef2": false,
+   "bVisibleInHotbarUI": false,
+   "bShowsActiveStateOnHotbar": false,
+   "bShowsDurationOnHotbar": false,
+   "bShowsStackCountOnHotbar": false,
+   "unk_71ba554": false,
+   "unk_1375622": false,
+   "unk_d2dd47": false,
+   "unk_8a5f69e": false,
+   "hIcon": 0,
+   "hFloatingIcon": 0,
+   "hFloatingTextLabel": 0,
+   "flFloatingTextIconRange": 0,
+   "unk_395ccd6": false,
+   "bDealsDOT": true,
+   "tDOT": {
+    "__type__": "PowerBuffDOTDamage",
+    "__typeHash__": 3824324374,
+    "eDamageType": 4,
+    "tDamage": {
+     "__type__": "HitpointSpecifier",
+     "__typeHash__": 1185241065,
+     "eType": 0,
+     "tHitpointScalar": {
+      "value": "SF_31",
+      "compiled": "BQAAACUAAAAAAAAAAAAAAAAAAAAAAAAA"
+     },
+     "tFlatLevel": {
+      "value": "0",
+      "compiled": "BgAAAAAAAAAAAAAA"
+     }
+    },
+    "unk_89dc285": false,
+    "flFlatDamageBonusScalar": 1,
+    "unk_f551941": -1,
+    "bDamageIgnoresInvulnerable": false,
+    "bDamageIgnoresBonuses": false,
+    "unk_b8f2b": 1,
+    "bHasCombatEffectOverride": false,
+    "tCombatEffectOverride": {
+     "value": "100",
+     "compiled": "BgAAAAAAyEIAAAAA"
+    },
+    "bHideDamageEffects": false,
+    "bHideGlobalApplicationEffect": false
+   },
+   "tCrowdControl": {
+    "__type__": "PowerBuffCrowdControl",
+    "__typeHash__": 4138865712,
+    "unk_c63f49e": true,
+    "dwCCFlags": 0,
+    "bUseGlobalSlowAmount": false,
+    "eGlobalSlowAmountType": 0,
+    "tSlowAmount": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    },
+    "tChillAmount": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    },
+    "tStaggerMultiplier": {
+     "value": "1",
+     "compiled": "BgAAAAAAgD8AAAAA"
+    }
+   },
+   "bHasDamageShield": false,
+   "tDamageShield": {
+    "__type__": "HitpointSpecifier",
+    "__typeHash__": 1185241065,
+    "eType": 0,
+    "tHitpointScalar": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    },
+    "tFlatLevel": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    }
+   },
+   "dwShaderMapOverride": 2
+  },
   {
    "__type__": "PowerBuffDefinition",
    "__typeHash__": 1071057721,
@@ -1432,10 +1639,10 @@
    "unk_99b5752": false,
    "unk_93cd85f": false,
    "unk_4bdaef2": false,
-   "bVisibleInHotbarUI": false,
+   "bVisibleInHotbarUI": true,
    "bShowsActiveStateOnHotbar": false,
    "bShowsDurationOnHotbar": false,
-   "bShowsStackCountOnHotbar": false,
+   "bShowsStackCountOnHotbar": true,
    "unk_71ba554": false,
    "unk_1375622": false,
    "unk_d2dd47": false,
@@ -1737,7 +1944,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Percent_Bonus_Projectiles_Per_Power#Druid_Boulder + Percent_Bonus_Projectiles_All",
-    "compiled": "BQAAAAAAAACtAwAACaMDAAAAAAAFAAAAAAAAAKwDAAD+////AAAAAAsAAAAAAAAA"
+    "compiled": "BQAAAAAAAACpAwAACaMDAAAAAAAFAAAAAAAAAKgDAAD+////AAAAAAsAAAAAAAAA"
    }
   },
   {
@@ -1745,7 +1952,31 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Affix_Value_1#Amulet_Unique_Druid_100",
-    "compiled": "BQAAAAAAAABTBAAAK40YAAAAAAAAAAAA"
+    "compiled": "BQAAAAAAAABQBAAAK40YAAAAAAAAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "SF_0*0.8",
+    "compiled": "BQAAAAYAAAAAAAAAAAAAAAAAAAAGAAAAzcxMPw0AAAAAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "4",
+    "compiled": "BgAAAAAAgEAAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "SF_29/SF_30",
+    "compiled": "BQAAACMAAAAAAAAAAAAAAAAAAAAFAAAAJAAAAAAAAAAAAAAAAAAAAA4AAAAAAAAA"
    }
   }
  ],
@@ -2235,17 +2466,17 @@
    "bAppendDescription": true,
    "bBulletPointDescription": true,
    "bAffectsEnchantmentDescription": false,
-   "unk_b1d89c5": false,
+   "unk_b1d89c5": true,
    "arSkillTags": [
     {
      "__type__": "SkillTagStruct",
      "__typeHash__": 4000554560,
      "gbidSkillTag": {
-      "__raw__": 2892145024,
+      "__raw__": 4053473037,
       "__type__": "DT_GBID",
       "__typeHash__": 1028170061,
       "group": 56,
-      "name": "Search_Critical"
+      "name": "Search_Poison"
      },
      "bSearchOnly": false
     }

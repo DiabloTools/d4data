@@ -34,7 +34,55 @@
  "tParamsNotRaining": {
   "__type__": "WeatherStateParams",
   "__typeHash__": 137922517,
-  "hOptionalWeatherStateParamsFields": {}
+  "hOptionalWeatherStateParamsFields": {
+   "pathFogExponent": {
+    "__type__": "InterpolationPath_float",
+    "__typeHash__": 3422409450,
+    "tHeader": {
+     "__type__": "InterpolationPathHeader",
+     "__typeHash__": 2520702334,
+     "tLoopPointStart": 0,
+     "tLoopPointEnd": 1,
+     "nDistributionFunction": 0,
+     "nMinMaxBehavior": 0,
+     "arInterpScalar": [
+      {
+       "__type__": "InterpolationScalar",
+       "__typeHash__": 991799518,
+       "nScalarFunction": 0,
+       "dwFlags": 1,
+       "tInputRange": {
+        "rangeValue1": 0,
+        "rangeValue2": 1
+       },
+       "tRemapRange": {
+        "rangeValue1": 0,
+        "rangeValue2": 1
+       },
+       "eRemapEasing": 0,
+       "szFormulaName": 0
+      }
+     ],
+     "dwFlags": 4
+    },
+    "ptArrayNodes": [
+     {
+      "__type__": "InterpolationNode_float",
+      "__typeHash__": 2007685731,
+      "tValueMin": 0.0044999998062849045,
+      "tValueMax": 0.0044999998062849045,
+      "tTime": 0
+     },
+     {
+      "__type__": "InterpolationNode_float",
+      "__typeHash__": 2007685731,
+      "tValueMin": 0.024000000208616257,
+      "tValueMax": 0.024000000208616257,
+      "tTime": 0.49962034821510315
+     }
+    ]
+   }
+  }
  },
  "tParamsWhenRaining": {
   "__type__": "WeatherStateParams",
@@ -953,9 +1001,23 @@
     {
      "__type__": "InterpolationNode_float",
      "__typeHash__": 2007685731,
-     "tValueMin": 0.05999999865889549,
-     "tValueMax": 0.05999999865889549,
+     "tValueMin": 0.25,
+     "tValueMax": 0.25,
      "tTime": 0
+    },
+    {
+     "__type__": "InterpolationNode_float",
+     "__typeHash__": 2007685731,
+     "tValueMin": 0.25,
+     "tValueMax": 0.25,
+     "tTime": 0.25999999046325684
+    },
+    {
+     "__type__": "InterpolationNode_float",
+     "__typeHash__": 2007685731,
+     "tValueMin": 26,
+     "tValueMax": 26,
+     "tTime": 0.25999999046325684
     },
     {
      "__type__": "InterpolationNode_float",
@@ -963,6 +1025,27 @@
      "tValueMin": 26,
      "tValueMax": 26,
      "tTime": 0.49962034821510315
+    },
+    {
+     "__type__": "InterpolationNode_float",
+     "__typeHash__": 2007685731,
+     "tValueMin": 26,
+     "tValueMax": 26,
+     "tTime": 0.7400000095367432
+    },
+    {
+     "__type__": "InterpolationNode_float",
+     "__typeHash__": 2007685731,
+     "tValueMin": 0.25,
+     "tValueMax": 0.25,
+     "tTime": 0.7400000095367432
+    },
+    {
+     "__type__": "InterpolationNode_float",
+     "__typeHash__": 2007685731,
+     "tValueMin": 0.25,
+     "tValueMax": 0.25,
+     "tTime": 0.9992564916610718
     }
    ]
   }
