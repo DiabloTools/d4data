@@ -33,14 +33,6 @@
       "tName": "Equipped_Slot",
       "dwFlags": 0,
       "tValue": "0"
-     },
-     {
-      "__type__": "DataStoreVariableBool",
-      "__typeHash__": 1828956601,
-      "dwType": 1828956601,
-      "tName": "IsEquippedSlotLinked",
-      "dwFlags": 0,
-      "tValue": false
      }
     ],
     "tObjects": [
@@ -85,6 +77,14 @@
         "__type__": "DataStoreVariableBool",
         "__typeHash__": 1828956601,
         "dwType": 1828956601,
+        "tName": "IsMissingSkills",
+        "dwFlags": 0,
+        "tValue": false
+       },
+       {
+        "__type__": "DataStoreVariableBool",
+        "__typeHash__": 1828956601,
+        "dwType": 1828956601,
         "tName": "HasParagon",
         "dwFlags": 0,
         "tValue": false
@@ -117,31 +117,7 @@
         "__type__": "DataStoreVariableBool",
         "__typeHash__": 1828956601,
         "dwType": 1828956601,
-        "tName": "CanLink",
-        "dwFlags": 0,
-        "tValue": false
-       },
-       {
-        "__type__": "DataStoreVariableBool",
-        "__typeHash__": 1828956601,
-        "dwType": 1828956601,
-        "tName": "CanUnlink",
-        "dwFlags": 0,
-        "tValue": false
-       },
-       {
-        "__type__": "DataStoreVariableBool",
-        "__typeHash__": 1828956601,
-        "dwType": 1828956601,
-        "tName": "IsLinked",
-        "dwFlags": 0,
-        "tValue": false
-       },
-       {
-        "__type__": "DataStoreVariableBool",
-        "__typeHash__": 1828956601,
-        "dwType": 1828956601,
-        "tName": "IsLinkingFeatureEnabled",
+        "tName": "CanClear",
         "dwFlags": 0,
         "tValue": false
        }
@@ -253,6 +229,14 @@
            "tValue": false
           },
           {
+           "__type__": "DataStoreVariableBool",
+           "__typeHash__": 1828956601,
+           "dwType": 1828956601,
+           "tName": "IsMissing",
+           "dwFlags": 0,
+           "tValue": false
+          },
+          {
            "__type__": "DataStoreVariableSNO",
            "__typeHash__": 1096644509,
            "dwType": 1096644509,
@@ -269,7 +253,7 @@
        {
         "__type__": "DataStoreDynamicFolder",
         "__typeHash__": 3414565640,
-        "tName": "LegendaryNodes",
+        "tName": "ParagonBoards",
         "dwFlags": 0,
         "nCount": 0,
         "tObjectTemplate": {
@@ -278,10 +262,42 @@
          "tName": "",
          "tVariables": [
           {
+           "__type__": "DataStoreVariableBool",
+           "__typeHash__": 1828956601,
+           "dwType": 1828956601,
+           "tName": "IsActive",
+           "dwFlags": 0,
+           "tValue": false
+          },
+          {
            "__type__": "DataStoreVariableUIImageHandle",
            "__typeHash__": 3178519322,
            "dwType": 3178519322,
-           "tName": "Icon",
+           "tName": "LegendaryNode_Socket",
+           "dwFlags": 0,
+           "tValue": {
+            "__type__": "UIImageHandleReference",
+            "__typeHash__": 1797021084,
+            "hImageHandle": 0
+           }
+          },
+          {
+           "__type__": "DataStoreVariableUIImageHandle",
+           "__typeHash__": 3178519322,
+           "dwType": 3178519322,
+           "tName": "LegendaryNode_Mask",
+           "dwFlags": 0,
+           "tValue": {
+            "__type__": "UIImageHandleReference",
+            "__typeHash__": 1797021084,
+            "hImageHandle": 0
+           }
+          },
+          {
+           "__type__": "DataStoreVariableUIImageHandle",
+           "__typeHash__": 3178519322,
+           "dwType": 3178519322,
+           "tName": "LegendaryNode_Image",
            "dwFlags": 0,
            "tValue": {
             "__type__": "UIImageHandleReference",
@@ -309,7 +325,7 @@
            "__type__": "DataStoreVariableBool",
            "__typeHash__": 1828956601,
            "dwType": 1828956601,
-           "tName": "IsActive",
+           "tName": "IsLegendaryNodeSocketed",
            "dwFlags": 0,
            "tValue": false
           },
@@ -317,7 +333,7 @@
            "__type__": "DataStoreVariableBool",
            "__typeHash__": 1828956601,
            "dwType": 1828956601,
-           "tName": "IsSocketed",
+           "tName": "IsLegendaryNode",
            "dwFlags": 0,
            "tValue": false
           },
@@ -330,43 +346,6 @@
            "tValue": false
           },
           {
-           "__type__": "DataStoreVariableBool",
-           "__typeHash__": 1828956601,
-           "dwType": 1828956601,
-           "tName": "IsLegendaryNode",
-           "dwFlags": 0,
-           "tValue": false
-          }
-         ],
-         "tObjects": [],
-         "tObjectCollections": [],
-         "dwFlags": 0
-        }
-       },
-       {
-        "__type__": "DataStoreDynamicFolder",
-        "__typeHash__": 3414565640,
-        "tName": "Glyphs",
-        "dwFlags": 0,
-        "nCount": 0,
-        "tObjectTemplate": {
-         "__type__": "DataStoreFolder",
-         "__typeHash__": 684499971,
-         "tName": "",
-         "tVariables": [
-          {
-           "__type__": "DataStoreVariableUIImageHandle",
-           "__typeHash__": 3178519322,
-           "dwType": 3178519322,
-           "tName": "Icon",
-           "dwFlags": 0,
-           "tValue": {
-            "__type__": "UIImageHandleReference",
-            "__typeHash__": 1797021084,
-            "hImageHandle": 0
-           }
-          },
-          {
            "__type__": "DataStoreVariableSNO",
            "__typeHash__": 1096644509,
            "dwType": 1096644509,
@@ -375,18 +354,22 @@
            "tValue": null
           },
           {
-           "__type__": "DataStoreVariableBool",
-           "__typeHash__": 1828956601,
-           "dwType": 1828956601,
-           "tName": "IsActive",
+           "__type__": "DataStoreVariableUIImageHandle",
+           "__typeHash__": 3178519322,
+           "dwType": 3178519322,
+           "tName": "Glyph_Icon",
            "dwFlags": 0,
-           "tValue": false
+           "tValue": {
+            "__type__": "UIImageHandleReference",
+            "__typeHash__": 1797021084,
+            "hImageHandle": 0
+           }
           },
           {
            "__type__": "DataStoreVariableBool",
            "__typeHash__": 1828956601,
            "dwType": 1828956601,
-           "tName": "IsSocketed",
+           "tName": "IsGlyphSocketed",
            "dwFlags": 0,
            "tValue": false
           }
@@ -465,14 +448,6 @@
          "__typeHash__": 1828956601,
          "dwType": 1828956601,
          "tName": "IsEquipped",
-         "dwFlags": 0,
-         "tValue": false
-        },
-        {
-         "__type__": "DataStoreVariableBool",
-         "__typeHash__": 1828956601,
-         "dwType": 1828956601,
-         "tName": "IsLinked",
          "dwFlags": 0,
          "tValue": false
         },
