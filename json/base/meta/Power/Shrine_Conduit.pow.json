@@ -891,8 +891,8 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "(1+Floor(Level/31)+Floor(Level/60)*Floor(Paragon_Level/6))*SF_2*SF_4",
-    "compiled": "BgAAAAAAgD8FAAAAAAAAACcAAAD+////AAAAAAYAAAAAAPhBDgAAAAEAAAAFAAAACwAAAAUAAAAAAAAAJwAAAP7///8AAAAABgAAAAAAcEIOAAAAAQAAAAUAAAAFAAAAAAAAACkAAAD+////AAAAAAYAAAAAAMBADgAAAAEAAAAFAAAADQAAAAsAAAAFAAAACAAAAAAAAAAAAAAAAAAAAA0AAAAFAAAACgAAAAAAAAAAAAAAAAAAAA0AAAAAAAAA"
+    "value": "1+(Level/31)+(Level/60)*Floor(SF_22/SF_18)*SF_2*SF_4",
+    "compiled": "BgAAAAAAgD8FAAAAAAAAACcAAAD+////AAAAAAYAAAAAAPhBDgAAAAsAAAAFAAAAAAAAACcAAAD+////AAAAAAYAAAAAAHBCDgAAAAUAAAAcAAAAAAAAAAAAAAAAAAAABQAAABgAAAAAAAAAAAAAAAAAAAAOAAAAAQAAAAUAAAANAAAABQAAAAgAAAAAAAAAAAAAAAAAAAANAAAABQAAAAoAAAAAAAAAAAAAAAAAAAANAAAACwAAAAAAAAA="
    }
   },
   {
@@ -947,8 +947,8 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "(1+Floor(Level/31)+Floor(Level/60)*Floor(Paragon_Level/6))*6.5",
-    "compiled": "BgAAAAAAgD8FAAAAAAAAACcAAAD+////AAAAAAYAAAAAAPhBDgAAAAEAAAAFAAAACwAAAAUAAAAAAAAAJwAAAP7///8AAAAABgAAAAAAcEIOAAAAAQAAAAUAAAAFAAAAAAAAACkAAAD+////AAAAAAYAAAAAAMBADgAAAAEAAAAFAAAADQAAAAsAAAAGAAAAAADQQA0AAAAAAAAA"
+    "value": "1+(Level/31)+(Level/60)*Floor(SF_22/SF_18)*6.5",
+    "compiled": "BgAAAAAAgD8FAAAAAAAAACcAAAD+////AAAAAAYAAAAAAPhBDgAAAAsAAAAFAAAAAAAAACcAAAD+////AAAAAAYAAAAAAHBCDgAAAAUAAAAcAAAAAAAAAAAAAAAAAAAABQAAABgAAAAAAAAAAAAAAAAAAAAOAAAAAQAAAAUAAAANAAAABgAAAAAA0EANAAAACwAAAAAAAAA="
    }
   },
   {
@@ -1021,6 +1021,46 @@
    "tFormula": {
     "value": "0.15",
     "compiled": "BgAAAJqZGT4AAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "((SF_19) ? 0.05 : ((SF_20) ? 0.15 : ((SF_21) ? 0.25 : 0.4)))",
+    "compiled": "BQAAABkAAAAAAAAAAAAAAAAAAAAGAAAAzcxMPQUAAAAaAAAAAAAAAAAAAAAAAAAABgAAAJqZGT4FAAAAGwAAAAAAAAAAAAAAAAAAAAYAAAAAAIA+BgAAAM3MzD4QAAAAEAAAABAAAAAAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "Paragon_Level >= 200",
+    "compiled": "BQAAAAAAAAApAAAA/v///wAAAAAAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "Paragon_Level >=100",
+    "compiled": "BQAAAAAAAAApAAAA/v///wAAAAAAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "Paragon_Level >= 40",
+    "compiled": "BQAAAAAAAAApAAAA/v///wAAAAAAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "min(200, Paragon_Level)",
+    "compiled": "BgAAAAAASEMFAAAAAAAAACkAAAD+////AAAAAAEAAAAAAAAAAAAAAA=="
    }
   }
  ],
