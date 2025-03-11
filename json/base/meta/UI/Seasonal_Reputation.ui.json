@@ -269,7 +269,15 @@
       "szControlName": 3622749923
      },
      "unk_441f783": "0",
-     "hOptionalUIControlStyleFields": {},
+     "hOptionalUIControlStyleFields": {
+      "tObjectBinding": {
+       "__type__": "BindingPath",
+       "__typeHash__": 4229676584,
+       "sDataStore": "",
+       "sDataPath": "Reputation",
+       "dwFlags": 18
+      }
+     },
      "tConsoleInput": {
       "__type__": "UIControlConsoleInput",
       "__typeHash__": 3089331074,
@@ -302,7 +310,7 @@
        },
        "hOptionalUIHotkeyStyleFields": {
         "unk_ccd9967": "UI_Reputation_OnClose",
-        "eHotkey": 125
+        "eHotkey": 126
        }
       }
      ],
@@ -689,6 +697,13 @@
            },
            "unk_441f783": "0",
            "hOptionalUIControlStyleFields": {
+            "tObjectBinding": {
+             "__type__": "BindingPath",
+             "__typeHash__": 4229676584,
+             "sDataStore": "",
+             "sDataPath": "",
+             "dwFlags": 18
+            },
             "hTemplate": {
              "__type__": "UIControlHandle",
              "__typeHash__": 3063971755,
@@ -986,19 +1001,18 @@
                   "bEncloseChildren": 1
                  },
                  "unk_4e673ad": {
+                  "unk_3d724e": {
+                   "__type__": "BindingPath",
+                   "__typeHash__": 4229676584,
+                   "sDataStore": "",
+                   "sDataPath": "RewardTemplate",
+                   "dwFlags": 18
+                  },
                   "hItemTemplate": {
                    "__type__": "UIControlHandle",
                    "__typeHash__": 3063971755,
-                   "snoUI": {
-                    "__raw__": 1582768,
-                    "__group__": 46,
-                    "__type__": "DT_SNO",
-                    "__typeHash__": 2764331143,
-                    "__targetFileName__": "base/meta/UI/Seasonal_Reputation.ui",
-                    "groupName": "UI",
-                    "name": "Seasonal_Reputation"
-                   },
-                   "szControlName": 189218809
+                   "snoUI": null,
+                   "szControlName": 0
                   }
                  },
                  "hOptionalUIWrapPanelStyleFields": {
@@ -1434,6 +1448,20 @@
               }
              },
              "hOptionalUITextStyleFields": {
+              "hText": {
+               "__type__": "StringLabelHandleEx",
+               "__typeHash__": 721585600,
+               "snoStringList": {
+                "__raw__": 1583666,
+                "__group__": 42,
+                "__type__": "DT_SNO",
+                "__typeHash__": 2764331143,
+                "__targetFileName__": "enUS_Text/meta/StringList/Seasonal_Reputation_UI.stl",
+                "groupName": "StringList",
+                "name": "Seasonal_Reputation_UI"
+               },
+               "szLabel": 1752474258
+              },
               "eTextJustifyVertical": 6,
               "eResizeToFit": 0,
               "eTextJustify": 2,
@@ -3053,7 +3081,15 @@
       "szControlName": 0
      },
      "unk_441f783": "0",
-     "hOptionalUIControlStyleFields": {},
+     "hOptionalUIControlStyleFields": {
+      "tObjectBinding": {
+       "__type__": "BindingPath",
+       "__typeHash__": 4229676584,
+       "sDataStore": "",
+       "sDataPath": "Reputation",
+       "dwFlags": 18
+      }
+     },
      "tConsoleInput": {
       "__type__": "UIControlConsoleInput",
       "__typeHash__": 3089331074,
@@ -3241,7 +3277,9 @@
           "szControlName": 0
          },
          "unk_441f783": "0",
-         "hOptionalUIControlStyleFields": {},
+         "hOptionalUIControlStyleFields": {
+          "unk_6e5f347": 0
+         },
          "tConsoleInput": {
           "__type__": "UIControlConsoleInput",
           "__typeHash__": 3089331074,
@@ -3409,7 +3447,9 @@
           "szControlName": 0
          },
          "unk_441f783": "0",
-         "hOptionalUIControlStyleFields": {},
+         "hOptionalUIControlStyleFields": {
+          "unk_6e5f347": 0
+         },
          "tConsoleInput": {
           "__type__": "UIControlConsoleInput",
           "__typeHash__": 3089331074,
@@ -3488,7 +3528,7 @@
              "__type__": "BindingPath",
              "__typeHash__": 4229676584,
              "sDataStore": "",
-             "sDataPath": "NextRewardParams",
+             "sDataPath": "",
              "dwFlags": 18
             },
             "eTextJustifyVertical": 6,
@@ -3516,7 +3556,9 @@
             "szControlName": 0
            },
            "unk_441f783": "0",
-           "hOptionalUIControlStyleFields": {},
+           "hOptionalUIControlStyleFields": {
+            "unk_6e5f347": 0
+           },
            "tConsoleInput": {
             "__type__": "UIControlConsoleInput",
             "__typeHash__": 3089331074,
@@ -3849,7 +3891,8 @@
             "bActive": {
              "property": "Active",
              "value": 1
-            }
+            },
+            "unk_6e5f347": 0
            },
            "tConsoleInput": {
             "__type__": "UIControlConsoleInput",
@@ -4015,6 +4058,7 @@
              "property": "RepeatableAwardActive",
              "value": 1
             },
+            "unk_6e5f347": 1,
             "hTemplate": {
              "__type__": "UIControlHandle",
              "__typeHash__": 3063971755,
@@ -4391,9 +4435,12 @@
         "eVerticalAnchoring": 3,
         "eHorizontalAnchoring": 3,
         "hImageFrame": {
-         "__type__": "UIImageHandleReference",
-         "__typeHash__": 1797021084,
-         "hImageHandle": 2394147668
+         "property": "StateBanner",
+         "value": {
+          "__type__": "UIImageHandleReference",
+          "__typeHash__": 1797021084,
+          "hImageHandle": 2394147668
+         }
         }
        }
       }
@@ -4557,9 +4604,12 @@
             "nLeft": 0,
             "eHorizontalAnchoring": 1,
             "hImageFrame": {
-             "__type__": "UIImageHandleReference",
-             "__typeHash__": 1797021084,
-             "hImageHandle": 0
+             "property": "Icon",
+             "value": {
+              "__type__": "UIImageHandleReference",
+              "__typeHash__": 1797021084,
+              "hImageHandle": 0
+             }
             }
            }
           }
@@ -4813,7 +4863,11 @@
            },
            "unk_441f783": "0",
            "hOptionalUIControlStyleFields": {
-            "bActive": 1
+            "unk_5251749": 1,
+            "bActive": {
+             "property": "Quest:QuestIconActive",
+             "value": 1
+            }
            },
            "tConsoleInput": {
             "__type__": "UIControlConsoleInput",
@@ -4856,7 +4910,10 @@
            },
            "unk_441f783": "0",
            "hOptionalUIControlStyleFields": {
-            "bActive": 0
+            "bActive": {
+             "property": "Quest:InProgressIconActive",
+             "value": 0
+            }
            },
            "tConsoleInput": {
             "__type__": "UIControlConsoleInput",
@@ -4912,7 +4969,8 @@
           "bActive": {
            "property": "ClaimableGlowActive",
            "value": 0
-          }
+          },
+          "unk_6e5f347": 0
          },
          "tConsoleInput": {
           "__type__": "UIControlConsoleInput",
@@ -5449,6 +5507,13 @@
      },
      "unk_441f783": "0",
      "hOptionalUIControlStyleFields": {
+      "tObjectBinding": {
+       "__type__": "BindingPath",
+       "__typeHash__": 4229676584,
+       "sDataStore": "",
+       "sDataPath": "",
+       "dwFlags": 18
+      },
       "hTemplate": {
        "__type__": "UIControlHandle",
        "__typeHash__": 3063971755,
@@ -5490,7 +5555,17 @@
        },
        "unk_441f783": "0",
        "hOptionalUIControlStyleFields": {
-        "bActive": 1
+        "tObjectBinding": {
+         "__type__": "BindingPath",
+         "__typeHash__": 4229676584,
+         "sDataStore": "",
+         "sDataPath": "",
+         "dwFlags": 18
+        },
+        "bActive": {
+         "property": "Quest:QuestCountActive",
+         "value": 1
+        }
        },
        "tConsoleInput": {
         "__type__": "UIControlConsoleInput",
@@ -5529,18 +5604,21 @@
        "hOptionalUITextStyleFields": {
         "bShowPreviewText": 0,
         "hText": {
-         "__type__": "StringLabelHandleEx",
-         "__typeHash__": 721585600,
-         "snoStringList": {
-          "__raw__": 1583666,
-          "__group__": 42,
-          "__type__": "DT_SNO",
-          "__typeHash__": 2764331143,
-          "__targetFileName__": "enUS_Text/meta/StringList/Seasonal_Reputation_UI.stl",
-          "groupName": "StringList",
-          "name": "Seasonal_Reputation_UI"
-         },
-         "szLabel": 2477227962
+         "property": "Quest:QuestCount",
+         "value": {
+          "__type__": "StringLabelHandleEx",
+          "__typeHash__": 721585600,
+          "snoStringList": {
+           "__raw__": 1583666,
+           "__group__": 42,
+           "__type__": "DT_SNO",
+           "__typeHash__": 2764331143,
+           "__targetFileName__": "enUS_Text/meta/StringList/Seasonal_Reputation_UI.stl",
+           "groupName": "StringList",
+           "name": "Seasonal_Reputation_UI"
+          },
+          "szLabel": 2477227962
+         }
         },
         "szPreviewText": "8/8",
         "bShrinkToFit": 1,
@@ -5570,7 +5648,10 @@
        },
        "unk_441f783": "0",
        "hOptionalUIControlStyleFields": {
-        "bActive": 0
+        "bActive": {
+         "property": "Quest:LockIconActive",
+         "value": 0
+        }
        },
        "tConsoleInput": {
         "__type__": "UIControlConsoleInput",
@@ -5854,7 +5935,15 @@
       "szControlName": 0
      },
      "unk_441f783": "0",
-     "hOptionalUIControlStyleFields": {},
+     "hOptionalUIControlStyleFields": {
+      "tObjectBinding": {
+       "__type__": "BindingPath",
+       "__typeHash__": 4229676584,
+       "sDataStore": "",
+       "sDataPath": "Reputation",
+       "dwFlags": 18
+      }
+     },
      "tConsoleInput": {
       "__type__": "UIControlConsoleInput",
       "__typeHash__": 3089331074,
