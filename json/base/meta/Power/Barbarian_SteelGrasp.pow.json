@@ -682,6 +682,12 @@
     "value": "1",
     "compiled": "BgAAAAAAgD8AAAAA"
    },
+   "unk_b7f0241": false,
+   "eStackingBehavior": 0,
+   "eStackingScope": 0,
+   "unk_9261403": false,
+   "unk_d291777": false,
+   "unk_db6680": false,
    "bVisibleInUI": false,
    "bShowDuration": false,
    "bCancellable": false,
@@ -791,6 +797,12 @@
     "value": "1",
     "compiled": "BgAAAAAAgD8AAAAA"
    },
+   "unk_b7f0241": false,
+   "eStackingBehavior": 0,
+   "eStackingScope": 0,
+   "unk_9261403": false,
+   "unk_d291777": false,
+   "unk_db6680": false,
    "bVisibleInUI": false,
    "bShowDuration": false,
    "bCancellable": false,
@@ -918,8 +930,8 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "SF_11 * Table(34,sLevel)",
-    "compiled": "BQAAABEAAAAAAAAAAAAAAAAAAAAGAAAAAAAIQgUAAAABAAAAAAAAAAAAAAAAAAAAAQAAAAsAAAANAAAAAAAAAA=="
+    "value": "Mod.UpgradeA ? (SF_29 * (1 + SF_13)) : SF_29",
+    "compiled": "BQAAAFoAAAD/////CQkaoAAAAAAFAAAAIwAAAAAAAAAAAAAAAAAAAAYAAAAAAIA/BQAAABMAAAAAAAAAAAAAAAAAAAALAAAADQAAAAUAAAAjAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAA="
    }
   },
   {
@@ -959,23 +971,23 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "2 + (SF_10 * Mod.UpgradeB) + GetBonusMaxChargesForPower(SNO.Power.Barbarian_SteelGrasp)",
-    "compiled": "BgAAAAAAAEAFAAAAEAAAAAAAAAAAAAAAAAAAAAUAAABaAAAA/////woJGqAAAAAADQAAAAsAAAAFAAAAWQAAABe4DgAAAAAAAAAAAAEAAAB1AAAACwAAAAAAAAA="
+    "compiled": "BgAAAAAAAEAFAAAAEAAAAAAAAAAAAAAAAAAAAAUAAABaAAAA/////woJGqAAAAAADQAAAAsAAAAFAAAAWQAAABe4DgAAAAAAAAAAAAEAAAB2AAAACwAAAAAAAAA="
    }
   },
   {
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "1",
-    "compiled": "BgAAAAAAgD8AAAAA"
+    "value": "2",
+    "compiled": "BgAAAAAAAEAAAAAA"
    }
   },
   {
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "0.35",
-    "compiled": "BgAAADQzsz4AAAAA"
+    "value": "0.8",
+    "compiled": "BgAAAM3MTD8AAAAA"
    }
   },
   {
@@ -990,8 +1002,8 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "",
-    "compiled": ""
+    "value": "2",
+    "compiled": "BgAAAAAAAEAAAAAA"
    }
   },
   {
@@ -1007,7 +1019,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Affix_Value_1#x1_Legendary_Barb_114",
-    "compiled": "BQAAAAAAAABcBAAAw1cbAAAAAAAAAAAA"
+    "compiled": "BQAAAAAAAABkBAAAw1cbAAAAAAAAAAAA"
    }
   },
   {
@@ -1047,39 +1059,39 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Affix_Flat_Value_2#x1_Legendary_Barb_114",
-    "compiled": "BQAAAAAAAABgBAAAw1cbAAAAAAAAAAAA"
+    "compiled": "BQAAAAAAAABoBAAAw1cbAAAAAAAAAAAA"
    }
   },
   {
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "AffixIsEquipped(SNO.Affix.S05_BSK_Barbarian_002) == 1",
-    "compiled": "BQAAAFkAAACoaB0AAAAAAAAAAAABAAAAJAAAAAYAAAAAAIA/CQAAAAAAAAA="
+    "value": "SF_28 ? 0 : AffixIsEquipped(SNO.Affix.S05_BSK_Barbarian_002) == 1",
+    "compiled": "BQAAACIAAAAAAAAAAAAAAAAAAAAGAAAAAAAAAAUAAABZAAAAqGgdAAAAAAAAAAAAAQAAACQAAAAQAAAABgAAAAAAgD8JAAAAAAAAAA=="
    }
   },
   {
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "PowerTag.S05_BSK_Barbarian_002.\"Script Formula 2\" - (SF_23 * Max(SF_9-2, 0))",
-    "compiled": "BQAAAAUAAACqaB0AAgAAAAAAAAAFAAAAHQAAAAAAAAAAAAAAAAAAAAUAAAAPAAAAAAAAAAAAAAAAAAAABgAAAAAAAEAMAAAABgAAAAAAAAABAAAAAQAAAA0AAAAMAAAAAAAAAA=="
+    "value": "SF_28 ? 0 : PowerTag.S05_BSK_Barbarian_002.\"Script Formula 2\" - (SF_23 * Max(SF_9-2, 0))",
+    "compiled": "BQAAACIAAAAAAAAAAAAAAAAAAAAGAAAAAAAAAAUAAAAFAAAAqmgdAAIAAAAAAAAAEAAAAAUAAAAdAAAAAAAAAAAAAAAAAAAABQAAAA8AAAAAAAAAAAAAAAAAAAAGAAAAAAAAQAwAAAAGAAAAAAAAAAEAAAABAAAADQAAAAwAAAAAAAAA"
    }
   },
   {
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "Affix_Value_2#S05_BSK_Barbarian_002",
-    "compiled": "BQAAAAAAAABdBAAAqGgdAAAAAAAAAAAA"
+    "value": "SF_28 ? 0 : Affix_Value_2#S05_BSK_Barbarian_002",
+    "compiled": "BQAAACIAAAAAAAAAAAAAAAAAAAAGAAAAAAAAAAUAAAAAAAAAZQQAAKhoHQAAAAAAEAAAAAAAAAA="
    }
   },
   {
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "AffixIsEquipped(SNO.Affix.S05_BSK_Barbarian_002) == 0",
-    "compiled": "BQAAAFkAAACoaB0AAAAAAAAAAAABAAAAJAAAAAYAAAAAAAAACQAAAAAAAAA="
+    "value": "SF_28 ? 1 : (AffixIsEquipped(SNO.Affix.S05_BSK_Barbarian_002) == 0)",
+    "compiled": "BQAAACIAAAAAAAAAAAAAAAAAAAAGAAAAAACAPwUAAABZAAAAqGgdAAAAAAAAAAAAAQAAACQAAAAGAAAAAAAAAAkAAAAQAAAAAAAAAA=="
    }
   },
   {
@@ -1087,7 +1099,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Bonus_Percent_Per_Power#Barbarian_SteelGrasp",
-    "compiled": "BQAAAAAAAACrAwAAF7gOAAAAAAAAAAAA"
+    "compiled": "BQAAAAAAAAC0AwAAF7gOAAAAAAAAAAAA"
    }
   },
   {
@@ -1095,7 +1107,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "1 + Power_Duration_Bonus_Pct#Barbarian_SteelGrasp",
-    "compiled": "BgAAAAAAgD8FAAAAAAAAAKgDAAAXuA4AAAAAAAsAAAAAAAAA"
+    "compiled": "BgAAAAAAgD8FAAAAAAAAALEDAAAXuA4AAAAAAAsAAAAAAAAA"
    }
   },
   {
@@ -1103,7 +1115,23 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Chance_For_Double_Damage_Per_Power#Barbarian_SteelGrasp",
-    "compiled": "BQAAAAAAAAB2AACAF7gOAAAAAAAAAAAA"
+    "compiled": "BQAAAAAAAAB+AACAF7gOAAAAAAAAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "AffixIsEquipped(SNO.Affix.legendary_barb_118)",
+    "compiled": "BQAAAFkAAADlcyEAAAAAAAAAAAABAAAAJAAAAAAAAAA="
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "SF_11 * Table(34,sLevel)",
+    "compiled": "BQAAABEAAAAAAAAAAAAAAAAAAAAGAAAAAAAIQgUAAAABAAAAAAAAAAAAAAAAAAAAAQAAAAsAAAANAAAAAAAAAA=="
    }
   }
  ],

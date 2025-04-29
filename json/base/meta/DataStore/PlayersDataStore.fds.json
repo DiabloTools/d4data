@@ -931,6 +931,22 @@
        "tName": "Realmwalker Material",
        "dwFlags": 0,
        "tValue": "0"
+      },
+      {
+       "__type__": "DataStoreVariableInt",
+       "__typeHash__": 1096634712,
+       "dwType": 1096634712,
+       "tName": "Barb Collab Currency",
+       "dwFlags": 0,
+       "tValue": "0"
+      },
+      {
+       "__type__": "DataStoreVariableInt",
+       "__typeHash__": 1096634712,
+       "dwType": 1096634712,
+       "tName": "Reliquary Favor",
+       "dwFlags": 0,
+       "tValue": "0"
       }
      ],
      "tObjects": [],
@@ -967,38 +983,12 @@
        "tValue": false
       },
       {
-       "__type__": "DataStoreVariableStringLabelHandle",
-       "__typeHash__": 2305908368,
-       "dwType": 2305908368,
-       "tName": "StateText",
-       "dwFlags": 0,
-       "tValue": {
-        "__type__": "StringLabelHandleEx",
-        "__typeHash__": 721585600,
-        "snoStringList": null,
-        "szLabel": 0
-       }
-      },
-      {
        "__type__": "DataStoreVariableBool",
        "__typeHash__": 1828956601,
        "dwType": 1828956601,
        "tName": "RewardItemActive",
        "dwFlags": 0,
        "tValue": false
-      },
-      {
-       "__type__": "DataStoreVariableStringLabelHandle",
-       "__typeHash__": 2305908368,
-       "dwType": 2305908368,
-       "tName": "CurrentReputationTier",
-       "dwFlags": 0,
-       "tValue": {
-        "__type__": "StringLabelHandleEx",
-        "__typeHash__": 721585600,
-        "snoStringList": null,
-        "szLabel": 0
-       }
       },
       {
        "__type__": "DataStoreDynamicDataSet",
@@ -1020,29 +1010,50 @@
         },
         "tFolderPath": "BannersTemplate"
        }
+      },
+      {
+       "__type__": "DataStoreVariableString",
+       "__typeHash__": 3835220004,
+       "dwType": 3835220004,
+       "tName": "CurrentReputationTier",
+       "dwFlags": 0,
+       "tValue": ""
+      },
+      {
+       "__type__": "DataStoreVariableString",
+       "__typeHash__": 3835220004,
+       "dwType": 3835220004,
+       "tName": "StateText",
+       "dwFlags": 0,
+       "tValue": ""
       }
      ],
      "tObjects": [
       {
        "__type__": "DataStoreFolder",
        "__typeHash__": 684499971,
-       "tName": "RepeatableButton",
+       "tName": "RepeatableButtonFolder",
        "tVariables": [
         {
-         "__type__": "DataStoreVariableString",
-         "__typeHash__": 3835220004,
-         "dwType": 3835220004,
-         "tName": "StateText",
+         "__type__": "DataStoreDataSet",
+         "__typeHash__": 2287158061,
+         "dwType": 2287158061,
+         "tName": "RepeatableButton",
          "dwFlags": 0,
-         "tValue": ""
-        },
-        {
-         "__type__": "DataStoreVariableSNO",
-         "__typeHash__": 1096644509,
-         "dwType": 1096644509,
-         "tName": "StateItem",
-         "dwFlags": 0,
-         "tValue": null
+         "tTemplateHandle": {
+          "__type__": "DataStoreTemplateHandle",
+          "__typeHash__": 1533034415,
+          "snoDataStore": {
+           "__raw__": 2083625,
+           "__group__": 165,
+           "__type__": "DT_SNO",
+           "__typeHash__": 2764331143,
+           "__targetFileName__": "base/meta/DataStore/PlayersDataStore.fds",
+           "groupName": "DataStore",
+           "name": "PlayersDataStore"
+          },
+          "tFolderPath": "BannersTemplate"
+         }
         }
        ],
        "tObjects": [],
@@ -1087,32 +1098,6 @@
          "tName": "CurrentReputationTier",
          "dwFlags": 0,
          "tValue": ""
-        }
-       ],
-       "tObjects": [],
-       "tObjectCollections": [],
-       "dwFlags": 0
-      },
-      {
-       "__type__": "DataStoreFolder",
-       "__typeHash__": 684499971,
-       "tName": "Currency",
-       "tVariables": [
-        {
-         "__type__": "DataStoreVariableBool",
-         "__typeHash__": 1828956601,
-         "dwType": 1828956601,
-         "tName": "ButtonActive",
-         "dwFlags": 0,
-         "tValue": true
-        },
-        {
-         "__type__": "DataStoreVariableBool",
-         "__typeHash__": 1828956601,
-         "dwType": 1828956601,
-         "tName": "IconActive",
-         "dwFlags": 0,
-         "tValue": true
         }
        ],
        "tObjects": [],
@@ -1476,12 +1461,12 @@
      "__type__": "DataStoreVariableUIImageHandle",
      "__typeHash__": 3178519322,
      "dwType": 3178519322,
-     "tName": "BannerImage",
+     "tName": "StateBanner",
      "dwFlags": 0,
      "tValue": {
       "__type__": "UIImageHandleReference",
       "__typeHash__": 1797021084,
-      "hImageHandle": 0
+      "hImageHandle": 2394147668
      }
     },
     {
@@ -1507,9 +1492,169 @@
      "tName": "RewardItemActive",
      "dwFlags": 0,
      "tValue": false
+    },
+    {
+     "__type__": "DataStoreVariableUIControlHandle",
+     "__typeHash__": 1243821912,
+     "dwType": 1243821912,
+     "tName": "RewardTemplate",
+     "dwFlags": 0,
+     "tValue": {
+      "__type__": "UIControlHandle",
+      "__typeHash__": 3063971755,
+      "snoUI": {
+       "__raw__": 1582768,
+       "__group__": 46,
+       "__type__": "DT_SNO",
+       "__typeHash__": 2764331143,
+       "__targetFileName__": "base/meta/UI/Seasonal_Reputation.ui",
+       "groupName": "UI",
+       "name": "Seasonal_Reputation"
+      },
+      "szControlName": 189218809
+     }
+    },
+    {
+     "__type__": "DataStoreVariableBool",
+     "__typeHash__": 1828956601,
+     "dwType": 1828956601,
+     "tName": "RepeatableAwardActive",
+     "dwFlags": 0,
+     "tValue": false
     }
    ],
-   "tFolders": [],
+   "tFolders": [
+    {
+     "__type__": "DataStoreFolder",
+     "__typeHash__": 684499971,
+     "tName": "Storyboard",
+     "tVariables": [
+      {
+       "__type__": "DataStoreVariableBool",
+       "__typeHash__": 1828956601,
+       "dwType": 1828956601,
+       "tName": "ClaimableGlowActive",
+       "dwFlags": 0,
+       "tValue": false
+      },
+      {
+       "__type__": "DataStoreVariableBool",
+       "__typeHash__": 1828956601,
+       "dwType": 1828956601,
+       "tName": "ClaimedOverlayActive",
+       "dwFlags": 0,
+       "tValue": false
+      },
+      {
+       "__type__": "DataStoreVariableBool",
+       "__typeHash__": 1828956601,
+       "dwType": 1828956601,
+       "tName": "checkmarkActive",
+       "dwFlags": 0,
+       "tValue": false
+      },
+      {
+       "__type__": "DataStoreVariableBool",
+       "__typeHash__": 1828956601,
+       "dwType": 1828956601,
+       "tName": "ClaimableIndicatorActive",
+       "dwFlags": 0,
+       "tValue": false
+      }
+     ],
+     "tObjects": [],
+     "tObjectCollections": [],
+     "dwFlags": 0
+    },
+    {
+     "__type__": "DataStoreFolder",
+     "__typeHash__": 684499971,
+     "tName": "Quest",
+     "tVariables": [
+      {
+       "__type__": "DataStoreVariableString",
+       "__typeHash__": 3835220004,
+       "dwType": 3835220004,
+       "tName": "QuestCount",
+       "dwFlags": 0,
+       "tValue": ""
+      },
+      {
+       "__type__": "DataStoreVariableBool",
+       "__typeHash__": 1828956601,
+       "dwType": 1828956601,
+       "tName": "QuestCountActive",
+       "dwFlags": 0,
+       "tValue": false
+      },
+      {
+       "__type__": "DataStoreVariableBool",
+       "__typeHash__": 1828956601,
+       "dwType": 1828956601,
+       "tName": "QuestIconActive",
+       "dwFlags": 0,
+       "tValue": false
+      },
+      {
+       "__type__": "DataStoreVariableBool",
+       "__typeHash__": 1828956601,
+       "dwType": 1828956601,
+       "tName": "LockIconActive",
+       "dwFlags": 0,
+       "tValue": false
+      },
+      {
+       "__type__": "DataStoreVariableBool",
+       "__typeHash__": 1828956601,
+       "dwType": 1828956601,
+       "tName": "InProgressIconActive",
+       "dwFlags": 0,
+       "tValue": false
+      }
+     ],
+     "tObjects": [],
+     "tObjectCollections": [],
+     "dwFlags": 0
+    },
+    {
+     "__type__": "DataStoreFolder",
+     "__typeHash__": 684499971,
+     "tName": "Currency",
+     "tVariables": [
+      {
+       "__type__": "DataStoreVariableBool",
+       "__typeHash__": 1828956601,
+       "dwType": 1828956601,
+       "tName": "ButtonActive",
+       "dwFlags": 0,
+       "tValue": false
+      },
+      {
+       "__type__": "DataStoreVariableBool",
+       "__typeHash__": 1828956601,
+       "dwType": 1828956601,
+       "tName": "IconActive",
+       "dwFlags": 0,
+       "tValue": false
+      },
+      {
+       "__type__": "DataStoreVariableUIImageHandle",
+       "__typeHash__": 3178519322,
+       "dwType": 3178519322,
+       "tName": "Icon",
+       "dwFlags": 0,
+       "tValue": {
+        "__type__": "UIImageHandleReference",
+        "__typeHash__": 1797021084,
+        "hImageHandle": 0
+       }
+      }
+     ],
+     "tObjects": [],
+     "tObjectCollections": [],
+     "dwFlags": 0
+    }
+   ],
    "dwFlags": 3
   }
  ]
