@@ -3462,6 +3462,58 @@
      "tHeader": {
       "__type__": "GBIDHeader",
       "__typeHash__": 2811181471,
+      "szName": "AffixMovementSpeedUniqueHigher",
+      "gbid": null,
+      "szNameGBIDHash": 1117491480
+     },
+     "arRanges": [
+      {
+       "__type__": "AttributeFormulaRange",
+       "__typeHash__": 3878713911,
+       "nItemPowerRangeStart": 0,
+       "tValueRange": {
+        "rangeValue1": 0,
+        "rangeValue2": 100
+       },
+       "tFormula": {
+        "value": "(14.5 + ((2.5/530)*(IPower()-10))  + (0.5 * RandomInt(1, 3))) /  100",
+        "compiled": "BgAAAAAAaEEGAAAAAAAgQAYAAAAAgAREDgAAAAEAAAAQAAAABgAAAAAAIEEMAAAADQAAAAsAAAAGAAAAAAAAPwYAAAAAAIA/BgAAAAAAQEABAAAABAAAAA0AAAALAAAABgAAAAAAyEIOAAAAAAAAAA=="
+       }
+      },
+      {
+       "__type__": "AttributeFormulaRange",
+       "__typeHash__": 3878713911,
+       "nItemPowerRangeStart": 590,
+       "tValueRange": {
+        "rangeValue1": 0,
+        "rangeValue2": 100
+       },
+       "tFormula": {
+        "value": "(20 + ((2/120)*(IPower()-590))  + (0.5 * RandomInt(1, 3 + ROUND((5/120)*(IPower()-590))))) /  100",
+        "compiled": "BgAAAAAAoEEGAAAAAAAAQAYAAAAAAPBCDgAAAAEAAAAQAAAABgAAAACAE0QMAAAADQAAAAsAAAAGAAAAAAAAPwYAAAAAAIA/BgAAAAAAQEAGAAAAAACgQAYAAAAAAPBCDgAAAAEAAAAQAAAABgAAAACAE0QMAAAADQAAAAEAAAApAAAACwAAAAEAAAAEAAAADQAAAAsAAAAGAAAAAADIQg4AAAAAAAAA"
+       }
+      },
+      {
+       "__type__": "AttributeFormulaRange",
+       "__typeHash__": 3878713911,
+       "nItemPowerRangeStart": 750,
+       "tValueRange": {
+        "rangeValue1": 0,
+        "rangeValue2": 100
+       },
+       "tFormula": {
+        "value": "(23 + ((1/50)*(IPower()-750))  + (0.5 * RandomInt(1, 8 + ROUND((4/50)*(IPower()-750))))) /  100",
+        "compiled": "BgAAAAAAuEEGAAAAAACAPwYAAAAAAEhCDgAAAAEAAAAQAAAABgAAAACAO0QMAAAADQAAAAsAAAAGAAAAAAAAPwYAAAAAAIA/BgAAAAAAAEEGAAAAAACAQAYAAAAAAEhCDgAAAAEAAAAQAAAABgAAAACAO0QMAAAADQAAAAEAAAApAAAACwAAAAEAAAAEAAAADQAAAAsAAAAGAAAAAADIQg4AAAAAAAAA"
+       }
+      }
+     ]
+    },
+    {
+     "__type__": "AttributeFormulaEntry",
+     "__typeHash__": 3863771036,
+     "tHeader": {
+      "__type__": "GBIDHeader",
+      "__typeHash__": 2811181471,
       "szName": "AffixMovementSpeed",
       "gbid": null,
       "szNameGBIDHash": 1679570602
@@ -22822,6 +22874,58 @@
        "tFormula": {
         "value": "65*2",
         "compiled": "BgAAAAAAAkMAAAAA"
+       }
+      }
+     ]
+    },
+    {
+     "__type__": "AttributeFormulaEntry",
+     "__typeHash__": 3863771036,
+     "tHeader": {
+      "__type__": "GBIDHeader",
+      "__typeHash__": 2811181471,
+      "szName": "InherentAffix200% (Flat)",
+      "gbid": null,
+      "szNameGBIDHash": 2516193946
+     },
+     "arRanges": [
+      {
+       "__type__": "AttributeFormulaRange",
+       "__typeHash__": 3878713911,
+       "nItemPowerRangeStart": 0,
+       "tValueRange": {
+        "rangeValue1": 1.25,
+        "rangeValue2": 0
+       },
+       "tFormula": {
+        "value": "1.25",
+        "compiled": "BgAAAAAAoD8AAAAA"
+       }
+      },
+      {
+       "__type__": "AttributeFormulaRange",
+       "__typeHash__": 3878713911,
+       "nItemPowerRangeStart": 700,
+       "tValueRange": {
+        "rangeValue1": 1.5,
+        "rangeValue2": 0
+       },
+       "tFormula": {
+        "value": "1.5",
+        "compiled": "BgAAAAAAwD8AAAAA"
+       }
+      },
+      {
+       "__type__": "AttributeFormulaRange",
+       "__typeHash__": 3878713911,
+       "nItemPowerRangeStart": 800,
+       "tValueRange": {
+        "rangeValue1": 2,
+        "rangeValue2": 0
+       },
+       "tFormula": {
+        "value": "2",
+        "compiled": "BgAAAAAAAEAAAAAA"
        }
       }
      ]

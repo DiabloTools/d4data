@@ -16,7 +16,7 @@
     "nSortPriorityOffset": 0,
     "eCullMode": 2,
     "fZBufferWriteEnable": false,
-    "eZBufferCompareFunc": 4,
+    "eZBufferCompareFunc": 8,
     "flZBias": 0,
     "flZSlopeScaleBias": 0,
     "unk_88ea918": 1,
@@ -37,9 +37,9 @@
      "eBackStencilOpFail": 1,
      "eBackStencilOpZFail": 1
     },
-    "fAlphaTestEnable": true,
+    "fAlphaTestEnable": false,
     "eAlphaTestCompareFunc": 5,
-    "bAlphaTestRefValue": 1,
+    "bAlphaTestRefValue": 0,
     "fAlphaMaskEnable": false,
     "eFillMode": 0,
     "fIndependentAlphaBlendEnable": false,
@@ -49,7 +49,7 @@
       "__typeHash__": 3409962653,
       "fAlphaBlendEnable": true,
       "eBlendOp": 1,
-      "eSrcBlendFactor": 5,
+      "eSrcBlendFactor": 2,
       "eDestBlendFactor": 6,
       "fSeparateAlphaBlendEnable": false,
       "eBlendOpAlpha": 1,
@@ -162,10 +162,10 @@
      "__type__": "ShaderPermutation",
      "__typeHash__": 3001537487,
      "unk_e3331b5": [
-      105,
       97,
-      106,
       98,
+      105,
+      106,
       19
      ],
      "unk_a2b58a8": [],
@@ -175,7 +175,7 @@
        "__typeHash__": 1801469402,
        "pShaderProgram": [],
        "pStateObject": [],
-       "dwKey": "39d64aa0500128e",
+       "dwKey": "-11c1888c44ecde55",
        "unk_8e5f439": [
         536870912,
         0,
@@ -193,14 +193,14 @@
        "__typeHash__": 1801469402,
        "pShaderProgram": [],
        "pStateObject": [],
-       "dwKey": "-2d3c86baf347c8af",
+       "dwKey": "1c87f0fd082f624",
        "unk_8e5f439": [
         2,
         402718720,
-        128,
         0,
         0,
-        0
+        0,
+        32768
        ],
        "unk_d4d5dbb": [
         6,
@@ -215,8 +215,8 @@
         108,
         98,
         106,
-        109,
-        97
+        97,
+        109
        ],
        "unk_6f6dbab": []
       },
@@ -246,6 +246,34 @@
     }
    ],
    "tUsedScalarMaterialValues": [
+    {
+     "__type__": "MaterialScalarValuesUsed",
+     "__typeHash__": 3952663046,
+     "snoMaterialValue": {
+      "__raw__": 1716200,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/Noise1 Use Polar UV.mtv",
+      "groupName": "MaterialValue",
+      "name": "Noise1 Use Polar UV"
+     },
+     "flDefaultValue": 0
+    },
+    {
+     "__type__": "MaterialScalarValuesUsed",
+     "__typeHash__": 3952663046,
+     "snoMaterialValue": {
+      "__raw__": 1716203,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/Noise2 Use Polar UV.mtv",
+      "groupName": "MaterialValue",
+      "name": "Noise2 Use Polar UV"
+     },
+     "flDefaultValue": 0
+    },
     {
      "__type__": "MaterialScalarValuesUsed",
      "__typeHash__": 3952663046,
@@ -483,20 +511,6 @@
       "name": "Global Scale"
      },
      "flDefaultValue": 1
-    },
-    {
-     "__type__": "MaterialScalarValuesUsed",
-     "__typeHash__": 3952663046,
-     "snoMaterialValue": {
-      "__raw__": 1939133,
-      "__group__": 81,
-      "__type__": "DT_SNO",
-      "__typeHash__": 2764331143,
-      "__targetFileName__": "base/meta/MaterialValue/ui_layers.mtv",
-      "groupName": "MaterialValue",
-      "name": "ui_layers"
-     },
-     "flDefaultValue": 0
     },
     {
      "__type__": "MaterialScalarValuesUsed",
@@ -749,6 +763,188 @@
       "name": "Noise Alpha Contribution 1"
      },
      "flDefaultValue": 1
+    },
+    {
+     "__type__": "MaterialScalarValuesUsed",
+     "__typeHash__": 3952663046,
+     "snoMaterialValue": {
+      "__raw__": 2261833,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/layer 1.mtv",
+      "groupName": "MaterialValue",
+      "name": "layer 1"
+     },
+     "flDefaultValue": 1
+    },
+    {
+     "__type__": "MaterialScalarValuesUsed",
+     "__typeHash__": 3952663046,
+     "snoMaterialValue": {
+      "__raw__": 2261834,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/Layer 2.mtv",
+      "groupName": "MaterialValue",
+      "name": "Layer 2"
+     },
+     "flDefaultValue": 0
+    },
+    {
+     "__type__": "MaterialScalarValuesUsed",
+     "__typeHash__": 3952663046,
+     "snoMaterialValue": {
+      "__raw__": 2278607,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/Mask 1 Min.mtv",
+      "groupName": "MaterialValue",
+      "name": "Mask 1 Min"
+     },
+     "flDefaultValue": 0
+    },
+    {
+     "__type__": "MaterialScalarValuesUsed",
+     "__typeHash__": 3952663046,
+     "snoMaterialValue": {
+      "__raw__": 2278608,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/Mask 1 Max.mtv",
+      "groupName": "MaterialValue",
+      "name": "Mask 1 Max"
+     },
+     "flDefaultValue": 1
+    },
+    {
+     "__type__": "MaterialScalarValuesUsed",
+     "__typeHash__": 3952663046,
+     "snoMaterialValue": {
+      "__raw__": 2278683,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/Mask 2 Min.mtv",
+      "groupName": "MaterialValue",
+      "name": "Mask 2 Min"
+     },
+     "flDefaultValue": 0
+    },
+    {
+     "__type__": "MaterialScalarValuesUsed",
+     "__typeHash__": 3952663046,
+     "snoMaterialValue": {
+      "__raw__": 2278690,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/Mask 2 Max.mtv",
+      "groupName": "MaterialValue",
+      "name": "Mask 2 Max"
+     },
+     "flDefaultValue": 1
+    },
+    {
+     "__type__": "MaterialScalarValuesUsed",
+     "__typeHash__": 3952663046,
+     "snoMaterialValue": {
+      "__raw__": 2278691,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/Noise 1 Min.mtv",
+      "groupName": "MaterialValue",
+      "name": "Noise 1 Min"
+     },
+     "flDefaultValue": 0
+    },
+    {
+     "__type__": "MaterialScalarValuesUsed",
+     "__typeHash__": 3952663046,
+     "snoMaterialValue": {
+      "__raw__": 2278692,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/Noise 2 Min.mtv",
+      "groupName": "MaterialValue",
+      "name": "Noise 2 Min"
+     },
+     "flDefaultValue": 0
+    },
+    {
+     "__type__": "MaterialScalarValuesUsed",
+     "__typeHash__": 3952663046,
+     "snoMaterialValue": {
+      "__raw__": 2278693,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/Noise 2 Max.mtv",
+      "groupName": "MaterialValue",
+      "name": "Noise 2 Max"
+     },
+     "flDefaultValue": 1
+    },
+    {
+     "__type__": "MaterialScalarValuesUsed",
+     "__typeHash__": 3952663046,
+     "snoMaterialValue": {
+      "__raw__": 2278698,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/Alpha Max.mtv",
+      "groupName": "MaterialValue",
+      "name": "Alpha Max"
+     },
+     "flDefaultValue": 1
+    },
+    {
+     "__type__": "MaterialScalarValuesUsed",
+     "__typeHash__": 3952663046,
+     "snoMaterialValue": {
+      "__raw__": 2278699,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/Alpha Min.mtv",
+      "groupName": "MaterialValue",
+      "name": "Alpha Min"
+     },
+     "flDefaultValue": 0
+    },
+    {
+     "__type__": "MaterialScalarValuesUsed",
+     "__typeHash__": 3952663046,
+     "snoMaterialValue": {
+      "__raw__": 2278702,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/Noise 1 Max.mtv",
+      "groupName": "MaterialValue",
+      "name": "Noise 1 Max"
+     },
+     "flDefaultValue": 1
+    },
+    {
+     "__type__": "MaterialScalarValuesUsed",
+     "__typeHash__": 3952663046,
+     "snoMaterialValue": {
+      "__raw__": 2336892,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/Additive Blending.mtv",
+      "groupName": "MaterialValue",
+      "name": "Additive Blending"
+     },
+     "flDefaultValue": 0
     }
    ],
    "tUsedVectorMaterialValues": [
@@ -1072,7 +1268,7 @@
    "__typeHash__": 1028015787,
    "__type__": "DT_BYTE",
    "dataOffset": 32,
-   "dataSize": 13635
+   "dataSize": 14829
   }
  }
 }
