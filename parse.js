@@ -637,7 +637,7 @@ let basicTypes = {
           ret.value[c] = struct;
           dataOffset += subresults.readLength;
           dataSize -= subresults.readLength;
-        }  
+        }
       }
     }
   },
@@ -646,7 +646,7 @@ let basicTypes = {
 
     let padding1 = file.readInt32LE(offset);
     let padding2 = file.readInt32LE(offset + 4);
-    let _dataOffset = file.readInt32LE(offset + 8); 
+    let _dataOffset = file.readInt32LE(offset + 8);
     let dataOffset = _dataOffset;
     let _dataSize = file.readInt32LE(offset + 12);
     let dataSize = _dataSize;
@@ -929,7 +929,7 @@ function readStructure(file, typeHashes, offset, field, fieldPath, results = { r
 
       if (ret.eAttribute !== null && ret.eAttribute !== undefined && ret.eAttribute !== -1) {
         ret.__eAttribute_name__ = attributes[ret.eAttribute].name;
-      }    
+      }
     });
 
     results.readLength += type.size;
