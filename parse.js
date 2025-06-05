@@ -17,6 +17,7 @@ let tocflat = {};
 let formatHashes = {};
 let replacedSnos = {};
 let encryptedSnos = {};
+let encryptedNames = {};
 let snoPayloadMap = {};
 let gbid = fs.existsSync('json/GBID.json') ? JSON.parse(fs.readFileSync('json/GBID.json'), null, ' ') : {};
 //let readLog = [];
@@ -107,7 +108,7 @@ if (fs.existsSync('data/base/CoreTOC.dat')) {
         nameLength++;
       }
 
-      let name = file.subarray(pName, pName + nameLength).toString();
+      let name = file.subarray(pName, pName + nameLength).toString().trim();
       toc[snoGroup] = toc[snoGroup] || {};
       toc[snoGroup][snoId] = name;
       tocflat[snoId] = [name, snoGroup];
@@ -193,6 +194,39 @@ if (fs.existsSync('data/base/EncryptedSNOs.dat')) {
 else {
   encryptedSnos = JSON.parse(fs.readFileSync('json/base/EncryptedSNOs.dat.json'));
 }
+
+fs.readdirSync('data/base').filter(fn => fn.startsWith('EncryptedNameDict-')).forEach(fileName => {
+  let file = fs.readFileSync('data/base/' + fileName);
+  const signature = file.readUInt32LE(0);
+  if (signature != 0xABCD4567) {
+    console.warn("Invalid signature in data/base/" + fileName);
+    return;
+  }
+  const entryCount = file.readUInt32LE(4);
+
+  const headerSize = 8;
+  const entrySize = 8;
+  let nameOffset = headerSize + entryCount * entrySize;
+  for (let i = 0; i < entryCount; i++) {
+    const entryOffset = headerSize + i * entrySize;
+    const snoGroup = file.readInt32LE(entryOffset);
+    const snoId = file.readInt32LE(entryOffset + 4);
+
+    let nameLength = 0;
+    for (let j = 0; j < 256 && file[nameOffset + nameLength] !== 0; j++) {
+      nameLength++;
+    }
+    const name = file.subarray(nameOffset, nameOffset + nameLength).toString();
+    nameOffset += nameLength + 1;
+
+    encryptedNames[snoGroup] = encryptedNames[snoGroup] || {};
+    encryptedNames[snoGroup][snoId] = name;
+    tocflat[snoId] = [name, snoGroup];
+  }
+
+  fs.writeFileSync('json/base/EncryptedNameDict.dat.json', JSON.stringify(encryptedNames, null, ' '));
+});
+
 
 function getTypeHashFromFormatHash (dwFormatHash) {
   for (let key of Object.keys(definitions)) {
@@ -338,8 +372,9 @@ let basicTypes = {
       ret.__replaced__ = replacedSnos[ret.__raw__][1];
     }
 
-    if (encryptedSnos[ret.__raw__]) {
-      ret.__encrypted__ = encryptedSnos[ret.__raw__][1];
+    const encryptedSno = encryptedSnos[ret.__raw__];
+    if (encryptedSno) {
+      ret.__encrypted__ = encryptedSno[1];
     }
 
     ret.__group__ = findSnoGroup(ret.__raw__) || field.group || -1;
@@ -348,15 +383,17 @@ let basicTypes = {
     this.references = this.references || {};
     this.references[ret.__raw__] = ret.__raw__;
 
-    if (!encryptedSnos[ret.__raw__] && tocflat[ret.__raw__] && snoFileInfo[ret.__group__] && snoFileInfo[ret.__group__][1]) {
+    const tocflatEntry = tocflat[ret.__raw__];
+    const tocFileName = tocflatEntry ? tocflatEntry[0] : undefined;
+    if (tocFileName && snoFileInfo[ret.__group__] && snoFileInfo[ret.__group__][1]) {
       let baseDir = ret.__group__ == 42 ? 'enUS_Text' : 'base';
-      ret.__targetFileName__ = baseDir + '/meta/' + snoFileInfo[ret.__group__][0] + '/' + tocflat[ret.__raw__][0] + '.' + snoFileInfo[ret.__group__][1];
+      ret.__targetFileName__ = baseDir + '/meta/' + snoFileInfo[ret.__group__][0] + '/' + tocFileName + '.' + snoFileInfo[ret.__group__][1];
     }
 
     ret.groupName = snoGroups[ret.__group__];
 
-    if (!encryptedSnos[ret.__raw__] && tocflat[ret.__raw__]) {
-      ret.name = tocflat[ret.__raw__][0];
+    if (tocFileName) {
+      ret.name = tocFileName;
     }
   },
   "DT_SNO_NAME": function (ret, file, typeHashes, offset, field, fieldPath, results = { readLength: 0 }) {
@@ -384,14 +421,14 @@ let basicTypes = {
     this.references = this.references || {};
     this.references[ret.__raw__] = ret.__raw__;
 
-    if (!encryptedSnos[ret.__raw__] && tocflat[ret.__raw__] && snoFileInfo[ret.__group__] && snoFileInfo[ret.__group__][1]) {
+    if (tocflat[ret.__raw__] && snoFileInfo[ret.__group__] && snoFileInfo[ret.__group__][1]) {
       let baseDir = ret.__group__ == 42 ? 'enUS_Text' : 'base';
       ret.__targetFileName__ = baseDir + '/meta/' + snoFileInfo[ret.__group__][0] + '/' + tocflat[ret.__raw__][0] + '.' + snoFileInfo[ret.__group__][1];
     }
 
     ret.groupName = snoGroups[ret.__group__];
 
-    if (!encryptedSnos[ret.__raw__] && tocflat[ret.__raw__]) {
+    if (tocflat[ret.__raw__]) {
       ret.name = tocflat[ret.__raw__][0];
     }
   },
