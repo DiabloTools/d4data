@@ -890,6 +890,7 @@ let basicTypes = {
       ret.datastore = datastore;
     }
     offset += 16;
+    results.readLength += 16;
 
     // DT_CSTRING
     const property = readStructure.bind(this)(file, [3846829457], offset, field, [...fieldPath, "property"]);
@@ -897,7 +898,20 @@ let basicTypes = {
       ret.property = property;
     }
     offset += 16;
+    results.readLength += 16;
 
+
+    const unknown = file.readUInt32LE(offset);
+    offset += 4;
+    results.readLength += 4;
+
+
+    const padding1 = file.readInt32LE(offset);
+    offset += 4;
+    results.readLength += 4;
+    if (padding1) {
+      console.error('      @', offset, 'DT_BINDABLEPROPERTY[', getType(typeHashes[1]).name, ']: Unexpected value in padding1:', padding1, padding1.toString(16), 'fieldPath:', fieldPath.slice(-3).join('.'), fieldPath[0]);
+    }
 
     const flags = file.readInt32LE(offset);
     if (flags & 0xffcd != 0) {
@@ -905,14 +919,15 @@ let basicTypes = {
       console.warn('      @', offset, 'DT_BINDABLEPROPERTY[', getType(typeHashes[1]).name, ']: Unexpected flag:', flags, 'next int:', file.readInt32LE(offset + 16), 'fieldPath:', fieldPath.slice(-3).join('.'));
     }
     offset += 4;
+    results.readLength += 4;
 
-    const padding = file.readInt32LE(offset);
-    if (padding != 0) {
-      ret.__error__ = 'Error: DT_BINDABLEPROPERTY: Unexpected value in padding!';
-      console.error('      @', offset, 'DT_BINDABLEPROPERTY[', getType(typeHashes[1]).name, ']: Unexpected value in padding:', padding, 'fieldPath:', fieldPath.slice(-3).join('.'));
+    const padding2 = file.readInt32LE(offset);
+    if (padding2 != 0) {
+      ret.__error__ = 'Error: DT_BINDABLEPROPERTY: Unexpected value in padding2!';
+      console.error('      @', offset, 'DT_BINDABLEPROPERTY[', getType(typeHashes[1]).name, ']: Unexpected value in padding2:', padding2, 'fieldPath:', fieldPath.slice(-3).join('.'));
     }
     offset += 4;
-    results.readLength += 40;
+    results.readLength += 4;
 
     let subresults = { readLength: 0 };
     ret.value = readStructure.bind(this)(file, typeHashes.slice(1), offset, field, [...fieldPath, "value"], subresults);
@@ -920,10 +935,10 @@ let basicTypes = {
 
     offset += subresults.readLength;
     if (offset % 8) {
-      const padding2 = file.readInt32LE(offset);
-      if (padding2 != 0) {
-        ret.__error__ = 'Error: DT_BINDABLEPROPERTY: Unexpected value in padding!';
-        console.error('      @', offset, 'DT_BINDABLEPROPERTY[', getType(typeHashes[1]).name, ']: Unexpected value in padding2:', padding2, 'fieldPath:', fieldPath.slice(-3).join('.'));
+      const padding3 = file.readInt32LE(offset);
+      if (padding3 != 0) {
+        ret.__error__ = 'Error: DT_BINDABLEPROPERTY: Unexpected value in padding3!';
+        console.error('      @', offset, 'DT_BINDABLEPROPERTY[', getType(typeHashes[1]).name, ']: Unexpected value in padding3:', padding3, 'fieldPath:', fieldPath.slice(-3).join('.'));
       }
       results.readLength += 4;
     }
