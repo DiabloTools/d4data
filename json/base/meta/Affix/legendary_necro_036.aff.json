@@ -6,7 +6,7 @@
  "dwFlags": 3,
  "eMagicType": 1,
  "eCategory": 0,
- "nItemPowerMin": 391,
+ "nItemPowerMin": 1,
  "nItemPowerMax": 2000,
  "tCost": {
   "value": "0",
@@ -54,13 +54,13 @@
    "tAttribute": {
     "__type__": "AttributeSpecifier",
     "__typeHash__": 3218190286,
-    "eAttribute": 1124,
+    "eAttribute": 1126,
     "__eAttribute_name__": "Affix_Value_1",
     "dwID": 0,
     "nParam": -1,
     "szAttributeFormula": {
-     "value": "10+(CurrentLegendaryRank()-1)*1",
-     "compiled": "BgAAAAAAIEEBAAAAUAAAAAYAAAAAAIA/DAAAAAYAAAAAAIA/DQAAAAsAAAAAAAAA"
+     "value": "0.15+(CurrentLegendaryRank()-1)*0.005",
+     "compiled": "BgAAAJqZGT4BAAAAUAAAAAYAAAAAAIA/DAAAAAYAAAAK16M7DQAAAAsAAAAAAAAA"
     },
     "gbidFormula": null,
     "unk_dffdf28": {
@@ -70,21 +70,17 @@
    }
   }
  ],
- "arStaticValues": [
-  2,
-  15,
-  50
- ],
- "snoPassivePower": null,
- "snoClassRequirement": {
-  "__raw__": 199277,
-  "__group__": 74,
+ "arStaticValues": [],
+ "snoPassivePower": {
+  "__raw__": 769244,
+  "__group__": 29,
   "__type__": "DT_SNO",
   "__typeHash__": 2764331143,
-  "__targetFileName__": "base/meta/PlayerClass/Necromancer.pcl",
-  "groupName": "PlayerClass",
-  "name": "Necromancer"
+  "__targetFileName__": "base/meta/Power/legendary_necro_036.pow",
+  "groupName": "Power",
+  "name": "legendary_necro_036"
  },
+ "snoClassRequirement": null,
  "arAffixSkillTags": [
   {
    "__raw__": 3821995300,
@@ -115,41 +111,6 @@
    "name": "Search_Physical"
   },
   {
-   "__raw__": 1229491299,
-   "__type__": "DT_GBID",
-   "__typeHash__": 1028170061,
-   "group": 56,
-   "name": "Search_ResourceEssence"
-  },
-  {
-   "__raw__": 726815596,
-   "__type__": "DT_GBID",
-   "__typeHash__": 1028170061,
-   "group": 56,
-   "name": "Skill_Primary_Macabre"
-  },
-  {
-   "__raw__": 2579369720,
-   "__type__": "DT_GBID",
-   "__typeHash__": 1028170061,
-   "group": 56,
-   "name": "Search_Copy_Core"
-  },
-  {
-   "__raw__": 2834424330,
-   "__type__": "DT_GBID",
-   "__typeHash__": 1028170061,
-   "group": 56,
-   "name": "Skill_Primary_Core"
-  },
-  {
-   "__raw__": 2892145024,
-   "__type__": "DT_GBID",
-   "__typeHash__": 1028170061,
-   "group": 56,
-   "name": "Search_Critical"
-  },
-  {
    "__raw__": 2882289733,
    "__type__": "DT_GBID",
    "__typeHash__": 1028170061,
@@ -157,8 +118,62 @@
    "name": "Archetype_Necromancer_Bone_Signature"
   }
  ],
- "arPowerToModify": [],
- "arSkillTagsToAdd": [],
+ "arPowerToModify": [
+  {
+   "__raw__": 469641,
+   "__group__": 29,
+   "__type__": "DT_SNO",
+   "__typeHash__": 2764331143,
+   "__targetFileName__": "base/meta/Power/Necromancer_BoneSpirit.pow",
+   "groupName": "Power",
+   "name": "Necromancer_BoneSpirit"
+  },
+  {
+   "__raw__": 499281,
+   "__group__": 29,
+   "__type__": "DT_SNO",
+   "__typeHash__": 2764331143,
+   "__targetFileName__": "base/meta/Power/Necromancer_BoneStorm.pow",
+   "groupName": "Power",
+   "name": "Necromancer_BoneStorm"
+  },
+  {
+   "__raw__": 432879,
+   "__group__": 29,
+   "__type__": "DT_SNO",
+   "__typeHash__": 2764331143,
+   "__targetFileName__": "base/meta/Power/Necromancer_BoneSpear.pow",
+   "groupName": "Power",
+   "name": "Necromancer_BoneSpear"
+  },
+  {
+   "__raw__": 500962,
+   "__group__": 29,
+   "__type__": "DT_SNO",
+   "__typeHash__": 2764331143,
+   "__targetFileName__": "base/meta/Power/Necromancer_BoneSplinters.pow",
+   "groupName": "Power",
+   "name": "Necromancer_BoneSplinters"
+  },
+  {
+   "__raw__": 493453,
+   "__group__": 29,
+   "__type__": "DT_SNO",
+   "__typeHash__": 2764331143,
+   "__targetFileName__": "base/meta/Power/Necromancer_BonePrison.pow",
+   "groupName": "Power",
+   "name": "Necromancer_BonePrison"
+  }
+ ],
+ "arSkillTagsToAdd": [
+  {
+   "__raw__": 1385301955,
+   "__type__": "DT_GBID",
+   "__typeHash__": 1028170061,
+   "group": 56,
+   "name": "Damage_Override_Shadow"
+  }
+ ],
  "arSkillTagsToRemove": [],
  "arConditionalSkillTags": [],
  "bIsTemperedAffix": false
