@@ -230,6 +230,7 @@ BehaviorContainerEvent
 BehaviorCustomArg
 BehaviorEventArg
 BehaviorFunction
+BehaviorFunctionVarCollection
 BehaviorGraph
 BehaviorMessage
 BehaviorMessageDispatcherBehaviorNode
@@ -705,6 +706,7 @@ DestroyOnProximityGizmoData
 DestroySceneMessage
 DestroyableObjectGizmoData
 DetachCarryableFromPlayerMessage
+DeviceRecoveryMessage
 DifficultyTierEntry
 DifficultyTierEntry_Table
 DifficultyTierSubcondition
@@ -843,6 +845,7 @@ FavorLevel_Table
 FavorSeason
 FavorSeason_Table
 FinishedGameSetupMessage
+FireGlobalEventBehaviorNode
 FlagLookup
 FlagSetDefinition
 FlippyConfiguration
@@ -973,6 +976,7 @@ GenericSkillTreeNodeMessage
 GenericSkillTreeSaveData
 GenericTreeNode
 GenericTreeNodeConnection
+GenericUIAction
 GenericVariableGetterBehaviorNode
 GenericVariableSetterBehaviorNode
 GeoChunk
@@ -1477,6 +1481,7 @@ MountSelectMessage
 MountSetMessage
 MountTypeFootstep
 MovableGenericGraphItem
+MovableGenericGraphItemWrapper
 MovieDefinition
 MsgTriggeredEvent
 MultiplyBehaviorNode
@@ -1854,6 +1859,7 @@ PowerBuffCrowdControl
 PowerBuffDOTDamage
 PowerBuffDefinition
 PowerBuffIdentifier
+PowerBuffReference
 PowerBuffSaveAttribute
 PowerCallbackBase
 PowerCameraFocusOverride
@@ -1910,10 +1916,12 @@ PowerConditionIsHealthy
 PowerConditionIsHidden
 PowerConditionIsInActorGroup
 PowerConditionIsInCombat
+PowerConditionIsInTown
 PowerConditionIsInjured
 PowerConditionIsMonsterFamilyArchetype
 PowerConditionIsMonsterRarity
 PowerConditionIsPet
+PowerConditionIsPlayer
 PowerConditionIsPlayerActiveSkill
 PowerConditionIsPower
 PowerConditionIsPowerOwner
@@ -1937,6 +1945,7 @@ PowerConditionPlayerAssignedSkill
 PowerConditionScriptFormulaCompare
 PowerConditionSkillRankCompare
 PowerConditionStoredValueEquals
+PowerConditionalDependency
 PowerCoreStatBenefitEntry
 PowerCrowdControlInfo
 PowerDefinition
@@ -1958,6 +1967,7 @@ PowerPhaseInitialization
 PowerPhaseLoop
 PowerPhaseOneShot
 PowerPhasePreplay
+PowerPreloadHelper
 PowerProjectileOverride
 PowerQueryConditionBase
 PowerRecastDefinition
@@ -2098,6 +2108,9 @@ ReputationAvailability
 ReputationBonusObjective
 ReputationClaimRewardMessage
 ReputationDefinition
+ReputationGainMonsterActor
+ReputationGainMonsterFamily
+ReputationGainQuest
 ReputationGainedMessage
 ReputationIncrementMessage
 ReputationItemReward
@@ -2739,6 +2752,7 @@ UIControlTemplate
 UICutsceneStyle
 UIDateTimeSettings
 UIDateTimeStyle
+UIDefaultAction
 UIDialogDefinition
 UIDownloadImageStyle
 UIDrawHookStyle
@@ -2818,6 +2832,7 @@ UITreeFolderStyleOptionalFieldMapDefaults
 UITreeStyle
 UITreeStyleOptionalFieldMapDefaults
 UITutorialStyle
+UIUpdateAction
 UIUpdateArgs
 UIUpdateMessage
 UIUpdateMessageHandlerBehaviorNode
@@ -3182,6 +3197,7 @@ arAllowedCategories
 arAllowedItemLabels
 arAllowedRarities
 arAllowedTileTypes
+arAlphaBlend
 arAmbushData
 arAnimClothOverrides
 arAnimSetAnimPreloadHelpers
@@ -3290,6 +3306,7 @@ arCompressedGrid
 arCompressedLevelAreaGrid
 arConditionData
 arConditionalAudioStates
+arConditionalDependencies
 arConditionalMaterialOverrides
 arConditionalSkillTags
 arConditionalWorlds
@@ -3586,6 +3603,7 @@ arMountTypeFootsteps
 arMountedClothOverrides
 arMounts
 arMountsTemplates
+arMovableGenericGraphItemWrappers
 arMusicSegments
 arNPCComponentIdsPerType
 arNPCComponentSetPreloadHelpers
@@ -3606,6 +3624,7 @@ arNpcPortrayalTypes
 arNpcTemplates
 arOceanMask
 arOptionalParams
+arOriginIcons
 arOutputPlugs
 arOverrides
 arOwnedPowers
@@ -3643,6 +3662,7 @@ arPointsPerRewardThreshold
 arPortalTypes
 arPotentialDungeonStates
 arPotionTiers
+arPowerPreloadHelpers
 arPowerScriptParams
 arPowerToModify
 arPowers
@@ -3700,6 +3720,9 @@ arRegionBoundaries
 arRegionOverrides
 arRemappedShaderFX
 arReputation
+arReputationGainMonsterActorList
+arReputationGainMonsterFamilyList
+arReputationGainQuestList
 arReputationLevelList
 arReputationRewards
 arReputations
@@ -4145,6 +4168,7 @@ bIsPublic
 bIsReinforcement
 bIsReinforcementMenu
 bIsRepeatableReward
+bIsScript
 bIsSeasonal
 bIsTemperedAffix
 bIsTransmog
@@ -4205,6 +4229,7 @@ bPassabilityDestEnabled
 bPassabilityDuringEnabled
 bPassword
 bPerfScreenshot
+bPersistsOnDeath
 bPhaseIsHidden
 bPlayEffects
 bPlayHealEffect
@@ -4355,6 +4380,8 @@ bWrapSelection
 bYawOnly
 baid
 behaviorContainer
+behaviorContainerSno
+behaviorMessageName
 bendClusterCount
 bendClusters
 bindNormal
@@ -4725,6 +4752,7 @@ dwSourceId
 dwSourcePlugID
 dwSourceShaderMapOverride
 dwSpawnedActorLife
+dwSpeakingPlayerGameAccountId
 dwStartTick
 dwStartTime
 dwState
@@ -4772,6 +4800,7 @@ dwURandomSeed
 dwUniqueID
 dwUniqueId
 dwUnlockLevel
+dwUpgradeType
 dwUpsellCategoryIndex
 dwVRandomSeed
 dwVal
@@ -4879,11 +4908,13 @@ eCheckboxStyle
 eChestGizmoType
 eClass
 eClassRestriction
+eClickPredicate
 eClipBehavior
 eClutterIndexLayer
 eCollectiblePowerRarity
 eCollectiblePowerType
 eCollisionShape
+eColorPickerOnChange
 eColorSpace
 eComboBoxTextJustify
 eComboBoxTextJustifyVertical
@@ -4940,6 +4971,7 @@ eDestBlendFactorAlpha
 eDetPathType
 eDevicePlugin
 eDisplayedQualityLevel
+eDrawHook
 eDropMinWorldTier
 eDruidSpiritType
 eDungeonFlavorType
@@ -5006,6 +5038,7 @@ eHWPlatform
 eHairState
 eHairStateGenderOverride
 eHealType
+eHeldButtonPredicate
 eHintingMode
 eHintingStyle
 eHiredMercenaries
@@ -5019,6 +5052,7 @@ eHitSound
 eHorizontalAnchoring
 eHotkey
 eHotkeyAlternate
+eHotkeyClickPredicate
 eIKLimb
 eIKTarget
 eIKTargetActor
@@ -5049,6 +5083,7 @@ eKeyAttrib
 eKillerMonsterRarity
 eKillerTeam
 eLOSCheck
+eLStickHandler
 eLabelType
 eLayer
 eLayeredHitSound
@@ -5074,8 +5109,10 @@ eMarkerSourceType
 eMaterial
 eMaterialImportance
 eMercenaryClass
+eMessageType
 eMetaDataType
 eMicrophoneMode
+eMiddleClickPredicate
 eMinIQM
 eMinimumMonsterRarity
 eMipFilter
@@ -5111,10 +5148,16 @@ eObjectType
 eObserverVolumeShape
 eOldSpec
 eOnAnimationEnd
+eOnChange
+eOnFocusNavigateAway
+eOnGainedFocus
+eOnKey
+eOnLostFocus
 eOnOwnerDeath
 eOnOwnerDeletion
 eOnOwnerPaused
 eOnOwnerResurrection
+eOnReturnEndEdit
 eOnSequenceEnd
 eOpenWorldNoSpawnVolumeShape
 eOperandType
@@ -5180,12 +5223,14 @@ eQualifier
 eQueryType
 eQuestChainType
 eQuestType
+eRStickPredicate
 eRank
 eRarity
 eRarityOverride
 eReason
 eRecipeEntryType
 eRecipeType
+eRedirectFocusOnChange
 eReferencePreloadMode
 eReflectionProbeShape
 eReinforcementGender
@@ -5207,6 +5252,7 @@ eRestrictionType
 eResult
 eRewardQuality
 eRewardType
+eRightClickPredicate
 eRoadType
 eRogueImbueType
 eRootNodeType
@@ -5222,6 +5268,7 @@ eScope
 eScoreType
 eScrollableTextStyle
 eScrollbarAlignment
+eScrollbarOnChange
 eScrollbarStyle
 eScrollbarVisibility
 eSeasonalInventoryType
@@ -5357,6 +5404,7 @@ editorUniqueId
 encloseChildren
 endIndex
 entry
+enumVal
 eventId
 eventName
 fAIDamageDisabled
@@ -6711,6 +6759,7 @@ four
 fows
 freshness
 friction
+function
 functionName
 fxSNO
 g
@@ -6858,6 +6907,7 @@ hDivisionName
 hDownCornerImage
 hEditPlaceholderText
 hEmptyCategoryMessage
+hEquipAreaImage
 hEquipAreaTemplate
 hEquipSlotTemplate
 hEventName
@@ -6969,6 +7019,7 @@ hLoadscreenTip
 hLoadscreenTipTitle
 hLockedIconImage
 hLogoImage
+hLoreIcon
 hMainIcon
 hMapMarkerImage
 hMapTimerName
@@ -7429,6 +7480,7 @@ nDefaultZoomBreakpoint
 nDegrade
 nDeltaXP
 nDepth
+nDeviceID
 nDimX
 nDimY
 nDimZ
@@ -7510,6 +7562,8 @@ nHitFlashMulDuration
 nHorizontalSpacing
 nID
 nIPower
+nIQMIPowerMax
+nIQMIPowerMin
 nImportanceScoreOverride
 nIndex
 nIndexBufferIndex
@@ -7628,6 +7682,7 @@ nMinMaxBehavior
 nMinWidth
 nMinimum
 nMinimumAncestralRequiredLevel
+nMinimumIQMRequiredLevel
 nMinimumSacredRequiredLevel
 nMinor1AffixCount
 nMinor2AffixCount
@@ -7840,6 +7895,7 @@ nVariableMaxValue
 nVariableMinValue
 nVendorDropMaxLevel
 nVendorDropMinLevel
+nVendorID
 nVertBufferIndex
 nVertCount
 nVertOffset
@@ -7879,8 +7935,11 @@ normal
 normalImage
 normalTiledStyle
 offset
+onClick
+onDrag
 onFinished
 onHitSounds
+onUpdate
 one
 outA
 outputPlugs
@@ -8371,6 +8430,7 @@ ptWeftClusters
 ptWeights
 ptWindowPiece
 ptrContent
+ptrMovableGenericGraphItem
 pwvNonlinearOffset
 q
 q16
@@ -8639,6 +8699,7 @@ snoBtnTiledStyleSelectedMouseOver
 snoBtnTiledStyleSelectedNormal
 snoBtnTiledStyleSelectedPressed
 snoBuff
+snoBuffFromPower
 snoBuffPower
 snoCacheReward
 snoCameraEffect
@@ -8749,6 +8810,7 @@ snoDefaultSoundTable
 snoDeluxe
 snoDeluxeToUltimate
 snoDemonScroll
+snoDependencies
 snoDepth
 snoDepthComplexity
 snoDeselectedCheckBoxSound
@@ -8796,6 +8858,8 @@ snoEnableTabCondition
 snoEnabledCondition
 snoEnchantmentPower
 snoEnlistReinforcementConversation
+snoEquipAreaCondition
+snoEquipAreaVFX
 snoEventEndSound
 snoExclusiveMarkerSet
 snoExistingKeyedDungeon
@@ -8893,6 +8957,7 @@ snoInventory
 snoInventoryUIWorld
 snoItalicStyle
 snoItem
+snoItemButtonOverlay
 snoItemInventorySound
 snoItemRequirement
 snoItemReward
@@ -9199,6 +9264,7 @@ snoReplacedPower
 snoReplacement
 snoReplacementAffix
 snoReputation
+snoReputationActiveCondition
 snoRequiredAchievement
 snoRequiredMaterials
 snoRequiredPower
@@ -9542,6 +9608,7 @@ szCategoryTemplate
 szCharacterCustomizationCameraName
 szCharacterSelectCameraName
 szCheat
+szCheatName
 szCheatString
 szClickPredicate
 szCollectionPath
@@ -9563,8 +9630,11 @@ szDefaultRelativePath
 szDescription
 szDesignerVariable
 szDesignerVariableProgressBarTemplate
+szDeviceDescription
 szDisplayName
 szDrawHook
+szDriverVersion
+szDriverWaitQueryCondition
 szEntryPoint
 szEnumName
 szEventName
@@ -9625,7 +9695,6 @@ szMarkerName
 szMaterialCostContainerName
 szMaxEditCharsLimitReachedControl
 szMiddleClickPredicate
-szMiddleMax
 szModName
 szMonsterCategory
 szMountMarkerName
@@ -9756,6 +9825,7 @@ szRelativePathFromBottom
 szRelativePathFromLeft
 szRelativePathFromRight
 szRelativePathFromTop
+szRightClickPredicate
 szRootControlPath
 szRootUIName
 szRuleName
@@ -9941,6 +10011,7 @@ tColorCorrection
 tColorSet
 tCombatEffectChance
 tCombatEffectOverride
+tComboboxOnClick
 tCommonPortalData
 tCompanionsHeroSaveData
 tCompletedBounties
@@ -10140,6 +10211,7 @@ tIQLDungeonKeyPowerRange
 tIQLPowerRanges
 tIQLSacredPowerRanges
 tIQLUpgradeAffixChoices
+tIQMPowerRanges
 tIcon
 tIconScale
 tIconTextures
@@ -10276,11 +10348,76 @@ tOceanIndicesInfo
 tOffsetRadius
 tOnActivateEffect
 tOnActivateEffects
+tOnBack
+tOnBackHeld
+tOnButton1
+tOnButton1Held
+tOnButton2
+tOnButton2Held
+tOnButton3
+tOnButton3Held
+tOnButton4
+tOnButton4Held
+tOnClick
 tOnClickEffect
+tOnClose
+tOnContextMenu
+tOnController
+tOnControllerButtonHeld
+tOnControllerButtonUp
+tOnDPadDown
+tOnDPadDownHeld
+tOnDPadLeft
+tOnDPadLeftHeld
+tOnDPadRight
+tOnDPadRightHeld
+tOnDPadUp
+tOnDPadUpHeld
+tOnDataChanged
+tOnDispose
+tOnDoubleClick
+tOnDragStart
+tOnDragStop
+tOnDragTargetRelease
 tOnEnabledEffect
+tOnEnd
+tOnGainedFocus
+tOnHitRegionEnter
+tOnHitRegionExit
 tOnHitSoundsPayload
 tOnHoverEffect
 tOnHoverEffects
+tOnInit
+tOnKeyHeldDown
+tOnKeyUp
+tOnL1
+tOnL1Held
+tOnL2
+tOnL2Held
+tOnL3
+tOnL3Held
+tOnLMBHeld
+tOnLostFocus
+tOnMiddleClick
+tOnOpen
+tOnOptionsButton
+tOnOptionsButtonHeld
+tOnR1
+tOnR1Held
+tOnR2
+tOnR2Held
+tOnR3
+tOnR3Held
+tOnRMBHeld
+tOnRightClick
+tOnScreenReader
+tOnSelChange
+tOnStart
+tOnStartHeld
+tOnTooltip
+tOnTouchPadButton
+tOnTouchPadButtonHeld
+tOnUpdate
 tOpenWorldMonsterPerPlayerScaling
 tOut
 tOutroDuration
@@ -10364,6 +10501,11 @@ tQuestReward
 tQuestRewardHistory
 tQuestTrackerIcon
 tQuestTrackerNightmareIcon
+tRStickDownHandler
+tRStickHandler
+tRStickLeftHandler
+tRStickRightHandler
+tRStickUpHandler
 tRadius
 tRadiusRange
 tRadiusTriggerIntervalRange
@@ -10808,6 +10950,8 @@ vVelocity
 vVelocityFromGravity
 vWorldPos
 value
+varCollection
+variables
 vbid
 vecChunkIndex
 vecCirrusOffset
