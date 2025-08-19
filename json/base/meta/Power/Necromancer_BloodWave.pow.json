@@ -228,7 +228,7 @@
  "unk_4bf03ff": true,
  "tAttackSpeed": {
   "value": "Attacks_Per_Second_Total",
-  "compiled": "BQAAAAAAAADUAAAA/v///wAAAAAAAAAA"
+  "compiled": "BQAAAAAAAADcAAAA/v///wAAAAAAAAAA"
  },
  "unk_6deb090": false,
  "unk_ed2bdad": false,
@@ -256,7 +256,25 @@
  "bMustBeLearned": true,
  "bCaptionsInside": false,
  "eShapeshiftForm": -1,
- "arResourceCosts": [],
+ "arResourceCosts": [
+  {
+   "__type__": "PowerResourceCost",
+   "__typeHash__": 2616788302,
+   "eType": 6,
+   "tMinRequired": {
+    "value": "SF_32 ? SF_33 : 0",
+    "compiled": "BQAAACYAAAAAAAAAAAAAAAAAAAAFAAAAJwAAAAAAAAAAAAAAAAAAAAYAAAAAAAAAEAAAAAAAAAA="
+   },
+   "tInitialCost": {
+    "value": "SF_32 ? SF_33 : 0",
+    "compiled": "BQAAACYAAAAAAAAAAAAAAAAAAAAFAAAAJwAAAAAAAAAAAAAAAAAAAAYAAAAAAAAAEAAAAAAAAAA="
+   },
+   "tChannellingCost": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   }
+  }
+ ],
  "tHealthCost": {
   "value": "0",
   "compiled": "BgAAAAAAAAAAAAAA"
@@ -278,8 +296,8 @@
   "compiled": "BgAAAAAAgD8AAAAA"
  },
  "tCooldownTime": {
-  "value": "SF_5",
-  "compiled": "BQAAAAsAAAAAAAAAAAAAAAAAAAAAAAAA"
+  "value": "SF_32 ? 0 : SF_5",
+  "compiled": "BQAAACYAAAAAAAAAAAAAAAAAAAAGAAAAAAAAAAUAAAALAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAA="
  },
  "tResourceCostReductionCoefficient": {
   "value": "1",
@@ -734,11 +752,9 @@
     "value": "1",
     "compiled": "BgAAAAAAgD8AAAAA"
    },
-   "unk_b7f0241": false,
    "eStackingBehavior": 0,
    "eStackingScope": 0,
    "unk_9261403": false,
-   "unk_d291777": false,
    "unk_db6680": false,
    "bVisibleInUI": false,
    "bShowDuration": false,
@@ -850,11 +866,9 @@
     "value": "1",
     "compiled": "BgAAAAAAgD8AAAAA"
    },
-   "unk_b7f0241": false,
    "eStackingBehavior": 0,
    "eStackingScope": 0,
    "unk_9261403": false,
-   "unk_d291777": false,
    "unk_db6680": false,
    "bVisibleInUI": true,
    "bShowDuration": true,
@@ -966,11 +980,9 @@
     "value": "1",
     "compiled": "BgAAAAAAgD8AAAAA"
    },
-   "unk_b7f0241": false,
    "eStackingBehavior": 0,
    "eStackingScope": 0,
    "unk_9261403": false,
-   "unk_d291777": false,
    "unk_db6680": false,
    "bVisibleInUI": false,
    "bShowDuration": false,
@@ -1082,11 +1094,9 @@
     "value": "1",
     "compiled": "BgAAAAAAgD8AAAAA"
    },
-   "unk_b7f0241": false,
    "eStackingBehavior": 0,
    "eStackingScope": 0,
    "unk_9261403": false,
-   "unk_d291777": false,
    "unk_db6680": false,
    "bVisibleInUI": false,
    "bShowDuration": false,
@@ -1198,11 +1208,9 @@
     "value": "1",
     "compiled": "BgAAAAAAgD8AAAAA"
    },
-   "unk_b7f0241": false,
    "eStackingBehavior": 0,
    "eStackingScope": 0,
    "unk_9261403": false,
-   "unk_d291777": false,
    "unk_db6680": false,
    "bVisibleInUI": false,
    "bShowDuration": false,
@@ -1300,8 +1308,8 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "(SF_29 == 0)? (5 * Table(34, sLevel)) : (5 * Table(34, sLevel)*(1+( SF_25)))",
-    "compiled": "BQAAACMAAAAAAAAAAAAAAAAAAAAGAAAAAAAAAAkAAAAGAAAAAACgQAYAAAAAAAhCBQAAAAEAAAAAAAAAAAAAAAAAAAABAAAACwAAAA0AAAAGAAAAAACgQAYAAAAAAAhCBQAAAAEAAAAAAAAAAAAAAAAAAAABAAAACwAAAA0AAAAGAAAAAACAPwUAAAAfAAAAAAAAAAAAAAAAAAAACwAAAA0AAAAQAAAAAAAAAA=="
+    "value": "(SF_29 == 0)? (SF_11 * Table(34, sLevel)) : (SF_11 * Table(34, sLevel)*(1+( SF_25)))",
+    "compiled": "BQAAACMAAAAAAAAAAAAAAAAAAAAGAAAAAAAAAAkAAAAFAAAAEQAAAAAAAAAAAAAAAAAAAAYAAAAAAAhCBQAAAAEAAAAAAAAAAAAAAAAAAAABAAAACwAAAA0AAAAFAAAAEQAAAAAAAAAAAAAAAAAAAAYAAAAAAAhCBQAAAAEAAAAAAAAAAAAAAAAAAAABAAAACwAAAA0AAAAGAAAAAACAPwUAAAAfAAAAAAAAAAAAAAAAAAAACwAAAA0AAAAQAAAAAAAAAA=="
    }
   },
   {
@@ -1324,8 +1332,8 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "18",
-    "compiled": "BgAAAAAAkEEAAAAA"
+    "value": "SF_32 ? SF_35 : 18",
+    "compiled": "BQAAACYAAAAAAAAAAAAAAAAAAAAFAAAAKQAAAAAAAAAAAAAAAAAAAAYAAAAAAJBBEAAAAAAAAAA="
    }
   },
   {
@@ -1381,15 +1389,15 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Affix_Value_1#legendary_necro_109 / 100",
-    "compiled": "BQAAAAAAAABmBAAAbqwSAAAAAAAGAAAAAADIQg4AAAAAAAAA"
+    "compiled": "BQAAAAAAAABzBAAAbqwSAAAAAAAGAAAAAADIQg4AAAAAAAAA"
    }
   },
   {
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "",
-    "compiled": ""
+    "value": "SF_32 ? SF_34 : 5",
+    "compiled": "BQAAACYAAAAAAAAAAAAAAAAAAAAFAAAAKAAAAAAAAAAAAAAAAAAAAAYAAAAAAKBAEAAAAAAAAAA="
    }
   },
   {
@@ -1413,7 +1421,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Affix_Value_1#Legendary_Necro_121 * Affix.Legendary_Necro_121.\"Static Value 0\"",
-    "compiled": "BQAAAAAAAABmBAAAjGYJAAAAAAAFAAAAYwAAAIxmCQAAAAAAAAAAAA0AAAAAAAAA"
+    "compiled": "BQAAAAAAAABzBAAAjGYJAAAAAAAFAAAAYwAAAIxmCQAAAAAAAAAAAA0AAAAAAAAA"
    }
   },
   {
@@ -1445,7 +1453,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Chance_For_Double_Damage_Per_Power#Necromancer_BloodWave",
-    "compiled": "BQAAAAAAAACXAACAKAsKAAAAAAAAAAAA"
+    "compiled": "BQAAAAAAAACZAACAKAsKAAAAAAAAAAAA"
    }
   },
   {
@@ -1476,8 +1484,8 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "5",
-    "compiled": "BgAAAAAAoEAAAAAA"
+    "value": "SF_32 ? SF_36 : 5",
+    "compiled": "BQAAACYAAAAAAAAAAAAAAAAAAAAFAAAAKgAAAAAAAAAAAAAAAAAAAAYAAAAAAKBAEAAAAAAAAAA="
    }
   },
   {
@@ -1501,7 +1509,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "min(SF_31,(((1+Multiplicative_Damage_Bonus_At_High_Health)*(1+Damage_Bonus_At_High_Health))+(1+Damage_Percent_Bonus_When_Fortified) - 2)*(SF_24))",
-    "compiled": "BQAAACUAAAAAAAAAAAAAAAAAAAAGAAAAAACAPwUAAAAAAAAANQQAAP7///8AAAAACwAAAAYAAAAAAIA/BQAAAAAAAAA0BAAA/v///wAAAAALAAAADQAAAAYAAAAAAIA/BQAAAAAAAADNAgAA/v///wAAAAALAAAACwAAAAYAAAAAAABADAAAAAUAAAAeAAAAAAAAAAAAAAAAAAAADQAAAAEAAAAAAAAAAAAAAA=="
+    "compiled": "BQAAACUAAAAAAAAAAAAAAAAAAAAGAAAAAACAPwUAAAAAAAAAQgQAAP7///8AAAAACwAAAAYAAAAAAIA/BQAAAAAAAABBBAAA/v///wAAAAALAAAADQAAAAYAAAAAAIA/BQAAAAAAAADbAgAA/v///wAAAAALAAAACwAAAAYAAAAAAABADAAAAAUAAAAeAAAAAAAAAAAAAAAAAAAADQAAAAEAAAAAAAAAAAAAAA=="
    }
   },
   {
@@ -1517,7 +1525,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Affix_Value_2#Pants_Unique_Necro_101 * (Weapon_Damage_Min_Total + Weapon_Damage_Delta_Total) * (1 + Main_Hand_Damage_Percent_Bonus)",
-    "compiled": "BQAAAAAAAABnBAAAHTMgAAAAAAAFAAAAAAAAAMYBAAD+////AAAAAAUAAAAAAAAAxwEAAP7///8AAAAACwAAAA0AAAAGAAAAAACAPwUAAAAAAAAA9QAAAP7///8AAAAACwAAAA0AAAAAAAAA"
+    "compiled": "BQAAAAAAAAB0BAAAHTMgAAAAAAAFAAAAAAAAANIBAAD+////AAAAAAUAAAAAAAAA0wEAAP7///8AAAAACwAAAA0AAAAGAAAAAACAPwUAAAAAAAAAAAEAAP7///8AAAAACwAAAA0AAAAAAAAA"
    }
   },
   {
@@ -1550,6 +1558,54 @@
    "tFormula": {
     "value": "2",
     "compiled": "BgAAAAAAAEAAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "((GetCollectiblePowerEquippedSlotIndex(SNO.CollectiblePower.S10_ChaosPerk_Necro_Unique_001)) > -1) ? 1 : 0",
+    "compiled": "BQAAAFkAAAD/6iMAAAAAAAAAAAABAAAAaAAAAAYAAAAAAIA/EQAAAAgAAAAGAAAAAACAPwYAAAAAAAAAEAAAAAAAAAA="
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "PowerTag.S10_ChaosPerk_Necro_Unique_001.\"Script Formula 2\"",
+    "compiled": "BQAAAAUAAACk6iMAAgAAAAAAAAAAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "3",
+    "compiled": "BgAAAAAAQEAAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "6",
+    "compiled": "BgAAAAAAwEAAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "3",
+    "compiled": "BgAAAAAAQEAAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "(SF_32 > 0) ? 0 : 1",
+    "compiled": "BQAAACYAAAAAAAAAAAAAAAAAAAAGAAAAAAAAAAgAAAAGAAAAAAAAAAYAAAAAAIA/EAAAAAAAAAA="
    }
   }
  ],
@@ -2523,5 +2579,6 @@
  "unk_376802e": false,
  "unk_bf25f64": 0,
  "arRecastPowerSequence": [],
- "arProjectileOverrides": []
+ "arProjectileOverrides": [],
+ "arConditionalDependencies": []
 }

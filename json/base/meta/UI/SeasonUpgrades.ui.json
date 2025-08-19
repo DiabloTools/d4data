@@ -20,8 +20,22 @@
     },
     "unk_441f783": "0",
     "hOptionalUIControlStyleFields": {
-     "szOnOpen": "UI_SeasonBlessings_OnOpen",
-     "szOnClose": "UI_SeasonBlessings_OnClose",
+     "tOnOpen": {
+      "__type__": "UIDefaultAction",
+      "__typeHash__": 2502206177,
+      "dwType": 2502206177,
+      "behaviorMessageName": 0,
+      "behaviorContainerSno": null,
+      "enumVal": 764
+     },
+     "tOnUpdate": {
+      "__type__": "UIUpdateAction",
+      "__typeHash__": 2860534367,
+      "dwType": 2860534367,
+      "behaviorMessageName": 0,
+      "behaviorContainerSno": null,
+      "enumVal": 25
+     },
      "unk_33fa5cf": {
       "__raw__": 1369483,
       "__group__": 40,
@@ -37,6 +51,14 @@
       "sDataStore": "",
       "sDataPath": "",
       "dwFlags": 18
+     },
+     "tOnClose": {
+      "__type__": "UIDefaultAction",
+      "__typeHash__": 2502206177,
+      "dwType": 2502206177,
+      "behaviorMessageName": 0,
+      "behaviorContainerSno": null,
+      "enumVal": 765
      },
      "bActive": 0,
      "snoOnOpenSound": {
@@ -57,7 +79,6 @@
       "groupName": "Sound",
       "name": "Play_UI_Menu_Close_Generic"
      },
-     "szOnUpdate": "UI_SeasonBlessings_OnUpdate",
      "bAcceptInitialFocus": 1
     },
     "tConsoleInput": {
@@ -517,8 +538,15 @@
             },
             "hOptionalUIWindowStyleFields": {
              "nTop": -2,
-             "szOnClick": "UIScreenManager_OnClose",
              "eVerticalAnchoring": 0,
+             "tOnClick": {
+              "__type__": "UIDefaultAction",
+              "__typeHash__": 2502206177,
+              "dwType": 2502206177,
+              "behaviorMessageName": 0,
+              "behaviorContainerSno": null,
+              "enumVal": 1205
+             },
              "eHorizontalAnchoring": 2
             },
             "tFont": {
@@ -1491,7 +1519,14 @@
                    "__type__": "UIControlConsoleInput",
                    "__typeHash__": 3089331074,
                    "hOptionalUIControlConsoleInputFields": {
-                    "szOnButton2": "UIScreenManager_OnClose"
+                    "tOnButton2": {
+                     "__type__": "UIDefaultAction",
+                     "__typeHash__": 2502206177,
+                     "dwType": 2502206177,
+                     "behaviorMessageName": 0,
+                     "behaviorContainerSno": null,
+                     "enumVal": 1205
+                    }
                    }
                   },
                   "hOptionalUIWindowStyleFields": {},
@@ -1665,7 +1700,14 @@
                "hOptionalUIControlConsoleInputFields": {}
               },
               "hOptionalUIWindowStyleFields": {
-               "szOnClick": "UIScreenManager_OnClose",
+               "tOnClick": {
+                "__type__": "UIDefaultAction",
+                "__typeHash__": 2502206177,
+                "dwType": 2502206177,
+                "behaviorMessageName": 0,
+                "behaviorContainerSno": null,
+                "enumVal": 1205
+               },
                "nBottom": 16,
                "nRight": -200,
                "nWidth": 200
@@ -1704,7 +1746,7 @@
                }
               },
               "hOptionalUIButtonStyleFields": {
-               "eHotkey": 126
+               "eHotkey": 127
               }
              }
             ],
@@ -1896,7 +1938,14 @@
                "__type__": "UIControlConsoleInput",
                "__typeHash__": 3089331074,
                "hOptionalUIControlConsoleInputFields": {
-                "szOnButton2": "UIScreenManager_OnClose"
+                "tOnButton2": {
+                 "__type__": "UIDefaultAction",
+                 "__typeHash__": 2502206177,
+                 "dwType": 2502206177,
+                 "behaviorMessageName": 0,
+                 "behaviorContainerSno": null,
+                 "enumVal": 1205
+                }
                }
               },
               "hOptionalUIWindowStyleFields": {},
@@ -2117,9 +2166,16 @@
       },
       "hOptionalUIWindowStyleFields": {
        "nTop": 9,
-       "szOnClick": "UIScreenManager_OnClose",
        "bOnlyReadChildren": 1,
        "eVerticalAnchoring": 0,
+       "tOnClick": {
+        "__type__": "UIDefaultAction",
+        "__typeHash__": 2502206177,
+        "dwType": 2502206177,
+        "behaviorMessageName": 0,
+        "behaviorContainerSno": null,
+        "enumVal": 1205
+       },
        "nRight": 0,
        "eHorizontalAnchoring": 2
       },
@@ -2177,8 +2233,15 @@
       },
       "hOptionalUIHotkeyStyleFields": {
        "eFixedControllerButton": 1,
-       "unk_ccd9967": "UIScreenManager_OnClose",
-       "eHotkey": 126
+       "eHotkey": 127,
+       "unk_f68242e": {
+        "__type__": "UIDefaultAction",
+        "__typeHash__": 2502206177,
+        "dwType": 2502206177,
+        "behaviorMessageName": 0,
+        "behaviorContainerSno": null,
+        "enumVal": 1205
+       }
       }
      }
     ],
@@ -4172,7 +4235,14 @@
             "__type__": "UIControlConsoleInput",
             "__typeHash__": 3089331074,
             "hOptionalUIControlConsoleInputFields": {
-             "szOnButton4": "UI_SeasonPass_Upgrade_Downgrade"
+             "tOnButton4": {
+              "__type__": "UIDefaultAction",
+              "__typeHash__": 2502206177,
+              "dwType": 2502206177,
+              "behaviorMessageName": 0,
+              "behaviorContainerSno": null,
+              "enumVal": 1225
+             }
             }
            },
            "hOptionalUIWindowStyleFields": {
@@ -4217,10 +4287,38 @@
             }
            },
            "hOptionalUIButtonStyleFields": {
-            "szOnHitRegionExit": "UI_SeasonPass_Upgrade_Mouseaway",
-            "szOnGainedFocus": "UI_SeasonPass_Upgrade_Mouseover",
-            "szOnLostFocus": "UI_SeasonPass_Upgrade_Mouseaway",
-            "szOnHitRegionEnter": "UI_SeasonPass_Upgrade_Mouseover"
+            "tOnLostFocus": {
+             "__type__": "UIDefaultAction",
+             "__typeHash__": 2502206177,
+             "dwType": 2502206177,
+             "behaviorMessageName": 0,
+             "behaviorContainerSno": null,
+             "enumVal": 1224
+            },
+            "tOnHitRegionExit": {
+             "__type__": "UIDefaultAction",
+             "__typeHash__": 2502206177,
+             "dwType": 2502206177,
+             "behaviorMessageName": 0,
+             "behaviorContainerSno": null,
+             "enumVal": 1224
+            },
+            "tOnHitRegionEnter": {
+             "__type__": "UIDefaultAction",
+             "__typeHash__": 2502206177,
+             "dwType": 2502206177,
+             "behaviorMessageName": 0,
+             "behaviorContainerSno": null,
+             "enumVal": 1223
+            },
+            "tOnGainedFocus": {
+             "__type__": "UIDefaultAction",
+             "__typeHash__": 2502206177,
+             "dwType": 2502206177,
+             "behaviorMessageName": 0,
+             "behaviorContainerSno": null,
+             "enumVal": 1223
+            }
            }
           }
          ],
@@ -6836,7 +6934,14 @@
               "hOptionalUIControlConsoleInputFields": {}
              },
              "hOptionalUIWindowStyleFields": {
-              "szOnClick": "ModalNotification_OnClick_OkButton",
+              "tOnClick": {
+               "__type__": "UIDefaultAction",
+               "__typeHash__": 2502206177,
+               "dwType": 2502206177,
+               "behaviorMessageName": 0,
+               "behaviorContainerSno": null,
+               "enumVal": 1192
+              },
               "nBottom": 0,
               "nRight": -350
              },
@@ -6880,7 +6985,7 @@
                "b": 255,
                "a": 255
               },
-              "eHotkeyAlternate": 126
+              "eHotkeyAlternate": 127
              }
             }
            ],
@@ -6920,7 +7025,14 @@
               "hOptionalUIControlConsoleInputFields": {}
              },
              "hOptionalUIWindowStyleFields": {
-              "szOnClick": "ModalNotification_OnClick_CancelButton",
+              "tOnClick": {
+               "__type__": "UIDefaultAction",
+               "__typeHash__": 2502206177,
+               "dwType": 2502206177,
+               "behaviorMessageName": 0,
+               "behaviorContainerSno": null,
+               "enumVal": 1193
+              },
               "nBottom": 0,
               "nRight": -350
              },
@@ -6972,7 +7084,7 @@
                "b": 255,
                "a": 255
               },
-              "eHotkeyAlternate": 126
+              "eHotkeyAlternate": 127
              }
             }
            ],
@@ -7059,7 +7171,14 @@
               "__type__": "UIControlConsoleInput",
               "__typeHash__": 3089331074,
               "hOptionalUIControlConsoleInputFields": {
-               "szOnButton1": "ModalNotification_OnClick_OkButton"
+               "tOnButton1": {
+                "__type__": "UIDefaultAction",
+                "__typeHash__": 2502206177,
+                "dwType": 2502206177,
+                "behaviorMessageName": 0,
+                "behaviorContainerSno": null,
+                "enumVal": 1192
+               }
               }
              },
              "hOptionalUIWindowStyleFields": {},
@@ -7130,7 +7249,14 @@
               "__type__": "UIControlConsoleInput",
               "__typeHash__": 3089331074,
               "hOptionalUIControlConsoleInputFields": {
-               "szOnButton2": "ModalNotification_OnClick_CancelButton"
+               "tOnButton2": {
+                "__type__": "UIDefaultAction",
+                "__typeHash__": 2502206177,
+                "dwType": 2502206177,
+                "behaviorMessageName": 0,
+                "behaviorContainerSno": null,
+                "enumVal": 1193
+               }
               }
              },
              "hOptionalUIWindowStyleFields": {},
@@ -7193,8 +7319,15 @@
            "unk_441f783": "0",
            "hOptionalUIControlStyleFields": {},
            "hOptionalUIHotkeyStyleFields": {
-            "unk_ccd9967": "ModalNotification_OnClick_CancelButton",
-            "eHotkey": 126,
+            "eHotkey": 127,
+            "unk_f68242e": {
+             "__type__": "UIDefaultAction",
+             "__typeHash__": 2502206177,
+             "dwType": 2502206177,
+             "behaviorMessageName": 0,
+             "behaviorContainerSno": null,
+             "enumVal": 1193
+            },
             "snoOnActionSound": {
              "__raw__": 157389,
              "__group__": 40,

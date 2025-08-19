@@ -144,7 +144,7 @@
  "unk_4bf03ff": true,
  "tAttackSpeed": {
   "value": "Attacks_Per_Second_Total",
-  "compiled": "BQAAAAAAAADUAAAA/v///wAAAAAAAAAA"
+  "compiled": "BQAAAAAAAADcAAAA/v///wAAAAAAAAAA"
  },
  "unk_6deb090": false,
  "unk_ed2bdad": false,
@@ -172,7 +172,25 @@
  "bMustBeLearned": true,
  "bCaptionsInside": false,
  "eShapeshiftForm": 0,
- "arResourceCosts": [],
+ "arResourceCosts": [
+  {
+   "__type__": "PowerResourceCost",
+   "__typeHash__": 2616788302,
+   "eType": 5,
+   "tMinRequired": {
+    "value": "SF_29 ? SF_30 : 0",
+    "compiled": "BQAAACMAAAAAAAAAAAAAAAAAAAAFAAAAJAAAAAAAAAAAAAAAAAAAAAYAAAAAAAAAEAAAAAAAAAA="
+   },
+   "tInitialCost": {
+    "value": "SF_29 ? SF_30 : 0",
+    "compiled": "BQAAACMAAAAAAAAAAAAAAAAAAAAFAAAAJAAAAAAAAAAAAAAAAAAAAAYAAAAAAAAAEAAAAAAAAAA="
+   },
+   "tChannellingCost": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   }
+  }
+ ],
  "tHealthCost": {
   "value": "0",
   "compiled": "BgAAAAAAAAAAAAAA"
@@ -194,8 +212,8 @@
   "compiled": "BgAAAAAAgD8AAAAA"
  },
  "tCooldownTime": {
-  "value": "SF_3",
-  "compiled": "BQAAAAkAAAAAAAAAAAAAAAAAAAAAAAAA"
+  "value": "SF_29 ? 0 : SF_3",
+  "compiled": "BQAAACMAAAAAAAAAAAAAAAAAAAAGAAAAAAAAAAUAAAAJAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAA="
  },
  "tResourceCostReductionCoefficient": {
   "value": "1",
@@ -650,11 +668,9 @@
     "value": "1",
     "compiled": "BgAAAAAAgD8AAAAA"
    },
-   "unk_b7f0241": false,
    "eStackingBehavior": 0,
    "eStackingScope": 0,
    "unk_9261403": false,
-   "unk_d291777": false,
    "unk_db6680": false,
    "bVisibleInUI": false,
    "bShowDuration": false,
@@ -766,11 +782,9 @@
     "value": "1",
     "compiled": "BgAAAAAAgD8AAAAA"
    },
-   "unk_b7f0241": false,
    "eStackingBehavior": 0,
    "eStackingScope": 0,
    "unk_9261403": false,
-   "unk_d291777": false,
    "unk_db6680": false,
    "bVisibleInUI": false,
    "bShowDuration": false,
@@ -882,11 +896,9 @@
     "value": "1",
     "compiled": "BgAAAAAAgD8AAAAA"
    },
-   "unk_b7f0241": false,
    "eStackingBehavior": 0,
    "eStackingScope": 0,
    "unk_9261403": false,
-   "unk_d291777": false,
    "unk_db6680": false,
    "bVisibleInUI": false,
    "bShowDuration": false,
@@ -998,11 +1010,9 @@
     "value": "1",
     "compiled": "BgAAAAAAgD8AAAAA"
    },
-   "unk_b7f0241": false,
    "eStackingBehavior": 0,
    "eStackingScope": 0,
    "unk_9261403": false,
-   "unk_d291777": false,
    "unk_db6680": false,
    "bVisibleInUI": false,
    "bShowDuration": false,
@@ -1114,11 +1124,9 @@
     "value": "1",
     "compiled": "BgAAAAAAgD8AAAAA"
    },
-   "unk_b7f0241": false,
    "eStackingBehavior": 0,
    "eStackingScope": 0,
    "unk_9261403": false,
-   "unk_d291777": false,
    "unk_db6680": false,
    "bVisibleInUI": false,
    "bShowDuration": false,
@@ -1230,11 +1238,9 @@
     "value": "1",
     "compiled": "BgAAAAAAgD8AAAAA"
    },
-   "unk_b7f0241": false,
    "eStackingBehavior": 0,
    "eStackingScope": 0,
    "unk_9261403": false,
-   "unk_d291777": false,
    "unk_db6680": false,
    "bVisibleInUI": false,
    "bShowDuration": false,
@@ -1549,7 +1555,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Chance_For_Double_Damage_Per_Power#Druid_VineCreeper",
-    "compiled": "BQAAAAAAAACXAACA6cwEAAAAAAAAAAAA"
+    "compiled": "BQAAAAAAAACZAACA6cwEAAAAAAAAAAAA"
    }
   },
   {
@@ -1558,6 +1564,22 @@
    "tFormula": {
     "value": "SkillRank(SNO.Power.X1_Druid_Talent_Hybrid_T5_N6) * PowerTag.X1_Druid_Talent_Hybrid_T5_N6.\"Script Formula 1\"",
     "compiled": "BQAAAFkAAACmRx4AAAAAAAAAAAABAAAAFAAAAAUAAAAFAAAApkceAAEAAAAAAAAADQAAAAAAAAA="
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "((GetCollectiblePowerEquippedSlotIndex(SNO.CollectiblePower.S10_ChaosPerk_Druid_Unique_001)) > -1) ? 1 : 0",
+    "compiled": "BQAAAFkAAAD36iMAAAAAAAAAAAABAAAAaAAAAAYAAAAAAIA/EQAAAAgAAAAGAAAAAACAPwYAAAAAAAAAEAAAAAAAAAA="
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "PowerTag.S10_ChaosPerk_Druid_Unique_001.\"Script Formula 7\"",
+    "compiled": "BQAAAAUAAAC86iMABwAAAAAAAAAAAAAA"
    }
   }
  ],
@@ -1709,5 +1731,6 @@
  "unk_376802e": false,
  "unk_bf25f64": 0,
  "arRecastPowerSequence": [],
- "arProjectileOverrides": []
+ "arProjectileOverrides": [],
+ "arConditionalDependencies": []
 }

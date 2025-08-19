@@ -2732,11 +2732,32 @@
      },
      "unk_441f783": "0",
      "hOptionalUIControlStyleFields": {
-      "szOnOpen": "UI_Profile_OnOpen",
-      "szOnClose": "UI_Profile_OnClose",
+      "tOnOpen": {
+       "__type__": "UIDefaultAction",
+       "__typeHash__": 2502206177,
+       "dwType": 2502206177,
+       "behaviorMessageName": 0,
+       "behaviorContainerSno": null,
+       "enumVal": 669
+      },
+      "tOnUpdate": {
+       "__type__": "UIUpdateAction",
+       "__typeHash__": 2860534367,
+       "dwType": 2860534367,
+       "behaviorMessageName": 0,
+       "behaviorContainerSno": null,
+       "enumVal": 21
+      },
+      "tOnClose": {
+       "__type__": "UIDefaultAction",
+       "__typeHash__": 2502206177,
+       "dwType": 2502206177,
+       "behaviorMessageName": 0,
+       "behaviorContainerSno": null,
+       "enumVal": 670
+      },
       "bActive": 0,
-      "snoOnOpenSound": null,
-      "szOnUpdate": "UI_Profile_OnUpdate"
+      "snoOnOpenSound": null
      },
      "tConsoleInput": {
       "__type__": "UIControlConsoleInput",
@@ -3605,20 +3626,34 @@
                   "hOptionalUIControlConsoleInputFields": {}
                  },
                  "hOptionalUIWindowStyleFields": {
-                  "szOnDrag": "UI_Profile_OnHeroDrag",
                   "nHeight": 728,
                   "eVerticalAnchoring": 3,
                   "nWidth": 569,
-                  "szOnDragStart": "UI_Profile_OnHeroDragStart",
                   "eHorizontalAnchoring": 3,
-                  "szOnDragStop": "UI_Profile_OnHeroDragStop",
+                  "tOnDragStart": {
+                   "__type__": "UIDefaultAction",
+                   "__typeHash__": 2502206177,
+                   "dwType": 2502206177,
+                   "behaviorMessageName": 0,
+                   "behaviorContainerSno": null,
+                   "enumVal": 675
+                  },
+                  "onDrag": 20,
                   "bIsDragTarget": 1,
                   "hImageFrame": {
                    "__type__": "UIImageHandleReference",
                    "__typeHash__": 1797021084,
                    "hImageHandle": 3682872898
                   },
-                  "eWindowEatsClicks": 1
+                  "eWindowEatsClicks": 1,
+                  "tOnDragStop": {
+                   "__type__": "UIDefaultAction",
+                   "__typeHash__": 2502206177,
+                   "dwType": 2502206177,
+                   "behaviorMessageName": 0,
+                   "behaviorContainerSno": null,
+                   "enumVal": 676
+                  }
                  }
                 }
                ],
@@ -3923,9 +3958,30 @@
                       "__type__": "UIControlConsoleInput",
                       "__typeHash__": 3089331074,
                       "hOptionalUIControlConsoleInputFields": {
-                       "szOnL3": "",
-                       "szOnButton1": "",
-                       "szOnButton3": "UI_Profile_OpenContextMenu"
+                       "tOnL3": {
+                        "__type__": "UIDefaultAction",
+                        "__typeHash__": 2502206177,
+                        "dwType": 2502206177,
+                        "behaviorMessageName": 0,
+                        "behaviorContainerSno": null,
+                        "enumVal": -1
+                       },
+                       "tOnButton1": {
+                        "__type__": "UIDefaultAction",
+                        "__typeHash__": 2502206177,
+                        "dwType": 2502206177,
+                        "behaviorMessageName": 0,
+                        "behaviorContainerSno": null,
+                        "enumVal": -1
+                       },
+                       "tOnButton3": {
+                        "__type__": "UIDefaultAction",
+                        "__typeHash__": 2502206177,
+                        "dwType": 2502206177,
+                        "behaviorMessageName": 0,
+                        "behaviorContainerSno": null,
+                        "enumVal": 677
+                       }
                       }
                      },
                      "hOptionalUIWindowStyleFields": {},
@@ -3981,13 +4037,34 @@
                       "__type__": "UIControlConsoleInput",
                       "__typeHash__": 3089331074,
                       "hOptionalUIControlConsoleInputFields": {
-                       "szOnL3": "",
-                       "szOnButton3": ""
+                       "tOnL3": {
+                        "__type__": "UIDefaultAction",
+                        "__typeHash__": 2502206177,
+                        "dwType": 2502206177,
+                        "behaviorMessageName": 0,
+                        "behaviorContainerSno": null,
+                        "enumVal": -1
+                       },
+                       "tOnButton3": {
+                        "__type__": "UIDefaultAction",
+                        "__typeHash__": 2502206177,
+                        "dwType": 2502206177,
+                        "behaviorMessageName": 0,
+                        "behaviorContainerSno": null,
+                        "enumVal": -1
+                       }
                       }
                      },
                      "hOptionalUIWindowStyleFields": {
-                      "szOnDrag": "",
-                      "szOnDragStart": "",
+                      "tOnDragStart": {
+                       "__type__": "UIDefaultAction",
+                       "__typeHash__": 2502206177,
+                       "dwType": 2502206177,
+                       "behaviorMessageName": 0,
+                       "behaviorContainerSno": null,
+                       "enumVal": -1
+                      },
+                      "onDrag": -1,
                       "bIsDragTarget": 0
                      }
                     }
@@ -5991,7 +6068,14 @@
            },
            "hOptionalUIWindowStyleFields": {
             "nTop": 61,
-            "szOnClick": "UI_Profile_Close",
+            "tOnClick": {
+             "__type__": "UIDefaultAction",
+             "__typeHash__": 2502206177,
+             "dwType": 2502206177,
+             "behaviorMessageName": 0,
+             "behaviorContainerSno": null,
+             "enumVal": 671
+            },
             "eHorizontalAnchoring": 2
            },
            "tFont": {
@@ -6165,8 +6249,15 @@
              },
              "hOptionalUIWindowStyleFields": {
               "nTop": 0,
-              "szOnClick": "UI_Profile_Edit_Open",
               "eVerticalAnchoring": 0,
+              "tOnClick": {
+               "__type__": "UIDefaultAction",
+               "__typeHash__": 2502206177,
+               "dwType": 2502206177,
+               "behaviorMessageName": 0,
+               "behaviorContainerSno": null,
+               "enumVal": 682
+              },
               "eHorizontalAnchoring": 2,
               "eVisibilityCondition": 0
              },
@@ -6301,8 +6392,15 @@
             "hOptionalUIControlConsoleInputFields": {}
            },
            "hOptionalUIWindowStyleFields": {
-            "szOnClick": "UI_Profile_TogglePrivacy",
             "eVerticalAnchoring": 1,
+            "tOnClick": {
+             "__type__": "UIDefaultAction",
+             "__typeHash__": 2502206177,
+             "dwType": 2502206177,
+             "behaviorMessageName": 0,
+             "behaviorContainerSno": null,
+             "enumVal": 674
+            },
             "nRight": 0,
             "nLeft": -20,
             "eVisibilityCondition": 0
@@ -6542,8 +6640,15 @@
             "hOptionalUIControlConsoleInputFields": {}
            },
            "hOptionalUIWindowStyleFields": {
-            "szOnClick": "UI_Profile_ToggleEquipmentVisibility",
             "eVerticalAnchoring": 1,
+            "tOnClick": {
+             "__type__": "UIDefaultAction",
+             "__typeHash__": 2502206177,
+             "dwType": 2502206177,
+             "behaviorMessageName": 0,
+             "behaviorContainerSno": null,
+             "enumVal": 1568
+            },
             "nRight": 0,
             "nLeft": -20,
             "eVisibilityCondition": 0
@@ -6813,8 +6918,15 @@
             "hOptionalUIControlConsoleInputFields": {}
            },
            "hOptionalUIWindowStyleFields": {
-            "szOnClick": "UI_Profile_OpenContextMenu",
             "eVerticalAnchoring": 1,
+            "tOnClick": {
+             "__type__": "UIDefaultAction",
+             "__typeHash__": 2502206177,
+             "dwType": 2502206177,
+             "behaviorMessageName": 0,
+             "behaviorContainerSno": null,
+             "enumVal": 677
+            },
             "nRight": 0,
             "nLeft": -20,
             "eVisibilityCondition": 0
@@ -8037,7 +8149,14 @@
          "hOptionalUIControlStyleFields": {},
          "hOptionalUIHotkeyStyleFields": {
           "eFixedControllerButton": 15,
-          "unk_ccd9967": "UI_Profile_TogglePrivacy",
+          "unk_f68242e": {
+           "__type__": "UIDefaultAction",
+           "__typeHash__": 2502206177,
+           "dwType": 2502206177,
+           "behaviorMessageName": 0,
+           "behaviorContainerSno": null,
+           "enumVal": 674
+          },
           "snoOnActionSound": {
            "__raw__": 137607,
            "__group__": 40,
@@ -8072,7 +8191,14 @@
          "hOptionalUIControlStyleFields": {},
          "hOptionalUIHotkeyStyleFields": {
           "eFixedControllerButton": 2,
-          "unk_ccd9967": "UI_Profile_OpenContextMenu",
+          "unk_f68242e": {
+           "__type__": "UIDefaultAction",
+           "__typeHash__": 2502206177,
+           "dwType": 2502206177,
+           "behaviorMessageName": 0,
+           "behaviorContainerSno": null,
+           "enumVal": 677
+          },
           "snoOnActionSound": null
          }
         }
@@ -8098,9 +8224,16 @@
          "unk_441f783": "0",
          "hOptionalUIControlStyleFields": {},
          "hOptionalUIHotkeyStyleFields": {
+          "eHotkeyClickPredicate": 15,
           "eFixedControllerButton": 3,
-          "unk_ccd9967": "UI_Profile_Edit_Open",
-          "szHotkeyClickPredicate": "UI_Profile_OpenEditPredicate",
+          "unk_f68242e": {
+           "__type__": "UIDefaultAction",
+           "__typeHash__": 2502206177,
+           "dwType": 2502206177,
+           "behaviorMessageName": 0,
+           "behaviorContainerSno": null,
+           "enumVal": 682
+          },
           "snoOnActionSound": {
            "__raw__": 137607,
            "__group__": 40,
@@ -8134,8 +8267,15 @@
          "unk_441f783": "0",
          "hOptionalUIControlStyleFields": {},
          "hOptionalUIHotkeyStyleFields": {
-          "unk_ccd9967": "UI_Profile_Close",
-          "eHotkey": 126
+          "eHotkey": 127,
+          "unk_f68242e": {
+           "__type__": "UIDefaultAction",
+           "__typeHash__": 2502206177,
+           "dwType": 2502206177,
+           "behaviorMessageName": 0,
+           "behaviorContainerSno": null,
+           "enumVal": 671
+          }
          }
         }
        ],
@@ -9095,7 +9235,14 @@
                },
                "unk_441f783": "0",
                "hOptionalUIControlStyleFields": {
-                "szOnSelChange": "UI_Profile_Edit_OnTabSelectionChanged"
+                "tOnSelChange": {
+                 "__type__": "UIDefaultAction",
+                 "__typeHash__": 2502206177,
+                 "dwType": 2502206177,
+                 "behaviorMessageName": 0,
+                 "behaviorContainerSno": null,
+                 "enumVal": 686
+                }
                },
                "hOptionalUIRadioButtonGroupStyleFields": {
                 "szStoryboardTransitionIn": ".Storyboard_Tab_Transition"
@@ -9125,8 +9272,15 @@
                 "szIDGeneric01": "Tabs_RadioButtonGroup"
                },
                "hOptionalUIHotkeyStyleFields": {
-                "szOnController": "UIGeneric_SelectRadioButtonGroupPrevious",
-                "eHotkey": 130
+                "tOnController": {
+                 "__type__": "UIDefaultAction",
+                 "__typeHash__": 2502206177,
+                 "dwType": 2502206177,
+                 "behaviorMessageName": 0,
+                 "behaviorContainerSno": null,
+                 "enumVal": 1303
+                },
+                "eHotkey": 131
                }
               }
              ],
@@ -9153,8 +9307,15 @@
                 "szIDGeneric01": "Tabs_RadioButtonGroup"
                },
                "hOptionalUIHotkeyStyleFields": {
-                "szOnController": "UIGeneric_SelectRadioButtonGroupNext",
-                "eHotkey": 131
+                "tOnController": {
+                 "__type__": "UIDefaultAction",
+                 "__typeHash__": 2502206177,
+                 "dwType": 2502206177,
+                 "behaviorMessageName": 0,
+                 "behaviorContainerSno": null,
+                 "enumVal": 1304
+                },
+                "eHotkey": 132
                }
               }
              ],
@@ -11473,7 +11634,14 @@
                        },
                        "unk_441f783": "0",
                        "hOptionalUIControlStyleFields": {
-                        "szOnSelChange": "UI_Profile_Edit_OnEmblemSelectionChanged"
+                        "tOnSelChange": {
+                         "__type__": "UIDefaultAction",
+                         "__typeHash__": 2502206177,
+                         "dwType": 2502206177,
+                         "behaviorMessageName": 0,
+                         "behaviorContainerSno": null,
+                         "enumVal": 687
+                        }
                        },
                        "hOptionalUIRadioButtonGroupStyleFields": {}
                       }
@@ -11660,7 +11828,14 @@
                   "hOptionalUIControlConsoleInputFields": {}
                  },
                  "hOptionalUIWindowStyleFields": {
-                  "szOnClick": "UI_Profile_Edit_OnConfirm"
+                  "tOnClick": {
+                   "__type__": "UIDefaultAction",
+                   "__typeHash__": 2502206177,
+                   "dwType": 2502206177,
+                   "behaviorMessageName": 0,
+                   "behaviorContainerSno": null,
+                   "enumVal": 684
+                  }
                  },
                  "tFont": {
                   "__type__": "UIControlFont",
@@ -11742,7 +11917,14 @@
                   "hOptionalUIControlConsoleInputFields": {}
                  },
                  "hOptionalUIWindowStyleFields": {
-                  "szOnClick": "UI_Profile_Edit_OnResetToDefault"
+                  "tOnClick": {
+                   "__type__": "UIDefaultAction",
+                   "__typeHash__": 2502206177,
+                   "dwType": 2502206177,
+                   "behaviorMessageName": 0,
+                   "behaviorContainerSno": null,
+                   "enumVal": 685
+                  }
                  },
                  "tFont": {
                   "__type__": "UIControlFont",
@@ -11812,7 +11994,14 @@
                   "hOptionalUIControlConsoleInputFields": {}
                  },
                  "hOptionalUIWindowStyleFields": {
-                  "szOnClick": "UI_Profile_Edit_Close"
+                  "tOnClick": {
+                   "__type__": "UIDefaultAction",
+                   "__typeHash__": 2502206177,
+                   "dwType": 2502206177,
+                   "behaviorMessageName": 0,
+                   "behaviorContainerSno": null,
+                   "enumVal": 683
+                  }
                  },
                  "tFont": {
                   "__type__": "UIControlFont",
@@ -12234,8 +12423,15 @@
                "unk_441f783": "0",
                "hOptionalUIControlStyleFields": {},
                "hOptionalUIHotkeyStyleFields": {
-                "unk_ccd9967": "UI_Profile_Edit_Close",
-                "eHotkey": 126,
+                "eHotkey": 127,
+                "unk_f68242e": {
+                 "__type__": "UIDefaultAction",
+                 "__typeHash__": 2502206177,
+                 "dwType": 2502206177,
+                 "behaviorMessageName": 0,
+                 "behaviorContainerSno": null,
+                 "enumVal": 683
+                },
                 "snoOnActionSound": {
                  "__raw__": 137607,
                  "__group__": 40,
@@ -12269,9 +12465,16 @@
                "unk_441f783": "0",
                "hOptionalUIControlStyleFields": {},
                "hOptionalUIHotkeyStyleFields": {
+                "eHotkeyClickPredicate": 19,
                 "eFixedControllerButton": 3,
-                "unk_ccd9967": "UI_Profile_Edit_OnConfirm",
-                "szHotkeyClickPredicate": "UI_Profile_Edit_ConfirmPredicate",
+                "unk_f68242e": {
+                 "__type__": "UIDefaultAction",
+                 "__typeHash__": 2502206177,
+                 "dwType": 2502206177,
+                 "behaviorMessageName": 0,
+                 "behaviorContainerSno": null,
+                 "enumVal": 684
+                },
                 "snoOnActionSound": {
                  "__raw__": 1369477,
                  "__group__": 40,
@@ -12305,10 +12508,24 @@
                "unk_441f783": "0",
                "hOptionalUIControlStyleFields": {},
                "hOptionalUIHotkeyStyleFields": {
-                "szOnController": "",
+                "eHotkeyClickPredicate": -1,
+                "tOnController": {
+                 "__type__": "UIDefaultAction",
+                 "__typeHash__": 2502206177,
+                 "dwType": 2502206177,
+                 "behaviorMessageName": 0,
+                 "behaviorContainerSno": null,
+                 "enumVal": -1
+                },
                 "eFixedControllerButton": 2,
-                "unk_ccd9967": "UI_Profile_Edit_OnResetToDefault",
-                "szHotkeyClickPredicate": "",
+                "unk_f68242e": {
+                 "__type__": "UIDefaultAction",
+                 "__typeHash__": 2502206177,
+                 "dwType": 2502206177,
+                 "behaviorMessageName": 0,
+                 "behaviorContainerSno": null,
+                 "enumVal": 685
+                },
                 "snoOnActionSound": {
                  "__raw__": 137607,
                  "__group__": 40,
@@ -12430,7 +12647,14 @@
            },
            "hOptionalUIWindowStyleFields": {
             "nTop": 100,
-            "szOnClick": "UI_Profile_Edit_Close",
+            "tOnClick": {
+             "__type__": "UIDefaultAction",
+             "__typeHash__": 2502206177,
+             "dwType": 2502206177,
+             "behaviorMessageName": 0,
+             "behaviorContainerSno": null,
+             "enumVal": 683
+            },
             "nRight": 30,
             "eHorizontalAnchoring": 2
            },
@@ -12518,7 +12742,14 @@
        },
        "hOptionalUIHotkeyStyleFields": {
         "eFixedControllerButton": 14,
-        "unk_ccd9967": "UI_Profile_Expand"
+        "unk_f68242e": {
+         "__type__": "UIDefaultAction",
+         "__typeHash__": 2502206177,
+         "dwType": 2502206177,
+         "behaviorMessageName": 0,
+         "behaviorContainerSno": null,
+         "enumVal": 672
+        }
        }
       }
      ],
@@ -12553,8 +12784,30 @@
      },
      "unk_441f783": "0",
      "hOptionalUIControlStyleFields": {
-      "szOnOpen": "UI_Profile_OnOpen",
-      "szOnClose": "UI_Profile_OnClose",
+      "tOnOpen": {
+       "__type__": "UIDefaultAction",
+       "__typeHash__": 2502206177,
+       "dwType": 2502206177,
+       "behaviorMessageName": 0,
+       "behaviorContainerSno": null,
+       "enumVal": 669
+      },
+      "tOnUpdate": {
+       "__type__": "UIUpdateAction",
+       "__typeHash__": 2860534367,
+       "dwType": 2860534367,
+       "behaviorMessageName": 0,
+       "behaviorContainerSno": null,
+       "enumVal": 21
+      },
+      "tOnClose": {
+       "__type__": "UIDefaultAction",
+       "__typeHash__": 2502206177,
+       "dwType": 2502206177,
+       "behaviorMessageName": 0,
+       "behaviorContainerSno": null,
+       "enumVal": 670
+      },
       "bActive": 1,
       "snoOnOpenSound": null,
       "snoOnCloseSound": {
@@ -12565,8 +12818,7 @@
        "__targetFileName__": "base/meta/Sound/Play_UI_Menu_Close_Generic.snd",
        "groupName": "Sound",
        "name": "Play_UI_Menu_Close_Generic"
-      },
-      "szOnUpdate": "UI_Profile_OnUpdate"
+      }
      },
      "tConsoleInput": {
       "__type__": "UIControlConsoleInput",
@@ -12844,7 +13096,14 @@
               "hOptionalUIControlConsoleInputFields": {}
              },
              "hOptionalUIWindowStyleFields": {
-              "szOnClick": "UI_Profile_Overview_Open",
+              "tOnClick": {
+               "__type__": "UIDefaultAction",
+               "__typeHash__": 2502206177,
+               "dwType": 2502206177,
+               "behaviorMessageName": 0,
+               "behaviorContainerSno": null,
+               "enumVal": 690
+              },
               "nBottom": 0,
               "nRight": 0
              },
@@ -12971,7 +13230,14 @@
               "hOptionalUIControlConsoleInputFields": {}
              },
              "hOptionalUIWindowStyleFields": {
-              "szOnClick": "UI_Profile_Abilities_Open",
+              "tOnClick": {
+               "__type__": "UIDefaultAction",
+               "__typeHash__": 2502206177,
+               "dwType": 2502206177,
+               "behaviorMessageName": 0,
+               "behaviorContainerSno": null,
+               "enumVal": 692
+              },
               "nBottom": 0,
               "nRight": 0,
               "bEncloseChildren": 1
@@ -13098,7 +13364,14 @@
               "hOptionalUIControlConsoleInputFields": {}
              },
              "hOptionalUIWindowStyleFields": {
-              "szOnClick": "UI_Profile_Accomplishments_Open",
+              "tOnClick": {
+               "__type__": "UIDefaultAction",
+               "__typeHash__": 2502206177,
+               "dwType": 2502206177,
+               "behaviorMessageName": 0,
+               "behaviorContainerSno": null,
+               "enumVal": 694
+              },
               "nBottom": 0,
               "nRight": 0
              },
@@ -13224,7 +13497,14 @@
               "hOptionalUIControlConsoleInputFields": {}
              },
              "hOptionalUIWindowStyleFields": {
-              "szOnClick": "UI_Profile_Clan_Open",
+              "tOnClick": {
+               "__type__": "UIDefaultAction",
+               "__typeHash__": 2502206177,
+               "dwType": 2502206177,
+               "behaviorMessageName": 0,
+               "behaviorContainerSno": null,
+               "enumVal": 696
+              },
               "nBottom": 0,
               "nRight": 0
              },
@@ -13473,7 +13753,14 @@
               "hOptionalUIControlConsoleInputFields": {}
              },
              "hOptionalUIWindowStyleFields": {
-              "szOnClick": "UI_Profile_UnExpand"
+              "tOnClick": {
+               "__type__": "UIDefaultAction",
+               "__typeHash__": 2502206177,
+               "dwType": 2502206177,
+               "behaviorMessageName": 0,
+               "behaviorContainerSno": null,
+               "enumVal": 673
+              }
              },
              "tFont": {
               "__type__": "UIControlFont",
@@ -14355,20 +14642,34 @@
                   "hOptionalUIControlConsoleInputFields": {}
                  },
                  "hOptionalUIWindowStyleFields": {
-                  "szOnDrag": "UI_Profile_OnHeroDrag",
                   "nHeight": 728,
                   "eVerticalAnchoring": 3,
                   "nWidth": 569,
-                  "szOnDragStart": "UI_Profile_OnHeroDragStart",
                   "eHorizontalAnchoring": 3,
-                  "szOnDragStop": "UI_Profile_OnHeroDragStop",
+                  "tOnDragStart": {
+                   "__type__": "UIDefaultAction",
+                   "__typeHash__": 2502206177,
+                   "dwType": 2502206177,
+                   "behaviorMessageName": 0,
+                   "behaviorContainerSno": null,
+                   "enumVal": 675
+                  },
+                  "onDrag": 20,
                   "bIsDragTarget": 1,
                   "hImageFrame": {
                    "__type__": "UIImageHandleReference",
                    "__typeHash__": 1797021084,
                    "hImageHandle": 3682872898
                   },
-                  "eWindowEatsClicks": 1
+                  "eWindowEatsClicks": 1,
+                  "tOnDragStop": {
+                   "__type__": "UIDefaultAction",
+                   "__typeHash__": 2502206177,
+                   "dwType": 2502206177,
+                   "behaviorMessageName": 0,
+                   "behaviorContainerSno": null,
+                   "enumVal": 676
+                  }
                  }
                 }
                ],
@@ -14673,9 +14974,30 @@
                       "__type__": "UIControlConsoleInput",
                       "__typeHash__": 3089331074,
                       "hOptionalUIControlConsoleInputFields": {
-                       "szOnL3": "",
-                       "szOnButton1": "",
-                       "szOnButton3": "UI_Profile_OpenContextMenu"
+                       "tOnL3": {
+                        "__type__": "UIDefaultAction",
+                        "__typeHash__": 2502206177,
+                        "dwType": 2502206177,
+                        "behaviorMessageName": 0,
+                        "behaviorContainerSno": null,
+                        "enumVal": -1
+                       },
+                       "tOnButton1": {
+                        "__type__": "UIDefaultAction",
+                        "__typeHash__": 2502206177,
+                        "dwType": 2502206177,
+                        "behaviorMessageName": 0,
+                        "behaviorContainerSno": null,
+                        "enumVal": -1
+                       },
+                       "tOnButton3": {
+                        "__type__": "UIDefaultAction",
+                        "__typeHash__": 2502206177,
+                        "dwType": 2502206177,
+                        "behaviorMessageName": 0,
+                        "behaviorContainerSno": null,
+                        "enumVal": 677
+                       }
                       }
                      },
                      "hOptionalUIWindowStyleFields": {},
@@ -14731,13 +15053,34 @@
                       "__type__": "UIControlConsoleInput",
                       "__typeHash__": 3089331074,
                       "hOptionalUIControlConsoleInputFields": {
-                       "szOnL3": "",
-                       "szOnButton3": ""
+                       "tOnL3": {
+                        "__type__": "UIDefaultAction",
+                        "__typeHash__": 2502206177,
+                        "dwType": 2502206177,
+                        "behaviorMessageName": 0,
+                        "behaviorContainerSno": null,
+                        "enumVal": -1
+                       },
+                       "tOnButton3": {
+                        "__type__": "UIDefaultAction",
+                        "__typeHash__": 2502206177,
+                        "dwType": 2502206177,
+                        "behaviorMessageName": 0,
+                        "behaviorContainerSno": null,
+                        "enumVal": -1
+                       }
                       }
                      },
                      "hOptionalUIWindowStyleFields": {
-                      "szOnDrag": "",
-                      "szOnDragStart": "",
+                      "tOnDragStart": {
+                       "__type__": "UIDefaultAction",
+                       "__typeHash__": 2502206177,
+                       "dwType": 2502206177,
+                       "behaviorMessageName": 0,
+                       "behaviorContainerSno": null,
+                       "enumVal": -1
+                      },
+                      "onDrag": -1,
                       "bIsDragTarget": 0
                      }
                     }
@@ -16898,7 +17241,14 @@
            },
            "hOptionalUIWindowStyleFields": {
             "nTop": 61,
-            "szOnClick": "UI_Profile_Close",
+            "tOnClick": {
+             "__type__": "UIDefaultAction",
+             "__typeHash__": 2502206177,
+             "dwType": 2502206177,
+             "behaviorMessageName": 0,
+             "behaviorContainerSno": null,
+             "enumVal": 671
+            },
             "eHorizontalAnchoring": 2
            },
            "tFont": {
@@ -17390,8 +17740,15 @@
              },
              "hOptionalUIWindowStyleFields": {
               "nTop": 0,
-              "szOnClick": "UI_Profile_Edit_Open",
               "eVerticalAnchoring": 0,
+              "tOnClick": {
+               "__type__": "UIDefaultAction",
+               "__typeHash__": 2502206177,
+               "dwType": 2502206177,
+               "behaviorMessageName": 0,
+               "behaviorContainerSno": null,
+               "enumVal": 682
+              },
               "eHorizontalAnchoring": 2,
               "eVisibilityCondition": 0
              },
@@ -17526,8 +17883,15 @@
             "hOptionalUIControlConsoleInputFields": {}
            },
            "hOptionalUIWindowStyleFields": {
-            "szOnClick": "UI_Profile_TogglePrivacy",
             "eVerticalAnchoring": 1,
+            "tOnClick": {
+             "__type__": "UIDefaultAction",
+             "__typeHash__": 2502206177,
+             "dwType": 2502206177,
+             "behaviorMessageName": 0,
+             "behaviorContainerSno": null,
+             "enumVal": 674
+            },
             "nRight": 0,
             "nLeft": -20,
             "eVisibilityCondition": 0
@@ -17767,8 +18131,15 @@
             "hOptionalUIControlConsoleInputFields": {}
            },
            "hOptionalUIWindowStyleFields": {
-            "szOnClick": "UI_Profile_ToggleEquipmentVisibility",
             "eVerticalAnchoring": 1,
+            "tOnClick": {
+             "__type__": "UIDefaultAction",
+             "__typeHash__": 2502206177,
+             "dwType": 2502206177,
+             "behaviorMessageName": 0,
+             "behaviorContainerSno": null,
+             "enumVal": 1568
+            },
             "nRight": 0,
             "nLeft": -20,
             "eVisibilityCondition": 0
@@ -18038,8 +18409,15 @@
             "hOptionalUIControlConsoleInputFields": {}
            },
            "hOptionalUIWindowStyleFields": {
-            "szOnClick": "UI_Profile_OpenContextMenu",
             "eVerticalAnchoring": 1,
+            "tOnClick": {
+             "__type__": "UIDefaultAction",
+             "__typeHash__": 2502206177,
+             "dwType": 2502206177,
+             "behaviorMessageName": 0,
+             "behaviorContainerSno": null,
+             "enumVal": 677
+            },
             "nRight": 0,
             "nLeft": -20,
             "eVisibilityCondition": 0
@@ -19314,7 +19692,14 @@
          "hOptionalUIControlStyleFields": {},
          "hOptionalUIHotkeyStyleFields": {
           "eFixedControllerButton": 2,
-          "unk_ccd9967": "UI_Profile_OpenContextMenu",
+          "unk_f68242e": {
+           "__type__": "UIDefaultAction",
+           "__typeHash__": 2502206177,
+           "dwType": 2502206177,
+           "behaviorMessageName": 0,
+           "behaviorContainerSno": null,
+           "enumVal": 677
+          },
           "snoOnActionSound": null
          }
         }
@@ -19340,9 +19725,16 @@
          "unk_441f783": "0",
          "hOptionalUIControlStyleFields": {},
          "hOptionalUIHotkeyStyleFields": {
+          "eHotkeyClickPredicate": 15,
           "eFixedControllerButton": 3,
-          "unk_ccd9967": "UI_Profile_Edit_Open",
-          "szHotkeyClickPredicate": "UI_Profile_OpenEditPredicate",
+          "unk_f68242e": {
+           "__type__": "UIDefaultAction",
+           "__typeHash__": 2502206177,
+           "dwType": 2502206177,
+           "behaviorMessageName": 0,
+           "behaviorContainerSno": null,
+           "enumVal": 682
+          },
           "snoOnActionSound": {
            "__raw__": 137607,
            "__group__": 40,
@@ -19376,9 +19768,16 @@
          "unk_441f783": "0",
          "hOptionalUIControlStyleFields": {},
          "hOptionalUIHotkeyStyleFields": {
-          "unk_ccd9967": "UI_Profile_Close",
-          "eHotkey": 126,
-          "szHotkeyClickPredicate": "UI_Profile_IsVisiblePredicate"
+          "eHotkeyClickPredicate": 17,
+          "eHotkey": 127,
+          "unk_f68242e": {
+           "__type__": "UIDefaultAction",
+           "__typeHash__": 2502206177,
+           "dwType": 2502206177,
+           "behaviorMessageName": 0,
+           "behaviorContainerSno": null,
+           "enumVal": 671
+          }
          }
         }
        ],
@@ -20606,7 +21005,14 @@
                },
                "unk_441f783": "0",
                "hOptionalUIControlStyleFields": {
-                "szOnSelChange": "UI_Profile_Edit_OnTabSelectionChanged"
+                "tOnSelChange": {
+                 "__type__": "UIDefaultAction",
+                 "__typeHash__": 2502206177,
+                 "dwType": 2502206177,
+                 "behaviorMessageName": 0,
+                 "behaviorContainerSno": null,
+                 "enumVal": 686
+                }
                },
                "hOptionalUIRadioButtonGroupStyleFields": {
                 "szStoryboardTransitionIn": ".Storyboard_Tab_Transition"
@@ -20636,8 +21042,15 @@
                 "szIDGeneric01": "Tabs_RadioButtonGroup"
                },
                "hOptionalUIHotkeyStyleFields": {
-                "szOnController": "UIGeneric_SelectRadioButtonGroupPrevious",
-                "eHotkey": 130
+                "tOnController": {
+                 "__type__": "UIDefaultAction",
+                 "__typeHash__": 2502206177,
+                 "dwType": 2502206177,
+                 "behaviorMessageName": 0,
+                 "behaviorContainerSno": null,
+                 "enumVal": 1303
+                },
+                "eHotkey": 131
                }
               }
              ],
@@ -20664,8 +21077,15 @@
                 "szIDGeneric01": "Tabs_RadioButtonGroup"
                },
                "hOptionalUIHotkeyStyleFields": {
-                "szOnController": "UIGeneric_SelectRadioButtonGroupNext",
-                "eHotkey": 131
+                "tOnController": {
+                 "__type__": "UIDefaultAction",
+                 "__typeHash__": 2502206177,
+                 "dwType": 2502206177,
+                 "behaviorMessageName": 0,
+                 "behaviorContainerSno": null,
+                 "enumVal": 1304
+                },
+                "eHotkey": 132
                }
               }
              ],
@@ -22130,7 +22550,14 @@
                        },
                        "unk_441f783": "0",
                        "hOptionalUIControlStyleFields": {
-                        "szOnSelChange": "UI_Profile_Edit_OnEmblemSelectionChanged"
+                        "tOnSelChange": {
+                         "__type__": "UIDefaultAction",
+                         "__typeHash__": 2502206177,
+                         "dwType": 2502206177,
+                         "behaviorMessageName": 0,
+                         "behaviorContainerSno": null,
+                         "enumVal": 687
+                        }
                        },
                        "hOptionalUIRadioButtonGroupStyleFields": {}
                       }
@@ -24621,7 +25048,14 @@
                   "hOptionalUIControlConsoleInputFields": {}
                  },
                  "hOptionalUIWindowStyleFields": {
-                  "szOnClick": "UI_Profile_Edit_OnConfirm"
+                  "tOnClick": {
+                   "__type__": "UIDefaultAction",
+                   "__typeHash__": 2502206177,
+                   "dwType": 2502206177,
+                   "behaviorMessageName": 0,
+                   "behaviorContainerSno": null,
+                   "enumVal": 684
+                  }
                  },
                  "tFont": {
                   "__type__": "UIControlFont",
@@ -24703,7 +25137,14 @@
                   "hOptionalUIControlConsoleInputFields": {}
                  },
                  "hOptionalUIWindowStyleFields": {
-                  "szOnClick": "UI_Profile_Edit_OnResetToDefault"
+                  "tOnClick": {
+                   "__type__": "UIDefaultAction",
+                   "__typeHash__": 2502206177,
+                   "dwType": 2502206177,
+                   "behaviorMessageName": 0,
+                   "behaviorContainerSno": null,
+                   "enumVal": 685
+                  }
                  },
                  "tFont": {
                   "__type__": "UIControlFont",
@@ -24773,7 +25214,14 @@
                   "hOptionalUIControlConsoleInputFields": {}
                  },
                  "hOptionalUIWindowStyleFields": {
-                  "szOnClick": "UI_Profile_Edit_Close"
+                  "tOnClick": {
+                   "__type__": "UIDefaultAction",
+                   "__typeHash__": 2502206177,
+                   "dwType": 2502206177,
+                   "behaviorMessageName": 0,
+                   "behaviorContainerSno": null,
+                   "enumVal": 683
+                  }
                  },
                  "tFont": {
                   "__type__": "UIControlFont",
@@ -25195,8 +25643,15 @@
                "unk_441f783": "0",
                "hOptionalUIControlStyleFields": {},
                "hOptionalUIHotkeyStyleFields": {
-                "unk_ccd9967": "UI_Profile_Edit_Close",
-                "eHotkey": 126,
+                "eHotkey": 127,
+                "unk_f68242e": {
+                 "__type__": "UIDefaultAction",
+                 "__typeHash__": 2502206177,
+                 "dwType": 2502206177,
+                 "behaviorMessageName": 0,
+                 "behaviorContainerSno": null,
+                 "enumVal": 683
+                },
                 "snoOnActionSound": {
                  "__raw__": 137607,
                  "__group__": 40,
@@ -25230,9 +25685,16 @@
                "unk_441f783": "0",
                "hOptionalUIControlStyleFields": {},
                "hOptionalUIHotkeyStyleFields": {
+                "eHotkeyClickPredicate": 19,
                 "eFixedControllerButton": 3,
-                "unk_ccd9967": "UI_Profile_Edit_OnConfirm",
-                "szHotkeyClickPredicate": "UI_Profile_Edit_ConfirmPredicate",
+                "unk_f68242e": {
+                 "__type__": "UIDefaultAction",
+                 "__typeHash__": 2502206177,
+                 "dwType": 2502206177,
+                 "behaviorMessageName": 0,
+                 "behaviorContainerSno": null,
+                 "enumVal": 684
+                },
                 "snoOnActionSound": {
                  "__raw__": 1369477,
                  "__group__": 40,
@@ -25266,10 +25728,24 @@
                "unk_441f783": "0",
                "hOptionalUIControlStyleFields": {},
                "hOptionalUIHotkeyStyleFields": {
-                "szOnController": "",
+                "eHotkeyClickPredicate": -1,
+                "tOnController": {
+                 "__type__": "UIDefaultAction",
+                 "__typeHash__": 2502206177,
+                 "dwType": 2502206177,
+                 "behaviorMessageName": 0,
+                 "behaviorContainerSno": null,
+                 "enumVal": -1
+                },
                 "eFixedControllerButton": 2,
-                "unk_ccd9967": "UI_Profile_Edit_OnResetToDefault",
-                "szHotkeyClickPredicate": "",
+                "unk_f68242e": {
+                 "__type__": "UIDefaultAction",
+                 "__typeHash__": 2502206177,
+                 "dwType": 2502206177,
+                 "behaviorMessageName": 0,
+                 "behaviorContainerSno": null,
+                 "enumVal": 685
+                },
                 "snoOnActionSound": {
                  "__raw__": 137607,
                  "__group__": 40,
@@ -25391,7 +25867,14 @@
            },
            "hOptionalUIWindowStyleFields": {
             "nTop": 100,
-            "szOnClick": "UI_Profile_Edit_Close",
+            "tOnClick": {
+             "__type__": "UIDefaultAction",
+             "__typeHash__": 2502206177,
+             "dwType": 2502206177,
+             "behaviorMessageName": 0,
+             "behaviorContainerSno": null,
+             "enumVal": 683
+            },
             "nRight": 30,
             "eHorizontalAnchoring": 2
            },
@@ -25525,7 +26008,14 @@
        },
        "hOptionalUIHotkeyStyleFields": {
         "eFixedControllerButton": 14,
-        "unk_ccd9967": "UI_Profile_Expand"
+        "unk_f68242e": {
+         "__type__": "UIDefaultAction",
+         "__typeHash__": 2502206177,
+         "dwType": 2502206177,
+         "behaviorMessageName": 0,
+         "behaviorContainerSno": null,
+         "enumVal": 672
+        }
        }
       }
      ],
@@ -25915,10 +26405,17 @@
          "b": 155,
          "a": 255
         },
-        "szOnClick": "UI_Profile_Edit_OnTitleClick",
         "unk_3dc9f06": 4,
         "unk_3dc9f07": 4,
         "unk_438e5c1": 1,
+        "tOnClick": {
+         "__type__": "UIDefaultAction",
+         "__typeHash__": 2502206177,
+         "dwType": 2502206177,
+         "behaviorMessageName": 0,
+         "behaviorContainerSno": null,
+         "enumVal": 1213
+        },
         "nMaxWidth": -1,
         "nMinWidth": -1,
         "rgbaForegroundDisabled": {
@@ -26000,6 +26497,14 @@
        },
        "hOptionalUIButtonStyleFields": {
         "unk_3368b": 1,
+        "tOnLostFocus": {
+         "__type__": "UIDefaultAction",
+         "__typeHash__": 2502206177,
+         "dwType": 2502206177,
+         "behaviorMessageName": 0,
+         "behaviorContainerSno": null,
+         "enumVal": 1215
+        },
         "snoBtnTiledStyleNormal": {
          "__raw__": 593645,
          "__group__": 103,
@@ -26008,6 +26513,14 @@
          "__targetFileName__": "base/meta/TiledStyle/BtnMedium_Up.tsl",
          "groupName": "TiledStyle",
          "name": "BtnMedium_Up"
+        },
+        "tOnHitRegionExit": {
+         "__type__": "UIDefaultAction",
+         "__typeHash__": 2502206177,
+         "dwType": 2502206177,
+         "behaviorMessageName": 0,
+         "behaviorContainerSno": null,
+         "enumVal": 1215
         },
         "snoBtnTiledStylePressed": {
          "__raw__": 593648,
@@ -26024,7 +26537,6 @@
          "b": 0,
          "a": 255
         },
-        "szOnHitRegionExit": "UI_Profile_Edit_OnPlayerTitleUnhighlighted",
         "rgbaDropShadowHighlight": {
          "r": 0,
          "g": 0,
@@ -26043,7 +26555,14 @@
          "b": 255,
          "a": 255
         },
-        "szOnGainedFocus": "UI_Profile_Edit_OnPlayerTitleHighlighted",
+        "tOnHitRegionEnter": {
+         "__type__": "UIDefaultAction",
+         "__typeHash__": 2502206177,
+         "dwType": 2502206177,
+         "behaviorMessageName": 0,
+         "behaviorContainerSno": null,
+         "enumVal": 1214
+        },
         "rgbaDropShadowPushed": {
          "r": 0,
          "g": 0,
@@ -26065,8 +26584,14 @@
          "groupName": "TiledStyle",
          "name": "BtnMedium_Over"
         },
-        "szOnLostFocus": "UI_Profile_Edit_OnPlayerTitleUnhighlighted",
-        "szOnHitRegionEnter": "UI_Profile_Edit_OnPlayerTitleHighlighted"
+        "tOnGainedFocus": {
+         "__type__": "UIDefaultAction",
+         "__typeHash__": 2502206177,
+         "dwType": 2502206177,
+         "behaviorMessageName": 0,
+         "behaviorContainerSno": null,
+         "enumVal": 1214
+        }
        },
        "hOptionalUIRadioButtonStyleFields": {
         "snoOnSelectedSound": null,
@@ -26392,7 +26917,14 @@
       "hOptionalUIControlConsoleInputFields": {}
      },
      "hOptionalUIWindowStyleFields": {
-      "nTooltip": "UI_Profile_Edit_MedalTooltip"
+      "tOnTooltip": {
+       "__type__": "UIDefaultAction",
+       "__typeHash__": 2502206177,
+       "dwType": 2502206177,
+       "behaviorMessageName": 0,
+       "behaviorContainerSno": null,
+       "enumVal": 1217
+      }
      },
      "tFont": {
       "__type__": "UIControlFont",
@@ -26411,8 +26943,22 @@
       "hOptionalUIControlClickSoundsFields": {}
      },
      "hOptionalUIButtonStyleFields": {
-      "szOnHitRegionExit": "",
-      "szOnLostFocus": ""
+      "tOnLostFocus": {
+       "__type__": "UIDefaultAction",
+       "__typeHash__": 2502206177,
+       "dwType": 2502206177,
+       "behaviorMessageName": 0,
+       "behaviorContainerSno": null,
+       "enumVal": -1
+      },
+      "tOnHitRegionExit": {
+       "__type__": "UIDefaultAction",
+       "__typeHash__": 2502206177,
+       "dwType": 2502206177,
+       "behaviorMessageName": 0,
+       "behaviorContainerSno": null,
+       "enumVal": -1
+      }
      },
      "hOptionalUIRadioButtonStyleFields": {}
     }
@@ -26514,7 +27060,14 @@
       "__type__": "UIControlConsoleInput",
       "__typeHash__": 3089331074,
       "hOptionalUIControlConsoleInputFields": {
-       "szOnButton1": "UI_Profile_Edit_OnController_ValidateEmblemSelection"
+       "tOnButton1": {
+        "__type__": "UIDefaultAction",
+        "__typeHash__": 2502206177,
+        "dwType": 2502206177,
+        "behaviorMessageName": 0,
+        "behaviorContainerSno": null,
+        "enumVal": 689
+       }
       }
      },
      "hOptionalUIWindowStyleFields": {
@@ -26562,8 +27115,22 @@
       }
      },
      "hOptionalUIButtonStyleFields": {
-      "szOnHitRegionExit": "UI_Profile_Edit_OnEmblemUnhighlighted",
-      "szOnLostFocus": "UI_Profile_Edit_OnEmblemUnhighlighted"
+      "tOnLostFocus": {
+       "__type__": "UIDefaultAction",
+       "__typeHash__": 2502206177,
+       "dwType": 2502206177,
+       "behaviorMessageName": 0,
+       "behaviorContainerSno": null,
+       "enumVal": 1216
+      },
+      "tOnHitRegionExit": {
+       "__type__": "UIDefaultAction",
+       "__typeHash__": 2502206177,
+       "dwType": 2502206177,
+       "behaviorMessageName": 0,
+       "behaviorContainerSno": null,
+       "enumVal": 1216
+      }
      },
      "hOptionalUIRadioButtonStyleFields": {
       "snoOnSelectedSound": {
@@ -26781,144 +27348,6 @@
        },
        "hOptionalUITextStyleFields": {},
        "hOptionalUIBlinkerStyleFields": {}
-      }
-     ],
-     "arChildren": [],
-     "ptTemplateInstanceConfig": []
-    },
-    {
-     "__type__": "UIControlTemplate",
-     "__typeHash__": 641859515,
-     "szName": "EmblemItem_New_SeasonItem_Icon",
-     "ptInlineStyle": [
-      {
-       "__type__": "UIWindowStyle",
-       "__typeHash__": 506492871,
-       "dwType": 506492871,
-       "hParentStyle": {
-        "__type__": "UIControlHandle",
-        "__typeHash__": 3063971755,
-        "snoUI": null,
-        "szControlName": 0
-       },
-       "unk_441f783": "0",
-       "hOptionalUIControlStyleFields": {
-        "bActive": 0,
-        "hTemplate": {
-         "__type__": "UIControlHandle",
-         "__typeHash__": 3063971755,
-         "snoUI": {
-          "__raw__": 207620,
-          "__group__": 46,
-          "__type__": "DT_SNO",
-          "__typeHash__": 2764331143,
-          "__targetFileName__": "base/meta/UI/StyleWindows.ui",
-          "groupName": "UI",
-          "name": "StyleWindows"
-         },
-         "szControlName": 2831495942
-        }
-       },
-       "tConsoleInput": {
-        "__type__": "UIControlConsoleInput",
-        "__typeHash__": 3089331074,
-        "hOptionalUIControlConsoleInputFields": {}
-       },
-       "hOptionalUIWindowStyleFields": {
-        "nHeight": 30,
-        "nWidth": 30
-       }
-      }
-     ],
-     "arChildren": [],
-     "ptTemplateInstanceConfig": []
-    },
-    {
-     "__type__": "UIControlTemplate",
-     "__typeHash__": 641859515,
-     "szName": "EmblemItem_SeasonItem_Icon",
-     "ptInlineStyle": [
-      {
-       "__type__": "UIWindowStyle",
-       "__typeHash__": 506492871,
-       "dwType": 506492871,
-       "hParentStyle": {
-        "__type__": "UIControlHandle",
-        "__typeHash__": 3063971755,
-        "snoUI": null,
-        "szControlName": 0
-       },
-       "unk_441f783": "0",
-       "hOptionalUIControlStyleFields": {
-        "bActive": 0,
-        "hTemplate": {
-         "__type__": "UIControlHandle",
-         "__typeHash__": 3063971755,
-         "snoUI": {
-          "__raw__": 207620,
-          "__group__": 46,
-          "__type__": "DT_SNO",
-          "__typeHash__": 2764331143,
-          "__targetFileName__": "base/meta/UI/StyleWindows.ui",
-          "groupName": "UI",
-          "name": "StyleWindows"
-         },
-         "szControlName": 85230268
-        }
-       },
-       "tConsoleInput": {
-        "__type__": "UIControlConsoleInput",
-        "__typeHash__": 3089331074,
-        "hOptionalUIControlConsoleInputFields": {}
-       },
-       "hOptionalUIWindowStyleFields": {
-        "nHeight": 40,
-        "nWidth": 45
-       }
-      }
-     ],
-     "arChildren": [],
-     "ptTemplateInstanceConfig": []
-    },
-    {
-     "__type__": "UIControlTemplate",
-     "__typeHash__": 641859515,
-     "szName": "EmblemItem_New_PurchasedItem_Icon",
-     "ptInlineStyle": [
-      {
-       "__type__": "UIWindowStyle",
-       "__typeHash__": 506492871,
-       "dwType": 506492871,
-       "hParentStyle": {
-        "__type__": "UIControlHandle",
-        "__typeHash__": 3063971755,
-        "snoUI": null,
-        "szControlName": 0
-       },
-       "unk_441f783": "0",
-       "hOptionalUIControlStyleFields": {
-        "bActive": 0,
-        "hTemplate": {
-         "__type__": "UIControlHandle",
-         "__typeHash__": 3063971755,
-         "snoUI": {
-          "__raw__": 207620,
-          "__group__": 46,
-          "__type__": "DT_SNO",
-          "__typeHash__": 2764331143,
-          "__targetFileName__": "base/meta/UI/StyleWindows.ui",
-          "groupName": "UI",
-          "name": "StyleWindows"
-         },
-         "szControlName": 3705387997
-        }
-       },
-       "tConsoleInput": {
-        "__type__": "UIControlConsoleInput",
-        "__typeHash__": 3089331074,
-        "hOptionalUIControlConsoleInputFields": {}
-       },
-       "hOptionalUIWindowStyleFields": {}
       }
      ],
      "arChildren": [],
@@ -28205,9 +28634,16 @@
            },
            "szLabel": 66132398
           },
-          "szOnClick": "UIScreenManager_RadioButton_OpenScreen",
           "nHeight": 50,
           "eVerticalAnchoring": 1,
+          "tOnClick": {
+           "__type__": "UIDefaultAction",
+           "__typeHash__": 2502206177,
+           "dwType": 2502206177,
+           "behaviorMessageName": 0,
+           "behaviorContainerSno": null,
+           "enumVal": 1208
+          },
           "nBottom": 0,
           "nRight": 0,
           "nWidth": 80,
@@ -28521,8 +28957,15 @@
           "bActive": 1
          },
          "hOptionalUIHotkeyStyleFields": {
-          "szOnController": "UI_Profile_NextProfileTab",
-          "szHotkeyClickPredicate": "UI_Profile_EditNotVisiblePredicate"
+          "eHotkeyClickPredicate": 16,
+          "tOnController": {
+           "__type__": "UIDefaultAction",
+           "__typeHash__": 2502206177,
+           "dwType": 2502206177,
+           "behaviorMessageName": 0,
+           "behaviorContainerSno": null,
+           "enumVal": 681
+          }
          }
         }
        ]
@@ -28548,8 +28991,15 @@
           "bActive": 1
          },
          "hOptionalUIHotkeyStyleFields": {
-          "szOnController": "UI_Profile_NextProfileTab",
-          "szHotkeyClickPredicate": "UI_Profile_EditNotVisiblePredicate"
+          "eHotkeyClickPredicate": 16,
+          "tOnController": {
+           "__type__": "UIDefaultAction",
+           "__typeHash__": 2502206177,
+           "dwType": 2502206177,
+           "behaviorMessageName": 0,
+           "behaviorContainerSno": null,
+           "enumVal": 681
+          }
          }
         }
        ]
@@ -28960,9 +29410,16 @@
            },
            "szLabel": 66132398
           },
-          "szOnClick": "UIScreenManager_RadioButton_OpenScreen",
           "nHeight": 50,
           "eVerticalAnchoring": 1,
+          "tOnClick": {
+           "__type__": "UIDefaultAction",
+           "__typeHash__": 2502206177,
+           "dwType": 2502206177,
+           "behaviorMessageName": 0,
+           "behaviorContainerSno": null,
+           "enumVal": 1208
+          },
           "nBottom": 0,
           "nRight": 0,
           "nWidth": 80,
@@ -29276,7 +29733,14 @@
           "bActive": 1
          },
          "hOptionalUIHotkeyStyleFields": {
-          "szOnController": "UI_Profile_PreviousProfileTab"
+          "tOnController": {
+           "__type__": "UIDefaultAction",
+           "__typeHash__": 2502206177,
+           "dwType": 2502206177,
+           "behaviorMessageName": 0,
+           "behaviorContainerSno": null,
+           "enumVal": 680
+          }
          }
         }
        ]
@@ -29302,7 +29766,14 @@
           "bActive": 1
          },
          "hOptionalUIHotkeyStyleFields": {
-          "szOnController": "UI_Profile_NextProfileTab"
+          "tOnController": {
+           "__type__": "UIDefaultAction",
+           "__typeHash__": 2502206177,
+           "dwType": 2502206177,
+           "behaviorMessageName": 0,
+           "behaviorContainerSno": null,
+           "enumVal": 681
+          }
          }
         }
        ]
@@ -30054,8 +30525,15 @@
            },
            "hOptionalUIWindowStyleFields": {
             "nTop": 0,
-            "szOnClick": "UI_Profile_Edit_Open",
             "eVerticalAnchoring": 0,
+            "tOnClick": {
+             "__type__": "UIDefaultAction",
+             "__typeHash__": 2502206177,
+             "dwType": 2502206177,
+             "behaviorMessageName": 0,
+             "behaviorContainerSno": null,
+             "enumVal": 682
+            },
             "eHorizontalAnchoring": 2,
             "eVisibilityCondition": 0
            },
@@ -30190,8 +30668,15 @@
           "hOptionalUIControlConsoleInputFields": {}
          },
          "hOptionalUIWindowStyleFields": {
-          "szOnClick": "UI_Profile_TogglePrivacy",
           "eVerticalAnchoring": 1,
+          "tOnClick": {
+           "__type__": "UIDefaultAction",
+           "__typeHash__": 2502206177,
+           "dwType": 2502206177,
+           "behaviorMessageName": 0,
+           "behaviorContainerSno": null,
+           "enumVal": 674
+          },
           "nRight": 0,
           "nLeft": -20,
           "eVisibilityCondition": 0
@@ -30431,8 +30916,15 @@
           "hOptionalUIControlConsoleInputFields": {}
          },
          "hOptionalUIWindowStyleFields": {
-          "szOnClick": "UI_Profile_ToggleEquipmentVisibility",
           "eVerticalAnchoring": 1,
+          "tOnClick": {
+           "__type__": "UIDefaultAction",
+           "__typeHash__": 2502206177,
+           "dwType": 2502206177,
+           "behaviorMessageName": 0,
+           "behaviorContainerSno": null,
+           "enumVal": 1568
+          },
           "nRight": 0,
           "nLeft": -20,
           "eVisibilityCondition": 0
@@ -30702,8 +31194,15 @@
           "hOptionalUIControlConsoleInputFields": {}
          },
          "hOptionalUIWindowStyleFields": {
-          "szOnClick": "UI_Profile_OpenContextMenu",
           "eVerticalAnchoring": 1,
+          "tOnClick": {
+           "__type__": "UIDefaultAction",
+           "__typeHash__": 2502206177,
+           "dwType": 2502206177,
+           "behaviorMessageName": 0,
+           "behaviorContainerSno": null,
+           "enumVal": 677
+          },
           "nRight": 0,
           "nLeft": -20,
           "eVisibilityCondition": 0
@@ -31975,7 +32474,14 @@
        "hOptionalUIControlStyleFields": {},
        "hOptionalUIHotkeyStyleFields": {
         "eFixedControllerButton": 15,
-        "unk_ccd9967": "UI_Profile_TogglePrivacy",
+        "unk_f68242e": {
+         "__type__": "UIDefaultAction",
+         "__typeHash__": 2502206177,
+         "dwType": 2502206177,
+         "behaviorMessageName": 0,
+         "behaviorContainerSno": null,
+         "enumVal": 674
+        },
         "snoOnActionSound": {
          "__raw__": 137607,
          "__group__": 40,
@@ -32010,7 +32516,14 @@
        "hOptionalUIControlStyleFields": {},
        "hOptionalUIHotkeyStyleFields": {
         "eFixedControllerButton": 2,
-        "unk_ccd9967": "UI_Profile_OpenContextMenu",
+        "unk_f68242e": {
+         "__type__": "UIDefaultAction",
+         "__typeHash__": 2502206177,
+         "dwType": 2502206177,
+         "behaviorMessageName": 0,
+         "behaviorContainerSno": null,
+         "enumVal": 677
+        },
         "snoOnActionSound": null
        }
       }
@@ -32036,9 +32549,16 @@
        "unk_441f783": "0",
        "hOptionalUIControlStyleFields": {},
        "hOptionalUIHotkeyStyleFields": {
+        "eHotkeyClickPredicate": 15,
         "eFixedControllerButton": 3,
-        "unk_ccd9967": "UI_Profile_Edit_Open",
-        "szHotkeyClickPredicate": "UI_Profile_OpenEditPredicate",
+        "unk_f68242e": {
+         "__type__": "UIDefaultAction",
+         "__typeHash__": 2502206177,
+         "dwType": 2502206177,
+         "behaviorMessageName": 0,
+         "behaviorContainerSno": null,
+         "enumVal": 682
+        },
         "snoOnActionSound": {
          "__raw__": 137607,
          "__group__": 40,
@@ -32072,8 +32592,15 @@
        "unk_441f783": "0",
        "hOptionalUIControlStyleFields": {},
        "hOptionalUIHotkeyStyleFields": {
-        "unk_ccd9967": "UI_Profile_Close",
-        "eHotkey": 126
+        "eHotkey": 127,
+        "unk_f68242e": {
+         "__type__": "UIDefaultAction",
+         "__typeHash__": 2502206177,
+         "dwType": 2502206177,
+         "behaviorMessageName": 0,
+         "behaviorContainerSno": null,
+         "enumVal": 671
+        }
        }
       }
      ],
@@ -34170,7 +34697,14 @@
              },
              "unk_441f783": "0",
              "hOptionalUIControlStyleFields": {
-              "szOnSelChange": "UI_Profile_Edit_OnEmblemSelectionChanged"
+              "tOnSelChange": {
+               "__type__": "UIDefaultAction",
+               "__typeHash__": 2502206177,
+               "dwType": 2502206177,
+               "behaviorMessageName": 0,
+               "behaviorContainerSno": null,
+               "enumVal": 687
+              }
              },
              "hOptionalUIRadioButtonGroupStyleFields": {}
             }
@@ -34724,7 +35258,14 @@
              },
              "unk_441f783": "0",
              "hOptionalUIControlStyleFields": {
-              "szOnSelChange": "UI_Profile_Edit_OnMedalSelectionChanged"
+              "tOnSelChange": {
+               "__type__": "UIDefaultAction",
+               "__typeHash__": 2502206177,
+               "dwType": 2502206177,
+               "behaviorMessageName": 0,
+               "behaviorContainerSno": null,
+               "enumVal": 688
+              }
              },
              "hOptionalUIRadioButtonGroupStyleFields": {}
             }

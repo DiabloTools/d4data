@@ -154,7 +154,7 @@
  "unk_4bf03ff": true,
  "tAttackSpeed": {
   "value": "Attacks_Per_Second_Total*1.25",
-  "compiled": "BQAAAAAAAADUAAAA/v///wAAAAAGAAAAAACgPw0AAAAAAAAA"
+  "compiled": "BQAAAAAAAADcAAAA/v///wAAAAAGAAAAAACgPw0AAAAAAAAA"
  },
  "unk_6deb090": false,
  "unk_ed2bdad": false,
@@ -212,12 +212,12 @@
    "__typeHash__": 2616788302,
    "eType": 0,
    "tMinRequired": {
-    "value": "30",
-    "compiled": "BgAAAAAA8EEAAAAA"
+    "value": "SF_12",
+    "compiled": "BQAAABIAAAAAAAAAAAAAAAAAAAAAAAAA"
    },
    "tInitialCost": {
-    "value": "30",
-    "compiled": "BgAAAAAA8EEAAAAA"
+    "value": "SF_12",
+    "compiled": "BQAAABIAAAAAAAAAAAAAAAAAAAAAAAAA"
    },
    "tChannellingCost": {
     "value": "0",
@@ -702,11 +702,9 @@
     "value": "1",
     "compiled": "BgAAAAAAgD8AAAAA"
    },
-   "unk_b7f0241": false,
    "eStackingBehavior": 0,
    "eStackingScope": 0,
    "unk_9261403": false,
-   "unk_d291777": false,
    "unk_db6680": false,
    "bVisibleInUI": false,
    "bShowDuration": false,
@@ -818,11 +816,9 @@
     "value": "1",
     "compiled": "BgAAAAAAgD8AAAAA"
    },
-   "unk_b7f0241": false,
    "eStackingBehavior": 0,
    "eStackingScope": 0,
    "unk_9261403": false,
-   "unk_d291777": false,
    "unk_db6680": false,
    "bVisibleInUI": false,
    "bShowDuration": false,
@@ -934,11 +930,9 @@
     "value": "1 / SF_15",
     "compiled": "BgAAAAAAgD8FAAAAFQAAAAAAAAAAAAAAAAAAAA4AAAAAAAAA"
    },
-   "unk_b7f0241": false,
    "eStackingBehavior": 0,
    "eStackingScope": 0,
    "unk_9261403": false,
-   "unk_d291777": false,
    "unk_db6680": false,
    "bVisibleInUI": false,
    "bShowDuration": false,
@@ -1036,8 +1030,8 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "SF_7 * Table(34,sLevel)",
-    "compiled": "BQAAAA0AAAAAAAAAAAAAAAAAAAAGAAAAAAAIQgUAAAABAAAAAAAAAAAAAAAAAAAAAQAAAAsAAAANAAAAAAAAAA=="
+    "value": "SF_7 * Table(34,sLevel) * (SF_30 ? (1 + (SF_29 * sLevel)) : 1)",
+    "compiled": "BQAAAA0AAAAAAAAAAAAAAAAAAAAGAAAAAAAIQgUAAAABAAAAAAAAAAAAAAAAAAAAAQAAAAsAAAANAAAABQAAACQAAAAAAAAAAAAAAAAAAAAGAAAAAACAPwUAAAAjAAAAAAAAAAAAAAAAAAAABQAAAAEAAAAAAAAAAAAAAAAAAAANAAAACwAAAAYAAAAAAIA/EAAAAA0AAAAAAAAA"
    }
   },
   {
@@ -1092,8 +1086,8 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "2.2",
-    "compiled": "BgAAAM3MDEAAAAAA"
+    "value": "1.65",
+    "compiled": "BgAAADMz0z8AAAAA"
    }
   },
   {
@@ -1132,8 +1126,8 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "",
-    "compiled": ""
+    "value": "30 * (SF_30 ? (1 + SF_28 * sLevel) : 1)",
+    "compiled": "BgAAAAAA8EEFAAAAJAAAAAAAAAAAAAAAAAAAAAYAAAAAAIA/BQAAACIAAAAAAAAAAAAAAAAAAAAFAAAAAQAAAAAAAAAAAAAAAAAAAA0AAAALAAAABgAAAAAAgD8QAAAADQAAAAAAAAA="
    }
   },
   {
@@ -1229,7 +1223,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Percent_Bonus_Projectiles_Per_Power#Sorcerer_IceShards + Percent_Bonus_Projectiles_All + Percent_Bonus_Projectiles_Per_Skill_Tag#Skill_Primary_Core",
-    "compiled": "BQAAAAAAAAC/AwAAS3kEAAAAAAAFAAAAAAAAAL4DAAD+////AAAAAAsAAAAFAAAAAAAAAMADAAAK4vGoAAAAAAsAAAAAAAAA"
+    "compiled": "BQAAAAAAAADNAwAAS3kEAAAAAAAFAAAAAAAAAMwDAAD+////AAAAAAsAAAAFAAAAAAAAAM4DAAAK4vGoAAAAAAsAAAAAAAAA"
    }
   },
   {
@@ -1237,7 +1231,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Affix_Value_1#legendary_sorc_110 / 100",
-    "compiled": "BQAAAAAAAABmBAAAWoASAAAAAAAGAAAAAADIQg4AAAAAAAAA"
+    "compiled": "BQAAAAAAAABzBAAAWoASAAAAAAAGAAAAAADIQg4AAAAAAAAA"
    }
   },
   {
@@ -1254,6 +1248,30 @@
    "tFormula": {
     "value": "Affix.Helm_Unique_Sorc_101.\"Static Value 2\"",
     "compiled": "BQAAAGMAAADCUSIAAgAAAAAAAAAAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "PowerTag.S10_ChaosPerk_Sorc_Rare_001.\"Script Formula 2\"",
+    "compiled": "BQAAAAUAAACP6iMAAgAAAAAAAAAAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "PowerTag.S10_ChaosPerk_Sorc_Rare_001.\"Script Formula 1\"",
+    "compiled": "BQAAAAUAAACP6iMAAQAAAAAAAAAAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "((GetCollectiblePowerEquippedSlotIndex(SNO.CollectiblePower.S10_ChaosPerk_Sorc_Rare_001)) > -1) ? 1 : 0",
+    "compiled": "BQAAAFkAAAAM6yMAAAAAAAAAAAABAAAAaAAAAAYAAAAAAIA/EQAAAAgAAAAGAAAAAACAPwYAAAAAAAAAEAAAAAAAAAA="
    }
   }
  ],
@@ -1938,5 +1956,6 @@
  "unk_376802e": false,
  "unk_bf25f64": 0,
  "arRecastPowerSequence": [],
- "arProjectileOverrides": []
+ "arProjectileOverrides": [],
+ "arConditionalDependencies": []
 }

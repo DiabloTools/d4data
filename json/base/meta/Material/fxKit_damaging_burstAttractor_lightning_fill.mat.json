@@ -20,7 +20,7 @@
   "mat": {
    "__type__": "Material",
    "__typeHash__": 1352167279,
-   "nSortPri": 10
+   "nSortPri": -2
   },
   "ptMatTexList": [
    {
@@ -60,13 +60,13 @@
      "__type__": "MaterialTexture",
      "__typeHash__": 3890408608,
      "snoTex": {
-      "__raw__": 990627,
+      "__raw__": 1114766,
       "__group__": 44,
       "__type__": "DT_SNO",
       "__typeHash__": 2764331143,
-      "__targetFileName__": "base/meta/Texture/ambientLightningGlow_2_Mask.tex",
+      "__targetFileName__": "base/meta/Texture/lightning_leadingHead_Mask.tex",
       "groupName": "Texture",
-      "name": "ambientLightningGlow_2_Mask"
+      "name": "lightning_leadingHead_Mask"
      },
      "ptTexAnim": [
       {
@@ -80,7 +80,7 @@
         "__typeHash__": 1068774800,
         "ePlaybackMode": 2,
         "tFrameRateRange": {
-         "rangeValue1": 0,
+         "rangeValue1": 30,
          "rangeValue2": 0
         },
         "tStartFrameRange": {
@@ -109,42 +109,62 @@
      "__type__": "MaterialTexture",
      "__typeHash__": 3890408608,
      "snoTex": {
-      "__raw__": 367433,
+      "__raw__": 1114766,
       "__group__": 44,
       "__type__": "DT_SNO",
       "__typeHash__": 2764331143,
-      "__targetFileName__": "base/meta/Texture/dissolve_Noise_02.tex",
+      "__targetFileName__": "base/meta/Texture/lightning_leadingHead_Mask.tex",
       "groupName": "Texture",
-      "name": "dissolve_Noise_02"
+      "name": "lightning_leadingHead_Mask"
      },
      "ptTexAnim": [
       {
-       "__type__": "TexAnim",
-       "__typeHash__": 911604182,
-       "dwType": 911604182,
+       "__type__": "TexAnimFrameByFrame",
+       "__typeHash__": 1011253607,
+       "dwType": 1011253607,
        "flUScale": 1,
-       "flVScale": 1
+       "flVScale": 1,
+       "tFrameAnim": {
+        "__type__": "FrameAnim",
+        "__typeHash__": 1068774800,
+        "ePlaybackMode": 2,
+        "tFrameRateRange": {
+         "rangeValue1": 30,
+         "rangeValue2": 0
+        },
+        "tStartFrameRange": {
+         "rangeValue1": 0,
+         "rangeValue2": 3
+        },
+        "dwFrameRandomSeed": 0,
+        "tAnimationDelayRange": {
+         "rangeValue1": 0,
+         "rangeValue2": 0
+        },
+        "unk_ca71af4": false
+       },
+       "fScaleUVsToFrame": true
       }
      ],
-     "nTexAnimStateIndex": -1,
+     "nTexAnimStateIndex": 1,
      "unk_e1a4010": false
     }
    },
    {
     "__type__": "MaterialTextureEntry",
     "__typeHash__": 552516018,
-    "eShaderTex": 105,
+    "eShaderTex": 97,
     "tMatTex": {
      "__type__": "MaterialTexture",
      "__typeHash__": 3890408608,
      "snoTex": {
-      "__raw__": 48229,
+      "__raw__": 132595,
       "__group__": 44,
       "__type__": "DT_SNO",
       "__typeHash__": 2764331143,
-      "__targetFileName__": "base/meta/Texture/uvDist_brains.tex",
+      "__targetFileName__": "base/meta/Texture/solid_white.tex",
       "groupName": "Texture",
-      "name": "uvDist_brains"
+      "name": "solid_white"
      },
      "ptTexAnim": [
       {
@@ -172,15 +192,15 @@
        "__type__": "RunTimeMaterialValue_float",
        "__typeHash__": 2833801029,
        "snoMaterialValue": {
-        "__raw__": 152906,
+        "__raw__": 142897,
         "__group__": 81,
         "__type__": "DT_SNO",
         "__typeHash__": 2764331143,
-        "__targetFileName__": "base/meta/MaterialValue/Color Dissolve Influence.mtv",
+        "__targetFileName__": "base/meta/MaterialValue/Alpha Noise Multiplier.mtv",
         "groupName": "MaterialValue",
-        "name": "Color Dissolve Influence"
+        "name": "Alpha Noise Multiplier"
        },
-       "value": 0,
+       "value": 4,
        "nPathValGraphIndex": -1,
        "eLightGroup": 0
       }
@@ -192,15 +212,35 @@
        "__type__": "RunTimeMaterialValue_float",
        "__typeHash__": 2833801029,
        "snoMaterialValue": {
-        "__raw__": 164289,
+        "__raw__": 151653,
         "__group__": 81,
         "__type__": "DT_SNO",
         "__typeHash__": 2764331143,
-        "__targetFileName__": "base/meta/MaterialValue/Alpha Soft Distance.mtv",
+        "__targetFileName__": "base/meta/MaterialValue/Alpha Shape-Noise Multiplier.mtv",
         "groupName": "MaterialValue",
-        "name": "Alpha Soft Distance"
+        "name": "Alpha Shape-Noise Multiplier"
        },
-       "value": 0.15000000596046448,
+       "value": 4,
+       "nPathValGraphIndex": -1,
+       "eLightGroup": 0
+      }
+     },
+     {
+      "__type__": "RunTimeMaterialScalarValueEntry",
+      "__typeHash__": 2176853528,
+      "tValue": {
+       "__type__": "RunTimeMaterialValue_float",
+       "__typeHash__": 2833801029,
+       "snoMaterialValue": {
+        "__raw__": 152906,
+        "__group__": 81,
+        "__type__": "DT_SNO",
+        "__typeHash__": 2764331143,
+        "__targetFileName__": "base/meta/MaterialValue/Color Dissolve Influence.mtv",
+        "groupName": "MaterialValue",
+        "name": "Color Dissolve Influence"
+       },
+       "value": 0.5199999809265137,
        "nPathValGraphIndex": -1,
        "eLightGroup": 0
       }
@@ -220,7 +260,7 @@
         "groupName": "MaterialValue",
         "name": "zSwitch Particle Distortion Method"
        },
-       "value": 1,
+       "value": 0,
        "nPathValGraphIndex": -1,
        "eLightGroup": 0
       }
@@ -240,7 +280,7 @@
         "groupName": "MaterialValue",
         "name": "zSwitch Particle Noise Method"
        },
-       "value": 0,
+       "value": 1,
        "nPathValGraphIndex": -1,
        "eLightGroup": 0
       }
@@ -272,15 +312,15 @@
        "__type__": "RunTimeMaterialValue_float",
        "__typeHash__": 2833801029,
        "snoMaterialValue": {
-        "__raw__": 1062403,
+        "__raw__": 1076921,
         "__group__": 81,
         "__type__": "DT_SNO",
         "__typeHash__": 2764331143,
-        "__targetFileName__": "base/meta/MaterialValue/Alpha 2 Soft Distance.mtv",
+        "__targetFileName__": "base/meta/MaterialValue/Alpha Test Threshold.mtv",
         "groupName": "MaterialValue",
-        "name": "Alpha 2 Soft Distance"
+        "name": "Alpha Test Threshold"
        },
-       "value": 0.3400000035762787,
+       "value": 0,
        "nPathValGraphIndex": -1,
        "eLightGroup": 0
       }
@@ -291,7 +331,7 @@
     "arMaterialVectorGraphs": []
    }
   ],
-  "nTexAnimStateCount": 1,
+  "nTexAnimStateCount": 2,
   "fHasGraph": false
  },
  "arDecalLookVariantMap": [],

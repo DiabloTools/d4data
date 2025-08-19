@@ -79,6 +79,18 @@
     "name": "Skill_Primary_Summoning"
    },
    "bSearchOnly": false
+  },
+  {
+   "__type__": "SkillTagStruct",
+   "__typeHash__": 4000554560,
+   "gbidSkillTag": {
+    "__raw__": 1901128789,
+    "__type__": "DT_GBID",
+    "__typeHash__": 1028170061,
+    "group": 56,
+    "name": "Search_CrowdControl"
+   },
+   "bSearchOnly": false
   }
  ],
  "eSkillCat": 5,
@@ -134,7 +146,7 @@
  "unk_4bf03ff": true,
  "tAttackSpeed": {
   "value": "Attacks_Per_Second_Total",
-  "compiled": "BQAAAAAAAADUAAAA/v///wAAAAAAAAAA"
+  "compiled": "BQAAAAAAAADcAAAA/v///wAAAAAAAAAA"
  },
  "unk_6deb090": false,
  "unk_ed2bdad": false,
@@ -186,7 +198,25 @@
  "bMustBeLearned": true,
  "bCaptionsInside": false,
  "eShapeshiftForm": -1,
- "arResourceCosts": [],
+ "arResourceCosts": [
+  {
+   "__type__": "PowerResourceCost",
+   "__typeHash__": 2616788302,
+   "eType": 6,
+   "tMinRequired": {
+    "value": "SF_30 ? SF_31 : 0",
+    "compiled": "BQAAACQAAAAAAAAAAAAAAAAAAAAFAAAAJQAAAAAAAAAAAAAAAAAAAAYAAAAAAAAAEAAAAAAAAAA="
+   },
+   "tInitialCost": {
+    "value": "SF_30 ? SF_31 : 0",
+    "compiled": "BQAAACQAAAAAAAAAAAAAAAAAAAAFAAAAJQAAAAAAAAAAAAAAAAAAAAYAAAAAAAAAEAAAAAAAAAA="
+   },
+   "tChannellingCost": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   }
+  }
+ ],
  "tHealthCost": {
   "value": "0",
   "compiled": "BgAAAAAAAAAAAAAA"
@@ -208,8 +238,8 @@
   "compiled": "BgAAAAAAgD8AAAAA"
  },
  "tCooldownTime": {
-  "value": "SF_24",
-  "compiled": "BQAAAB4AAAAAAAAAAAAAAAAAAAAAAAAA"
+  "value": "SF_30 ? 0 : SF_24",
+  "compiled": "BQAAACQAAAAAAAAAAAAAAAAAAAAGAAAAAAAAAAUAAAAeAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAA="
  },
  "tResourceCostReductionCoefficient": {
   "value": "1",
@@ -664,11 +694,9 @@
     "value": "1",
     "compiled": "BgAAAAAAgD8AAAAA"
    },
-   "unk_b7f0241": false,
    "eStackingBehavior": 0,
    "eStackingScope": 0,
    "unk_9261403": false,
-   "unk_d291777": false,
    "unk_db6680": false,
    "bVisibleInUI": false,
    "bShowDuration": false,
@@ -777,14 +805,12 @@
    "unk_4393f38": false,
    "unk_dcb22bd": false,
    "tMaxStackCount": {
-    "value": "1",
-    "compiled": "BgAAAAAAgD8AAAAA"
+    "value": "SF_30 ? 6 : 1",
+    "compiled": "BQAAACQAAAAAAAAAAAAAAAAAAAAGAAAAAADAQAYAAAAAAIA/EAAAAAAAAAA="
    },
-   "unk_b7f0241": false,
    "eStackingBehavior": 0,
    "eStackingScope": 0,
    "unk_9261403": false,
-   "unk_d291777": false,
    "unk_db6680": false,
    "bVisibleInUI": false,
    "bShowDuration": false,
@@ -896,11 +922,9 @@
     "value": "1",
     "compiled": "BgAAAAAAgD8AAAAA"
    },
-   "unk_b7f0241": false,
    "eStackingBehavior": 0,
    "eStackingScope": 0,
    "unk_9261403": false,
-   "unk_d291777": false,
    "unk_db6680": false,
    "bVisibleInUI": false,
    "bShowDuration": false,
@@ -1012,11 +1036,9 @@
     "value": "1",
     "compiled": "BgAAAAAAgD8AAAAA"
    },
-   "unk_b7f0241": false,
    "eStackingBehavior": 0,
    "eStackingScope": 0,
    "unk_9261403": false,
-   "unk_d291777": false,
    "unk_db6680": false,
    "bVisibleInUI": false,
    "bShowDuration": false,
@@ -1128,11 +1150,9 @@
     "value": "1",
     "compiled": "BgAAAAAAgD8AAAAA"
    },
-   "unk_b7f0241": false,
    "eStackingBehavior": 0,
    "eStackingScope": 0,
    "unk_9261403": false,
-   "unk_d291777": false,
    "unk_db6680": false,
    "bVisibleInUI": false,
    "bShowDuration": false,
@@ -1230,8 +1250,8 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "(SF_28 == 0)? (1.2 * Table(34, sLevel)) : (1.2 * Table(34, sLevel)*(1+( SF_27)))",
-    "compiled": "BQAAACIAAAAAAAAAAAAAAAAAAAAGAAAAAAAAAAkAAAAGAAAAmpmZPwYAAAAAAAhCBQAAAAEAAAAAAAAAAAAAAAAAAAABAAAACwAAAA0AAAAGAAAAmpmZPwYAAAAAAAhCBQAAAAEAAAAAAAAAAAAAAAAAAAABAAAACwAAAA0AAAAGAAAAAACAPwUAAAAhAAAAAAAAAAAAAAAAAAAACwAAAA0AAAAQAAAAAAAAAA=="
+    "value": "(SF_28 == 0)? (SF_7 * Table(34, sLevel)) : (SF_7 * Table(34, sLevel)*(1+( SF_27)))",
+    "compiled": "BQAAACIAAAAAAAAAAAAAAAAAAAAGAAAAAAAAAAkAAAAFAAAADQAAAAAAAAAAAAAAAAAAAAYAAAAAAAhCBQAAAAEAAAAAAAAAAAAAAAAAAAABAAAACwAAAA0AAAAFAAAADQAAAAAAAAAAAAAAAAAAAAYAAAAAAAhCBQAAAAEAAAAAAAAAAAAAAAAAAAABAAAACwAAAA0AAAAGAAAAAACAPwUAAAAhAAAAAAAAAAAAAAAAAAAACwAAAA0AAAAQAAAAAAAAAA=="
    }
   },
   {
@@ -1246,8 +1266,8 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "7",
-    "compiled": "BgAAAAAA4EAAAAAA"
+    "value": "SF_30 ? SF_33 : 7",
+    "compiled": "BQAAACQAAAAAAAAAAAAAAAAAAAAFAAAAJwAAAAAAAAAAAAAAAAAAAAYAAAAAAOBAEAAAAAAAAAA="
    }
   },
   {
@@ -1262,8 +1282,8 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "0.4",
-    "compiled": "BgAAAM3MzD4AAAAA"
+    "value": "SF_30 ? 0.25 : 0.4",
+    "compiled": "BQAAACQAAAAAAAAAAAAAAAAAAAAGAAAAAACAPgYAAADNzMw+EAAAAAAAAAA="
    }
   },
   {
@@ -1286,8 +1306,8 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "",
-    "compiled": ""
+    "value": "SF_30 ? SF_32 : 1.2",
+    "compiled": "BQAAACQAAAAAAAAAAAAAAAAAAAAFAAAAJgAAAAAAAAAAAAAAAAAAAAYAAACamZk/EAAAAAAAAAA="
    }
   },
   {
@@ -1415,7 +1435,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Chance_For_Double_Damage_Per_Power#Necromancer_ArmyoftheDead",
-    "compiled": "BQAAAAAAAACXAACAKZYHAAAAAAAAAAAA"
+    "compiled": "BQAAAAAAAACZAACAKZYHAAAAAAAAAAAA"
    }
   },
   {
@@ -1447,7 +1467,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "min(SF_29, (((1+Multiplicative_Power_Damage_Percent_Bonus#Necromancer_SkeletonMage)*(1+Power_Damage_Percent_Bonus#Necromancer_SkeletonMage))+((1+Multiplicative_Power_Damage_Percent_Bonus#Necromancer_Golem_Passive)*(1+Power_Damage_Percent_Bonus#Necromancer_Golem_Passive)) - 2)*(SF_26))",
-    "compiled": "BQAAACMAAAAAAAAAAAAAAAAAAAAGAAAAAACAPwUAAAAAAAAApwMAAPm3BgAAAAAACwAAAAYAAAAAAIA/BQAAAAAAAACmAwAA+bcGAAAAAAALAAAADQAAAAYAAAAAAIA/BQAAAAAAAACnAwAA7NEGAAAAAAALAAAABgAAAAAAgD8FAAAAAAAAAKYDAADs0QYAAAAAAAsAAAANAAAACwAAAAYAAAAAAABADAAAAAUAAAAgAAAAAAAAAAAAAAAAAAAADQAAAAEAAAAAAAAAAAAAAA=="
+    "compiled": "BQAAACMAAAAAAAAAAAAAAAAAAAAGAAAAAACAPwUAAAAAAAAAtQMAAPm3BgAAAAAACwAAAAYAAAAAAIA/BQAAAAAAAAC0AwAA+bcGAAAAAAALAAAADQAAAAYAAAAAAIA/BQAAAAAAAAC1AwAA7NEGAAAAAAALAAAABgAAAAAAgD8FAAAAAAAAALQDAADs0QYAAAAAAAsAAAANAAAACwAAAAYAAAAAAABADAAAAAUAAAAgAAAAAAAAAAAAAAAAAAAADQAAAAEAAAAAAAAAAAAAAA=="
    }
   },
   {
@@ -1456,6 +1476,38 @@
    "tFormula": {
     "value": "(Floor((sLevel)/5))? 1 : 0",
     "compiled": "BQAAAAEAAAAAAAAAAAAAAAAAAAAGAAAAAACgQA4AAAABAAAABQAAAAYAAAAAAIA/BgAAAAAAAAAQAAAAAAAAAA=="
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "2",
+    "compiled": "BgAAAAAAAEAAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "((GetCollectiblePowerEquippedSlotIndex(SNO.CollectiblePower.S10_ChaosPerk_Necro_Unique_001)) > -1) ? 1 : 0",
+    "compiled": "BQAAAFkAAAD/6iMAAAAAAAAAAAABAAAAaAAAAAYAAAAAAIA/EQAAAAgAAAAGAAAAAACAPwYAAAAAAAAAEAAAAAAAAAA="
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "PowerTag.S10_ChaosPerk_Necro_Unique_001.\"Script Formula 2\"",
+    "compiled": "BQAAAAUAAACk6iMAAgAAAAAAAAAAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": ".8",
+    "compiled": "BgAAAM3MTD8AAAAA"
    }
   },
   {
@@ -1677,5 +1729,6 @@
  "unk_376802e": false,
  "unk_bf25f64": 0,
  "arRecastPowerSequence": [],
- "arProjectileOverrides": []
+ "arProjectileOverrides": [],
+ "arConditionalDependencies": []
 }

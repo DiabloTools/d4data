@@ -166,7 +166,7 @@
  "unk_4bf03ff": true,
  "tAttackSpeed": {
   "value": "Attacks_Per_Second_Total",
-  "compiled": "BQAAAAAAAADUAAAA/v///wAAAAAAAAAA"
+  "compiled": "BQAAAAAAAADcAAAA/v///wAAAAAAAAAA"
  },
  "unk_6deb090": false,
  "unk_ed2bdad": false,
@@ -690,11 +690,9 @@
     "value": "5",
     "compiled": "BgAAAAAAoEAAAAAA"
    },
-   "unk_b7f0241": false,
    "eStackingBehavior": 0,
    "eStackingScope": 0,
    "unk_9261403": false,
-   "unk_d291777": false,
    "unk_db6680": false,
    "bVisibleInUI": false,
    "bShowDuration": false,
@@ -806,11 +804,9 @@
     "value": "10",
     "compiled": "BgAAAAAAIEEAAAAA"
    },
-   "unk_b7f0241": false,
    "eStackingBehavior": 0,
    "eStackingScope": 0,
    "unk_9261403": false,
-   "unk_d291777": false,
    "unk_db6680": false,
    "bVisibleInUI": false,
    "bShowDuration": false,
@@ -922,11 +918,9 @@
     "value": "1",
     "compiled": "BgAAAAAAgD8AAAAA"
    },
-   "unk_b7f0241": false,
    "eStackingBehavior": 0,
    "eStackingScope": 0,
    "unk_9261403": false,
-   "unk_d291777": false,
    "unk_db6680": false,
    "bVisibleInUI": false,
    "bShowDuration": false,
@@ -1038,11 +1032,9 @@
     "value": "1",
     "compiled": "BgAAAAAAgD8AAAAA"
    },
-   "unk_b7f0241": false,
    "eStackingBehavior": 0,
    "eStackingScope": 0,
    "unk_9261403": false,
-   "unk_d291777": false,
    "unk_db6680": false,
    "bVisibleInUI": false,
    "bShowDuration": false,
@@ -1154,11 +1146,9 @@
     "value": "1",
     "compiled": "BgAAAAAAgD8AAAAA"
    },
-   "unk_b7f0241": false,
    "eStackingBehavior": 0,
    "eStackingScope": 0,
    "unk_9261403": false,
-   "unk_d291777": false,
    "unk_db6680": false,
    "bVisibleInUI": false,
    "bShowDuration": false,
@@ -1256,8 +1246,8 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "SF_3 * Table(34,sLevel)",
-    "compiled": "BQAAAAkAAAAAAAAAAAAAAAAAAAAGAAAAAAAIQgUAAAABAAAAAAAAAAAAAAAAAAAAAQAAAAsAAAANAAAAAAAAAA=="
+    "value": "SF_3 * Table(34,sLevel) * (SF_39 ? (1 + (SF_38 * sLevel)) : 1)",
+    "compiled": "BQAAAAkAAAAAAAAAAAAAAAAAAAAGAAAAAAAIQgUAAAABAAAAAAAAAAAAAAAAAAAAAQAAAAsAAAANAAAABQAAAC0AAAAAAAAAAAAAAAAAAAAGAAAAAACAPwUAAAAsAAAAAAAAAAAAAAAAAAAABQAAAAEAAAAAAAAAAAAAAAAAAAANAAAACwAAAAYAAAAAAIA/EAAAAA0AAAAAAAAA"
    }
   },
   {
@@ -1296,8 +1286,8 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "0.35 * Table(34,sLevel)",
-    "compiled": "BgAAADQzsz4GAAAAAAAIQgUAAAABAAAAAAAAAAAAAAAAAAAAAQAAAAsAAAANAAAAAAAAAA=="
+    "value": "0.35 * Table(34,sLevel) * (SF_39 ? (1 + (SF_38 * sLevel)) : 1)",
+    "compiled": "BgAAADQzsz4GAAAAAAAIQgUAAAABAAAAAAAAAAAAAAAAAAAAAQAAAAsAAAANAAAABQAAAC0AAAAAAAAAAAAAAAAAAAAGAAAAAACAPwUAAAAsAAAAAAAAAAAAAAAAAAAABQAAAAEAAAAAAAAAAAAAAAAAAAANAAAACwAAAAYAAAAAAIA/EAAAAA0AAAAAAAAA"
    }
   },
   {
@@ -1344,8 +1334,8 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "Affix_Value_1#Helm_Unique_Sorc_100",
-    "compiled": "BQAAAAAAAABmBAAANSQaAAAAAAAAAAAA"
+    "value": "(Affix_Value_1#Helm_Unique_Sorc_100 + Affix_Value_1#S10_Helm_Unique_Sorc_100) * (SF_39 ? (1 + (SF_37 * sLevel)) : 1)",
+    "compiled": "BQAAAAAAAABzBAAANSQaAAAAAAAFAAAAAAAAAHMEAADQvCQAAAAAAAsAAAAFAAAALQAAAAAAAAAAAAAAAAAAAAYAAAAAAIA/BQAAACsAAAAAAAAAAAAAAAAAAAAFAAAAAQAAAAAAAAAAAAAAAAAAAA0AAAALAAAABgAAAAAAgD8QAAAADQAAAAAAAAA="
    }
   },
   {
@@ -1368,8 +1358,8 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "AffixIsEquipped(SNO.Affix.Helm_Unique_Sorc_100) ? 1 : 0",
-    "compiled": "BQAAAFkAAAA1JBoAAAAAAAAAAAABAAAAJAAAAAYAAAAAAIA/BgAAAAAAAAAQAAAAAAAAAA=="
+    "value": "AffixIsEquipped(SNO.Affix.Helm_Unique_Sorc_100) ? 1 : SF_25",
+    "compiled": "BQAAAFkAAAA1JBoAAAAAAAAAAAABAAAAJAAAAAYAAAAAAIA/BQAAAB8AAAAAAAAAAAAAAAAAAAAQAAAAAAAAAA=="
    }
   },
   {
@@ -1416,8 +1406,8 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "AffixIsEquipped(SNO.Affix.Helm_Unique_Sorc_100) ? 0 : 40",
-    "compiled": "BQAAAFkAAAA1JBoAAAAAAAAAAAABAAAAJAAAAAYAAAAAAAAABgAAAAAAIEIQAAAAAAAAAA=="
+    "value": "(SF_14 ? 0 : 40)  * (SF_39 ? (1 + (SF_37 * sLevel)) : 1)",
+    "compiled": "BQAAABQAAAAAAAAAAAAAAAAAAAAGAAAAAAAAAAYAAAAAACBCEAAAAAUAAAAtAAAAAAAAAAAAAAAAAAAABgAAAAAAgD8FAAAAKwAAAAAAAAAAAAAAAAAAAAUAAAABAAAAAAAAAAAAAAAAAAAADQAAAAsAAAAGAAAAAACAPxAAAAANAAAAAAAAAA=="
    }
   },
   {
@@ -1456,8 +1446,8 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "",
-    "compiled": ""
+    "value": "AffixIsEquipped(SNO.Affix.S10_Helm_Unique_Sorc_100)",
+    "compiled": "BQAAAFkAAADQvCQAAAAAAAAAAAABAAAAJAAAAAAAAAA="
    }
   },
   {
@@ -1521,7 +1511,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Affix_Value_1#legendary_sorc_106 / 100",
-    "compiled": "BQAAAAAAAABmBAAAY4ASAAAAAAAGAAAAAADIQg4AAAAAAAAA"
+    "compiled": "BQAAAAAAAABzBAAAY4ASAAAAAAAGAAAAAADIQg4AAAAAAAAA"
    }
   },
   {
@@ -1529,7 +1519,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Min(1.5, 1 + (AoE_Size_Bonus_Per_Power#Sorcerer_Meteor / 2))",
-    "compiled": "BgAAAAAAwD8GAAAAAACAPwUAAAAAAAAA4AMAACaIBAAAAAAABgAAAAAAAEAOAAAACwAAAAEAAAAAAAAAAAAAAA=="
+    "compiled": "BgAAAAAAwD8GAAAAAACAPwUAAAAAAAAA7gMAACaIBAAAAAAABgAAAAAAAEAOAAAACwAAAAEAAAAAAAAAAAAAAA=="
    }
   },
   {
@@ -1545,7 +1535,31 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Chance_For_Double_Damage_Per_Power#Sorcerer_Meteor",
-    "compiled": "BQAAAAAAAACXAACAJogEAAAAAAAAAAAA"
+    "compiled": "BQAAAAAAAACZAACAJogEAAAAAAAAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "PowerTag.S10_ChaosPerk_Sorc_Rare_001.\"Script Formula 2\"",
+    "compiled": "BQAAAAUAAACP6iMAAgAAAAAAAAAAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "PowerTag.S10_ChaosPerk_Sorc_Rare_001.\"Script Formula 1\"",
+    "compiled": "BQAAAAUAAACP6iMAAQAAAAAAAAAAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "((GetCollectiblePowerEquippedSlotIndex(SNO.CollectiblePower.S10_ChaosPerk_Sorc_Rare_001)) > -1) ? 1 : 0",
+    "compiled": "BQAAAFkAAAAM6yMAAAAAAAAAAAABAAAAaAAAAAYAAAAAAIA/EQAAAAgAAAAGAAAAAACAPwYAAAAAAAAAEAAAAAAAAAA="
    }
   }
  ],
@@ -1982,5 +1996,6 @@
  "unk_376802e": false,
  "unk_bf25f64": 0,
  "arRecastPowerSequence": [],
- "arProjectileOverrides": []
+ "arProjectileOverrides": [],
+ "arConditionalDependencies": []
 }
