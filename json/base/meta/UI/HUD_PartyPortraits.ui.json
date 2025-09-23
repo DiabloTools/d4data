@@ -1124,67 +1124,6 @@
             {
              "__type__": "UIControlTemplate",
              "__typeHash__": 641859515,
-             "szName": "HealthBar",
-             "ptInlineStyle": [
-              {
-               "__type__": "UIProgressBarStyle",
-               "__typeHash__": 3328833529,
-               "dwType": 3328833529,
-               "hParentStyle": {
-                "__type__": "UIControlHandle",
-                "__typeHash__": 3063971755,
-                "snoUI": {
-                 "__raw__": 151941,
-                 "__group__": 46,
-                 "__type__": "DT_SNO",
-                 "__typeHash__": 2764331143,
-                 "__targetFileName__": "base/meta/UI/HUD_PartyPortraits.ui",
-                 "groupName": "UI",
-                 "name": "HUD_PartyPortraits"
-                },
-                "szControlName": 4071679803
-               },
-               "unk_441f783": "0",
-               "hOptionalUIControlStyleFields": {
-                "bActive": 1
-               },
-               "tConsoleInput": {
-                "__type__": "UIControlConsoleInput",
-                "__typeHash__": 3089331074,
-                "hOptionalUIControlConsoleInputFields": {}
-               },
-               "hOptionalUIWindowStyleFields": {
-                "nHeight": 12,
-                "eVerticalAnchoring": 3,
-                "nWidth": 110,
-                "eHorizontalAnchoring": 3
-               },
-               "tProgressBarBase": {
-                "__type__": "UIProgressBarBase",
-                "__typeHash__": 4134908163,
-                "hOptionalUIProgressBarBaseFields": {
-                 "hProgressFillLineImage": {
-                  "__type__": "UIImageHandleReference",
-                  "__typeHash__": 1797021084,
-                  "hImageHandle": 2643471951
-                 },
-                 "flProgressMax": 100,
-                 "hProgressForegroundImage": {
-                  "__type__": "UIImageHandleReference",
-                  "__typeHash__": 1797021084,
-                  "hImageHandle": 2878471323
-                 }
-                }
-               },
-               "hOptionalUIProgressBarStyleFields": {}
-              }
-             ],
-             "arChildren": [],
-             "ptTemplateInstanceConfig": []
-            },
-            {
-             "__type__": "UIControlTemplate",
-             "__typeHash__": 641859515,
              "szName": "PlayerOutOfRange",
              "ptInlineStyle": [
               {
@@ -1229,6 +1168,112 @@
               }
              ],
              "arChildren": [],
+             "ptTemplateInstanceConfig": []
+            },
+            {
+             "__type__": "UIControlTemplate",
+             "__typeHash__": 641859515,
+             "szName": "Healthbar_BG",
+             "ptInlineStyle": [
+              {
+               "__type__": "UIWindowStyle",
+               "__typeHash__": 506492871,
+               "dwType": 506492871,
+               "hParentStyle": {
+                "__type__": "UIControlHandle",
+                "__typeHash__": 3063971755,
+                "snoUI": null,
+                "szControlName": 0
+               },
+               "unk_441f783": "0",
+               "hOptionalUIControlStyleFields": {},
+               "tConsoleInput": {
+                "__type__": "UIControlConsoleInput",
+                "__typeHash__": 3089331074,
+                "hOptionalUIControlConsoleInputFields": {}
+               },
+               "hOptionalUIWindowStyleFields": {
+                "nHeight": 15,
+                "eClipBehavior": 2,
+                "eVerticalAnchoring": 0,
+                "nWidth": 112,
+                "eHorizontalAnchoring": 0,
+                "hImageFrame": {
+                 "__type__": "UIImageHandleReference",
+                 "__typeHash__": 1797021084,
+                 "hImageHandle": 1913777016
+                }
+               }
+              }
+             ],
+             "arChildren": [
+              {
+               "__type__": "UIControlTemplate",
+               "__typeHash__": 641859515,
+               "szName": "HealthBar",
+               "ptInlineStyle": [
+                {
+                 "__type__": "UIProgressBarStyle",
+                 "__typeHash__": 3328833529,
+                 "dwType": 3328833529,
+                 "hParentStyle": {
+                  "__type__": "UIControlHandle",
+                  "__typeHash__": 3063971755,
+                  "snoUI": {
+                   "__raw__": 151941,
+                   "__group__": 46,
+                   "__type__": "DT_SNO",
+                   "__typeHash__": 2764331143,
+                   "__targetFileName__": "base/meta/UI/HUD_PartyPortraits.ui",
+                   "groupName": "UI",
+                   "name": "HUD_PartyPortraits"
+                  },
+                  "szControlName": 4071679803
+                 },
+                 "unk_441f783": "0",
+                 "hOptionalUIControlStyleFields": {
+                  "bActive": 1
+                 },
+                 "tConsoleInput": {
+                  "__type__": "UIControlConsoleInput",
+                  "__typeHash__": 3089331074,
+                  "hOptionalUIControlConsoleInputFields": {}
+                 },
+                 "hOptionalUIWindowStyleFields": {
+                  "nHeight": 10,
+                  "eVerticalAnchoring": 1,
+                  "nWidth": 108,
+                  "eHorizontalAnchoring": 1
+                 },
+                 "tProgressBarBase": {
+                  "__type__": "UIProgressBarBase",
+                  "__typeHash__": 4134908163,
+                  "hOptionalUIProgressBarBaseFields": {
+                   "hProgressBackgroundImage": {
+                    "__type__": "UIImageHandleReference",
+                    "__typeHash__": 1797021084,
+                    "hImageHandle": 0
+                   },
+                   "hProgressFillLineImage": {
+                    "__type__": "UIImageHandleReference",
+                    "__typeHash__": 1797021084,
+                    "hImageHandle": 2643471951
+                   },
+                   "flProgressMax": 100,
+                   "hProgressForegroundImage": {
+                    "__type__": "UIImageHandleReference",
+                    "__typeHash__": 1797021084,
+                    "hImageHandle": 2878471323
+                   }
+                  }
+                 },
+                 "hOptionalUIProgressBarStyleFields": {}
+                }
+               ],
+               "arChildren": [],
+               "ptTemplateInstanceConfig": []
+              }
+             ],
              "ptTemplateInstanceConfig": []
             }
            ],
@@ -2569,9 +2614,16 @@
          },
          "hOptionalUIWindowStyleFields": {
           "eVerticalAnchoring": 3,
-          "szOnRightClick": "UI_Portraits_OnRightClick",
           "nWidth": 126,
-          "eHorizontalAnchoring": 0
+          "eHorizontalAnchoring": 0,
+          "tOnRightClick": {
+           "__type__": "UIDefaultAction",
+           "__typeHash__": 2502206177,
+           "dwType": 2502206177,
+           "behaviorMessageName": 0,
+           "behaviorContainerSno": null,
+           "enumVal": 1171
+          }
          },
          "tFont": {
           "__type__": "UIControlFont",

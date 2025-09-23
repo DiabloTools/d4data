@@ -133,7 +133,7 @@
  "unk_4bf03ff": true,
  "tAttackSpeed": {
   "value": "Attacks_Per_Second_Total",
-  "compiled": "BQAAAAAAAADUAAAA/v///wAAAAAAAAAA"
+  "compiled": "BQAAAAAAAADcAAAA/v///wAAAAAAAAAA"
  },
  "unk_6deb090": false,
  "unk_ed2bdad": false,
@@ -639,11 +639,9 @@
     "value": "1",
     "compiled": "BgAAAAAAgD8AAAAA"
    },
-   "unk_b7f0241": false,
    "eStackingBehavior": 0,
    "eStackingScope": 0,
    "unk_9261403": false,
-   "unk_d291777": false,
    "unk_db6680": false,
    "bVisibleInUI": false,
    "bShowDuration": false,
@@ -755,11 +753,9 @@
     "value": "1",
     "compiled": "BgAAAAAAgD8AAAAA"
    },
-   "unk_b7f0241": false,
    "eStackingBehavior": 0,
    "eStackingScope": 0,
    "unk_9261403": false,
-   "unk_d291777": false,
    "unk_db6680": false,
    "bVisibleInUI": false,
    "bShowDuration": false,
@@ -871,11 +867,9 @@
     "value": "1",
     "compiled": "BgAAAAAAgD8AAAAA"
    },
-   "unk_b7f0241": false,
    "eStackingBehavior": 0,
    "eStackingScope": 0,
    "unk_9261403": false,
-   "unk_d291777": false,
    "unk_db6680": false,
    "bVisibleInUI": true,
    "bShowDuration": true,
@@ -987,11 +981,9 @@
     "value": "1",
     "compiled": "BgAAAAAAgD8AAAAA"
    },
-   "unk_b7f0241": false,
    "eStackingBehavior": 0,
    "eStackingScope": 0,
    "unk_9261403": false,
-   "unk_d291777": false,
    "unk_db6680": false,
    "bVisibleInUI": true,
    "bShowDuration": true,
@@ -1103,11 +1095,9 @@
     "value": "1",
     "compiled": "BgAAAAAAgD8AAAAA"
    },
-   "unk_b7f0241": false,
    "eStackingBehavior": 0,
    "eStackingScope": 0,
    "unk_9261403": false,
-   "unk_d291777": false,
    "unk_db6680": false,
    "bVisibleInUI": false,
    "bShowDuration": false,
@@ -1230,15 +1220,15 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Affix_Value_1#legendary_barb_007",
-    "compiled": "BQAAAAAAAABmBAAARNgIAAAAAAAAAAAA"
+    "compiled": "BQAAAAAAAABzBAAARNgIAAAAAAAAAAAA"
    }
   },
   {
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "SF_11 * (1+SF_12)",
-    "compiled": "BQAAABEAAAAAAAAAAAAAAAAAAAAGAAAAAACAPwUAAAASAAAAAAAAAAAAAAAAAAAACwAAAA0AAAAAAAAA"
+    "value": "SF_11 * (1+SF_12) * (1 + SF_19)",
+    "compiled": "BQAAABEAAAAAAAAAAAAAAAAAAAAGAAAAAACAPwUAAAASAAAAAAAAAAAAAAAAAAAACwAAAA0AAAAGAAAAAACAPwUAAAAZAAAAAAAAAAAAAAAAAAAACwAAAA0AAAAAAAAA"
    }
   },
   {
@@ -1261,16 +1251,16 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "(SF_10 * Table(34,sLevel)) * (1+SF_12)",
-    "compiled": "BQAAABAAAAAAAAAAAAAAAAAAAAAGAAAAAAAIQgUAAAABAAAAAAAAAAAAAAAAAAAAAQAAAAsAAAANAAAABgAAAAAAgD8FAAAAEgAAAAAAAAAAAAAAAAAAAAsAAAANAAAAAAAAAA=="
+    "value": "(SF_10 * Table(34,sLevel)) * (1+SF_12) * (1 + SF_19)",
+    "compiled": "BQAAABAAAAAAAAAAAAAAAAAAAAAGAAAAAAAIQgUAAAABAAAAAAAAAAAAAAAAAAAAAQAAAAsAAAANAAAABgAAAAAAgD8FAAAAEgAAAAAAAAAAAAAAAAAAAAsAAAANAAAABgAAAAAAgD8FAAAAGQAAAAAAAAAAAAAAAAAAAAsAAAANAAAAAAAAAA=="
    }
   },
   {
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "0.2",
-    "compiled": "BgAAAM3MTD4AAAAA"
+    "value": "0.2 * (1 + SF_19)",
+    "compiled": "BgAAAM3MTD4GAAAAAACAPwUAAAAZAAAAAAAAAAAAAAAAAAAACwAAAA0AAAAAAAAA"
    }
   },
   {
@@ -1309,24 +1299,24 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "20",
-    "compiled": "BgAAAAAAoEEAAAAA"
+    "value": "20 * (1 + SF_19)",
+    "compiled": "BgAAAAAAoEEGAAAAAACAPwUAAAAZAAAAAAAAAAAAAAAAAAAACwAAAA0AAAAAAAAA"
    }
   },
   {
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": ".1",
-    "compiled": "BgAAAM3MzD0AAAAA"
+    "value": ".1 * (1 + SF_19)",
+    "compiled": "BgAAAM3MzD0GAAAAAACAPwUAAAAZAAAAAAAAAAAAAAAAAAAACwAAAA0AAAAAAAAA"
    }
   },
   {
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": ".02",
-    "compiled": "BgAAAArXozwAAAAA"
+    "value": ".02 * (1 + SF_19)",
+    "compiled": "BgAAAArXozwGAAAAAACAPwUAAAAZAAAAAAAAAAAAAAAAAAAACwAAAA0AAAAAAAAA"
    }
   },
   {
@@ -1341,8 +1331,8 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "(SF_10 * Table(34,sLevel)) + (Mod.UpgradeA ? ((SF_5 )) : 0)",
-    "compiled": "BQAAABAAAAAAAAAAAAAAAAAAAAAGAAAAAAAIQgUAAAABAAAAAAAAAAAAAAAAAAAAAQAAAAsAAAANAAAABQAAAFoAAAD/////CQkaoAAAAAAFAAAACwAAAAAAAAAAAAAAAAAAAAYAAAAAAAAAEAAAAAsAAAAAAAAA"
+    "value": "SF_7 + (Mod.UpgradeA ? ((SF_5 )) : 0)",
+    "compiled": "BQAAAA0AAAAAAAAAAAAAAAAAAAAFAAAAWgAAAP////8JCRqgAAAAAAUAAAALAAAAAAAAAAAAAAAAAAAABgAAAAAAAAAQAAAACwAAAAAAAAA="
    }
   },
   {
@@ -1351,6 +1341,22 @@
    "tFormula": {
     "value": "(SF_7 + SF_5)",
     "compiled": "BQAAAA0AAAAAAAAAAAAAAAAAAAAFAAAACwAAAAAAAAAAAAAAAAAAAAsAAAAAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "SF_20 ? PowerTag.S10_ChaosPerk_Barb_Legendary_001.\"Script Formula 1\" : 0",
+    "compiled": "BQAAABoAAAAAAAAAAAAAAAAAAAAFAAAABQAAAKvqIwABAAAAAAAAAAYAAAAAAAAAEAAAAAAAAAA="
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "((GetCollectiblePowerEquippedSlotIndex(SNO.CollectiblePower.S10_ChaosPerk_Barb_Legendary_001)) > -1) ? 1 : 0",
+    "compiled": "BQAAAFkAAADp6iMAAAAAAAAAAAABAAAAaAAAAAYAAAAAAIA/EQAAAAgAAAAGAAAAAACAPwYAAAAAAAAAEAAAAAAAAAA="
    }
   }
  ],
@@ -1779,5 +1785,6 @@
  "unk_376802e": false,
  "unk_bf25f64": 0,
  "arRecastPowerSequence": [],
- "arProjectileOverrides": []
+ "arProjectileOverrides": [],
+ "arConditionalDependencies": []
 }

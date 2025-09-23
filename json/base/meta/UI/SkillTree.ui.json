@@ -2674,21 +2674,49 @@
        },
        "hOptionalUIWindowStyleFields": {
         "nTop": 18,
-        "szOnDrag": "UI_SkillAccess_OnSkillChoiceDrag",
-        "nTooltip": "UI_SkillTree_NodeTooltip",
-        "szOnClick": "UI_SkillTree_OnNodeClick",
+        "tOnDragTargetRelease": {
+         "__type__": "UIDefaultAction",
+         "__typeHash__": 2502206177,
+         "dwType": 2502206177,
+         "behaviorMessageName": 0,
+         "behaviorContainerSno": null,
+         "enumVal": 1226
+        },
         "nHeight": 46,
         "eVerticalAnchoring": 3,
         "unk_3dc9f06": 14,
         "unk_3dc9f07": 14,
-        "szOnRightClick": "UI_SkillTree_OnNodeRightClick",
         "unk_438e5c1": 1,
-        "szOnDragTargetRelease": "UI_SkillAccess_OnSkillChoiceClick",
+        "tOnClick": {
+         "__type__": "UIDefaultAction",
+         "__typeHash__": 2502206177,
+         "dwType": 2502206177,
+         "behaviorMessageName": 0,
+         "behaviorContainerSno": null,
+         "enumVal": 811
+        },
         "nBottom": 18,
         "nRight": 18,
         "nWidth": 46,
         "nLeft": 18,
+        "tOnTooltip": {
+         "__type__": "UIDefaultAction",
+         "__typeHash__": 2502206177,
+         "dwType": 2502206177,
+         "behaviorMessageName": 0,
+         "behaviorContainerSno": null,
+         "enumVal": 814
+        },
         "eHorizontalAnchoring": 3,
+        "tOnRightClick": {
+         "__type__": "UIDefaultAction",
+         "__typeHash__": 2502206177,
+         "dwType": 2502206177,
+         "behaviorMessageName": 0,
+         "behaviorContainerSno": null,
+         "enumVal": 812
+        },
+        "onDrag": 33,
         "bIsDragTarget": 1,
         "eTooltipAlignHorizontal": 5,
         "hImageFrame": {
@@ -3324,7 +3352,6 @@
          },
          "hOptionalUIWindowStyleFields": {
           "nTop": 12,
-          "szOnDrag": "",
           "nHeight": 40,
           "nBottom": 12,
           "hMaskImage": {
@@ -3335,6 +3362,7 @@
           "nRight": 12,
           "nWidth": 40,
           "nLeft": 12,
+          "onDrag": -1,
           "bIsDragTarget": 0,
           "snoControllerHighlightTiledStyle": {
            "__raw__": 1298996,
@@ -6823,11 +6851,18 @@
           "hOptionalUIControlConsoleInputFields": {}
          },
          "hOptionalUIWindowStyleFields": {
-          "szOnClick": "UI_SkillTree_ToggleSkillAccess",
           "eVerticalAnchoring": 3,
           "unk_3dc9f06": 3,
           "unk_3dc9f07": 3,
           "unk_438e5c1": 1,
+          "tOnClick": {
+           "__type__": "UIDefaultAction",
+           "__typeHash__": 2502206177,
+           "dwType": 2502206177,
+           "behaviorMessageName": 0,
+           "behaviorContainerSno": null,
+           "enumVal": 817
+          },
           "eHorizontalAnchoring": 3,
           "snoControllerHighlightTiledStyle": {
            "__raw__": 478961,
@@ -7053,7 +7088,14 @@
           "bIgnoreInputFocus": 1
          },
          "hOptionalUIHotkeyStyleFields": {
-          "szOnController": "UI_SkillTree_ToggleSkillAccess",
+          "tOnController": {
+           "__type__": "UIDefaultAction",
+           "__typeHash__": 2502206177,
+           "dwType": 2502206177,
+           "behaviorMessageName": 0,
+           "behaviorContainerSno": null,
+           "enumVal": 817
+          },
           "eFixedControllerButton": 14
          }
         }
@@ -8071,7 +8113,7 @@
            "unk_441f783": "0",
            "hOptionalUIControlStyleFields": {},
            "hOptionalUIDrawHookStyleFields": {
-            "szDrawHook": "UISkillTree_Draw"
+            "eDrawHook": 2
            }
           }
          ],
@@ -10624,8 +10666,22 @@
             "hOptionalUIControlConsoleInputFields": {}
            },
            "hOptionalUIWindowStyleFields": {
-            "nTooltip": "UI_Abilities_RefundAllTooltip",
-            "szOnClick": "UI_SkillTree_TryRefundAll",
+            "tOnClick": {
+             "__type__": "UIDefaultAction",
+             "__typeHash__": 2502206177,
+             "dwType": 2502206177,
+             "behaviorMessageName": 0,
+             "behaviorContainerSno": null,
+             "enumVal": 809
+            },
+            "tOnTooltip": {
+             "__type__": "UIDefaultAction",
+             "__typeHash__": 2502206177,
+             "dwType": 2502206177,
+             "behaviorMessageName": 0,
+             "behaviorContainerSno": null,
+             "enumVal": 151
+            },
             "eTooltipAlignHorizontal": 2,
             "eTooltipAlignVertical": 0
            },
@@ -10701,9 +10757,23 @@
             "hOptionalUIControlConsoleInputFields": {}
            },
            "hOptionalUIWindowStyleFields": {
-            "nTooltip": "UI_Abilities_ConfirmRespecTooltip",
-            "szOnClick": "UI_Abilities_ConfirmRespec",
             "eVerticalAnchoring": 1,
+            "tOnClick": {
+             "__type__": "UIDefaultAction",
+             "__typeHash__": 2502206177,
+             "dwType": 2502206177,
+             "behaviorMessageName": 0,
+             "behaviorContainerSno": null,
+             "enumVal": 142
+            },
+            "tOnTooltip": {
+             "__type__": "UIDefaultAction",
+             "__typeHash__": 2502206177,
+             "dwType": 2502206177,
+             "behaviorMessageName": 0,
+             "behaviorContainerSno": null,
+             "enumVal": 143
+            },
             "eTooltipAlignHorizontal": 2,
             "eTooltipAlignVertical": 0
            },
@@ -10779,8 +10849,15 @@
             "hOptionalUIControlConsoleInputFields": {}
            },
            "hOptionalUIWindowStyleFields": {
-            "szOnClick": "UI_Abilities_EnterRespecMode",
-            "eVerticalAnchoring": 1
+            "eVerticalAnchoring": 1,
+            "tOnClick": {
+             "__type__": "UIDefaultAction",
+             "__typeHash__": 2502206177,
+             "dwType": 2502206177,
+             "behaviorMessageName": 0,
+             "behaviorContainerSno": null,
+             "enumVal": 140
+            }
            },
            "tFont": {
             "__type__": "UIControlFont",
@@ -10854,8 +10931,15 @@
             "hOptionalUIControlConsoleInputFields": {}
            },
            "hOptionalUIWindowStyleFields": {
-            "szOnClick": "UI_Abilities_ExitRespecMode",
-            "eVerticalAnchoring": 1
+            "eVerticalAnchoring": 1,
+            "tOnClick": {
+             "__type__": "UIDefaultAction",
+             "__typeHash__": 2502206177,
+             "dwType": 2502206177,
+             "behaviorMessageName": 0,
+             "behaviorContainerSno": null,
+             "enumVal": 141
+            }
            },
            "tFont": {
             "__type__": "UIControlFont",
@@ -11508,8 +11592,15 @@
         "bActive": 1
        },
        "hOptionalUIHotkeyStyleFields": {
-        "unk_ccd9967": "UI_SkillTree_OnCancel",
-        "eHotkey": 126
+        "eHotkey": 127,
+        "unk_f68242e": {
+         "__type__": "UIDefaultAction",
+         "__typeHash__": 2502206177,
+         "dwType": 2502206177,
+         "behaviorMessageName": 0,
+         "behaviorContainerSno": null,
+         "enumVal": 803
+        }
        }
       }
      ],
@@ -11536,10 +11627,31 @@
         "bActive": 1
        },
        "hOptionalUIHotkeyStyleFields": {
-        "szOnControllerButtonHeld": "UI_Abilities_SearchBarExpandToggle",
-        "szOnControllerButtonUp": "UI_SkillTree_OnTryConfirmOrSkillAssign",
+        "tOnControllerButtonHeld": {
+         "__type__": "UIDefaultAction",
+         "__typeHash__": 2502206177,
+         "dwType": 2502206177,
+         "behaviorMessageName": 0,
+         "behaviorContainerSno": null,
+         "enumVal": 145
+        },
+        "unk_8898e39": {
+         "__type__": "UIDefaultAction",
+         "__typeHash__": 2502206177,
+         "dwType": 2502206177,
+         "behaviorMessageName": 0,
+         "behaviorContainerSno": null,
+         "enumVal": 146
+        },
         "eFixedControllerButton": 3,
-        "unk_e8b07b2": "UI_Abilities_AbortSearchBarExpand"
+        "tOnControllerButtonUp": {
+         "__type__": "UIDefaultAction",
+         "__typeHash__": 2502206177,
+         "dwType": 2502206177,
+         "behaviorMessageName": 0,
+         "behaviorContainerSno": null,
+         "enumVal": 816
+        }
        }
       }
      ],
@@ -11566,11 +11678,39 @@
         "bActive": 1
        },
        "hOptionalUIHotkeyStyleFields": {
-        "szOnController": "",
-        "szOnControllerButtonHeld": "UI_SkillTree_TryToMaxSkillNode",
-        "szOnControllerButtonUp": "UI_SkillTree_TrySpendSkillPoint",
+        "tOnControllerButtonHeld": {
+         "__type__": "UIDefaultAction",
+         "__typeHash__": 2502206177,
+         "dwType": 2502206177,
+         "behaviorMessageName": 0,
+         "behaviorContainerSno": null,
+         "enumVal": 806
+        },
+        "tOnController": {
+         "__type__": "UIDefaultAction",
+         "__typeHash__": 2502206177,
+         "dwType": 2502206177,
+         "behaviorMessageName": 0,
+         "behaviorContainerSno": null,
+         "enumVal": -1
+        },
+        "unk_8898e39": {
+         "__type__": "UIDefaultAction",
+         "__typeHash__": 2502206177,
+         "dwType": 2502206177,
+         "behaviorMessageName": 0,
+         "behaviorContainerSno": null,
+         "enumVal": 807
+        },
         "eFixedControllerButton": 0,
-        "unk_e8b07b2": "UI_SkillTree_OnTryToMaxSkillNodeAborted"
+        "tOnControllerButtonUp": {
+         "__type__": "UIDefaultAction",
+         "__typeHash__": 2502206177,
+         "dwType": 2502206177,
+         "behaviorMessageName": 0,
+         "behaviorContainerSno": null,
+         "enumVal": 805
+        }
        }
       }
      ],
@@ -11597,10 +11737,31 @@
         "bActive": 1
        },
        "hOptionalUIHotkeyStyleFields": {
-        "szOnControllerButtonHeld": "UI_SkillTree_TryRefundAll",
-        "szOnControllerButtonUp": "UI_SkillTree_TrySellSkillPoint",
+        "tOnControllerButtonHeld": {
+         "__type__": "UIDefaultAction",
+         "__typeHash__": 2502206177,
+         "dwType": 2502206177,
+         "behaviorMessageName": 0,
+         "behaviorContainerSno": null,
+         "enumVal": 809
+        },
+        "unk_8898e39": {
+         "__type__": "UIDefaultAction",
+         "__typeHash__": 2502206177,
+         "dwType": 2502206177,
+         "behaviorMessageName": 0,
+         "behaviorContainerSno": null,
+         "enumVal": 810
+        },
         "eFixedControllerButton": 2,
-        "unk_e8b07b2": "UI_SkillTree_OnSkillPointRefundAborted"
+        "tOnControllerButtonUp": {
+         "__type__": "UIDefaultAction",
+         "__typeHash__": 2502206177,
+         "dwType": 2502206177,
+         "behaviorMessageName": 0,
+         "behaviorContainerSno": null,
+         "enumVal": 808
+        }
        }
       }
      ],
@@ -11972,7 +12133,14 @@
               "hOptionalUIControlConsoleInputFields": {}
              },
              "hOptionalUIWindowStyleFields": {
-              "szOnClick": "UI_Abilities_OnSwitchToParagonButton"
+              "tOnClick": {
+               "__type__": "UIDefaultAction",
+               "__typeHash__": 2502206177,
+               "dwType": 2502206177,
+               "behaviorMessageName": 0,
+               "behaviorContainerSno": null,
+               "enumVal": 139
+              }
              },
              "tFont": {
               "__type__": "UIControlFont",
@@ -12168,7 +12336,14 @@
            },
            "hOptionalUIHotkeyStyleFields": {
             "eFixedControllerButton": 6,
-            "unk_ccd9967": "UIGeneric_SelectRadioButtonGroupPrevious"
+            "unk_f68242e": {
+             "__type__": "UIDefaultAction",
+             "__typeHash__": 2502206177,
+             "dwType": 2502206177,
+             "behaviorMessageName": 0,
+             "behaviorContainerSno": null,
+             "enumVal": 1303
+            }
            }
           }
          ],
@@ -12196,7 +12371,14 @@
            },
            "hOptionalUIHotkeyStyleFields": {
             "eFixedControllerButton": 7,
-            "unk_ccd9967": "UIGeneric_SelectRadioButtonGroupNext"
+            "unk_f68242e": {
+             "__type__": "UIDefaultAction",
+             "__typeHash__": 2502206177,
+             "dwType": 2502206177,
+             "behaviorMessageName": 0,
+             "behaviorContainerSno": null,
+             "enumVal": 1304
+            }
            }
           }
          ],
@@ -12243,8 +12425,15 @@
        },
        "hOptionalUIWindowStyleFields": {
         "nTop": 17,
-        "szOnClick": "UI_SkillTree_ReturnToSkills",
         "eVerticalAnchoring": 0,
+        "tOnClick": {
+         "__type__": "UIDefaultAction",
+         "__typeHash__": 2502206177,
+         "dwType": 2502206177,
+         "behaviorMessageName": 0,
+         "behaviorContainerSno": null,
+         "enumVal": 804
+        },
         "nRight": 10
        },
        "tFont": {
@@ -12565,14 +12754,42 @@
           "hOptionalUIControlConsoleInputFields": {}
          },
          "hOptionalUIWindowStyleFields": {
-          "szOnDrag": "UI_SkillTree_OnRootNodeDrag",
-          "nTooltip": "UI_SkillTree_NodeRootTooltip",
-          "szOnClick": "UI_SkillTree_OnRootNodeClick",
+          "tOnDragTargetRelease": {
+           "__type__": "UIDefaultAction",
+           "__typeHash__": 2502206177,
+           "dwType": 2502206177,
+           "behaviorMessageName": 0,
+           "behaviorContainerSno": null,
+           "enumVal": 1607
+          },
           "eVerticalAnchoring": 3,
-          "szOnRightClick": "UI_SkillTree_OnRootNodeRightClick",
-          "szOnDragTargetRelease": "UI_SkillTree_OnRootNodeDragTargetRelease",
+          "tOnClick": {
+           "__type__": "UIDefaultAction",
+           "__typeHash__": 2502206177,
+           "dwType": 2502206177,
+           "behaviorMessageName": 0,
+           "behaviorContainerSno": null,
+           "enumVal": 1606
+          },
           "unk_52796f5": 0,
+          "tOnTooltip": {
+           "__type__": "UIDefaultAction",
+           "__typeHash__": 2502206177,
+           "dwType": 2502206177,
+           "behaviorMessageName": 0,
+           "behaviorContainerSno": null,
+           "enumVal": 815
+          },
           "eHorizontalAnchoring": 3,
+          "tOnRightClick": {
+           "__type__": "UIDefaultAction",
+           "__typeHash__": 2502206177,
+           "dwType": 2502206177,
+           "behaviorMessageName": 0,
+           "behaviorContainerSno": null,
+           "enumVal": 813
+          },
+          "onDrag": 69,
           "bIsDragTarget": 1,
           "eTooltipAlignHorizontal": 2,
           "eTooltipTextJustify": 1,
@@ -13132,10 +13349,31 @@
             "hOptionalUIControlConsoleInputFields": {}
            },
            "hOptionalUIWindowStyleFields": {
-            "szOnDrag": "UI_SkillTree_OnRootNodeDrag",
-            "szOnClick": "UI_SkillTree_OnRootNodeClick",
-            "szOnRightClick": "UI_SkillTree_OnRootNodeRightClick",
-            "szOnDragTargetRelease": "UI_SkillTree_OnRootNodeDragTargetRelease"
+            "tOnDragTargetRelease": {
+             "__type__": "UIDefaultAction",
+             "__typeHash__": 2502206177,
+             "dwType": 2502206177,
+             "behaviorMessageName": 0,
+             "behaviorContainerSno": null,
+             "enumVal": 1607
+            },
+            "tOnClick": {
+             "__type__": "UIDefaultAction",
+             "__typeHash__": 2502206177,
+             "dwType": 2502206177,
+             "behaviorMessageName": 0,
+             "behaviorContainerSno": null,
+             "enumVal": 1606
+            },
+            "tOnRightClick": {
+             "__type__": "UIDefaultAction",
+             "__typeHash__": 2502206177,
+             "dwType": 2502206177,
+             "behaviorMessageName": 0,
+             "behaviorContainerSno": null,
+             "enumVal": 813
+            },
+            "onDrag": 69
            },
            "tFont": {
             "__type__": "UIControlFont",
@@ -13550,9 +13788,16 @@
            },
            "hOptionalUIWindowStyleFields": {
             "nTop": 3,
-            "szOnClick": "UI_Abilities_SearchBarExpandToggle",
             "bReadParentControl": 1,
             "eVerticalAnchoring": 1,
+            "tOnClick": {
+             "__type__": "UIDefaultAction",
+             "__typeHash__": 2502206177,
+             "dwType": 2502206177,
+             "behaviorMessageName": 0,
+             "behaviorContainerSno": null,
+             "enumVal": 145
+            },
             "nBottom": 0,
             "nRight": 6,
             "nWidth": 50,
@@ -14071,7 +14316,14 @@
            "unk_441f783": "0",
            "hOptionalUIControlStyleFields": {},
            "hOptionalUIHotkeyStyleFields": {
-            "szOnControllerButtonHeld": "UI_Abilities_SearchBarExpandToggle",
+            "tOnControllerButtonHeld": {
+             "__type__": "UIDefaultAction",
+             "__typeHash__": 2502206177,
+             "dwType": 2502206177,
+             "behaviorMessageName": 0,
+             "behaviorContainerSno": null,
+             "enumVal": 145
+            },
             "eFixedControllerButton": 3,
             "snoOnActionSound": null
            }
@@ -14314,8 +14566,15 @@
                     "hOptionalUIControlConsoleInputFields": {}
                    },
                    "hOptionalUIWindowStyleFields": {
-                    "szOnClick": "UI_Abilities_SearchBarRequireAllToggle",
                     "eVerticalAnchoring": 1,
+                    "tOnClick": {
+                     "__type__": "UIDefaultAction",
+                     "__typeHash__": 2502206177,
+                     "dwType": 2502206177,
+                     "behaviorMessageName": 0,
+                     "behaviorContainerSno": null,
+                     "enumVal": 148
+                    },
                     "nMaxWidth": 400,
                     "eHorizontalAnchoring": 1
                    },
@@ -15436,7 +15695,14 @@
                "unk_441f783": "0",
                "hOptionalUIControlStyleFields": {},
                "hOptionalUIHotkeyStyleFields": {
-                "szOnController": "UI_Abilities_SearchBarClearAll",
+                "tOnController": {
+                 "__type__": "UIDefaultAction",
+                 "__typeHash__": 2502206177,
+                 "dwType": 2502206177,
+                 "behaviorMessageName": 0,
+                 "behaviorContainerSno": null,
+                 "enumVal": 149
+                },
                 "eFixedControllerButton": 2,
                 "snoOnActionSound": {
                  "__raw__": 137607,
@@ -15484,8 +15750,15 @@
                 "hOptionalUIControlConsoleInputFields": {}
                },
                "hOptionalUIWindowStyleFields": {
-                "szOnClick": "UI_Abilities_SearchBarClearAll",
                 "eVerticalAnchoring": 1,
+                "tOnClick": {
+                 "__type__": "UIDefaultAction",
+                 "__typeHash__": 2502206177,
+                 "dwType": 2502206177,
+                 "behaviorMessageName": 0,
+                 "behaviorContainerSno": null,
+                 "enumVal": 149
+                },
                 "eHorizontalAnchoring": 1,
                 "eVisibilityCondition": 0
                },
@@ -15907,8 +16180,15 @@
      },
      "unk_441f783": "0",
      "hOptionalUIControlStyleFields": {
-      "bActive": 1,
-      "szOnUpdate": "ModalNotification_OnUpdate"
+      "tOnUpdate": {
+       "__type__": "UIUpdateAction",
+       "__typeHash__": 2860534367,
+       "dwType": 2860534367,
+       "behaviorMessageName": 0,
+       "behaviorContainerSno": null,
+       "enumVal": 46
+      },
+      "bActive": 1
      },
      "tConsoleInput": {
       "__type__": "UIControlConsoleInput",
@@ -17208,7 +17488,14 @@
                 "hOptionalUIControlConsoleInputFields": {}
                },
                "hOptionalUIWindowStyleFields": {
-                "szOnClick": "ModalNotification_OnClick_OkButton"
+                "tOnClick": {
+                 "__type__": "UIDefaultAction",
+                 "__typeHash__": 2502206177,
+                 "dwType": 2502206177,
+                 "behaviorMessageName": 0,
+                 "behaviorContainerSno": null,
+                 "enumVal": 1192
+                }
                },
                "tFont": {
                 "__type__": "UIControlFont",
@@ -17252,7 +17539,7 @@
                 }
                },
                "hOptionalUIButtonStyleFields": {
-                "eHotkey": 125
+                "eHotkey": 126
                }
               }
              ],
@@ -17290,7 +17577,14 @@
                 "hOptionalUIControlConsoleInputFields": {}
                },
                "hOptionalUIWindowStyleFields": {
-                "szOnClick": "ModalNotification_OnClick_CancelButton"
+                "tOnClick": {
+                 "__type__": "UIDefaultAction",
+                 "__typeHash__": 2502206177,
+                 "dwType": 2502206177,
+                 "behaviorMessageName": 0,
+                 "behaviorContainerSno": null,
+                 "enumVal": 1193
+                }
                },
                "tFont": {
                 "__type__": "UIControlFont",
@@ -17334,7 +17628,7 @@
                 }
                },
                "hOptionalUIButtonStyleFields": {
-                "eHotkey": 126
+                "eHotkey": 127
                }
               }
              ],
@@ -17533,7 +17827,14 @@
              "hOptionalUIControlStyleFields": {},
              "hOptionalUIHotkeyStyleFields": {
               "eFixedControllerButton": 0,
-              "unk_ccd9967": "ModalNotification_OnClick_OkButton",
+              "unk_f68242e": {
+               "__type__": "UIDefaultAction",
+               "__typeHash__": 2502206177,
+               "dwType": 2502206177,
+               "behaviorMessageName": 0,
+               "behaviorContainerSno": null,
+               "enumVal": 1192
+              },
               "snoOnActionSound": {
                "__raw__": 1359020,
                "__group__": 40,
@@ -17569,7 +17870,14 @@
              "hOptionalUIHotkeyStyleFields": {
               "eFixedKey": 0,
               "eFixedControllerButton": 1,
-              "unk_ccd9967": "ModalNotification_OnClick_CancelButton",
+              "unk_f68242e": {
+               "__type__": "UIDefaultAction",
+               "__typeHash__": 2502206177,
+               "dwType": 2502206177,
+               "behaviorMessageName": 0,
+               "behaviorContainerSno": null,
+               "enumVal": 1193
+              },
               "snoOnActionSound": {
                "__raw__": 1377468,
                "__group__": 40,
@@ -17882,9 +18190,16 @@
           "hOptionalUIControlConsoleInputFields": {}
          },
          "hOptionalUIWindowStyleFields": {
-          "nTooltip": "UI_SkillTree_NodeRootTooltip",
           "eVerticalAnchoring": 3,
           "unk_52796f5": 0,
+          "tOnTooltip": {
+           "__type__": "UIDefaultAction",
+           "__typeHash__": 2502206177,
+           "dwType": 2502206177,
+           "behaviorMessageName": 0,
+           "behaviorContainerSno": null,
+           "enumVal": 815
+          },
           "eHorizontalAnchoring": 3,
           "eTooltipAlignHorizontal": 5,
           "eTooltipAlignVertical": 5,
@@ -18255,7 +18570,6 @@
        },
        "hOptionalUIWindowStyleFields": {
         "nTop": 0,
-        "nTooltip": "UI_SkillTree_ComboPassiveChoiceTooltip",
         "nHeight": 120,
         "eVerticalAnchoring": 3,
         "unk_3dc9f06": 4,
@@ -18265,6 +18579,14 @@
         "nRight": 0,
         "nWidth": 120,
         "nLeft": 0,
+        "tOnTooltip": {
+         "__type__": "UIDefaultAction",
+         "__typeHash__": 2502206177,
+         "dwType": 2502206177,
+         "behaviorMessageName": 0,
+         "behaviorContainerSno": null,
+         "enumVal": 1605
+        },
         "eHorizontalAnchoring": 3,
         "eTooltipAlignHorizontal": 5,
         "hImageFrame": {
@@ -18647,19 +18969,47 @@
        },
        "hOptionalUIWindowStyleFields": {
         "nTop": 6,
-        "szOnDrag": "UI_SkillTree_OnSpiritDrag",
-        "nTooltip": "UI_SkillTree_NodeRootTooltip",
-        "szOnClick": "UI_SkillTree_OnSpiritLeftClick",
+        "tOnDragTargetRelease": {
+         "__type__": "UIDefaultAction",
+         "__typeHash__": 2502206177,
+         "dwType": 2502206177,
+         "behaviorMessageName": 0,
+         "behaviorContainerSno": null,
+         "enumVal": -2
+        },
         "eVerticalAnchoring": 3,
         "unk_3dc9f06": 8,
         "unk_3dc9f07": 8,
-        "szOnRightClick": "UI_SkillTree_OnSpiritRightClick",
         "unk_438e5c1": 1,
-        "szOnDragTargetRelease": "UI_SkillTree_OnSpiritDrag",
+        "tOnClick": {
+         "__type__": "UIDefaultAction",
+         "__typeHash__": 2502206177,
+         "dwType": 2502206177,
+         "behaviorMessageName": 0,
+         "behaviorContainerSno": null,
+         "enumVal": 1608
+        },
         "nBottom": 6,
         "nRight": 6,
         "nLeft": 6,
+        "tOnTooltip": {
+         "__type__": "UIDefaultAction",
+         "__typeHash__": 2502206177,
+         "dwType": 2502206177,
+         "behaviorMessageName": 0,
+         "behaviorContainerSno": null,
+         "enumVal": 815
+        },
         "eHorizontalAnchoring": 3,
+        "tOnRightClick": {
+         "__type__": "UIDefaultAction",
+         "__typeHash__": 2502206177,
+         "dwType": 2502206177,
+         "behaviorMessageName": 0,
+         "behaviorContainerSno": null,
+         "enumVal": 1892
+        },
+        "onDrag": 70,
         "bIsDragTarget": 1,
         "eTooltipAlignHorizontal": 2,
         "hImageFrame": {

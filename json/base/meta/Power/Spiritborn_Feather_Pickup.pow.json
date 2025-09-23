@@ -67,7 +67,7 @@
  "unk_4bf03ff": true,
  "tAttackSpeed": {
   "value": "Attacks_Per_Second_Total",
-  "compiled": "BQAAAAAAAADUAAAA/v///wAAAAAAAAAA"
+  "compiled": "BQAAAAAAAADcAAAA/v///wAAAAAAAAAA"
  },
  "unk_6deb090": false,
  "unk_ed2bdad": false,
@@ -557,11 +557,9 @@
     "value": "SF_4",
     "compiled": "BQAAAAoAAAAAAAAAAAAAAAAAAAAAAAAA"
    },
-   "unk_b7f0241": false,
    "eStackingBehavior": 0,
    "eStackingScope": 0,
    "unk_9261403": false,
-   "unk_d291777": false,
    "unk_db6680": false,
    "bVisibleInUI": true,
    "bShowDuration": true,
@@ -667,8 +665,8 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "0.2 * SF_3",
-    "compiled": "BgAAAM3MTD4FAAAACQAAAAAAAAAAAAAAAAAAAA0AAAAAAAAA"
+    "value": "(SF_5 == 1) ? (0.4 * SF_3) : (0.2 * SF_3)",
+    "compiled": "BQAAAAsAAAAAAAAAAAAAAAAAAAAGAAAAAACAPwkAAAAGAAAAzczMPgUAAAAJAAAAAAAAAAAAAAAAAAAADQAAAAYAAADNzEw+BQAAAAkAAAAAAAAAAAAAAAAAAAANAAAAEAAAAAAAAAA="
    }
   },
   {
@@ -684,7 +682,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "1 + Bonus_Percent_Per_Power#Spiritborn_Feather_Spawn",
-    "compiled": "BgAAAAAAgD8FAAAAAAAAALUDAAAJIx4AAAAAAAsAAAAAAAAA"
+    "compiled": "BgAAAAAAgD8FAAAAAAAAAMMDAAAJIx4AAAAAAAsAAAAAAAAA"
    }
   },
   {
@@ -693,6 +691,14 @@
    "tFormula": {
     "value": "SF_2 * 16",
     "compiled": "BQAAAAgAAAAAAAAAAAAAAAAAAAAGAAAAAACAQQ0AAAAAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "PowerTag.spiritborn_eagle_sun_passive_alternate.\"Script Formula 13\"",
+    "compiled": "BQAAAAUAAAAZ0B0ADQAAAAAAAAAAAAAA"
    }
   }
  ],
@@ -727,5 +733,6 @@
  "unk_376802e": false,
  "unk_bf25f64": 0,
  "arRecastPowerSequence": [],
- "arProjectileOverrides": []
+ "arProjectileOverrides": [],
+ "arConditionalDependencies": []
 }

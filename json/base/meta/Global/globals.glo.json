@@ -1275,6 +1275,28 @@
        "name": "ShaderFX_Chr_S8_Apparitions"
       }
      }
+    },
+    {
+     "__type__": "ShaderMapOverride",
+     "__typeHash__": 2770795733,
+     "szOverrideName": 1477662109,
+     "nSortPriority": 0,
+     "bPersistsOnDeath": false,
+     "unk_9380400": false,
+     "unk_1b98056": false,
+     "unk_256614d": false,
+     "dwValue": 89,
+     "hOptionalShaderMapOverrideFields": {
+      "snoShaderEffect": {
+       "__raw__": 2409457,
+       "__group__": 37,
+       "__type__": "DT_SNO",
+       "__typeHash__": 2764331143,
+       "__targetFileName__": "base/meta/Shader/ShaderFX_Chr_S10_Chaos.shd",
+       "groupName": "Shader",
+       "name": "ShaderFX_Chr_S10_Chaos"
+      }
+     }
     }
    ],
    "unk_156a14c": [
@@ -1366,7 +1388,8 @@
     0,
     100,
     -1,
-    -1
+    -1,
+    0
    ],
    "unk_6759f02": [
     1,
@@ -1449,6 +1472,7 @@
     0,
     0,
     1,
+    0,
     0,
     0,
     0,
@@ -1548,6 +1572,7 @@
     0,
     0,
     0,
+    0,
     0
    ],
    "unk_e2e2917": 0.5,
@@ -1605,6 +1630,36 @@
    "unk_3fe50bb": true,
    "unk_5d77ea6": 1800,
    "unk_5e4581e": 30,
+   "snoItemButtonOverlay": [
+    null,
+    {
+     "__raw__": 1087947,
+     "__group__": 37,
+     "__type__": "DT_SNO",
+     "__typeHash__": 2764331143,
+     "__targetFileName__": "base/meta/Shader/ui_itemSacred.shd",
+     "groupName": "Shader",
+     "name": "ui_itemSacred"
+    },
+    {
+     "__raw__": 1087952,
+     "__group__": 37,
+     "__type__": "DT_SNO",
+     "__typeHash__": 2764331143,
+     "__targetFileName__": "base/meta/Shader/ui_itemAncestral.shd",
+     "groupName": "Shader",
+     "name": "ui_itemAncestral"
+    },
+    {
+     "__raw__": 2412376,
+     "__group__": 37,
+     "__type__": "DT_SNO",
+     "__typeHash__": 2764331143,
+     "__targetFileName__": "base/meta/Shader/ui_itemSeasonalArmor.shd",
+     "groupName": "Shader",
+     "name": "ui_itemSeasonalArmor"
+    }
+   ],
    "snoStartingSubzone": {
     "__raw__": 445427,
     "__group__": 80,
@@ -14238,6 +14293,60 @@
      "__typeHash__": 377108136,
      "uGUID": 252105,
      "szName": "S09_QST_Main_01_DemonFake"
+    },
+    {
+     "__type__": "StartLocationName",
+     "__typeHash__": 377108136,
+     "uGUID": 251471,
+     "szName": "S10_QST_05_DemonVault"
+    },
+    {
+     "__type__": "StartLocationName",
+     "__typeHash__": 377108136,
+     "uGUID": 251674,
+     "szName": "S10_QST_Main_05_DemonVault"
+    },
+    {
+     "__type__": "StartLocationName",
+     "__typeHash__": 377108136,
+     "uGUID": 251952,
+     "szName": "S10_QST_Main_01_CultDen"
+    },
+    {
+     "__type__": "StartLocationName",
+     "__typeHash__": 377108136,
+     "uGUID": 251957,
+     "szName": "S10_QST_Main_04_Library"
+    },
+    {
+     "__type__": "StartLocationName",
+     "__typeHash__": 377108136,
+     "uGUID": 251964,
+     "szName": "S10_QST_Main_06_BartucsLair"
+    },
+    {
+     "__type__": "StartLocationName",
+     "__typeHash__": 377108136,
+     "uGUID": 252011,
+     "szName": "S10_QST_Main_03_Outpost"
+    },
+    {
+     "__type__": "StartLocationName",
+     "__typeHash__": 377108136,
+     "uGUID": 252060,
+     "szName": "S10_Boss_Bartuc"
+    },
+    {
+     "__type__": "StartLocationName",
+     "__typeHash__": 377108136,
+     "uGUID": 252712,
+     "szName": "S10_BSK_Pretorment"
+    },
+    {
+     "__type__": "StartLocationName",
+     "__typeHash__": 377108136,
+     "uGUID": 253749,
+     "szName": "S10_QST_Main_02_CultDen"
     }
    ],
    "unk_8aac9ef": {
@@ -14734,42 +14843,82 @@
      ]
     }
    ],
-   "tIQLSacredPowerRanges": {
-    "__type__": "ItemQualityLevelPowerRanges",
-    "__typeHash__": 2112421053,
-    "tDropRange": {
-     "rangeValue1": 625,
-     "rangeValue2": 125
+   "tIQMPowerRanges": [
+    {
+     "__type__": "ItemQualityLevelPowerRanges",
+     "__typeHash__": 2112421053,
+     "tDropRange": {
+      "rangeValue1": 0,
+      "rangeValue2": 750
+     },
+     "flBulkMin": 0.25,
+     "flExpectedValue": 0.5,
+     "flBulkMax": 0.75,
+     "nWeights": [
+      100,
+      100,
+      100,
+      100
+     ]
     },
-    "flBulkMin": 0.25,
-    "flExpectedValue": 0.5,
-    "flBulkMax": 0.75,
-    "nWeights": [
-     100,
-     100,
-     100,
-     100
-    ]
-   },
-   "tIQLAncestralPowerRanges": {
-    "__type__": "ItemQualityLevelPowerRanges",
-    "__typeHash__": 2112421053,
-    "tDropRange": {
-     "rangeValue1": 800,
-     "rangeValue2": 0
+    {
+     "__type__": "ItemQualityLevelPowerRanges",
+     "__typeHash__": 2112421053,
+     "tDropRange": {
+      "rangeValue1": 625,
+      "rangeValue2": 125
+     },
+     "flBulkMin": 0.25,
+     "flExpectedValue": 0.5,
+     "flBulkMax": 0.75,
+     "nWeights": [
+      100,
+      100,
+      100,
+      100
+     ]
     },
-    "flBulkMin": 0.25,
-    "flExpectedValue": 0.5,
-    "flBulkMax": 0.75,
-    "nWeights": [
-     100,
-     100,
-     100,
-     100
-    ]
-   },
-   "nMinimumSacredRequiredLevel": 35,
-   "nMinimumAncestralRequiredLevel": 55,
+    {
+     "__type__": "ItemQualityLevelPowerRanges",
+     "__typeHash__": 2112421053,
+     "tDropRange": {
+      "rangeValue1": 800,
+      "rangeValue2": 0
+     },
+     "flBulkMin": 0.25,
+     "flExpectedValue": 0.5,
+     "flBulkMax": 0.75,
+     "nWeights": [
+      100,
+      100,
+      100,
+      100
+     ]
+    },
+    {
+     "__type__": "ItemQualityLevelPowerRanges",
+     "__typeHash__": 2112421053,
+     "tDropRange": {
+      "rangeValue1": 800,
+      "rangeValue2": 0
+     },
+     "flBulkMin": 0.25,
+     "flExpectedValue": 0.5,
+     "flBulkMax": 0.75,
+     "nWeights": [
+      100,
+      100,
+      100,
+      100
+     ]
+    }
+   ],
+   "nMinimumIQMRequiredLevel": [
+    0,
+    35,
+    55,
+    60
+   ],
    "arMasterworkRanks": [
     {
      "__type__": "MasterworkRankData",
@@ -15210,7 +15359,8 @@
        "__targetFileName__": "base/meta/Item/ItemAspect_Offensive_03.itm",
        "groupName": "Item",
        "name": "ItemAspect_Offensive_03"
-      }
+      },
+      null
      ]
     },
     {
@@ -15243,7 +15393,8 @@
        "__targetFileName__": "base/meta/Item/ItemAspect_Defensive_03.itm",
        "groupName": "Item",
        "name": "ItemAspect_Defensive_03"
-      }
+      },
+      null
      ]
     },
     {
@@ -15276,7 +15427,8 @@
        "__targetFileName__": "base/meta/Item/ItemAspect_Utility_03.itm",
        "groupName": "Item",
        "name": "ItemAspect_Utility_03"
-      }
+      },
+      null
      ]
     },
     {
@@ -15309,7 +15461,8 @@
        "__targetFileName__": "base/meta/Item/ItemAspect_Resource_03.itm",
        "groupName": "Item",
        "name": "ItemAspect_Resource_03"
-      }
+      },
+      null
      ]
     },
     {
@@ -15342,7 +15495,8 @@
        "__targetFileName__": "base/meta/Item/ItemAspect_Mobility_03.itm",
        "groupName": "Item",
        "name": "ItemAspect_Mobility_03"
-      }
+      },
+      null
      ]
     },
     {
@@ -15375,7 +15529,8 @@
        "__targetFileName__": "base/meta/Item/ItemAspect_Weapon_03.itm",
        "groupName": "Item",
        "name": "ItemAspect_Weapon_03"
-      }
+      },
+      null
      ]
     }
    ],
@@ -16427,7 +16582,7 @@
        {
         "__type__": "DifficultyUIStatsInfo",
         "__typeHash__": 3334876524,
-        "hInfo": 151065050
+        "hInfo": 2246207415
        }
       ],
       "hAdditionalInfo": 915501707,
@@ -16501,7 +16656,7 @@
        {
         "__type__": "DifficultyUIStatsInfo",
         "__typeHash__": 3334876524,
-        "hInfo": 1442533016
+        "hInfo": 2246207415
        }
       ],
       "hAdditionalInfo": 954637100,
@@ -16575,7 +16730,7 @@
        {
         "__type__": "DifficultyUIStatsInfo",
         "__typeHash__": 3334876524,
-        "hInfo": 2734000985
+        "hInfo": 2246207415
        }
       ],
       "hAdditionalInfo": 993772493,
@@ -16649,7 +16804,7 @@
        {
         "__type__": "DifficultyUIStatsInfo",
         "__typeHash__": 3334876524,
-        "hInfo": 4025468954
+        "hInfo": 2246207415
        }
       ],
       "hAdditionalInfo": 1032907886,
@@ -16878,6 +17033,9 @@
     "f423f",
     "f423f",
     "f423f",
+    "0",
+    "0",
+    "0",
     "0",
     "0",
     "0",
@@ -17243,6 +17401,15 @@
      "__targetFileName__": "base/meta/Season/Season 9.sea",
      "groupName": "Season",
      "name": "Season 9"
+    },
+    {
+     "__raw__": 2321290,
+     "__group__": 137,
+     "__type__": "DT_SNO",
+     "__typeHash__": 2764331143,
+     "__targetFileName__": "base/meta/Season/Season 10.sea",
+     "groupName": "Season",
+     "name": "Season 10"
     }
    ],
    "unk_269819d": 4,
@@ -17254,7 +17421,7 @@
      "szName": 2917836957,
      "tFormula": {
       "value": "Hitpoints_Cur/Max(Hitpoints_Max_Total, 0.001)",
-      "compiled": "BQAAAAAAAABsAAAA/v///wAAAAAFAAAAAAAAAHEAAAD+////AAAAAAYAAABvEoM6AQAAAAEAAAAOAAAAAAAAAA=="
+      "compiled": "BQAAAAAAAABuAAAA/v///wAAAAAFAAAAAAAAAHMAAAD+////AAAAAAYAAABvEoM6AQAAAAEAAAAOAAAAAAAAAA=="
      },
      "flDefaultValue": 1,
      "unk_c0f4112": false,
@@ -17266,7 +17433,7 @@
      "szName": 2611746029,
      "tFormula": {
       "value": "1-Min(3 * Hitpoints_Cur/Max(Hitpoints_Max_Total, 0.001),1.0)",
-      "compiled": "BgAAAAAAgD8GAAAAAABAQAUAAAAAAAAAbAAAAP7///8AAAAADQAAAAUAAAAAAAAAcQAAAP7///8AAAAABgAAAG8SgzoBAAAAAQAAAA4AAAAGAAAAAACAPwEAAAAAAAAADAAAAAAAAAA="
+      "compiled": "BgAAAAAAgD8GAAAAAABAQAUAAAAAAAAAbgAAAP7///8AAAAADQAAAAUAAAAAAAAAcwAAAP7///8AAAAABgAAAG8SgzoBAAAAAQAAAA4AAAAGAAAAAACAPwEAAAAAAAAADAAAAAAAAAA="
      },
      "flDefaultValue": 1,
      "unk_c0f4112": false,
@@ -17434,7 +17601,7 @@
      "szName": 2460607289,
      "tFormula": {
       "value": "Headstone_Resurrection_Progress_Client",
-      "compiled": "BQAAAAAAAAB/BAAA/v///wAAAAAAAAAA"
+      "compiled": "BQAAAAAAAACMBAAA/v///wAAAAAAAAAA"
      },
      "flDefaultValue": 0,
      "unk_c0f4112": false,
@@ -17446,7 +17613,7 @@
      "szName": 1877762906,
      "tFormula": {
       "value": "(Players_Contributing_To_Resurrection + 1) * (Headstone_Resurrection_Progress_Client * 8 + 1)",
-      "compiled": "BQAAAAAAAAB8BAAA/v///wAAAAAGAAAAAACAPwsAAAAFAAAAAAAAAH8EAAD+////AAAAAAYAAAAAAABBDQAAAAYAAAAAAIA/CwAAAA0AAAAAAAAA"
+      "compiled": "BQAAAAAAAACJBAAA/v///wAAAAAGAAAAAACAPwsAAAAFAAAAAAAAAIwEAAD+////AAAAAAYAAAAAAABBDQAAAAYAAAAAAIA/CwAAAA0AAAAAAAAA"
      },
      "flDefaultValue": 1,
      "unk_c0f4112": false,
@@ -17614,7 +17781,7 @@
      "szName": 392529083,
      "tFormula": {
       "value": "Hitpoints_Cur/Max(Hitpoints_Max_Total, 0.001)",
-      "compiled": "BQAAAAAAAABsAAAA/v///wAAAAAFAAAAAAAAAHEAAAD+////AAAAAAYAAABvEoM6AQAAAAEAAAAOAAAAAAAAAA=="
+      "compiled": "BQAAAAAAAABuAAAA/v///wAAAAAFAAAAAAAAAHMAAAD+////AAAAAAYAAABvEoM6AQAAAAEAAAAOAAAAAAAAAA=="
      },
      "flDefaultValue": 1,
      "unk_c0f4112": false,
@@ -17638,7 +17805,7 @@
      "szName": 4116796955,
      "tFormula": {
       "value": "1 / Attacks_Per_Second_Total",
-      "compiled": "BgAAAAAAgD8FAAAAAAAAANQAAAD+////AAAAAA4AAAAAAAAA"
+      "compiled": "BgAAAAAAgD8FAAAAAAAAANwAAAD+////AAAAAA4AAAAAAAAA"
      },
      "flDefaultValue": 1,
      "unk_c0f4112": false,
@@ -17650,7 +17817,7 @@
      "szName": 1895624617,
      "tFormula": {
       "value": "Attacks_Per_Second_Total",
-      "compiled": "BQAAAAAAAADUAAAA/v///wAAAAAAAAAA"
+      "compiled": "BQAAAAAAAADcAAAA/v///wAAAAAAAAAA"
      },
      "flDefaultValue": 1,
      "unk_c0f4112": false,
@@ -17662,7 +17829,7 @@
      "szName": 709733171,
      "tFormula": {
       "value": "Chargeable_Gizmo_Progress",
-      "compiled": "BQAAAAAAAADCBAAA/v///wAAAAAAAAAA"
+      "compiled": "BQAAAAAAAADPBAAA/v///wAAAAAAAAAA"
      },
      "flDefaultValue": 0,
      "unk_c0f4112": false,
@@ -17842,7 +18009,7 @@
      "szName": 781218855,
      "tFormula": {
       "value": "Invulnerable",
-      "compiled": "BQAAAAAAAABhAAAA/v///wAAAAAAAAAA"
+      "compiled": "BQAAAAAAAABiAAAA/v///wAAAAAAAAAA"
      },
      "flDefaultValue": 0,
      "unk_c0f4112": false,
@@ -17878,7 +18045,7 @@
      "szName": 3132619602,
      "tFormula": {
       "value": "Max(0.06, Power_Effect_Intensity_Per_Power#X1_Raid_KhazRealm_Buffs)",
-      "compiled": "BgAAAI/CdT0FAAAAAAAAAFMDAADVmxYAAAAAAAEAAAABAAAAAAAAAA=="
+      "compiled": "BgAAAI/CdT0FAAAAAAAAAGEDAADVmxYAAAAAAAEAAAABAAAAAAAAAA=="
      },
      "flDefaultValue": 0,
      "unk_c0f4112": false,
@@ -17891,6 +18058,18 @@
      "tFormula": {
       "value": "GizmoGetAnimationSpeed()",
       "compiled": "AQAAAHAAAAAAAAAA"
+     },
+     "flDefaultValue": 0,
+     "unk_c0f4112": false,
+     "bIsGlobal": false
+    },
+    {
+     "__type__": "ScalarFunctionFormula",
+     "__typeHash__": 3116261682,
+     "szName": 1440992434,
+     "tFormula": {
+      "value": "Kill_Streak_Active",
+      "compiled": "BQAAAAAAAAAjBQAA/v///wAAAAAAAAAA"
      },
      "flDefaultValue": 0,
      "unk_c0f4112": false,
