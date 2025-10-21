@@ -1081,31 +1081,34 @@ let gbMap = {};
 function collectGameBalanceReferences(fileName, index) {
   try {
     let file = fs.readFileSync(fileName);
+    if (file.length < 16) {
+      throw new Error('File size < 16!');;
+    }
 
-    if (file.length >= 16) {
-      const header = file.subarray(0, 16);
+    const header = file.subarray(0, 16);
 
-      file = file.subarray(16);
+    file = file.subarray(16);
 
-      const dwSignature = header.readUInt32LE(0);
-      let dwFormatHash = header.readUInt32LE(4);
-      if (dwFormatHash == 0) {
-        const snoId = file.readUInt32LE(0);
-        const snoGroup = tocflat[snoId][1];
-        dwFormatHash = formatHashes[snoGroup];
-      }
+    const dwSignature = header.readUInt32LE(0);
+    let dwFormatHash = header.readUInt32LE(4);
+    if (dwFormatHash == 0) {
+      const snoId = file.readUInt32LE(0);
+      const snoGroup = tocflat[snoId][1];
+      dwFormatHash = formatHashes[snoGroup];
+    }
 
-      if (dwSignature === 0xdeadbeef) {
-        let globals = {
-          test: true,
-        };
+    if (dwSignature !== 0xdeadbeef) {
+      throw new Error('Invalid file signature!');
+    }
 
-        const data = readStructure.bind(globals)(file, [getTypeHashFromFormatHash(dwFormatHash)], 0, null, [fileName]);
+    let globals = {
+      test: true,
+    };
 
-        if (!Object.keys(data).length) {
-          debugger;
-        }
-      }
+    const data = readStructure.bind(globals)(file, [getTypeHashFromFormatHash(dwFormatHash)], 0, null, [fileName]);
+
+    if (!Object.keys(data).length) {
+      debugger;
     }
   } catch (err) {
     console.error('Error parsing #' + index, fileName);
@@ -1114,6 +1117,10 @@ function collectGameBalanceReferences(fileName, index) {
 }
 
 function parseFile(fileName, index) {
+  if (fileName.endsWith('.dat')) {
+    return;
+  }
+
   let newFileName = fileName.split('/');
 
   //readLog = [];
@@ -1128,69 +1135,72 @@ function parseFile(fileName, index) {
     total++;
 
     let file = fs.readFileSync(fileName);
+    if (file.length < 16) {
+      throw new Error('File size < 16!');;
+    }
 
-    if (file.length >= 16) {
-      let header = file.subarray(0, 16);
+    let header = file.subarray(0, 16);
 
-      file = file.subarray(16);
+    file = file.subarray(16);
 
-      let dwSignature = header.readUInt32LE(0);
-      if (dwSignature === 0xdeadbeef) {
-        const snoID = file.readUInt32LE(0);
-        let dwFormatHash = header.readUInt32LE(4);
-        if (dwFormatHash == 0) {
-          const snoGroup = tocflat[snoID][1];
-          dwFormatHash = formatHashes[snoGroup];
-        }
-        let globals = {
-          test: true,
-        };
+    let dwSignature = header.readUInt32LE(0);
+    if (dwSignature !== 0xdeadbeef) {
+      throw new Error('Invalid file signature!');
+    }
 
-        //console.log('#' + index, fileName);
+    const snoID = file.readUInt32LE(0);
+    let dwFormatHash = header.readUInt32LE(4);
+    if (dwFormatHash == 0) {
+      const snoGroup = tocflat[snoID][1];
+      dwFormatHash = formatHashes[snoGroup];
+    }
+    let globals = {
+      test: true,
+    };
 
-        let data = readStructure.bind(globals)(file, [getTypeHashFromFormatHash(dwFormatHash)], 0, null, [fileName]);
+    //console.log('#' + index, fileName);
 
-        if (globals.references) {
-          let refs = Object.values(globals.references);
+    let data = readStructure.bind(globals)(file, [getTypeHashFromFormatHash(dwFormatHash)], 0, null, [fileName]);
 
-          refs.forEach(snoIDTarget => {
-            incoming[snoIDTarget] = incoming[snoIDTarget] || {};
-            incoming[snoIDTarget][snoID] = snoID;
-            outgoing[snoID] = outgoing[snoID] || {};
-            outgoing[snoID][snoIDTarget] = snoIDTarget;
-          });
-        }
+    if (globals.references) {
+      let refs = Object.values(globals.references);
 
-        if (data.eGameBalanceType !== null && data.eGameBalanceType !== undefined) {
-          gbMap[data.eGameBalanceType] = gbMap[data.eGameBalanceType] || [];
-          if (gbMap[data.eGameBalanceType].indexOf(newFileName) < 0) {
-            gbMap[data.eGameBalanceType].push(newFileName);
-          }
-        }
+      refs.forEach(snoIDTarget => {
+        incoming[snoIDTarget] = incoming[snoIDTarget] || {};
+        incoming[snoIDTarget][snoID] = snoID;
+        outgoing[snoID] = outgoing[snoID] || {};
+        outgoing[snoID][snoIDTarget] = snoIDTarget;
+      });
+    }
 
-        let payloadName = fileName.replace(/^data\/base\/meta/g, 'base/payload');
-
-        if (!Object.keys(data).length) {
-          debugger;
-        }
-
-        if (snoPayloadMap[payloadName]) {
-          fs.writeFileSync(newFileName, JSON.stringify(Object.assign({
-            __fileName__: fileName.replace(/^data\//g, ''),
-            __snoID__: snoID,
-            __payloadOverride__: snoPayloadMap[payloadName],
-          }, data), null, ' ') + '\n');
-        }
-        else {
-          fs.writeFileSync(newFileName, JSON.stringify(Object.assign({
-            __fileName__: fileName.replace(/^data\//g, ''),
-            __snoID__: snoID,
-          }, data), null, ' ') + '\n');
-        }
-
-        success++;
+    if (data.eGameBalanceType !== null && data.eGameBalanceType !== undefined) {
+      gbMap[data.eGameBalanceType] = gbMap[data.eGameBalanceType] || [];
+      if (gbMap[data.eGameBalanceType].indexOf(newFileName) < 0) {
+        gbMap[data.eGameBalanceType].push(newFileName);
       }
     }
+
+    let payloadName = fileName.replace(/^data\/base\/meta/g, 'base/payload');
+
+    if (!Object.keys(data).length) {
+      debugger;
+    }
+
+    if (snoPayloadMap[payloadName]) {
+      fs.writeFileSync(newFileName, JSON.stringify(Object.assign({
+        __fileName__: fileName.replace(/^data\//g, ''),
+        __snoID__: snoID,
+        __payloadOverride__: snoPayloadMap[payloadName],
+      }, data), null, ' ') + '\n');
+    }
+    else {
+      fs.writeFileSync(newFileName, JSON.stringify(Object.assign({
+        __fileName__: fileName.replace(/^data\//g, ''),
+        __snoID__: snoID,
+      }, data), null, ' ') + '\n');
+    }
+
+    success++;
   } catch (err) {
     console.error('Error parsing #' + index, fileName);
     console.error(err);
