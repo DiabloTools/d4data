@@ -1146,7 +1146,7 @@ function parseFile(fileName, index) {
           test: true,
         };
 
-        //console.log('#' + index, newFileName);
+        //console.log('#' + index, fileName);
 
         let data = readStructure.bind(globals)(file, [getTypeHashFromFormatHash(dwFormatHash)], 0, null, [fileName]);
 
@@ -1192,7 +1192,7 @@ function parseFile(fileName, index) {
       }
     }
   } catch (err) {
-    console.error('Error parsing #' + index, newFileName);
+    console.error('Error parsing #' + index, fileName);
     console.error(err);
     fs.writeFileSync(newFileName, JSON.stringify({
       err,
