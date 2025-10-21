@@ -228,7 +228,7 @@ fs.readdirSync('data/base').filter(fn => fn.startsWith('EncryptedNameDict-')).fo
 });
 
 
-function getTypeHashFromFormatHash (dwFormatHash) {
+function getTypeHashFromFormatHash(dwFormatHash) {
   for (let key of Object.keys(definitions)) {
     if (definitions[key].dwFormatHash === dwFormatHash) {
       return key;
@@ -238,7 +238,7 @@ function getTypeHashFromFormatHash (dwFormatHash) {
   return null;
 }
 
-function getType (hash) {
+function getType(hash) {
   return definitions[hash];
 }
 
@@ -262,8 +262,8 @@ function getType (hash) {
   return getTypeSize(type.slice(1));
 }*/
 
-function getBasicTypeAlignment (typeDef, typeHashes, inTagMap = false) {
-  switch(typeDef.hash) {
+function getBasicTypeAlignment(typeDef, typeHashes, inTagMap = false) {
+  switch (typeDef.hash) {
     case 1683664497: // DT_POLYMORPHIC_VARIABLEARRAY
     case 2450313795: // DT_STRING_FORMULA
     case 3244749660: // DT_VARIABLEARRAY
@@ -287,7 +287,7 @@ function getBasicTypeAlignment (typeDef, typeHashes, inTagMap = false) {
   }
 }
 
-function getTypeAlignment (typeHashes, inTagMap = false) {
+function getTypeAlignment(typeHashes, inTagMap = false) {
   if (!Array.isArray(typeHashes)) {
     typeHashes = [typeHashes];
   }
@@ -558,8 +558,8 @@ let basicTypes = {
               break;
             }
             if (typeIndex >= 1
-                && fieldInfo.fieldTypeHashes[0] == 322094989 // DT_BINDABLEPROPERTY
-                && fieldInfo.fieldTypeHashes[1] == 3846829457 // DT_CSTRING
+              && fieldInfo.fieldTypeHashes[0] == 322094989 // DT_BINDABLEPROPERTY
+              && fieldInfo.fieldTypeHashes[1] == 3846829457 // DT_CSTRING
             ) {
               // DT_BINDABLEPROPERTY<DT_CSTRING> does not have an entry for DT_BYTE
               break;
@@ -915,7 +915,7 @@ let basicTypes = {
 
     const flags = file.readInt32LE(offset);
     if (flags & 0xffcd != 0) {
-    //if (flags != 2 && flags != 16 && flags != 18 && flags != 32 && flags != 34 && flags != 50) {
+      //if (flags != 2 && flags != 16 && flags != 18 && flags != 32 && flags != 34 && flags != 50) {
       console.warn('      @', offset, 'DT_BINDABLEPROPERTY[', getType(typeHashes[1]).name, ']: Unexpected flag:', flags, 'next int:', file.readInt32LE(offset + 16), 'fieldPath:', fieldPath.slice(-3).join('.'));
     }
     offset += 4;
@@ -1027,26 +1027,26 @@ let success = 0;
 let total = 0;
 
 function getAllFiles(path, files) {
-    if (fs.statSync(path).isDirectory()) {
-      while (path.slice(-1) === '/') {
-        path = path.slice(0, -1);
-      }
+  if (fs.statSync(path).isDirectory()) {
+    while (path.slice(-1) === '/') {
+      path = path.slice(0, -1);
+    }
 
-      if (path.endsWith("GameBalance")) {
-        fs.readdirSync(path).forEach((file) => {
-          getAllFiles(path + '/' + file, fileNamesGB);
-        })
-      } else {
-        fs.readdirSync(path).forEach((file) => {
-          getAllFiles(path + '/' + file, files);
-        })
-      }
+    if (path.endsWith("GameBalance")) {
+      fs.readdirSync(path).forEach((file) => {
+        getAllFiles(path + '/' + file, fileNamesGB);
+      })
+    } else {
+      fs.readdirSync(path).forEach((file) => {
+        getAllFiles(path + '/' + file, files);
+      })
     }
-    else {
-      const dirName = node_path.dirname(path)
-      dirNames[dirName] = dirName;
-      files.push(path);
-    }
+  }
+  else {
+    const dirName = node_path.dirname(path)
+    dirNames[dirName] = dirName;
+    files.push(path);
+  }
 }
 
 console.log("Collecting files...")
