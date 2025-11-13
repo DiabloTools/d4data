@@ -124,6 +124,7 @@ AdvancedNodeContent
 AffixDefinition
 AffixMessage
 AffixSortGroup
+AffixSubstitutePair
 AfterCreditsScenes
 AimTargetMessage
 AllLogicSubcondition
@@ -198,6 +199,7 @@ AssignTechniqueSlotMessage
 AtLeastLogicSubcondition
 AttachActorToActorMessage
 AttachCarryableToPlayerMessage
+AttribKeyUserData
 AttributeFormulaEntry
 AttributeFormulaEntry_Table
 AttributeFormulaRange
@@ -693,6 +695,7 @@ DemonScrollRewardChoicePickedMessage
 DemonSummoningQuestBucket
 DemonSummoningQuestBucket_Table
 DemonSummoningRitualQuests
+DesignerModalNotificationMessage
 DesignerNotificationControl
 DesignerNotificationControlData
 DesignerNotificationShowMessage
@@ -858,6 +861,7 @@ FavorLevel_Table
 FavorSeason
 FavorSeason_Table
 FinishedGameSetupMessage
+FireCustomGlobalEventBehaviorNode
 FireGlobalEventBehaviorNode
 FlagLookup
 FlagSetDefinition
@@ -975,6 +979,7 @@ GenericGraphNodeContentBase
 GenericGraphNodePlug
 GenericGraphPlugContent
 GenericGraphPlugContentBase
+GenericGraphStickyNodeContent
 GenericMessageHandlerBehaviorNode
 GenericNodeConnection
 GenericNodeGraph
@@ -1016,6 +1021,7 @@ GetRadioButtonSelectionBehaviorNode
 GetTextControlPropertiesBehaviorNode
 GetTextStylePropertiesBehaviorNode
 GetTotalStoryboardDurationBehaviorNode
+GetUsingControllerBehaviorNode
 GetVariableBehaviorNode
 GetWindowLayoutPropertiesBehaviorNode
 GizmoConditionData
@@ -1611,6 +1617,7 @@ OnHitSounds
 OnHitWithCCBuffCallback
 OnInitializeAttackBuffCallback
 OnInitializeDamageBuffCallback
+OnInitializeDamageBuffTakenCallback
 OnInterruptPowerCallback
 OnItemPickupBuffCallback
 OnKillBuffCallback
@@ -1730,6 +1737,7 @@ PetDetachMessage
 PetMessage
 PetType
 PetType_Table
+PhaseJumpAIEntryInterrupted
 PhaseJumpAnimEnd
 PhaseJumpBase
 PhaseJumpDestinationReached
@@ -1858,6 +1866,7 @@ PlayerWarpedMessage
 PlayerWeaponExpertiseLevelMessage
 PlayerWorldTierEligibilityMessage
 PlayerWorldTierSubcondition
+PluggableGenericGraphItem
 PolymorphicBase
 PolytopeData
 PopGroupHandle
@@ -1892,6 +1901,7 @@ PowerConditionCanOverpower
 PowerConditionDamageDeliveryMechanism
 PowerConditionDamageHasFortified
 PowerConditionDamageHasVulnerable
+PowerConditionDamageInstanceSetToIgnoreDamageBonuses
 PowerConditionDamageIsCrit
 PowerConditionDamageIsCrushingBlow
 PowerConditionDamageIsDot
@@ -3888,6 +3898,7 @@ arTabs
 arTags
 arTalentTrees
 arTattooColorSamples
+arTelemetryDesignerVars
 arTemperedAffixes
 arTerritoriesUnlocked
 arTexels
@@ -4010,6 +4021,8 @@ bAnyRarity
 bAnyWeapon
 bAppendDescription
 bApplyBeforeDamage
+bApplyOnPowerEquip
+bApplyOnPowerStart
 bApplyPowerToPlayer
 bApplyPowerToSeasonalPet
 bApplyVulnerableDebuff
@@ -4140,6 +4153,7 @@ bHidden
 bHiddenFromFrontEnd
 bHide
 bHideAllGroups
+bHideAppearanceVFX
 bHideDamageEffects
 bHideFromUI
 bHideGlobalApplicationEffect
@@ -4256,6 +4270,7 @@ bMirrorY
 bModulate
 bMountSummoned
 bMounted
+bMoveOnSkillCategoryCooldown
 bMultiplayerEnabled
 bMustBeLearned
 bMute
@@ -4312,9 +4327,12 @@ bReadParentControl
 bReadTextOnHover
 bRecurseForAttachments
 bRemove
+bRemoveOnPassiveReapplication
 bRemoveOnPowerDelete
 bRemoveOnPowerUnequip
 bRemoveOnRetreat
+bRemoveWhenInTown
+bRemoveWhenMounted
 bRenderArmor
 bRequireAllLabels
 bRequireBuff
@@ -4662,6 +4680,7 @@ dwLastHeartbeat
 dwLastKickAttempt
 dwLastPurchasedSkillTreeNodeId
 dwLastSuccessfulKick
+dwLegacySalvageBonus
 dwLevel
 dwLevelsPerUpgrade
 dwLightGroup
@@ -4992,6 +5011,8 @@ eComponentFoley
 eComponentStyleType
 eComponentType
 eCompressorMode
+eConstantFlashAddFresnel
+eConstantFlashMulFresnel
 eContactFrame
 eContentLicenseId
 eContext
@@ -5040,6 +5061,7 @@ eDisplayedQualityLevel
 eDrawHook
 eDropMinWorldTier
 eDruidSpiritType
+eDungeonAffixApplication
 eDungeonAffixType
 eDungeonFlavorType
 eDungeonIconType
@@ -5055,6 +5077,7 @@ eEdgeSetImportance
 eEffectGroupKeyDataType
 eEffectItemQuality
 eEffectType
+eEntitlement
 eError
 eEvent
 eEventQuestType
@@ -5366,6 +5389,7 @@ eSliceStyle
 eSlot
 eSlotRestriction
 eSmoothing
+eSnoGroup
 eSocketTarget
 eSolverOverride
 eSoundType
@@ -5707,6 +5731,7 @@ fProjectileCanBeSlowed
 fProjectileMatchPitchToVelocity
 fProjectileMatchYawToVelocity
 fProjectileOverridesCollidableFlags
+fProjectileUsesWeaponAppearance
 fProximityDetectorEffect
 fProximityDetectorOneShot
 fProximityDetectorPlayerOnly
@@ -5833,6 +5858,7 @@ flAnimationMaxTime
 flAnimationMinTime
 flApplyCountPct
 flArea
+flArmorDamageReductionScalar
 flArmorPerItemPower
 flArmorReductionExponent
 flArmorReductionLevelDamping
@@ -5976,6 +6002,7 @@ flCompressorAttackMs
 flCompressorGainReduction
 flCompressorReleaseMs
 flCompressorSlope
+flConstantFlashAdditionalSunFactor
 flConstantFlashIntensity
 flContributionScalar
 flControllerAccDelay
@@ -6232,6 +6259,7 @@ flHighlightBrightness
 flHighlightedBorderStrength
 flHighlightedDropShadowStrength
 flHirelingDiminishedBonusRatio
+flHitFlashAdditionalSunFactor
 flHitFlashDurationScalar
 flHitFlashIntensity
 flHitFlashIntensityDuration
@@ -6374,6 +6402,9 @@ flMaximumThreshold
 flMedium
 flMercDamageCoefficient
 flMercDamageReductionCoefficient
+flMercXPKillScalar_Boss
+flMercXPKillScalar_Elite
+flMercXPKillScalar_Normal
 flMercXPScalar
 flMetalness
 flMicrophoneTiltCorrection
@@ -6400,6 +6431,7 @@ flMinimapMaxVisRange
 flMinimapRevealRadius
 flMinimapTextureAlpha
 flMinimumAnimationScale
+flMinimumDestroyOnImpactVelocity
 flMinimumDuration
 flMinimumImpactThreshold
 flMinionMonsterAdditionalHealth
@@ -6425,6 +6457,7 @@ flMonsterDirectAltitude
 flMonsterDirectAltitude2
 flMonsterDirectAzimuth
 flMonsterDirectAzimuth2
+flMonsterHPConvertedToDamageReduction
 flMonsterHPScalar
 flMonsterIntensityBonus
 flMonsterIntensityOffset
@@ -6522,6 +6555,8 @@ flPlayerArmorModifier
 flPlayerCritDamageScalar
 flPlayerErrorCooldownTime
 flPlayerGoldScalar
+flPlayerIdealArmorModifier
+flPlayerIdealResistanceModifier
 flPlayerInteractAngle
 flPlayerLightEnvColorFactor
 flPlayerLightEnvIntensityFactor
@@ -6574,6 +6609,7 @@ flRagdollTwistLow
 flRagdollVelocityFactor
 flRange
 flRegen
+flResistanceDamageReductionScalar
 flRestXPBonusPercent
 flRestitution
 flResurrectionTime
@@ -6857,6 +6893,7 @@ gbidActorAppearanceAddOn
 gbidActorGroup
 gbidActorResurrectDataOverride
 gbidAddOnType
+gbidAdditionalDungeonAffix
 gbidAffixFamily
 gbidAmbushType
 gbidArmorPact
@@ -7113,6 +7150,7 @@ hLoadscreenTip
 hLoadscreenTipTitle
 hLockedIconImage
 hLogoImage
+hLootDesc
 hLoreIcon
 hMainIcon
 hMapMarkerImage
@@ -7490,7 +7528,6 @@ nAccountNewUserSurveyVersion
 nAction
 nActorCount
 nAffixIndex
-nAffixItemEquipPower
 nAffixStringListIndex
 nAffixesAdjustment
 nAmount
@@ -7846,6 +7883,10 @@ nPhasePreloadDepth
 nPivotMarkerIndex
 nPlaneCount
 nPlayerClass
+nPlayerEstimatedArmor
+nPlayerEstimatedResistance
+nPlayerIdealArmor
+nPlayerIdealResistance
 nPlayerIndex
 nPlayerKills
 nPlayerTalkingIndex
@@ -7867,6 +7908,7 @@ nQuantity
 nRadioButtonValue
 nRaidDifficultyLevel
 nRandomWeatherSeed
+nRealItemPower
 nRefinementCap
 nRefreshRate
 nRefundCostMultiplier
@@ -10025,6 +10067,7 @@ szWardrobeTorsoCameraName
 szWeaponPrefix
 tAABB
 tAIDisperseData
+tAchievementTier
 tActiveSkills
 tActorFormula
 tActorNameInfo
@@ -10820,6 +10863,7 @@ tTessellatedIndicesInfo
 tTextParamsBinding
 tTexture
 tThresholdAttribute
+tThresholdFormula
 tThresholdValueFormula
 tTierRange
 tTime
