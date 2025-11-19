@@ -223,6 +223,8 @@ fs.readdirSync('data/base').filter(fn => fn.startsWith('EncryptedNameDict-')).fo
 
     encryptedNames[snoGroup] = encryptedNames[snoGroup] || {};
     encryptedNames[snoGroup][snoId] = name;
+    toc[snoGroup] = toc[snoGroup] || {};
+    toc[snoGroup][snoId] = name;
     tocflat[snoId] = [name, snoGroup];
   }
 
