@@ -141,7 +141,7 @@
  },
  "bTargetGroundOnly": false,
  "eTargetLockBehavior": 1,
- "bWalksCloserIfOutOfRange": false,
+ "bWalksCloserIfOutOfRange": true,
  "bCanSteer": false,
  "unk_67b65e9": false,
  "bAutoTargetingEnabled": true,
@@ -199,8 +199,8 @@
  "ePowerCancelCapability": 1,
  "unk_44bbb8e": false,
  "tAttackRadius": {
-  "value": "1",
-  "compiled": "BgAAAAAAgD8AAAAA"
+  "value": "3",
+  "compiled": "BgAAAAAAQEAAAAAA"
  },
  "bRequiresPathToTarget": true,
  "bIsApproachPower": false,
@@ -212,8 +212,8 @@
   "__type__": "ActorMovementPowerData",
   "__typeHash__": 2543084619,
   "unk_b1f0f4e": {
-   "value": "1",
-   "compiled": "BgAAAAAAgD8AAAAA"
+   "value": "3",
+   "compiled": "BgAAAAAAQEAAAAAA"
   },
   "aFacingAngleThreshold": 1.7453292608261108,
   "flFacingDistanceThreshold": 50,
@@ -550,7 +550,7 @@
   {
    "__type__": "PowerBuffDefinition",
    "__typeHash__": 1071057721,
-   "dwID": 2206514638,
+   "dwID": 4254149,
    "dwBuffId": 0,
    "bHarmful": true,
    "bInfinite": false,
@@ -568,6 +568,7 @@
     "value": "1",
     "compiled": "BgAAAAAAgD8AAAAA"
    },
+   "gbidBuffPreset": null,
    "eStackingBehavior": 0,
    "eStackingScope": 0,
    "unk_9261403": false,
@@ -629,12 +630,12 @@
     "__type__": "PowerBuffCrowdControl",
     "__typeHash__": 4138865712,
     "unk_c63f49e": true,
-    "dwCCFlags": 2048,
+    "dwCCFlags": 1,
     "bUseGlobalSlowAmount": false,
     "eGlobalSlowAmountType": 0,
     "tSlowAmount": {
-     "value": "0",
-     "compiled": "BgAAAAAAAAAAAAAA"
+     "value": "SF_4",
+     "compiled": "BQAAAAoAAAAAAAAAAAAAAAAAAAAAAAAA"
     },
     "tChillAmount": {
      "value": "0",
@@ -676,16 +677,32 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "1.45",
-    "compiled": "BgAAAJmZuT8AAAAA"
+    "value": "2.25",
+    "compiled": "BgAAAAAAEEAAAAAA"
    }
   },
   {
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "1",
-    "compiled": "BgAAAAAAgD8AAAAA"
+    "value": "2 + 0.25",
+    "compiled": "BgAAAAAAEEAAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "4",
+    "compiled": "BgAAAAAAgEAAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "0.666",
+    "compiled": "BgAAAPp+Kj8AAAAA"
    }
   }
  ],
@@ -711,12 +728,21 @@
      "compiled": "BgAAAAAAAAAAAAAA"
     }
    },
-   "bHasCustomDamageVariance": false,
+   "bHasCustomDamageVariance": true,
    "tDamageVariance": {
     "value": "0",
     "compiled": "BgAAAAAAAAAAAAAA"
    },
-   "arBuffsToApply": [],
+   "arBuffsToApply": [
+    {
+     "__type__": "PowerPayloadBuffApplicationData",
+     "__typeHash__": 1306573032,
+     "dwBuffToApplyDataID": 4254149,
+     "unk_45cb7c4": false,
+     "unk_984edf3": false,
+     "bApplyBeforeDamage": false
+    }
+   ],
    "bApplyVulnerableDebuff": false,
    "tVulnerableDurationSecondsOverride": {
     "value": "0",

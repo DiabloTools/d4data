@@ -557,6 +557,7 @@
     "value": "1",
     "compiled": "BgAAAAAAgD8AAAAA"
    },
+   "gbidBuffPreset": null,
    "eStackingBehavior": 0,
    "eStackingScope": 0,
    "unk_9261403": false,
@@ -658,31 +659,31 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "(.25 / .1) * ParagonPowerBudgetMultiplierGlyphThresholdBonusRare()",
-    "compiled": "BgAAAAAAgD4GAAAAzczMPQ4AAAABAAAAWQAAAA0AAAAAAAAA"
+    "compiled": "BgAAAAAAgD4GAAAAzczMPQ4AAAABAAAAXQAAAA0AAAAAAAAA"
    }
   },
   {
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "SF_0 * (1 - SF_4)",
-    "compiled": "BQAAAAYAAAAAAAAAAAAAAAAAAAAGAAAAAACAPwUAAAAKAAAAAAAAAAAAAAAAAAAADAAAAA0AAAAAAAAA"
+    "value": "MAX(0, MIN(0.25, SF_0 * (1 - SF_4)))",
+    "compiled": "BgAAAAAAAAAGAAAAAACAPgUAAAAGAAAAAAAAAAAAAAAAAAAABgAAAAAAgD8FAAAACgAAAAAAAAAAAAAAAAAAAAwAAAANAAAAAQAAAAAAAAABAAAAAQAAAAAAAAA="
    }
   },
   {
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "Resource_Cur#Mana",
-    "compiled": "BQAAAAAAAACaAAAAAAAAAAAAAAAAAAAA"
+    "value": "MIN(Resource_Cur#Mana, SF_3)",
+    "compiled": "BQAAAAAAAACaAAAAAAAAAAAAAAAFAAAACQAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=="
    }
   },
   {
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "Resource_Max#Mana",
-    "compiled": "BQAAAAAAAACcAAAAAAAAAAAAAAAAAAAA"
+    "value": "Resource_Max_Total#Mana + Resource_All_Primary_Max_Bonus",
+    "compiled": "BQAAAAAAAAChAAAAAAAAAAAAAAAFAAAAAAAAAJ4AAAD+////AAAAAAsAAAAAAAAA"
    }
   },
   {

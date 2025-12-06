@@ -73,12 +73,38 @@
    "tPhaseName": 128604972,
    "arPhaseJumps": [
     {
-     "__type__": "PhaseJumpScriptTriggeredEvent",
-     "__typeHash__": 3414193985,
-     "dwType": 3414193985,
+     "__type__": "PhaseJumpAnimEnd",
+     "__typeHash__": 2145337385,
+     "dwType": 2145337385,
      "tPhaseToJumpTo": 116837,
-     "arConditions": [],
+     "arConditions": [
+      {
+       "__type__": "PowerConditionDistanceToTarget",
+       "__typeHash__": 1196096041,
+       "dwType": 1196096041,
+       "bInverse": false,
+       "flDistance": 3
+      }
+     ],
      "bEnd": false
+    },
+    {
+     "__type__": "PhaseJumpDurationReached",
+     "__typeHash__": 1121634143,
+     "dwType": 1121634143,
+     "tPhaseToJumpTo": 116837,
+     "arConditions": [
+      {
+       "__type__": "PowerConditionDistanceToTarget",
+       "__typeHash__": 1196096041,
+       "dwType": 1196096041,
+       "bInverse": false,
+       "flDistance": 3
+      }
+     ],
+     "bEnd": false,
+     "flSeconds": 1.5,
+     "unk_21b19af": false
     }
    ],
    "unk_d0d932b": false,
@@ -117,7 +143,7 @@
   "compiled": "BQAAAAAAAADcAAAA/v///wAAAAAAAAAA"
  },
  "unk_6deb090": false,
- "unk_ed2bdad": false,
+ "unk_ed2bdad": true,
  "bOverkillStacked": true,
  "unk_7a86b64": true,
  "eDamageType": 0,
@@ -704,7 +730,7 @@
      "compiled": "BgAAAAAAAAAAAAAA"
     }
    },
-   "bHasCustomDamageVariance": false,
+   "bHasCustomDamageVariance": true,
    "tDamageVariance": {
     "value": "0",
     "compiled": "BgAAAAAAAAAAAAAA"
@@ -808,7 +834,7 @@
      "compiled": "BgAAAAAAAAAAAAAA"
     }
    },
-   "bHasCustomDamageVariance": false,
+   "bHasCustomDamageVariance": true,
    "tDamageVariance": {
     "value": "0",
     "compiled": "BgAAAAAAAAAAAAAA"

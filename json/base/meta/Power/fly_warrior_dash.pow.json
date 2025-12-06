@@ -242,8 +242,16 @@
  },
  "bRequiresPathToTarget": true,
  "bIsApproachPower": false,
- "snoPowerApproach": null,
- "unk_f70b0d": -1,
+ "snoPowerApproach": {
+  "__raw__": 1721778,
+  "__group__": 29,
+  "__type__": "DT_SNO",
+  "__typeHash__": 2764331143,
+  "__targetFileName__": "base/meta/Power/AI_MoveTo_PassThroughAllies.pow",
+  "groupName": "Power",
+  "name": "AI_MoveTo_PassThroughAllies"
+ },
+ "unk_f70b0d": 2,
  "unk_e65d245": null,
  "unk_17dddfd": true,
  "tMovementPowerData": {
@@ -253,9 +261,9 @@
    "value": "8",
    "compiled": "BgAAAAAAAEEAAAAA"
   },
-  "aFacingAngleThreshold": 1.7453292608261108,
-  "flFacingDistanceThreshold": 50,
-  "eMoveRateOverride": -1,
+  "aFacingAngleThreshold": 0.5235987901687622,
+  "flFacingDistanceThreshold": 15,
+  "eMoveRateOverride": 2,
   "flSpeedMultiplier": 1,
   "bIgnorePathfinding": false,
   "unk_81f023c": false,
@@ -533,12 +541,20 @@
  "unk_8fe39cf": 0,
  "unk_4e0f1a": false,
  "bPassabilityDuringEnabled": true,
- "bPassabilityDestEnabled": false,
+ "bPassabilityDestEnabled": true,
  "arCollisionSettings": [
   {
    "__type__": "CollisionSettings",
    "__typeHash__": 3066352125,
-   "snoCollision": null,
+   "snoCollision": {
+    "__raw__": 1776594,
+    "__group__": 127,
+    "__type__": "DT_SNO",
+    "__typeHash__": 2764331143,
+    "__targetFileName__": "base/meta/CollisionSettings/monster_spawn_leap.col",
+    "groupName": "CollisionSettings",
+    "name": "monster_spawn_leap"
+   },
    "tCustomCollFlags": {
     "__type__": "ActorCollisionFlags",
     "__typeHash__": 2766662738,
@@ -552,7 +568,15 @@
   {
    "__type__": "CollisionSettings",
    "__typeHash__": 3066352125,
-   "snoCollision": null,
+   "snoCollision": {
+    "__raw__": 1776595,
+    "__group__": 127,
+    "__type__": "DT_SNO",
+    "__typeHash__": 2764331143,
+    "__targetFileName__": "base/meta/CollisionSettings/monster_spawn_leapAtDestination.col",
+    "groupName": "CollisionSettings",
+    "name": "monster_spawn_leapAtDestination"
+   },
    "tCustomCollFlags": {
     "__type__": "ActorCollisionFlags",
     "__typeHash__": 2766662738,
@@ -591,16 +615,16 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "1.5",
-    "compiled": "BgAAAAAAwD8AAAAA"
+    "value": "RandomFloat(1, 5)",
+    "compiled": "BgAAAAAAgD8GAAAAAACgQAEAAAAKAAAAAAAAAA=="
    }
   },
   {
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "1.5",
-    "compiled": "BgAAAAAAwD8AAAAA"
+    "value": "RandomFloat(0.5, 1.5)",
+    "compiled": "BgAAAAAAAD8GAAAAAADAPwEAAAAKAAAAAAAAAA=="
    }
   }
  ],
