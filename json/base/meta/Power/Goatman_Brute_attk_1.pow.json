@@ -73,12 +73,38 @@
    "tPhaseName": 128604972,
    "arPhaseJumps": [
     {
-     "__type__": "PhaseJumpScriptTriggeredEvent",
-     "__typeHash__": 3414193985,
-     "dwType": 3414193985,
+     "__type__": "PhaseJumpAnimEnd",
+     "__typeHash__": 2145337385,
+     "dwType": 2145337385,
      "tPhaseToJumpTo": 116837,
-     "arConditions": [],
+     "arConditions": [
+      {
+       "__type__": "PowerConditionDistanceToTarget",
+       "__typeHash__": 1196096041,
+       "dwType": 1196096041,
+       "bInverse": false,
+       "flDistance": 3
+      }
+     ],
      "bEnd": false
+    },
+    {
+     "__type__": "PhaseJumpDurationReached",
+     "__typeHash__": 1121634143,
+     "dwType": 1121634143,
+     "tPhaseToJumpTo": 116837,
+     "arConditions": [
+      {
+       "__type__": "PowerConditionDistanceToTarget",
+       "__typeHash__": 1196096041,
+       "dwType": 1196096041,
+       "bInverse": false,
+       "flDistance": 3
+      }
+     ],
+     "bEnd": false,
+     "flSeconds": 1.5,
+     "unk_21b19af": false
     }
    ],
    "unk_d0d932b": false,
@@ -117,11 +143,12 @@
   "compiled": "BQAAAAAAAADcAAAA/v///wAAAAAAAAAA"
  },
  "unk_6deb090": false,
- "unk_ed2bdad": false,
+ "unk_ed2bdad": true,
  "bOverkillStacked": true,
  "unk_7a86b64": true,
  "eDamageType": 0,
  "unk_752edeb": true,
+ "unk_c41a01d": false,
  "tCombatEffectChance": {
   "value": "100",
   "compiled": "BgAAAAAAyEIAAAAA"
@@ -704,7 +731,7 @@
      "compiled": "BgAAAAAAAAAAAAAA"
     }
    },
-   "bHasCustomDamageVariance": false,
+   "bHasCustomDamageVariance": true,
    "tDamageVariance": {
     "value": "0",
     "compiled": "BgAAAAAAAAAAAAAA"
@@ -712,6 +739,11 @@
    "arBuffsToApply": [],
    "bApplyVulnerableDebuff": false,
    "tVulnerableDurationSecondsOverride": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "unk_b4395d8": false,
+   "unk_7c2668d": {
     "value": "0",
     "compiled": "BgAAAAAAAAAAAAAA"
    },
@@ -808,7 +840,7 @@
      "compiled": "BgAAAAAAAAAAAAAA"
     }
    },
-   "bHasCustomDamageVariance": false,
+   "bHasCustomDamageVariance": true,
    "tDamageVariance": {
     "value": "0",
     "compiled": "BgAAAAAAAAAAAAAA"
@@ -818,6 +850,11 @@
    "tVulnerableDurationSecondsOverride": {
     "value": "SF_3",
     "compiled": "BQAAAAkAAAAAAAAAAAAAAAAAAAAAAAAA"
+   },
+   "unk_b4395d8": false,
+   "unk_7c2668d": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
    },
    "tFortifiedHealth": {
     "__type__": "HitpointSpecifier",
@@ -907,6 +944,7 @@
  },
  "flCastingEffectGroupDuration": 0.5,
  "arCastingEffectOverrides": [],
+ "unk_75d2c20": [],
  "arDamageRemapConditions": [],
  "arPetSpawns": [],
  "unk_143fe9f": {
@@ -922,6 +960,7 @@
  "unk_376802e": false,
  "unk_bf25f64": 0,
  "arRecastPowerSequence": [],
+ "arModifierProfiles": [],
  "arProjectileOverrides": [],
  "arConditionalDependencies": []
 }

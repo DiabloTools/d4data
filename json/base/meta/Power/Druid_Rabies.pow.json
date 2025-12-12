@@ -154,6 +154,7 @@
  "unk_7a86b64": true,
  "eDamageType": 4,
  "unk_752edeb": false,
+ "unk_c41a01d": false,
  "tCombatEffectChance": {
   "value": "SF_19",
   "compiled": "BQAAABkAAAAAAAAAAAAAAAAAAAAAAAAA"
@@ -652,11 +653,13 @@
     "value": "1",
     "compiled": "BgAAAAAAgD8AAAAA"
    },
+   "gbidBuffPreset": null,
    "eStackingBehavior": 0,
    "eStackingScope": 0,
    "unk_9261403": false,
    "unk_db6680": false,
    "bVisibleInUI": false,
+   "unk_47a0da4": 0,
    "bShowDuration": false,
    "bCancellable": false,
    "unk_99b5752": false,
@@ -766,11 +769,13 @@
     "value": "1",
     "compiled": "BgAAAAAAgD8AAAAA"
    },
+   "gbidBuffPreset": null,
    "eStackingBehavior": 0,
    "eStackingScope": 0,
    "unk_9261403": false,
    "unk_db6680": false,
    "bVisibleInUI": false,
+   "unk_47a0da4": 0,
    "bShowDuration": false,
    "bCancellable": false,
    "unk_99b5752": false,
@@ -880,11 +885,13 @@
     "value": "1",
     "compiled": "BgAAAAAAgD8AAAAA"
    },
+   "gbidBuffPreset": null,
    "eStackingBehavior": 0,
    "eStackingScope": 0,
    "unk_9261403": false,
    "unk_db6680": false,
    "bVisibleInUI": false,
+   "unk_47a0da4": 0,
    "bShowDuration": false,
    "bCancellable": false,
    "unk_99b5752": false,
@@ -1157,7 +1164,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Affix_Value_1#legendary_druid_123",
-    "compiled": "BQAAAAAAAABzBAAAPIcaAAAAAAAAAAAA"
+    "compiled": "BQAAAAAAAACBBAAAPIcaAAAAAAAAAAAA"
    }
   },
   {
@@ -1181,7 +1188,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Affix_Value_2#legendary_druid_123 / 100",
-    "compiled": "BQAAAAAAAAB0BAAAPIcaAAAAAAAGAAAAAADIQg4AAAAAAAAA"
+    "compiled": "BQAAAAAAAACCBAAAPIcaAAAAAAAGAAAAAADIQg4AAAAAAAAA"
    }
   },
   {
@@ -1189,7 +1196,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Affix_Value_1#legendary_druid_075 / 100",
-    "compiled": "BQAAAAAAAABzBAAA+fUMAAAAAAAGAAAAAADIQg4AAAAAAAAA"
+    "compiled": "BQAAAAAAAACBBAAA+fUMAAAAAAAGAAAAAADIQg4AAAAAAAAA"
    }
   }
  ],
@@ -1224,7 +1231,13 @@
     {
      "__type__": "PowerPayloadBuffApplicationData",
      "__typeHash__": 1306573032,
-     "dwBuffToApplyDataID": 1020930956,
+     "tBuffToApply": {
+      "__type__": "PowerBuffReference",
+      "__typeHash__": 1210777375,
+      "unk_3fe2c27": false,
+      "snoBuffFromPower": null,
+      "unk_dc45f75": 1020930956
+     },
      "unk_45cb7c4": false,
      "unk_984edf3": false,
      "bApplyBeforeDamage": false
@@ -1232,7 +1245,13 @@
     {
      "__type__": "PowerPayloadBuffApplicationData",
      "__typeHash__": 1306573032,
-     "dwBuffToApplyDataID": 272322476,
+     "tBuffToApply": {
+      "__type__": "PowerBuffReference",
+      "__typeHash__": 1210777375,
+      "unk_3fe2c27": false,
+      "snoBuffFromPower": null,
+      "unk_dc45f75": 272322476
+     },
      "unk_45cb7c4": false,
      "unk_984edf3": false,
      "bApplyBeforeDamage": false
@@ -1240,6 +1259,11 @@
    ],
    "bApplyVulnerableDebuff": false,
    "tVulnerableDurationSecondsOverride": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "unk_b4395d8": false,
+   "unk_7c2668d": {
     "value": "0",
     "compiled": "BgAAAAAAAAAAAAAA"
    },
@@ -1321,7 +1345,7 @@
    "bBulletPointDescription": true,
    "bAffectsEnchantmentDescription": false,
    "unk_b1d89c5": false,
-   "arSkillTags": [
+   "arSkillTagsToAdd": [
     {
      "__type__": "SkillTagStruct",
      "__typeHash__": 4000554560,
@@ -1335,6 +1359,7 @@
      "bSearchOnly": false
     }
    ],
+   "arSkillTagsToRemove": [],
    "eModType": 0,
    "hIconNormalOverride": 0,
    "hIconMouseoverOverride": 0,
@@ -1353,7 +1378,7 @@
    "bBulletPointDescription": true,
    "bAffectsEnchantmentDescription": false,
    "unk_b1d89c5": false,
-   "arSkillTags": [
+   "arSkillTagsToAdd": [
     {
      "__type__": "SkillTagStruct",
      "__typeHash__": 4000554560,
@@ -1379,6 +1404,7 @@
      "bSearchOnly": false
     }
    ],
+   "arSkillTagsToRemove": [],
    "eModType": 0,
    "hIconNormalOverride": 0,
    "hIconMouseoverOverride": 0,
@@ -1397,7 +1423,7 @@
    "bBulletPointDescription": true,
    "bAffectsEnchantmentDescription": false,
    "unk_b1d89c5": false,
-   "arSkillTags": [
+   "arSkillTagsToAdd": [
     {
      "__type__": "SkillTagStruct",
      "__typeHash__": 4000554560,
@@ -1411,6 +1437,7 @@
      "bSearchOnly": false
     }
    ],
+   "arSkillTagsToRemove": [],
    "eModType": 0,
    "hIconNormalOverride": 0,
    "hIconMouseoverOverride": 0,
@@ -1432,6 +1459,7 @@
  },
  "flCastingEffectGroupDuration": 0.5,
  "arCastingEffectOverrides": [],
+ "unk_75d2c20": [],
  "arDamageRemapConditions": [],
  "arPetSpawns": [],
  "unk_143fe9f": {
@@ -1447,6 +1475,7 @@
  "unk_376802e": false,
  "unk_bf25f64": 0,
  "arRecastPowerSequence": [],
+ "arModifierProfiles": [],
  "arProjectileOverrides": [],
  "arConditionalDependencies": []
 }

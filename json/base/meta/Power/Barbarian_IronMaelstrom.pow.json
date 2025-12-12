@@ -184,7 +184,7 @@
  "bIgnoreSkillRanks": false,
  "unk_f27ef43": true,
  "snoPowerAnimationOverride": null,
- "bPreplayAnimation": true,
+ "bPreplayAnimation": false,
  "unk_99e0ced": false,
  "eAnimationLayer": 0,
  "eAnimationBoneMasking": 7,
@@ -212,6 +212,7 @@
  "unk_7a86b64": true,
  "eDamageType": 0,
  "unk_752edeb": false,
+ "unk_c41a01d": false,
  "tCombatEffectChance": {
   "value": "SF_15",
   "compiled": "BQAAABUAAAAAAAAAAAAAAAAAAAAAAAAA"
@@ -710,11 +711,13 @@
     "value": "1",
     "compiled": "BgAAAAAAgD8AAAAA"
    },
+   "gbidBuffPreset": null,
    "eStackingBehavior": 0,
    "eStackingScope": 0,
    "unk_9261403": false,
    "unk_db6680": false,
    "bVisibleInUI": true,
+   "unk_47a0da4": 0,
    "bShowDuration": true,
    "bCancellable": false,
    "unk_99b5752": true,
@@ -824,11 +827,13 @@
     "value": "1",
     "compiled": "BgAAAAAAgD8AAAAA"
    },
+   "gbidBuffPreset": null,
    "eStackingBehavior": 0,
    "eStackingScope": 0,
    "unk_9261403": false,
    "unk_db6680": false,
    "bVisibleInUI": false,
+   "unk_47a0da4": 0,
    "bShowDuration": false,
    "bCancellable": false,
    "unk_99b5752": false,
@@ -938,11 +943,13 @@
     "value": "1",
     "compiled": "BgAAAAAAgD8AAAAA"
    },
+   "gbidBuffPreset": null,
    "eStackingBehavior": 0,
    "eStackingScope": 0,
    "unk_9261403": false,
    "unk_db6680": false,
    "bVisibleInUI": false,
+   "unk_47a0da4": 0,
    "bShowDuration": false,
    "bCancellable": false,
    "unk_99b5752": false,
@@ -1052,11 +1059,13 @@
     "value": "1",
     "compiled": "BgAAAAAAgD8AAAAA"
    },
+   "gbidBuffPreset": null,
    "eStackingBehavior": 0,
    "eStackingScope": 0,
    "unk_9261403": false,
    "unk_db6680": false,
    "bVisibleInUI": false,
+   "unk_47a0da4": 0,
    "bShowDuration": false,
    "bCancellable": false,
    "unk_99b5752": false,
@@ -1166,11 +1175,13 @@
     "value": "1",
     "compiled": "BgAAAAAAgD8AAAAA"
    },
+   "gbidBuffPreset": null,
    "eStackingBehavior": 0,
    "eStackingScope": 0,
    "unk_9261403": false,
    "unk_db6680": false,
    "bVisibleInUI": false,
+   "unk_47a0da4": 0,
    "bShowDuration": false,
    "bCancellable": false,
    "unk_99b5752": false,
@@ -1274,8 +1285,8 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "(SF_21 == 0)? (0.75 * Table(34, sLevel)) : (0.75 * Table(34, sLevel)*(1+( SF_20)))",
-    "compiled": "BQAAABsAAAAAAAAAAAAAAAAAAAAGAAAAAAAAAAkAAAAGAAAAAABAPwYAAAAAAAhCBQAAAAEAAAAAAAAAAAAAAAAAAAABAAAACwAAAA0AAAAGAAAAAABAPwYAAAAAAAhCBQAAAAEAAAAAAAAAAAAAAAAAAAABAAAACwAAAA0AAAAGAAAAAACAPwUAAAAaAAAAAAAAAAAAAAAAAAAACwAAAA0AAAAQAAAAAAAAAA=="
+    "value": "(SF_21 == 0)? (1.5 * Table(34, sLevel)) : (1.5 * Table(34, sLevel)*(1+( SF_20)))",
+    "compiled": "BQAAABsAAAAAAAAAAAAAAAAAAAAGAAAAAAAAAAkAAAAGAAAAAADAPwYAAAAAAAhCBQAAAAEAAAAAAAAAAAAAAAAAAAABAAAACwAAAA0AAAAGAAAAAADAPwYAAAAAAAhCBQAAAAEAAAAAAAAAAAAAAAAAAAABAAAACwAAAA0AAAAGAAAAAACAPwUAAAAaAAAAAAAAAAAAAAAAAAAACwAAAA0AAAAQAAAAAAAAAA=="
    }
   },
   {
@@ -1306,16 +1317,16 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "(SF_21 == 0)? (0.2 * Table(34, sLevel)) : (0.2 * Table(34, sLevel)*(1+( SF_20)))",
-    "compiled": "BQAAABsAAAAAAAAAAAAAAAAAAAAGAAAAAAAAAAkAAAAGAAAAzcxMPgYAAAAAAAhCBQAAAAEAAAAAAAAAAAAAAAAAAAABAAAACwAAAA0AAAAGAAAAzcxMPgYAAAAAAAhCBQAAAAEAAAAAAAAAAAAAAAAAAAABAAAACwAAAA0AAAAGAAAAAACAPwUAAAAaAAAAAAAAAAAAAAAAAAAACwAAAA0AAAAQAAAAAAAAAA=="
+    "value": "(SF_21 == 0)? (0.4 * Table(34, sLevel)) : (0.4 * Table(34, sLevel)*(1+( SF_20)))",
+    "compiled": "BQAAABsAAAAAAAAAAAAAAAAAAAAGAAAAAAAAAAkAAAAGAAAAzczMPgYAAAAAAAhCBQAAAAEAAAAAAAAAAAAAAAAAAAABAAAACwAAAA0AAAAGAAAAzczMPgYAAAAAAAhCBQAAAAEAAAAAAAAAAAAAAAAAAAABAAAACwAAAA0AAAAGAAAAAACAPwUAAAAaAAAAAAAAAAAAAAAAAAAACwAAAA0AAAAQAAAAAAAAAA=="
    }
   },
   {
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "(SF_21 == 0)? (1.2 * Table(34, sLevel)) : (1.2 * Table(34, sLevel)*(1+( SF_20)))",
-    "compiled": "BQAAABsAAAAAAAAAAAAAAAAAAAAGAAAAAAAAAAkAAAAGAAAAmpmZPwYAAAAAAAhCBQAAAAEAAAAAAAAAAAAAAAAAAAABAAAACwAAAA0AAAAGAAAAmpmZPwYAAAAAAAhCBQAAAAEAAAAAAAAAAAAAAAAAAAABAAAACwAAAA0AAAAGAAAAAACAPwUAAAAaAAAAAAAAAAAAAAAAAAAACwAAAA0AAAAQAAAAAAAAAA=="
+    "value": "(SF_21 == 0)? (2.4 * Table(34, sLevel)) : (2.4 * Table(34, sLevel)*(1+( SF_20)))",
+    "compiled": "BQAAABsAAAAAAAAAAAAAAAAAAAAGAAAAAAAAAAkAAAAGAAAAmpkZQAYAAAAAAAhCBQAAAAEAAAAAAAAAAAAAAAAAAAABAAAACwAAAA0AAAAGAAAAmpkZQAYAAAAAAAhCBQAAAAEAAAAAAAAAAAAAAAAAAAABAAAACwAAAA0AAAAGAAAAAACAPwUAAAAaAAAAAAAAAAAAAAAAAAAACwAAAA0AAAAQAAAAAAAAAA=="
    }
   },
   {
@@ -1330,8 +1341,8 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "(SF_21 == 0)? (0.425 * Table(34, sLevel)) : (0.425 * Table(34, sLevel)*(1+( SF_20)))",
-    "compiled": "BQAAABsAAAAAAAAAAAAAAAAAAAAGAAAAAAAAAAkAAAAGAAAAmpnZPgYAAAAAAAhCBQAAAAEAAAAAAAAAAAAAAAAAAAABAAAACwAAAA0AAAAGAAAAmpnZPgYAAAAAAAhCBQAAAAEAAAAAAAAAAAAAAAAAAAABAAAACwAAAA0AAAAGAAAAAACAPwUAAAAaAAAAAAAAAAAAAAAAAAAACwAAAA0AAAAQAAAAAAAAAA=="
+    "value": "(SF_21 == 0)? (0.86 * Table(34, sLevel)) : (0.86 * Table(34, sLevel)*(1+( SF_20)))",
+    "compiled": "BQAAABsAAAAAAAAAAAAAAAAAAAAGAAAAAAAAAAkAAAAGAAAA9ihcPwYAAAAAAAhCBQAAAAEAAAAAAAAAAAAAAAAAAAABAAAACwAAAA0AAAAGAAAA9ihcPwYAAAAAAAhCBQAAAAEAAAAAAAAAAAAAAAAAAAABAAAACwAAAA0AAAAGAAAAAACAPwUAAAAaAAAAAAAAAAAAAAAAAAAACwAAAA0AAAAQAAAAAAAAAA=="
    }
   },
   {
@@ -1411,7 +1422,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Chance_To_Hit_Twice_Per_Power#Barbarian_IronMaelstrom",
-    "compiled": "BQAAAAAAAACcAACAV1ADAAAAAAAAAAAA"
+    "compiled": "BQAAAAAAAACeAACAV1ADAAAAAAAAAAAA"
    }
   },
   {
@@ -1427,7 +1438,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "min(SF_22, (((1+ Multiplicative_Damage_Bonus_To_High_Health)*(1+Damage_Bonus_To_High_Health))+((1+Multiplicative_Damage_Bonus_To_Low_Health)*(1+Damage_Bonus_To_Low_Health)) - 2)*(SF_19))",
-    "compiled": "BQAAABwAAAAAAAAAAAAAAAAAAAAGAAAAAACAPwUAAAAAAAAAPgQAAP7///8AAAAACwAAAAYAAAAAAIA/BQAAAAAAAAA9BAAA/v///wAAAAALAAAADQAAAAYAAAAAAIA/BQAAAAAAAAA8BAAA/v///wAAAAALAAAABgAAAAAAgD8FAAAAAAAAADsEAAD+////AAAAAAsAAAANAAAACwAAAAYAAAAAAABADAAAAAUAAAAZAAAAAAAAAAAAAAAAAAAADQAAAAEAAAAAAAAAAAAAAA=="
+    "compiled": "BQAAABwAAAAAAAAAAAAAAAAAAAAGAAAAAACAPwUAAAAAAAAATAQAAP7///8AAAAACwAAAAYAAAAAAIA/BQAAAAAAAABLBAAA/v///wAAAAALAAAADQAAAAYAAAAAAIA/BQAAAAAAAABKBAAA/v///wAAAAALAAAABgAAAAAAgD8FAAAAAAAAAEkEAAD+////AAAAAAsAAAANAAAACwAAAAYAAAAAAABADAAAAAUAAAAZAAAAAAAAAAAAAAAAAAAADQAAAAEAAAAAAAAAAAAAAA=="
    }
   },
   {
@@ -1478,7 +1489,13 @@
     {
      "__type__": "PowerPayloadBuffApplicationData",
      "__typeHash__": 1306573032,
-     "dwBuffToApplyDataID": 4263050,
+     "tBuffToApply": {
+      "__type__": "PowerBuffReference",
+      "__typeHash__": 1210777375,
+      "unk_3fe2c27": false,
+      "snoBuffFromPower": null,
+      "unk_dc45f75": 4263050
+     },
      "unk_45cb7c4": false,
      "unk_984edf3": false,
      "bApplyBeforeDamage": false
@@ -1486,6 +1503,11 @@
    ],
    "bApplyVulnerableDebuff": false,
    "tVulnerableDurationSecondsOverride": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "unk_b4395d8": false,
+   "unk_7c2668d": {
     "value": "0",
     "compiled": "BgAAAAAAAAAAAAAA"
    },
@@ -1585,6 +1607,11 @@
     "value": "0",
     "compiled": "BgAAAAAAAAAAAAAA"
    },
+   "unk_b4395d8": false,
+   "unk_7c2668d": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
    "tFortifiedHealth": {
     "__type__": "HitpointSpecifier",
     "__typeHash__": 1185241065,
@@ -1681,6 +1708,11 @@
     "value": "0",
     "compiled": "BgAAAAAAAAAAAAAA"
    },
+   "unk_b4395d8": false,
+   "unk_7c2668d": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
    "tFortifiedHealth": {
     "__type__": "HitpointSpecifier",
     "__typeHash__": 1185241065,
@@ -1759,7 +1791,7 @@
    "bBulletPointDescription": true,
    "bAffectsEnchantmentDescription": false,
    "unk_b1d89c5": false,
-   "arSkillTags": [
+   "arSkillTagsToAdd": [
     {
      "__type__": "SkillTagStruct",
      "__typeHash__": 4000554560,
@@ -1785,6 +1817,7 @@
      "bSearchOnly": false
     }
    ],
+   "arSkillTagsToRemove": [],
    "eModType": 0,
    "hIconNormalOverride": 0,
    "hIconMouseoverOverride": 0,
@@ -1803,7 +1836,7 @@
    "bBulletPointDescription": true,
    "bAffectsEnchantmentDescription": false,
    "unk_b1d89c5": false,
-   "arSkillTags": [
+   "arSkillTagsToAdd": [
     {
      "__type__": "SkillTagStruct",
      "__typeHash__": 4000554560,
@@ -1817,6 +1850,7 @@
      "bSearchOnly": false
     }
    ],
+   "arSkillTagsToRemove": [],
    "eModType": 0,
    "hIconNormalOverride": 0,
    "hIconMouseoverOverride": 0,
@@ -1838,6 +1872,7 @@
  },
  "flCastingEffectGroupDuration": 0.5,
  "arCastingEffectOverrides": [],
+ "unk_75d2c20": [],
  "arDamageRemapConditions": [],
  "arPetSpawns": [],
  "unk_143fe9f": {
@@ -1918,6 +1953,7 @@
    "unk_493957d": false
   }
  ],
+ "arModifierProfiles": [],
  "arProjectileOverrides": [],
  "arConditionalDependencies": []
 }

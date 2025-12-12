@@ -855,7 +855,7 @@
  "dwDefaultShaderMapOverride": 4294967295,
  "gbidDefaultAddOnType": null,
  "tScaleRange": {
-  "rangeValue1": 1,
+  "rangeValue1": 1.100000023841858,
   "rangeValue2": 0
  },
  "tScaleLimit": {
@@ -866,12 +866,12 @@
   "__type__": "AxialCylinder",
   "__typeHash__": 3017070665,
   "wpBase": {
-   "x": 0,
-   "y": 0,
-   "z": 0
+   "x": -0.05983845144510269,
+   "y": 0.00020360946655273438,
+   "z": 0.0015528155490756035
   },
-  "wdHeight": 0.800000011920929,
-  "wdRadius": 0.20000000298023224
+  "wdHeight": 1.689121961593628,
+  "wdRadius": 0.5594225525856018
  },
  "aabbBounds": {
   "__type__": "AABB",
@@ -1332,27 +1332,6 @@
      "__typeHash__": 2990129354,
      "dwWeight": 100,
      "snoSummonActor": {
-      "__raw__": 540481,
-      "__group__": 1,
-      "__type__": "DT_SNO",
-      "__typeHash__": 2764331143,
-      "__targetFileName__": "base/meta/Actor/vampire_swarmer_lightning.acr",
-      "groupName": "Actor",
-      "name": "vampire_swarmer_lightning"
-     },
-     "unk_ce494ef": false,
-     "tSummonRange": {
-      "rangeValue1": 1,
-      "rangeValue2": 0
-     },
-     "dwMaxConcurrentCount": 5,
-     "snoCondition": null
-    },
-    {
-     "__type__": "SummonActorEntry",
-     "__typeHash__": 2990129354,
-     "dwWeight": 100,
-     "snoSummonActor": {
       "__raw__": 540472,
       "__group__": 1,
       "__type__": "DT_SNO",
@@ -1363,11 +1342,56 @@
      },
      "unk_ce494ef": false,
      "tSummonRange": {
-      "rangeValue1": 1,
+      "rangeValue1": 6,
       "rangeValue2": 0
      },
-     "dwMaxConcurrentCount": 5,
-     "snoCondition": null
+     "dwMaxConcurrentCount": 6,
+     "snoCondition": null,
+     "bCanBeMinion": true
+    },
+    {
+     "__type__": "SummonActorEntry",
+     "__typeHash__": 2990129354,
+     "dwWeight": 100,
+     "snoSummonActor": {
+      "__raw__": 540478,
+      "__group__": 1,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/Actor/vampire_caster_lightning.acr",
+      "groupName": "Actor",
+      "name": "vampire_caster_lightning"
+     },
+     "unk_ce494ef": false,
+     "tSummonRange": {
+      "rangeValue1": 3,
+      "rangeValue2": 0
+     },
+     "dwMaxConcurrentCount": 3,
+     "snoCondition": null,
+     "bCanBeMinion": true
+    },
+    {
+     "__type__": "SummonActorEntry",
+     "__typeHash__": 2990129354,
+     "dwWeight": 100,
+     "snoSummonActor": {
+      "__raw__": 540475,
+      "__group__": 1,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/Actor/vampire_brute_lightning.acr",
+      "groupName": "Actor",
+      "name": "vampire_brute_lightning"
+     },
+     "unk_ce494ef": false,
+     "tSummonRange": {
+      "rangeValue1": 2,
+      "rangeValue2": 0
+     },
+     "dwMaxConcurrentCount": 2,
+     "snoCondition": null,
+     "bCanBeMinion": true
     }
    ],
    "unk_43a5b25": [],
@@ -1420,10 +1444,10 @@
    "eOverriddenMonsterRarity": -1,
    "unk_7859c5b": false,
    "bIsWorldBoss": false,
-   "unk_bc58cee": false,
-   "unk_7fdab9c": 10,
-   "unk_e7ee8f1": 3,
-   "unk_828c56a": false,
+   "unk_4b1672a": false,
+   "unk_1e3ad71": 10,
+   "unk_2fc83ba": 3,
+   "unk_68f046c": false,
    "unk_e4c90d3": false,
    "unk_12ecd6a": false,
    "unk_c0565bf": false,
@@ -1552,6 +1576,15 @@
      "__targetFileName__": "base/meta/EffectGroup/actor_death_shadow.efg",
      "groupName": "EffectGroup",
      "name": "actor_death_shadow"
+    },
+    {
+     "__raw__": 2264624,
+     "__group__": 14,
+     "__type__": "DT_SNO",
+     "__typeHash__": 2764331143,
+     "__targetFileName__": "base/meta/EffectGroup/actor_death_holy.efg",
+     "groupName": "EffectGroup",
+     "name": "actor_death_holy"
     }
    ],
    "gbidActorResurrectDataOverride": null
@@ -1618,6 +1651,15 @@
      "__targetFileName__": "base/meta/EffectGroup/actor_getHit_shadow.efg",
      "groupName": "EffectGroup",
      "name": "actor_getHit_shadow"
+    },
+    {
+     "__raw__": 196910,
+     "__group__": 14,
+     "__type__": "DT_SNO",
+     "__typeHash__": 2764331143,
+     "__targetFileName__": "base/meta/EffectGroup/actor_getHit_holy.efg",
+     "groupName": "EffectGroup",
+     "name": "actor_getHit_holy"
     }
    ],
    "arDirectionalHitEffectGroups": [
@@ -1674,6 +1716,15 @@
      "__targetFileName__": "base/meta/EffectGroup/actor_getHit_shadow_directional.efg",
      "groupName": "EffectGroup",
      "name": "actor_getHit_shadow_directional"
+    },
+    {
+     "__raw__": 2244611,
+     "__group__": 14,
+     "__type__": "DT_SNO",
+     "__typeHash__": 2764331143,
+     "__targetFileName__": "base/meta/EffectGroup/actor_getHit_holy_directional.efg",
+     "groupName": "EffectGroup",
+     "name": "actor_getHit_holy_directional"
     }
    ],
    "arDOTEffectGroups": [
@@ -1730,6 +1781,15 @@
      "__targetFileName__": "base/meta/EffectGroup/actor_dot_shadow.efg",
      "groupName": "EffectGroup",
      "name": "actor_dot_shadow"
+    },
+    {
+     "__raw__": 2242364,
+     "__group__": 14,
+     "__type__": "DT_SNO",
+     "__typeHash__": 2764331143,
+     "__targetFileName__": "base/meta/EffectGroup/actor_dot_holy.efg",
+     "groupName": "EffectGroup",
+     "name": "actor_dot_holy"
     }
    ],
    "arDOTApplicationEffectGroups": [
@@ -1738,7 +1798,16 @@
     null,
     null,
     null,
-    null
+    null,
+    {
+     "__raw__": 2247524,
+     "__group__": 14,
+     "__type__": "DT_SNO",
+     "__typeHash__": 2764331143,
+     "__targetFileName__": "base/meta/EffectGroup/actor_dot_application_holy.efg",
+     "groupName": "EffectGroup",
+     "name": "actor_dot_application_holy"
+    }
    ],
    "snoMonsterRarityEffectGroup": {
     "__raw__": 1187,

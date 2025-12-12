@@ -1053,7 +1053,7 @@
  "gbidDefaultAddOnType": null,
  "tScaleRange": {
   "rangeValue1": 1,
-  "rangeValue2": 0
+  "rangeValue2": 0.10000000149011612
  },
  "tScaleLimit": {
   "rangeValue1": 0.8500000238418579,
@@ -1063,11 +1063,11 @@
   "__type__": "AxialCylinder",
   "__typeHash__": 3017070665,
   "wpBase": {
-   "x": 0.20000000298023224,
+   "x": 0,
    "y": 0,
    "z": 0
   },
-  "wdHeight": 1.5,
+  "wdHeight": 1.7000000476837158,
   "wdRadius": 0.5
  },
  "aabbBounds": {
@@ -1239,6 +1239,7 @@
      "dwShaderMapOverride": 4294967295,
      "nPlayerIndex": 0,
      "flScale": 1,
+     "unk_ebd19c": false,
      "szSpawnLocatorName": 0,
      "vecScalar": {
       "x": 1,
@@ -1905,6 +1906,7 @@
      "dwShaderMapOverride": 4294967295,
      "nPlayerIndex": 0,
      "flScale": 1,
+     "unk_ebd19c": false,
      "szSpawnLocatorName": 0,
      "vecScalar": {
       "x": 1,
@@ -2059,7 +2061,7 @@
      "z": 0
     }
    },
-   "unk_3d328de": false,
+   "unk_3d328de": true,
    "unk_7a83a6d": true,
    "bAffectsRagdoll": false,
    "flStepUpHeight": 0.5,
@@ -2163,7 +2165,7 @@
     "name": "knight"
    },
    "szArchetype": 133016072,
-   "eBaseElement": 3,
+   "eBaseElement": -1,
    "snoMainHand": {
     "__raw__": 446813,
     "__group__": 98,
@@ -2227,27 +2229,6 @@
      "__typeHash__": 2990129354,
      "dwWeight": 100,
      "snoSummonActor": {
-      "__raw__": 507049,
-      "__group__": 1,
-      "__type__": "DT_SNO",
-      "__typeHash__": 2764331143,
-      "__targetFileName__": "base/meta/Actor/knight_melee_cold.acr",
-      "groupName": "Actor",
-      "name": "knight_melee_cold"
-     },
-     "unk_ce494ef": false,
-     "tSummonRange": {
-      "rangeValue1": 1,
-      "rangeValue2": 0
-     },
-     "dwMaxConcurrentCount": 4,
-     "snoCondition": null
-    },
-    {
-     "__type__": "SummonActorEntry",
-     "__typeHash__": 2990129354,
-     "dwWeight": 100,
-     "snoSummonActor": {
       "__raw__": 507041,
       "__group__": 1,
       "__type__": "DT_SNO",
@@ -2258,11 +2239,12 @@
      },
      "unk_ce494ef": false,
      "tSummonRange": {
-      "rangeValue1": 1,
+      "rangeValue1": 5,
       "rangeValue2": 0
      },
      "dwMaxConcurrentCount": 5,
-     "snoCondition": null
+     "snoCondition": null,
+     "bCanBeMinion": true
     },
     {
      "__type__": "SummonActorEntry",
@@ -2279,11 +2261,34 @@
      },
      "unk_ce494ef": false,
      "tSummonRange": {
-      "rangeValue1": 1,
+      "rangeValue1": 4,
       "rangeValue2": 0
      },
      "dwMaxConcurrentCount": 4,
-     "snoCondition": null
+     "snoCondition": null,
+     "bCanBeMinion": true
+    },
+    {
+     "__type__": "SummonActorEntry",
+     "__typeHash__": 2990129354,
+     "dwWeight": 100,
+     "snoSummonActor": {
+      "__raw__": 456659,
+      "__group__": 1,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/Actor/knight_brute_cold.acr",
+      "groupName": "Actor",
+      "name": "knight_brute_cold"
+     },
+     "unk_ce494ef": false,
+     "tSummonRange": {
+      "rangeValue1": 2,
+      "rangeValue2": 0
+     },
+     "dwMaxConcurrentCount": 2,
+     "snoCondition": null,
+     "bCanBeMinion": true
     }
    ],
    "unk_43a5b25": [],
@@ -2346,10 +2351,10 @@
    "eOverriddenMonsterRarity": -1,
    "unk_7859c5b": false,
    "bIsWorldBoss": false,
-   "unk_bc58cee": false,
-   "unk_7fdab9c": 10,
-   "unk_e7ee8f1": 3,
-   "unk_828c56a": false,
+   "unk_4b1672a": false,
+   "unk_1e3ad71": 10,
+   "unk_2fc83ba": 3,
+   "unk_68f046c": false,
    "unk_e4c90d3": false,
    "unk_12ecd6a": false,
    "unk_c0565bf": false,
@@ -2478,6 +2483,15 @@
      "__targetFileName__": "base/meta/EffectGroup/actor_death_shadow.efg",
      "groupName": "EffectGroup",
      "name": "actor_death_shadow"
+    },
+    {
+     "__raw__": 2264624,
+     "__group__": 14,
+     "__type__": "DT_SNO",
+     "__typeHash__": 2764331143,
+     "__targetFileName__": "base/meta/EffectGroup/actor_death_holy.efg",
+     "groupName": "EffectGroup",
+     "name": "actor_death_holy"
     }
    ],
    "gbidActorResurrectDataOverride": null

@@ -204,25 +204,12 @@
      "tValue": false
     },
     {
-     "__type__": "DataStoreVariableStringLabelHandle",
-     "__typeHash__": 2305908368,
-     "dwType": 2305908368,
+     "__type__": "DataStoreVariableString",
+     "__typeHash__": 3835220004,
+     "dwType": 3835220004,
      "tName": "ChapterRewardInfo_Description",
      "dwFlags": 0,
-     "tValue": {
-      "__type__": "StringLabelHandleEx",
-      "__typeHash__": 721585600,
-      "snoStringList": {
-       "__raw__": 505691,
-       "__group__": 42,
-       "__type__": "DT_SNO",
-       "__typeHash__": 2764331143,
-       "__targetFileName__": "enUS_Text/meta/StringList/Seasons.stl",
-       "groupName": "StringList",
-       "name": "Seasons"
-      },
-      "szLabel": 356802784
-     }
+     "tValue": "Complete this rank's {icon:Icon_Tooltip_Dungeon_Capstone, 2} {c_capstone}Capstone Dungeon{/c} to rank up and claim rewards!"
     },
     {
      "__type__": "DataStoreVariableBool",
@@ -266,37 +253,75 @@
      ]
     },
     {
-     "__type__": "DataStoreTextParams",
-     "__typeHash__": 2738254448,
-     "dwType": 2738254448,
-     "tName": "ChapterRewardInfo_Description_Params",
-     "dwFlags": 0,
-     "tVariables": [
-      {
-       "__type__": "DataStoreVariableInt",
-       "__typeHash__": 1096634712,
-       "dwType": 1096634712,
-       "tName": "NumRequiredObjectives",
-       "dwFlags": 0,
-       "tValue": "0"
-      },
-      {
-       "__type__": "DataStoreVariableInt",
-       "__typeHash__": 1096634712,
-       "dwType": 1096634712,
-       "tName": "NumTotalObjectives",
-       "dwFlags": 0,
-       "tValue": "0"
-      }
-     ]
-    },
-    {
      "__type__": "DataStoreVariableFloat",
      "__typeHash__": 230661315,
      "dwType": 230661315,
      "tName": "Progress_RewardComplete_Offset",
      "dwFlags": 0,
      "tValue": 0
+    },
+    {
+     "__type__": "DataStoreVariableBool",
+     "__typeHash__": 1828956601,
+     "dwType": 1828956601,
+     "tName": "HasCapstone",
+     "dwFlags": 0,
+     "tValue": true
+    },
+    {
+     "__type__": "DataStoreVariableBool",
+     "__typeHash__": 1828956601,
+     "dwType": 1828956601,
+     "tName": "CapstoneIsComplete",
+     "dwFlags": 0,
+     "tValue": false
+    },
+    {
+     "__type__": "DataStoreVariableColor",
+     "__typeHash__": 227208556,
+     "dwType": 227208556,
+     "tName": "CapstoneInfoColor",
+     "dwFlags": 0,
+     "tValue": {
+      "r": 179,
+      "g": 169,
+      "b": 155,
+      "a": 255
+     }
+    },
+    {
+     "__type__": "DataStoreVariableColor",
+     "__typeHash__": 227208556,
+     "dwType": 227208556,
+     "tName": "CapstoneInfoColor_Complete",
+     "dwFlags": 0,
+     "tValue": {
+      "r": 179,
+      "g": 169,
+      "b": 155,
+      "a": 255
+     }
+    },
+    {
+     "__type__": "DataStoreVariableColor",
+     "__typeHash__": 227208556,
+     "dwType": 227208556,
+     "tName": "CapstoneInfoColor_Default",
+     "dwFlags": 0,
+     "tValue": {
+      "r": 179,
+      "g": 169,
+      "b": 155,
+      "a": 255
+     }
+    },
+    {
+     "__type__": "DataStoreVariableBool",
+     "__typeHash__": 1828956601,
+     "dwType": 1828956601,
+     "tName": "CapstoneEnabled",
+     "dwFlags": 0,
+     "tValue": true
     }
    ],
    "tObjects": [],
@@ -398,6 +423,33 @@
      "dwFlags": 0
     }
    ],
+   "tObjectCollections": [],
+   "dwFlags": 0
+  },
+  {
+   "__type__": "DataStoreFolder",
+   "__typeHash__": 684499971,
+   "tName": "Disclaimer",
+   "tVariables": [
+    {
+     "__type__": "DataStoreTextParams",
+     "__typeHash__": 2738254448,
+     "dwType": 2738254448,
+     "tName": "DisclaimerParams",
+     "dwFlags": 0,
+     "tVariables": [
+      {
+       "__type__": "DataStoreVariableString",
+       "__typeHash__": 3835220004,
+       "dwType": 3835220004,
+       "tName": "s1",
+       "dwFlags": 0,
+       "tValue": "0"
+      }
+     ]
+    }
+   ],
+   "tObjects": [],
    "tObjectCollections": [],
    "dwFlags": 0
   }
@@ -526,6 +578,14 @@
      "tName": "ObjectiveTitle",
      "dwFlags": 0,
      "tValue": "Title Text [PH]"
+    },
+    {
+     "__type__": "DataStoreVariableString",
+     "__typeHash__": 3835220004,
+     "dwType": 3835220004,
+     "tName": "ObjectiveTitle_Legendary",
+     "dwFlags": 0,
+     "tValue": "{icon:legendarystar, 2.5}{s1}"
     },
     {
      "__type__": "DataStoreVariableString",
@@ -716,6 +776,56 @@
       "b": 0,
       "a": 255
      }
+    },
+    {
+     "__type__": "DataStoreVariableBool",
+     "__typeHash__": 1828956601,
+     "dwType": 1828956601,
+     "tName": "IsLegendary",
+     "dwFlags": 0,
+     "tValue": false
+    },
+    {
+     "__type__": "DataStoreVariableColor",
+     "__typeHash__": 227208556,
+     "dwType": 227208556,
+     "tName": "Objective_TitleTextColor",
+     "dwFlags": 0,
+     "tValue": {
+      "r": 227,
+      "g": 224,
+      "b": 217,
+      "a": 255
+     }
+    },
+    {
+     "__type__": "DataStoreVariableColor",
+     "__typeHash__": 227208556,
+     "dwType": 227208556,
+     "tName": "Objective_TitleTextColor_Legendary",
+     "dwFlags": 0,
+     "tValue": {
+      "r": 226,
+      "g": 189,
+      "b": 111,
+      "a": 255
+     }
+    },
+    {
+     "__type__": "DataStoreVariableBool",
+     "__typeHash__": 1828956601,
+     "dwType": 1828956601,
+     "tName": "IsEntitlement",
+     "dwFlags": 0,
+     "tValue": false
+    },
+    {
+     "__type__": "DataStoreVariableString",
+     "__typeHash__": 3835220004,
+     "dwType": 3835220004,
+     "tName": "EntitlementString",
+     "dwFlags": 0,
+     "tValue": ""
     }
    ],
    "tFolders": [],

@@ -879,7 +879,7 @@
  "dwDefaultShaderMapOverride": 4294967295,
  "gbidDefaultAddOnType": null,
  "tScaleRange": {
-  "rangeValue1": 1,
+  "rangeValue1": 1.0700000524520874,
   "rangeValue2": 0
  },
  "tScaleLimit": {
@@ -890,12 +890,12 @@
   "__type__": "AxialCylinder",
   "__typeHash__": 3017070665,
   "wpBase": {
-   "x": -0.20000000298023224,
+   "x": 0,
    "y": 0,
    "z": 0
   },
-  "wdHeight": 1.7000000476837158,
-  "wdRadius": 0.5
+  "wdHeight": 1.5,
+  "wdRadius": 0.6000000238418579
  },
  "aabbBounds": {
   "__type__": "AABB",
@@ -906,8 +906,8 @@
    "z": 0.75
   },
   "wvExt": {
-   "x": 0.3799999952316284,
-   "y": 0.3799999952316284,
+   "x": 0.6000000238418579,
+   "y": 0.6000000238418579,
    "z": 0.75
   }
  },
@@ -1066,6 +1066,7 @@
      "dwShaderMapOverride": 4294967295,
      "nPlayerIndex": 0,
      "flScale": 1,
+     "unk_ebd19c": false,
      "szSpawnLocatorName": 0,
      "vecScalar": {
       "x": 1,
@@ -1419,6 +1420,7 @@
      "dwShaderMapOverride": 4294967295,
      "nPlayerIndex": 0,
      "flScale": 1,
+     "unk_ebd19c": false,
      "szSpawnLocatorName": 0,
      "vecScalar": {
       "x": 1,
@@ -1718,7 +1720,7 @@
      "z": 0
     },
     "wdHeight": 1.5,
-    "wdRadius": 0.3799999952316284
+    "wdRadius": 0.6000000238418579
    },
    "aabbCollision": {
     "__type__": "AABB",
@@ -1734,7 +1736,7 @@
      "z": 0
     }
    },
-   "unk_3d328de": false,
+   "unk_3d328de": true,
    "unk_7a83a6d": true,
    "bAffectsRagdoll": false,
    "flStepUpHeight": 0.5,
@@ -1920,32 +1922,12 @@
      },
      "unk_ce494ef": false,
      "tSummonRange": {
-      "rangeValue1": 1,
+      "rangeValue1": 3,
       "rangeValue2": 0
      },
-     "dwMaxConcurrentCount": 4,
-     "snoCondition": null
-    },
-    {
-     "__type__": "SummonActorEntry",
-     "__typeHash__": 2990129354,
-     "dwWeight": 100,
-     "snoSummonActor": {
-      "__raw__": 540406,
-      "__group__": 1,
-      "__type__": "DT_SNO",
-      "__typeHash__": 2764331143,
-      "__targetFileName__": "base/meta/Actor/cannibal_dualwield_fire.acr",
-      "groupName": "Actor",
-      "name": "cannibal_dualwield_fire"
-     },
-     "unk_ce494ef": false,
-     "tSummonRange": {
-      "rangeValue1": 1,
-      "rangeValue2": 0
-     },
-     "dwMaxConcurrentCount": 4,
-     "snoCondition": null
+     "dwMaxConcurrentCount": 3,
+     "snoCondition": null,
+     "bCanBeMinion": true
     },
     {
      "__type__": "SummonActorEntry",
@@ -1962,11 +1944,34 @@
      },
      "unk_ce494ef": false,
      "tSummonRange": {
-      "rangeValue1": 1,
+      "rangeValue1": 3,
       "rangeValue2": 0
      },
-     "dwMaxConcurrentCount": 4,
-     "snoCondition": null
+     "dwMaxConcurrentCount": 3,
+     "snoCondition": null,
+     "bCanBeMinion": true
+    },
+    {
+     "__type__": "SummonActorEntry",
+     "__typeHash__": 2990129354,
+     "dwWeight": 100,
+     "snoSummonActor": {
+      "__raw__": 540403,
+      "__group__": 1,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/Actor/cannibal_brute_fire.acr",
+      "groupName": "Actor",
+      "name": "cannibal_brute_fire"
+     },
+     "unk_ce494ef": false,
+     "tSummonRange": {
+      "rangeValue1": 2,
+      "rangeValue2": 0
+     },
+     "dwMaxConcurrentCount": 2,
+     "snoCondition": null,
+     "bCanBeMinion": true
     }
    ],
    "unk_43a5b25": [],
@@ -2019,10 +2024,10 @@
    "eOverriddenMonsterRarity": -1,
    "unk_7859c5b": false,
    "bIsWorldBoss": false,
-   "unk_bc58cee": false,
-   "unk_7fdab9c": 10,
-   "unk_e7ee8f1": 3,
-   "unk_828c56a": false,
+   "unk_4b1672a": false,
+   "unk_1e3ad71": 10,
+   "unk_2fc83ba": 3,
+   "unk_68f046c": false,
    "unk_e4c90d3": false,
    "unk_12ecd6a": false,
    "unk_c0565bf": false,
@@ -2161,6 +2166,15 @@
      "__targetFileName__": "base/meta/EffectGroup/actor_death_shadow.efg",
      "groupName": "EffectGroup",
      "name": "actor_death_shadow"
+    },
+    {
+     "__raw__": 2264624,
+     "__group__": 14,
+     "__type__": "DT_SNO",
+     "__typeHash__": 2764331143,
+     "__targetFileName__": "base/meta/EffectGroup/actor_death_holy.efg",
+     "groupName": "EffectGroup",
+     "name": "actor_death_holy"
     }
    ],
    "gbidActorResurrectDataOverride": null

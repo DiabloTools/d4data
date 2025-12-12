@@ -116,6 +116,7 @@
  "unk_7a86b64": true,
  "eDamageType": 0,
  "unk_752edeb": false,
+ "unk_c41a01d": false,
  "tCombatEffectChance": {
   "value": "0",
   "compiled": "BgAAAAAAAAAAAAAA"
@@ -614,11 +615,13 @@
     "value": "1",
     "compiled": "BgAAAAAAgD8AAAAA"
    },
+   "gbidBuffPreset": null,
    "eStackingBehavior": 0,
    "eStackingScope": 0,
    "unk_9261403": false,
    "unk_db6680": false,
    "bVisibleInUI": false,
+   "unk_47a0da4": 0,
    "bShowDuration": false,
    "bCancellable": false,
    "unk_99b5752": false,
@@ -728,11 +731,13 @@
     "value": "1",
     "compiled": "BgAAAAAAgD8AAAAA"
    },
+   "gbidBuffPreset": null,
    "eStackingBehavior": 0,
    "eStackingScope": 0,
    "unk_9261403": false,
    "unk_db6680": false,
    "bVisibleInUI": false,
+   "unk_47a0da4": 0,
    "bShowDuration": false,
    "bCancellable": false,
    "unk_99b5752": false,
@@ -842,11 +847,13 @@
     "value": "1",
     "compiled": "BgAAAAAAgD8AAAAA"
    },
+   "gbidBuffPreset": null,
    "eStackingBehavior": 0,
    "eStackingScope": 0,
    "unk_9261403": false,
    "unk_db6680": false,
    "bVisibleInUI": false,
+   "unk_47a0da4": 0,
    "bShowDuration": false,
    "bCancellable": false,
    "unk_99b5752": false,
@@ -951,7 +958,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "(1 + Pet_Health_Bonus_Percent) * (1 + NecroArmy_Pet_Type_Health_Bonus_Pct#2) * (1 + PowerTag.Paragon_Necro_Legendary_005.\"Script Formula 0\") * (1 + SF_23 * SF_39)",
-    "compiled": "BgAAAAAAgD8FAAAAAAAAAC8AAAD+////AAAAAAsAAAAGAAAAAACAPwUAAAAAAAAAOgIAAAIAAAAAAAAACwAAAA0AAAAGAAAAAACAPwUAAAAFAAAAUWYKAAAAAAAAAAAACwAAAA0AAAAGAAAAAACAPwUAAAAdAAAAAAAAAAAAAAAAAAAABQAAAC0AAAAAAAAAAAAAAAAAAAANAAAACwAAAA0AAAAAAAAA"
+    "compiled": "BgAAAAAAgD8FAAAAAAAAADIAAAD+////AAAAAAsAAAAGAAAAAACAPwUAAAAAAAAAPAIAAAIAAAAAAAAACwAAAA0AAAAGAAAAAACAPwUAAAAFAAAAUWYKAAAAAAAAAAAACwAAAA0AAAAGAAAAAACAPwUAAAAdAAAAAAAAAAAAAAAAAAAABQAAAC0AAAAAAAAAAAAAAAAAAAANAAAACwAAAA0AAAAAAAAA"
    }
   },
   {
@@ -966,8 +973,8 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "1",
-    "compiled": "BgAAAAAAgD8AAAAA"
+    "value": "SF_43 ? (Affix.1HMace_Unique_Necro_100.\"Static Value 0\") : 1",
+    "compiled": "BQAAADEAAAAAAAAAAAAAAAAAAAAFAAAAYwAAABmwJQAAAAAAAAAAAAYAAAAAAIA/EAAAAAAAAAA="
    }
   },
   {
@@ -998,8 +1005,8 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "20",
-    "compiled": "BgAAAAAAoEEAAAAA"
+    "value": "10 * SF_44",
+    "compiled": "BgAAAAAAIEEFAAAAMgAAAAAAAAAAAAAAAAAAAA0AAAAAAAAA"
    }
   },
   {
@@ -1071,7 +1078,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "NecroArmy_Spec_For_Pet_Type#2==0",
-    "compiled": "BQAAAAAAAAA2AgAAAgAAAAAAAAAGAAAAAAAAAAkAAAAAAAAA"
+    "compiled": "BQAAAAAAAAA4AgAAAgAAAAAAAAAGAAAAAAAAAAkAAAAAAAAA"
    }
   },
   {
@@ -1079,7 +1086,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "NecroArmy_Spec_For_Pet_Type#2==1",
-    "compiled": "BQAAAAAAAAA2AgAAAgAAAAAAAAAGAAAAAACAPwkAAAAAAAAA"
+    "compiled": "BQAAAAAAAAA4AgAAAgAAAAAAAAAGAAAAAACAPwkAAAAAAAAA"
    }
   },
   {
@@ -1087,7 +1094,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "NecroArmy_Spec_For_Pet_Type#2==2",
-    "compiled": "BQAAAAAAAAA2AgAAAgAAAAAAAAAGAAAAAAAAQAkAAAAAAAAA"
+    "compiled": "BQAAAAAAAAA4AgAAAgAAAAAAAAAGAAAAAAAAQAkAAAAAAAAA"
    }
   },
   {
@@ -1231,7 +1238,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Min(1,1-Min(SF_35*(50-Level), 0.25))",
-    "compiled": "BgAAAAAAgD8GAAAAAACAPwUAAAApAAAAAAAAAAAAAAAAAAAABgAAAAAASEIFAAAAAAAAACcAAAD+////AAAAAAwAAAANAAAABgAAAAAAgD4BAAAAAAAAAAwAAAABAAAAAAAAAAAAAAA="
+    "compiled": "BgAAAAAAgD8GAAAAAACAPwUAAAApAAAAAAAAAAAAAAAAAAAABgAAAAAASEIFAAAAAAAAACkAAAD+////AAAAAAwAAAANAAAABgAAAAAAgD4BAAAAAAAAAAwAAAABAAAAAAAAAAAAAAA="
    }
   },
   {
@@ -1247,7 +1254,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Min(1,1-Min(SF_37*(50-Level), 0.20))",
-    "compiled": "BgAAAAAAgD8GAAAAAACAPwUAAAArAAAAAAAAAAAAAAAAAAAABgAAAAAASEIFAAAAAAAAACcAAAD+////AAAAAAwAAAANAAAABgAAAM3MTD4BAAAAAAAAAAwAAAABAAAAAAAAAAAAAAA="
+    "compiled": "BgAAAAAAgD8GAAAAAACAPwUAAAArAAAAAAAAAAAAAAAAAAAABgAAAAAASEIFAAAAAAAAACkAAAD+////AAAAAAwAAAANAAAABgAAAM3MTD4BAAAAAAAAAAwAAAABAAAAAAAAAAAAAAA="
    }
   },
   {
@@ -1278,8 +1285,24 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "1.5",
-    "compiled": "BgAAAAAAwD8AAAAA"
+    "value": "3",
+    "compiled": "BgAAAAAAQEAAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "AffixIsEquipped(SNO.Affix.1HMace_Unique_Necro_100)",
+    "compiled": "BQAAAFkAAAAZsCUAAAAAAAAAAAABAAAAJAAAAAAAAAA="
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "SF_43 ? (Affix.1HMace_Unique_Necro_100.\"Static Value 2\" / 100) : 1",
+    "compiled": "BQAAADEAAAAAAAAAAAAAAAAAAAAFAAAAYwAAABmwJQACAAAAAAAAAAYAAAAAAMhCDgAAAAYAAAAAAIA/EAAAAAAAAAA="
    }
   }
  ],
@@ -1313,6 +1336,11 @@
    "arBuffsToApply": [],
    "bApplyVulnerableDebuff": false,
    "tVulnerableDurationSecondsOverride": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "unk_b4395d8": false,
+   "unk_7c2668d": {
     "value": "0",
     "compiled": "BgAAAAAAAAAAAAAA"
    },
@@ -1412,6 +1440,11 @@
     "value": "0",
     "compiled": "BgAAAAAAAAAAAAAA"
    },
+   "unk_b4395d8": false,
+   "unk_7c2668d": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
    "tFortifiedHealth": {
     "__type__": "HitpointSpecifier",
     "__typeHash__": 1185241065,
@@ -1508,6 +1541,11 @@
     "value": "0",
     "compiled": "BgAAAAAAAAAAAAAA"
    },
+   "unk_b4395d8": false,
+   "unk_7c2668d": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
    "tFortifiedHealth": {
     "__type__": "HitpointSpecifier",
     "__typeHash__": 1185241065,
@@ -1596,6 +1634,7 @@
  },
  "flCastingEffectGroupDuration": 0.5,
  "arCastingEffectOverrides": [],
+ "unk_75d2c20": [],
  "arDamageRemapConditions": [],
  "arPetSpawns": [
   {
@@ -1670,6 +1709,7 @@
  "unk_376802e": false,
  "unk_bf25f64": 0,
  "arRecastPowerSequence": [],
+ "arModifierProfiles": [],
  "arProjectileOverrides": [],
  "arConditionalDependencies": []
 }

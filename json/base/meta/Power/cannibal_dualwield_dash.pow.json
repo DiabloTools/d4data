@@ -77,19 +77,28 @@
        "__typeHash__": 1196096041,
        "dwType": 1196096041,
        "bInverse": false,
-       "flDistance": 1.75
+       "flDistance": 1.7000000476837158
       }
      ],
      "bEnd": false
     },
     {
-     "__type__": "PhaseJumpDestinationReached",
-     "__typeHash__": 805969435,
-     "dwType": 805969435,
+     "__type__": "PhaseJumpDurationReached",
+     "__typeHash__": 1121634143,
+     "dwType": 1121634143,
      "tPhaseToJumpTo": 3937977656,
-     "arConditions": [],
+     "arConditions": [
+      {
+       "__type__": "PowerConditionDistanceToTarget",
+       "__typeHash__": 1196096041,
+       "dwType": 1196096041,
+       "bInverse": false,
+       "flDistance": 1.7000000476837158
+      }
+     ],
      "bEnd": false,
-     "flDistanceFromTarget": 1.75
+     "flSeconds": 0.4000000059604645,
+     "unk_21b19af": false
     }
    ],
    "unk_d0d932b": false,
@@ -133,6 +142,7 @@
  "unk_7a86b64": true,
  "eDamageType": 0,
  "unk_752edeb": true,
+ "unk_c41a01d": false,
  "tCombatEffectChance": {
   "value": "100",
   "compiled": "BgAAAAAAyEIAAAAA"
@@ -267,7 +277,7 @@
   "eMoveRateOverride": -1,
   "flSpeedMultiplier": 1,
   "bIgnorePathfinding": false,
-  "unk_81f023c": false,
+  "unk_81f023c": true,
   "bDisableDynamicAvoidance": false,
   "unk_9d8eaf7": false,
   "bOnlyStopFromStaticCollision": false,
@@ -608,8 +618,8 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "1.75",
-    "compiled": "BgAAAAAA4D8AAAAA"
+    "value": "2",
+    "compiled": "BgAAAAAAAEAAAAAA"
    }
   },
   {
@@ -659,6 +669,11 @@
    "arBuffsToApply": [],
    "bApplyVulnerableDebuff": false,
    "tVulnerableDurationSecondsOverride": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "unk_b4395d8": false,
+   "unk_7c2668d": {
     "value": "0",
     "compiled": "BgAAAAAAAAAAAAAA"
    },
@@ -758,6 +773,11 @@
     "value": "0",
     "compiled": "BgAAAAAAAAAAAAAA"
    },
+   "unk_b4395d8": false,
+   "unk_7c2668d": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
    "tFortifiedHealth": {
     "__type__": "HitpointSpecifier",
     "__typeHash__": 1185241065,
@@ -838,6 +858,7 @@
  },
  "flCastingEffectGroupDuration": 0.5,
  "arCastingEffectOverrides": [],
+ "unk_75d2c20": [],
  "arDamageRemapConditions": [],
  "arPetSpawns": [],
  "unk_143fe9f": {
@@ -853,6 +874,7 @@
  "unk_376802e": false,
  "unk_bf25f64": 0,
  "arRecastPowerSequence": [],
+ "arModifierProfiles": [],
  "arProjectileOverrides": [],
  "arConditionalDependencies": []
 }

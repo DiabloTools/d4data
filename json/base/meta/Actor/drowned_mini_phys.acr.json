@@ -129,8 +129,8 @@
    "y": 0,
    "z": 0
   },
-  "wdHeight": 1.2000000476837158,
-  "wdRadius": 0.20000000298023224
+  "wdHeight": 1.7000000476837158,
+  "wdRadius": 0.5
  },
  "aabbBounds": {
   "__type__": "AABB",
@@ -141,8 +141,8 @@
    "z": 0.8500000238418579
   },
   "wvExt": {
-   "x": 0.25,
-   "y": 0.25,
+   "x": 0.5,
+   "y": 0.5,
    "z": 0.8500000238418579
   }
  },
@@ -425,6 +425,7 @@
      "dwShaderMapOverride": 4294967295,
      "nPlayerIndex": 0,
      "flScale": 1,
+     "unk_ebd19c": false,
      "szSpawnLocatorName": 0,
      "vecScalar": {
       "x": 1,
@@ -715,7 +716,7 @@
      "z": 0
     },
     "wdHeight": 1.7000000476837158,
-    "wdRadius": 0.25
+    "wdRadius": 0.5
    },
    "aabbCollision": {
     "__type__": "AABB",
@@ -731,7 +732,7 @@
      "z": 0
     }
    },
-   "unk_3d328de": false,
+   "unk_3d328de": true,
    "unk_7a83a6d": true,
    "bAffectsRagdoll": false,
    "flStepUpHeight": 0.5,
@@ -743,7 +744,7 @@
      "__typeHash__": 398282971,
      "unk_20b45d7": 4294967295,
      "eType": 1,
-     "flRadius": 0.699999988079071,
+     "flRadius": 0.5,
      "flLength": 0.699999988079071,
      "aPitch": -1.5707963705062866,
      "aYaw": 0,
@@ -835,7 +836,7 @@
     "name": "drowned"
    },
    "szArchetype": 4035213,
-   "eBaseElement": 0,
+   "eBaseElement": -1,
    "snoMainHand": null,
    "snoOffHand": null,
    "unk_f8ee66e": false,
@@ -901,11 +902,12 @@
      },
      "unk_ce494ef": false,
      "tSummonRange": {
-      "rangeValue1": 1,
+      "rangeValue1": 4,
       "rangeValue2": 0
      },
-     "dwMaxConcurrentCount": 2,
-     "snoCondition": null
+     "dwMaxConcurrentCount": 4,
+     "snoCondition": null,
+     "bCanBeMinion": true
     },
     {
      "__type__": "SummonActorEntry",
@@ -922,32 +924,34 @@
      },
      "unk_ce494ef": false,
      "tSummonRange": {
-      "rangeValue1": 1,
+      "rangeValue1": 3,
       "rangeValue2": 0
      },
-     "dwMaxConcurrentCount": 2,
-     "snoCondition": null
+     "dwMaxConcurrentCount": 3,
+     "snoCondition": null,
+     "bCanBeMinion": true
     },
     {
      "__type__": "SummonActorEntry",
      "__typeHash__": 2990129354,
      "dwWeight": 100,
      "snoSummonActor": {
-      "__raw__": 197205,
+      "__raw__": 197202,
       "__group__": 1,
       "__type__": "DT_SNO",
       "__typeHash__": 2764331143,
-      "__targetFileName__": "base/meta/Actor/drowned_mini_phys.acr",
+      "__targetFileName__": "base/meta/Actor/drowned_brute_phys.acr",
       "groupName": "Actor",
-      "name": "drowned_mini_phys"
+      "name": "drowned_brute_phys"
      },
      "unk_ce494ef": false,
      "tSummonRange": {
-      "rangeValue1": 1,
+      "rangeValue1": 2,
       "rangeValue2": 0
      },
-     "dwMaxConcurrentCount": 8,
-     "snoCondition": null
+     "dwMaxConcurrentCount": 2,
+     "snoCondition": null,
+     "bCanBeMinion": true
     }
    ],
    "unk_43a5b25": [],
@@ -1000,10 +1004,10 @@
    "eOverriddenMonsterRarity": -1,
    "unk_7859c5b": false,
    "bIsWorldBoss": false,
-   "unk_bc58cee": false,
-   "unk_7fdab9c": 10,
-   "unk_e7ee8f1": 3,
-   "unk_828c56a": false,
+   "unk_4b1672a": false,
+   "unk_1e3ad71": 10,
+   "unk_2fc83ba": 3,
+   "unk_68f046c": false,
    "unk_e4c90d3": false,
    "unk_12ecd6a": false,
    "unk_c0565bf": false,
@@ -1132,6 +1136,15 @@
      "__targetFileName__": "base/meta/EffectGroup/actor_death_shadow.efg",
      "groupName": "EffectGroup",
      "name": "actor_death_shadow"
+    },
+    {
+     "__raw__": 2264624,
+     "__group__": 14,
+     "__type__": "DT_SNO",
+     "__typeHash__": 2764331143,
+     "__targetFileName__": "base/meta/EffectGroup/actor_death_holy.efg",
+     "groupName": "EffectGroup",
+     "name": "actor_death_holy"
     }
    ],
    "gbidActorResurrectDataOverride": null
