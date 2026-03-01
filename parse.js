@@ -887,24 +887,29 @@ let basicTypes = {
   "DT_BINDABLEPROPERTY": function (ret, file, typeHashes, offset, field, fieldPath, results = { readLength: 0 }) {
     //readLog.push({fieldPath: fieldPath.join('.') + ' @ ' + offset, value: ret});
 
-    // DT_CSTRING
-    const datastore = readStructure.bind(this)(file, [3846829457], offset, field, [...fieldPath, "datastore"]);
-    if (datastore) {
-      ret.datastore = datastore;
-    }
-    offset += 16;
-    results.readLength += 16;
-
-    // DT_CSTRING
-    const property = readStructure.bind(this)(file, [3846829457], offset, field, [...fieldPath, "property"]);
-    if (property) {
-      ret.property = property;
+    // DT_CSTRING DataStore; // 0x00 (0)
+    const DataStore = readStructure.bind(this)(file, [3846829457], offset, field, [...fieldPath, "DataStore"]);
+    if (DataStore) {
+      ret.DataStore = DataStore;
     }
     offset += 16;
     results.readLength += 16;
 
 
-    const unknown = file.readUInt32LE(offset);
+    // DT_CSTRING DataPath; // 0x10 (16)
+    const DataPath = readStructure.bind(this)(file, [3846829457], offset, field, [...fieldPath, "DataPath"]);
+    if (DataPath) {
+      ret.DataPath = DataPath;
+    }
+    offset += 16;
+    results.readLength += 16;
+
+
+    // DT_UINT FormatterId; // 0x20 (32)
+    const FormatterId = file.readInt32LE(offset);
+    if (FormatterId) {
+      ret.FormatterId = FormatterId;
+    }
     offset += 4;
     results.readLength += 4;
 
@@ -916,13 +921,15 @@ let basicTypes = {
       console.error('      @', offset, 'DT_BINDABLEPROPERTY[', getType(typeHashes[1]).name, ']: Unexpected value in padding1:', padding1, padding1.toString(16), 'fieldPath:', fieldPath.slice(-3).join('.'), fieldPath[0]);
     }
 
-    const flags = file.readInt32LE(offset);
-    if (flags & 0xffcd != 0) {
-      //if (flags != 2 && flags != 16 && flags != 18 && flags != 32 && flags != 34 && flags != 50) {
-      console.warn('      @', offset, 'DT_BINDABLEPROPERTY[', getType(typeHashes[1]).name, ']: Unexpected flag:', flags, 'next int:', file.readInt32LE(offset + 16), 'fieldPath:', fieldPath.slice(-3).join('.'));
-    }
+
+    // DT_UINT PropertyFlags; // 0x28 (40)
+    // const PropertyFlags = file.readInt32LE(offset);
+    // if (PropertyFlags) {
+    //   ret.PropertyFlags = PropertyFlags;
+    // }
     offset += 4;
     results.readLength += 4;
+
 
     const padding2 = file.readInt32LE(offset);
     if (padding2 != 0) {
@@ -931,6 +938,7 @@ let basicTypes = {
     }
     offset += 4;
     results.readLength += 4;
+
 
     let subresults = { readLength: 0 };
     ret.value = readStructure.bind(this)(file, typeHashes.slice(1), offset, field, [...fieldPath, "value"], subresults);
