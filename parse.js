@@ -1096,6 +1096,27 @@ function collectCombinedMetaFiles(snoGroup) {
   })
 }
 
+function getBaseDir(path) {
+  while (path && path != '.') {
+    while (path.slice(-1) === '/') {
+      path = path.slice(0, -1);
+    }
+
+    for (const tocLocation of ['/base/CoreTOC.dat', '/CoreTOC.dat']) {
+      filePathCoreToc = path + tocLocation;
+      if (fs.existsSync(filePathCoreToc)) {
+        baseDir = filePathCoreToc.slice(0, -12);
+        while (baseDir.slice(-1) === '/') {
+          baseDir = baseDir.slice(0, -1);
+        }
+        dataDir = node_path.dirname(baseDir);
+        return;
+      }
+    }
+    path = node_path.dirname(path);
+  }
+}
+
 console.log("Collecting files...")
 for (let c = 2; c < process.argv.length; c++) {
   let path = process.argv[c];
@@ -1103,26 +1124,15 @@ for (let c = 2; c < process.argv.length; c++) {
     console.error("Directory '%s' does not exist", path);
     continue;
   }
-  while (path.slice(-1) === '/') {
-    path = path.slice(0, -1);
+
+  if (!dataDir) {
+    getBaseDir(path);
   }
 
-  for (const tocLocation of ['/base/CoreTOC.dat', '/CoreTOC.dat']) {
-    filePathCoreToc = path + tocLocation;
-    if (fs.existsSync(filePathCoreToc)) {
-      baseDir = filePathCoreToc.slice(0, -12);
-      while (baseDir.slice(-1) === '/') {
-        baseDir = baseDir.slice(0, -1);
-      }
-      break;
-    }
-  }
-  dataDir = node_path.dirname(baseDir);
-
-  collectCombinedMetaFiles(42); // StringList
-  collectCombinedMetaFiles(44); // Texture
   getAllFiles(path, fileNames);
 }
+collectCombinedMetaFiles(42); // StringList
+collectCombinedMetaFiles(44); // Texture
 if (fileNames.length == 0 && fileNamesGB.length == 0 && fileNamesCombinedMeta.length == 0) {
   console.error("No files were found in the given directories.");
   process.exit(1);
