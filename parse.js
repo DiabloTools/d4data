@@ -12,11 +12,23 @@ const snoFileInfo = require('./json/snoFileInfo.json');
 
 process.chdir(__dirname);
 
+function isEmpty(obj) {
+  for (let key in obj) {
+    if (obj.hasOwnProperty(key)) {
+      return false;
+    }
+  }
+  return true;
+};
+
+
 let dataDir = ""
 let baseDir = ""
 let toc = {};
 let tocflat = {};
 let formatHashes = {};
+let typeHashForFormatHash = {};
+let typeHashForSNOGroup = {};
 let replacedSnos = {};
 let encryptedSnos = {};
 let encryptedNames = {};
@@ -231,15 +243,50 @@ fs.readdirSync('data/base').filter(fn => fn.startsWith('EncryptedNameDict-')).fo
   fs.writeFileSync('json/base/EncryptedNameDict.dat.json', JSON.stringify(encryptedNames, null, ' '));
 });
 
+for (const [typeHash, type] of Object.entries(definitions)) {
+  if (type.dwFormatHash) {
+    typeHashForFormatHash[type.dwFormatHash] = typeHash;
+    typeHashForSNOGroup[type.snoGroup] = typeHash;
+  }
+}
 
-function getTypeHashFromFormatHash(dwFormatHash) {
-  for (let key of Object.keys(definitions)) {
-    if (definitions[key].dwFormatHash === dwFormatHash) {
-      return key;
+// Automatically map format hashes to types
+if (isEmpty(typeHashForFormatHash)) {
+  function getDefinitionNameFromSNOGroup(snoGroup, groupName) {
+    switch (snoGroup) {
+      case 6:
+        return "AnimationDefinition";
+      case 7:
+        return "Animation2DDefinition";
+      case 46:
+        return "UIDialogDefinition";
+      case 150:
+        return "UIModalDefinition";
+      default:
+        break;
     }
+
+    return groupName + "Definition";
   }
 
-  return null;
+  for (const [snoGroup, pair] of Object.entries(snoFileInfo)) {
+    const [groupName, ext] = pair;
+    const dwFormatHash = formatHashes[snoGroup];
+    if (!dwFormatHash) {
+      continue;
+    }
+
+    const typeName = getDefinitionNameFromSNOGroup(Number(snoGroup), groupName);
+    const dwTypeHash = typeHash(typeName);
+    if (!definitions[dwTypeHash]) {
+      continue;
+    }
+    typeHashForFormatHash[dwFormatHash] = dwTypeHash;
+  }
+}
+
+function getTypeHashFromFormatHash(dwFormatHash) {
+  return typeHashForFormatHash[dwFormatHash];
 }
 
 function getType(hash) {
@@ -1172,7 +1219,11 @@ function parseFileData(dwFormatHash, fileData, fileName, index) {
   // console.log('#' + index, fileName);
 
   const snoID = fileData.readUInt32LE(0);
-  let data = readStructure.bind(globals)(fileData, [getTypeHashFromFormatHash(dwFormatHash)], 0, null, [fileName]);
+  const typeHash = getTypeHashFromFormatHash(dwFormatHash);
+  if (typeHash == null) {
+    throw new Error("Couldn't get typeHash from formatHash: " + dwFormatHash);
+  }
+  let data = readStructure.bind(globals)(fileData, [typeHash], 0, null, [fileName]);
 
   if (globals.references) {
     let refs = Object.values(globals.references);
@@ -1192,7 +1243,7 @@ function collectGameBalanceReferences(fileName, index) {
   try {
     let file = fs.readFileSync(fileName);
     if (file.length < 16) {
-      throw new Error('File size < 16!');;
+      throw new Error('File size < 16!');
     }
 
     const dwSignature = file.readUInt32LE(0);
