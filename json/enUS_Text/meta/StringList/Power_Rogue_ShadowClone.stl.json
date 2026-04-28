@@ -15,7 +15,7 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "desc",
-   "szText": "{c_label}Cooldown:{/c_label} {c_resource}{Cooldown Time}{/c_resource} seconds\r\n{if:SF_13}{c_label}Lucky Hit Chance: {/c}{c_resource}[{SF_18}|%|]{/c}\r\n{else}{/if}Summon a shadow that mimics your actions for {c_number}{buffduration:CLONE_MIMIC}{/c} seconds. This {c_important}Shadow Clone{/c} deals {c_number}[{SF_1}*100|%|]{/c} of your damage.{if:SF_13}\r\n\r\nCasting {c_important}Shadow Clone{/c} will {c_important}{u}Daze{/u}{/c} surrounding enemies for {c_number}{SF_16}{/c} seconds and deal {c_number}{payload:DAZE_PAYLOAD}{/c} damage to them.{/if} ",
+   "szText": "{if:SF_41}{c_label}Charges:{/c} {c_resource}{SF_42}{/c}\r\n{c_label}Charge Cooldown:{/c} {c_resource}{SF_42}{/c_resource} per {c_resource}{Recharge Time}{/c_resource} seconds \r\n{else}{c_label}Cooldown:{/c_label} {c_resource}{Cooldown Time}{/c_resource} seconds\r\n{/if}{if:SF_41}{c_label}Lucky Hit Chance: {/c}{c_resource}[{SF_43}|%|]{/c}\r\n{else}{/if}Summon a shadow that mimics your actions for {c_number}{SF_0}{/c} seconds. This {c_important}Shadow Clone{/c} deals {c_number}[{SF_1}*100|%|]{/c} of your damage.",
    "hLabel": 3707583
   },
   {
@@ -29,22 +29,106 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "rankup_desc",
-   "szText": "\r\n{icon:bullet, 1.2} Damage {icon:arrow, 1.2} {c_number}[{SF_1}*100|%|]{/c}\r\n{icon:bullet,1.2} Cooldown {icon:arrow,1.2} {c_number}{Cooldown Time}{/c} seconds\r\n{c_label}At Rank 5:{/c}\r\n{icon:arrow,1.2} Casting {c_important}Shadow Clone{/c} will {c_important}{u}Daze{/u}{/c} surrounding enemies for {c_number}{SF_16}{/c} seconds and deal {c_number}{payload:DAZE_PAYLOAD}{/c} damage to them.",
+   "szText": "\r\n{if:Mod.UpgradeC}{icon:bullet, 1.2} Arrow Damage {icon:arrow, 1.2} {c_number}{payload:UPGRADE_C_PROJECTILE_PAYLOAD}{/c}{else}{icon:bullet, 1.2} Damage {icon:arrow, 1.2} {c_number}[{SF_1}*100|%|]{/c}{/if}{if:Mod.UpgradeB}\r\n{icon:bullet, 1.2} Shade Damage {icon:arrow, 1.2} {c_number}[{SF_29}*100|%x|]{/c}{/if}",
    "hLabel": 4074074671
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
+   "szLabel": "Mod3_Description",
+   "szText": "Minimum {c_important}{u}Ferocity{/u}{/c} is increased by {c_number}{SF_26}{/c} as long as {c_important}Shadow Clone{/c} is present. {c_important}Shadow Clone's{/c} duration is increased by {c_number}{SF_27}{/c} seconds and deals {c_number}[{SF_28}*100|x%|]{/c} increased damage.",
+   "hLabel": 3291858358
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod3_Name",
+   "szText": "Relentless",
+   "hLabel": 2570277651
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod7_Description",
+   "szText": "{c_label}Passive:{/c} After spending {c_number}{SF_30}{/c} Energy, your next {c_important}Core{/c} Skill Cast becomes a {c_important}Shade{/c} Skill and spawns a {c_important}Shade{/c} that deals {c_number}[{SF_29}*100|%|]{/c} of its damage.\r\n\r\n{c_important}Shadow Clone{/c} is now also a {c_important}Shade{/c} Skill and its duration is reduced by {c_number}[{SF_31}*100|%x|]{/c}.",
+   "hLabel": 28437434
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod7_Name",
+   "szText": "Awakening",
+   "hLabel": 2726819223
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod5_Description",
+   "szText": "{c_important}Shadow Clone{/c} becomes a {c_important}Marksman{/c} Skill and now summons a stationary shadow that fires {c_number}{SF_21}{/c} piercing arrows every {c_number}[{SF_19}|1|]{/c} seconds. Each arrow deals {c_number}{payload:UPGRADE_C_PROJECTILE_PAYLOAD}{/c} damage.\r\n\r\n{c_important}Shadow Clone{/c} gains {c_number}{SF_39}{/c} additional Charges, and its Cooldown is reduced by {c_number}{SF_40}{/c} seconds. You may have up to {c_number}[SF_8]{/c} {c_important}Shadow Clones{/c} active at a time.",
+   "hLabel": 1660147896
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod5_Name",
+   "szText": "Sentry",
+   "hLabel": 2648548437
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
    "szLabel": "Mod0_Description",
-   "szText": "You gain {c_important}{u}Stealth{/u}{/c} and {c_important}{u}Unstoppable{/u}{/c} for {c_number}{buffduration:UNSTOPPABLE}{/c} seconds after casting {c_important}Shadow Clone{/c}.",
+   "szText": "Casting {c_important}Shadow Clone{/c} grants {c_number}{SF_32}{/c} stacks of {c_important}{u}Resolve{/u}{/c}. While any {c_important}Shadow Clone{/c} is active, you gain {c_number}{SF_37}{/c} {c_important}{u}Resolve{/u}{/c} per {c_number}{SF_38}{/c} second.",
    "hLabel": 3591940403
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod0_Name",
-   "szText": "Prime Shadow Clone",
+   "szText": "Resolve",
    "hLabel": 2452871472
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod15_Description",
+   "szText": "Casting {c_important}Shadow Clone{/c} grants {c_important}{u}Unstoppable{/u}{/c} for {c_number}{SF_25}{/c} seconds.",
+   "hLabel": 809905289
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod15_Name",
+   "szText": "Unstoppable",
+   "hLabel": 3265794374
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod13_Description",
+   "szText": "Casting {c_important}Shadow Clone{/c} makes all Nearby enemies {c_important}{u}Weakened{/u}{/c} and {c_important}{u}Vulnerable{/u}{/c} for {c_number}{SF_34}{/c} seconds.",
+   "hLabel": 2441615751
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod13_Name",
+   "szText": "Weaken & Vulnerable",
+   "hLabel": 3187523588
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod11_Description",
+   "szText": "{c_important}Shadow Clone's{/c} Cooldown is reduced by {c_number}{SF_35}{/c} seconds.",
+   "hLabel": 4073326213
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod11_Name",
+   "szText": "Cooldown",
+   "hLabel": 3109252802
   },
   {
    "__type__": "StringTableEntry",

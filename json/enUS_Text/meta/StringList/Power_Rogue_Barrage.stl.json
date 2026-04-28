@@ -15,57 +15,113 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "desc",
-   "szText": "{c_label}Energy Cost:{/c_label} {c_resource}{Resource Cost}{/c_resource}\r\n{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat Effect Chance}|%|]{/c}\r\n{/if}Unleash a barrage of {c_number}{SF_5}{/c} arrows that expands outwards, each dealing {c_number}{payload:IMPACT}{/c} damage. Each arrow has a {c_number}[{SF_33}*100|%|]{/c} chance to ricochet off an enemy up to {c_number}{SF_30}{/c} time. Ricochets deal {c_number}[{SF_31}*100|%|]{/c} of the arrow's Base damage.{if:SF_14}\r\n\r\n{c_important}Combo Points{/c} increase damage and arrows fired:\r\n{icon:bullet,1.2} {c_label}1 Point:{/c} {c_number}{payload:DAMAGE_TOOLTIP_1CP}{/c} damage, {c_number}[{SF_5}+{SF_12}]{/c} arrows\r\n{icon:bullet,1.2} {c_label}2 Points:{/c} {c_number}{payload:DAMAGE_TOOLTIP_2CP}{/c} damage, {c_number}[{SF_5}+{SF_12}*2]{/c} arrows\r\n{icon:bullet,1.2} {c_label}3 Points:{/c} {c_number}{payload:DAMAGE_TOOLTIP_3CP}{/c} damage, {c_number}[{SF_5}+{SF_12}*3*{SF_22}]{/c} arrows{/if}",
+   "szText": "{c_label}Energy Cost:{/c_label} {c_resource}{Resource Cost}{/c_resource}\r\n{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat Effect Chance}|%|]{/c}\r\n{/if}Unleash a barrage of {c_number}{SF_5}{/c} arrows that expands outwards, each dealing {c_number}{payload:IMPACT}{/c} damage and piercing up to {c_number}{SF_8}{/c} times. Arrows cannot hit the same target more than once.{if:SF_14}\r\n\r\n{c_important}Combo Points{/c} increase damage and arrows fired:\r\n{icon:bullet,1.2} {c_label}1 Point:{/c} {c_number}{payload:DAMAGE_TOOLTIP_1CP}{/c} damage, {c_number}[{SF_5}+{SF_12}]{/c} arrows\r\n{icon:bullet,1.2} {c_label}2 Points:{/c} {c_number}{payload:DAMAGE_TOOLTIP_2CP}{/c} damage, {c_number}[{SF_5}+{SF_12}*2]{/c} arrows\r\n{icon:bullet,1.2} {c_label}3 Points:{/c} {c_number}{payload:DAMAGE_TOOLTIP_3CP}{/c} damage, {c_number}[{SF_5}+{SF_12}*3*{SF_22}]{/c} arrows{/if}",
    "hLabel": 3707583
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "rankup_desc",
-   "szText": "\r\n{icon:bullet,1.2} Damage {icon:arrow,1.2} {c_number}{payload:IMPACT}{/c}",
+   "szText": "\r\n{icon:bullet,1.2} Damage {icon:arrow,1.2} {c_number}{if:SF_60}{payload:IMPACT}{/if}{if:Mod.UpgradeA}{payload:UPGRADE_A_IMPACT}{/if}{if:Mod.UpgradeB}{payload:IMPACT}{/if}{if:Mod.UpgradeC}{payload:UPGRADE_C_IMPACT}{/if}{/c}{if:Mod.UpgradeB}\r\n{icon:bullet,1.2} Stun Grenade Damage {icon:arrow,1.2} {c_number}{payload:UPGRADE_B_STUN_GRENADE_TOOLTIP}{/c}{/if}",
    "hLabel": 4074074671
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
-   "szLabel": "Mod1_Description",
-   "szText": "{c_important}Barrage's{/c} ricochet chance is increased to {c_number}100%{/c} for arrows that damage a {c_important}{u}Vulnerable{/u}{/c} enemy or Critically Strike any enemy.",
-   "hLabel": 628601524
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
-   "szLabel": "Mod1_Name",
-   "szText": "Enhanced Barrage",
-   "hLabel": 2492006865
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
    "szLabel": "Mod2_Description",
-   "szText": "Every {c_number}3rd{/c} Cast of {c_important}Barrage{/c} makes enemies {c_important}{u}Vulnerable{/u}{/c} for {c_number}{SF_8}{/c} seconds.",
+   "szText": "{c_important}Barrage{/c} deals {c_number}{payload:UPGRADE_A_IMPACT}{/c} damage and fires {c_number}[SF_25]{/c} additional arrows and all of its arrows now travel faster and pierce through {c_number}[SF_51]{/c} additional enemies.",
    "hLabel": 1960229941
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod2_Name",
-   "szText": "Improved Barrage",
+   "szText": "Multishot",
    "hLabel": 2531142258
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod3_Description",
-   "szText": "Whenever a single Cast of {c_important}Barrage{/c} ricochets at least {c_number}{SF_36}{/c} times, your next Cast gains {c_number}[{SF_35}*100|%+|]{/c} increased Critical Strike Chance.",
+   "szText": "{c_important}Barrage{/c} no longer pierces and fires {c_number}{SF_45}{/c} less arrows. Its arrows each drop {c_number}{SF_27}{/c} {c_important}{u}Stun Grenade{/u}{/c} that deals {c_number}{payload:UPGRADE_B_STUN_GRENADE_TOOLTIP}{/c} damage.",
    "hLabel": 3291858358
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod3_Name",
-   "szText": "Advanced Barrage",
+   "szText": "Broadside",
    "hLabel": 2570277651
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod5_Description",
+   "szText": "{c_important}Barrage{/c} fires arrows into the air, dealing {c_number}{payload:UPGRADE_C_IMPACT}{/c} damage upon landing. Each arrow causes the enemy it hits to take {c_number}[{SF_48}*100|%x|]{/c} increased damage from {c_important}Barrage{/c} for the next {c_number}{SF_49}{/c} seconds, up to {c_number}[{SF_48} * {SF_50} * 100|%x|]{/c}. Barrage now also creates an {c_important}{u}Arrow Storm{/u}{/c}, dealing {c_number}{payload:UPGRADE_C_DAMAGE_TOOLTIP}{/c} damage.",
+   "hLabel": 1660147896
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod5_Name",
+   "szText": "Succession",
+   "hLabel": 2648548437
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod1_Description",
+   "szText": "{c_important}Barrage's{/c} Energy Cost is reduced to {c_number}{SF_54}{/c}.",
+   "hLabel": 628601524
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod1_Name",
+   "szText": "Energy Cost Reduction",
+   "hLabel": 2492006865
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod7_Description",
+   "szText": "{c_important}Barrage{/c} deals {c_number}[{SF_47}*100|x%|]{/c} increased damage against {c_important}{u}Vulnerable{/u}{/c} or {c_important}{u}Weakened{/u}{/c} enemies.",
+   "hLabel": 28437434
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod7_Name",
+   "szText": "Vulnerable or Weakened",
+   "hLabel": 2726819223
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod9_Description",
+   "szText": "{c_important}Barrage{/c} gains {c_number}[{SF_44}*100|%+|]{/c} increased Cast Speed.",
+   "hLabel": 2691694268
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod9_Name",
+   "szText": "Cast Speed",
+   "hLabel": 2805090009
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod11_Description",
+   "szText": "Casting {c_important}Barrage{/c} consumes {c_number}{SF_59}{/c} stacks of {c_important}{u}Overpower{/u}{/c} to fire {c_number}{SF_58}{/c} additional arrows and all arrows to deal {c_number}[{SF_57}*100|x%|]{/c} increased damage.",
+   "hLabel": 4073326213
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod11_Name",
+   "szText": "Overpower",
+   "hLabel": 3109252802
   }
  ],
  "ptMapStringTable": "0"

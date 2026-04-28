@@ -328,6 +328,11 @@
      "__type__": "FoleyMaterialTag",
      "__typeHash__": 2077459498,
      "szTag": 4077680
+    },
+    {
+     "__type__": "FoleyMaterialTag",
+     "__typeHash__": 2077459498,
+     "szTag": 4077680
     }
    ],
    "unk_472eb5b": null,
@@ -769,6 +774,73 @@
      "ePersonaState": 0,
      "eEyeState": 1,
      "eMouthState": 1,
+     "bUsesHairClippingVolume": true,
+     "eHairCullShape": 2,
+     "tHairClippingSphere": {
+      "__type__": "Sphere",
+      "__typeHash__": 3384912071,
+      "wpCenter": {
+       "x": 0,
+       "y": 0,
+       "z": 0
+      },
+      "wdRadius": 0.10000000149011612
+     },
+     "tHairClippingCylinder": {
+      "__type__": "AxialCylinder",
+      "__typeHash__": 3017070665,
+      "wpBase": {
+       "x": 0.11999999731779099,
+       "y": 0,
+       "z": -0.15000000596046448
+      },
+      "wdHeight": 0.4000000059604645,
+      "wdRadius": 0.10000000149011612
+     },
+     "tHairCylinderRotation": {
+      "__type__": "bcQuat",
+      "__typeHash__": 3955716320,
+      "x": 0,
+      "y": 0.10886687785387039,
+      "z": 0,
+      "w": 0.9940563440322876
+     },
+     "tHairClippingBox": {
+      "__type__": "OBB",
+      "__typeHash__": 88275,
+      "transform": {
+       "__type__": "PRTransform",
+       "__typeHash__": 2588169118,
+       "q": {
+        "__type__": "bcQuat",
+        "__typeHash__": 3955716320,
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+       },
+       "wp": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+       }
+      },
+      "wvExt": {
+       "x": 0.10000000149011612,
+       "y": 0.10000000149011612,
+       "z": 0.10000000149011612
+      }
+     }
+    },
+    {
+     "__type__": "HairAndBeardState",
+     "__typeHash__": 1271971574,
+     "eHairState": -1,
+     "eBeardState": -1,
+     "eJewelryState": -1,
+     "ePersonaState": 0,
+     "eEyeState": 1,
+     "eMouthState": -1,
      "bUsesHairClippingVolume": false,
      "eHairCullShape": 0,
      "tHairClippingSphere": {
@@ -831,8 +903,8 @@
      "__type__": "HairAndBeardState",
      "__typeHash__": 1271971574,
      "eHairState": -1,
-     "eBeardState": -1,
-     "eJewelryState": -1,
+     "eBeardState": 0,
+     "eJewelryState": 0,
      "ePersonaState": 0,
      "eEyeState": 1,
      "eMouthState": 1,
@@ -965,10 +1037,20 @@
      "ePersonaStateGenderOverride": 0,
      "eEyeStateGenderOverride": 0,
      "eMouthStateGenderOverride": 0
+    },
+    {
+     "__type__": "HairStateGenderOverrides",
+     "__typeHash__": 2872085037,
+     "eHairStateGenderOverride": 0,
+     "eBeardStateGenderOverride": 0,
+     "eJewleryStateGenderOverride": 0,
+     "ePersonaStateGenderOverride": 0,
+     "eEyeStateGenderOverride": 0,
+     "eMouthStateGenderOverride": 0
     }
    ],
    "snoAttachedActor": null,
-   "hDefaultImage": 2581189639,
+   "hDefaultImage": 0,
    "hSocketedImage": 0,
    "hSocketedActiveImage": 0,
    "fMustKeepInInventory": false,
@@ -1025,9 +1107,23 @@
      "fHardpointOffsetsHinting": true,
      "arMaleOffsets": [],
      "arFemaleOffsets": []
+    },
+    {
+     "__type__": "HardpointOffsets",
+     "__typeHash__": 1755847107,
+     "fHardpointOffsetsHinting": true,
+     "arMaleOffsets": [],
+     "arFemaleOffsets": []
     }
    ],
    "tHardpointMountedOffsets": [
+    {
+     "__type__": "HardpointOffsets",
+     "__typeHash__": 1755847107,
+     "fHardpointOffsetsHinting": true,
+     "arMaleOffsets": [],
+     "arFemaleOffsets": []
+    },
     {
      "__type__": "HardpointOffsets",
      "__typeHash__": 1755847107,
@@ -1139,6 +1235,11 @@
      "__type__": "MirrorItemState",
      "__typeHash__": 3604536395,
      "dwMirrorStateFlags": 0
+    },
+    {
+     "__type__": "MirrorItemState",
+     "__typeHash__": 3604536395,
+     "dwMirrorStateFlags": 0
     }
    ],
    "tWeaponData": {
@@ -1167,9 +1268,13 @@
      null,
      null,
      null,
+     null,
+     null,
      null
     ],
     "snoActor2": [
+     null,
+     null,
      null,
      null,
      null,

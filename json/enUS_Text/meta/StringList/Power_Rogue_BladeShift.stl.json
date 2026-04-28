@@ -15,57 +15,113 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "desc",
-   "szText": "{if:SF_19}{c_label}Energy Cost: {/c}{c_resource}{Resource Cost}{/c}\r\n{/if}{if:SF_11}{c_label}Generate Combo Point:{/c} {c_resource}{SF_10}{/c}\r\n{/if}{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat Effect Chance}|%|]{/c}\r\n{/if}Quickly stab your victim for {c_number}{payload:IMPACT}{/c} damage and shift, making you {c_important}{u}Unhindered{/u}{/c} for {c_number}{buffduration:MOVE_FREELY}{/c} seconds.",
+   "szText": "{if:SF_19}{c_label}Energy Cost: {/c}{c_resource}{Resource Cost}{/c}\r\n{/if}{if:SF_11}{c_label}Generate Combo Point:{/c} {c_resource}{SF_10}{/c}\r\n{/if}{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat Effect Chance}|%|]{/c}\r\n{/if}Quickly stab your victim for {c_number}{payload:IMPACT}{/c} damage and shift, making you {c_important}{u}Unhindered{/u}{/c} for {c_number}{buffduration:MOVE_FREELY}{/c} seconds. Moving through enemies refreshes the shift duration.",
    "hLabel": 3707583
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "rankup_desc",
-   "szText": "\r\n{icon:bullet,1.2} Damage {icon:arrow,1.2} {c_number}{payload:IMPACT}{/c}",
+   "szText": "\r\n{icon:bullet,1.2} Damage {icon:arrow,1.2} {c_number}{if:SF_36}{payload:IMPACT}{/if}{if:Mod.UpgradeA}{payload:IMPACT}{/if}{if:Mod.UpgradeB}{payload:UPGRADEB_IMPACT}{/if}{if:Mod.UpgradeC}{payload:UPGRADEC_IMPACT}{/if}{/c}{if:Mod.UpgradeB}\r\n{icon:bullet,1.2} Grenade Damage {icon:arrow,1.2} {c_number}{payload:UPGRADEB_GRENADES_TOOLTIP}{/c}{/if}",
    "hLabel": 4074074671
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
-   "szLabel": "Mod0_Description",
-   "szText": "While {c_important}Blade Shift{/c} is active you gain {c_number}[{SF_1}*100|+%|]{/c} Resistance to All Elements and reduce the duration of incoming Control Impairing Effects by {c_number}[{SF_16}*100|%|]{/c} .",
-   "hLabel": 3591940403
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
-   "szLabel": "Mod0_Name",
-   "szText": "Primary Blade Shift",
-   "hLabel": 2452871472
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
-   "szLabel": "Mod1_Description",
-   "szText": "While {c_important}Blade Shift{/c} is active you gain {c_number}[{SF_8}*{SF_15}*100|%+|]{/c} Movement Speed and moving through enemies refreshes its duration. ",
-   "hLabel": 628601524
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
-   "szLabel": "Mod1_Name",
-   "szText": "Enhanced Blade Shift",
-   "hLabel": 2492006865
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
    "szLabel": "Mod2_Description",
-   "szText": "Casting a Skill other than {c_important}Blade Shift{/c} empowers your next {c_important}Blade Shift{/c} to deal {c_number}[SF_21*100|%x|]{/c} increased damage.",
+   "szText": "{c_important}Blade Shift's{/c} shift now lasts for {c_number}{SF_24}{/c} additional seconds and while active, grants you {c_number}[{SF_8}*100|%x|]{/c} increased Movement Speed. When you move through an enemy, {c_important}Blade Shift{/c} is empowered to deal {c_number}[SF_21*100|%x|]{/c} increased damage while active.",
    "hLabel": 1960229941
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod2_Name",
-   "szText": "Fundamental Blade Shift",
+   "szText": "Range of Motion",
    "hLabel": 2531142258
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod0_Description",
+   "szText": "{c_important}Blade Shift{/c} now deals {c_number}{payload:UPGRADEB_IMPACT}{/c} damage and while {c_important}{u}Unhindered{/u}{/c} by {c_important}Blade Shift{/c}, you drop {c_number}{SF_26}{/c} {c_important}{u}Stun Grenades{/u}{/c} that each deal {c_number}{payload:UPGRADEB_GRENADES_TOOLTIP}{/c} damage on the enemies you pass through.",
+   "hLabel": 3591940403
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod0_Name",
+   "szText": "Grenade Shift",
+   "hLabel": 2452871472
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod3_Description",
+   "szText": "{c_important}Blade Shift{/c} now deals {c_number}{payload:UPGRADEC_IMPACT}{/c} Shadow damage and moving through an enemy while {c_important}{u}Unhindered{/u}{/c} by {c_important}Blade Shift{/c} automatically attacks that enemy with {c_important}Blade Shift{/c}.",
+   "hLabel": 3291858358
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod3_Name",
+   "szText": "Impossible Escape",
+   "hLabel": 2570277651
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod1_Description",
+   "szText": "While {c_important}Blade Shift{/c} is active, gain {c_number}+{SF_31}{/c} and {c_number}[{SF_29} * 100|1x%|]{/c} Resistance to All Elements.",
+   "hLabel": 628601524
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod1_Name",
+   "szText": "Resistance",
+   "hLabel": 2492006865
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod5_Description",
+   "szText": "When you move through an enemy, gain {c_number}{SF_32}{/c} Energy.",
+   "hLabel": 1660147896
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod5_Name",
+   "szText": "Energy",
+   "hLabel": 2648548437
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod7_Description",
+   "szText": "When you move through an enemy, gain {c_number}{SF_34}{/c} stack of {c_important}{u}Overpower{/u}{/c}.",
+   "hLabel": 28437434
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod7_Name",
+   "szText": "Overpower",
+   "hLabel": 2726819223
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod9_Description",
+   "szText": "When you move through an enemy, gain {c_number}{SF_34}{/c} stack of {c_important}{u}Resolve{/u}{/c}.",
+   "hLabel": 2691694268
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod9_Name",
+   "szText": "Resolve",
+   "hLabel": 2805090009
   }
  ],
  "ptMapStringTable": "0"

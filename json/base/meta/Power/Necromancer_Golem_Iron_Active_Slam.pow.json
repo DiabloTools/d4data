@@ -31,6 +31,30 @@
     "name": "Skill_Primary_Summoning"
    },
    "bSearchOnly": false
+  },
+  {
+   "__type__": "SkillTagStruct",
+   "__typeHash__": 4000554560,
+   "gbidSkillTag": {
+    "__raw__": 1787987282,
+    "__type__": "DT_GBID",
+    "__typeHash__": 1028170061,
+    "group": 56,
+    "name": "Skill_Golem"
+   },
+   "bSearchOnly": false
+  },
+  {
+   "__type__": "SkillTagStruct",
+   "__typeHash__": 4000554560,
+   "gbidSkillTag": {
+    "__raw__": 3629932516,
+    "__type__": "DT_GBID",
+    "__typeHash__": 1028170061,
+    "group": 56,
+    "name": "Skill_Shadow"
+   },
+   "bSearchOnly": false
   }
  ],
  "eSkillCat": -1,
@@ -44,6 +68,7 @@
  "bChannelledMovement": false,
  "bAutoChannelled": false,
  "unk_3837f2a": true,
+ "hChannelingString": 0,
  "bInterruptOnDamage": false,
  "tAutoChannelledDuration": {
   "value": "0",
@@ -86,13 +111,13 @@
  "unk_4bf03ff": true,
  "tAttackSpeed": {
   "value": "Attacks_Per_Second_Total",
-  "compiled": "BQAAAAAAAADeAAAA/v///wAAAAAAAAAA"
+  "compiled": "BQAAAAAAAADkAAAA/v///wAAAAAAAAAA"
  },
  "unk_6deb090": false,
  "unk_ed2bdad": false,
  "bOverkillStacked": true,
  "unk_7a86b64": true,
- "eDamageType": 0,
+ "eDamageType": 5,
  "unk_752edeb": false,
  "unk_c41a01d": false,
  "tCombatEffectChance": {
@@ -554,6 +579,7 @@
  "fCancelOnUsePower": false,
  "fCancelOnMount": false,
  "fCancelOnEvade": false,
+ "unk_e2d9430": false,
  "arHitReactionOverrides": [],
  "arBuffs": [
   {
@@ -577,6 +603,8 @@
     "value": "1",
     "compiled": "BgAAAAAAgD8AAAAA"
    },
+   "unk_bb42146": false,
+   "unk_22c356e": false,
    "gbidBuffPreset": null,
    "bVisibleInUI": false,
    "nVisualPriority": 0,
@@ -589,6 +617,7 @@
    "bShowsActiveStateOnHotbar": false,
    "bShowsDurationOnHotbar": false,
    "bShowsStackCountOnHotbar": false,
+   "unk_8b74b0f": false,
    "unk_71ba554": false,
    "unk_1375622": false,
    "unk_d2dd47": false,
@@ -650,7 +679,8 @@
     "tStaggerMultiplier": {
      "value": "1",
      "compiled": "BgAAAAAAgD8AAAAA"
-    }
+    },
+    "unk_20877c3": false
    },
    "bHasDamageShield": false,
    "tDamageShield": {
@@ -666,7 +696,9 @@
      "compiled": "BgAAAAAAAAAAAAAA"
     }
    },
-   "dwShaderMapOverride": 4294967295
+   "dwShaderMapOverride": 4294967295,
+   "unk_32f141c": 4294967295,
+   "unk_f8a0a44": 4294967295
   }
  ],
  "nFormulaCount": 0,
@@ -717,6 +749,38 @@
    "tFormula": {
     "value": "PowerTag.SystemsTuningGlobals.\"Script Formula 5\"",
     "compiled": "BQAAAAUAAADNbRAABQAAAAAAAAAAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "PowerTag.Necromancer_Golem.\"Script Formula 48\"",
+    "compiled": "BQAAAAUAAACPuAYAMAAAAAAAAAAAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "PowerTag.Necromancer_Golem.\"Script Formula 49\"",
+    "compiled": "BQAAAAUAAACPuAYAMQAAAAAAAAAAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "PowerTag.Necromancer_Golem_Iron_Passive_UpgradeB.\"Script Formula 1\"",
+    "compiled": "BQAAAAUAAAASNw4AAQAAAAAAAAAAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "SF_3 * (1 + SF_8)",
+    "compiled": "BQAAAAkAAAAAAAAAAAAAAAAAAAAGAAAAAACAPwUAAAAOAAAAAAAAAAAAAAAAAAAACwAAAA0AAAAAAAAA"
    }
   }
  ],
@@ -1069,6 +1133,107 @@
     "sno3PEnemy": null,
     "sno3PFriendly": null
    }
+  },
+  {
+   "__type__": "PowerPayloadDefinition",
+   "__typeHash__": 812993760,
+   "snoItemTypeMainHandEffectsOverride": null,
+   "snoItemTypeOffHandEffectsOverride": null,
+   "dwID": 345810943,
+   "dwPayloadId": 3,
+   "eForcedDamageType": -1,
+   "tDamage": {
+    "__type__": "HitpointSpecifier",
+    "__typeHash__": 1185241065,
+    "eType": 0,
+    "tHitpointScalar": {
+     "value": "SF_7",
+     "compiled": "BQAAAA0AAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "tFlatLevel": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    }
+   },
+   "bHasCustomDamageVariance": false,
+   "tDamageVariance": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "arBuffsToApply": [],
+   "bApplyVulnerableDebuff": false,
+   "tVulnerableDurationSecondsOverride": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "unk_b4395d8": false,
+   "unk_7c2668d": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "tFortifiedHealth": {
+    "__type__": "HitpointSpecifier",
+    "__typeHash__": 1185241065,
+    "eType": 0,
+    "tHitpointScalar": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    },
+    "tFlatLevel": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    }
+   },
+   "tApplyFreeze": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "tApplyChillAmount": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "unk_e659b0f": -1,
+   "tHeal": {
+    "__type__": "HitpointSpecifier",
+    "__typeHash__": 1185241065,
+    "eType": 0,
+    "tHitpointScalar": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    },
+    "tFlatLevel": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    }
+   },
+   "eHealType": 0,
+   "bPlayHealEffect": true,
+   "unk_8bc45f2": false,
+   "unk_15c6c03": false,
+   "unk_e842c84": false,
+   "eClassBaseDamageScalar": 4,
+   "bHasCombatEffectOverride": false,
+   "tCombatEffectOverride": {
+    "value": "100",
+    "compiled": "BgAAAAAAyEIAAAAA"
+   },
+   "ePayloadDefaultHitEffectType": 2,
+   "snoNormalHitEffectGroup": null,
+   "snoTargetImpactEffectGroup": null,
+   "unk_f381067": false,
+   "flHitFlashDurationScalar": 1,
+   "iPowerNeedTarget": false,
+   "bPlayNormalHitSoundPayload": false,
+   "unk_969096b": false,
+   "unk_5885b8": 0,
+   "unk_f38eac9": false,
+   "tOnHitSoundsPayload": {
+    "__type__": "OnHitSounds",
+    "__typeHash__": 960545022,
+    "sno1P": null,
+    "sno3PEnemy": null,
+    "sno3PFriendly": null
+   }
   }
  ],
  "arMods": [],
@@ -1100,6 +1265,7 @@
  "unk_c99c7cb": false,
  "unk_fad91a3": false,
  "unk_376802e": false,
+ "unk_b0a1a71": true,
  "unk_bf25f64": 0,
  "arRecastPowerSequence": [],
  "arModifierProfiles": [],

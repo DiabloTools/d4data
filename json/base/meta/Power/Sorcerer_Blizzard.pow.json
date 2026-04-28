@@ -96,6 +96,30 @@
    "__type__": "SkillTagStruct",
    "__typeHash__": 4000554560,
    "gbidSkillTag": {
+    "__raw__": 2159475004,
+    "__type__": "DT_GBID",
+    "__typeHash__": 1028170061,
+    "group": 56,
+    "name": "Search_DoT"
+   },
+   "bSearchOnly": false
+  },
+  {
+   "__type__": "SkillTagStruct",
+   "__typeHash__": 4000554560,
+   "gbidSkillTag": {
+    "__raw__": 1652231431,
+    "__type__": "DT_GBID",
+    "__typeHash__": 1028170061,
+    "group": 56,
+    "name": "Search_Frostbite"
+   },
+   "bSearchOnly": false
+  },
+  {
+   "__type__": "SkillTagStruct",
+   "__typeHash__": 4000554560,
+   "gbidSkillTag": {
     "__raw__": 2834424330,
     "__type__": "DT_GBID",
     "__typeHash__": 1028170061,
@@ -114,7 +138,7 @@
     "group": 56,
     "name": "Search_Copy_Core"
    },
-   "bSearchOnly": true
+   "bSearchOnly": false
   }
  ],
  "eSkillCat": 0,
@@ -128,6 +152,7 @@
  "bChannelledMovement": false,
  "bAutoChannelled": false,
  "unk_3837f2a": true,
+ "hChannelingString": 0,
  "bInterruptOnDamage": false,
  "tAutoChannelledDuration": {
   "value": "0",
@@ -142,7 +167,17 @@
  "ePowerFallback": 0,
  "unk_49572b0": 1,
  "ePowerTargetingType": 3,
- "arLinkedPassivePowers": [],
+ "arLinkedPassivePowers": [
+  {
+   "__raw__": 2543079,
+   "__group__": 29,
+   "__type__": "DT_SNO",
+   "__typeHash__": 2764331143,
+   "__targetFileName__": "base/meta/Power/Sorcerer_Blizzard_Passive.pow",
+   "groupName": "Power",
+   "name": "Sorcerer_Blizzard_Passive"
+  }
+ ],
  "snoEnchantmentPower": {
   "__raw__": 511317,
   "__group__": 29,
@@ -178,7 +213,7 @@
  "unk_4bf03ff": true,
  "tAttackSpeed": {
   "value": "Attacks_Per_Second_Total*1.25",
-  "compiled": "BQAAAAAAAADeAAAA/v///wAAAAAGAAAAAACgPw0AAAAAAAAA"
+  "compiled": "BQAAAAAAAADkAAAA/v///wAAAAAGAAAAAACgPw0AAAAAAAAA"
  },
  "unk_6deb090": false,
  "unk_ed2bdad": false,
@@ -260,7 +295,7 @@
  },
  "bTargetGroundOnly": false,
  "eTargetLockBehavior": 0,
- "bWalksCloserIfOutOfRange": true,
+ "bWalksCloserIfOutOfRange": false,
  "bCanSteer": false,
  "unk_67b65e9": false,
  "bAutoTargetingEnabled": true,
@@ -680,120 +715,9 @@
  "fCancelOnUsePower": false,
  "fCancelOnMount": false,
  "fCancelOnEvade": false,
+ "unk_e2d9430": false,
  "arHitReactionOverrides": [],
  "arBuffs": [
-  {
-   "__type__": "PowerBuffDefinition",
-   "__typeHash__": 1071057721,
-   "dwID": 4042395440,
-   "dwBuffId": 0,
-   "bHarmful": false,
-   "bInfinite": true,
-   "tDuration": {
-    "value": "1",
-    "compiled": "BgAAAAAAgD8AAAAA"
-   },
-   "tMaxExtendDuration": {
-    "value": "0",
-    "compiled": "BgAAAAAAAAAAAAAA"
-   },
-   "bMoveOnSkillCategoryCooldown": false,
-   "unk_dcb22bd": false,
-   "tMaxStackCount": {
-    "value": "1",
-    "compiled": "BgAAAAAAgD8AAAAA"
-   },
-   "gbidBuffPreset": null,
-   "bVisibleInUI": false,
-   "nVisualPriority": 0,
-   "bShowDuration": false,
-   "bCancellable": false,
-   "unk_99b5752": false,
-   "unk_93cd85f": false,
-   "unk_4bdaef2": false,
-   "bVisibleInHotbarUI": false,
-   "bShowsActiveStateOnHotbar": false,
-   "bShowsDurationOnHotbar": false,
-   "bShowsStackCountOnHotbar": false,
-   "unk_71ba554": false,
-   "unk_1375622": false,
-   "unk_d2dd47": false,
-   "unk_8a5f69e": false,
-   "hIcon": 0,
-   "hFloatingIcon": 0,
-   "hFloatingTextLabel": 0,
-   "flFloatingTextIconRange": 0,
-   "unk_395ccd6": false,
-   "bDealsDOT": false,
-   "tDOT": {
-    "__type__": "PowerBuffDOTDamage",
-    "__typeHash__": 3824324374,
-    "unk_c3d4c36": false,
-    "eDamageType": -1,
-    "tDamage": {
-     "__type__": "HitpointSpecifier",
-     "__typeHash__": 1185241065,
-     "eType": 0,
-     "tHitpointScalar": {
-      "value": "0",
-      "compiled": "BgAAAAAAAAAAAAAA"
-     },
-     "tFlatLevel": {
-      "value": "0",
-      "compiled": "BgAAAAAAAAAAAAAA"
-     }
-    },
-    "unk_89dc285": false,
-    "flFlatDamageBonusScalar": 1,
-    "unk_f551941": -1,
-    "bDamageIgnoresInvulnerable": false,
-    "bDamageIgnoresBonuses": false,
-    "unk_b7113b1": false,
-    "eClassBaseDamageScalar": -1,
-    "bHasCombatEffectOverride": false,
-    "tCombatEffectOverride": {
-     "value": "100",
-     "compiled": "BgAAAAAAyEIAAAAA"
-    },
-    "bHideDamageEffects": false,
-    "bHideGlobalApplicationEffect": false
-   },
-   "tCrowdControl": {
-    "__type__": "PowerBuffCrowdControl",
-    "__typeHash__": 4138865712,
-    "unk_c63f49e": true,
-    "dwCCFlags": 0,
-    "bUseGlobalSlowAmount": false,
-    "eGlobalSlowAmountType": 0,
-    "tSlowAmount": {
-     "value": "0",
-     "compiled": "BgAAAAAAAAAAAAAA"
-    },
-    "tChillAmount": {
-     "value": "0",
-     "compiled": "BgAAAAAAAAAAAAAA"
-    },
-    "tStaggerMultiplier": {
-     "value": "1",
-     "compiled": "BgAAAAAAgD8AAAAA"
-    }
-   },
-   "bHasDamageShield": false,
-   "tDamageShield": {
-    "__type__": "HitpointSpecifier",
-    "__typeHash__": 1185241065,
-    "eType": 0,
-    "tHitpointScalar": {
-     "value": "0",
-     "compiled": "BgAAAAAAAAAAAAAA"
-    },
-    "tFlatLevel": {
-     "value": "0",
-     "compiled": "BgAAAAAAAAAAAAAA"
-    }
-   },
-   "dwShaderMapOverride": 4294967295
-  },
   {
    "__type__": "PowerBuffDefinition",
    "__typeHash__": 1071057721,
@@ -815,6 +739,8 @@
     "value": "1",
     "compiled": "BgAAAAAAgD8AAAAA"
    },
+   "unk_bb42146": false,
+   "unk_22c356e": false,
    "gbidBuffPreset": null,
    "bVisibleInUI": false,
    "nVisualPriority": 0,
@@ -827,6 +753,7 @@
    "bShowsActiveStateOnHotbar": false,
    "bShowsDurationOnHotbar": false,
    "bShowsStackCountOnHotbar": false,
+   "unk_8b74b0f": false,
    "unk_71ba554": false,
    "unk_1375622": false,
    "unk_d2dd47": false,
@@ -888,7 +815,8 @@
     "tStaggerMultiplier": {
      "value": "1",
      "compiled": "BgAAAAAAgD8AAAAA"
-    }
+    },
+    "unk_20877c3": false
    },
    "bHasDamageShield": false,
    "tDamageShield": {
@@ -904,7 +832,127 @@
      "compiled": "BgAAAAAAAAAAAAAA"
     }
    },
-   "dwShaderMapOverride": 4294967295
+   "dwShaderMapOverride": 4294967295,
+   "unk_32f141c": 4294967295,
+   "unk_f8a0a44": 4294967295
+  },
+  {
+   "__type__": "PowerBuffDefinition",
+   "__typeHash__": 1071057721,
+   "dwID": 2420134531,
+   "dwBuffId": 45,
+   "bHarmful": false,
+   "bInfinite": true,
+   "tDuration": {
+    "value": "SF_4 - .75",
+    "compiled": "BQAAAAoAAAAAAAAAAAAAAAAAAAAGAAAAAABAPwwAAAAAAAAA"
+   },
+   "tMaxExtendDuration": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "bMoveOnSkillCategoryCooldown": false,
+   "unk_dcb22bd": false,
+   "tMaxStackCount": {
+    "value": "1",
+    "compiled": "BgAAAAAAgD8AAAAA"
+   },
+   "unk_bb42146": false,
+   "unk_22c356e": false,
+   "gbidBuffPreset": null,
+   "bVisibleInUI": false,
+   "nVisualPriority": 0,
+   "bShowDuration": false,
+   "bCancellable": false,
+   "unk_99b5752": false,
+   "unk_93cd85f": false,
+   "unk_4bdaef2": false,
+   "bVisibleInHotbarUI": false,
+   "bShowsActiveStateOnHotbar": false,
+   "bShowsDurationOnHotbar": false,
+   "bShowsStackCountOnHotbar": false,
+   "unk_8b74b0f": false,
+   "unk_71ba554": false,
+   "unk_1375622": false,
+   "unk_d2dd47": false,
+   "unk_8a5f69e": false,
+   "hIcon": 0,
+   "hFloatingIcon": 0,
+   "hFloatingTextLabel": 0,
+   "flFloatingTextIconRange": 0,
+   "unk_395ccd6": false,
+   "bDealsDOT": false,
+   "tDOT": {
+    "__type__": "PowerBuffDOTDamage",
+    "__typeHash__": 3824324374,
+    "unk_c3d4c36": false,
+    "eDamageType": -1,
+    "tDamage": {
+     "__type__": "HitpointSpecifier",
+     "__typeHash__": 1185241065,
+     "eType": 0,
+     "tHitpointScalar": {
+      "value": "0",
+      "compiled": "BgAAAAAAAAAAAAAA"
+     },
+     "tFlatLevel": {
+      "value": "0",
+      "compiled": "BgAAAAAAAAAAAAAA"
+     }
+    },
+    "unk_89dc285": false,
+    "flFlatDamageBonusScalar": 1,
+    "unk_f551941": -1,
+    "bDamageIgnoresInvulnerable": false,
+    "bDamageIgnoresBonuses": false,
+    "unk_b7113b1": false,
+    "eClassBaseDamageScalar": -1,
+    "bHasCombatEffectOverride": false,
+    "tCombatEffectOverride": {
+     "value": "100",
+     "compiled": "BgAAAAAAyEIAAAAA"
+    },
+    "bHideDamageEffects": false,
+    "bHideGlobalApplicationEffect": false
+   },
+   "tCrowdControl": {
+    "__type__": "PowerBuffCrowdControl",
+    "__typeHash__": 4138865712,
+    "unk_c63f49e": true,
+    "dwCCFlags": 0,
+    "bUseGlobalSlowAmount": false,
+    "eGlobalSlowAmountType": 0,
+    "tSlowAmount": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    },
+    "tChillAmount": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    },
+    "tStaggerMultiplier": {
+     "value": "1",
+     "compiled": "BgAAAAAAgD8AAAAA"
+    },
+    "unk_20877c3": false
+   },
+   "bHasDamageShield": false,
+   "tDamageShield": {
+    "__type__": "HitpointSpecifier",
+    "__typeHash__": 1185241065,
+    "eType": 0,
+    "tHitpointScalar": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    },
+    "tFlatLevel": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    }
+   },
+   "dwShaderMapOverride": 4294967295,
+   "unk_32f141c": 4294967295,
+   "unk_f8a0a44": 4294967295
   },
   {
    "__type__": "PowerBuffDefinition",
@@ -927,6 +975,8 @@
     "value": "1",
     "compiled": "BgAAAAAAgD8AAAAA"
    },
+   "unk_bb42146": false,
+   "unk_22c356e": false,
    "gbidBuffPreset": null,
    "bVisibleInUI": false,
    "nVisualPriority": 0,
@@ -939,6 +989,7 @@
    "bShowsActiveStateOnHotbar": false,
    "bShowsDurationOnHotbar": false,
    "bShowsStackCountOnHotbar": false,
+   "unk_8b74b0f": false,
    "unk_71ba554": false,
    "unk_1375622": false,
    "unk_d2dd47": false,
@@ -1000,7 +1051,8 @@
     "tStaggerMultiplier": {
      "value": "1",
      "compiled": "BgAAAAAAgD8AAAAA"
-    }
+    },
+    "unk_20877c3": false
    },
    "bHasDamageShield": false,
    "tDamageShield": {
@@ -1016,7 +1068,9 @@
      "compiled": "BgAAAAAAAAAAAAAA"
     }
    },
-   "dwShaderMapOverride": 4294967295
+   "dwShaderMapOverride": 4294967295,
+   "unk_32f141c": 4294967295,
+   "unk_f8a0a44": 4294967295
   },
   {
    "__type__": "PowerBuffDefinition",
@@ -1036,9 +1090,11 @@
    "bMoveOnSkillCategoryCooldown": false,
    "unk_dcb22bd": false,
    "tMaxStackCount": {
-    "value": "10",
-    "compiled": "BgAAAAAAIEEAAAAA"
+    "value": "32",
+    "compiled": "BgAAAAAAAEIAAAAA"
    },
+   "unk_bb42146": false,
+   "unk_22c356e": false,
    "gbidBuffPreset": null,
    "bVisibleInUI": false,
    "nVisualPriority": 0,
@@ -1051,6 +1107,7 @@
    "bShowsActiveStateOnHotbar": false,
    "bShowsDurationOnHotbar": false,
    "bShowsStackCountOnHotbar": false,
+   "unk_8b74b0f": false,
    "unk_71ba554": false,
    "unk_1375622": false,
    "unk_d2dd47": false,
@@ -1112,7 +1169,8 @@
     "tStaggerMultiplier": {
      "value": "1",
      "compiled": "BgAAAAAAgD8AAAAA"
-    }
+    },
+    "unk_20877c3": false
    },
    "bHasDamageShield": false,
    "tDamageShield": {
@@ -1128,7 +1186,127 @@
      "compiled": "BgAAAAAAAAAAAAAA"
     }
    },
-   "dwShaderMapOverride": 4294967295
+   "dwShaderMapOverride": 4294967295,
+   "unk_32f141c": 4294967295,
+   "unk_f8a0a44": 4294967295
+  },
+  {
+   "__type__": "PowerBuffDefinition",
+   "__typeHash__": 1071057721,
+   "dwID": 573267688,
+   "dwBuffId": 49,
+   "bHarmful": true,
+   "bInfinite": false,
+   "tDuration": {
+    "value": "SF_4 SF_4 * (1+SF_57)",
+    "compiled": "BQAAAAoAAAAAAAAAAAAAAAAAAAAFAAAACgAAAAAAAAAAAAAAAAAAAAYAAAAAAIA/BQAAAD8AAAAAAAAAAAAAAAAAAAALAAAADQAAAAAAAAA="
+   },
+   "tMaxExtendDuration": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "bMoveOnSkillCategoryCooldown": false,
+   "unk_dcb22bd": false,
+   "tMaxStackCount": {
+    "value": "32",
+    "compiled": "BgAAAAAAAEIAAAAA"
+   },
+   "unk_bb42146": false,
+   "unk_22c356e": false,
+   "gbidBuffPreset": null,
+   "bVisibleInUI": false,
+   "nVisualPriority": 0,
+   "bShowDuration": false,
+   "bCancellable": false,
+   "unk_99b5752": false,
+   "unk_93cd85f": false,
+   "unk_4bdaef2": false,
+   "bVisibleInHotbarUI": false,
+   "bShowsActiveStateOnHotbar": false,
+   "bShowsDurationOnHotbar": false,
+   "bShowsStackCountOnHotbar": false,
+   "unk_8b74b0f": false,
+   "unk_71ba554": false,
+   "unk_1375622": false,
+   "unk_d2dd47": false,
+   "unk_8a5f69e": false,
+   "hIcon": 0,
+   "hFloatingIcon": 0,
+   "hFloatingTextLabel": 0,
+   "flFloatingTextIconRange": 0,
+   "unk_395ccd6": false,
+   "bDealsDOT": true,
+   "tDOT": {
+    "__type__": "PowerBuffDOTDamage",
+    "__typeHash__": 3824324374,
+    "unk_c3d4c36": false,
+    "eDamageType": 3,
+    "tDamage": {
+     "__type__": "HitpointSpecifier",
+     "__typeHash__": 1185241065,
+     "eType": 0,
+     "tHitpointScalar": {
+      "value": "SF_1",
+      "compiled": "BQAAAAcAAAAAAAAAAAAAAAAAAAAAAAAA"
+     },
+     "tFlatLevel": {
+      "value": "0",
+      "compiled": "BgAAAAAAAAAAAAAA"
+     }
+    },
+    "unk_89dc285": true,
+    "flFlatDamageBonusScalar": 1,
+    "unk_f551941": -1,
+    "bDamageIgnoresInvulnerable": false,
+    "bDamageIgnoresBonuses": false,
+    "unk_b7113b1": false,
+    "eClassBaseDamageScalar": 0,
+    "bHasCombatEffectOverride": true,
+    "tCombatEffectOverride": {
+     "value": "SF_23",
+     "compiled": "BQAAAB0AAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "bHideDamageEffects": false,
+    "bHideGlobalApplicationEffect": false
+   },
+   "tCrowdControl": {
+    "__type__": "PowerBuffCrowdControl",
+    "__typeHash__": 4138865712,
+    "unk_c63f49e": true,
+    "dwCCFlags": 0,
+    "bUseGlobalSlowAmount": false,
+    "eGlobalSlowAmountType": 0,
+    "tSlowAmount": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    },
+    "tChillAmount": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    },
+    "tStaggerMultiplier": {
+     "value": "1",
+     "compiled": "BgAAAAAAgD8AAAAA"
+    },
+    "unk_20877c3": false
+   },
+   "bHasDamageShield": false,
+   "tDamageShield": {
+    "__type__": "HitpointSpecifier",
+    "__typeHash__": 1185241065,
+    "eType": 0,
+    "tHitpointScalar": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    },
+    "tFlatLevel": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    }
+   },
+   "dwShaderMapOverride": 4294967295,
+   "unk_32f141c": 4294967295,
+   "unk_f8a0a44": 4294967295
   },
   {
    "__type__": "PowerBuffDefinition",
@@ -1151,6 +1329,8 @@
     "value": "5",
     "compiled": "BgAAAAAAoEAAAAAA"
    },
+   "unk_bb42146": false,
+   "unk_22c356e": false,
    "gbidBuffPreset": null,
    "bVisibleInUI": false,
    "nVisualPriority": 0,
@@ -1163,6 +1343,361 @@
    "bShowsActiveStateOnHotbar": false,
    "bShowsDurationOnHotbar": false,
    "bShowsStackCountOnHotbar": false,
+   "unk_8b74b0f": false,
+   "unk_71ba554": false,
+   "unk_1375622": false,
+   "unk_d2dd47": false,
+   "unk_8a5f69e": false,
+   "hIcon": 0,
+   "hFloatingIcon": 0,
+   "hFloatingTextLabel": 0,
+   "flFloatingTextIconRange": 0,
+   "unk_395ccd6": false,
+   "bDealsDOT": true,
+   "tDOT": {
+    "__type__": "PowerBuffDOTDamage",
+    "__typeHash__": 3824324374,
+    "unk_c3d4c36": false,
+    "eDamageType": 3,
+    "tDamage": {
+     "__type__": "HitpointSpecifier",
+     "__typeHash__": 1185241065,
+     "eType": 0,
+     "tHitpointScalar": {
+      "value": "SF_1 * SF_10",
+      "compiled": "BQAAAAcAAAAAAAAAAAAAAAAAAAAFAAAAEAAAAAAAAAAAAAAAAAAAAA0AAAAAAAAA"
+     },
+     "tFlatLevel": {
+      "value": "0",
+      "compiled": "BgAAAAAAAAAAAAAA"
+     }
+    },
+    "unk_89dc285": true,
+    "flFlatDamageBonusScalar": 1,
+    "unk_f551941": -1,
+    "bDamageIgnoresInvulnerable": false,
+    "bDamageIgnoresBonuses": false,
+    "unk_b7113b1": false,
+    "eClassBaseDamageScalar": 0,
+    "bHasCombatEffectOverride": false,
+    "tCombatEffectOverride": {
+     "value": "100",
+     "compiled": "BgAAAAAAyEIAAAAA"
+    },
+    "bHideDamageEffects": false,
+    "bHideGlobalApplicationEffect": false
+   },
+   "tCrowdControl": {
+    "__type__": "PowerBuffCrowdControl",
+    "__typeHash__": 4138865712,
+    "unk_c63f49e": true,
+    "dwCCFlags": 0,
+    "bUseGlobalSlowAmount": false,
+    "eGlobalSlowAmountType": 0,
+    "tSlowAmount": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    },
+    "tChillAmount": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    },
+    "tStaggerMultiplier": {
+     "value": "1",
+     "compiled": "BgAAAAAAgD8AAAAA"
+    },
+    "unk_20877c3": false
+   },
+   "bHasDamageShield": false,
+   "tDamageShield": {
+    "__type__": "HitpointSpecifier",
+    "__typeHash__": 1185241065,
+    "eType": 0,
+    "tHitpointScalar": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    },
+    "tFlatLevel": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    }
+   },
+   "dwShaderMapOverride": 4294967295,
+   "unk_32f141c": 4294967295,
+   "unk_f8a0a44": 4294967295
+  },
+  {
+   "__type__": "PowerBuffDefinition",
+   "__typeHash__": 1071057721,
+   "dwID": 3234805167,
+   "dwBuffId": 39,
+   "bHarmful": true,
+   "bInfinite": true,
+   "tDuration": {
+    "value": "SF_4",
+    "compiled": "BQAAAAoAAAAAAAAAAAAAAAAAAAAAAAAA"
+   },
+   "tMaxExtendDuration": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "bMoveOnSkillCategoryCooldown": false,
+   "unk_dcb22bd": false,
+   "tMaxStackCount": {
+    "value": "32",
+    "compiled": "BgAAAAAAAEIAAAAA"
+   },
+   "unk_bb42146": false,
+   "unk_22c356e": false,
+   "gbidBuffPreset": null,
+   "bVisibleInUI": false,
+   "nVisualPriority": 0,
+   "bShowDuration": false,
+   "bCancellable": false,
+   "unk_99b5752": false,
+   "unk_93cd85f": false,
+   "unk_4bdaef2": false,
+   "bVisibleInHotbarUI": false,
+   "bShowsActiveStateOnHotbar": false,
+   "bShowsDurationOnHotbar": false,
+   "bShowsStackCountOnHotbar": false,
+   "unk_8b74b0f": false,
+   "unk_71ba554": false,
+   "unk_1375622": false,
+   "unk_d2dd47": false,
+   "unk_8a5f69e": false,
+   "hIcon": 0,
+   "hFloatingIcon": 0,
+   "hFloatingTextLabel": 0,
+   "flFloatingTextIconRange": 0,
+   "unk_395ccd6": false,
+   "bDealsDOT": true,
+   "tDOT": {
+    "__type__": "PowerBuffDOTDamage",
+    "__typeHash__": 3824324374,
+    "unk_c3d4c36": false,
+    "eDamageType": 3,
+    "tDamage": {
+     "__type__": "HitpointSpecifier",
+     "__typeHash__": 1185241065,
+     "eType": 0,
+     "tHitpointScalar": {
+      "value": "SF_1",
+      "compiled": "BQAAAAcAAAAAAAAAAAAAAAAAAAAAAAAA"
+     },
+     "tFlatLevel": {
+      "value": "0",
+      "compiled": "BgAAAAAAAAAAAAAA"
+     }
+    },
+    "unk_89dc285": true,
+    "flFlatDamageBonusScalar": 1,
+    "unk_f551941": -1,
+    "bDamageIgnoresInvulnerable": false,
+    "bDamageIgnoresBonuses": false,
+    "unk_b7113b1": false,
+    "eClassBaseDamageScalar": 0,
+    "bHasCombatEffectOverride": true,
+    "tCombatEffectOverride": {
+     "value": "SF_23",
+     "compiled": "BQAAAB0AAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "bHideDamageEffects": false,
+    "bHideGlobalApplicationEffect": false
+   },
+   "tCrowdControl": {
+    "__type__": "PowerBuffCrowdControl",
+    "__typeHash__": 4138865712,
+    "unk_c63f49e": true,
+    "dwCCFlags": 0,
+    "bUseGlobalSlowAmount": false,
+    "eGlobalSlowAmountType": 0,
+    "tSlowAmount": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    },
+    "tChillAmount": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    },
+    "tStaggerMultiplier": {
+     "value": "1",
+     "compiled": "BgAAAAAAgD8AAAAA"
+    },
+    "unk_20877c3": false
+   },
+   "bHasDamageShield": false,
+   "tDamageShield": {
+    "__type__": "HitpointSpecifier",
+    "__typeHash__": 1185241065,
+    "eType": 0,
+    "tHitpointScalar": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    },
+    "tFlatLevel": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    }
+   },
+   "dwShaderMapOverride": 4294967295,
+   "unk_32f141c": 4294967295,
+   "unk_f8a0a44": 4294967295
+  },
+  {
+   "__type__": "PowerBuffDefinition",
+   "__typeHash__": 1071057721,
+   "dwID": 2557865103,
+   "dwBuffId": 51,
+   "bHarmful": true,
+   "bInfinite": false,
+   "tDuration": {
+    "value": "SF_4 * (1+SF_57)",
+    "compiled": "BQAAAAoAAAAAAAAAAAAAAAAAAAAGAAAAAACAPwUAAAA/AAAAAAAAAAAAAAAAAAAACwAAAA0AAAAAAAAA"
+   },
+   "tMaxExtendDuration": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "bMoveOnSkillCategoryCooldown": false,
+   "unk_dcb22bd": false,
+   "tMaxStackCount": {
+    "value": "1",
+    "compiled": "BgAAAAAAgD8AAAAA"
+   },
+   "unk_bb42146": false,
+   "unk_22c356e": false,
+   "gbidBuffPreset": null,
+   "bVisibleInUI": false,
+   "nVisualPriority": 0,
+   "bShowDuration": false,
+   "bCancellable": false,
+   "unk_99b5752": false,
+   "unk_93cd85f": false,
+   "unk_4bdaef2": false,
+   "bVisibleInHotbarUI": false,
+   "bShowsActiveStateOnHotbar": false,
+   "bShowsDurationOnHotbar": false,
+   "bShowsStackCountOnHotbar": false,
+   "unk_8b74b0f": false,
+   "unk_71ba554": false,
+   "unk_1375622": false,
+   "unk_d2dd47": false,
+   "unk_8a5f69e": false,
+   "hIcon": 0,
+   "hFloatingIcon": 0,
+   "hFloatingTextLabel": 0,
+   "flFloatingTextIconRange": 0,
+   "unk_395ccd6": false,
+   "bDealsDOT": true,
+   "tDOT": {
+    "__type__": "PowerBuffDOTDamage",
+    "__typeHash__": 3824324374,
+    "unk_c3d4c36": false,
+    "eDamageType": 3,
+    "tDamage": {
+     "__type__": "HitpointSpecifier",
+     "__typeHash__": 1185241065,
+     "eType": 0,
+     "tHitpointScalar": {
+      "value": "SF_1",
+      "compiled": "BQAAAAcAAAAAAAAAAAAAAAAAAAAAAAAA"
+     },
+     "tFlatLevel": {
+      "value": "0",
+      "compiled": "BgAAAAAAAAAAAAAA"
+     }
+    },
+    "unk_89dc285": true,
+    "flFlatDamageBonusScalar": 1,
+    "unk_f551941": -1,
+    "bDamageIgnoresInvulnerable": false,
+    "bDamageIgnoresBonuses": false,
+    "unk_b7113b1": false,
+    "eClassBaseDamageScalar": 0,
+    "bHasCombatEffectOverride": true,
+    "tCombatEffectOverride": {
+     "value": "SF_23",
+     "compiled": "BQAAAB0AAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "bHideDamageEffects": false,
+    "bHideGlobalApplicationEffect": false
+   },
+   "tCrowdControl": {
+    "__type__": "PowerBuffCrowdControl",
+    "__typeHash__": 4138865712,
+    "unk_c63f49e": true,
+    "dwCCFlags": 0,
+    "bUseGlobalSlowAmount": false,
+    "eGlobalSlowAmountType": 0,
+    "tSlowAmount": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    },
+    "tChillAmount": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    },
+    "tStaggerMultiplier": {
+     "value": "1",
+     "compiled": "BgAAAAAAgD8AAAAA"
+    },
+    "unk_20877c3": false
+   },
+   "bHasDamageShield": false,
+   "tDamageShield": {
+    "__type__": "HitpointSpecifier",
+    "__typeHash__": 1185241065,
+    "eType": 0,
+    "tHitpointScalar": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    },
+    "tFlatLevel": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    }
+   },
+   "dwShaderMapOverride": 4294967295,
+   "unk_32f141c": 4294967295,
+   "unk_f8a0a44": 4294967295
+  },
+  {
+   "__type__": "PowerBuffDefinition",
+   "__typeHash__": 1071057721,
+   "dwID": 488205753,
+   "dwBuffId": 41,
+   "bHarmful": true,
+   "bInfinite": true,
+   "tDuration": {
+    "value": "SF_4",
+    "compiled": "BQAAAAoAAAAAAAAAAAAAAAAAAAAAAAAA"
+   },
+   "tMaxExtendDuration": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "bMoveOnSkillCategoryCooldown": false,
+   "unk_dcb22bd": false,
+   "tMaxStackCount": {
+    "value": "5",
+    "compiled": "BgAAAAAAoEAAAAAA"
+   },
+   "unk_bb42146": false,
+   "unk_22c356e": false,
+   "gbidBuffPreset": null,
+   "bVisibleInUI": false,
+   "nVisualPriority": 0,
+   "bShowDuration": false,
+   "bCancellable": false,
+   "unk_99b5752": false,
+   "unk_93cd85f": false,
+   "unk_4bdaef2": false,
+   "bVisibleInHotbarUI": false,
+   "bShowsActiveStateOnHotbar": false,
+   "bShowsDurationOnHotbar": false,
+   "bShowsStackCountOnHotbar": false,
+   "unk_8b74b0f": false,
    "unk_71ba554": false,
    "unk_1375622": false,
    "unk_d2dd47": false,
@@ -1224,7 +1759,8 @@
     "tStaggerMultiplier": {
      "value": "1",
      "compiled": "BgAAAAAAgD8AAAAA"
-    }
+    },
+    "unk_20877c3": false
    },
    "bHasDamageShield": false,
    "tDamageShield": {
@@ -1240,7 +1776,9 @@
      "compiled": "BgAAAAAAAAAAAAAA"
     }
    },
-   "dwShaderMapOverride": 4294967295
+   "dwShaderMapOverride": 4294967295,
+   "unk_32f141c": 4294967295,
+   "unk_f8a0a44": 4294967295
   },
   {
    "__type__": "PowerBuffDefinition",
@@ -1250,8 +1788,8 @@
    "bHarmful": false,
    "bInfinite": false,
    "tDuration": {
-    "value": "SF_29",
-    "compiled": "BQAAACMAAAAAAAAAAAAAAAAAAAAAAAAA"
+    "value": "SF_4",
+    "compiled": "BQAAAAoAAAAAAAAAAAAAAAAAAAAAAAAA"
    },
    "tMaxExtendDuration": {
     "value": "0",
@@ -1263,6 +1801,8 @@
     "value": "1",
     "compiled": "BgAAAAAAgD8AAAAA"
    },
+   "unk_bb42146": false,
+   "unk_22c356e": false,
    "gbidBuffPreset": null,
    "bVisibleInUI": false,
    "nVisualPriority": 0,
@@ -1275,6 +1815,7 @@
    "bShowsActiveStateOnHotbar": false,
    "bShowsDurationOnHotbar": false,
    "bShowsStackCountOnHotbar": false,
+   "unk_8b74b0f": false,
    "unk_71ba554": false,
    "unk_1375622": false,
    "unk_d2dd47": false,
@@ -1336,7 +1877,8 @@
     "tStaggerMultiplier": {
      "value": "1",
      "compiled": "BgAAAAAAgD8AAAAA"
-    }
+    },
+    "unk_20877c3": false
    },
    "bHasDamageShield": false,
    "tDamageShield": {
@@ -1352,7 +1894,127 @@
      "compiled": "BgAAAAAAAAAAAAAA"
     }
    },
-   "dwShaderMapOverride": 4294967295
+   "dwShaderMapOverride": 4294967295,
+   "unk_32f141c": 4294967295,
+   "unk_f8a0a44": 4294967295
+  },
+  {
+   "__type__": "PowerBuffDefinition",
+   "__typeHash__": 1071057721,
+   "dwID": 626174180,
+   "dwBuffId": 47,
+   "bHarmful": false,
+   "bInfinite": true,
+   "tDuration": {
+    "value": "SF_4",
+    "compiled": "BQAAAAoAAAAAAAAAAAAAAAAAAAAAAAAA"
+   },
+   "tMaxExtendDuration": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "bMoveOnSkillCategoryCooldown": false,
+   "unk_dcb22bd": false,
+   "tMaxStackCount": {
+    "value": "1",
+    "compiled": "BgAAAAAAgD8AAAAA"
+   },
+   "unk_bb42146": false,
+   "unk_22c356e": false,
+   "gbidBuffPreset": null,
+   "bVisibleInUI": false,
+   "nVisualPriority": 0,
+   "bShowDuration": false,
+   "bCancellable": false,
+   "unk_99b5752": false,
+   "unk_93cd85f": false,
+   "unk_4bdaef2": false,
+   "bVisibleInHotbarUI": false,
+   "bShowsActiveStateOnHotbar": false,
+   "bShowsDurationOnHotbar": false,
+   "bShowsStackCountOnHotbar": false,
+   "unk_8b74b0f": false,
+   "unk_71ba554": false,
+   "unk_1375622": false,
+   "unk_d2dd47": false,
+   "unk_8a5f69e": false,
+   "hIcon": 0,
+   "hFloatingIcon": 0,
+   "hFloatingTextLabel": 0,
+   "flFloatingTextIconRange": 0,
+   "unk_395ccd6": false,
+   "bDealsDOT": false,
+   "tDOT": {
+    "__type__": "PowerBuffDOTDamage",
+    "__typeHash__": 3824324374,
+    "unk_c3d4c36": false,
+    "eDamageType": -1,
+    "tDamage": {
+     "__type__": "HitpointSpecifier",
+     "__typeHash__": 1185241065,
+     "eType": 0,
+     "tHitpointScalar": {
+      "value": "0",
+      "compiled": "BgAAAAAAAAAAAAAA"
+     },
+     "tFlatLevel": {
+      "value": "0",
+      "compiled": "BgAAAAAAAAAAAAAA"
+     }
+    },
+    "unk_89dc285": false,
+    "flFlatDamageBonusScalar": 1,
+    "unk_f551941": -1,
+    "bDamageIgnoresInvulnerable": false,
+    "bDamageIgnoresBonuses": false,
+    "unk_b7113b1": false,
+    "eClassBaseDamageScalar": -1,
+    "bHasCombatEffectOverride": false,
+    "tCombatEffectOverride": {
+     "value": "100",
+     "compiled": "BgAAAAAAyEIAAAAA"
+    },
+    "bHideDamageEffects": false,
+    "bHideGlobalApplicationEffect": false
+   },
+   "tCrowdControl": {
+    "__type__": "PowerBuffCrowdControl",
+    "__typeHash__": 4138865712,
+    "unk_c63f49e": true,
+    "dwCCFlags": 0,
+    "bUseGlobalSlowAmount": false,
+    "eGlobalSlowAmountType": 0,
+    "tSlowAmount": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    },
+    "tChillAmount": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    },
+    "tStaggerMultiplier": {
+     "value": "1",
+     "compiled": "BgAAAAAAgD8AAAAA"
+    },
+    "unk_20877c3": false
+   },
+   "bHasDamageShield": false,
+   "tDamageShield": {
+    "__type__": "HitpointSpecifier",
+    "__typeHash__": 1185241065,
+    "eType": 0,
+    "tHitpointScalar": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    },
+    "tFlatLevel": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    }
+   },
+   "dwShaderMapOverride": 4294967295,
+   "unk_32f141c": 4294967295,
+   "unk_f8a0a44": 4294967295
   },
   {
    "__type__": "PowerBuffDefinition",
@@ -1375,6 +2037,8 @@
     "value": "1",
     "compiled": "BgAAAAAAgD8AAAAA"
    },
+   "unk_bb42146": false,
+   "unk_22c356e": false,
    "gbidBuffPreset": null,
    "bVisibleInUI": false,
    "nVisualPriority": 0,
@@ -1387,6 +2051,7 @@
    "bShowsActiveStateOnHotbar": false,
    "bShowsDurationOnHotbar": false,
    "bShowsStackCountOnHotbar": false,
+   "unk_8b74b0f": false,
    "unk_71ba554": false,
    "unk_1375622": false,
    "unk_d2dd47": false,
@@ -1448,7 +2113,8 @@
     "tStaggerMultiplier": {
      "value": "1",
      "compiled": "BgAAAAAAgD8AAAAA"
-    }
+    },
+    "unk_20877c3": false
    },
    "bHasDamageShield": false,
    "tDamageShield": {
@@ -1464,18 +2130,138 @@
      "compiled": "BgAAAAAAAAAAAAAA"
     }
    },
-   "dwShaderMapOverride": 4294967295
+   "dwShaderMapOverride": 4294967295,
+   "unk_32f141c": 4294967295,
+   "unk_f8a0a44": 4294967295
   },
   {
    "__type__": "PowerBuffDefinition",
    "__typeHash__": 1071057721,
-   "dwID": 1797678507,
-   "dwBuffId": 9,
+   "dwID": 1865164440,
+   "dwBuffId": 29,
    "bHarmful": false,
    "bInfinite": false,
    "tDuration": {
-    "value": "SF_6 + SF_27",
-    "compiled": "BQAAAAwAAAAAAAAAAAAAAAAAAAAFAAAAIQAAAAAAAAAAAAAAAAAAAAsAAAAAAAAA"
+    "value": "SF_4",
+    "compiled": "BQAAAAoAAAAAAAAAAAAAAAAAAAAAAAAA"
+   },
+   "tMaxExtendDuration": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "bMoveOnSkillCategoryCooldown": false,
+   "unk_dcb22bd": false,
+   "tMaxStackCount": {
+    "value": "10",
+    "compiled": "BgAAAAAAIEEAAAAA"
+   },
+   "unk_bb42146": false,
+   "unk_22c356e": false,
+   "gbidBuffPreset": null,
+   "bVisibleInUI": false,
+   "nVisualPriority": 0,
+   "bShowDuration": false,
+   "bCancellable": false,
+   "unk_99b5752": false,
+   "unk_93cd85f": false,
+   "unk_4bdaef2": false,
+   "bVisibleInHotbarUI": false,
+   "bShowsActiveStateOnHotbar": false,
+   "bShowsDurationOnHotbar": false,
+   "bShowsStackCountOnHotbar": false,
+   "unk_8b74b0f": false,
+   "unk_71ba554": false,
+   "unk_1375622": false,
+   "unk_d2dd47": false,
+   "unk_8a5f69e": false,
+   "hIcon": 0,
+   "hFloatingIcon": 0,
+   "hFloatingTextLabel": 0,
+   "flFloatingTextIconRange": 0,
+   "unk_395ccd6": false,
+   "bDealsDOT": false,
+   "tDOT": {
+    "__type__": "PowerBuffDOTDamage",
+    "__typeHash__": 3824324374,
+    "unk_c3d4c36": false,
+    "eDamageType": -1,
+    "tDamage": {
+     "__type__": "HitpointSpecifier",
+     "__typeHash__": 1185241065,
+     "eType": 0,
+     "tHitpointScalar": {
+      "value": "0",
+      "compiled": "BgAAAAAAAAAAAAAA"
+     },
+     "tFlatLevel": {
+      "value": "0",
+      "compiled": "BgAAAAAAAAAAAAAA"
+     }
+    },
+    "unk_89dc285": false,
+    "flFlatDamageBonusScalar": 1,
+    "unk_f551941": -1,
+    "bDamageIgnoresInvulnerable": false,
+    "bDamageIgnoresBonuses": false,
+    "unk_b7113b1": false,
+    "eClassBaseDamageScalar": -1,
+    "bHasCombatEffectOverride": false,
+    "tCombatEffectOverride": {
+     "value": "100",
+     "compiled": "BgAAAAAAyEIAAAAA"
+    },
+    "bHideDamageEffects": false,
+    "bHideGlobalApplicationEffect": false
+   },
+   "tCrowdControl": {
+    "__type__": "PowerBuffCrowdControl",
+    "__typeHash__": 4138865712,
+    "unk_c63f49e": true,
+    "dwCCFlags": 0,
+    "bUseGlobalSlowAmount": false,
+    "eGlobalSlowAmountType": 0,
+    "tSlowAmount": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    },
+    "tChillAmount": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    },
+    "tStaggerMultiplier": {
+     "value": "1",
+     "compiled": "BgAAAAAAgD8AAAAA"
+    },
+    "unk_20877c3": false
+   },
+   "bHasDamageShield": false,
+   "tDamageShield": {
+    "__type__": "HitpointSpecifier",
+    "__typeHash__": 1185241065,
+    "eType": 0,
+    "tHitpointScalar": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    },
+    "tFlatLevel": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    }
+   },
+   "dwShaderMapOverride": 4294967295,
+   "unk_32f141c": 4294967295,
+   "unk_f8a0a44": 4294967295
+  },
+  {
+   "__type__": "PowerBuffDefinition",
+   "__typeHash__": 1071057721,
+   "dwID": 3335495000,
+   "dwBuffId": 57,
+   "bHarmful": false,
+   "bInfinite": false,
+   "tDuration": {
+    "value": "SF_4 * SF_57",
+    "compiled": "BQAAAAoAAAAAAAAAAAAAAAAAAAAFAAAAPwAAAAAAAAAAAAAAAAAAAA0AAAAAAAAA"
    },
    "tMaxExtendDuration": {
     "value": "0",
@@ -1487,6 +2273,8 @@
     "value": "1",
     "compiled": "BgAAAAAAgD8AAAAA"
    },
+   "unk_bb42146": false,
+   "unk_22c356e": false,
    "gbidBuffPreset": null,
    "bVisibleInUI": false,
    "nVisualPriority": 0,
@@ -1499,6 +2287,7 @@
    "bShowsActiveStateOnHotbar": false,
    "bShowsDurationOnHotbar": false,
    "bShowsStackCountOnHotbar": false,
+   "unk_8b74b0f": false,
    "unk_71ba554": false,
    "unk_1375622": false,
    "unk_d2dd47": false,
@@ -1560,7 +2349,8 @@
     "tStaggerMultiplier": {
      "value": "1",
      "compiled": "BgAAAAAAgD8AAAAA"
-    }
+    },
+    "unk_20877c3": false
    },
    "bHasDamageShield": false,
    "tDamageShield": {
@@ -1576,15 +2366,253 @@
      "compiled": "BgAAAAAAAAAAAAAA"
     }
    },
-   "dwShaderMapOverride": 4294967295
+   "dwShaderMapOverride": 4294967295,
+   "unk_32f141c": 4294967295,
+   "unk_f8a0a44": 4294967295
   },
   {
    "__type__": "PowerBuffDefinition",
    "__typeHash__": 1071057721,
-   "dwID": 2640335622,
-   "dwBuffId": 16,
-   "bHarmful": false,
+   "dwID": 3237177009,
+   "dwBuffId": 22,
+   "bHarmful": true,
+   "bInfinite": true,
+   "tDuration": {
+    "value": "SF_4",
+    "compiled": "BQAAAAoAAAAAAAAAAAAAAAAAAAAAAAAA"
+   },
+   "tMaxExtendDuration": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "bMoveOnSkillCategoryCooldown": false,
+   "unk_dcb22bd": false,
+   "tMaxStackCount": {
+    "value": "32",
+    "compiled": "BgAAAAAAAEIAAAAA"
+   },
+   "unk_bb42146": false,
+   "unk_22c356e": false,
+   "gbidBuffPreset": null,
+   "bVisibleInUI": false,
+   "nVisualPriority": 0,
+   "bShowDuration": false,
+   "bCancellable": false,
+   "unk_99b5752": false,
+   "unk_93cd85f": false,
+   "unk_4bdaef2": false,
+   "bVisibleInHotbarUI": false,
+   "bShowsActiveStateOnHotbar": false,
+   "bShowsDurationOnHotbar": false,
+   "bShowsStackCountOnHotbar": false,
+   "unk_8b74b0f": false,
+   "unk_71ba554": false,
+   "unk_1375622": false,
+   "unk_d2dd47": false,
+   "unk_8a5f69e": false,
+   "hIcon": 0,
+   "hFloatingIcon": 0,
+   "hFloatingTextLabel": 0,
+   "flFloatingTextIconRange": 0,
+   "unk_395ccd6": false,
+   "bDealsDOT": true,
+   "tDOT": {
+    "__type__": "PowerBuffDOTDamage",
+    "__typeHash__": 3824324374,
+    "unk_c3d4c36": false,
+    "eDamageType": 2,
+    "tDamage": {
+     "__type__": "HitpointSpecifier",
+     "__typeHash__": 1185241065,
+     "eType": 0,
+     "tHitpointScalar": {
+      "value": "SF_33 / SF_34",
+      "compiled": "BQAAACcAAAAAAAAAAAAAAAAAAAAFAAAAKAAAAAAAAAAAAAAAAAAAAA4AAAAAAAAA"
+     },
+     "tFlatLevel": {
+      "value": "0",
+      "compiled": "BgAAAAAAAAAAAAAA"
+     }
+    },
+    "unk_89dc285": true,
+    "flFlatDamageBonusScalar": 1,
+    "unk_f551941": -1,
+    "bDamageIgnoresInvulnerable": false,
+    "bDamageIgnoresBonuses": false,
+    "unk_b7113b1": false,
+    "eClassBaseDamageScalar": 0,
+    "bHasCombatEffectOverride": true,
+    "tCombatEffectOverride": {
+     "value": "SF_23",
+     "compiled": "BQAAAB0AAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "bHideDamageEffects": false,
+    "bHideGlobalApplicationEffect": false
+   },
+   "tCrowdControl": {
+    "__type__": "PowerBuffCrowdControl",
+    "__typeHash__": 4138865712,
+    "unk_c63f49e": true,
+    "dwCCFlags": 0,
+    "bUseGlobalSlowAmount": false,
+    "eGlobalSlowAmountType": 0,
+    "tSlowAmount": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    },
+    "tChillAmount": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    },
+    "tStaggerMultiplier": {
+     "value": "1",
+     "compiled": "BgAAAAAAgD8AAAAA"
+    },
+    "unk_20877c3": false
+   },
+   "bHasDamageShield": false,
+   "tDamageShield": {
+    "__type__": "HitpointSpecifier",
+    "__typeHash__": 1185241065,
+    "eType": 0,
+    "tHitpointScalar": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    },
+    "tFlatLevel": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    }
+   },
+   "dwShaderMapOverride": 14,
+   "unk_32f141c": 4294967295,
+   "unk_f8a0a44": 4294967295
+  },
+  {
+   "__type__": "PowerBuffDefinition",
+   "__typeHash__": 1071057721,
+   "dwID": 4200376145,
+   "dwBuffId": 53,
+   "bHarmful": true,
    "bInfinite": false,
+   "tDuration": {
+    "value": "SF_4 * (1+SF_57)",
+    "compiled": "BQAAAAoAAAAAAAAAAAAAAAAAAAAGAAAAAACAPwUAAAA/AAAAAAAAAAAAAAAAAAAACwAAAA0AAAAAAAAA"
+   },
+   "tMaxExtendDuration": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "bMoveOnSkillCategoryCooldown": false,
+   "unk_dcb22bd": false,
+   "tMaxStackCount": {
+    "value": "1",
+    "compiled": "BgAAAAAAgD8AAAAA"
+   },
+   "unk_bb42146": false,
+   "unk_22c356e": false,
+   "gbidBuffPreset": null,
+   "bVisibleInUI": false,
+   "nVisualPriority": 0,
+   "bShowDuration": false,
+   "bCancellable": false,
+   "unk_99b5752": false,
+   "unk_93cd85f": false,
+   "unk_4bdaef2": false,
+   "bVisibleInHotbarUI": false,
+   "bShowsActiveStateOnHotbar": false,
+   "bShowsDurationOnHotbar": false,
+   "bShowsStackCountOnHotbar": false,
+   "unk_8b74b0f": false,
+   "unk_71ba554": false,
+   "unk_1375622": false,
+   "unk_d2dd47": false,
+   "unk_8a5f69e": false,
+   "hIcon": 0,
+   "hFloatingIcon": 0,
+   "hFloatingTextLabel": 0,
+   "flFloatingTextIconRange": 0,
+   "unk_395ccd6": false,
+   "bDealsDOT": true,
+   "tDOT": {
+    "__type__": "PowerBuffDOTDamage",
+    "__typeHash__": 3824324374,
+    "unk_c3d4c36": false,
+    "eDamageType": 2,
+    "tDamage": {
+     "__type__": "HitpointSpecifier",
+     "__typeHash__": 1185241065,
+     "eType": 0,
+     "tHitpointScalar": {
+      "value": "SF_33 / SF_34",
+      "compiled": "BQAAACcAAAAAAAAAAAAAAAAAAAAFAAAAKAAAAAAAAAAAAAAAAAAAAA4AAAAAAAAA"
+     },
+     "tFlatLevel": {
+      "value": "0",
+      "compiled": "BgAAAAAAAAAAAAAA"
+     }
+    },
+    "unk_89dc285": true,
+    "flFlatDamageBonusScalar": 1,
+    "unk_f551941": -1,
+    "bDamageIgnoresInvulnerable": false,
+    "bDamageIgnoresBonuses": false,
+    "unk_b7113b1": false,
+    "eClassBaseDamageScalar": 0,
+    "bHasCombatEffectOverride": true,
+    "tCombatEffectOverride": {
+     "value": "SF_23",
+     "compiled": "BQAAAB0AAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "bHideDamageEffects": false,
+    "bHideGlobalApplicationEffect": false
+   },
+   "tCrowdControl": {
+    "__type__": "PowerBuffCrowdControl",
+    "__typeHash__": 4138865712,
+    "unk_c63f49e": true,
+    "dwCCFlags": 0,
+    "bUseGlobalSlowAmount": false,
+    "eGlobalSlowAmountType": 0,
+    "tSlowAmount": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    },
+    "tChillAmount": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    },
+    "tStaggerMultiplier": {
+     "value": "1",
+     "compiled": "BgAAAAAAgD8AAAAA"
+    },
+    "unk_20877c3": false
+   },
+   "bHasDamageShield": false,
+   "tDamageShield": {
+    "__type__": "HitpointSpecifier",
+    "__typeHash__": 1185241065,
+    "eType": 0,
+    "tHitpointScalar": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    },
+    "tFlatLevel": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    }
+   },
+   "dwShaderMapOverride": 14,
+   "unk_32f141c": 4294967295,
+   "unk_f8a0a44": 4294967295
+  },
+  {
+   "__type__": "PowerBuffDefinition",
+   "__typeHash__": 1071057721,
+   "dwID": 3237196318,
+   "dwBuffId": 24,
+   "bHarmful": false,
+   "bInfinite": true,
    "tDuration": {
     "value": "SF_4",
     "compiled": "BQAAAAoAAAAAAAAAAAAAAAAAAAAAAAAA"
@@ -1599,6 +2627,8 @@
     "value": "1",
     "compiled": "BgAAAAAAgD8AAAAA"
    },
+   "unk_bb42146": false,
+   "unk_22c356e": false,
    "gbidBuffPreset": null,
    "bVisibleInUI": false,
    "nVisualPriority": 0,
@@ -1611,6 +2641,7 @@
    "bShowsActiveStateOnHotbar": false,
    "bShowsDurationOnHotbar": false,
    "bShowsStackCountOnHotbar": false,
+   "unk_8b74b0f": false,
    "unk_71ba554": false,
    "unk_1375622": false,
    "unk_d2dd47": false,
@@ -1672,7 +2703,8 @@
     "tStaggerMultiplier": {
      "value": "1",
      "compiled": "BgAAAAAAgD8AAAAA"
-    }
+    },
+    "unk_20877c3": false
    },
    "bHasDamageShield": false,
    "tDamageShield": {
@@ -1688,14 +2720,16 @@
      "compiled": "BgAAAAAAAAAAAAAA"
     }
    },
-   "dwShaderMapOverride": 4294967295
+   "dwShaderMapOverride": 4294967295,
+   "unk_32f141c": 4294967295,
+   "unk_f8a0a44": 4294967295
   },
   {
    "__type__": "PowerBuffDefinition",
    "__typeHash__": 1071057721,
-   "dwID": 1186080385,
-   "dwBuffId": 15,
-   "bHarmful": false,
+   "dwID": 3164090299,
+   "dwBuffId": 26,
+   "bHarmful": true,
    "bInfinite": true,
    "tDuration": {
     "value": "SF_4",
@@ -1708,9 +2742,11 @@
    "bMoveOnSkillCategoryCooldown": false,
    "unk_dcb22bd": false,
    "tMaxStackCount": {
-    "value": "1",
-    "compiled": "BgAAAAAAgD8AAAAA"
+    "value": "5",
+    "compiled": "BgAAAAAAoEAAAAAA"
    },
+   "unk_bb42146": false,
+   "unk_22c356e": false,
    "gbidBuffPreset": null,
    "bVisibleInUI": false,
    "nVisualPriority": 0,
@@ -1723,6 +2759,125 @@
    "bShowsActiveStateOnHotbar": false,
    "bShowsDurationOnHotbar": false,
    "bShowsStackCountOnHotbar": false,
+   "unk_8b74b0f": false,
+   "unk_71ba554": false,
+   "unk_1375622": false,
+   "unk_d2dd47": false,
+   "unk_8a5f69e": false,
+   "hIcon": 0,
+   "hFloatingIcon": 0,
+   "hFloatingTextLabel": 0,
+   "flFloatingTextIconRange": 0,
+   "unk_395ccd6": false,
+   "bDealsDOT": true,
+   "tDOT": {
+    "__type__": "PowerBuffDOTDamage",
+    "__typeHash__": 3824324374,
+    "unk_c3d4c36": false,
+    "eDamageType": 2,
+    "tDamage": {
+     "__type__": "HitpointSpecifier",
+     "__typeHash__": 1185241065,
+     "eType": 0,
+     "tHitpointScalar": {
+      "value": "SF_33 * SF_34",
+      "compiled": "BQAAACcAAAAAAAAAAAAAAAAAAAAFAAAAKAAAAAAAAAAAAAAAAAAAAA0AAAAAAAAA"
+     },
+     "tFlatLevel": {
+      "value": "0",
+      "compiled": "BgAAAAAAAAAAAAAA"
+     }
+    },
+    "unk_89dc285": true,
+    "flFlatDamageBonusScalar": 1,
+    "unk_f551941": -1,
+    "bDamageIgnoresInvulnerable": false,
+    "bDamageIgnoresBonuses": false,
+    "unk_b7113b1": false,
+    "eClassBaseDamageScalar": 0,
+    "bHasCombatEffectOverride": false,
+    "tCombatEffectOverride": {
+     "value": "100",
+     "compiled": "BgAAAAAAyEIAAAAA"
+    },
+    "bHideDamageEffects": false,
+    "bHideGlobalApplicationEffect": false
+   },
+   "tCrowdControl": {
+    "__type__": "PowerBuffCrowdControl",
+    "__typeHash__": 4138865712,
+    "unk_c63f49e": true,
+    "dwCCFlags": 0,
+    "bUseGlobalSlowAmount": false,
+    "eGlobalSlowAmountType": 0,
+    "tSlowAmount": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    },
+    "tChillAmount": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    },
+    "tStaggerMultiplier": {
+     "value": "1",
+     "compiled": "BgAAAAAAgD8AAAAA"
+    },
+    "unk_20877c3": false
+   },
+   "bHasDamageShield": false,
+   "tDamageShield": {
+    "__type__": "HitpointSpecifier",
+    "__typeHash__": 1185241065,
+    "eType": 0,
+    "tHitpointScalar": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    },
+    "tFlatLevel": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    }
+   },
+   "dwShaderMapOverride": 4294967295,
+   "unk_32f141c": 4294967295,
+   "unk_f8a0a44": 4294967295
+  },
+  {
+   "__type__": "PowerBuffDefinition",
+   "__typeHash__": 1071057721,
+   "dwID": 2861078865,
+   "dwBuffId": 33,
+   "bHarmful": false,
+   "bInfinite": true,
+   "tDuration": {
+    "value": "SF_54",
+    "compiled": "BQAAADwAAAAAAAAAAAAAAAAAAAAAAAAA"
+   },
+   "tMaxExtendDuration": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "bMoveOnSkillCategoryCooldown": false,
+   "unk_dcb22bd": false,
+   "tMaxStackCount": {
+    "value": "SF_47",
+    "compiled": "BQAAADUAAAAAAAAAAAAAAAAAAAAAAAAA"
+   },
+   "unk_bb42146": false,
+   "unk_22c356e": false,
+   "gbidBuffPreset": null,
+   "bVisibleInUI": false,
+   "nVisualPriority": 0,
+   "bShowDuration": false,
+   "bCancellable": false,
+   "unk_99b5752": false,
+   "unk_93cd85f": false,
+   "unk_4bdaef2": false,
+   "bVisibleInHotbarUI": true,
+   "bShowsActiveStateOnHotbar": false,
+   "bShowsDurationOnHotbar": false,
+   "bShowsStackCountOnHotbar": true,
+   "unk_8b74b0f": false,
    "unk_71ba554": false,
    "unk_1375622": false,
    "unk_d2dd47": false,
@@ -1784,7 +2939,8 @@
     "tStaggerMultiplier": {
      "value": "1",
      "compiled": "BgAAAAAAgD8AAAAA"
-    }
+    },
+    "unk_20877c3": false
    },
    "bHasDamageShield": false,
    "tDamageShield": {
@@ -1800,18 +2956,138 @@
      "compiled": "BgAAAAAAAAAAAAAA"
     }
    },
-   "dwShaderMapOverride": 4294967295
+   "dwShaderMapOverride": 4294967295,
+   "unk_32f141c": 4294967295,
+   "unk_f8a0a44": 4294967295
   },
   {
    "__type__": "PowerBuffDefinition",
    "__typeHash__": 1071057721,
-   "dwID": 3105312011,
-   "dwBuffId": 17,
+   "dwID": 3076795015,
+   "dwBuffId": 43,
    "bHarmful": false,
    "bInfinite": true,
    "tDuration": {
-    "value": "1",
-    "compiled": "BgAAAAAAgD8AAAAA"
+    "value": "SF_54",
+    "compiled": "BQAAADwAAAAAAAAAAAAAAAAAAAAAAAAA"
+   },
+   "tMaxExtendDuration": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "bMoveOnSkillCategoryCooldown": false,
+   "unk_dcb22bd": false,
+   "tMaxStackCount": {
+    "value": "SF_47",
+    "compiled": "BQAAADUAAAAAAAAAAAAAAAAAAAAAAAAA"
+   },
+   "unk_bb42146": false,
+   "unk_22c356e": false,
+   "gbidBuffPreset": null,
+   "bVisibleInUI": false,
+   "nVisualPriority": 0,
+   "bShowDuration": false,
+   "bCancellable": false,
+   "unk_99b5752": false,
+   "unk_93cd85f": false,
+   "unk_4bdaef2": false,
+   "bVisibleInHotbarUI": true,
+   "bShowsActiveStateOnHotbar": false,
+   "bShowsDurationOnHotbar": false,
+   "bShowsStackCountOnHotbar": true,
+   "unk_8b74b0f": false,
+   "unk_71ba554": false,
+   "unk_1375622": false,
+   "unk_d2dd47": false,
+   "unk_8a5f69e": false,
+   "hIcon": 0,
+   "hFloatingIcon": 0,
+   "hFloatingTextLabel": 0,
+   "flFloatingTextIconRange": 0,
+   "unk_395ccd6": false,
+   "bDealsDOT": false,
+   "tDOT": {
+    "__type__": "PowerBuffDOTDamage",
+    "__typeHash__": 3824324374,
+    "unk_c3d4c36": false,
+    "eDamageType": -1,
+    "tDamage": {
+     "__type__": "HitpointSpecifier",
+     "__typeHash__": 1185241065,
+     "eType": 0,
+     "tHitpointScalar": {
+      "value": "0",
+      "compiled": "BgAAAAAAAAAAAAAA"
+     },
+     "tFlatLevel": {
+      "value": "0",
+      "compiled": "BgAAAAAAAAAAAAAA"
+     }
+    },
+    "unk_89dc285": false,
+    "flFlatDamageBonusScalar": 1,
+    "unk_f551941": -1,
+    "bDamageIgnoresInvulnerable": false,
+    "bDamageIgnoresBonuses": false,
+    "unk_b7113b1": false,
+    "eClassBaseDamageScalar": -1,
+    "bHasCombatEffectOverride": false,
+    "tCombatEffectOverride": {
+     "value": "100",
+     "compiled": "BgAAAAAAyEIAAAAA"
+    },
+    "bHideDamageEffects": false,
+    "bHideGlobalApplicationEffect": false
+   },
+   "tCrowdControl": {
+    "__type__": "PowerBuffCrowdControl",
+    "__typeHash__": 4138865712,
+    "unk_c63f49e": true,
+    "dwCCFlags": 0,
+    "bUseGlobalSlowAmount": false,
+    "eGlobalSlowAmountType": 0,
+    "tSlowAmount": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    },
+    "tChillAmount": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    },
+    "tStaggerMultiplier": {
+     "value": "1",
+     "compiled": "BgAAAAAAgD8AAAAA"
+    },
+    "unk_20877c3": false
+   },
+   "bHasDamageShield": false,
+   "tDamageShield": {
+    "__type__": "HitpointSpecifier",
+    "__typeHash__": 1185241065,
+    "eType": 0,
+    "tHitpointScalar": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    },
+    "tFlatLevel": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    }
+   },
+   "dwShaderMapOverride": 4294967295,
+   "unk_32f141c": 4294967295,
+   "unk_f8a0a44": 4294967295
+  },
+  {
+   "__type__": "PowerBuffDefinition",
+   "__typeHash__": 1071057721,
+   "dwID": 3748170836,
+   "dwBuffId": 35,
+   "bHarmful": false,
+   "bInfinite": false,
+   "tDuration": {
+    "value": "SF_36 * (1+SF_57)",
+    "compiled": "BQAAACoAAAAAAAAAAAAAAAAAAAAGAAAAAACAPwUAAAA/AAAAAAAAAAAAAAAAAAAACwAAAA0AAAAAAAAA"
    },
    "tMaxExtendDuration": {
     "value": "0",
@@ -1823,6 +3099,8 @@
     "value": "1",
     "compiled": "BgAAAAAAgD8AAAAA"
    },
+   "unk_bb42146": false,
+   "unk_22c356e": false,
    "gbidBuffPreset": null,
    "bVisibleInUI": false,
    "nVisualPriority": 0,
@@ -1835,6 +3113,7 @@
    "bShowsActiveStateOnHotbar": false,
    "bShowsDurationOnHotbar": false,
    "bShowsStackCountOnHotbar": false,
+   "unk_8b74b0f": false,
    "unk_71ba554": false,
    "unk_1375622": false,
    "unk_d2dd47": false,
@@ -1882,7 +3161,7 @@
     "__type__": "PowerBuffCrowdControl",
     "__typeHash__": 4138865712,
     "unk_c63f49e": true,
-    "dwCCFlags": 0,
+    "dwCCFlags": 4,
     "bUseGlobalSlowAmount": false,
     "eGlobalSlowAmountType": 0,
     "tSlowAmount": {
@@ -1896,7 +3175,8 @@
     "tStaggerMultiplier": {
      "value": "1",
      "compiled": "BgAAAAAAgD8AAAAA"
-    }
+    },
+    "unk_20877c3": false
    },
    "bHasDamageShield": false,
    "tDamageShield": {
@@ -1912,119 +3192,9 @@
      "compiled": "BgAAAAAAAAAAAAAA"
     }
    },
-   "dwShaderMapOverride": 4294967295
-  },
-  {
-   "__type__": "PowerBuffDefinition",
-   "__typeHash__": 1071057721,
-   "dwID": 622568444,
-   "dwBuffId": 18,
-   "bHarmful": false,
-   "bInfinite": true,
-   "tDuration": {
-    "value": "1",
-    "compiled": "BgAAAAAAgD8AAAAA"
-   },
-   "tMaxExtendDuration": {
-    "value": "0",
-    "compiled": "BgAAAAAAAAAAAAAA"
-   },
-   "bMoveOnSkillCategoryCooldown": false,
-   "unk_dcb22bd": false,
-   "tMaxStackCount": {
-    "value": "1",
-    "compiled": "BgAAAAAAgD8AAAAA"
-   },
-   "gbidBuffPreset": null,
-   "bVisibleInUI": false,
-   "nVisualPriority": 0,
-   "bShowDuration": false,
-   "bCancellable": false,
-   "unk_99b5752": false,
-   "unk_93cd85f": false,
-   "unk_4bdaef2": false,
-   "bVisibleInHotbarUI": false,
-   "bShowsActiveStateOnHotbar": false,
-   "bShowsDurationOnHotbar": false,
-   "bShowsStackCountOnHotbar": false,
-   "unk_71ba554": false,
-   "unk_1375622": false,
-   "unk_d2dd47": false,
-   "unk_8a5f69e": false,
-   "hIcon": 0,
-   "hFloatingIcon": 0,
-   "hFloatingTextLabel": 0,
-   "flFloatingTextIconRange": 0,
-   "unk_395ccd6": false,
-   "bDealsDOT": false,
-   "tDOT": {
-    "__type__": "PowerBuffDOTDamage",
-    "__typeHash__": 3824324374,
-    "unk_c3d4c36": false,
-    "eDamageType": -1,
-    "tDamage": {
-     "__type__": "HitpointSpecifier",
-     "__typeHash__": 1185241065,
-     "eType": 0,
-     "tHitpointScalar": {
-      "value": "0",
-      "compiled": "BgAAAAAAAAAAAAAA"
-     },
-     "tFlatLevel": {
-      "value": "0",
-      "compiled": "BgAAAAAAAAAAAAAA"
-     }
-    },
-    "unk_89dc285": false,
-    "flFlatDamageBonusScalar": 1,
-    "unk_f551941": -1,
-    "bDamageIgnoresInvulnerable": false,
-    "bDamageIgnoresBonuses": false,
-    "unk_b7113b1": false,
-    "eClassBaseDamageScalar": -1,
-    "bHasCombatEffectOverride": false,
-    "tCombatEffectOverride": {
-     "value": "100",
-     "compiled": "BgAAAAAAyEIAAAAA"
-    },
-    "bHideDamageEffects": false,
-    "bHideGlobalApplicationEffect": false
-   },
-   "tCrowdControl": {
-    "__type__": "PowerBuffCrowdControl",
-    "__typeHash__": 4138865712,
-    "unk_c63f49e": true,
-    "dwCCFlags": 0,
-    "bUseGlobalSlowAmount": false,
-    "eGlobalSlowAmountType": 0,
-    "tSlowAmount": {
-     "value": "0",
-     "compiled": "BgAAAAAAAAAAAAAA"
-    },
-    "tChillAmount": {
-     "value": "0",
-     "compiled": "BgAAAAAAAAAAAAAA"
-    },
-    "tStaggerMultiplier": {
-     "value": "1",
-     "compiled": "BgAAAAAAgD8AAAAA"
-    }
-   },
-   "bHasDamageShield": false,
-   "tDamageShield": {
-    "__type__": "HitpointSpecifier",
-    "__typeHash__": 1185241065,
-    "eType": 0,
-    "tHitpointScalar": {
-     "value": "0",
-     "compiled": "BgAAAAAAAAAAAAAA"
-    },
-    "tFlatLevel": {
-     "value": "0",
-     "compiled": "BgAAAAAAAAAAAAAA"
-    }
-   },
-   "dwShaderMapOverride": 4294967295
+   "dwShaderMapOverride": 4294967295,
+   "unk_32f141c": 4294967295,
+   "unk_f8a0a44": 4294967295
   }
  ],
  "nFormulaCount": 0,
@@ -2033,112 +3203,16 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "2.5 * Table(34,sLevel) * (SF_33 ? (1 + (SF_32 * sLevel)) : 1)",
-    "compiled": "BgAAAAAAIEAGAAAAAAAIQgUAAAABAAAAAAAAAAAAAAAAAAAAAQAAAAsAAAANAAAABQAAACcAAAAAAAAAAAAAAAAAAAAGAAAAAACAPwUAAAAmAAAAAAAAAAAAAAAAAAAABQAAAAEAAAAAAAAAAAAAAAAAAAANAAAACwAAAAYAAAAAAIA/EAAAAA0AAAAAAAAA"
+    "value": "3 * Table(34,sLevel) * Table(34,sLevel) * (SF_39 ? (1 + (SF_38 * sLevel)) : 1)",
+    "compiled": "BgAAAAAAQEAGAAAAAAAIQgUAAAABAAAAAAAAAAAAAAAAAAAAAQAAAAsAAAANAAAABgAAAAAACEIFAAAAAQAAAAAAAAAAAAAAAAAAAAEAAAALAAAADQAAAAUAAAAtAAAAAAAAAAAAAAAAAAAABgAAAAAAgD8FAAAALAAAAAAAAAAAAAAAAAAAAAUAAAABAAAAAAAAAAAAAAAAAAAADQAAAAsAAAAGAAAAAACAPxAAAAANAAAAAAAAAA=="
    }
   },
   {
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "SF_0/SF_4",
-    "compiled": "BQAAAAYAAAAAAAAAAAAAAAAAAAAFAAAACgAAAAAAAAAAAAAAAAAAAA4AAAAAAAAA"
-   }
-  },
-  {
-   "__type__": "ScriptFormulaInfo",
-   "__typeHash__": 551777591,
-   "tFormula": {
-    "value": "",
-    "compiled": ""
-   }
-  },
-  {
-   "__type__": "ScriptFormulaInfo",
-   "__typeHash__": 551777591,
-   "tFormula": {
-    "value": "SF_9 * SF_6",
-    "compiled": "BQAAAA8AAAAAAAAAAAAAAAAAAAAFAAAADAAAAAAAAAAAAAAAAAAAAA0AAAAAAAAA"
-   }
-  },
-  {
-   "__type__": "ScriptFormulaInfo",
-   "__typeHash__": 551777591,
-   "tFormula": {
-    "value": "8",
-    "compiled": "BgAAAAAAAEEAAAAA"
-   }
-  },
-  {
-   "__type__": "ScriptFormulaInfo",
-   "__typeHash__": 551777591,
-   "tFormula": {
-    "value": "3 * SF_11 * SF_28",
-    "compiled": "BgAAAAAAQEAFAAAAEQAAAAAAAAAAAAAAAAAAAA0AAAAFAAAAIgAAAAAAAAAAAAAAAAAAAA0AAAAAAAAA"
-   }
-  },
-  {
-   "__type__": "ScriptFormulaInfo",
-   "__typeHash__": 551777591,
-   "tFormula": {
-    "value": "0.2",
-    "compiled": "BgAAAM3MTD4AAAAA"
-   }
-  },
-  {
-   "__type__": "ScriptFormulaInfo",
-   "__typeHash__": 551777591,
-   "tFormula": {
-    "value": "SF_4/SF_6",
-    "compiled": "BQAAAAoAAAAAAAAAAAAAAAAAAAAFAAAADAAAAAAAAAAAAAAAAAAAAA4AAAAAAAAA"
-   }
-  },
-  {
-   "__type__": "ScriptFormulaInfo",
-   "__typeHash__": 551777591,
-   "tFormula": {
-    "value": "",
-    "compiled": ""
-   }
-  },
-  {
-   "__type__": "ScriptFormulaInfo",
-   "__typeHash__": 551777591,
-   "tFormula": {
-    "value": "18",
-    "compiled": "BgAAAAAAkEEAAAAA"
-   }
-  },
-  {
-   "__type__": "ScriptFormulaInfo",
-   "__typeHash__": 551777591,
-   "tFormula": {
-    "value": "Affix_Value_1#legendary_sorc_006 / 100",
-    "compiled": "BQAAAAAAAACFBAAAZ9UIAAAAAAAGAAAAAADIQg4AAAAAAAAA"
-   }
-  },
-  {
-   "__type__": "ScriptFormulaInfo",
-   "__typeHash__": 551777591,
-   "tFormula": {
-    "value": "ParagonGlyphAffixIsActive(SNO.ParagonGlyphAffix.Power_004_Intelligence_Main) ? (1 + PowerTag.ParagonGlyph_004.\"Script Formula 0\") : 1",
-    "compiled": "BQAAAFkAAAD3pg8AAAAAAAAAAAABAAAATwAAAAYAAAAAAIA/BQAAAAUAAAD2pg8AAAAAAAAAAAALAAAABgAAAAAAgD8QAAAAAAAAAA=="
-   }
-  },
-  {
-   "__type__": "ScriptFormulaInfo",
-   "__typeHash__": 551777591,
-   "tFormula": {
-    "value": "0.4",
-    "compiled": "BgAAAM3MzD4AAAAA"
-   }
-  },
-  {
-   "__type__": "ScriptFormulaInfo",
-   "__typeHash__": 551777591,
-   "tFormula": {
-    "value": "50",
-    "compiled": "BgAAAAAASEIAAAAA"
+    "value": "SF_0/SF_2",
+    "compiled": "BQAAAAYAAAAAAAAAAAAAAAAAAAAFAAAACAAAAAAAAAAAAAAAAAAAAA4AAAAAAAAA"
    }
   },
   {
@@ -2153,32 +3227,128 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "",
-    "compiled": ""
+    "value": "SF_9 * SF_6",
+    "compiled": "BQAAAA8AAAAAAAAAAAAAAAAAAAAFAAAADAAAAAAAAAAAAAAAAAAAAA0AAAAAAAAA"
    }
   },
   {
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "(Resource_Max_Total#Mana + Resource_All_Primary_Max_Bonus)/20",
-    "compiled": "BQAAAAAAAACjAAAAAAAAAAAAAAAFAAAAAAAAAKAAAAD+////AAAAAAsAAAAGAAAAAACgQQ4AAAAAAAAA"
+    "value": "(Mod.UpgradeC? SF_34 : SF_10)  + 1/60",
+    "compiled": "BQAAAFoAAAD/////CwkaoAAAAAAFAAAAKAAAAAAAAAAAAAAAAAAAAAUAAAAQAAAAAAAAAAAAAAAAAAAAEAAAAAYAAAAAAIA/BgAAAAAAcEIOAAAACwAAAAAAAAA="
    }
   },
   {
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "",
-    "compiled": ""
+    "value": "SF_8 * SF_11 * SF_28",
+    "compiled": "BQAAAA4AAAAAAAAAAAAAAAAAAAAFAAAAEQAAAAAAAAAAAAAAAAAAAA0AAAAFAAAAIgAAAAAAAAAAAAAAAAAAAA0AAAAAAAAA"
    }
   },
   {
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "40 * (SF_33 ? (1 + (SF_31 * sLevel)) : 1)",
-    "compiled": "BgAAAAAAIEIFAAAAJwAAAAAAAAAAAAAAAAAAAAYAAAAAAIA/BQAAACUAAAAAAAAAAAAAAAAAAAAFAAAAAQAAAAAAAAAAAAAAAAAAAA0AAAALAAAABgAAAAAAgD8QAAAADQAAAAAAAAA="
+    "value": "0.25",
+    "compiled": "BgAAAAAAgD4AAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "SF_4/SF_6",
+    "compiled": "BQAAAAoAAAAAAAAAAAAAAAAAAAAFAAAADAAAAAAAAAAAAAAAAAAAAA4AAAAAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "4.5",
+    "compiled": "BgAAAAAAkEAAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "25",
+    "compiled": "BgAAAAAAyEEAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "(Mod.UpgradeA? SF_12 : (SF_2* SF_48))",
+    "compiled": "BQAAAFoAAAD/////CQkaoAAAAAAFAAAAEgAAAAAAAAAAAAAAAAAAAAUAAAAIAAAAAAAAAAAAAAAAAAAABQAAADYAAAAAAAAAAAAAAAAAAAANAAAAEAAAAAAAAAA="
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "ParagonGlyphAffixIsActive(SNO.ParagonGlyphAffix.Power_004_Intelligence_Main) ? (1 + PowerTag.ParagonGlyph_004.\"Script Formula 0\") : 1",
+    "compiled": "BQAAAFkAAAD3pg8AAAAAAAAAAAABAAAATQAAAAYAAAAAAIA/BQAAAAUAAAD2pg8AAAAAAAAAAAALAAAABgAAAAAAgD8QAAAAAAAAAA=="
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "6 * SF_48",
+    "compiled": "BgAAAAAAwEAFAAAANgAAAAAAAAAAAAAAAAAAAA0AAAAAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "1",
+    "compiled": "BgAAAAAAgD8AAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "4",
+    "compiled": "BgAAAAAAgEAAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "(SF_1 / (SF_14 + 1)) * 0.7",
+    "compiled": "BQAAAAcAAAAAAAAAAAAAAAAAAAAFAAAAFAAAAAAAAAAAAAAAAAAAAAYAAAAAAIA/CwAAAA4AAAAGAAAAMzMzPw0AAAAAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "1.5",
+    "compiled": "BgAAAAAAwD8AAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "(Mod.UpgradeC ? SF_35 : 40) * Table(34,sLevel) * (SF_39 ? (1 + (SF_37 * sLevel)) : 1)",
+    "compiled": "BQAAAFoAAAD/////CwkaoAAAAAAFAAAAKQAAAAAAAAAAAAAAAAAAAAYAAAAAACBCEAAAAAYAAAAAAAhCBQAAAAEAAAAAAAAAAAAAAAAAAAABAAAACwAAAA0AAAAFAAAALQAAAAAAAAAAAAAAAAAAAAYAAAAAAIA/BQAAACsAAAAAAAAAAAAAAAAAAAAFAAAAAQAAAAAAAAAAAAAAAAAAAA0AAAALAAAABgAAAAAAgD8QAAAADQAAAAAAAAA="
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "Mod.UpgradeC ? SF_35 : 40",
+    "compiled": "BQAAAFoAAAD/////CwkaoAAAAAAFAAAAKQAAAAAAAAAAAAAAAAAAAAYAAAAAACBCEAAAAAAAAAA="
    }
   },
   {
@@ -2201,7 +3371,7 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": ".5",
+    "value": "0.5",
     "compiled": "BgAAAAAAAD8AAAAA"
    }
   },
@@ -2225,16 +3395,16 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "PowerTag.Sorcerer_IceSpike.\"Script Formula 2\"",
-    "compiled": "BQAAAAUAAABp4Q8AAgAAAAAAAAAAAAAA"
+    "value": "0.5",
+    "compiled": "BgAAAAAAAD8AAAAA"
    }
   },
   {
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "Affix_Value_2#legendary_sorc_107 * (Owner.Weapon_Damage_Min_Total + Owner.Weapon_Damage_Delta_Total) * Table(34,sLevel)",
-    "compiled": "BQAAAAAAAACGBAAAnn8SAAAAAAAFAAAAAAAAANgBAAD+////AwAAAAUAAAAAAAAA2QEAAP7///8DAAAACwAAAA0AAAAGAAAAAAAIQgUAAAABAAAAAAAAAAAAAAAAAAAAAQAAAAsAAAANAAAAAAAAAA=="
+    "value": "(SF_0 * 0.7) / (SF_14 + 1)",
+    "compiled": "BQAAAAYAAAAAAAAAAAAAAAAAAAAGAAAAMzMzPw0AAAAFAAAAFAAAAAAAAAAAAAAAAAAAAAYAAAAAAIA/CwAAAA4AAAAAAAAA"
    }
   },
   {
@@ -2249,8 +3419,8 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "Affix.legendary_sorc_006.\"Static Value 0\"",
-    "compiled": "BQAAAGMAAABn1QgAAAAAAAAAAAAAAAAA"
+    "value": "0.25",
+    "compiled": "BgAAAAAAgD4AAAAA"
    }
   },
   {
@@ -2258,7 +3428,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Min(1.5, 1 + (AoE_Size_Bonus_Per_Power#Sorcerer_Blizzard / 2))",
-    "compiled": "BgAAAAAAwD8GAAAAAACAPwUAAAAAAAAAAAQAAEtyBAAAAAAABgAAAAAAAEAOAAAACwAAAAEAAAAAAAAAAAAAAA=="
+    "compiled": "BgAAAAAAwD8GAAAAAACAPwUAAAAAAAAADQQAAEtyBAAAAAAABgAAAAAAAEAOAAAACwAAAAEAAAAAAAAAAAAAAA=="
    }
   },
   {
@@ -2274,7 +3444,127 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Chance_For_Double_Damage_Per_Power#Sorcerer_Blizzard",
-    "compiled": "BQAAAAAAAACcAACAS3IEAAAAAAAAAAAA"
+    "compiled": "BQAAAAAAAACoAACAS3IEAAAAAAAAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "SF_0 * 1.7",
+    "compiled": "BQAAAAYAAAAAAAAAAAAAAAAAAAAGAAAAmpnZPw0AAAAAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "SF_31 / (1/SF_27)",
+    "compiled": "BQAAACUAAAAAAAAAAAAAAAAAAAAGAAAAAACAPwUAAAAhAAAAAAAAAAAAAAAAAAAADgAAAA4AAAAAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "SF_0 * 1.5",
+    "compiled": "BQAAAAYAAAAAAAAAAAAAAAAAAAAGAAAAAADAPw0AAAAAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "1 * SF_48",
+    "compiled": "BgAAAAAAgD8FAAAANgAAAAAAAAAAAAAAAAAAAA0AAAAAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "15",
+    "compiled": "BgAAAAAAcEEAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "0.25",
+    "compiled": "BgAAAAAAgD4AAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "PowerTag.S10_ChaosPerk_Sorc_Rare_001.\"Script Formula 2\"",
+    "compiled": "BQAAAAUAAACP6iMAAgAAAAAAAAAAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "PowerTag.S10_ChaosPerk_Sorc_Rare_001.\"Script Formula 1\"",
+    "compiled": "BQAAAAUAAACP6iMAAQAAAAAAAAAAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "((GetCollectiblePowerEquippedSlotIndex(SNO.CollectiblePower.S10_ChaosPerk_Sorc_Rare_001)) > -1) ? 1 : 0",
+    "compiled": "BQAAAFkAAAAM6yMAAAAAAAAAAAABAAAAbAAAAAYAAAAAAIA/EQAAAAgAAAAGAAAAAACAPwYAAAAAAAAAEAAAAAAAAAA="
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "0.005",
+    "compiled": "BgAAAArXozsAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "0.5",
+    "compiled": "BgAAAAAAAD8AAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "4",
+    "compiled": "BgAAAAAAgEAAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "0.30",
+    "compiled": "BgAAAJqZmT4AAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "0.5",
+    "compiled": "BgAAAAAAAD8AAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "0.03",
+    "compiled": "BgAAAI/C9TwAAAAA"
    }
   },
   {
@@ -2289,6 +3579,46 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
+    "value": "5",
+    "compiled": "BgAAAAAAoEAAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "Mod.Upgrade3? (SF_44 + 1) : 1",
+    "compiled": "BQAAAFoAAAD/////2wgaoAAAAAAFAAAAMgAAAAAAAAAAAAAAAAAAAAYAAAAAAIA/CwAAAAYAAAAAAIA/EAAAAAAAAAA="
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "35",
+    "compiled": "BgAAAAAADEIAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "0.1",
+    "compiled": "BgAAAM3MzD0AAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "1",
+    "compiled": "BgAAAAAAgD8AAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
     "value": "2",
     "compiled": "BgAAAAAAAEAAAAAA"
    }
@@ -2297,38 +3627,470 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "0",
-    "compiled": "BgAAAAAAAAAAAAAA"
+    "value": "1",
+    "compiled": "BgAAAAAAgD8AAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "SF_52 + 0.2",
+    "compiled": "BQAAADoAAAAAAAAAAAAAAAAAAAAGAAAAzcxMPgsAAAAAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "0.8",
+    "compiled": "BgAAAM3MTD8AAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "Min(SF_55, SF_9 * 2)",
+    "compiled": "BQAAAD0AAAAAAAAAAAAAAAAAAAAFAAAADwAAAAAAAAAAAAAAAAAAAAYAAAAAAABADQAAAAEAAAAAAAAAAAAAAA=="
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "Affix_Value_1#Chest_Unique_Sorc_100_x2",
+    "compiled": "BQAAAAAAAACSBAAA0XwnAAAAAAAAAAAA"
    }
   }
  ],
- "arPayloads": [],
+ "arPayloads": [
+  {
+   "__type__": "PowerPayloadDefinition",
+   "__typeHash__": 812993760,
+   "snoItemTypeMainHandEffectsOverride": null,
+   "snoItemTypeOffHandEffectsOverride": null,
+   "dwID": 1382525023,
+   "dwPayloadId": 2,
+   "eForcedDamageType": -1,
+   "tDamage": {
+    "__type__": "HitpointSpecifier",
+    "__typeHash__": 1185241065,
+    "eType": 0,
+    "tHitpointScalar": {
+     "value": "SF_25",
+     "compiled": "BQAAAB8AAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "tFlatLevel": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    }
+   },
+   "bHasCustomDamageVariance": false,
+   "tDamageVariance": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "arBuffsToApply": [],
+   "bApplyVulnerableDebuff": false,
+   "tVulnerableDurationSecondsOverride": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "unk_b4395d8": false,
+   "unk_7c2668d": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "tFortifiedHealth": {
+    "__type__": "HitpointSpecifier",
+    "__typeHash__": 1185241065,
+    "eType": 0,
+    "tHitpointScalar": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    },
+    "tFlatLevel": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    }
+   },
+   "tApplyFreeze": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "tApplyChillAmount": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "unk_e659b0f": -1,
+   "tHeal": {
+    "__type__": "HitpointSpecifier",
+    "__typeHash__": 1185241065,
+    "eType": 0,
+    "tHitpointScalar": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    },
+    "tFlatLevel": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    }
+   },
+   "eHealType": 0,
+   "bPlayHealEffect": true,
+   "unk_8bc45f2": false,
+   "unk_15c6c03": false,
+   "unk_e842c84": false,
+   "eClassBaseDamageScalar": -1,
+   "bHasCombatEffectOverride": false,
+   "tCombatEffectOverride": {
+    "value": "100",
+    "compiled": "BgAAAAAAyEIAAAAA"
+   },
+   "ePayloadDefaultHitEffectType": 2,
+   "snoNormalHitEffectGroup": null,
+   "snoTargetImpactEffectGroup": null,
+   "unk_f381067": false,
+   "flHitFlashDurationScalar": 1,
+   "iPowerNeedTarget": false,
+   "bPlayNormalHitSoundPayload": false,
+   "unk_969096b": false,
+   "unk_5885b8": 0,
+   "unk_f38eac9": false,
+   "tOnHitSoundsPayload": {
+    "__type__": "OnHitSounds",
+    "__typeHash__": 960545022,
+    "sno1P": null,
+    "sno3PEnemy": null,
+    "sno3PFriendly": null
+   }
+  },
+  {
+   "__type__": "PowerPayloadDefinition",
+   "__typeHash__": 812993760,
+   "snoItemTypeMainHandEffectsOverride": null,
+   "snoItemTypeOffHandEffectsOverride": null,
+   "dwID": 3840688885,
+   "dwPayloadId": 5,
+   "eForcedDamageType": -1,
+   "tDamage": {
+    "__type__": "HitpointSpecifier",
+    "__typeHash__": 1185241065,
+    "eType": 0,
+    "tHitpointScalar": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    },
+    "tFlatLevel": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    }
+   },
+   "bHasCustomDamageVariance": false,
+   "tDamageVariance": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "arBuffsToApply": [],
+   "bApplyVulnerableDebuff": true,
+   "tVulnerableDurationSecondsOverride": {
+    "value": "SF_4",
+    "compiled": "BQAAAAoAAAAAAAAAAAAAAAAAAAAAAAAA"
+   },
+   "unk_b4395d8": false,
+   "unk_7c2668d": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "tFortifiedHealth": {
+    "__type__": "HitpointSpecifier",
+    "__typeHash__": 1185241065,
+    "eType": 0,
+    "tHitpointScalar": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    },
+    "tFlatLevel": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    }
+   },
+   "tApplyFreeze": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "tApplyChillAmount": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "unk_e659b0f": -1,
+   "tHeal": {
+    "__type__": "HitpointSpecifier",
+    "__typeHash__": 1185241065,
+    "eType": 0,
+    "tHitpointScalar": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    },
+    "tFlatLevel": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    }
+   },
+   "eHealType": 0,
+   "bPlayHealEffect": true,
+   "unk_8bc45f2": false,
+   "unk_15c6c03": false,
+   "unk_e842c84": false,
+   "eClassBaseDamageScalar": -1,
+   "bHasCombatEffectOverride": false,
+   "tCombatEffectOverride": {
+    "value": "100",
+    "compiled": "BgAAAAAAyEIAAAAA"
+   },
+   "ePayloadDefaultHitEffectType": 2,
+   "snoNormalHitEffectGroup": null,
+   "snoTargetImpactEffectGroup": null,
+   "unk_f381067": false,
+   "flHitFlashDurationScalar": 1,
+   "iPowerNeedTarget": false,
+   "bPlayNormalHitSoundPayload": false,
+   "unk_969096b": false,
+   "unk_5885b8": 0,
+   "unk_f38eac9": false,
+   "tOnHitSoundsPayload": {
+    "__type__": "OnHitSounds",
+    "__typeHash__": 960545022,
+    "sno1P": null,
+    "sno3PEnemy": null,
+    "sno3PFriendly": null
+   }
+  }
+ ],
  "arMods": [
   {
    "__type__": "PowerMod",
    "__typeHash__": 1376535853,
-   "szName": 2849853803,
+   "szName": 2686060809,
    "nMaxPoints": 1,
-   "dwModId": 1,
+   "dwModId": 4,
    "dwModMask": 1,
    "unk_94cc84e": 0,
    "bAppendDescription": true,
    "bBulletPointDescription": true,
-   "bAffectsEnchantmentDescription": true,
+   "bAffectsEnchantmentDescription": false,
    "unk_b1d89c5": false,
+   "unk_b25b989": false,
    "arSkillTagsToAdd": [
     {
      "__type__": "SkillTagStruct",
      "__typeHash__": 4000554560,
      "gbidSkillTag": {
-      "__raw__": 2789173029,
+      "__raw__": 2434110708,
       "__type__": "DT_GBID",
       "__typeHash__": 1028170061,
       "group": 56,
-      "name": "Keyword_Freeze"
+      "name": "Keyword_Vulnerable"
+     },
+     "bSearchOnly": false
+    }
+   ],
+   "arSkillTagsToRemove": [],
+   "eModType": 2,
+   "hIconNormalOverride": 244480294,
+   "hIconMouseoverOverride": 4245829469,
+   "hIconPushedOverride": 4245427129,
+   "hIconInactiveOverride": 806064281,
+   "eShapeshiftForm": -1
+  },
+  {
+   "__type__": "PowerMod",
+   "__typeHash__": 1376535853,
+   "szName": 2686060810,
+   "nMaxPoints": 1,
+   "dwModId": 2,
+   "dwModMask": 2,
+   "unk_94cc84e": 1,
+   "bAppendDescription": true,
+   "bBulletPointDescription": true,
+   "bAffectsEnchantmentDescription": true,
+   "unk_b1d89c5": true,
+   "unk_b25b989": false,
+   "arSkillTagsToAdd": [
+    {
+     "__type__": "SkillTagStruct",
+     "__typeHash__": 4000554560,
+     "gbidSkillTag": {
+      "__raw__": 3567369300,
+      "__type__": "DT_GBID",
+      "__typeHash__": 1028170061,
+      "group": 56,
+      "name": "Search_Damage"
      },
      "bSearchOnly": false
     },
+    {
+     "__type__": "SkillTagStruct",
+     "__typeHash__": 4000554560,
+     "gbidSkillTag": {
+      "__raw__": 1342141636,
+      "__type__": "DT_GBID",
+      "__typeHash__": 1028170061,
+      "group": 56,
+      "name": "Keyword_IceSpikes"
+     },
+     "bSearchOnly": false
+    }
+   ],
+   "arSkillTagsToRemove": [],
+   "eModType": 3,
+   "hIconNormalOverride": 244480294,
+   "hIconMouseoverOverride": 4245829469,
+   "hIconPushedOverride": 4245427129,
+   "hIconInactiveOverride": 806064281,
+   "eShapeshiftForm": -1
+  },
+  {
+   "__type__": "PowerMod",
+   "__typeHash__": 1376535853,
+   "szName": 2686060811,
+   "nMaxPoints": 1,
+   "dwModId": 7,
+   "dwModMask": 4,
+   "unk_94cc84e": 2,
+   "bAppendDescription": true,
+   "bBulletPointDescription": true,
+   "bAffectsEnchantmentDescription": true,
+   "unk_b1d89c5": true,
+   "unk_b25b989": true,
+   "arSkillTagsToAdd": [
+    {
+     "__type__": "SkillTagStruct",
+     "__typeHash__": 4000554560,
+     "gbidSkillTag": {
+      "__raw__": 3567369300,
+      "__type__": "DT_GBID",
+      "__typeHash__": 1028170061,
+      "group": 56,
+      "name": "Search_Damage"
+     },
+     "bSearchOnly": false
+    },
+    {
+     "__type__": "SkillTagStruct",
+     "__typeHash__": 4000554560,
+     "gbidSkillTag": {
+      "__raw__": 1302406649,
+      "__type__": "DT_GBID",
+      "__typeHash__": 1028170061,
+      "group": 56,
+      "name": "Search_Lightning"
+     },
+     "bSearchOnly": false
+    },
+    {
+     "__type__": "SkillTagStruct",
+     "__typeHash__": 4000554560,
+     "gbidSkillTag": {
+      "__raw__": 332737186,
+      "__type__": "DT_GBID",
+      "__typeHash__": 1028170061,
+      "group": 56,
+      "name": "Skill_Lightning"
+     },
+     "bSearchOnly": false
+    },
+    {
+     "__type__": "SkillTagStruct",
+     "__typeHash__": 4000554560,
+     "gbidSkillTag": {
+      "__raw__": 3120020001,
+      "__type__": "DT_GBID",
+      "__typeHash__": 1028170061,
+      "group": 56,
+      "name": "Damage_Override_Lightning"
+     },
+     "bSearchOnly": false
+    },
+    {
+     "__type__": "SkillTagStruct",
+     "__typeHash__": 4000554560,
+     "gbidSkillTag": {
+      "__raw__": 3284087796,
+      "__type__": "DT_GBID",
+      "__typeHash__": 1028170061,
+      "group": 56,
+      "name": "Search_Sparking"
+     },
+     "bSearchOnly": false
+    }
+   ],
+   "arSkillTagsToRemove": [
+    {
+     "__raw__": 3828402880,
+     "__type__": "DT_GBID",
+     "__typeHash__": 1028170061,
+     "group": 56,
+     "name": "Skill_Cold"
+    }
+   ],
+   "eModType": 4,
+   "hIconNormalOverride": 4050845547,
+   "hIconMouseoverOverride": 439182050,
+   "hIconPushedOverride": 438779710,
+   "hIconInactiveOverride": 1982527134,
+   "eShapeshiftForm": -1
+  },
+  {
+   "__type__": "PowerMod",
+   "__typeHash__": 1376535853,
+   "szName": 2686060761,
+   "nMaxPoints": 1,
+   "dwModId": 8,
+   "dwModMask": 8,
+   "unk_94cc84e": 3,
+   "bAppendDescription": true,
+   "bBulletPointDescription": true,
+   "bAffectsEnchantmentDescription": false,
+   "unk_b1d89c5": false,
+   "unk_b25b989": false,
+   "arSkillTagsToAdd": [
+    {
+     "__type__": "SkillTagStruct",
+     "__typeHash__": 4000554560,
+     "gbidSkillTag": {
+      "__raw__": 328056235,
+      "__type__": "DT_GBID",
+      "__typeHash__": 1028170061,
+      "group": 56,
+      "name": "Keyword_Barrier"
+     },
+     "bSearchOnly": false
+    }
+   ],
+   "arSkillTagsToRemove": [],
+   "eModType": 0,
+   "hIconNormalOverride": 3616384966,
+   "hIconMouseoverOverride": 3616384966,
+   "hIconPushedOverride": 3616384966,
+   "hIconInactiveOverride": 3616384966,
+   "eShapeshiftForm": -1
+  },
+  {
+   "__type__": "PowerMod",
+   "__typeHash__": 1376535853,
+   "szName": 2686060762,
+   "nMaxPoints": 1,
+   "dwModId": 9,
+   "dwModMask": 16,
+   "unk_94cc84e": 4,
+   "bAppendDescription": true,
+   "bBulletPointDescription": true,
+   "bAffectsEnchantmentDescription": true,
+   "unk_b1d89c5": false,
+   "unk_b25b989": false,
+   "arSkillTagsToAdd": [
     {
      "__type__": "SkillTagStruct",
      "__typeHash__": 4000554560,
@@ -2356,24 +4118,60 @@
    ],
    "arSkillTagsToRemove": [],
    "eModType": 0,
-   "hIconNormalOverride": 0,
-   "hIconMouseoverOverride": 0,
-   "hIconPushedOverride": 0,
-   "hIconInactiveOverride": 0
+   "hIconNormalOverride": 130962716,
+   "hIconMouseoverOverride": 130962716,
+   "hIconPushedOverride": 130962716,
+   "hIconInactiveOverride": 130962716,
+   "eShapeshiftForm": -1
   },
   {
    "__type__": "PowerMod",
    "__typeHash__": 1376535853,
-   "szName": 2686060809,
+   "szName": 2686060763,
    "nMaxPoints": 1,
-   "dwModId": 4,
-   "dwModMask": 2,
-   "unk_94cc84e": 1,
-   "bAppendDescription": false,
+   "dwModId": 10,
+   "dwModMask": 32,
+   "unk_94cc84e": 5,
+   "bAppendDescription": true,
    "bBulletPointDescription": true,
    "bAffectsEnchantmentDescription": false,
    "unk_b1d89c5": false,
+   "unk_b25b989": false,
+   "arSkillTagsToAdd": [],
+   "arSkillTagsToRemove": [],
+   "eModType": 0,
+   "hIconNormalOverride": 833791648,
+   "hIconMouseoverOverride": 833791648,
+   "hIconPushedOverride": 833791648,
+   "hIconInactiveOverride": 833791648,
+   "eShapeshiftForm": -1
+  },
+  {
+   "__type__": "PowerMod",
+   "__typeHash__": 1376535853,
+   "szName": 2686060764,
+   "nMaxPoints": 1,
+   "dwModId": 11,
+   "dwModMask": 64,
+   "unk_94cc84e": 6,
+   "bAppendDescription": true,
+   "bBulletPointDescription": true,
+   "bAffectsEnchantmentDescription": false,
+   "unk_b1d89c5": false,
+   "unk_b25b989": false,
    "arSkillTagsToAdd": [
+    {
+     "__type__": "SkillTagStruct",
+     "__typeHash__": 4000554560,
+     "gbidSkillTag": {
+      "__raw__": 210287674,
+      "__type__": "DT_GBID",
+      "__typeHash__": 1028170061,
+      "group": 56,
+      "name": "Search_ResourceMana"
+     },
+     "bSearchOnly": false
+    },
     {
      "__type__": "SkillTagStruct",
      "__typeHash__": 4000554560,
@@ -2389,43 +4187,11 @@
    ],
    "arSkillTagsToRemove": [],
    "eModType": 0,
-   "hIconNormalOverride": 0,
-   "hIconMouseoverOverride": 0,
-   "hIconPushedOverride": 0,
-   "hIconInactiveOverride": 0
-  },
-  {
-   "__type__": "PowerMod",
-   "__typeHash__": 1376535853,
-   "szName": 2686060810,
-   "nMaxPoints": 1,
-   "dwModId": 2,
-   "dwModMask": 4,
-   "unk_94cc84e": 2,
-   "bAppendDescription": true,
-   "bBulletPointDescription": true,
-   "bAffectsEnchantmentDescription": true,
-   "unk_b1d89c5": false,
-   "arSkillTagsToAdd": [
-    {
-     "__type__": "SkillTagStruct",
-     "__typeHash__": 4000554560,
-     "gbidSkillTag": {
-      "__raw__": 210287674,
-      "__type__": "DT_GBID",
-      "__typeHash__": 1028170061,
-      "group": 56,
-      "name": "Search_ResourceMana"
-     },
-     "bSearchOnly": false
-    }
-   ],
-   "arSkillTagsToRemove": [],
-   "eModType": 0,
-   "hIconNormalOverride": 0,
-   "hIconMouseoverOverride": 0,
-   "hIconPushedOverride": 0,
-   "hIconInactiveOverride": 0
+   "hIconNormalOverride": 1587379851,
+   "hIconMouseoverOverride": 1587379851,
+   "hIconPushedOverride": 1587379851,
+   "hIconInactiveOverride": 1587379851,
+   "eShapeshiftForm": -1
   }
  ],
  "snoCastingEffectGroup": {
@@ -2450,9 +4216,80 @@
  },
  "flCastingEffectGroupDuration": 0.5,
  "arCastingEffectOverrides": [],
- "arCastingEffectOverridesByVisualRemap": [],
- "arDamageRemapConditions": [],
- "arPetSpawns": [],
+ "arCastingEffectOverridesByVisualRemap": [
+  {
+   "__type__": "PowerCastingEffectOverrideByVisualRemap",
+   "__typeHash__": 2441472839,
+   "snoVisualRemap": {
+    "__raw__": 2350124,
+    "__group__": 175,
+    "__type__": "DT_SNO",
+    "__typeHash__": 2764331143,
+    "__targetFileName__": "base/meta/VisualRemap/class_sorc_lightning.vrm",
+    "groupName": "VisualRemap",
+    "name": "class_sorc_lightning"
+   },
+   "snoCastingEffectGroup": {
+    "__raw__": 2392671,
+    "__group__": 14,
+    "__type__": "DT_SNO",
+    "__typeHash__": 2764331143,
+    "__targetFileName__": "base/meta/EffectGroup/sorc_blizzard_cast_upgradeC.efg",
+    "groupName": "EffectGroup",
+    "name": "sorc_blizzard_cast_upgradeC"
+   },
+   "snoAutoCastingEffectGroup": null
+  }
+ ],
+ "arDamageRemapConditions": [
+  {
+   "__type__": "DamageRemapConditions",
+   "__typeHash__": 3454042638,
+   "eDamageType": 2,
+   "snoVisualRemap": {
+    "__raw__": 2350124,
+    "__group__": 175,
+    "__type__": "DT_SNO",
+    "__typeHash__": 2764331143,
+    "__targetFileName__": "base/meta/VisualRemap/class_sorc_lightning.vrm",
+    "groupName": "VisualRemap",
+    "name": "class_sorc_lightning"
+   },
+   "arRequiredSkillTags": [],
+   "unk_a0d2a94": false
+  }
+ ],
+ "arPetSpawns": [
+  {
+   "__type__": "PowerPetSpawn",
+   "__typeHash__": 3303422751,
+   "tName": 3245648235,
+   "gbidType": {
+    "__raw__": 3245648235,
+    "__type__": "DT_GBID",
+    "__typeHash__": 1028170061,
+    "group": 23,
+    "name": "Sorcerer_Blizzard_Seeking"
+   },
+   "tMax": {
+    "value": "32",
+    "compiled": "BgAAAAAAAEIAAAAA"
+   },
+   "tHealth": {
+    "__type__": "HitpointSpecifier",
+    "__typeHash__": 1185241065,
+    "eType": 0,
+    "tHitpointScalar": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    },
+    "tFlatLevel": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    }
+   }
+  }
+ ],
  "unk_143fe9f": {
   "value": "10",
   "compiled": "BgAAAAAAIEEAAAAA"
@@ -2464,6 +4301,7 @@
  "unk_c99c7cb": false,
  "unk_fad91a3": false,
  "unk_376802e": false,
+ "unk_b0a1a71": true,
  "unk_bf25f64": 0,
  "arRecastPowerSequence": [],
  "arModifierProfiles": [],

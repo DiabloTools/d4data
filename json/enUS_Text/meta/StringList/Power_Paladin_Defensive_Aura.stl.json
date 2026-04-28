@@ -22,7 +22,7 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "rankup_desc",
-   "szText": "\r\n{icon:bullet,1.2} Armor {icon:arrow,1.2} {c_number}[{SF_4}*100|%|]{/c}\r\n{icon:bullet,1.2} All Resistances {icon:arrow,1.2} {c_number}[{SF_5}*100|%|]{/c}{if:SF_28}\r\n{icon:bullet,1.2} Thorns Percent {icon:arrow,1.2} {c_number}[{SF_17}*100|%|]{/c}{/if}",
+   "szText": "\r\n{icon:bullet,1.2} Armor {icon:arrow,1.2} {c_number}[{SF_4}*100|%|]{/c}\r\n{icon:bullet,1.2} All Resistances {icon:arrow,1.2} {c_number}[{SF_5}*100|%|]{/c}{if:SF_31}\r\n{icon:bullet,1.2} Damage {icon:arrow,1.2} {c_number}[{SF_10}*100|1%|]{/c}{/if}{if:SF_24}\r\n{icon:bullet,1.2} Healing Amount {icon:arrow,1.2} {c_number}[{SF_13}*100|1%|]{/c}{/if}{if:SF_18}\r\n{icon:bullet,1.2} Thorns Percent {icon:arrow,1.2} {c_number}[{SF_17}*100|%|]{/c}{/if}",
    "hLabel": 4074074671
   },
   {
@@ -42,22 +42,8 @@
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
-   "szLabel": "Mod1_Description",
-   "szText": "{c_important}Defiance Aura's{/c} passive also grants you and your allies {c_number}[SF_8*100]%{/c} Maximum Life.",
-   "hLabel": 628601524
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
-   "szLabel": "Mod1_Name",
-   "szText": "Enhanced Defiance",
-   "hLabel": 2492006865
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
    "szLabel": "Mod2_Description",
-   "szText": "{c_important}Defiance Aura's{/c} increases your damage by {c_number}[SF_10*100|%x|]{/c} for {c_number}{SF_11}{/c} seconds whenever you gain {c_important}{u}Resolve{/u}{/c}.",
+   "szText": "{c_important}Defiance Aura's{/c} increases your damage by {c_number}[{SF_10}*100|1%x|]{/c} for {c_number}{SF_11}{/c} seconds whenever you gain {c_important}{u}Resolve{/u}{/c}.",
    "hLabel": 1960229941
   },
   {
@@ -71,7 +57,7 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod3_Description",
-   "szText": "{c_important}Defiance Aura's{/c} passive also Heals you and your allies for {c_number}[SF_13*100]%{/c} of your Maximum Life {c_number}([Max(1,PlayerHealthMax() * {SF_13})]){/c} per second.\r\n\r\nHealing yourself or allies grants {c_number}{SF_14}{/c} stacks of {c_important}{u}Resolve{/u}{/c} every {c_number}{SF_15}{/c} second.",
+   "szText": "{c_important}Defiance Aura's{/c} passive also Heals you and your allies for {c_number}[{SF_13}*100|1%|]{/c} of your Maximum Life {c_number}([Max(1,PlayerHealthMax() * {SF_13})]){/c} per second.\r\n\r\nHealing yourself and allies grants {c_number}{SF_14}{/c} stacks of {c_important}{u}Resolve{/u}{/c} every {c_number}{SF_15}{/c} second.",
    "hLabel": 3291858358
   },
   {
@@ -85,7 +71,7 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod4_Description",
-   "szText": "{c_important}Defiance Aura's{/c} passive also grants {c_number}[SF_26]{/c} Thorns and increases all Thorns damage by {c_number}[SF_17*100|%x|]{/c} for you and your allies.\r\n\r\n{c_important}Defiance Aura's{/c} active instead releases a nova dealing {c_number}[SF_20*100|%x|]{/c} of your Thorns damage.",
+   "szText": "{c_important}Defiance Aura's{/c} passive also grants {c_number}[SF_26]{/c} Thorns and increases you and your allies' Thorns by {c_number}[{SF_17}*100|%+|]{/c}.\r\n\r\n{c_important}Defiance Aura's{/c} active instead releases a nova dealing {c_number}[SF_20*100|%x|]{/c} of your Thorns damage.",
    "hLabel": 328519479
   },
   {
@@ -94,6 +80,62 @@
    "szLabel": "Mod4_Name",
    "szText": "Rite of Thorns",
    "hLabel": 2609413044
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod13_Description",
+   "szText": "{c_important}Defiance Aura's{/c} passive also grants you and your allies {c_number}[SF_8*100]%{/c} Maximum Life.",
+   "hLabel": 2441615751
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod13_Name",
+   "szText": "Maximum Life",
+   "hLabel": 3187523588
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod14_Description",
+   "szText": "{c_important}Defiance Aura{/c} grants you and your allies {c_number}[{SF_30} * 100|%|]{/c} Healing received.",
+   "hLabel": 3773244168
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod14_Name",
+   "szText": "Bonus Healing",
+   "hLabel": 3226658981
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod15_Description",
+   "szText": "{c_important}Defiance Aura{/c} gains {c_number}[SF_32 * 100 |%|]{/c} more bonus from potency.",
+   "hLabel": 809905289
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod15_Name",
+   "szText": "Potency",
+   "hLabel": 3265794374
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod16_Description",
+   "szText": "Whenever you or an ally are Injured, they become {c_important}{u}Unstoppable{/c}{/u} for {c_number}{SF_1}{/c} seconds and gain {c_number}{SF_38}{/c} {c_important}{u}Resolve{/c}{/u}.  This can only occur once every {c_number}{SF_37}{/c} seconds",
+   "hLabel": 2141533706
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod16_Name",
+   "szText": "Unstoppable",
+   "hLabel": 3304929767
   }
  ],
  "ptMapStringTable": "0"

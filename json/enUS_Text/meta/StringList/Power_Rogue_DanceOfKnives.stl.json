@@ -15,57 +15,113 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "desc",
-   "szText": "{c_label}Charges:{/c} {c_resource}{SF_6}{/c}\r\n{c_label}Charge Cooldown:{/c_label} {c_resource}[{SF_5}|1|]{/c} seconds\r\n{/if}{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat Effect Chance}|%|]{/c}\r\n{/if}Channel to launch knives at surrounding enemies, consuming one Charge per second and each knife dealing {c_number}{payload:DAMAGE}{/c} damage. Attack Speed increases damage done rather than number of knives thrown.\r\n\r\nYou gain {c_number}[SF_15|%+|]{/c} Movement Speed and {c_number}[SF_9|%|]{/c} Dodge Chance while Channeling {c_important}Dance of Knives{/c}.{if:SF_17}\r\n\r\n{c_important}Combo Points{/c} increase damage by {c_number}[SF_37  * 100|%x|]{/c} per Combo Point, and grant Charges that can exceed the Maximum and are spent when you stop Channeling:\r\n{icon:bullet,1.2} {c_label}1 Point:{/c} {c_number}1{/c} Charge\r\n{icon:bullet,1.2} {c_label}2 Points:{/c} {c_number}2{/c} Charges\r\n{icon:bullet,1.2} {c_label}3 Points:{/c} {c_number}3{/c} Charges{/if}",
+   "szText": "{c_label}Energy Cost:{/c_label} {c_resource}{Resource Cost} per second{/c_resource}\r\n{/if}{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat Effect Chance}|%|]{/c}\r\n{/if}Channel to launch knives at surrounding enemies with each knife dealing {c_number}{payload:DAMAGE}{/c} damage. Attack Speed increases damage done rather than number of knives thrown.{if:SF_58}\r\n\r\n{c_important}Combo Points{/c} increase damage and grant a Movement Speed bonus for {c_number}{SF_63}{/c} seconds.\r\n{icon:bullet,1.2} {c_label}1 Point:{/c} {c_number}{payload:DAMAGE_TOOLTIP_1CP}{/c} damage, {c_number}[{SF_57}*100|%+|]{/c} movement\r\n{icon:bullet,1.2} {c_label}2 Points:{/c} {c_number}{payload:DAMAGE_TOOLTIP_2CP}{/c} damage, {c_number}[{SF_57}*100*2|%+|]{/c} movement\r\n{icon:bullet,1.2} {c_label}3 Points:{/c} {c_number}{payload:DAMAGE_TOOLTIP_3CP}{/c} damage, {c_number}[{SF_57}*100*3*{SF_61}|%+|]{/c} movement{/if}",
    "hLabel": 3707583
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "rankup_desc",
-   "szText": "\r\n{icon:bullet, 1.2} Damage {icon:arrow, 1.2} {c_number}{payload:DAMAGE}{/c}",
+   "szText": "\r\n{icon:bullet, 1.2} {if:SF_44}Damage{/if}{if:Mod.UpgradeA}Shard Damage{/if}{if:Mod.UpgradeB}Fan Damage{/if}{if:Mod.UpgradeC}Grenade Damage{/if} {icon:arrow, 1.2} {c_number}{if:SF_44}{payload:DAMAGE}{/if}{if:Mod.UpgradeA}{payload:UPGRADE_A_DAMAGE}{/if}{if:Mod.UpgradeB}{payload:UPGRADEB_DAMAGE}{/if}{if:Mod.UpgradeC}{payload:GRENADE_IMPACT}{/if}{/c}",
    "hLabel": 4074074671
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
+   "szLabel": "Mod8_Description",
+   "szText": "Knives have a {c_number}[{SF_26}*100|%|]{/c} chance to shatter into {c_number}[SF_18]{/c} shards of metal on hit, dealing {c_number}{payload:UPGRADE_A_DAMAGE}{/c} damage.\r\n\r\n{c_important}Dance of Knives{/c} becomes a {c_important}Marksman{/c} Skill.",
+   "hLabel": 1360065851
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod8_Name",
+   "szText": "Star Shards",
+   "hLabel": 2765954616
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
    "szLabel": "Mod0_Description",
-   "szText": "Each {c_important}Dance of Knives{/c} knife Slows enemies by {c_number}[SF_8*100|%|]{/c} for {c_number}{buffduration:MOD_SLOW}{/c} seconds and has a {c_number}[SF_24*100|%|]{/c} chance to pierce.",
+   "szText": "{c_important}Dance of Knives{/c} now throws a fan of {c_number}{SF_54}{/c} knives that each deal {c_number}{payload:UPGRADEB_DAMAGE}{/c} damage.",
    "hLabel": 3591940403
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod0_Name",
-   "szText": "Disciplined Dance of Knives",
+   "szText": "Fan of Knives",
    "hLabel": 2452871472
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
-   "szLabel": "Mod4_Description",
-   "szText": "When you stop Channeling {c_important}Dance of Knives{/c}, drop up to {c_number}[SF_33]{/c} {c_important}Stun Grenades{/c}, each dealing {c_number}{payload:TOOLTIP_DAMAGE_FOR_GRENADES}{/c} damage. The Channeled duration determines how many are dropped.",
-   "hLabel": 328519479
+   "szLabel": "Mod6_Description",
+   "szText": "{c_important}Dance of Knives{/c} now drops grenades instead of knives, each dealing {c_number}{payload:GRENADE_IMPACT}{/c}.\r\n\r\n{c_important}Dance of Knives{/c} is also a {c_important}Grenade{/c} Skill.",
+   "hLabel": 2991776313
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
-   "szLabel": "Mod4_Name",
-   "szText": "Methodical Dance of Knives",
-   "hLabel": 2609413044
+   "szLabel": "Mod6_Name",
+   "szText": "Grenade Jumper",
+   "hLabel": 2687683830
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod2_Description",
-   "szText": "Every {c_number}[SF_4]{/c} meters you travel while Channeling {c_important}Dance of Knives{/c} grants {c_number}[SF_30]{/c} |4Charge:Charges.",
+   "szText": "{c_important}Dance of Knives'{/c} Energy Cost is reduced to {c_number}{SF_29}{/c}.",
    "hLabel": 1960229941
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod2_Name",
-   "szText": "Enhanced Dance of Knives",
+   "szText": "Energy Cost Reduction",
    "hLabel": 2531142258
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod10_Description",
+   "szText": "{c_important}Dance of Knives{/c} gains {c_number}[SF_46 * 100|%x|]{/c} increased Lucky Hit Chance.",
+   "hLabel": 2741697796
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod10_Name",
+   "szText": "Lucky Hit",
+   "hLabel": 3070117409
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod12_Description",
+   "szText": "{c_important}Dance of Knives{/c} Slows enemies hit by {c_number}[SF_8*100|%|]{/c} for {c_number}{buffduration:MOD_SLOW}{/c} seconds and grants {c_number}[{SF_15}*100|x%|]{/c} Movement Speed while Channeling. ",
+   "hLabel": 1109987334
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod12_Name",
+   "szText": "Slow and Movement Speed",
+   "hLabel": 3148388195
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod4_Description",
+   "szText": "{c_important}Dance of Knives'{/c} knives has a {c_number}[SF_24 * 100|%|]{/c} chance to pierce and grenades' explosion area is increased by {c_number}[SF_50 * 100|+%|]{/c}.",
+   "hLabel": 328519479
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod4_Name",
+   "szText": "Pierce and Size",
+   "hLabel": 2609413044
   }
  ],
  "ptMapStringTable": "0"

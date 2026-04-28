@@ -15,35 +15,21 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "desc",
-   "szText": "{if:SF_30}{c_label}Faith Cost:{/c_label} {c_resource}{Resource Cost} plus 1 more per second{/c_resource}{else}{c_label}Cooldown: {/c}{c_resource}{Cooldown Time}{/c} seconds{/if}\r\n{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat Effect Chance}|%|]{/c}\r\n{/if}Charge with your shield and push enemies Back, granting{c_number}[{SF_3}*100|%+|]{/c} Damage Reduction and dealing {c_number}{payload:END_BURST}{/c} damage while Channeling.",
+   "szText": "{if:SF_30}{c_label}Faith Cost:{/c_label} {c_resource}{Resource Cost} plus 1 more per second{/c_resource}{else}{c_label}Cooldown: {/c}{c_resource}{Cooldown Time}{/c} seconds{/if}\r\n{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat Effect Chance}|%|]{/c}\r\n{/if}Charge with your shield and push enemies Back, granting {c_number}[{SF_3}*100|%+|]{/c} Armor and dealing {c_number}{payload:END_BURST}{/c} damage while Channeling.",
    "hLabel": 3707583
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "rankup_desc",
-   "szText": "\r\n{icon:bullet,1.2} Damage {icon:arrow,1.2} {c_number}{payload:CHARGE_KNOCKBACK}{/c}\r\n{icon:bullet, 1.2} Damage Reduction {icon:arrow, 1.2} {c_number}[{SF_3}*100|%|]{/c}",
+   "szText": "\r\n{icon:bullet,1.2} Damage {icon:arrow,1.2} {c_number}{payload:CHARGE_KNOCKBACK}{/c}\r\n{icon:bullet, 1.2} Armor Gained {icon:arrow, 1.2} {c_number}[{SF_3}*100|%|]{/c}",
    "hLabel": 4074074671
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
-   "szLabel": "Mod1_Description",
-   "szText": "{c_important}Shield Charge{/c} grants {c_resource}{SF_33}{/c} {c_important}{u}Resolve{/u}{/c} whenever it hits an enemy.",
-   "hLabel": 628601524
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
-   "szLabel": "Mod1_Name",
-   "szText": "Enhanced Shield Charge",
-   "hLabel": 2492006865
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
    "szLabel": "Mod2_Description",
-   "szText": "{c_important}Shield Charge{/c} becomes a {c_important}Core{/c} Skill that:\r\n{icon:bullet,1.2} Costs {c_resource}{SF_13}{/c} Faith to Cast and additional {c_resource}{SF_14}{/c} Faith per second\r\n{icon:bullet,1.2} Hits count as Blocking\r\n{icon:bullet,1.2} Deals {c_number}{payload:END_BURST}{/c} damage\r\n{icon:bullet,1.2} Grants {c_number}[SF_31 * 100 * 4 |1%+|]{/c} {c_important}{u}Retribution{/u}{/c} Chance per second up to {c_number}[SF_31 * SF_32 * 100 |%|]{/c}",
+   "szText": "{c_important}Shield Charge{/c} becomes a {c_important}Core{/c} Skill that deals {c_number}{payload:CHARGE_KNOCKBACK_A}{/c} damage.\r\n\r\n{c_important}Shield Charge{/c} now costs {c_resource}{SF_13}{/c} Faith to Cast and an additional {c_resource}{SF_14}{/c} Faith per second.",
    "hLabel": 1960229941
   },
   {
@@ -80,6 +66,62 @@
    "szLabel": "Mod4_Name",
    "szText": "Phalanx Charge",
    "hLabel": 2609413044
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod15_Description",
+   "szText": "{c_important}Shield Charge{/c} grants {c_number}{SF_33}{/c} {c_important}{u}Resolve{/u}{/c} whenever it hits an enemy.",
+   "hLabel": 809905289
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod15_Name",
+   "szText": "Resolve",
+   "hLabel": 3265794374
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod16_Description",
+   "szText": "{c_important}Shield Charge's{/c} damage increases by {c_number}[{SF_38} * 100|%x|]{/c} when it hits an enemy for {c_number}{SF_36}{/c} seconds, up to {c_number}[{SF_39} * 100|%x|]{/c}.",
+   "hLabel": 2141533706
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod16_Name",
+   "szText": "Damage Bonus",
+   "hLabel": 3304929767
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod17_Description",
+   "szText": "{c_important}Shield Charge{/c} grants {c_number}[SF_31 * 100 |%+|]{/c} {c_important}{u}Retribution{/u}{/c} chance while charging when you hit an enemy up to {c_number}[SF_32 * SF_31 * 100 |%+|]{/c}.",
+   "hLabel": 3473162123
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod17_Name",
+   "szText": "Retribution",
+   "hLabel": 3344065160
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod18_Description",
+   "szText": "{c_important}Shield Charge's{/c} hits count as Blocks.",
+   "hLabel": 509823244
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod18_Name",
+   "szText": "Hit Count As Blocking",
+   "hLabel": 3383200553
   }
  ],
  "ptMapStringTable": "0"

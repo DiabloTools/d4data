@@ -15,7 +15,7 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "desc",
-   "szText": "{c_label}Cooldown: {/c}{c_resource}{Cooldown Time}{/c} seconds\r\nShapeshift into {if:Mod.Upgrade1}an {c_important}{u}Unstoppable{/u}{/c}{else}a{/if} Dire Werebear for {c_number}{buffduration:BUFF_MAIN_BEAR}{/c} seconds gaining {c_number}[{SF_10}*100|%x|]{/c} bonus damage and {c_number}[{SF_11}*100|%|]{/c} Damage Reduction{/if}.\r\n\r\n{c_important}Companions{/c} can be used during this effect.",
+   "szText": "{c_label}Cooldown: {/c}{c_resource}{Cooldown Time}{/c} seconds\r\nShapeshift into {if:Mod.Upgrade3}an {c_important}{u}Unstoppable{/u}{/c}{else}a{/if} Dire Werebear for {c_number}[{buffduration:BUFF_MAIN_BEAR}|1|]{/c} seconds becoming {c_important}{u}Berserk{/u}{/c} and gaining {c_number}[SF_7*100|+%|]{/c} bonus Armor.",
    "hLabel": 3707583
   },
   {
@@ -29,64 +29,120 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "rankup_desc",
-   "szText": "\r\n{icon:bullet,1.2} Damage {icon:arrow,1.2} {c_number}[{SF_10}*100|%x|]{/c}\r\n{c_label}At Rank 5:{/c}\r\n{icon:arrow,1.2} Cooldown is reduced by {c_number}[{SF_34}]{/c}.",
+   "szText": "\r\n{icon:bullet,1.2} Duration {icon:arrow,1.2} {c_number}[{buffduration:BUFF_MAIN_BEAR}|1|]{/c} seconds",
    "hLabel": 4074074671
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
-   "szLabel": "Buff0_Name",
-   "szText": "Grizzly Rage",
-   "hLabel": 231140723
+   "szLabel": "Mod8_Description",
+   "szText": "{c_important}Grizzly Rage{/c} grants {c_number}{buffduration:UPGRADEA_INVULNERABLE}{/c} seconds of {c_important}{u}Immunity{/u}{/c} when cast.",
+   "hLabel": 1360065851
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
-   "szLabel": "Buff0_Description",
-   "szText": "Rampaging as a Dire Werebear!",
-   "hLabel": 673707030
+   "szLabel": "Mod8_Name",
+   "szText": "Immunity",
+   "hLabel": 2765954616
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
-   "szLabel": "Buff9_Name",
-   "szText": "Dire Werewolf",
-   "hLabel": 583359260
+   "szLabel": "Mod10_Description",
+   "szText": "Your damage is increased by {c_number}[SF_34*100|x%|]{/c} (max. {c_number}[SF_35*100|x%|]{/c}) each time you take or deal damage with a skill while {c_important}Grizzly Rage{/c} is active.",
+   "hLabel": 2741697796
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
-   "szLabel": "Buff9_Description",
-   "szText": "Rampaging as a Dire Werewolf!",
-   "hLabel": 4068428191
+   "szLabel": "Mod10_Name",
+   "szText": "Cornered Beast",
+   "hLabel": 3070117409
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod12_Description",
+   "szText": "{c_important}Earth{/c} and {c_important}Storm{/c} Skills may be cast as a {if:SF_13}Werewolf{else}Werebear{/if} and deal {c_number}[SF_36*100|x%|]{/c} bonus damage while {c_important}Grizzly Rage{/c} is active.",
+   "hLabel": 1109987334
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod12_Name",
+   "szText": "Avatar of Nature",
+   "hLabel": 3148388195
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod0_Description",
-   "szText": "You are {c_important}{u}Unstoppable{/u}{/c} while {c_important}Grizzly Rage{/c} is active. ",
+   "szText": "Reduces the cooldown of {c_important}Grizzly Rage{/c} by {c_number}[SF_8]{/c} seconds.",
    "hLabel": 3591940403
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod0_Name",
-   "szText": "Prime Grizzly Rage",
+   "szText": "Cooldown Reduction",
    "hLabel": 2452871472
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod1_Description",
-   "szText": "Gain {c_number}[{SF_2}*100|%|]{/c} of your Maximum Life {c_number}([Max(1,{fortified:MOD_2_FORTIFY_PER_SECOND})|0|]){/c} as {c_important}{u}Fortify{/u}{/c} per second while {c_important}Grizzly Rage{/c} is active.",
+   "szText": "Increases {c_important}Grizzly Rage's{/c} Armor bonus by an additional {c_number}[SF_9*100|+%|]{/c}.",
    "hLabel": 628601524
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod1_Name",
-   "szText": "Supreme Grizzly Rage",
+   "szText": "Armor Bonus",
    "hLabel": 2492006865
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod4_Description",
+   "szText": "{c_important}Grizzly Rage{/c} makes you {c_important}{u}Unstoppable{/u}{/c} for {c_number}{buffduration:UPGRADE3_UNSTOPPABLE}{/c} seconds.",
+   "hLabel": 328519479
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod4_Name",
+   "szText": "Unstoppable",
+   "hLabel": 2609413044
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod6_Description",
+   "szText": "{c_important}Grizzly Rage{/c} grants {c_number}[SF_2*100|%|]{/c} {c_important}{u}Fortify{/u}{/c} when cast.",
+   "hLabel": 2991776313
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod6_Name",
+   "szText": "Fortify",
+   "hLabel": 2687683830
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod13_Description",
+   "szText": "{c_important}Grizzly Rage's{/c} duration is increased by {c_number}[SF_17]{/c} second.",
+   "hLabel": 2441615751
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod13_Name",
+   "szText": "Werebear",
+   "hLabel": 3187523588
   }
  ],
  "ptMapStringTable": "0"

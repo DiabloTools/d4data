@@ -15,15 +15,113 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "desc",
-   "szText": "{if:SF_16}{c_label}Cooldown:{/c_label} {c_resource}{Cooldown Time}{/c_resource} seconds\r\n{/if}{if:SF_17}{c_label}Cooldown:{/c_label} {c_resource}{Cooldown Time}{/c_resource} seconds\r\n{/if}{if:SF_18}{c_label}Cooldown:{/c_label} {c_resource}{Cooldown Time}{/c_resource} seconds\r\n{/if}{c_label}Passive:{/c} You are protected by a Golem with {c_number}[{pet_health:PET_SPAWN_BLOOD}*{SF_1}]{/c} Life that attacks for {c_number}{payload:TOOLTIP_MELEE}{/c} damage. \r\n\r\n{if:SF_16}{c_label}Active:{/c} Your Golem becomes {c_important}{u}Unstoppable{/u}{/c} and Taunts Nearby enemies and takes {c_number}[{SF_22}*100|%|]{/c} reduced damage for the next {c_number}6{/c} seconds. It gains {c_number}[SF_40 *100|%|]{/c} of its Armor as Thorns for the duration. You become {c_important}{u}Unstoppable{/u}{/c} for {c_number}[SF_42|1|]{/c} |4second:seconds;. {/if}{if:SF_17}{c_label}Active:{/c} Your Golem becomes {c_important}{u}Unstoppable{/u}{/c} and drains the blood of enemies in the area, dealing {c_number}{payload:TOOLTIP_BLOOD_ACTIVE}{/c} damage and healing {c_number}[{SF_9}*100|%|]{/c} of its Life for each enemy drained. Healing received is tripled and damage is increased by {c_number}[300|%x|]{/c} if only one enemy is drained. You become {c_important}{u}Unstoppable{/u}{/c} for {c_number}[SF_42|1|]{/c} |4second:seconds;. {/if}{if:SF_18}{c_label}Active:{/c} Command your Golem to go to the targeted area, they become {c_important}{u}Unstoppable{/u}{/c} and slam their fists into the ground, dealing {c_number}{payload:TOOLTIP_SLAM}{/c} damage and Stunning surrounding enemies for {c_number}{SF_29}{/c} seconds. You become {c_important}{u}Unstoppable{/u}{/c} for {c_number}[SF_42|1|]{/c} |4second:seconds;.{/if} Your Skeletal Warriors and Skeletal Mages will prioritize attacking the target of this attack.\r\n\r\nWhen your Golem dies, it respawns after {c_number}{SF_7}{/c} seconds.",
+   "szText": "{if:SF_16}{c_label}Cooldown:{/c_label} {c_resource}{Cooldown Time}{/c_resource} seconds\r\n{/if}{if:SF_17}{c_label}Cooldown:{/c_label} {c_resource}{Cooldown Time}{/c_resource} seconds\r\n{/if}{if:SF_18}{c_label}Cooldown:{/c_label} {c_resource}{Cooldown Time}{/c_resource} seconds\r\n{/if}{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat Effect Chance}|%|]{/c}\r\n{/if}{c_label}Passive:{/c} Raise a Golem that attacks for {c_number}{payload:TOOLTIP_MELEE}{/c} damage. When your Golem dies, it respawns after {c_number}{SF_7}{/c} seconds.\r\n\r\n{if:SF_16}{c_label}Active:{/c} Command your Golem to leap to the target area. It becomes {c_important}{u}Unstoppable{/u}{/c}, Taunts Nearby enemies, and takes {c_number}[{SF_22}*100|%|]{/c} reduced damage for the next {c_number}6{/c} seconds. It gains {c_number}[SF_40 *100|%|]{/c} of its Armor as Thorns for the duration.{/if}{if:SF_17}{c_label}Active:{/c} Command your Golem to leap to the target area. It becomes {c_important}{u}Unstoppable{/u}{/c} and drains the blood of enemies, dealing {c_number}{payload:TOOLTIP_BLOOD_ACTIVE}{/c} damage and healing {c_number}[{SF_9}*100|%|]{/c} of its Life for each enemy drained. Healing received is tripled and damage is increased by {c_number}[300|%x|]{/c} if only one enemy is drained.{/if}{if:SF_18}{c_label}Active:{/c} Command your Golem to leap to the target area. It becomes {c_important}{u}Unstoppable{/u}{/c} and slams its fists into the ground, dealing {c_number}{payload:TOOLTIP_SLAM}{/c} damage and Stunning surrounding enemies for {c_number}{SF_29}{/c} seconds.{/if}",
    "hLabel": 3707583
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "rankup_desc",
-   "szText": "Life increased to {c_number}{pet_health:PET_SPAWN_BLOOD}{/c}. Attack damage increased to {c_number}{payload:TOOLTIP_MELEE}{/c}.\r\n\r\n{if:SF_16}Active healing increased to {c_number}[{SF_14}*100|%|]{/c} per Corpse.{/if}{if:SF_17}Infusion damage increased to {c_number}{payload:TOOLTIP_BLOOD_ACTIVE}{/c}.{/if}",
+   "szText": "\r\n{icon:bullet,1.2} Damage {icon:arrow,1.2} {c_number}{payload:TOOLTIP_MELEE}{/c}",
    "hLabel": 4074074671
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod4_Description",
+   "szText": "{c_important}Golem{/c} now raises {c_number}{SF_53}{/c} smaller {c_important}Golems{/c} that deal {c_number}[{SF_54}*100|%|]{/c} of normal damage and gain {c_number}[{SF_55}*100|%+|]{/c} Attack Speed.",
+   "hLabel": 328519479
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod4_Name",
+   "szText": "Gravebloom",
+   "hLabel": 2609413044
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod5_Description",
+   "szText": "Commanding your {c_important}Golem{/c} causes it to erupt, dealing {c_number}{payload:EXPLOSION_DAMAGE}{/c} damage to surrounding enemies.\r\n\r\nYour {c_important}Golem{/c} passively consumes nearby Corpses every second to reduce its Cooldown by {c_number}{SF_50}{/c} seconds per Corpse consumed.",
+   "hLabel": 1660147896
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod5_Name",
+   "szText": "Fel Gluttony",
+   "hLabel": 2648548437
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod6_Description",
+   "szText": "{c_important}Golem{/c} now raises a larger {c_important}Golem{/c} that gains an aura of command, increasing the Cast Speed and Movement Speed of your other {c_important}Minions{/c} by {c_number}[{SF_59} * 100|%x|]{/c}.",
+   "hLabel": 2991776313
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod6_Name",
+   "szText": "Gargantua",
+   "hLabel": 2687683830
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod7_Description",
+   "szText": "{c_important}Golem{/c} deals {c_number}[SF_45*100|x%|]{/c} increased damage to {c_important}{u}Vulnerable{/c}{/u} enemies.",
+   "hLabel": 28437434
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod7_Name",
+   "szText": "Damage Bonus",
+   "hLabel": 2726819223
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod8_Description",
+   "szText": "Commanding your {c_important}Golem{/c} also grants you {c_important}{u}Unstoppable{/c}{/u} for {c_number}{SF_42}{/c} seconds.",
+   "hLabel": 1360065851
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod8_Name",
+   "szText": "Unstoppable",
+   "hLabel": 2765954616
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod9_Description",
+   "szText": "{c_important}Golem{/c} {c_important}{u}Weakens{/c}{/u} enemies for {c_number}{SF_46}{/c} seconds whenever it attacks.",
+   "hLabel": 2691694268
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod9_Name",
+   "szText": "Weaken",
+   "hLabel": 2805090009
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod10_Description",
+   "szText": "Commanding your {c_important}Golem{/c} grants {c_number}{SF_47}{/c} stacks of {c_important}{u}Resolve{/c}{/u}, {c_important}{u}Overpower{/c}{/u}, or {c_important}{u}Ferocity{/c}{/u} based on whether your {c_important}Golem{/c} type is Bone, Blood, or Iron respectively.",
+   "hLabel": 2741697796
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod10_Name",
+   "szText": "Resolve, Overpower, or Ferocity",
+   "hLabel": 3070117409
   }
  ],
  "ptMapStringTable": "0"

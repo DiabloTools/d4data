@@ -15,14 +15,14 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "desc",
-   "szText": "{if:SF_21}{c_label}Fury Cost:{/c_label} {c_resource}{Resource Cost}{/c_resource}\r\n{/if}{if:SF_24}{c_label}Charges:{/c} {c_resource}{SF_9}{/c}\r\n{c_label}Charge Cooldown:{/c_label} {c_resource}{Recharge Time}{/c_resource} seconds\r\n{/if}{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat Effect Chance}|%|]{/c}\r\n{/if}Throw out a trio of chains that deal {c_number}{payload:DAMAGE}{/c} damage and Pull In enemies.",
+   "szText": "{if:SF_38}{c_label}Generate Fury:{/c_label} {c_resource}{SF_32}{/c_resource}{/if}{if:SF_39}{if:SF_38}{else}{c_label}Fury Cost:{/c_label} {c_resource}{Resource Cost}{/c_resource}{/if}{/if}{if:SF_41}{c_label}Charges:{/c} {c_resource}{SF_9}{/c}\r\n{c_label}Charge Cooldown:{/c_label} {c_resource}{Recharge Time}{/c_resource} seconds{/if}\r\n{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat Effect Chance}|%|]{/c}\r\n{/if}Throw out a trio of chains that deal {c_number}{payload:DAMAGE}{/c} damage and Pull In enemies.",
    "hLabel": 3707583
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "rankup_desc",
-   "szText": "\r\n{icon:bullet, 1.2} Damage {icon:arrow, 1.2} {c_number}{payload:DAMAGE}{/c}\r\n{icon:bullet, 1.2} Charge Cooldown {icon:arrow, 1.2} {c_number}{Recharge Time}{/c} seconds",
+   "szText": "\r\n{icon:bullet, 1.2} Damage {icon:arrow, 1.2} {c_number}{if:Mod.UpgradeA}{payload:DAMAGE_VARIANTA}{else}{payload:DAMAGE}{/if}{/c}{if:Mod.UpgradeB}\r\n{icon:bullet, 1.2} Dust Devil Damage {icon:arrow, 1.2} {c_number}{payload:UPGRADEA_DUSTDEVIL_TOOLTIP}{/c}{/if}",
    "hLabel": 4074074671
   },
   {
@@ -43,29 +43,99 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod4_Description",
-   "szText": "{c_important}Steel Grasp{/c} damage is increased by {c_number}[SF_13*100|%|]{/c} and if {c_important}Steel Grasp{/c} damages an enemy, gain {c_important}{u}Berserking{/u}{/c} for {c_number}{SF_7}{/c} seconds.",
+   "szText": "{c_important}Steel Grasp{/c} is also a {c_important}Brawling{/c} Skill that launches {c_number}{SF_33}{/c} additional chains for {c_number}{payload:DAMAGE_VARIANTA}{/c} damage.",
    "hLabel": 328519479
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod4_Name",
-   "szText": "Fighter's Steel Grasp",
+   "szText": "Chain Whip",
    "hLabel": 2609413044
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod5_Description",
-   "szText": "{c_important}Steel Grasp{/c} gains {c_number}{SF_10}{/c} additional Charges.",
+   "szText": "{c_important}Steel Grasp{/c} gains {c_number}{SF_10}{/c} additional Charges and forms {c_number}{SF_34}{/c} {c_important}Dust Devils{/c} dealing {c_number}{payload:UPGRADEA_DUSTDEVIL_TOOLTIP}{/c} damage.",
    "hLabel": 1660147896
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod5_Name",
-   "szText": "Warrior's Steel Grasp",
+   "szText": "Devil's Chain",
    "hLabel": 2648548437
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod7_Description",
+   "szText": "{c_important}Steel Grasp{/c} becomes a {c_important}Basic{/c} Skill that has no Cooldown, generates up to {c_number}{SF_32}{/c} Fury based on Charges, but only throws a single chain.",
+   "hLabel": 28437434
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod7_Name",
+   "szText": "Solo Chain",
+   "hLabel": 2726819223
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod8_Description",
+   "szText": "{c_important}Steel Grasp{/c} grants {u}{c_important}Berserking{/u}{/c} for {c_number}[{SF_7}]{/c} seconds on Hit.",
+   "hLabel": 1360065851
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod8_Name",
+   "szText": "Berserking",
+   "hLabel": 2765954616
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod9_Description",
+   "szText": "{c_important}Steel Grasp{/c} gains {c_number}[{SF_37}]{/c} Charges.",
+   "hLabel": 2691694268
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod9_Name",
+   "szText": "Extra Charges",
+   "hLabel": 2805090009
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod10_Description",
+   "szText": "{c_important}Steel Grasp{/c} makes enemies {u}{c_important}Vulnerable{/u}{/c} for {c_number}[{SF_6}]{/c} seconds.",
+   "hLabel": 2741697796
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod10_Name",
+   "szText": "Vulnerable",
+   "hLabel": 3070117409
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod11_Description",
+   "szText": "{c_important}Steel Grasp{/c} {u}{c_important}Weakens{/c}{/u} enemies for {c_number}[{SF_36}]{/c} seconds.",
+   "hLabel": 4073326213
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod11_Name",
+   "szText": "Weaken",
+   "hLabel": 3109252802
   }
  ],
  "ptMapStringTable": "0"

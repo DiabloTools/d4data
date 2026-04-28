@@ -15,7 +15,7 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "desc",
-   "szText": "{c_label}Cooldown: {/c}{c_resource}{Cooldown Time}{/c} seconds\r\n{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat_Effect_Chance_Script_Formula_Override:18}|%|]{/c}\r\n{/if}Form a hurricane around you that deals {c_number}{payload:TOOLTIP_DAMAGE}{/c} damage to surrounding enemies over {c_number}{buffduration:PERSISTENT}{/c} seconds.",
+   "szText": "{if:Mod.UpgradeC}{c_label}Spirit Cost:{/c} {c_resource}[SF_29]{/c} per second{/if}{if:Mod.UpgradeB}{c_label}Charges:{/c} {c_resource}{SF_30}{/c}\r\n{c_label}Charge Cooldown: {/c}{c_resource}{Recharge Time}{/c} seconds{/if}{if:SF_35}{c_label}Cooldown: {/c}{c_resource}{Cooldown Time}{/c} seconds{/if}\r\n{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat_Effect_Chance_Script_Formula_Override:18}|%|]{/c}\r\n{/if}Form a hurricane around you that deals {c_number}{payload:TOOLTIP_DAMAGE}{/c} damage to surrounding enemies over {c_number}{buffduration:PERSISTENT}{/c} seconds.",
    "hLabel": 3707583
   },
   {
@@ -28,58 +28,114 @@
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
-   "szLabel": "Buff9_Name",
-   "szText": "Tempest",
-   "hLabel": 583359260
+   "szLabel": "Mod12_Description",
+   "szText": "Each second while active, {c_important}Hurricane{/c} gains {c_number}[SF_14*100|x%|]{/c} bonus damage.",
+   "hLabel": 1109987334
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
-   "szLabel": "Buff9_Description",
-   "szText": "Hurricane deals increased damage.",
-   "hLabel": 4068428191
+   "szLabel": "Mod12_Name",
+   "szText": "Rapid Intensification",
+   "hLabel": 3148388195
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
-   "szLabel": "Mod3_Description",
-   "szText": "Enemies who are damaged by {c_important}Hurricane{/c} are Slowed by {c_number}[{SF_12}*100|%|]{/c} for {c_number}{buffduration:MOD_SLOW}{/c} seconds.",
-   "hLabel": 3291858358
+   "szLabel": "Mod14_Description",
+   "szText": "Hurricane has {c_number}[SF_30]{/c} charges and can now be placed at the targeted location. Enemies hit are {c_important}{u}Vulnerable{/u}{/c} and have a {c_number}[SF_42*100|%|]{/c} chance to spawn {c_number}[SF_44]{/c} {c_important}{u}Dancing Bolts{/u}{/c} that deal {c_number}{payload:TOOLTIP_UPGRADEB_DANCINGBOLT}{/c} Lightning damage each.\r\n\r\n{c_label}Recharge time: {/c}{c_resource}[SF_31]{/c} seconds",
+   "hLabel": 3773244168
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
-   "szLabel": "Mod3_Name",
-   "szText": "Enhanced Hurricane",
-   "hLabel": 2570277651
+   "szLabel": "Mod14_Name",
+   "szText": "Twin Storms",
+   "hLabel": 3226658981
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
-   "szLabel": "Mod1_Description",
-   "szText": "{c_important}Hurricane{/c} has a {c_number}[{SF_9} * 100|%|]{/c} chance to make enemies {c_important}{u}Vulnerable{/u}{/c} for {c_number}{SF_10}{/c} seconds.",
-   "hLabel": 628601524
+   "szLabel": "Mod16_Description",
+   "szText": "{c_important}Hurricane{/c} has no cooldown and deals {c_number}[SF_28*100|x%|]{/c} bonus damage. {c_important}Hurricane{/c} costs {c_resource}[SF_29]{/c} Spirit per second while active. Cast {c_important}Hurricane{/c} again to toggle the effect off.\r\n\r\n{c_important}Hurricane{/c} becomes a {c_important}Core{/c} Skill.",
+   "hLabel": 2141533706
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
-   "szLabel": "Mod1_Name",
-   "szText": "Natural Hurricane",
-   "hLabel": 2492006865
+   "szLabel": "Mod16_Name",
+   "szText": "Derecho",
+   "hLabel": 3304929767
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod8_Description",
+   "szText": "Movement Speed is increased by {c_number}[SF_23*100|x%|]{/c} while {c_important}Hurricane{/c} is active.",
+   "hLabel": 1360065851
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod8_Name",
+   "szText": "Movement Speed",
+   "hLabel": 2765954616
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod9_Description",
+   "szText": "{c_important}Hurricane's{/c} Critical Strike Chance is increased by {c_number}[SF_32*100|+%|]{/c} and an additional {c_number}[SF_34*100|%|]{/c} Critical Strike Chance for each stack of  {c_important}{u}Ferocity{/u}{/c} active.",
+   "hLabel": 2691694268
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod9_Name",
+   "szText": "Critical Strike Chance",
+   "hLabel": 2805090009
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod2_Description",
-   "szText": "Enemies affected by {c_important}Hurricane{/c} deal {c_number}[{SF_11}*100|%|]{/c} less damage.",
+   "szText": "Enemies affected by {c_important}Hurricane{/c} are {c_important}{u}Weakened{/u}{/c}.",
    "hLabel": 1960229941
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod2_Name",
-   "szText": "Savage Hurricane",
+   "szText": "Weaken",
    "hLabel": 2531142258
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod3_Description",
+   "szText": "{c_important}Hurricane{/c} Slows enemies by {c_number}[{SF_12}*100|%|]{/c} for {c_number}{buffduration:UPGRADE4_SLOW}{/c} seconds.",
+   "hLabel": 3291858358
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod3_Name",
+   "szText": "Slow",
+   "hLabel": 2570277651
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod17_Description",
+   "szText": "{c_important}Hurricane's{/c} damage is increased by {c_number}[SF_20 * 100|%x|]{/c}.",
+   "hLabel": 3473162123
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod17_Name",
+   "szText": "Versatile",
+   "hLabel": 3344065160
   }
  ],
  "ptMapStringTable": "0"

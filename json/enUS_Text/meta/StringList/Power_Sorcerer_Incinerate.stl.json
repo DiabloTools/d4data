@@ -15,57 +15,113 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "desc",
-   "szText": "{c_label}Mana Cost: {/c}{c_resource}[{Resource Cost}*2] per second{/c}\r\n{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat_Effect_Chance_Script_Formula_Override:40}|%|]{/c}\r\n{/if}Channel a beam of fire, Burning enemies for {c_number}{dotdps:BURNING_DAMAGE}{/c} damage per second. Damage per second increases over {c_number}{SF_21}{/c} seconds, up to {c_number}{dotdps:TOOLTIP_MAX_DAMAGE}{/c}. \r\n\r\nYou gain {c_number}[{SF_49} * 100|%|]{/c} Damage Reduction while Channeling {c_important}Incinerate{/c}.",
+   "szText": "{c_label}Mana Cost: {/c}{c_resource}[{Resource Cost}/SF_2] per second{/c}\r\n{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat Effect Chance}|%|]{/c}\r\n{/if}Channel a beam of fire, dealing {c_number}{payload:DAMAGE}{/c} damage and an additional {c_number}{dot:BURNING_DAMAGE}{/c} Burning damage over {c_number}{buffduration:BURNING_DAMAGE}{/c} seconds. \r\n\r\n{c_important}Incinerate's{/c} damage increases by {c_number}[SF_19|%x|]{/c} every second you channel it, up to {c_number}[SF_17|%x|]{/c}.",
    "hLabel": 3707583
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "rankup_desc",
-   "szText": "\r\n{icon:bullet,1.2} Burning Damage {icon:arrow,1.2} {c_number}{dotdps:BURNING_DAMAGE}{/c}\r\n{icon:bullet,1.2} Burning Damage Maximum {icon:arrow,1.2} {c_number}{dotdps:TOOLTIP_MAX_DAMAGE}{/c}",
+   "szText": "\r\n\r\n{icon:bullet,1.2} Direct Damage {icon:arrow,1.2} {c_number}{payload:DAMAGE}{/c}\r\n{icon:bullet,1.2} Burning Damage {icon:arrow,1.2} {c_number}{dotdps:BURNING_DAMAGE}{/c}",
    "hLabel": 4074074671
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
-   "szLabel": "Mod1_Description",
-   "szText": "While channeling {c_important}Incinerate{/c}, you Burn enemies around you for {c_number}[{SF_29} * 100|%|]{/c} of the damage per second.",
-   "hLabel": 628601524
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
-   "szLabel": "Mod1_Name",
-   "szText": "Enhanced Incinerate",
-   "hLabel": 2492006865
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
    "szLabel": "Mod0_Description",
-   "szText": "Enemies deal {c_number}[{SF_28} * 100|%|]{/c} less damage while Burning from {c_important}Incinerate{/c}.",
+   "szText": "{c_important}Incinerate{/c} maximum damage bonus while channeling is increased to {c_number}[SF_13|%x|]{/c}.\r\n\r\n{c_important}Incinerate's{/c} Size is increased by {c_number}[SF_14 * 100|%|]{/c} when you reach the maximum damage bonus.",
    "hLabel": 3591940403
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod0_Name",
-   "szText": "Destructive Incinerate",
+   "szText": "Focused Flame",
    "hLabel": 2452871472
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod5_Description",
-   "szText": "Every {c_number}{SF_17}{/c} seconds an enemy has been hit by {c_important}Incinerate{/c}, they are Immobilized for  {c_number}[{SF_18}|1|]{/c} seconds.",
+   "szText": "{c_important}Incinerate{/c} gains {c_number}2{/c} additional beams and deals its Burning damage {c_number}[SF_37 * 100 |%|]{/c} faster, but its range is reduced.",
    "hLabel": 1660147896
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod5_Name",
-   "szText": "Greater Incinerate",
+   "szText": "Flamethrower",
    "hLabel": 2648548437
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod7_Description",
+   "szText": "{c_important}Incinerate{/c} becomes a {c_important}Shock{/c} Skill that deals Lightning damage.\r\n\r\n{c_important}Incinerate's{/c} beam no longer penetrates enemies and it now deals {c_number}{payload:UPGRADEC_DAMAGE}{/c} damage to the first enemy hit and an additional {c_number}{payload:UPGRADEC_SECONDARY_DAMAGE}{/c} damage distributed among up to {c_number}{SF_35}{/c} enemies around them.",
+   "hLabel": 28437434
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod7_Name",
+   "szText": "Disintegration",
+   "hLabel": 2726819223
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod8_Description",
+   "szText": "{c_important}Incinerate{/c} deals {c_number}[SF_15 * 100 |x%|]{/c} increased damage while you are {u}{c_important}Healthy{/c}{/u}.",
+   "hLabel": 1360065851
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod8_Name",
+   "szText": "Healthy Damage Bonus",
+   "hLabel": 2765954616
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod9_Description",
+   "szText": "{c_important}Incinerate{/c} heals you for {c_number}[SF_22 * 100 |%|]{/c} of your Maximum Life {c_number}([PlayerHealthMax() * SF_22]){/c} per enemy hit.",
+   "hLabel": 2691694268
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod9_Name",
+   "szText": "Healing",
+   "hLabel": 2805090009
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod10_Description",
+   "szText": "{c_important}Incinerate{/c} gains a {c_number}[SF_23 * 100|%|]{/c} chance to deal double damage while you have a stack of {u}{c_important}Overpower{/c}{/u}.",
+   "hLabel": 2741697796
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod10_Name",
+   "szText": "Overpower",
+   "hLabel": 3070117409
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod11_Description",
+   "szText": "{c_important}Incinerate{/c} {u}{c_important}Executes{/c}{/u} enemies.",
+   "hLabel": 4073326213
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod11_Name",
+   "szText": "Execute",
+   "hLabel": 3109252802
   }
  ],
  "ptMapStringTable": "0"

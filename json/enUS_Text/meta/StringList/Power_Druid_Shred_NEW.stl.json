@@ -15,7 +15,7 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "desc",
-   "szText": "{c_label}Spirit Cost: {/c}{c_resource}{Resource Cost}{/c}\r\n{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat Effect Chance}|%|]{/c}\r\n{/if}{if:Mod.UpgradeA}Shapeshift into a Werewolf and dash at the target, performing a trio of combo attacks:{else}Shapeshift into a Werewolf and perform a trio of combo attacks:{/if}\r\n{icon:bullet}{c_label}1st Attack:{/c} {if:Mod.UpgradeA}Deal{else}Dash towards the target and deal{/if} {c_number}{payload:ATTACK_ONE}{/c} damage.\r\n{icon:bullet}{c_label}2nd Attack:{/c} Deal {c_number}{payload:ATTACK_TWO}{/c} damage.\r\n{icon:bullet}{c_label}3rd Attack:{/c} Perform a larger finishing move dealing {c_number}{payload:ATTACK_THREE}{/c} damage.",
+   "szText": "{c_label}Spirit Cost: {/c}{c_resource}{Resource Cost}{/c}\r\n{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat Effect Chance}|%|]{/c}\r\n{/if}{if:Mod.UpgradeA}Shapeshift into a Werewolf and dash at the target, performing a trio of combo attacks:{else}Shapeshift into a Werewolf and perform a trio of combo attacks:{/if}\r\n{icon:bullet}{c_label}1st Attack:{/c} Deal {c_number}{payload:ATTACK_ONE}{/c} damage.\r\n{icon:bullet}{c_label}2nd Attack:{/c} Deal {c_number}{payload:ATTACK_TWO}{/c} damage.\r\n{icon:bullet}{c_label}3rd Attack:{/c} Perform a larger finishing move dealing {c_number}{payload:ATTACK_THREE}{/c} damage.",
    "hLabel": 3707583
   },
   {
@@ -50,43 +50,113 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod0_Description",
-   "szText": "{c_important}Shred's{/c} additional attacks also perform a dash. In addition, {c_important}Shred's{/c} Critical Strike Damage is increased by {c_number}[{SF_5}*100|%x|]{/c}.",
+   "szText": "Your Claws are electrically charged allowing {c_important}Shred{/c} to deal {c_number}[SF_38*100|x%|]{/c} bonus damage as Lightning.\r\n\r\n{c_important}Shred{/c} becomes a {c_important}Storm{/c} Skill.",
    "hLabel": 3591940403
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod0_Name",
-   "szText": "Primal Shred",
+   "szText": "Storm Shred",
    "hLabel": 2452871472
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod1_Description",
-   "szText": "{c_important}Shred's{/c} third combo attack is larger and applies an additional {c_number}{dot:MOD_B_POISONDOT}{/c} Poisoning damage over {c_number}{SF_7}{/c} seconds, and causes enemies to take {c_number}[{SF_26}*100|%x|]{/c} increased Poisoning damage for {c_number}{SF_7}{/c} seconds.",
+   "szText": "{c_important}Shred's{/c} third combo attack becomes a powerful 360 degree swipe that deals {c_number}{payload:UPGRADEB_ATTACK_THREE}{/c} damage.",
    "hLabel": 628601524
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod1_Name",
-   "szText": "Raging Shred",
+   "szText": "Roundhouse",
    "hLabel": 2492006865
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod7_Description",
-   "szText": "DEPRECATED",
+   "szText": "{c_important}Shred's{/c} first attack gains a {c_number}[SF_39*100|+%|]{/c} Critical Strike Chance and {c_number}[SF_40*100|+%|]{/c} Critical Strike Damage bonus.",
    "hLabel": 28437434
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod7_Name",
-   "szText": "DEPRECATED",
+   "szText": "Critical Shred",
    "hLabel": 2726819223
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod8_Description",
+   "szText": "{c_important}Shred{/c} grants {c_important}{u}Berserking{/u}{/c} for {c_number}[SF_31]{/c} seconds. Subsequent casts extend this duration up to a maximum of {c_number}[SF_32]{/c} seconds.",
+   "hLabel": 1360065851
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod8_Name",
+   "szText": "Berserking",
+   "hLabel": 2765954616
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod9_Description",
+   "szText": "{c_important}Shred{/c} Heals for {c_number}[{SF_8}*100|%|]{/c} of your Maximum Life {c_number}([Max(1,PlayerHealthMax() * SF_8)]){/c} if an enemy is struck.\r\n\r\nHealing is increased to {c_number}[{SF_8}*2*100|%|]{/c} of your Maximum Life {c_number}([Max(1,PlayerHealthMax() * SF_8*2)]){/c} when striking a Poisoned enemy.",
+   "hLabel": 2691694268
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod9_Name",
+   "szText": "Healing",
+   "hLabel": 2805090009
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod10_Description",
+   "szText": "Critical Strikes with {c_important}Shred{/c} restore {c_number}[SF_19]{/c} Spirit. \r\n\r\nStriking a Poisoned enemy instead grants {c_number}[SF_19*2]{/c} Spirit.",
+   "hLabel": 2741697796
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod10_Name",
+   "szText": "Spirit",
+   "hLabel": 3070117409
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod11_Description",
+   "szText": "{c_important}Shred's{/c} Cast Speed is increased by {c_number}[SF_16 * 100]%{/c}.",
+   "hLabel": 4073326213
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod11_Name",
+   "szText": "Cast Speed",
+   "hLabel": 3109252802
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod12_Description",
+   "szText": "{c_important}Shred's{/c} damage is increased by {c_number}[SF_7 * 100|%x|]{/c}.",
+   "hLabel": 1109987334
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod12_Name",
+   "szText": "Werewolf",
+   "hLabel": 3148388195
   }
  ],
  "ptMapStringTable": "0"

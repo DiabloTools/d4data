@@ -15,85 +15,113 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "desc",
-   "szText": "{c_label}Cooldown:{/c} {c_resource}{Cooldown Time}{/c} seconds\r\n{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat_Effect_Chance_Script_Formula_Override:17}|%|]{/c}\r\n{/if}Engulf yourself in flames for {c_number}{buffduration:FLAMESHIELD_BUFF}{/c} seconds, Burning surrounding enemies for {c_number}{dot:BURNING_DAMAGE}{/c} damage per second.\r\n\r\nWhile {c_important}Flame Shield{/c} is active, you are {c_important}{u}Immune{/u}{/c}.",
+   "szText": "{if:SF_10}{c_label}Cooldown:{/c_label} {c_resource}{Cooldown Time}{/c} seconds\r\n{/if}{if:SF_9}{c_label}Charges:{/c} {c_resource}[SF_9 + 1]{/c}\r\n{c_label}Charge Cooldown:{/c_label} {c_resource}{Recharge Time}{/c} seconds\r\n{/if}{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat_Effect_Chance_Script_Formula_Override:17}|%|]{/c}\r\n{/if}Engulf yourself in flames for {c_number}[{buffduration:FLAMESHIELD_BUFF}|1|]{/c} |4second:seconds;, becoming {u}{c_important}Immune{/c}{/u} and dealing {c_number}{dot:TOOLTIP_BURNING_DAMAGE}{/c} Burning damage over {c_number}[{buffDuration:BURNING_DAMAGE}]{/c} seconds to surrounding enemies.",
    "hLabel": 3707583
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "rankup_desc",
-   "szText": "\r\n{icon:bullet,1.2} Duration{icon:arrow,1.2} {c_number}{buffduration:FLAMESHIELD_BUFF}{/c}\r\n{icon:bullet,1.2} Burning Damage {icon:arrow,1.2} {c_number}{payload:AOE_DAMAGE}{/c}",
+   "szText": "\r\n{icon:bullet,1.2} Burning Damage {icon:arrow,1.2} {c_number}{dot:TOOLTIP_BURNING_DAMAGE}{/c}{if:Mod.UpgradeC} \r\n{icon:bullet,1.2} Movement Speed {icon:arrow,1.2} {c_number}[SF_31 * 100|x1%|]{/c}\r\n{icon:bullet,1.2} Dodge {icon:arrow,1.2} {c_number}[SF_32* 100|1%|]{/c}\r\n{icon:bullet,1.2} Crackling Energy per Second {icon:arrow,1.2} {c_number}{SF_33}{/c}{/if}",
    "hLabel": 4074074671
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
-   "szLabel": "Buff0_Name",
-   "szText": "Flame Shield",
-   "hLabel": 231140723
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
-   "szLabel": "Buff0_Description",
-   "szText": "Burn surrounding enemies.",
-   "hLabel": 673707030
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
-   "szLabel": "Buff11_Name",
-   "szText": "Smoldering Empowerment",
-   "hLabel": 2806582117
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
-   "szLabel": "Buff11_Description",
-   "szText": "Your next Skill is a guaranteed Critical Strike.",
-   "hLabel": 2260905416
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
-   "szLabel": "Mod0_Description",
-   "szText": "{c_important}Flame Shield{/c} has a {c_number}[{SF_26} * 100|%|]{/c} larger Burn radius.",
-   "hLabel": 3591940403
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
-   "szLabel": "Mod0_Name",
-   "szText": "Enhanced Flame Shield",
-   "hLabel": 2452871472
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
    "szLabel": "Mod1_Description",
-   "szText": "After {c_important}Flame Shield{/c} ends, surrounding enemies are Stunned for {c_number}{buffduration:UPGRADEA_STUN}{/c} seconds and your next Skill is a guaranteed Critical Strike.",
+   "szText": "{c_important}Flame Shield{/c} instantly scorches close enemies, dealing {c_number}{payload:UPGRADEA_DAMAGE}{/c} damage and Immobilizing them for {c_number}{buffDuration:UPGRADEA_IMMOBILIZE}{/c} seconds.",
    "hLabel": 628601524
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod1_Name",
-   "szText": "Mystical Flame Shield",
+   "szText": "Scorch",
    "hLabel": 2492006865
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod4_Description",
-   "szText": "{c_important}Flame Shield{/c} Heals you for {c_number}[{SF_12} * 100|%|]{/c} of your missing Life.",
+   "szText": "{c_important}Flame Shield{/c} rains down {c_number}[1 / SF_13]{/c} {u}{c_important}Meteorites{/c}{/u} per second that deal {c_number}{payload:UPGRADEB_METEORITE_DAMAGE}{/c} damage.",
    "hLabel": 328519479
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod4_Name",
-   "szText": "Shimmering Flame Shield",
+   "szText": "Firebird",
    "hLabel": 2609413044
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod6_Description",
+   "szText": "{c_important}Flame Shield{/c} becomes a {c_important}Shock{/c} Skill, deals Sparking damage, and triggers its Cooldown on Cast.\r\n\r\nInstead of becoming {u}{c_important}Immune{/c}{/u} you embody lightning, generating {c_number}{SF_33}{/c} {u}{c_important}Crackling Energy{/c}{/u} per second and gaining {c_number}[SF_31 * 100|x%|]{/c} Movement Speed and {c_number}[SF_32 * 100|1%|]{/c} Dodge.",
+   "hLabel": 2991776313
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod6_Name",
+   "szText": "Flash",
+   "hLabel": 2687683830
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod7_Description",
+   "szText": "While {c_important}Flame Shield{/c} is active, you heal for {c_number}[SF_7 * 100|%|]{/c} of your Maximum Life {c_number}([PlayerHealthMax() * SF_7]){/c} per second.",
+   "hLabel": 28437434
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod7_Name",
+   "szText": "Healing",
+   "hLabel": 2726819223
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod8_Description",
+   "szText": "{c_important}Flame Shield's{/c} Cooldown is reduced by {c_number}{SF_40}{/c} seconds.",
+   "hLabel": 1360065851
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod8_Name",
+   "szText": "Cooldown Reduction",
+   "hLabel": 2765954616
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod9_Description",
+   "szText": "{c_important}Flame Shield's{/c} duration is increased to {c_number}[SF_0+SF_42|1|]{/c} seconds.",
+   "hLabel": 2691694268
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod9_Name",
+   "szText": "Duration Bonus",
+   "hLabel": 2805090009
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod10_Description",
+   "szText": "{c_important}Flame Shield{/c} grants {c_number}1{/c} stack of {u}{c_important}Overpower{/c}{/u}.",
+   "hLabel": 2741697796
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod10_Name",
+   "szText": "Overpower",
+   "hLabel": 3070117409
   }
  ],
  "ptMapStringTable": "0"

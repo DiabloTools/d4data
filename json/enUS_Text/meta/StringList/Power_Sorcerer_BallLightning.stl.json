@@ -15,71 +15,113 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "desc",
-   "szText": "{c_label}Mana Cost: {/c}{c_resource}{Resource Cost}{/c}\r\n{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat Effect Chance}|%|]{/c}\r\n{/if}Discharge a ball of lightning that slowly moves forward, continually zapping enemies for {c_number}{payload:BALL_AOE}{/c} damage.",
+   "szText": "{c_label}Mana Cost: {/c}{c_resource}{Resource Cost}{/c}\r\n{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat Effect Chance}|%|]{/c}\r\n{/if}Discharge a ball of lightning that slowly moves forward and continuously zaps enemies, dealing {c_number}{payload:BASE_DAMAGE_TOOLTIP}{/c} damage per second.",
    "hLabel": 3707583
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "rankup_desc",
-   "szText": "\r\n{icon:bullet,1.2} Damage {icon:arrow,1.2} {c_number}{payload:BALL_AOE}{/c}",
+   "szText": "\r\n{icon:bullet,1.2} Damage Per Second {icon:arrow,1.2} {c_number}{payload:BASE_DAMAGE_TOOLTIP}{/c}",
    "hLabel": 4074074671
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
-   "szLabel": "Buff11_Name",
-   "szText": "Gravitational",
-   "hLabel": 2806582117
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
-   "szLabel": "Buff11_Description",
-   "szText": "After {c_number}[SF_28 - 1]{/c} Casts of {c_important}Ball Lightning{/c}, your next Cast pulls enemies.",
-   "hLabel": 2260905416
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
-   "szLabel": "Mod3_Description",
-   "szText": "Your Attack Speed is increased by {c_number}[SF_10*100|%|]{/c} for {c_number}{buffduration:ENHANCED_ATTACK_SPEED}{/c} |4second:seconds; each time you Cast {c_important}Ball Lightning{/c}, up to {c_number}[SF_10*100*4|%|]{/c}.",
-   "hLabel": 3291858358
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
-   "szLabel": "Mod3_Name",
-   "szText": "Enhanced Ball Lightning",
-   "hLabel": 2570277651
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
    "szLabel": "Mod2_Description",
-   "szText": "{c_important}Ball Lightning{/c} deals {c_number}[SF_14*100|%x|]{/c} increased damage against Stunned enemies and Bosses.",
+   "szText": "{c_important}Ball Lightning{/c} now deals {c_number}{payload:UPGRADEA_DAMAGE_TOOLTIP}{/c} damage per second. The ball's speed is greatly increased while it is not near enemies.",
    "hLabel": 1960229941
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod2_Name",
-   "szText": "Mage's Ball Lightning",
+   "szText": "Attraction",
    "hLabel": 2531142258
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod5_Description",
-   "szText": "Casting {c_important}Ball Lightning{/c} forms {c_number}2{/c} {c_important}{u}Crackling Energies{/u}{/c}",
+   "szText": "{c_important}Ball Lightning{/c} orbits you and now deals {c_number}{payload:UPGRADEB_DAMAGE_TOOLTIP}{/c} damage around you per second.",
    "hLabel": 1660147896
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod5_Name",
-   "szText": "Wizard's Ball Lightning",
+   "szText": "Orbital",
    "hLabel": 2648548437
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod8_Description",
+   "szText": "{c_important}Ball Lightning{/c} becomes a {c_important}Pyromancy{/c} Skill, deals Fire damage, and has a {c_number}{SF_19}{/c} second Cooldown.\r\n\r\n{c_important}Ball Lightning{/c} is now cast at the target location and continuously Pulls In enemies, dealing {c_number}{payload:UPGRADEC_DAMAGE_TOOLTIP}{/c} damage over {c_number}[SF_16]{/c} seconds.",
+   "hLabel": 1360065851
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod8_Name",
+   "szText": "Implosion",
+   "hLabel": 2765954616
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod9_Description",
+   "szText": "{c_important}Ball Lightning{/c} has a {c_number}[SF_20 * 100|%|]{/c} chance to form a second {c_important}Ball Lightning{/c}.",
+   "hLabel": 2691694268
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod9_Name",
+   "szText": "Multiple Projectiles",
+   "hLabel": 2805090009
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod10_Description",
+   "szText": "{c_important}Ball Lightning{/c} grants {c_number}{SF_21}{/c} stack of {u}{c_important}Ferocity{/c}{/u}.",
+   "hLabel": 2741697796
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod10_Name",
+   "szText": "Ferocity",
+   "hLabel": 3070117409
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod11_Description",
+   "szText": "{c_important}Ball Lightning{/c} forms {c_number}{SF_23}{/c} {u}{c_important}Crackling Energy{/c}{/u} when it dissipates.",
+   "hLabel": 4073326213
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod11_Name",
+   "szText": "Crackling Energy",
+   "hLabel": 3109252802
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod12_Description",
+   "szText": "{c_important}Ball Lightning{/c} deals {c_number}[SF_24 * 100 |%x|]{/c} increased damage when it hits {c_number}{SF_25}{/c} or fewer enemies.",
+   "hLabel": 1109987334
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod12_Name",
+   "szText": "Damage Bonus",
+   "hLabel": 3148388195
   }
  ],
  "ptMapStringTable": "0"

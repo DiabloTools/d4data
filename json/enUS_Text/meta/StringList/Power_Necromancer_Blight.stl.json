@@ -15,57 +15,113 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "desc",
-   "szText": "{c_label}Essence Cost: {/c}{c_resource}{Resource Cost}{/c}\r\n{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat_Effect_Chance_Script_Formula_Override:21}|%|]{/c}\r\n{/if}{if:SF_40}{c_label}Cooldown:{/c_label} {c_resource}{Cooldown Time}{/c_resource} seconds\r\nUnleash concentrated piercing blight that deals {c_number}{payload:DAMAGE}{/c} damage and leaves behind a trail of defiled areas, dealing {c_number}{dot:TOOLTIP_DOT}{/c} Corrupting damage over {c_number}{buffduration:TOOLTIP_DOT}{/c} seconds.{else}Unleash concentrated blight that deals {c_number}{payload:DAMAGE}{/c} damage and leaves behind a defiled area, dealing {c_number}{dot:TOOLTIP_DOT}{/c} Corrupting damage over {c_number}{buffduration:TOOLTIP_DOT}{/c} seconds.{/if}",
+   "szText": "{c_label}Essence Cost: {/c}{c_resource}{Resource Cost}{/c}\r\n{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat_Effect_Chance_Script_Formula_Override:21}|%|]{/c}\r\n{/if}Unleash concentrated blight that deals {c_number}{payload:PROJECTILE_DAMAGE}{/c} damage and leaves behind a defiled area, dealing {c_number}{dot:TOOLTIP_DOT}{/c} Corrupting damage over {c_number}{buffduration:TOOLTIP_DOT}{/c} seconds.",
    "hLabel": 3707583
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "rankup_desc",
-   "szText": " \r\n{icon:bullet,1.2} Impact Damage {icon:arrow,1.2} {c_number}{payload:DAMAGE}{/c}\r\n{icon:bullet,1.2} Corrupting Damage {icon:arrow,1.2} {c_number}{dot:TOOLTIP_DOT}{/c}",
+   "szText": " \r\n{icon:bullet,1.2} Impact Damage {icon:arrow,1.2} {c_number}{payload:PROJECTILE_DAMAGE}{/c}\r\n{icon:bullet,1.2} Corrupting Damage {icon:arrow,1.2} {c_number}{dot:TOOLTIP_DOT}{/c}",
    "hLabel": 4074074671
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
-   "szLabel": "Mod2_Description",
-   "szText": "{c_important}Blight's{/c} radius is increased by {c_number}[{SF_10}*100|%|]{/c} and directly hitting an Elite with it doubles the damage of its defile area. ",
-   "hLabel": 1960229941
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
-   "szLabel": "Mod2_Name",
-   "szText": "Enhanced Blight",
-   "hLabel": 2531142258
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
    "szLabel": "Mod0_Description",
-   "szText": "You and your Minions deal {c_number}[{SF_18}*100|%x|]{/c} increased Shadow damage to enemies within {c_important}Blight{/c}.",
+   "szText": "{c_important}Blight{/c} pierces {c_number}1{/c} time and can spawn an additional defiled area.",
    "hLabel": 3591940403
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod0_Name",
-   "szText": "Supernatural Blight",
+   "szText": "Piercing Darkness",
    "hLabel": 2452871472
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod1_Description",
-   "szText": "{c_important}Blight{/c} has a {c_number}[{SF_37}*100|%|]{/c} chance to instantly {c_important}{u}Freeze{/u}{/c} enemies on impact for {c_number}{SF_36}{/c} seconds and its defiled area also {c_important}{u}Chills{/u}{/c} enemies for {c_number}[{SF_15}*100|%|]{/c} every second.",
+   "szText": "{c_important}Blight{/c} deals Cold and Frostbite damage. \r\n\r\nIts defiled area Pulls in enemies and {c_important}{u}Chills{/u}{/c} for {c_number}[{SF_15}*100|%|]{/c} every second.",
    "hLabel": 628601524
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod1_Name",
-   "szText": "Paranormal Blight",
+   "szText": "Whirlpool",
    "hLabel": 2492006865
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod3_Description",
+   "szText": "{c_important}Blight{/c} becomes a {c_important}Blood{/c} skill that deals Physical damage. \r\n\r\n{c_important}Blight's{/c} defiled area instantly bursts, dealing {c_number}{payload:MODC_DAMAGE}{/c} damage.",
+   "hLabel": 3291858358
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod3_Name",
+   "szText": "Volatile Blood",
+   "hLabel": 2570277651
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod2_Description",
+   "szText": "{c_important}Blight's{/c} defiled area deals {c_number}[{SF_10}*100|%x|]{/c} increased damage.",
+   "hLabel": 1960229941
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod2_Name",
+   "szText": "Area Damage Bonus",
+   "hLabel": 2531142258
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod4_Description",
+   "szText": "{c_important}Blight's{/c} Size is increased by {c_number}[SF_12*100|%|]{/c}.",
+   "hLabel": 328519479
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod4_Name",
+   "szText": "Size Bonus",
+   "hLabel": 2609413044
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod5_Description",
+   "szText": "{c_important}Blight{/c} deals {c_number}[{SF_35}*100|%x|]{/c} increased damage to Crowd Controlled enemies.",
+   "hLabel": 1660147896
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod5_Name",
+   "szText": "Crowd Control Damage Bonus",
+   "hLabel": 2648548437
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod6_Description",
+   "szText": "{c_important}Blight{/c} has an additional {c_number}[{SF_16}|%+|]{/c} Lucky Hit Chance.",
+   "hLabel": 2991776313
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod6_Name",
+   "szText": "Lucky Hit Chance",
+   "hLabel": 2687683830
   }
  ],
  "ptMapStringTable": "0"

@@ -29,7 +29,7 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "rankup_desc",
-   "szText": "\r\n{icon:bullet, 1.2} Damage {icon:arrow, 1.2} {c_number}{payload:SLAM_DAMAGE}{/c}",
+   "szText": "\r\n{icon:bullet, 1.2} Damage {icon:arrow, 1.2} {c_number}{payload:SLAM_DAMAGE}{/c}{if:Mod.UpgradeA}\r\n{icon:bullet, 1.2} Burning Damage {icon:arrow, 1.2} {c_number}{dot:BUFF_UPGRADE_A_FIRE_DOT}{/c}{/if}{if:Mod.UpgradeB}\r\n{icon:bullet, 1.2} Iron Shrapnel Damage {icon:arrow, 1.2} {c_number}{payload:SHRAPNEL_DAMAGE}{/c}\r\n{icon:bullet, 1.2} Iron Shrapnel Bleeding{icon:arrow, 1.2} {c_number}{dot:UPGRADE_B_BLEED_DOT}{/c}{/if}",
    "hLabel": 4074074671
   },
   {
@@ -50,29 +50,99 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod8_Description",
-   "szText": "If {c_important}Upheaval{/c} damages at least {c_number}[{SF_18}]{/c} enemies or a Boss, you gain {c_important}{u}Berserking{/u}{/c} for {c_number}{SF_9}{/c} seconds, increased to {c_number}{SF_11}{/c} seconds if it damages at least {c_number}{SF_10}{/c} enemies.",
+   "szText": "{c_important}Upheaval{/c} ignites the ground Burning enemies for an additional {c_number}{dot:BUFF_UPGRADE_A_FIRE_DOT}{/c} damage over {c_number}{buffduration:BUFF_UPGRADE_A_FIRE_DOT}{/c} seconds.\r\n\r\n{c_important}Upheaval{/c} now deals Fire damage.",
    "hLabel": 1360065851
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod8_Name",
-   "szText": "Violent Upheaval",
+   "szText": "Trailblazing",
    "hLabel": 2765954616
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod9_Description",
-   "szText": "Dealing direct damage to an enemy with a Skill that is not {c_important}Upheaval{/c} causes your next cast of {c_important}Upheaval{/c} to deal {c_number}[{SF_12}  * 100|%x|]{/c} increased damage, stacking up to {c_number}{SF_13}{/c} times.",
+   "szText": "{c_important}Upheaval{/c} flings {c_important}{u}Iron Shrapnel{/u}{/c} dealing {c_number}{payload:SHRAPNEL_DAMAGE}{/c} damage, and inflicting {c_number}{dot:UPGRADE_B_BLEED_DOT}{/c} Bleeding damage over {c_number}{buffduration:UPGRADE_B_BLEED_DOT}{/c} seconds.",
    "hLabel": 2691694268
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod9_Name",
-   "szText": "Furious Upheaval",
+   "szText": "Iron Burst",
    "hLabel": 2805090009
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod11_Description",
+   "szText": "{c_important}Upheaval{/c} gains deals {c_number}[SF_36 * 100|%x|]{/c} increased damage. Depending on the cast range, this area increases but the damage bonus decreases.",
+   "hLabel": 4073326213
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod11_Name",
+   "szText": "Suppress",
+   "hLabel": 3109252802
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod13_Description",
+   "szText": "{c_important}Upheaval{/c} deals {c_number}[{SF_38}*100|x%|]{/c} increased damage to the first {c_number}{SF_37}{/c} enemies hit.",
+   "hLabel": 2441615751
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod13_Name",
+   "szText": "Damage Increase",
+   "hLabel": 3187523588
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod14_Description",
+   "szText": "{c_important}Upheaval's{/c} Fury cost is reduced to {c_number}[{SF_39} - {SF_40}]{/c} Fury.",
+   "hLabel": 3773244168
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod14_Name",
+   "szText": "Fury Cost Reduction",
+   "hLabel": 3226658981
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod15_Description",
+   "szText": "{c_important}Upheaval{/c} consumes {c_number}{SF_41}{/c} {c_important}{u}Overpower{/u}{/c} stack to increase {c_important}Upheavel's{/c} Size by {c_number}[{SF_42}*100|+%|]{/c} and damage by {c_number}[{SF_43}*100|x%|]{/c}.",
+   "hLabel": 809905289
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod15_Name",
+   "szText": "Overpower",
+   "hLabel": 3265794374
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod12_Description",
+   "szText": "Every {c_number}{SF_46}{/c} Fury spent makes your next {c_important}Upheaval{/c} free to cast. This stacks up to {c_number}{SF_47}{/c} total Fury.",
+   "hLabel": 1109987334
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod12_Name",
+   "szText": "Free Cast",
+   "hLabel": 3148388195
   }
  ],
  "ptMapStringTable": "0"

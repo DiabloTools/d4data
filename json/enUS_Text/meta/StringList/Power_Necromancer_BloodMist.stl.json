@@ -15,71 +15,127 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "desc",
-   "szText": "{c_label}Cooldown:{/c_label} {c_resource}{Cooldown Time}{/c_resource} seconds\r\n{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat_Effect_Chance_Script_Formula_Override:14}|%|]{/c}\r\n{/if}Disperse into a bloody mist, becoming {c_important}{u}Immune{/u}{/c} for {c_number}{buffduration:MISTFORM}{/c} seconds. You periodically deal {c_number}{payload:DAMAGE}{/c} damage to enemies and Heal for {c_number}[{SF_3} * 100|1%|]{/c} of your Maximum Life {c_number}([Max(1,PlayerHealthMax() * SF_3)|0|]){/c} .",
+   "szText": "{c_label}Cooldown:{/c_label} {c_resource}{Cooldown Time}{/c_resource} seconds \r\n{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat_Effect_Chance_Script_Formula_Override:14}|%|]{/c}\r\n{/if}Disperse into a bloody mist, becoming {c_important}{u}Immune{/u}{/c} for {c_number}{buffduration:MISTFORM}{/c} seconds. You deal {c_number}{dot:TOOLTIP_DOT}{/c} damage to enemies and Heal for {c_number}[{SF_9} * 100|1%|]{/c} of your Maximum Life {c_number}([Max(1,PlayerHealthMax() * SF_9)|0|]){/c} over the duration.",
    "hLabel": 3707583
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "rankup_desc",
-   "szText": "\r\n{icon:bullet,1.2} Healing {icon:arrow,1.2} {c_number}[{SF_3} * 100|1%|]{/c} Life\r\n{icon:bullet,1.2} Cooldown {icon:arrow,1.2} {c_number}{Cooldown Time}{/c} seconds",
+   "szText": "\r\n{icon:bullet,1.2} Healing {icon:arrow,1.2} {c_number}[{SF_9} * 100|1%|]{/c} Life",
    "hLabel": 4074074671
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Buff12_Name",
-   "szText": "Dreadful Blood Mist",
+   "szText": "Blood Mist",
    "hLabel": 2845717510
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Buff12_Description",
-   "szText": "Critical Strike Chance increased.",
+   "szText": "Critical Strike Chance and Critical Strike Damage increased.",
    "hLabel": 3592533833
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
-   "szLabel": "Mod0_Description",
-   "szText": "Casting a Skill that {c_important}{u}Overpowers{/u}{/c} reduces the cooldown of  {c_important}Blood Mist{/c} by {c_number}[{SF_13}]{/c} seconds. ",
-   "hLabel": 3591940403
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
-   "szLabel": "Mod0_Name",
-   "szText": "Enhanced Blood Mist",
-   "hLabel": 2452871472
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
    "szLabel": "Mod1_Description",
-   "szText": "{c_important}Blood Mist{/c} is now a {c_important}Mobility{/c} Skill that grants {c_number}[{SF_24}*100|+%|]{/c} Movement Speed, spawning a Corpse every second and applying {c_important}{u}Vulnerable{/u}{/c} for {c_number}{SF_25}{/c} seconds to enemies it passes through.",
+   "szText": "{c_important}Blood Mist{/c} {c_important}{u}Fortifies{/c}{/u} you for {c_number}[{SF_34} * 100|%|]{/c} of your Maximum Life {c_number}([Max(1,PlayerHealthMax() * SF_34)|0|]){/c} over its duration and forms a {c_important}{u}Blood Orb{/u}{/c} every second.",
    "hLabel": 628601524
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod1_Name",
-   "szText": "Ghastly Blood Mist",
+   "szText": "Blood Transfusion",
    "hLabel": 2492006865
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod2_Description",
-   "szText": "You gain {c_number}[{SF_19}*100|+%|]{/c} Critical Strike Chance and {c_number}[{SF_23}*100|x%|]{/c} Critical Strike Damage for {c_number}{SF_20}{/c} seconds after {c_important}Blood Mist{/c} ends.",
+   "szText": "{c_important}Blood Mist{/c} becomes a {c_important}Mobility{/c} Skill and its Cooldown is reduced to {c_number}{SF_2}{/c} seconds.\r\n\r\nInstead of dispersing you into a bloody mist, {c_important}Blood Mist{/c} consumes a nearby corpse to teleport you to the target location and grants {c_important}{u}Unstoppable{/c}{/u} for {c_number}{SF_31}{/c} seconds.",
    "hLabel": 1960229941
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod2_Name",
-   "szText": "Dreadful Blood Mist",
+   "szText": "Blood Rush",
    "hLabel": 2531142258
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod3_Description",
+   "szText": "{c_important}Blood Mist{/c} becomes a {c_important}Darkness{/c} Skill that deals Shadow damage.\r\n\r\n{c_important}Blood Mist{/c} now deals {c_number}{dot:TOOLTIP_DOT_SHADOW}{/c} Shadow damage over its duration and applies {c_important}{u}Vampiric Curse{/c}{/u} to enemies.",
+   "hLabel": 3291858358
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod3_Name",
+   "szText": "Devouring Mist",
+   "hLabel": 2570277651
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod0_Description",
+   "szText": "{c_important}Blood Mist{/c} grants {c_number}[{SF_19}*100|+%|]{/c} Critical Strike Chance for {c_number}{SF_20}{/c} seconds after it ends.",
+   "hLabel": 3591940403
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod0_Name",
+   "szText": "Critical Strike",
+   "hLabel": 2452871472
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod4_Description",
+   "szText": "{c_important}Blood Mist{/c} increases your Movement Speed by {c_number}[{SF_24}*100|x%|]{/c} for {c_number}{SF_0}{/c} seconds.",
+   "hLabel": 328519479
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod4_Name",
+   "szText": "Movement Speed",
+   "hLabel": 2609413044
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod5_Description",
+   "szText": "{if:SF_33}{c_important}Blood Mist{/c} grants {c_number}1{/c} stack of {c_important}{u}Overpower{/c}{/u} every second.{else}{c_important}Blood Mist{/c} grants {c_number}1{/c} stack of {c_important}{u}Overpower{/c}{/u} after you teleport.{/if}",
+   "hLabel": 1660147896
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod5_Name",
+   "szText": "Overpower",
+   "hLabel": 2648548437
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod6_Description",
+   "szText": "{c_important}Blood Mist{/c} makes enemies {c_important}{u}Vulnerable{/c}{/u} and Slows them by {c_number}[{SF_27}|%|]{/c} for {c_number}{SF_25}{/c} seconds.",
+   "hLabel": 2991776313
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod6_Name",
+   "szText": "Vulnerable and Slow",
+   "hLabel": 2687683830
   }
  ],
  "ptMapStringTable": "0"

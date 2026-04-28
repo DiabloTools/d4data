@@ -15,57 +15,127 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "desc",
-   "szText": "{c_label}Cooldown:{/c_label} {c_resource}{Cooldown Time}{/c_resource} seconds\r\n{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat Effect Chance}|%|]{/c}\r\n{/if}Imbue your weapons with festering shadows. Your next {c_number}{SF_0}{/c} {c_important}Imbueable{/c} Skills deal Shadow damage and infect enemies for {c_number}{SF_2}{/c} seconds. Infected enemies explode on death, dealing {c_number}{payload:DEATH_AOE}{/c} damage to all surrounding enemies. \r\n\r\nIf the infection expires before the enemy dies, it will deal {c_number}{payload:EXPIRATION_FIZZLE}{/c} damage to only that enemy.",
+   "szText": "{c_label}Cooldown:{/c_label} {c_resource}{Cooldown Time}{/c_resource} seconds\r\n{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat Effect Chance}|%|]{/c}\r\n{/if}Imbue your weapons with festering shadows for {c_number}{buffduration:SHADOW_CHARGES}{/c} seconds. While imbued, your {c_important}Imbueable{/c} Skills deal Shadow damage and infect enemies for {c_number}{SF_2}{/c} seconds. Infected enemies explode on death, dealing {c_number}{payload:DEATH_AOE}{/c} damage to all surrounding enemies. \r\n\r\nIf the infection expires before the enemy dies, it will deal {c_number}{payload:EXPIRATION_FIZZLE}{/c} damage to only that enemy.",
    "hLabel": 3707583
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "rankup_desc",
-   "szText": "\r\n{icon:bullet,1.2} Explosion Damage {icon:arrow,1.2} {c_number}{payload:TOOLTIP_DAMAGE}{/c}\r\n{icon:bullet,1.2} Expiration Damage {icon:arrow,1.2} {c_number}{payload:EXPIRATION_FIZZLE}{/c}",
+   "szText": "\r\n{icon:bullet,1.2} Explosion Damage {icon:arrow,1.2} {c_number}{payload:TOOLTIP_DAMAGE}{/c}\r\n{icon:bullet,1.2} Expiration Damage {icon:arrow,1.2} {c_number}{payload:EXPIRATION_FIZZLE}{/c}{if:Mod.UpgradeA}\r\n{icon:bullet, 1.2} Imbuement Damage {icon:arrow, 1.2} {c_number}{payload:UPGRADE_A_DAMAGE}{/c}{/if}{if:Mod.UpgradeB}\r\n{icon:bullet, 1.2} Infection Damage {icon:arrow, 1.2} {c_number}[{SF_34} * 100|x%|]{/c}{/if}{if:Mod.UpgradeC}\r\n{icon:bullet, 1.2} Shade Damage {icon:arrow, 1.2} {c_number}{payload:UPGRADE_C_EXPLOSION}{/c}{/if}",
    "hLabel": 4074074671
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
-   "szLabel": "Mod3_Description",
-   "szText": "You have {c_number}[{SF_15}*100|%+|]{/c} increased Critical Strike Chance against enemies infected by {c_important}Shadow Imbuement{/c}.",
-   "hLabel": 3291858358
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
-   "szLabel": "Mod3_Name",
-   "szText": "Enhanced Shadow Imbuement",
-   "hLabel": 2570277651
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
    "szLabel": "Mod1_Description",
-   "szText": "Enemies infected by {c_important}Shadow Imbuement{/c} take {c_number}[{SF_17}*100|%x|]{/c} increased Non-Physical damage from you for {c_number}{buffduration:AMPLIFY_DAMAGE}{/c} seconds.",
+   "szText": "{c_label}Passive:{/c} {c_important}Shadow Imbuement's{/c} Cooldown is reduced by {c_number}[{SF_31}|1|]{/c} seconds each time you kill an enemy.\r\n\r\nAny enemies you infect with {c_important}Shadow Imbuement{/c} take {c_number}{payload:UPGRADE_A_DAMAGE}{/c} damage every second until the infection ceases.",
    "hLabel": 628601524
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod1_Name",
-   "szText": "Mixed Shadow Imbuement",
+   "szText": "Endemic",
    "hLabel": 2492006865
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod2_Description",
-   "szText": "{c_important}Shadow Imbuement's{/c} damage makes enemies {c_important}{u}Vulnerable{/u}{/c} for {c_number}{SF_14}{/c} seconds.",
+   "szText": "Evading through an enemy infected by {c_important}Shadow Imbuement{/c} grants {c_important}{u}Stealth{/u}{/c} for {c_number}{SF_33}{/c} seconds and explodes the infection for {c_number}[{SF_34} * 100|x%|]{/c} increased damage.",
    "hLabel": 1960229941
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod2_Name",
-   "szText": "Blended Shadow Imbuement",
+   "szText": "Dark Dance",
    "hLabel": 2531142258
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod5_Description",
+   "szText": "{c_label}Lucky Hit:{/c} {c_important}Shadow Imbued{/c} Skills have up to a {c_number}[{SF_26}*100|%|]{/c} chance to create a {c_important}Shade{/c} that explodes after {c_number}[SF_27]{/c} second, dealing {c_number}{payload:UPGRADE_C_EXPLOSION}{/c} damage. This can only happen once every {c_number}[SF_40|2|]{/c} seconds, affected by Attack Speed.",
+   "hLabel": 1660147896
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod5_Name",
+   "szText": "Shadow Play",
+   "hLabel": 2648548437
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod3_Description",
+   "szText": "{c_important}Shadow Imbued{/c} Skills and {c_important}Shadow Imbuement{/c} makes enemies {c_important}{u}Vulnerable{/u}{/c} for {c_number}{SF_14}{/c} seconds.",
+   "hLabel": 3291858358
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod3_Name",
+   "szText": "Vulnerable",
+   "hLabel": 2570277651
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod9_Description",
+   "szText": "When {c_important}Shadow Imbuement's{/c} infection expires, {c_important}Shadow Imbuement's{/c} duration is increased by {c_number}[{SF_37}|1|]{/c} seconds, up to {c_number}{SF_38}{/c} seconds.",
+   "hLabel": 2691694268
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod9_Name",
+   "szText": "Duration",
+   "hLabel": 2805090009
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod11_Description",
+   "szText": "When {c_important}Shadow Imbuement's{/c} infection expires, you have a {c_number}[{SF_23}*100|%|]{/c} chance to gain {c_number}{SF_35}{/c} stack of {c_important}{u}Ferocity{/u}{/c}. ",
+   "hLabel": 4073326213
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod11_Name",
+   "szText": "Ferocity",
+   "hLabel": 3109252802
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod13_Description",
+   "szText": "Casting {c_important}Shadow Imbuement{/c} grants {c_number}{SF_36}{/c} stacks of {c_important}{u}Overpower{/u}{/c}.",
+   "hLabel": 2441615751
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod13_Name",
+   "szText": "Overpower",
+   "hLabel": 3187523588
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod7_Description",
+   "szText": "You have {c_number}[{SF_15}*100|%+|]{/c} increased Critical Strike Chance against enemies infected by {c_important}Shadow Imbuement{/c}.",
+   "hLabel": 28437434
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod7_Name",
+   "szText": "Enhanced Shadow Imbuement",
+   "hLabel": 2726819223
   }
  ],
  "ptMapStringTable": "0"

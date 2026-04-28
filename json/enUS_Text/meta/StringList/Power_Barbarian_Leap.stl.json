@@ -15,7 +15,7 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "desc",
-   "szText": "{c_label}Cooldown: {/c}{c_resource}{Cooldown Time}{/c} seconds\r\n{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat Effect Chance}|%|]{/c}\r\n{/if}Leap forward and then slam down, dealing {c_number}{payload:LANDING}{/c} damage and Slowing enemies by {c_number}[{SF_16}*100|%|]{/c} for {c_number}{buffduration:UPGRADEB_SLOW}{/c} seconds.",
+   "szText": "{/if}{c_label}Generate Fury:{/c_label} {c_resource}{SF_4}{/c_resource}\r\n{c_label}Cooldown: {/c}{c_resource}{Cooldown Time}{/c} seconds\r\n{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat Effect Chance}|%|]{/c}\r\n{/if}Leap forward and then slam down, dealing {c_number}{payload:LANDING_PAYLOAD}{/c} damage and Slowing enemies by {c_number}[{SF_16}*100|%|]{/c} for {c_number}{buffduration:SLOW}{/c} seconds.",
    "hLabel": 3707583
   },
   {
@@ -29,50 +29,106 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "rankup_desc",
-   "szText": "\r\n{icon:bullet, 1.2} Damage {icon:arrow, 1.2} {c_number}{payload:LANDING}{/c}\r\n{icon:bullet, 1.2} Cooldown {icon:arrow, 1.2} {c_number}{Cooldown Time}{/c_number} seconds",
+   "szText": "\r\n{icon:bullet, 1.2} Damage {icon:arrow, 1.2} {c_number}{if:Mod.UpgradeB}{payload:LANDING_UPGRADEB}{else}{payload:LANDING_PAYLOAD}{/if}{/c}{if:Mod.UpgradeB}\r\n{icon:bullet, 1.2} Earthquake Damage {icon:arrow, 1.2} {c_number}{payload:EARTHQUAKE_PAYLOAD}{/c}{/if}{if:Mod.UpgradeC}\r\n{icon:bullet, 1.2} Ancient Damage {icon:arrow, 1.2} {c_number}{payload:LANDING_UPGRADEC}{/c}{/if}",
    "hLabel": 4074074671
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
-   "szLabel": "Mod3_Description",
-   "szText": "If {c_important}Leap{/c} doesn't damage any enemies, its Cooldown is reduced by {c_number}{SF_12}{/c} seconds.",
-   "hLabel": 3291858358
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
-   "szLabel": "Mod3_Name",
-   "szText": "Enhanced Leap",
-   "hLabel": 2570277651
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
    "szLabel": "Mod4_Description",
-   "szText": "If {c_important}Leap{/c} damages at least one enemy, gain {c_number}{SF_11}{/c} Fury.",
+   "szText": "{c_important}Leap's{/c} Size and damage are increased the further you {c_important}Leap{/c}, up to {c_number}[SF_41 * 100]%{/c} increased Size and {c_number}{payload:UPGRADEA_LANDING_TOOLTIP}{/c} damage.",
    "hLabel": 328519479
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod4_Name",
-   "szText": "Power Leap",
+   "szText": "Death From Above",
    "hLabel": 2609413044
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod5_Description",
-   "szText": "{c_important}Leap{/c} deals {c_number}[SF_9 * 100|%x|]{/c} increased damage and surrounding enemies are Knocked Back on impact.",
+   "szText": "{c_important}Leap{/c} now deals {c_number}{payload:LANDING_UPGRADEB}{/c} damage and can be Cast again within {c_number}[{SF_26}]{/c} seconds before the Cooldown begins.\r\n\r\nLanding creates an {c_important}{u}Earthquake{/c}{/u} that deals {c_number}{payload:EARTHQUAKE_PAYLOAD}{/c} Physical damage over {c_number}[PowerTag.Barbarian_Earthquake.\"Script Formula 1\"]{/c} seconds.",
    "hLabel": 1660147896
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod5_Name",
-   "szText": "Mighty Leap",
+   "szText": "Earthshatter",
    "hLabel": 2648548437
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod6_Description",
+   "szText": "{c_important}Leap{/c} Summons {c_number}[{SF_29}]{/c} Ancients that {c_important}Leap{/c} at a random enemy and deal {c_number}{payload:LANDING_UPGRADEC}{/c} damage.",
+   "hLabel": 2991776313
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod6_Name",
+   "szText": "Mosh",
+   "hLabel": 2687683830
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod7_Description",
+   "szText": "{c_important}Leap{/c} grants a bonus based on its Arsenal Selection\r\n{icon:bullet, 1.2} {c_label}Dual Wield:{/c} {c_number}{SF_31}{/c} seconds of {u}{c_important}Berserking{/c}{/u}\r\n{icon:bullet, 1.2} {c_label}Bludgeoning:{/c} {c_number}{SF_32}{/c} stack of {u}{c_important}Overpower{/c}{/u}\r\n{icon:bullet, 1.2} {c_label}Slashing:{/c} {c_number}{SF_33}{/c} stack of {u}{c_important}Ferocity{/c}{/u}",
+   "hLabel": 28437434
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod7_Name",
+   "szText": "Arsenal Bonus",
+   "hLabel": 2726819223
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod10_Description",
+   "szText": "{c_important}Leap{/c} now generates {c_number}[SF_3 + SF_10]{/c} Fury.",
+   "hLabel": 2741697796
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod10_Name",
+   "szText": "Fury Generation",
+   "hLabel": 3070117409
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod9_Description",
+   "szText": "{c_important}Leap{/c} now Pulls In enemies upon landing.",
+   "hLabel": 2691694268
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod9_Name",
+   "szText": "Pull",
+   "hLabel": 2805090009
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod8_Description",
+   "szText": "{c_important}Leap{/c} deals {c_number}[SF_12*100|x%|]{/c} increased damage and Knocks Down enemies for {c_number}{buffDuration:SU4_KNOCKDOWN}{/c} second.",
+   "hLabel": 1360065851
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod8_Name",
+   "szText": "Damage Bonus and Crowd Control",
+   "hLabel": 2765954616
   }
  ],
  "ptMapStringTable": "0"

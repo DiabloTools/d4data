@@ -15,14 +15,14 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "desc",
-   "szText": "{if:SF_24}{c_label}Fury Cost:{/c_label} {c_resource}{Resource Cost}{/c_resource}\r\n{/if}{if:SF_26}{if:SF_23}{c_label}Cooldown: {/c}{c_resource}{Cooldown Time}{/c} seconds\r\n{/if}{/if}{if:SF_27}{c_label}Charges:{/c} {c_resource}{SF_28}{/c}\r\n{c_label}Charge Cooldown:{/c_label} {c_resource}{Recharge Time}{/c} seconds\r\n{/if}{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat Effect Chance}|%|]{/c}\r\n{/if}Hurl your weapon, dealing {c_number}{payload:IMPACT_DAMAGE}{/c} damage upon impact and sticking in the ground. While in the ground, your weapon pulses and deals {c_number}{payload:DAMAGE}{/c} damage every second for {c_number}{SF_5}{/c} seconds.",
+   "szText": "{if:SF_24}{c_label}Fury Cost:{/c_label} {c_resource}{Resource Cost}{/c_resource}\r\n{/if}{if:SF_26}{if:SF_23}{c_label}Cooldown: {/c}{c_resource}{Cooldown Time}{/c} seconds\r\n{/if}{/if}{if:SF_27}{c_label}Charges:{/c} {c_resource}{SF_28}{/c}\r\n{c_label}Charge Cooldown:{/c_label} {c_resource}{Recharge Time}{/c} seconds\r\n{/if}{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat Effect Chance}|%|]{/c}\r\n{/if}{if:SF_53}Hurl your weapon, dealing {c_number}{payload:IMPACT_DAMAGE}{/c} damage upon impact and sticking in the ground. While in the ground, your weapon pulses and deals {c_number}{payload:DAMAGE}{/c} damage every second for {c_number}{SF_5}{/c} seconds.{else}Your weapon is hurled into the sky and drops back to the ground massive in size, dealing {c_number}{payload:IMPACT_DAMAGE_CVARIANT}{/c} damage.{/if}",
    "hLabel": 3707583
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "rankup_desc",
-   "szText": "\r\n{icon:bullet, 1.2} Impact Damage {icon:arrow, 1.2} {c_number}{payload:IMPACT_DAMAGE}{/c}\r\n{icon:bullet, 1.2} Pulsing Damage {icon:arrow, 1.2} {c_number}{payload:DAMAGE}{/c}",
+   "szText": "\r\n{if:SF_58}{icon:bullet, 1.2} Impact Damage {icon:arrow, 1.2} {c_number}{payload:IMPACT_DAMAGE}{/c}\r\n{icon:bullet, 1.2} Pulsing Damage {icon:arrow, 1.2} {c_number}{payload:DAMAGE}{/c}{/if}{if:Mod.UpgradeA}{icon:bullet, 1.2} Impact Damage {icon:arrow, 1.2} {c_number}{payload:IMPACT_DAMAGE_VARIANTA}{/c}\r\n{icon:bullet, 1.2} Pulsing Damage {icon:arrow, 1.2} {c_number}{payload:DAMAGE_VARIANTA}{/c}{/if}{if:Mod.UpgradeB}{icon:bullet, 1.2} Impact Damage {icon:arrow, 1.2} {c_number}{payload:IMPACT_DAMAGE}{/c}\r\n{icon:bullet, 1.2} Pulsing Damage {icon:arrow, 1.2} {c_number}{payload:DAMAGE}{/c}\r\n{icon:bullet, 1.2} Extra Pulsing Damage {icon:arrow, 1.2} {c_number}{payload:EXTRA_PULSE}{/c}{/if}{if:Mod.UpgradeC}{icon:bullet, 1.2} Impact Damage {icon:arrow, 1.2} {c_number}{payload:IMPACT_DAMAGE_CVARIANT}{/c}{/if}",
    "hLabel": 4074074671
   },
   {
@@ -43,29 +43,99 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod1_Description",
-   "szText": "Swapping weapons near any of your thrown weapons creates an additional pulse.\r\n{c_important}Mighty Throw{/c} generates {c_number}[{SF_34} * 100|%|]{/c} of your Maximum Life {c_number}([Max(1,{shield:BARRIER})]){/c} as a {c_important}{u}Barrier{/u}{/c} for {c_number}[{SF_35} ||]{/c} seconds.",
+   "szText": "{c_important}Mighty Throw{/c} hurls another {c_number}[SF_22]{/c} weapons, dealing {c_number}{payload:IMPACT_DAMAGE_VARIANTA}{/c} damage upon impact, and pulses for {c_number}{payload:DAMAGE_VARIANTA}{/c} damage.",
    "hLabel": 628601524
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod1_Name",
-   "szText": "Fighter's Mighty Throw",
+   "szText": "Spares",
    "hLabel": 2492006865
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod2_Description",
-   "szText": "{c_important}Mighty Throw's{/c} impact deals {c_number}[{SF_36}*100|x%|]{/c} increased damage and Stuns enemies for {c_number}{buffduration:UPGRADE2_STUN}{/c} seconds. ",
+   "szText": "Swapping weapons near any of {c_important}Mighty Throw's{/c} thrown weapons creates an additional pulse for {c_number}{payload:EXTRA_PULSE}{/c} damage.",
    "hLabel": 1960229941
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod2_Name",
-   "szText": "Warrior's Mighty Throw",
+   "szText": "Rapid",
    "hLabel": 2531142258
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod4_Description",
+   "szText": "{c_important}Mighty Throw{/c} is now an {c_important}Ultimate{/c} Skill that drops a massive weapon for {c_number}{payload:IMPACT_DAMAGE_CVARIANT}{/c} damage with a {c_number}[{SF_46}]{/c} second cooldown. \r\n\r\nThis cooldown cannot be reduced by Cooldown Reduction.",
+   "hLabel": 328519479
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod4_Name",
+   "szText": "Mightiest",
+   "hLabel": 2609413044
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod5_Description",
+   "szText": "{c_important}Mighty Throw{/c} generates up to {c_number}[{SF_34} * 100|%|]{/c} of your Maximum Life {c_number}([Max(1,{shield:BARRIER})]){/c} as a {c_important}{u}Barrier{/u}{/c} for {c_number}[{SF_35} ||]{/c} seconds.",
+   "hLabel": 1660147896
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod5_Name",
+   "szText": "Barrier",
+   "hLabel": 2648548437
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod6_Description",
+   "szText": "Increase {c_important}Mighty Throw's{/c} damage radius by {c_number}[{SF_54} * 100|%|]{/c}.",
+   "hLabel": 2991776313
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod6_Name",
+   "szText": "Size Bonus",
+   "hLabel": 2687683830
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod7_Description",
+   "szText": "Grants {c_number}[{SF_49}]{/c} stacks of {u}{c_important}Ferocity{/u}{/c} each time you use {c_important}Mighty Throw{/c}.",
+   "hLabel": 28437434
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod7_Name",
+   "szText": "Ferocity",
+   "hLabel": 2726819223
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod8_Description",
+   "szText": "{c_important}Mighty Throw{/c} now consumes one of your {u}{c_important}Overpower{/u}{/c} stacks to deal {c_number}[{SF_50} * 100|x%|]{/c} increased damage.",
+   "hLabel": 1360065851
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod8_Name",
+   "szText": "Overpower",
+   "hLabel": 2765954616
   }
  ],
  "ptMapStringTable": "0"

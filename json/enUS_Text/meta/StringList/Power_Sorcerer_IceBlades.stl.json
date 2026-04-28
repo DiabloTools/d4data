@@ -15,14 +15,14 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "desc",
-   "szText": "{c_label}Cooldown:{/c} {c_resource}{Cooldown Time}{/c} seconds\r\n{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat_Effect_Chance_Script_Formula_Override:16}|1%|]{/c}\r\n{/if}Summon a pair of ice blades for {c_number}[{SF_0}|1|]{/c} seconds that rapidly slash enemies for {c_number}{payload:TOOLTIP_DAMAGE}{/c} damage and have a {c_number}[{SF_11} * 100|%|]{/c} chance to make them {c_important}{u}Vulnerable{/u}{/c} for {c_number}{SF_3}{/c} seconds.\r\n\r\nYou may have up to {c_number}[SF_21]{/c} {c_important}Ice Blades{/c} active at a time.",
+   "szText": "{c_label}Cooldown:{/c} {c_resource}{Cooldown Time}{/c} seconds\r\n{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat_Effect_Chance_Script_Formula_Override:16}|1%|]{/c}\r\n{/if}Conjure blades of ice for {c_number}[{SF_0}|1|]{/c} seconds that rapidly slash enemies, dealing {c_number}{payload:TOOLTIP_DAMAGE}{/c} damage and making them {c_important}{u}Vulnerable{/u}{/c}.\r\n\r\nYou may have up to {c_number}[SF_21]{/c} {c_important}Ice Blades{/c} active at a time.",
    "hLabel": 3707583
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "rankup_desc",
-   "szText": "\r\n{icon:bullet,1.2} Damage {icon:arrow,1.2} {c_number}{payload:TOOLTIP_DAMAGE}{/c}",
+   "szText": "\r\n{icon:bullet,1.2} Damage {icon:arrow,1.2} {c_number}{payload:TOOLTIP_DAMAGE}{/c}{if:Mod.UpgradeB}\r\n{icon:bullet,1.2} Chill Amount {icon:arrow,1.2} {c_number}[SF_31|%|]{/c}{/if}",
    "hLabel": 4074074671
   },
   {
@@ -43,29 +43,99 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod3_Description",
-   "szText": "{c_number}[{SF_10} * 100|%|]{/c} of {c_important}Enhanced Ice Blades's{/c} Cooldown reduction is applied to your other Skills.",
+   "szText": "Every {c_number}{SF_24}rd{/c} slash from {c_important}Ice Blades{/c} is an Ice Crack, dealing {c_number}{payload:UPGRADEA_DAMAGE}{/c} damage in a large cone.",
    "hLabel": 3291858358
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod3_Name",
-   "szText": "Roaring Ice Blades",
+   "szText": "Ice Crack",
    "hLabel": 2570277651
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod1_Description",
-   "szText": "You and your {c_important}Ice Blades{/c} gain {c_number}[{SF_13} * 100|%+|]{/c} increased Attack Speed per active {c_important}Ice Blades{/c}.",
+   "szText": "{c_important}Ice Blades{/c} is now cast at the target location and surrounds it with {c_number}[SF_30]{/c} {c_important}Ice Blades{/c}.\r\n\r\n{c_important}Ice Blades{/c} {c_important}{u}Chill{/u}{/c} enemies for {c_number}[SF_31|%|]{/c}, but their Movement Speed is reduced by {c_number}[SF_32 * 100|%|]{/c}.",
    "hLabel": 628601524
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod1_Name",
-   "szText": "Invoked Ice Blades",
+   "szText": "Frozen Tomb",
    "hLabel": 2492006865
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod7_Description",
+   "szText": "{c_important}Ice Blades{/c} becomes a {c_important}Pyromancy{/c} Skill that deals {c_number}{payload:UPGRADEC_DAMAGE}{/c} Fire damage.\r\n\r\n{c_important}Ice Blades{/c} gain {c_number}[SF_34 * 100|%|]{/c} Cast Speed, but drain {c_number}[SF_39]{/c} Mana per attack.",
+   "hLabel": 28437434
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod7_Name",
+   "szText": "Blazing Blades",
+   "hLabel": 2726819223
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod8_Description",
+   "szText": "{c_important}Ice Blades'{/c} Cooldown is reduced by {c_number}[{SF_9}|1|]{/c} seconds each time it attacks an enemy.",
+   "hLabel": 1360065851
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod8_Name",
+   "szText": "Cooldown Reduction",
+   "hLabel": 2765954616
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod9_Description",
+   "szText": "{c_important}Ice Blades{/c} now cleave.",
+   "hLabel": 2691694268
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod9_Name",
+   "szText": "Area Bonus",
+   "hLabel": 2805090009
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod10_Description",
+   "szText": "{c_important}Ice Blades{/c} gains {c_number}[{SF_35} * 100|%+|]{/c} Cast Speed when attacking {c_important}{u}Frozen{/u}{/c} enemies.",
+   "hLabel": 2741697796
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod10_Name",
+   "szText": "Cast Speed",
+   "hLabel": 3070117409
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod11_Description",
+   "szText": "{c_important}Ice Blades'{/c} duration is increased by {c_number}[SF_37]{/c} seconds.",
+   "hLabel": 4073326213
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod11_Name",
+   "szText": "Duration Bonus",
+   "hLabel": 3109252802
   }
  ],
  "ptMapStringTable": "0"

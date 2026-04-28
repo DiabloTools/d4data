@@ -15,7 +15,7 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "desc",
-   "szText": "{c_label}Essence Cost:{/c} {c_resource}{Resource Cost}{/c}\r\n{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat Effect Chance}|%|]{/c}\r\n{/if}{if:SF_27}{c_label}Cooldown:{/c} {c_resource}{Cooldown Time}{/c} seconds\r\nThrow {c_number}[SF_29]{/c} converging blood lances that lingers in an enemy for {c_number}{buffduration:LANCED}{/c} seconds, dealing {c_number}{payload:DAMAGE}{/c} damage to the enemy and all other lanced enemies. \r\n\r\n{c_important}Blood Lance{/c} applies the lanced effect to another surrounding enemy, and if it initially hit a lanced enemy, it deals {c_number}[{SF_14} * 100|%|]{/c} increased damage.{else}Throw a blood lance that lingers in an enemy for {c_number}{buffduration:LANCED}{/c} seconds, dealing {c_number}{payload:DAMAGE}{/c} damage to the enemy and all other lanced enemies. \r\n\r\n{c_important}Blood Lance{/c} applies the lanced effect to another surrounding enemy, and if it initially hit a lanced enemy, it deals {c_number}[{SF_14} * 100|%|]{/c} increased damage.{/if}",
+   "szText": "{c_label}Essence Cost:{/c} {c_resource}{Resource Cost}{/c}\r\n{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat Effect Chance}|%|]{/c}\r\n{/if}Throw a blood lance, dealing {c_number}{payload:DAMAGE}{/c} to an enemy that ricochets to another enemy. Enemies hit are lanced for {if:Mod.VariantC}almost forever{else}{c_number}{buffduration:LANCED}{/c} seconds{/if}.\r\n\r\nWhen {c_important}Blood Lance{/c} hits an enemy, it deals damage to all other lanced enemies.",
    "hLabel": 3707583
   },
   {
@@ -28,58 +28,100 @@
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
-   "szLabel": "Buff7_Name",
-   "szText": "Blood Lance Upgrade",
-   "hLabel": 505088474
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
-   "szLabel": "Buff7_Description",
-   "szText": "{c_important}Blood Lance{/c} costs less Essence and you gain Attack Speed",
-   "hLabel": 1405171357
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
    "szLabel": "Mod2_Description",
-   "szText": "{c_important}Blood Lance{/c} deals {c_number}[{SF_23} * 100|%x|]{/c} increased Critical Strike Damage and {c_number}[{SF_24} * 100|%x|]{/c} increased {c_important}{u}Overpower{/u}{/c} damage.",
+   "szText": "{c_important}Blood Lance{/c} deals {c_number}[SF_7*100|x%|]{/c} increased damage to its primary target per lanced enemy.",
    "hLabel": 1960229941
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod2_Name",
-   "szText": "Supernatural Blood Lance",
+   "szText": "Blood Seeker",
    "hLabel": 2531142258
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
-   "szLabel": "Mod1_Description",
-   "szText": "After casting {c_important}Blood Lance{/c} {c_number}{SF_10}{/c} times, your next cast of {c_important}Blood Lance{/c} is guaranteed to {c_important}{u}Overpower{/u}{/c} and spawns a {c_important}{u}Blood Orb{/u}{/c} under the first enemy hit.",
-   "hLabel": 628601524
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
-   "szLabel": "Mod1_Name",
-   "szText": "Enhanced Blood Lance",
-   "hLabel": 2492006865
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
    "szLabel": "Mod0_Description",
-   "szText": "While at least {c_number}{SF_12}{/c} targets or a Boss are affected by {c_important}Blood Lance{/c}, you gain {c_number}[{SF_13} * 100|%+|]{/c} Attack Speed and {c_important}Blood Lance's{/c} Essence cost is reduced by {c_number}{SF_11}{/c}.",
+   "szText": "Every {c_number}3rd{/c} cast of {c_important}Blood Lance{/c} forms a {c_important}{u}Blood Orb{/c}{/u} under the first enemy hit.\r\n\r\nCasting {c_important}Blood Lance{/c} will pick up a {c_important}{u}Blood Orb{/c}{/u} around you and conjure an additional lance from it, dealing {c_number}[SF_14*100|%|]{/c} of normal damage.",
    "hLabel": 3591940403
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod0_Name",
-   "szText": "Paranormal Blood Lance",
+   "szText": "Gore Quills",
    "hLabel": 2452871472
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod3_Description",
+   "szText": "{c_important}Blood Lance{/c} becomes a {c_important}Darkness{/c} Skill and deals Shadow damage.\r\n\r\nEnemies hit are permanently lanced and the lance deals {c_number}{dot:TOOLTIP_DARKNESS_DOT}{/c} Corrupting damage per second to them.",
+   "hLabel": 3291858358
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod3_Name",
+   "szText": "Festering Wound",
+   "hLabel": 2570277651
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod1_Description",
+   "szText": "{c_important}Blood Lance{/c} ricochets to {c_number}{SF_10}{/c} additional enemy.",
+   "hLabel": 628601524
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod1_Name",
+   "szText": "Ricochet",
+   "hLabel": 2492006865
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod4_Description",
+   "szText": "{c_important}Blood Lance{/c} {c_important}{u}Fortifies{/c}{/u} you for {c_number}[{SF_23}*100|%|]{/c} of your Maximum Life {c_number}([Max(1,{fortified:MOD_FORTIFY})|0|]){/c} if it hits an enemy already lanced.",
+   "hLabel": 328519479
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod4_Name",
+   "szText": "Fortify",
+   "hLabel": 2609413044
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod5_Description",
+   "szText": "{c_important}Blood Lance's{/c} Essence cost is reduced by {c_number}{SF_33}{/c}.",
+   "hLabel": 1660147896
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod5_Name",
+   "szText": "Cost Reduction",
+   "hLabel": 2648548437
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod6_Description",
+   "szText": "{c_important}Blood Lance{/c} consumes {c_number}{SF_13}{/c} stacks of {c_important}{u}Overpower{/c}{/u} to throw an additional lance, dealing {c_number}[SF_12*100|%|]{/c} of normal damage.",
+   "hLabel": 2991776313
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod6_Name",
+   "szText": "Overpower",
+   "hLabel": 2687683830
   }
  ],
  "ptMapStringTable": "0"

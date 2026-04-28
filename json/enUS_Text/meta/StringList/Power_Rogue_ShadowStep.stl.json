@@ -15,57 +15,127 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "desc",
-   "szText": "{if:SF_19}{c_label}Charges:{/c} {c_resource}{SF_21}{/c}\r\n{c_label}Charge Cooldown:{/c_label} {c_resource}{Recharge Time}{/c} seconds\r\n{/if}{if:SF_20}{c_label}Cooldown:{/c_label} {c_resource}{Cooldown Time}{/c_resource} seconds\r\n{/if}{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat Effect Chance}|%|]{/c}\r\n{/if}Become {c_important}{u}Unstoppable{/u}{/c} and quickly move through the shadows to stab your victim from behind for {c_number}{payload:MELEE_PAYLOAD}{/c} damage. Gain {c_number}[{SF_5}*100|%|]{/c} increased Movement Speed for {c_number}{buffduration:BONUS_MOVE_SPEED}{/c} seconds afterwards.",
+   "szText": "{if:SF_19}{c_label}Charges:{/c} {c_resource}{SF_21}{/c}\r\n{c_label}Charge Cooldown:{/c_label} {c_resource}{Recharge Time}{/c} seconds\r\n{/if}{if:SF_20}{c_label}Cooldown:{/c_label} {c_resource}{Cooldown Time}{/c_resource} seconds\r\n{/if}{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat Effect Chance}|%|]{/c}\r\n{/if}Quickly move through the shadows to stab your victim from behind for {c_number}{payload:MELEE_PAYLOAD}{/c} damage and {c_important}{u}Execute{/u}{/c} them. Gain {c_number}[{SF_5}*100|%|]{/c} increased Movement Speed for {c_number}{buffduration:BONUS_MOVE_SPEED}{/c} seconds afterwards.",
    "hLabel": 3707583
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "rankup_desc",
-   "szText": "\r\n{icon:bullet,1.2} Damage {icon:arrow,1.2} {c_number}{payload:MELEE_PAYLOAD}{/c}",
+   "szText": "\r\n{icon:bullet,1.2} Damage {icon:arrow,1.2} {c_number}{payload:MELEE_PAYLOAD}{/c}{/if}{if:Mod.UpgradeB}\r\n{icon:bullet, 1.2} Stun Grenade Damage {icon:arrow,1.2} {c_number}{payload:UPGRADE_B_GRENADES_TOOLTIP}{/c}{/if}{if:Mod.UpgradeC}\r\n{icon:bullet, 1.2} Decoy Damage {icon:arrow,1.2} {c_number}{payload:UPGRADE_C_PAYLOAD}{/c}{/if}",
    "hLabel": 4074074671
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
-   "szLabel": "Mod2_Description",
-   "szText": "Damaging an enemy with {c_important}Shadow Step{/c} {c_important}{u}Dazes{/u}{/c} and applies {c_important}{u}Vulnerable{/u}{/c} to them for {c_number}{SF_23}{/c} seconds. ",
-   "hLabel": 1960229941
+   "szLabel": "Buff28_Name",
+   "szText": "Ravager's Damage Bonus",
+   "hLabel": 77030541
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
-   "szLabel": "Mod2_Name",
-   "szText": "Enhanced Shadow Step",
-   "hLabel": 2531142258
+   "szLabel": "Buff28_Description",
+   "szText": "{c_number}[{SF_36}*100|%x|]{/c} bonus {c_important}Shadow Step{/c} damage per stack",
+   "hLabel": 3986434544
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod3_Description",
-   "szText": "{c_important}Shadow Step{/c} deals {c_number}[SF_27*100|%x|]{/c} more damage. Casting {c_important}Shadow Step{/c} reduces its Cooldown by {c_number}{SF_13}{/c} seconds.",
+   "szText": "{c_important}Shadow Step{/c} has an additional Charge and refunds a Charge when it kills an enemy. Casting {c_important}Shadow Step{/c} increases its damage by {c_number}[SF_36 * 100|%x|]{/c} for {c_number}[SF_37]{/c} seconds, up to {c_number}[SF_36 * SF_38 *100|%x|]{/c}.",
    "hLabel": 3291858358
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod3_Name",
-   "szText": "Disciplined Shadow Step",
+   "szText": "Sight Unseen",
    "hLabel": 2570277651
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod4_Description",
-   "szText": "After {c_important}Shadow Stepping{/c}, you gain {c_number}[{SF_24}*100|%|]{/c} Damage Reduction for {c_number}{SF_15}{/c} seconds.",
+   "szText": "{c_important}Shadow Step{/c} {c_important}{u}Dazes{/u}{/c} its primary target for {c_number}{buffduration:UPGRADE_B_DAZE}{/c} seconds and leaves {c_number}{SF_27}{/c} {c_important}{u}Stun Grenades{/u}{/c} at its feet that each deal {c_number}{payload:UPGRADE_B_GRENADES_TOOLTIP}{/c} damage.",
    "hLabel": 328519479
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod4_Name",
-   "szText": "Methodical Shadow Step",
+   "szText": "Safe Arrival",
    "hLabel": 2609413044
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod6_Description",
+   "szText": "{c_important}Shadow Step{/c} no longer requires a target, and it leaves a decoy at your starting location that {c_important}Taunts{/c} Nearby enemies and explodes after {c_number}{buffduration:UPGRADE_C_BUFF_FUSE}{/c} seconds, dealing {c_number}{payload:UPGRADE_C_PAYLOAD}{/c} Shadow damage.\r\n\r\n{c_important}Shadow Step's{/c} Cooldown is increased to {c_number}{SF_40}{/c} seconds.",
+   "hLabel": 2991776313
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod6_Name",
+   "szText": "Artifice",
+   "hLabel": 2687683830
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod2_Description",
+   "szText": "Damaging an enemy with {c_important}Shadow Step{/c} applies {c_important}{u}Vulnerable{/u}{/c} to them for {c_number}{SF_23}{/c} seconds. ",
+   "hLabel": 1960229941
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod2_Name",
+   "szText": "Vulnerable",
+   "hLabel": 2531142258
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod8_Description",
+   "szText": "Casting {c_important}Shadow Step{/c} reduces its Cooldown by {c_number}{SF_13}{/c} seconds.",
+   "hLabel": 1360065851
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod8_Name",
+   "szText": "Cooldown",
+   "hLabel": 2765954616
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod10_Description",
+   "szText": "{c_important}Shadow Step's{/c} stab now cleaves, dealing {c_number}[{SF_28}*100|%|]{/c} of the original damage to the cleaved targets.",
+   "hLabel": 2741697796
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod10_Name",
+   "szText": "Cleave",
+   "hLabel": 3070117409
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod12_Description",
+   "szText": "Casting {c_important}Shadow Step{/c} grants {c_important}{u}Unstoppable{/u}{/c} for {c_number}{buffduration:UNSTOPPABLE}{/c} seconds.",
+   "hLabel": 1109987334
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod12_Name",
+   "szText": "Unstoppable",
+   "hLabel": 3148388195
   }
  ],
  "ptMapStringTable": "0"

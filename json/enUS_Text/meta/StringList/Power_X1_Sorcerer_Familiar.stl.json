@@ -15,14 +15,14 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "desc",
-   "szText": "{c_label}Charges:{/c} {c_resource}{SF_3}{/c}\r\n{c_label}Charge Cooldown:{/c} {c_resource}{Recharge Time}{/c_resource} seconds \r\n{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat_Effect_Chance_Script_Formula_Override:23}|1%|]{/c}\r\n{/if}Summon a familiar matching the Element of your last cast Skill for {c_number}{buffduration:DURATION_TRACKER}{/c} seconds. It seeks enemies and periodically explodes, dealing {c_number}{payload:DAMAGE_TOOLTIP}{/c} of its Element's damage. \r\n\r\nYou may have up to {c_number}[SF_15]{/c} {c_important}Familiars{/c} active at a time.",
+   "szText": "{c_label}Charges:{/c} {c_resource}{SF_3}{/c}\r\n{c_label}Charge Cooldown:{/c} {c_resource}{Recharge Time}{/c_resource} seconds\r\n{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat_Effect_Chance_Script_Formula_Override:23}|1%|]{/c}\r\n{/if}Summon a {c_important}Fire Familiar{/c} for {c_number}{buffduration:DURATION_TRACKER}{/c} seconds. It seeks enemies and periodically explodes, dealing {c_number}{payload:DAMAGE_TOOLTIP}{/c} damage.\r\n\r\nYou may have up to {c_number}[SF_15]{/c} {c_important}Familiars{/c} active at a time.",
    "hLabel": 3707583
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "rankup_desc",
-   "szText": "\r\n{icon:bullet,1.2} Damage {icon:arrow,1.2} {c_number}{payload:DAMAGE_TOOLTIP}{/c}",
+   "szText": "\r\n{icon:bullet,1.2} Damage {icon:arrow,1.2} {c_number}{payload:DAMAGE_TOOLTIP}{/c}{if:Mod.UpgradeA}\r\n{icon:bullet,1.2} Heal Amount {icon:arrow,1.2} {c_number}[{heal:HEAL_TOOLTIP}|1|]{/c}{/if}{if:Mod.UpgradeB}\r\n{icon:bullet,1.2} Cooldown Reduction {icon:arrow,1.2} {c_number}[SF_38 * 100|2%|]{/c}{/if}{if:Mod.UpgradeC}\r\n{icon:bullet,1.2} Chill Amount {icon:arrow,1.2} {c_number}[SF_40|%|]{/c}{/if}",
    "hLabel": 4074074671
   },
   {
@@ -42,20 +42,6 @@
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
-   "szLabel": "Buff41_Name",
-   "szText": "Damage Increase",
-   "hLabel": 2386018728
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
-   "szLabel": "Buff41_Description",
-   "szText": "Increase Elemental damage by Familiar type.",
-   "hLabel": 948132523
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
    "szLabel": "Mod0_Description",
    "szText": "{c_important}Familiars{/c} apply effects around them every {c_number}[{SF_19}|1|]{/c} seconds according to their Element:\r\n{icon:bullet, 1.2} {c_label}Fire{/c}: Applies {c_number}{DOT:BURNING}{/c} Burning damage over {c_number}{SF_6}{/c} seconds to enemies.\r\n{icon:bullet, 1.2} {c_label}Cold{/c}: Applies {c_number}[SF_8|%|]{/c} Chill to enemies.\r\n{icon:bullet, 1.2} {c_label}Lightning{/c}: Stuns enemies for {c_number}[SF_9]{/c} second.",
    "hLabel": 3591940403
@@ -71,29 +57,113 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod1_Description",
-   "szText": "Your {c_important}Familiars'{/c} Elements now follow a set cycle through Fire, Cold, and Lightning when you cast any Skill.\r\n\r\nWhile you have at least two {c_important}Familiars{/c} with different Elements active, you gain {c_number}[SF_10*100|+%|]{/c} Damage Reduction.",
+   "szText": "{c_important}Familiar{/c} grants {c_number}[SF_35]{/c} stacks of {c_important}{u}Overpower{/u}{/c} when summoned and restores {c_number}[SF_36 * 100 |1%|]{/c} of your Maximum Life ({c_number}[{heal:HEAL_TOOLTIP}|0|]{/c}) per second while active.",
    "hLabel": 628601524
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod1_Name",
-   "szText": "Roaring Familiar",
+   "szText": "Healing Flames",
    "hLabel": 2492006865
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod2_Description",
-   "szText": "While you have an active {c_important}Familiar{/c}, you deal {c_number}[SF_12*100|x%|]{/c} increased damage of its Elemental type.",
+   "szText": "{c_important}Familiar{/c} becomes a {c_important}Shock{/c} Skill that deals Lightning damage.\r\n\r\n{c_important}Familiar{/c} increases your Minimum {c_important}{u}Ferocity{/u}{/c} by {c_number}[SF_37]{/c} and grants {c_number}[SF_38 * 100|2%|]{/c} Cooldown Reduction while active.",
    "hLabel": 1960229941
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod2_Name",
-   "szText": "Invoked Familiar",
+   "szText": "Fast As Lightning",
    "hLabel": 2531142258
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod5_Description",
+   "szText": "{c_important}Familiar{/c} becomes a {c_important}Frost{/c} Skill that deals Cold damage.\r\n\r\n{c_important}Familiar{/c} {c_important}{u}Chills{/u}{/c} for {c_number}[SF_40|%|]{/c} and {c_important}{u}Weakens{/u}{/c} enemies for {c_number}[SF_39]{/c} seconds.",
+   "hLabel": 1660147896
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod5_Name",
+   "szText": "Freezing Familiar",
+   "hLabel": 2648548437
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod13_Description",
+   "szText": "{c_important}Familiar{/c} becomes a {c_important}Pyromancy{/c}, {c_important}Shock{/c}, and {c_important}Frost{/c} Skill that summons a stationary {c_important}Prismatic Familiar{/c}.\r\n\r\nCasting Skills will cause {c_important}Prismatic Familiar{/c} to apply {c_number}{dot:UPGRADED_BURN}{/c} Frostbite, Sparking, or Burning damage over {c_number}{buffduration:UPGRADED_BURN}{/c} seconds to surrounding enemies based on the Element Cast. ",
+   "hLabel": 2441615751
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod13_Name",
+   "szText": "Prismatic Familiar",
+   "hLabel": 3187523588
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod6_Description",
+   "szText": "{c_important}Familiar{/c} gains {c_number}[SF_31]{/c} additional Charge.",
+   "hLabel": 2991776313
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod6_Name",
+   "szText": "Charge",
+   "hLabel": 2687683830
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod7_Description",
+   "szText": "{c_important}Familiar's{/c} explosion radius is increased by {c_number}[SF_27*100|%|]{/c}.",
+   "hLabel": 28437434
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod7_Name",
+   "szText": "Size Bonus",
+   "hLabel": 2726819223
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod8_Description",
+   "szText": "{c_important}Familiar's{/c} duration is increased by {c_number}[SF_29]{/c} seconds.",
+   "hLabel": 1360065851
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod8_Name",
+   "szText": "Duration Bonus",
+   "hLabel": 2765954616
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod9_Description",
+   "szText": "Gain a bonus based on the {c_important}Familiar{/c} type when the {c_important}Familiar{/c} explodes:\r\n\r\n{icon:bullet,1.2} {c_important}Fire Familiar{/c} {icon:arrow,1.2} Gain {if:SF_33}{c_number}[SF_6 * 100|1%+|]{/c}{else}{c_number}[SF_6 * 100|%+|]{/c}{/if} Healing Received for {c_number}{SF_11}{/c} seconds.\r\n{icon:bullet,1.2} {c_important}Cold Familiar{/c} {icon:arrow,1.2} Gain a {c_important}{u}Barrier{/u}{/c} for {c_number}[SF_7*100|%|]{/c} of your Maximum Life {c_number}([PlayerHealthMax() * SF_7]){/c} for {c_number}[SF_8]{/c} seconds, up to {c_number}[SF_9 * 100|%|]{/c}.\r\n{icon:bullet,1.2} {c_important}Lightning Familiar{/c} {icon:arrow,1.2} Reduce a random active Cooldown by {c_number}[SF_10|1|]{/c} |4second:seconds;.",
+   "hLabel": 2691694268
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod9_Name",
+   "szText": "Bonus Effect",
+   "hLabel": 2805090009
   }
  ],
  "ptMapStringTable": "0"

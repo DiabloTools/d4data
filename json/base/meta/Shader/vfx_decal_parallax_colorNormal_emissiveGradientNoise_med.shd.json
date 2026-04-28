@@ -1,0 +1,819 @@
+{
+ "__fileName__": "base/meta/Shader/vfx_decal_parallax_colorNormal_emissiveGradientNoise_med.shd",
+ "__snoID__": 2512989,
+ "__type__": "ShaderDefinition",
+ "__typeHash__": 923517792,
+ "dwRenderLayers": 32768,
+ "ptPasses": [
+  {
+   "__type__": "RenderPass",
+   "__typeHash__": 3394879799,
+   "eRenderLayer": 15,
+   "eGraphType": 3,
+   "tRenderParams": {
+    "__type__": "RenderParams",
+    "__typeHash__": 3352174724,
+    "nSortPriorityOffset": 0,
+    "eCullMode": 2,
+    "fZBufferWriteEnable": false,
+    "eZBufferCompareFunc": 8,
+    "flZBias": 0,
+    "flZSlopeScaleBias": 0,
+    "unk_88ea918": 1,
+    "unk_86528c3": 1,
+    "tStencilParams": {
+     "__type__": "StencilParams",
+     "__typeHash__": 1922961974,
+     "fStencilBufferEnable": true,
+     "dwStencilBufferRefValue": 5,
+     "dwStencilReadMask": 5,
+     "dwStencilWriteMask": 0,
+     "eFrontStencilBufferCompareFunc": 3,
+     "eFrontStencilOpPass": 1,
+     "eFrontStencilOpFail": 1,
+     "eFrontStencilOpZFail": 1,
+     "eBackStencilBufferCompareFunc": 1,
+     "eBackStencilOpPass": 1,
+     "eBackStencilOpFail": 1,
+     "eBackStencilOpZFail": 1
+    },
+    "fAlphaTestEnable": true,
+    "eAlphaTestCompareFunc": 5,
+    "bAlphaTestRefValue": 0,
+    "fAlphaMaskEnable": false,
+    "eFillMode": 0,
+    "fIndependentAlphaBlendEnable": true,
+    "arAlphaBlend": [
+     {
+      "__type__": "AlphaBlendFactors",
+      "__typeHash__": 3409962653,
+      "fAlphaBlendEnable": false,
+      "eBlendOp": 1,
+      "eSrcBlendFactor": 2,
+      "eDestBlendFactor": 1,
+      "fSeparateAlphaBlendEnable": false,
+      "eBlendOpAlpha": 1,
+      "eSrcBlendFactorAlpha": 5,
+      "eDestBlendFactorAlpha": 6,
+      "fRWriteEnable": false,
+      "fGWriteEnable": false,
+      "fBWriteEnable": false,
+      "fAWriteEnable": false
+     },
+     {
+      "__type__": "AlphaBlendFactors",
+      "__typeHash__": 3409962653,
+      "fAlphaBlendEnable": true,
+      "eBlendOp": 1,
+      "eSrcBlendFactor": 5,
+      "eDestBlendFactor": 6,
+      "fSeparateAlphaBlendEnable": false,
+      "eBlendOpAlpha": 0,
+      "eSrcBlendFactorAlpha": 0,
+      "eDestBlendFactorAlpha": 0,
+      "fRWriteEnable": true,
+      "fGWriteEnable": true,
+      "fBWriteEnable": true,
+      "fAWriteEnable": false
+     },
+     {
+      "__type__": "AlphaBlendFactors",
+      "__typeHash__": 3409962653,
+      "fAlphaBlendEnable": true,
+      "eBlendOp": 1,
+      "eSrcBlendFactor": 5,
+      "eDestBlendFactor": 6,
+      "fSeparateAlphaBlendEnable": false,
+      "eBlendOpAlpha": 0,
+      "eSrcBlendFactorAlpha": 0,
+      "eDestBlendFactorAlpha": 0,
+      "fRWriteEnable": false,
+      "fGWriteEnable": false,
+      "fBWriteEnable": true,
+      "fAWriteEnable": false
+     },
+     {
+      "__type__": "AlphaBlendFactors",
+      "__typeHash__": 3409962653,
+      "fAlphaBlendEnable": true,
+      "eBlendOp": 1,
+      "eSrcBlendFactor": 5,
+      "eDestBlendFactor": 6,
+      "fSeparateAlphaBlendEnable": false,
+      "eBlendOpAlpha": 0,
+      "eSrcBlendFactorAlpha": 0,
+      "eDestBlendFactorAlpha": 0,
+      "fRWriteEnable": true,
+      "fGWriteEnable": true,
+      "fBWriteEnable": true,
+      "fAWriteEnable": false
+     },
+     {
+      "__type__": "AlphaBlendFactors",
+      "__typeHash__": 3409962653,
+      "fAlphaBlendEnable": false,
+      "eBlendOp": 0,
+      "eSrcBlendFactor": 0,
+      "eDestBlendFactor": 0,
+      "fSeparateAlphaBlendEnable": false,
+      "eBlendOpAlpha": 0,
+      "eSrcBlendFactorAlpha": 0,
+      "eDestBlendFactorAlpha": 0,
+      "fRWriteEnable": false,
+      "fGWriteEnable": false,
+      "fBWriteEnable": false,
+      "fAWriteEnable": false
+     },
+     {
+      "__type__": "AlphaBlendFactors",
+      "__typeHash__": 3409962653,
+      "fAlphaBlendEnable": false,
+      "eBlendOp": 0,
+      "eSrcBlendFactor": 0,
+      "eDestBlendFactor": 0,
+      "fSeparateAlphaBlendEnable": false,
+      "eBlendOpAlpha": 0,
+      "eSrcBlendFactorAlpha": 0,
+      "eDestBlendFactorAlpha": 0,
+      "fRWriteEnable": false,
+      "fGWriteEnable": false,
+      "fBWriteEnable": false,
+      "fAWriteEnable": false
+     }
+    ]
+   },
+   "snoShaderEffect": null,
+   "ptInputLayout": [
+    {
+     "__type__": "ShaderInputLayout",
+     "__typeHash__": 9306245,
+     "eVBFormat": 21
+    },
+    {
+     "__type__": "ShaderInputLayout",
+     "__typeHash__": 9306245,
+     "eVBFormat": 22
+    }
+   ],
+   "dwFlags": 0,
+   "dwDecalWriteFlags": 51,
+   "unk_c23801f": 0,
+   "ptPostprocessed": "0",
+   "dwShaderPermFlags": [
+    0
+   ],
+   "ptPerms": [
+    {
+     "__type__": "ShaderPermutation",
+     "__typeHash__": 3001537487,
+     "unk_e3331b5": [
+      1,
+      86
+     ],
+     "unk_a2b58a8": [],
+     "tPrograms": [
+      {
+       "__type__": "ShaderPermShaderProgram",
+       "__typeHash__": 1801469402,
+       "pShaderProgram": [],
+       "pStateObject": [],
+       "dwKey": "5ce88f31b00ee9f7",
+       "unk_8e5f439": [
+        536952832,
+        0,
+        0,
+        0,
+        0,
+        0
+       ],
+       "unk_d4d5dbb": [],
+       "ptResourceSlot": [],
+       "unk_6f6dbab": []
+      },
+      {
+       "__type__": "ShaderPermShaderProgram",
+       "__typeHash__": 1801469402,
+       "pShaderProgram": [],
+       "pStateObject": [],
+       "dwKey": "14a20e4b7d56c98d",
+       "unk_8e5f439": [
+        3604482,
+        403771392,
+        640,
+        0,
+        0,
+        262144
+       ],
+       "unk_d4d5dbb": [
+        6,
+        7,
+        0,
+        2,
+        4,
+        5,
+        9
+       ],
+       "ptResourceSlot": [
+        39,
+        211,
+        12,
+        86,
+        97,
+        89,
+        14,
+        1,
+        94,
+        151,
+        91,
+        3
+       ],
+       "unk_6f6dbab": []
+      },
+      {
+       "__type__": "ShaderPermShaderProgram",
+       "__typeHash__": 1801469402,
+       "pShaderProgram": [],
+       "pStateObject": [],
+       "dwKey": "0",
+       "unk_8e5f439": [],
+       "unk_d4d5dbb": [],
+       "ptResourceSlot": [],
+       "unk_6f6dbab": []
+      },
+      {
+       "__type__": "ShaderPermShaderProgram",
+       "__typeHash__": 1801469402,
+       "pShaderProgram": [],
+       "pStateObject": [],
+       "dwKey": "0",
+       "unk_8e5f439": [],
+       "unk_d4d5dbb": [],
+       "ptResourceSlot": [],
+       "unk_6f6dbab": []
+      }
+     ]
+    }
+   ],
+   "tUsedScalarMaterialValues": [
+    {
+     "__type__": "MaterialScalarValuesUsed",
+     "__typeHash__": 3952663046,
+     "snoMaterialValue": {
+      "__raw__": 136217,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/Color Intensity.mtv",
+      "groupName": "MaterialValue",
+      "name": "Color Intensity"
+     },
+     "flDefaultValue": 1
+    },
+    {
+     "__type__": "MaterialScalarValuesUsed",
+     "__typeHash__": 3952663046,
+     "snoMaterialValue": {
+      "__raw__": 138973,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/Alpha Dissolve Power Max.mtv",
+      "groupName": "MaterialValue",
+      "name": "Alpha Dissolve Power Max"
+     },
+     "flDefaultValue": 1
+    },
+    {
+     "__type__": "MaterialScalarValuesUsed",
+     "__typeHash__": 3952663046,
+     "snoMaterialValue": {
+      "__raw__": 139115,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/flow speed.mtv",
+      "groupName": "MaterialValue",
+      "name": "flow speed"
+     },
+     "flDefaultValue": 1
+    },
+    {
+     "__type__": "MaterialScalarValuesUsed",
+     "__typeHash__": 3952663046,
+     "snoMaterialValue": {
+      "__raw__": 139177,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/Alpha Brightness Global.mtv",
+      "groupName": "MaterialValue",
+      "name": "Alpha Brightness Global"
+     },
+     "flDefaultValue": 1
+    },
+    {
+     "__type__": "MaterialScalarValuesUsed",
+     "__typeHash__": 3952663046,
+     "snoMaterialValue": {
+      "__raw__": 148337,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/emissive color lerp.mtv",
+      "groupName": "MaterialValue",
+      "name": "emissive color lerp"
+     },
+     "flDefaultValue": 0
+    },
+    {
+     "__type__": "MaterialScalarValuesUsed",
+     "__typeHash__": 3952663046,
+     "snoMaterialValue": {
+      "__raw__": 164605,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/Env Pom Height.mtv",
+      "groupName": "MaterialValue",
+      "name": "Env Pom Height"
+     },
+     "flDefaultValue": 0.10000000149011612
+    },
+    {
+     "__type__": "MaterialScalarValuesUsed",
+     "__typeHash__": 3952663046,
+     "snoMaterialValue": {
+      "__raw__": 176300,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/Emissive.mtv",
+      "groupName": "MaterialValue",
+      "name": "Emissive"
+     },
+     "flDefaultValue": 1
+    },
+    {
+     "__type__": "MaterialScalarValuesUsed",
+     "__typeHash__": 3952663046,
+     "snoMaterialValue": {
+      "__raw__": 400465,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/Normal Intensity.mtv",
+      "groupName": "MaterialValue",
+      "name": "Normal Intensity"
+     },
+     "flDefaultValue": 1
+    },
+    {
+     "__type__": "MaterialScalarValuesUsed",
+     "__typeHash__": 3952663046,
+     "snoMaterialValue": {
+      "__raw__": 450853,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/Alpha Swipe Falloff Min.mtv",
+      "groupName": "MaterialValue",
+      "name": "Alpha Swipe Falloff Min"
+     },
+     "flDefaultValue": 0
+    },
+    {
+     "__type__": "MaterialScalarValuesUsed",
+     "__typeHash__": 3952663046,
+     "snoMaterialValue": {
+      "__raw__": 450854,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/Alpha Swipe Falloff Max.mtv",
+      "groupName": "MaterialValue",
+      "name": "Alpha Swipe Falloff Max"
+     },
+     "flDefaultValue": 0.05000000074505806
+    },
+    {
+     "__type__": "MaterialScalarValuesUsed",
+     "__typeHash__": 3952663046,
+     "snoMaterialValue": {
+      "__raw__": 985328,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/Low EV Alpha.mtv",
+      "groupName": "MaterialValue",
+      "name": "Low EV Alpha"
+     },
+     "flDefaultValue": 1
+    },
+    {
+     "__type__": "MaterialScalarValuesUsed",
+     "__typeHash__": 3952663046,
+     "snoMaterialValue": {
+      "__raw__": 985329,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/High EV Alpha.mtv",
+      "groupName": "MaterialValue",
+      "name": "High EV Alpha"
+     },
+     "flDefaultValue": 1
+    },
+    {
+     "__type__": "MaterialScalarValuesUsed",
+     "__typeHash__": 3952663046,
+     "snoMaterialValue": {
+      "__raw__": 1058655,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/Only Display on Navmesh Surfaces.mtv",
+      "groupName": "MaterialValue",
+      "name": "Only Display on Navmesh Surfaces"
+     },
+     "flDefaultValue": 1
+    },
+    {
+     "__type__": "MaterialScalarValuesUsed",
+     "__typeHash__": 3952663046,
+     "snoMaterialValue": {
+      "__raw__": 1070275,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/Color Saturation.mtv",
+      "groupName": "MaterialValue",
+      "name": "Color Saturation"
+     },
+     "flDefaultValue": 1
+    },
+    {
+     "__type__": "MaterialScalarValuesUsed",
+     "__typeHash__": 3952663046,
+     "snoMaterialValue": {
+      "__raw__": 1076921,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/Alpha Test Threshold.mtv",
+      "groupName": "MaterialValue",
+      "name": "Alpha Test Threshold"
+     },
+     "flDefaultValue": 0
+    },
+    {
+     "__type__": "MaterialScalarValuesUsed",
+     "__typeHash__": 3952663046,
+     "snoMaterialValue": {
+      "__raw__": 1860878,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/Mask Emissive By Alpha.mtv",
+      "groupName": "MaterialValue",
+      "name": "Mask Emissive By Alpha"
+     },
+     "flDefaultValue": 0
+    },
+    {
+     "__type__": "MaterialScalarValuesUsed",
+     "__typeHash__": 3952663046,
+     "snoMaterialValue": {
+      "__raw__": 2087793,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/Recolor Main Hue VFX.mtv",
+      "groupName": "MaterialValue",
+      "name": "Recolor Main Hue VFX"
+     },
+     "flDefaultValue": 0
+    },
+    {
+     "__type__": "MaterialScalarValuesUsed",
+     "__typeHash__": 3952663046,
+     "snoMaterialValue": {
+      "__raw__": 2087794,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/Recolor Hue Range VFX.mtv",
+      "groupName": "MaterialValue",
+      "name": "Recolor Hue Range VFX"
+     },
+     "flDefaultValue": 0.05000000074505806
+    },
+    {
+     "__type__": "MaterialScalarValuesUsed",
+     "__typeHash__": 3952663046,
+     "snoMaterialValue": {
+      "__raw__": 2087795,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/Recolor Roughness Offset VFX.mtv",
+      "groupName": "MaterialValue",
+      "name": "Recolor Roughness Offset VFX"
+     },
+     "flDefaultValue": 0
+    },
+    {
+     "__type__": "MaterialScalarValuesUsed",
+     "__typeHash__": 3952663046,
+     "snoMaterialValue": {
+      "__raw__": 2087796,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/Recolor Saturation Offset VFX.mtv",
+      "groupName": "MaterialValue",
+      "name": "Recolor Saturation Offset VFX"
+     },
+     "flDefaultValue": 0
+    },
+    {
+     "__type__": "MaterialScalarValuesUsed",
+     "__typeHash__": 3952663046,
+     "snoMaterialValue": {
+      "__raw__": 2087797,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/Recolor Value Offset VFX.mtv",
+      "groupName": "MaterialValue",
+      "name": "Recolor Value Offset VFX"
+     },
+     "flDefaultValue": 0
+    },
+    {
+     "__type__": "MaterialScalarValuesUsed",
+     "__typeHash__": 3952663046,
+     "snoMaterialValue": {
+      "__raw__": 2087798,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/Recolor Replace Hue VFX.mtv",
+      "groupName": "MaterialValue",
+      "name": "Recolor Replace Hue VFX"
+     },
+     "flDefaultValue": 0.41999998688697815
+    },
+    {
+     "__type__": "MaterialScalarValuesUsed",
+     "__typeHash__": 3952663046,
+     "snoMaterialValue": {
+      "__raw__": 2092745,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/Secondary Recolor Main Hue VFX.mtv",
+      "groupName": "MaterialValue",
+      "name": "Secondary Recolor Main Hue VFX"
+     },
+     "flDefaultValue": 0
+    },
+    {
+     "__type__": "MaterialScalarValuesUsed",
+     "__typeHash__": 3952663046,
+     "snoMaterialValue": {
+      "__raw__": 2092746,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/Secondary Recolor Hue Range VFX.mtv",
+      "groupName": "MaterialValue",
+      "name": "Secondary Recolor Hue Range VFX"
+     },
+     "flDefaultValue": 0
+    },
+    {
+     "__type__": "MaterialScalarValuesUsed",
+     "__typeHash__": 3952663046,
+     "snoMaterialValue": {
+      "__raw__": 2092754,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/Secondary Recolor Value Offset VFX.mtv",
+      "groupName": "MaterialValue",
+      "name": "Secondary Recolor Value Offset VFX"
+     },
+     "flDefaultValue": 0
+    },
+    {
+     "__type__": "MaterialScalarValuesUsed",
+     "__typeHash__": 3952663046,
+     "snoMaterialValue": {
+      "__raw__": 2092755,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/Secondary Recolor Saturation Offset VFX.mtv",
+      "groupName": "MaterialValue",
+      "name": "Secondary Recolor Saturation Offset VFX"
+     },
+     "flDefaultValue": 0
+    },
+    {
+     "__type__": "MaterialScalarValuesUsed",
+     "__typeHash__": 3952663046,
+     "snoMaterialValue": {
+      "__raw__": 2092756,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/Secondary Recolor Replace Hue VFX.mtv",
+      "groupName": "MaterialValue",
+      "name": "Secondary Recolor Replace Hue VFX"
+     },
+     "flDefaultValue": 0.699999988079071
+    },
+    {
+     "__type__": "MaterialScalarValuesUsed",
+     "__typeHash__": 3952663046,
+     "snoMaterialValue": {
+      "__raw__": 2092827,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/Enable Recolor VFX.mtv",
+      "groupName": "MaterialValue",
+      "name": "Enable Recolor VFX"
+     },
+     "flDefaultValue": 0
+    },
+    {
+     "__type__": "MaterialScalarValuesUsed",
+     "__typeHash__": 3952663046,
+     "snoMaterialValue": {
+      "__raw__": 2110844,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/Remote Player Alpha Fade Value.mtv",
+      "groupName": "MaterialValue",
+      "name": "Remote Player Alpha Fade Value"
+     },
+     "flDefaultValue": 1
+    },
+    {
+     "__type__": "MaterialScalarValuesUsed",
+     "__typeHash__": 3952663046,
+     "snoMaterialValue": {
+      "__raw__": 2117146,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/Secondary Recolor Value Multiply VFX.mtv",
+      "groupName": "MaterialValue",
+      "name": "Secondary Recolor Value Multiply VFX"
+     },
+     "flDefaultValue": 1
+    },
+    {
+     "__type__": "MaterialScalarValuesUsed",
+     "__typeHash__": 3952663046,
+     "snoMaterialValue": {
+      "__raw__": 2117147,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/Recolor Value Multiply VFX.mtv",
+      "groupName": "MaterialValue",
+      "name": "Recolor Value Multiply VFX"
+     },
+     "flDefaultValue": 1
+    },
+    {
+     "__type__": "MaterialScalarValuesUsed",
+     "__typeHash__": 3952663046,
+     "snoMaterialValue": {
+      "__raw__": 2450951,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/Enable Damage Remap.mtv",
+      "groupName": "MaterialValue",
+      "name": "Enable Damage Remap"
+     },
+     "flDefaultValue": 1
+    }
+   ],
+   "tUsedVectorMaterialValues": [
+    {
+     "__type__": "MaterialVectorValuesUsed",
+     "__typeHash__": 4119790019,
+     "snoMaterialValue": {
+      "__raw__": 204855,
+      "__group__": 81,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/MaterialValue/emissive color.mtv",
+      "groupName": "MaterialValue",
+      "name": "emissive color"
+     },
+     "vDefaultValue": {
+      "x": 1,
+      "y": 1,
+      "z": 1,
+      "w": 1
+     }
+    }
+   ],
+   "tUsedStaticBranchMaterialValues": [],
+   "tDefaultTextures": [
+    {
+     "__type__": "DefaultTextureInfo",
+     "__typeHash__": 3928304546,
+     "eShaderTex": 94,
+     "snoTexture": {
+      "__raw__": 132595,
+      "__group__": 44,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/Texture/solid_white.tex",
+      "groupName": "Texture",
+      "name": "solid_white"
+     }
+    },
+    {
+     "__type__": "DefaultTextureInfo",
+     "__typeHash__": 3928304546,
+     "eShaderTex": 86,
+     "snoTexture": {
+      "__raw__": 573875,
+      "__group__": 44,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/Texture/000_white.tex",
+      "groupName": "Texture",
+      "name": "000_white"
+     }
+    },
+    {
+     "__type__": "DefaultTextureInfo",
+     "__typeHash__": 3928304546,
+     "eShaderTex": 89,
+     "snoTexture": {
+      "__raw__": 461448,
+      "__group__": 44,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/Texture/lava_Gradient.tex",
+      "groupName": "Texture",
+      "name": "lava_Gradient"
+     }
+    },
+    {
+     "__type__": "DefaultTextureInfo",
+     "__typeHash__": 3928304546,
+     "eShaderTex": 91,
+     "snoTexture": {
+      "__raw__": 282703,
+      "__group__": 44,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/Texture/black_blackalpha.tex",
+      "groupName": "Texture",
+      "name": "black_blackalpha"
+     }
+    }
+   ],
+   "pBBEFormulas": [],
+   "hOptionalRenderPassFields": {
+    "unk_3f60c57": 0,
+    "TAG_VS_LIGHTING": 0,
+    "TAG_VS_USES_EMISSIVE_TARGET": 0,
+    "unk_74273ac": 0,
+    "TAG_VS_AO_LIGHTING": 0,
+    "unk_bc87fa3": 1,
+    "TAG_VS_ENABLE_FOGGING": 0,
+    "unk_f7d4a46": 0,
+    "TAG_VS_USES_INSTANCING": 1
+   }
+  }
+ ],
+ "unk_a0d6c95": false,
+ "unk_860effa": false,
+ "unk_2f4ebc8": false,
+ "arDisabledShaderFX": [],
+ "arRemappedShaderFX": [],
+ "unk_cee0ffd": "vfx_decal_parallax_colorNormal_emissiveGradientNoise_med",
+ "pShaderData": {
+  "__type__": "DT_VARIABLEARRAY",
+  "__typeHash__": 3244749660,
+  "__flags__": 4194304,
+  "__external__": true,
+  "value": {
+   "__typeHash__": 1028015787,
+   "__type__": "DT_BYTE",
+   "dataOffset": 32,
+   "dataSize": 14557
+  }
+ }
+}

@@ -15,29 +15,71 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "desc",
-   "szText": "{c_label}Cooldown:{/c_label} {c_resource}{Cooldown Time}{/c_resource} seconds\r\n{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}{Combat Effect Chance}%{/c}\r\n{/if}Fly into the air, creating a cloud which makes enemies at your target location {c_important}{u}Vulnerable{/u}{/c} for {c_number}{SF_2}{/c} seconds before you crash down upon them dealing {c_number}{payload:IMPACT}{/c} damage.",
+   "szText": "{c_label}Cooldown:{/c_label} {c_resource}{Cooldown Time}{/c_resource} seconds\r\n{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}{Combat Effect Chance}%{/c}\r\n{/if}Fly into the air, creating a cloud which makes enemies at your target location {c_important}{u}Vulnerable{/u}{/c} for {c_number}[SF_2|1|]{/c} seconds before you crash down upon them dealing {c_number}{payload:IMPACT}{/c} damage.",
    "hLabel": 3707583
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "rankup_desc",
-   "szText": "\r\n{icon:bullet, 1.2} Damage {icon:arrow, 1.2} {c_number}{payload:IMPACT}{/c}",
+   "szText": "\r\n{icon:bullet, 1.2} Damage {icon:arrow, 1.2} {c_number}{payload:IMPACT}{/c}\r\n{icon:bullet, 1.2} {c_important}{u}Vulnerable{/u}{/c} Duration {icon:arrow, 1.2} {c_number}[SF_2|1|]{/c} seconds",
    "hLabel": 4074074671
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod0_Description",
-   "szText": "The next hit against an enemy struck by {c_important}Soar{/c} is a guaranteed Critical Strike. If {c_important}Soar{/c} hits no enemies you instead gain {c_number}[{SF_8} * 100|%+|]{/c} increased Movement Speed for {c_number}{buffduration:MOVE_SPD_BONUS}{/c} seconds.",
+   "szText": "{c_important}Soar{/c} impact area is {c_number}[SF_30*100|%|]{/c} larger. ",
    "hLabel": 3591940403
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod0_Name",
-   "szText": "Enhanced Soar",
+   "szText": "Size Bonus",
    "hLabel": 2452871472
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod4_Description",
+   "szText": "{c_important}Soar's{/c} Cooldown is reduced by {c_number}{SF_21}{/c} seconds.",
+   "hLabel": 328519479
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod4_Name",
+   "szText": "Cooldown Reduction",
+   "hLabel": 2609413044
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod5_Description",
+   "szText": "{c_important}Soar{/c} gives you {c_number}[{SF_20}*100|%|]{/c} Movement Speed increase for {c_number}{buffduration:MOVE_SPD_BONUS}{/c} seconds. If Soar hits no enemies, gain {c_number}[{SF_8}*100|%|]{/c} instead.",
+   "hLabel": 1660147896
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod5_Name",
+   "szText": "Movement Speed",
+   "hLabel": 2648548437
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod6_Description",
+   "szText": "{c_important}Soar{/c} deals {c_number}[SF_24*100|%x|]{/c} increased damage.",
+   "hLabel": 2991776313
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod6_Name",
+   "szText": "Damage Increase",
+   "hLabel": 2687683830
   },
   {
    "__type__": "StringTableEntry",
@@ -50,22 +92,36 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod1_Name",
-   "szText": "Measured Soar",
+   "szText": "Free Bird",
    "hLabel": 2492006865
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod2_Description",
-   "szText": "{c_important}Soar's{/c} cloud remains around you for {c_number}{buffduration:SOAR_MARKED_PLAYER}{/c} seconds after landing and continues to make enemies {c_important}{u}Vulnerable{/u}{/c}.",
+   "szText": "{c_important}Soar's{/c} cloud deals {c_number}{dot:LIGHTNING_DOT}{/c} Sparking damage each second and remains around you for {c_number}{buffduration:SOAR_MARKED_PLAYER}{/c} seconds after landing. {c_important}Soar{/c} conjures {c_number}[SF_32]{/c} {c_important}{u}Spirit Storms{/u}{/c} around its impact area that Spark enemies for {c_number}{dot:TOOLTIP_LIGHTNING_DOT}{/c} damage.",
    "hLabel": 1960229941
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod2_Name",
-   "szText": "Replenishing Soar",
+   "szText": "Eye of the Storm",
    "hLabel": 2531142258
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod3_Description",
+   "szText": "{c_important}Soar{/c} becomes a {c_important}Jaguar{/c} Skill that deals Fire damage. \r\n\r\n{c_important}Soar{/c} lunges into the air and directly back down, dealing {c_number}{payload:IMPACT_C}{/c} damage twice. This ability can {c_important}{u}Execute{/u}{/c} enemies. ",
+   "hLabel": 3291858358
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod3_Name",
+   "szText": "Jaguar's Execution",
+   "hLabel": 2570277651
   }
  ],
  "ptMapStringTable": "0"

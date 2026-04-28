@@ -80,6 +80,7 @@
  "bChannelledMovement": false,
  "bAutoChannelled": false,
  "unk_3837f2a": true,
+ "hChannelingString": 0,
  "bInterruptOnDamage": false,
  "tAutoChannelledDuration": {
   "value": "0",
@@ -103,6 +104,15 @@
    "__targetFileName__": "base/meta/Power/Spiritborn_Gorilla_Potency_Passive.pow",
    "groupName": "Power",
    "name": "Spiritborn_Gorilla_Potency_Passive"
+  },
+  {
+   "__raw__": 1843183,
+   "__group__": 29,
+   "__type__": "DT_SNO",
+   "__typeHash__": 2764331143,
+   "__targetFileName__": "base/meta/Power/Spiritborn_Gorilla_Passive.pow",
+   "groupName": "Power",
+   "name": "Spiritborn_Gorilla_Passive"
   }
  ],
  "snoEnchantmentPower": null,
@@ -132,7 +142,7 @@
  "unk_4bf03ff": true,
  "tAttackSpeed": {
   "value": "Attacks_Per_Second_Total",
-  "compiled": "BQAAAAAAAADeAAAA/v///wAAAAAAAAAA"
+  "compiled": "BQAAAAAAAADkAAAA/v///wAAAAAAAAAA"
  },
  "unk_6deb090": false,
  "unk_ed2bdad": false,
@@ -185,7 +195,25 @@
  "bMustBeLearned": true,
  "bCaptionsInside": false,
  "eShapeshiftForm": -1,
- "arResourceCosts": [],
+ "arResourceCosts": [
+  {
+   "__type__": "PowerResourceCost",
+   "__typeHash__": 2616788302,
+   "eType": 7,
+   "tMinRequired": {
+    "value": "SF_7 ? SF_5 : 0",
+    "compiled": "BQAAAA0AAAAAAAAAAAAAAAAAAAAFAAAACwAAAAAAAAAAAAAAAAAAAAYAAAAAAAAAEAAAAAAAAAA="
+   },
+   "tInitialCost": {
+    "value": "SF_7 ? SF_5 : 0",
+    "compiled": "BQAAAA0AAAAAAAAAAAAAAAAAAAAFAAAACwAAAAAAAAAAAAAAAAAAAAYAAAAAAAAAEAAAAAAAAAA="
+   },
+   "tChannellingCost": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   }
+  }
+ ],
  "tHealthCost": {
   "value": "0",
   "compiled": "BgAAAAAAAAAAAAAA"
@@ -207,8 +235,8 @@
   "compiled": "BgAAAAAAgD8AAAAA"
  },
  "tCooldownTime": {
-  "value": "SF_20 ? 0 : SF_0",
-  "compiled": "BQAAABoAAAAAAAAAAAAAAAAAAAAGAAAAAAAAAAUAAAAGAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAA="
+  "value": "SF_7 ? 0 : SF_0",
+  "compiled": "BQAAAA0AAAAAAAAAAAAAAAAAAAAGAAAAAAAAAAUAAAAGAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAA="
  },
  "tResourceCostReductionCoefficient": {
   "value": "0",
@@ -640,6 +668,7 @@
  "fCancelOnUsePower": false,
  "fCancelOnMount": false,
  "fCancelOnEvade": false,
+ "unk_e2d9430": false,
  "arHitReactionOverrides": [],
  "arBuffs": [
   {
@@ -663,6 +692,8 @@
     "value": "1",
     "compiled": "BgAAAAAAgD8AAAAA"
    },
+   "unk_bb42146": false,
+   "unk_22c356e": false,
    "gbidBuffPreset": null,
    "bVisibleInUI": false,
    "nVisualPriority": 0,
@@ -675,6 +706,7 @@
    "bShowsActiveStateOnHotbar": false,
    "bShowsDurationOnHotbar": true,
    "bShowsStackCountOnHotbar": false,
+   "unk_8b74b0f": false,
    "unk_71ba554": false,
    "unk_1375622": false,
    "unk_d2dd47": false,
@@ -736,7 +768,8 @@
     "tStaggerMultiplier": {
      "value": "1",
      "compiled": "BgAAAAAAgD8AAAAA"
-    }
+    },
+    "unk_20877c3": false
    },
    "bHasDamageShield": false,
    "tDamageShield": {
@@ -752,7 +785,9 @@
      "compiled": "BgAAAAAAAAAAAAAA"
     }
    },
-   "dwShaderMapOverride": 4294967295
+   "dwShaderMapOverride": 4294967295,
+   "unk_32f141c": 4294967295,
+   "unk_f8a0a44": 4294967295
   },
   {
    "__type__": "PowerBuffDefinition",
@@ -775,6 +810,8 @@
     "value": "SF_8",
     "compiled": "BQAAAA4AAAAAAAAAAAAAAAAAAAAAAAAA"
    },
+   "unk_bb42146": false,
+   "unk_22c356e": false,
    "gbidBuffPreset": null,
    "bVisibleInUI": false,
    "nVisualPriority": 0,
@@ -787,6 +824,7 @@
    "bShowsActiveStateOnHotbar": false,
    "bShowsDurationOnHotbar": false,
    "bShowsStackCountOnHotbar": true,
+   "unk_8b74b0f": false,
    "unk_71ba554": false,
    "unk_1375622": false,
    "unk_d2dd47": false,
@@ -848,7 +886,8 @@
     "tStaggerMultiplier": {
      "value": "1",
      "compiled": "BgAAAAAAgD8AAAAA"
-    }
+    },
+    "unk_20877c3": false
    },
    "bHasDamageShield": false,
    "tDamageShield": {
@@ -864,7 +903,9 @@
      "compiled": "BgAAAAAAAAAAAAAA"
     }
    },
-   "dwShaderMapOverride": 4294967295
+   "dwShaderMapOverride": 4294967295,
+   "unk_32f141c": 4294967295,
+   "unk_f8a0a44": 4294967295
   },
   {
    "__type__": "PowerBuffDefinition",
@@ -887,6 +928,8 @@
     "value": "1",
     "compiled": "BgAAAAAAgD8AAAAA"
    },
+   "unk_bb42146": false,
+   "unk_22c356e": false,
    "gbidBuffPreset": null,
    "bVisibleInUI": true,
    "nVisualPriority": 0,
@@ -899,6 +942,7 @@
    "bShowsActiveStateOnHotbar": false,
    "bShowsDurationOnHotbar": false,
    "bShowsStackCountOnHotbar": false,
+   "unk_8b74b0f": false,
    "unk_71ba554": false,
    "unk_1375622": false,
    "unk_d2dd47": false,
@@ -960,7 +1004,8 @@
     "tStaggerMultiplier": {
      "value": "1",
      "compiled": "BgAAAAAAgD8AAAAA"
-    }
+    },
+    "unk_20877c3": false
    },
    "bHasDamageShield": false,
    "tDamageShield": {
@@ -976,18 +1021,20 @@
      "compiled": "BgAAAAAAAAAAAAAA"
     }
    },
-   "dwShaderMapOverride": 4294967295
+   "dwShaderMapOverride": 4294967295,
+   "unk_32f141c": 4294967295,
+   "unk_f8a0a44": 4294967295
   },
   {
    "__type__": "PowerBuffDefinition",
    "__typeHash__": 1071057721,
-   "dwID": 803146609,
-   "dwBuffId": 17,
-   "bHarmful": false,
+   "dwID": 3595636592,
+   "dwBuffId": 20,
+   "bHarmful": true,
    "bInfinite": false,
    "tDuration": {
-    "value": "1.5",
-    "compiled": "BgAAAAAAwD8AAAAA"
+    "value": "SF_24",
+    "compiled": "BQAAAB4AAAAAAAAAAAAAAAAAAAAAAAAA"
    },
    "tMaxExtendDuration": {
     "value": "0",
@@ -999,6 +1046,8 @@
     "value": "1",
     "compiled": "BgAAAAAAgD8AAAAA"
    },
+   "unk_bb42146": false,
+   "unk_22c356e": false,
    "gbidBuffPreset": null,
    "bVisibleInUI": false,
    "nVisualPriority": 0,
@@ -1007,10 +1056,129 @@
    "unk_99b5752": false,
    "unk_93cd85f": false,
    "unk_4bdaef2": false,
-   "bVisibleInHotbarUI": true,
-   "bShowsActiveStateOnHotbar": true,
+   "bVisibleInHotbarUI": false,
+   "bShowsActiveStateOnHotbar": false,
    "bShowsDurationOnHotbar": false,
    "bShowsStackCountOnHotbar": false,
+   "unk_8b74b0f": false,
+   "unk_71ba554": false,
+   "unk_1375622": false,
+   "unk_d2dd47": false,
+   "unk_8a5f69e": false,
+   "hIcon": 0,
+   "hFloatingIcon": 0,
+   "hFloatingTextLabel": 0,
+   "flFloatingTextIconRange": 0,
+   "unk_395ccd6": false,
+   "bDealsDOT": true,
+   "tDOT": {
+    "__type__": "PowerBuffDOTDamage",
+    "__typeHash__": 3824324374,
+    "unk_c3d4c36": false,
+    "eDamageType": -1,
+    "tDamage": {
+     "__type__": "HitpointSpecifier",
+     "__typeHash__": 1185241065,
+     "eType": 0,
+     "tHitpointScalar": {
+      "value": "SF_25",
+      "compiled": "BQAAAB8AAAAAAAAAAAAAAAAAAAAAAAAA"
+     },
+     "tFlatLevel": {
+      "value": "0",
+      "compiled": "BgAAAAAAAAAAAAAA"
+     }
+    },
+    "unk_89dc285": false,
+    "flFlatDamageBonusScalar": 1,
+    "unk_f551941": -1,
+    "bDamageIgnoresInvulnerable": false,
+    "bDamageIgnoresBonuses": false,
+    "unk_b7113b1": false,
+    "eClassBaseDamageScalar": -1,
+    "bHasCombatEffectOverride": false,
+    "tCombatEffectOverride": {
+     "value": "100",
+     "compiled": "BgAAAAAAyEIAAAAA"
+    },
+    "bHideDamageEffects": false,
+    "bHideGlobalApplicationEffect": false
+   },
+   "tCrowdControl": {
+    "__type__": "PowerBuffCrowdControl",
+    "__typeHash__": 4138865712,
+    "unk_c63f49e": true,
+    "dwCCFlags": 32,
+    "bUseGlobalSlowAmount": false,
+    "eGlobalSlowAmountType": 0,
+    "tSlowAmount": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    },
+    "tChillAmount": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    },
+    "tStaggerMultiplier": {
+     "value": "1",
+     "compiled": "BgAAAAAAgD8AAAAA"
+    },
+    "unk_20877c3": false
+   },
+   "bHasDamageShield": false,
+   "tDamageShield": {
+    "__type__": "HitpointSpecifier",
+    "__typeHash__": 1185241065,
+    "eType": 0,
+    "tHitpointScalar": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    },
+    "tFlatLevel": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    }
+   },
+   "dwShaderMapOverride": 4294967295,
+   "unk_32f141c": 4294967295,
+   "unk_f8a0a44": 4294967295
+  },
+  {
+   "__type__": "PowerBuffDefinition",
+   "__typeHash__": 1071057721,
+   "dwID": 1487385722,
+   "dwBuffId": 21,
+   "bHarmful": false,
+   "bInfinite": false,
+   "tDuration": {
+    "value": "SF_14",
+    "compiled": "BQAAABQAAAAAAAAAAAAAAAAAAAAAAAAA"
+   },
+   "tMaxExtendDuration": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "bMoveOnSkillCategoryCooldown": false,
+   "unk_dcb22bd": false,
+   "tMaxStackCount": {
+    "value": "1",
+    "compiled": "BgAAAAAAgD8AAAAA"
+   },
+   "unk_bb42146": false,
+   "unk_22c356e": false,
+   "gbidBuffPreset": null,
+   "bVisibleInUI": false,
+   "nVisualPriority": 0,
+   "bShowDuration": false,
+   "bCancellable": false,
+   "unk_99b5752": false,
+   "unk_93cd85f": false,
+   "unk_4bdaef2": false,
+   "bVisibleInHotbarUI": false,
+   "bShowsActiveStateOnHotbar": false,
+   "bShowsDurationOnHotbar": false,
+   "bShowsStackCountOnHotbar": false,
+   "unk_8b74b0f": false,
    "unk_71ba554": false,
    "unk_1375622": false,
    "unk_d2dd47": false,
@@ -1072,7 +1240,8 @@
     "tStaggerMultiplier": {
      "value": "1",
      "compiled": "BgAAAAAAgD8AAAAA"
-    }
+    },
+    "unk_20877c3": false
    },
    "bHasDamageShield": false,
    "tDamageShield": {
@@ -1088,18 +1257,20 @@
      "compiled": "BgAAAAAAAAAAAAAA"
     }
    },
-   "dwShaderMapOverride": 4294967295
+   "dwShaderMapOverride": 4294967295,
+   "unk_32f141c": 4294967295,
+   "unk_f8a0a44": 4294967295
   },
   {
    "__type__": "PowerBuffDefinition",
    "__typeHash__": 1071057721,
-   "dwID": 803152361,
-   "dwBuffId": 18,
+   "dwID": 2691824844,
+   "dwBuffId": 23,
    "bHarmful": false,
    "bInfinite": false,
    "tDuration": {
-    "value": "1.5",
-    "compiled": "BgAAAAAAwD8AAAAA"
+    "value": "SF_28",
+    "compiled": "BQAAACIAAAAAAAAAAAAAAAAAAAAAAAAA"
    },
    "tMaxExtendDuration": {
     "value": "0",
@@ -1111,6 +1282,8 @@
     "value": "1",
     "compiled": "BgAAAAAAgD8AAAAA"
    },
+   "unk_bb42146": false,
+   "unk_22c356e": false,
    "gbidBuffPreset": null,
    "bVisibleInUI": false,
    "nVisualPriority": 0,
@@ -1119,10 +1292,11 @@
    "unk_99b5752": false,
    "unk_93cd85f": false,
    "unk_4bdaef2": false,
-   "bVisibleInHotbarUI": true,
-   "bShowsActiveStateOnHotbar": true,
+   "bVisibleInHotbarUI": false,
+   "bShowsActiveStateOnHotbar": false,
    "bShowsDurationOnHotbar": false,
    "bShowsStackCountOnHotbar": false,
+   "unk_8b74b0f": false,
    "unk_71ba554": false,
    "unk_1375622": false,
    "unk_d2dd47": false,
@@ -1184,7 +1358,8 @@
     "tStaggerMultiplier": {
      "value": "1",
      "compiled": "BgAAAAAAgD8AAAAA"
-    }
+    },
+    "unk_20877c3": false
    },
    "bHasDamageShield": false,
    "tDamageShield": {
@@ -1200,119 +1375,9 @@
      "compiled": "BgAAAAAAAAAAAAAA"
     }
    },
-   "dwShaderMapOverride": 4294967295
-  },
-  {
-   "__type__": "PowerBuffDefinition",
-   "__typeHash__": 1071057721,
-   "dwID": 2754027687,
-   "dwBuffId": 19,
-   "bHarmful": false,
-   "bInfinite": false,
-   "tDuration": {
-    "value": "1.5",
-    "compiled": "BgAAAAAAwD8AAAAA"
-   },
-   "tMaxExtendDuration": {
-    "value": "0",
-    "compiled": "BgAAAAAAAAAAAAAA"
-   },
-   "bMoveOnSkillCategoryCooldown": false,
-   "unk_dcb22bd": false,
-   "tMaxStackCount": {
-    "value": "1",
-    "compiled": "BgAAAAAAgD8AAAAA"
-   },
-   "gbidBuffPreset": null,
-   "bVisibleInUI": false,
-   "nVisualPriority": 0,
-   "bShowDuration": false,
-   "bCancellable": false,
-   "unk_99b5752": false,
-   "unk_93cd85f": false,
-   "unk_4bdaef2": false,
-   "bVisibleInHotbarUI": true,
-   "bShowsActiveStateOnHotbar": true,
-   "bShowsDurationOnHotbar": false,
-   "bShowsStackCountOnHotbar": false,
-   "unk_71ba554": false,
-   "unk_1375622": false,
-   "unk_d2dd47": false,
-   "unk_8a5f69e": false,
-   "hIcon": 0,
-   "hFloatingIcon": 0,
-   "hFloatingTextLabel": 0,
-   "flFloatingTextIconRange": 0,
-   "unk_395ccd6": false,
-   "bDealsDOT": false,
-   "tDOT": {
-    "__type__": "PowerBuffDOTDamage",
-    "__typeHash__": 3824324374,
-    "unk_c3d4c36": false,
-    "eDamageType": -1,
-    "tDamage": {
-     "__type__": "HitpointSpecifier",
-     "__typeHash__": 1185241065,
-     "eType": 0,
-     "tHitpointScalar": {
-      "value": "0",
-      "compiled": "BgAAAAAAAAAAAAAA"
-     },
-     "tFlatLevel": {
-      "value": "0",
-      "compiled": "BgAAAAAAAAAAAAAA"
-     }
-    },
-    "unk_89dc285": false,
-    "flFlatDamageBonusScalar": 1,
-    "unk_f551941": -1,
-    "bDamageIgnoresInvulnerable": false,
-    "bDamageIgnoresBonuses": false,
-    "unk_b7113b1": false,
-    "eClassBaseDamageScalar": -1,
-    "bHasCombatEffectOverride": false,
-    "tCombatEffectOverride": {
-     "value": "100",
-     "compiled": "BgAAAAAAyEIAAAAA"
-    },
-    "bHideDamageEffects": false,
-    "bHideGlobalApplicationEffect": false
-   },
-   "tCrowdControl": {
-    "__type__": "PowerBuffCrowdControl",
-    "__typeHash__": 4138865712,
-    "unk_c63f49e": true,
-    "dwCCFlags": 0,
-    "bUseGlobalSlowAmount": false,
-    "eGlobalSlowAmountType": 0,
-    "tSlowAmount": {
-     "value": "0",
-     "compiled": "BgAAAAAAAAAAAAAA"
-    },
-    "tChillAmount": {
-     "value": "0",
-     "compiled": "BgAAAAAAAAAAAAAA"
-    },
-    "tStaggerMultiplier": {
-     "value": "1",
-     "compiled": "BgAAAAAAgD8AAAAA"
-    }
-   },
-   "bHasDamageShield": false,
-   "tDamageShield": {
-    "__type__": "HitpointSpecifier",
-    "__typeHash__": 1185241065,
-    "eType": 0,
-    "tHitpointScalar": {
-     "value": "0",
-     "compiled": "BgAAAAAAAAAAAAAA"
-    },
-    "tFlatLevel": {
-     "value": "0",
-     "compiled": "BgAAAAAAAAAAAAAA"
-    }
-   },
-   "dwShaderMapOverride": 4294967295
+   "dwShaderMapOverride": 4294967295,
+   "unk_32f141c": 4294967295,
+   "unk_f8a0a44": 4294967295
   }
  ],
  "nFormulaCount": 0,
@@ -1361,16 +1426,16 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "1.5",
-    "compiled": "BgAAAAAAwD8AAAAA"
+    "value": "70",
+    "compiled": "BgAAAAAAjEIAAAAA"
    }
   },
   {
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "0.005",
-    "compiled": "BgAAAArXozsAAAAA"
+    "value": "2.75 * Table(34,sLevel)",
+    "compiled": "BgAAAAAAMEAGAAAAAAAIQgUAAAABAAAAAAAAAAAAAAAAAAAAAQAAAAsAAAANAAAAAAAAAA=="
    }
   },
   {
@@ -1385,32 +1450,32 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "1",
-    "compiled": "BgAAAAAAgD8AAAAA"
+    "value": "SF_0",
+    "compiled": "BQAAAAYAAAAAAAAAAAAAAAAAAAAAAAAA"
    }
   },
   {
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "0.35",
-    "compiled": "BgAAADQzsz4AAAAA"
+    "value": "0.05",
+    "compiled": "BgAAAM3MTD0AAAAA"
    }
   },
   {
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "",
-    "compiled": ""
+    "value": "2",
+    "compiled": "BgAAAAAAAEAAAAAA"
    }
   },
   {
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "5",
-    "compiled": "BgAAAAAAoEAAAAAA"
+    "value": "3",
+    "compiled": "BgAAAAAAQEAAAAAA"
    }
   },
   {
@@ -1425,23 +1490,7 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "999",
-    "compiled": "BgAAAADAeUQAAAAA"
-   }
-  },
-  {
-   "__type__": "ScriptFormulaInfo",
-   "__typeHash__": 551777591,
-   "tFormula": {
-    "value": "60",
-    "compiled": "BgAAAAAAcEIAAAAA"
-   }
-  },
-  {
-   "__type__": "ScriptFormulaInfo",
-   "__typeHash__": 551777591,
-   "tFormula": {
-    "value": "0.2",
+    "value": ".2",
     "compiled": "BgAAAM3MTD4AAAAA"
    }
   },
@@ -1449,16 +1498,32 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "10",
-    "compiled": "BgAAAAAAIEEAAAAA"
+    "value": "5",
+    "compiled": "BgAAAAAAoEAAAAAA"
    }
   },
   {
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "Affix_Value_1#legendary_spiritborn_017_x1",
-    "compiled": "BQAAAAAAAACFBAAA5FocAAAAAAAAAAAA"
+    "value": "0.1",
+    "compiled": "BgAAAM3MzD0AAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "5",
+    "compiled": "BgAAAAAAoEAAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "",
+    "compiled": ""
    }
   },
   {
@@ -1466,23 +1531,23 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Thorns_Flat + Thorns_Flat_Unscaled_By_Player_Health",
-    "compiled": "BQAAAAAAAAByAQAA/v///wAAAAAFAAAAAAAAAHMBAAD+////AAAAAAsAAAAAAAAA"
+    "compiled": "BQAAAAAAAAB1AQAA/v///wAAAAAFAAAAAAAAAHYBAAD+////AAAAAAsAAAAAAAAA"
    }
   },
   {
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "SF_18 * (SF_17)",
-    "compiled": "BQAAABgAAAAAAAAAAAAAAAAAAAAFAAAAFwAAAAAAAAAAAAAAAAAAAA0AAAAAAAAA"
+    "value": "",
+    "compiled": ""
    }
   },
   {
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "(AffixIsEquipped(SNO.Affix.Quarterstaff_Unique_Spiritborn_016_x1) * SF_7) ? 1 : SF_27",
-    "compiled": "BQAAAFkAAABs8B8AAAAAAAAAAAABAAAAJAAAAAUAAAANAAAAAAAAAAAAAAAAAAAADQAAAAYAAAAAAIA/BQAAACEAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAA=="
+    "value": "(AffixIsEquipped(SNO.Affix.Quarterstaff_Unique_Spiritborn_016_x1) * SF_7) ? 1 : SF_31",
+    "compiled": "BQAAAFkAAABs8B8AAAAAAAAAAAABAAAAJAAAAAUAAAANAAAAAAAAAAAAAAAAAAAADQAAAAYAAAAAAIA/BQAAACUAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAA=="
    }
   },
   {
@@ -1490,7 +1555,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Bonus_Percent_Per_Power#Spiritborn_Gorilla_Potency + SF_22",
-    "compiled": "BQAAAAAAAADVAwAAz48cAAAAAAAFAAAAHAAAAAAAAAAAAAAAAAAAAAsAAAAAAAAA"
+    "compiled": "BQAAAAAAAADiAwAAz48cAAAAAAAFAAAAHAAAAAAAAAAAAAAAAAAAAAsAAAAAAAAA"
    }
   },
   {
@@ -1498,7 +1563,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Generic_Chance_For_Double_Damage_Per_SkillTag#Skill_Primary_Potency",
-    "compiled": "BQAAAAAAAACQAACAw0UfNAAAAAAAAAAA"
+    "compiled": "BQAAAAAAAACXAACAw0UfNAAAAAAAAAAA"
    }
   },
   {
@@ -1506,31 +1571,63 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "SF_7 * Generic_Chance_For_Hit_Twice_Per_SkillTag#Skill_Primary_Core",
-    "compiled": "BQAAAA0AAAAAAAAAAAAAAAAAAAAFAAAAAAAAAI8AAIAK4vGoAAAAAA0AAAAAAAAA"
+    "compiled": "BQAAAA0AAAAAAAAAAAAAAAAAAAAFAAAAAAAAAJYAAIAK4vGoAAAAAA0AAAAAAAAA"
    }
   },
   {
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "(SF_3*2.5)",
-    "compiled": "BQAAAAkAAAAAAAAAAAAAAAAAAAAGAAAAAAAgQA0AAAAAAAAA"
+    "value": "6",
+    "compiled": "BgAAAAAAwEAAAAAA"
    }
   },
   {
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "(SF_19*2)",
-    "compiled": "BQAAABkAAAAAAAAAAAAAAAAAAAAGAAAAAAAAQA0AAAAAAAAA"
+    "value": ".55 * Table(34,sLevel)",
+    "compiled": "BgAAAM3MDD8GAAAAAAAIQgUAAAABAAAAAAAAAAAAAAAAAAAAAQAAAAsAAAANAAAAAAAAAA=="
    }
   },
   {
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "(SF_4*2.5)",
-    "compiled": "BQAAAAoAAAAAAAAAAAAAAAAAAAAGAAAAAAAgQA0AAAAAAAAA"
+    "value": ".1",
+    "compiled": "BgAAAM3MzD0AAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": ".3",
+    "compiled": "BgAAAJqZmT4AAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "5",
+    "compiled": "BgAAAAAAoEAAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "",
+    "compiled": ""
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "",
+    "compiled": ""
    }
   },
   {
@@ -1539,6 +1636,22 @@
    "tFormula": {
     "value": "(AffixIsEquipped(SNO.Affix.S10_Quarterstaff_Unique_Spiritborn_016_x1) * SF_7) ? 1 : 0",
     "compiled": "BQAAAFkAAACkdSQAAAAAAAAAAAABAAAAJAAAAAUAAAANAAAAAAAAAAAAAAAAAAAADQAAAAYAAAAAAIA/BgAAAAAAAAAQAAAAAAAAAA=="
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "999",
+    "compiled": "BgAAAADAeUQAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": ".4",
+    "compiled": "BgAAAM3MzD4AAAAA"
    }
   }
  ],
@@ -1558,6 +1671,107 @@
     "tHitpointScalar": {
      "value": "SF_1",
      "compiled": "BQAAAAcAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "tFlatLevel": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    }
+   },
+   "bHasCustomDamageVariance": false,
+   "tDamageVariance": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "arBuffsToApply": [],
+   "bApplyVulnerableDebuff": false,
+   "tVulnerableDurationSecondsOverride": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "unk_b4395d8": false,
+   "unk_7c2668d": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "tFortifiedHealth": {
+    "__type__": "HitpointSpecifier",
+    "__typeHash__": 1185241065,
+    "eType": 0,
+    "tHitpointScalar": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    },
+    "tFlatLevel": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    }
+   },
+   "tApplyFreeze": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "tApplyChillAmount": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "unk_e659b0f": -1,
+   "tHeal": {
+    "__type__": "HitpointSpecifier",
+    "__typeHash__": 1185241065,
+    "eType": 0,
+    "tHitpointScalar": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    },
+    "tFlatLevel": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    }
+   },
+   "eHealType": 0,
+   "bPlayHealEffect": true,
+   "unk_8bc45f2": false,
+   "unk_15c6c03": false,
+   "unk_e842c84": false,
+   "eClassBaseDamageScalar": -1,
+   "bHasCombatEffectOverride": false,
+   "tCombatEffectOverride": {
+    "value": "100",
+    "compiled": "BgAAAAAAyEIAAAAA"
+   },
+   "ePayloadDefaultHitEffectType": 2,
+   "snoNormalHitEffectGroup": null,
+   "snoTargetImpactEffectGroup": null,
+   "unk_f381067": false,
+   "flHitFlashDurationScalar": 1,
+   "iPowerNeedTarget": false,
+   "bPlayNormalHitSoundPayload": false,
+   "unk_969096b": false,
+   "unk_5885b8": 0,
+   "unk_f38eac9": false,
+   "tOnHitSoundsPayload": {
+    "__type__": "OnHitSounds",
+    "__typeHash__": 960545022,
+    "sno1P": null,
+    "sno3PEnemy": null,
+    "sno3PFriendly": null
+   }
+  },
+  {
+   "__type__": "PowerPayloadDefinition",
+   "__typeHash__": 812993760,
+   "snoItemTypeMainHandEffectsOverride": null,
+   "snoItemTypeOffHandEffectsOverride": null,
+   "dwID": 3118563679,
+   "dwPayloadId": 4,
+   "eForcedDamageType": -1,
+   "tDamage": {
+    "__type__": "HitpointSpecifier",
+    "__typeHash__": 1185241065,
+    "eType": 0,
+    "tHitpointScalar": {
+     "value": "SF_6",
+     "compiled": "BQAAAAwAAAAAAAAAAAAAAAAAAAAAAAAA"
     },
     "tFlatLevel": {
      "value": "0",
@@ -1744,231 +1958,13 @@
     "sno3PEnemy": null,
     "sno3PFriendly": null
    }
-  },
-  {
-   "__type__": "PowerPayloadDefinition",
-   "__typeHash__": 812993760,
-   "snoItemTypeMainHandEffectsOverride": null,
-   "snoItemTypeOffHandEffectsOverride": null,
-   "dwID": 2471349688,
-   "dwPayloadId": 2,
-   "eForcedDamageType": -1,
-   "tDamage": {
-    "__type__": "HitpointSpecifier",
-    "__typeHash__": 1185241065,
-    "eType": 3,
-    "tHitpointScalar": {
-     "value": "SF_19",
-     "compiled": "BQAAABkAAAAAAAAAAAAAAAAAAAAAAAAA"
-    },
-    "tFlatLevel": {
-     "value": "0",
-     "compiled": "BgAAAAAAAAAAAAAA"
-    }
-   },
-   "bHasCustomDamageVariance": true,
-   "tDamageVariance": {
-    "value": "0",
-    "compiled": "BgAAAAAAAAAAAAAA"
-   },
-   "arBuffsToApply": [],
-   "bApplyVulnerableDebuff": false,
-   "tVulnerableDurationSecondsOverride": {
-    "value": "0",
-    "compiled": "BgAAAAAAAAAAAAAA"
-   },
-   "unk_b4395d8": false,
-   "unk_7c2668d": {
-    "value": "0",
-    "compiled": "BgAAAAAAAAAAAAAA"
-   },
-   "tFortifiedHealth": {
-    "__type__": "HitpointSpecifier",
-    "__typeHash__": 1185241065,
-    "eType": 0,
-    "tHitpointScalar": {
-     "value": "0",
-     "compiled": "BgAAAAAAAAAAAAAA"
-    },
-    "tFlatLevel": {
-     "value": "0",
-     "compiled": "BgAAAAAAAAAAAAAA"
-    }
-   },
-   "tApplyFreeze": {
-    "value": "0",
-    "compiled": "BgAAAAAAAAAAAAAA"
-   },
-   "tApplyChillAmount": {
-    "value": "0",
-    "compiled": "BgAAAAAAAAAAAAAA"
-   },
-   "unk_e659b0f": -1,
-   "tHeal": {
-    "__type__": "HitpointSpecifier",
-    "__typeHash__": 1185241065,
-    "eType": 0,
-    "tHitpointScalar": {
-     "value": "0",
-     "compiled": "BgAAAAAAAAAAAAAA"
-    },
-    "tFlatLevel": {
-     "value": "0",
-     "compiled": "BgAAAAAAAAAAAAAA"
-    }
-   },
-   "eHealType": 0,
-   "bPlayHealEffect": true,
-   "unk_8bc45f2": false,
-   "unk_15c6c03": false,
-   "unk_e842c84": false,
-   "eClassBaseDamageScalar": 5,
-   "bHasCombatEffectOverride": true,
-   "tCombatEffectOverride": {
-    "value": "0",
-    "compiled": "BgAAAAAAAAAAAAAA"
-   },
-   "ePayloadDefaultHitEffectType": 2,
-   "snoNormalHitEffectGroup": null,
-   "snoTargetImpactEffectGroup": {
-    "__raw__": 4388,
-    "__group__": 14,
-    "__type__": "DT_SNO",
-    "__typeHash__": 2764331143,
-    "__targetFileName__": "base/meta/EffectGroup/g_Thorns.efg",
-    "groupName": "EffectGroup",
-    "name": "g_Thorns"
-   },
-   "unk_f381067": false,
-   "flHitFlashDurationScalar": 1,
-   "iPowerNeedTarget": false,
-   "bPlayNormalHitSoundPayload": false,
-   "unk_969096b": false,
-   "unk_5885b8": 0,
-   "unk_f38eac9": false,
-   "tOnHitSoundsPayload": {
-    "__type__": "OnHitSounds",
-    "__typeHash__": 960545022,
-    "sno1P": null,
-    "sno3PEnemy": null,
-    "sno3PFriendly": null
-   }
-  },
-  {
-   "__type__": "PowerPayloadDefinition",
-   "__typeHash__": 812993760,
-   "snoItemTypeMainHandEffectsOverride": null,
-   "snoItemTypeOffHandEffectsOverride": null,
-   "dwID": 3030025089,
-   "dwPayloadId": 4,
-   "eForcedDamageType": -1,
-   "tDamage": {
-    "__type__": "HitpointSpecifier",
-    "__typeHash__": 1185241065,
-    "eType": 3,
-    "tHitpointScalar": {
-     "value": "SF_25",
-     "compiled": "BQAAAB8AAAAAAAAAAAAAAAAAAAAAAAAA"
-    },
-    "tFlatLevel": {
-     "value": "0",
-     "compiled": "BgAAAAAAAAAAAAAA"
-    }
-   },
-   "bHasCustomDamageVariance": true,
-   "tDamageVariance": {
-    "value": "0",
-    "compiled": "BgAAAAAAAAAAAAAA"
-   },
-   "arBuffsToApply": [],
-   "bApplyVulnerableDebuff": false,
-   "tVulnerableDurationSecondsOverride": {
-    "value": "0",
-    "compiled": "BgAAAAAAAAAAAAAA"
-   },
-   "unk_b4395d8": false,
-   "unk_7c2668d": {
-    "value": "0",
-    "compiled": "BgAAAAAAAAAAAAAA"
-   },
-   "tFortifiedHealth": {
-    "__type__": "HitpointSpecifier",
-    "__typeHash__": 1185241065,
-    "eType": 0,
-    "tHitpointScalar": {
-     "value": "0",
-     "compiled": "BgAAAAAAAAAAAAAA"
-    },
-    "tFlatLevel": {
-     "value": "0",
-     "compiled": "BgAAAAAAAAAAAAAA"
-    }
-   },
-   "tApplyFreeze": {
-    "value": "0",
-    "compiled": "BgAAAAAAAAAAAAAA"
-   },
-   "tApplyChillAmount": {
-    "value": "0",
-    "compiled": "BgAAAAAAAAAAAAAA"
-   },
-   "unk_e659b0f": -1,
-   "tHeal": {
-    "__type__": "HitpointSpecifier",
-    "__typeHash__": 1185241065,
-    "eType": 0,
-    "tHitpointScalar": {
-     "value": "0",
-     "compiled": "BgAAAAAAAAAAAAAA"
-    },
-    "tFlatLevel": {
-     "value": "0",
-     "compiled": "BgAAAAAAAAAAAAAA"
-    }
-   },
-   "eHealType": 0,
-   "bPlayHealEffect": true,
-   "unk_8bc45f2": false,
-   "unk_15c6c03": false,
-   "unk_e842c84": false,
-   "eClassBaseDamageScalar": 5,
-   "bHasCombatEffectOverride": true,
-   "tCombatEffectOverride": {
-    "value": "0",
-    "compiled": "BgAAAAAAAAAAAAAA"
-   },
-   "ePayloadDefaultHitEffectType": 2,
-   "snoNormalHitEffectGroup": null,
-   "snoTargetImpactEffectGroup": {
-    "__raw__": 4388,
-    "__group__": 14,
-    "__type__": "DT_SNO",
-    "__typeHash__": 2764331143,
-    "__targetFileName__": "base/meta/EffectGroup/g_Thorns.efg",
-    "groupName": "EffectGroup",
-    "name": "g_Thorns"
-   },
-   "unk_f381067": false,
-   "flHitFlashDurationScalar": 1,
-   "iPowerNeedTarget": false,
-   "bPlayNormalHitSoundPayload": false,
-   "unk_969096b": false,
-   "unk_5885b8": 0,
-   "unk_f38eac9": false,
-   "tOnHitSoundsPayload": {
-    "__type__": "OnHitSounds",
-    "__typeHash__": 960545022,
-    "sno1P": null,
-    "sno3PEnemy": null,
-    "sno3PFriendly": null
-   }
   }
  ],
  "arMods": [
   {
    "__type__": "PowerMod",
    "__typeHash__": 1376535853,
-   "szName": 863202854,
+   "szName": 140266582,
    "nMaxPoints": 1,
    "dwModId": 0,
    "dwModMask": 1,
@@ -1977,6 +1973,7 @@
    "bBulletPointDescription": true,
    "bAffectsEnchantmentDescription": false,
    "unk_b1d89c5": false,
+   "unk_b25b989": false,
    "arSkillTagsToAdd": [
     {
      "__type__": "SkillTagStruct",
@@ -1992,24 +1989,118 @@
     }
    ],
    "arSkillTagsToRemove": [],
-   "eModType": 1,
-   "hIconNormalOverride": 0,
-   "hIconMouseoverOverride": 0,
-   "hIconPushedOverride": 0,
-   "hIconInactiveOverride": 0
+   "eModType": 0,
+   "hIconNormalOverride": 195728461,
+   "hIconMouseoverOverride": 195728461,
+   "hIconPushedOverride": 195728461,
+   "hIconInactiveOverride": 195728461,
+   "eShapeshiftForm": -1
   },
   {
    "__type__": "PowerMod",
    "__typeHash__": 1376535853,
-   "szName": 2686060809,
+   "szName": 140266583,
    "nMaxPoints": 1,
-   "dwModId": 2,
+   "dwModId": 5,
    "dwModMask": 2,
    "unk_94cc84e": 1,
    "bAppendDescription": true,
    "bBulletPointDescription": true,
    "bAffectsEnchantmentDescription": false,
    "unk_b1d89c5": false,
+   "unk_b25b989": false,
+   "arSkillTagsToAdd": [
+    {
+     "__type__": "SkillTagStruct",
+     "__typeHash__": 4000554560,
+     "gbidSkillTag": {
+      "__raw__": 4268816687,
+      "__type__": "DT_GBID",
+      "__typeHash__": 1028170061,
+      "group": 56,
+      "name": "Keyword_Guardian"
+     },
+     "bSearchOnly": false
+    }
+   ],
+   "arSkillTagsToRemove": [],
+   "eModType": 0,
+   "hIconNormalOverride": 3169811489,
+   "hIconMouseoverOverride": 3169811489,
+   "hIconPushedOverride": 3169811489,
+   "hIconInactiveOverride": 3169811489,
+   "eShapeshiftForm": -1
+  },
+  {
+   "__type__": "PowerMod",
+   "__typeHash__": 1376535853,
+   "szName": 140266584,
+   "nMaxPoints": 1,
+   "dwModId": 2,
+   "dwModMask": 4,
+   "unk_94cc84e": 2,
+   "bAppendDescription": true,
+   "bBulletPointDescription": true,
+   "bAffectsEnchantmentDescription": false,
+   "unk_b1d89c5": false,
+   "unk_b25b989": false,
+   "arSkillTagsToAdd": [],
+   "arSkillTagsToRemove": [],
+   "eModType": 0,
+   "hIconNormalOverride": 580937795,
+   "hIconMouseoverOverride": 580937795,
+   "hIconPushedOverride": 580937795,
+   "hIconInactiveOverride": 580937795,
+   "eShapeshiftForm": -1
+  },
+  {
+   "__type__": "PowerMod",
+   "__typeHash__": 1376535853,
+   "szName": 140266585,
+   "nMaxPoints": 1,
+   "dwModId": 6,
+   "dwModMask": 8,
+   "unk_94cc84e": 3,
+   "bAppendDescription": true,
+   "bBulletPointDescription": true,
+   "bAffectsEnchantmentDescription": false,
+   "unk_b1d89c5": false,
+   "unk_b25b989": false,
+   "arSkillTagsToAdd": [
+    {
+     "__type__": "SkillTagStruct",
+     "__typeHash__": 4000554560,
+     "gbidSkillTag": {
+      "__raw__": 2318686720,
+      "__type__": "DT_GBID",
+      "__typeHash__": 1028170061,
+      "group": 56,
+      "name": "Search_Block"
+     },
+     "bSearchOnly": false
+    }
+   ],
+   "arSkillTagsToRemove": [],
+   "eModType": 0,
+   "hIconNormalOverride": 1157853967,
+   "hIconMouseoverOverride": 1157853967,
+   "hIconPushedOverride": 1157853967,
+   "hIconInactiveOverride": 1157853967,
+   "eShapeshiftForm": -1
+  },
+  {
+   "__type__": "PowerMod",
+   "__typeHash__": 1376535853,
+   "szName": 2686060809,
+   "nMaxPoints": 1,
+   "dwModId": 4,
+   "dwModMask": 16,
+   "unk_94cc84e": 4,
+   "bAppendDescription": true,
+   "bBulletPointDescription": true,
+   "bAffectsEnchantmentDescription": false,
+   "unk_b1d89c5": true,
+   "unk_b25b989": false,
    "arSkillTagsToAdd": [
     {
      "__type__": "SkillTagStruct",
@@ -2020,18 +2111,6 @@
       "__typeHash__": 1028170061,
       "group": 56,
       "name": "Keyword_Unstoppable"
-     },
-     "bSearchOnly": false
-    },
-    {
-     "__type__": "SkillTagStruct",
-     "__typeHash__": 4000554560,
-     "gbidSkillTag": {
-      "__raw__": 3537867514,
-      "__type__": "DT_GBID",
-      "__typeHash__": 1028170061,
-      "group": 56,
-      "name": "Search_Cooldown"
      },
      "bSearchOnly": false
     },
@@ -2050,10 +2129,11 @@
    ],
    "arSkillTagsToRemove": [],
    "eModType": 2,
-   "hIconNormalOverride": 0,
-   "hIconMouseoverOverride": 0,
-   "hIconPushedOverride": 0,
-   "hIconInactiveOverride": 0
+   "hIconNormalOverride": 1927100127,
+   "hIconMouseoverOverride": 2667792214,
+   "hIconPushedOverride": 2667389874,
+   "hIconInactiveOverride": 2206594322,
+   "eShapeshiftForm": -1
   },
   {
    "__type__": "PowerMod",
@@ -2061,12 +2141,13 @@
    "szName": 2686060810,
    "nMaxPoints": 1,
    "dwModId": 1,
-   "dwModMask": 4,
-   "unk_94cc84e": 2,
-   "bAppendDescription": true,
+   "dwModMask": 32,
+   "unk_94cc84e": 5,
+   "bAppendDescription": false,
    "bBulletPointDescription": true,
    "bAffectsEnchantmentDescription": false,
-   "unk_b1d89c5": false,
+   "unk_b1d89c5": true,
+   "unk_b25b989": false,
    "arSkillTagsToAdd": [
     {
      "__type__": "SkillTagStruct",
@@ -2119,10 +2200,11 @@
    ],
    "arSkillTagsToRemove": [],
    "eModType": 3,
-   "hIconNormalOverride": 0,
-   "hIconMouseoverOverride": 0,
-   "hIconPushedOverride": 0,
-   "hIconInactiveOverride": 0
+   "hIconNormalOverride": 1927100127,
+   "hIconMouseoverOverride": 2667792214,
+   "hIconPushedOverride": 2667389874,
+   "hIconInactiveOverride": 2206594322,
+   "eShapeshiftForm": -1
   },
   {
    "__type__": "PowerMod",
@@ -2130,19 +2212,90 @@
    "szName": 2686060811,
    "nMaxPoints": 1,
    "dwModId": 3,
-   "dwModMask": 8,
-   "unk_94cc84e": 3,
-   "bAppendDescription": false,
+   "dwModMask": 64,
+   "unk_94cc84e": 6,
+   "bAppendDescription": true,
    "bBulletPointDescription": true,
    "bAffectsEnchantmentDescription": false,
-   "unk_b1d89c5": false,
-   "arSkillTagsToAdd": [],
-   "arSkillTagsToRemove": [],
+   "unk_b1d89c5": true,
+   "unk_b25b989": true,
+   "arSkillTagsToAdd": [
+    {
+     "__type__": "SkillTagStruct",
+     "__typeHash__": 4000554560,
+     "gbidSkillTag": {
+      "__raw__": 28625647,
+      "__type__": "DT_GBID",
+      "__typeHash__": 1028170061,
+      "group": 56,
+      "name": "Skill_Spirit_Soil"
+     },
+     "bSearchOnly": false
+    },
+    {
+     "__type__": "SkillTagStruct",
+     "__typeHash__": 4000554560,
+     "gbidSkillTag": {
+      "__raw__": 1901128789,
+      "__type__": "DT_GBID",
+      "__typeHash__": 1028170061,
+      "group": 56,
+      "name": "Search_CrowdControl"
+     },
+     "bSearchOnly": false
+    },
+    {
+     "__type__": "SkillTagStruct",
+     "__typeHash__": 4000554560,
+     "gbidSkillTag": {
+      "__raw__": 1276501045,
+      "__type__": "DT_GBID",
+      "__typeHash__": 1028170061,
+      "group": 56,
+      "name": "Damage_Override_Poison"
+     },
+     "bSearchOnly": false
+    },
+    {
+     "__type__": "SkillTagStruct",
+     "__typeHash__": 4000554560,
+     "gbidSkillTag": {
+      "__raw__": 4201927667,
+      "__type__": "DT_GBID",
+      "__typeHash__": 1028170061,
+      "group": 56,
+      "name": "Search_Thorns"
+     },
+     "bSearchOnly": false
+    },
+    {
+     "__type__": "SkillTagStruct",
+     "__typeHash__": 4000554560,
+     "gbidSkillTag": {
+      "__raw__": 4053473037,
+      "__type__": "DT_GBID",
+      "__typeHash__": 1028170061,
+      "group": 56,
+      "name": "Search_Poison"
+     },
+     "bSearchOnly": false
+    }
+   ],
+   "arSkillTagsToRemove": [
+    {
+     "__raw__": 600118123,
+     "__type__": "DT_GBID",
+     "__typeHash__": 1028170061,
+     "group": 56,
+     "name": "Skill_Spirit_Forest"
+    }
+   ],
    "eModType": 4,
-   "hIconNormalOverride": 0,
-   "hIconMouseoverOverride": 0,
-   "hIconPushedOverride": 0,
-   "hIconInactiveOverride": 0
+   "hIconNormalOverride": 1924415126,
+   "hIconMouseoverOverride": 4038793421,
+   "hIconPushedOverride": 4038391081,
+   "hIconInactiveOverride": 2804394505,
+   "eShapeshiftForm": -1
   }
  ],
  "snoCastingEffectGroup": {
@@ -2167,8 +2320,49 @@
  },
  "flCastingEffectGroupDuration": 0.5,
  "arCastingEffectOverrides": [],
- "arCastingEffectOverridesByVisualRemap": [],
- "arDamageRemapConditions": [],
+ "arCastingEffectOverridesByVisualRemap": [
+  {
+   "__type__": "PowerCastingEffectOverrideByVisualRemap",
+   "__typeHash__": 2441472839,
+   "snoVisualRemap": {
+    "__raw__": 2409029,
+    "__group__": 175,
+    "__type__": "DT_SNO",
+    "__typeHash__": 2764331143,
+    "__targetFileName__": "base/meta/VisualRemap/class_spi_crushinghand_poison.vrm",
+    "groupName": "VisualRemap",
+    "name": "class_spi_crushinghand_poison"
+   },
+   "snoCastingEffectGroup": {
+    "__raw__": 2519992,
+    "__group__": 14,
+    "__type__": "DT_SNO",
+    "__typeHash__": 2764331143,
+    "__targetFileName__": "base/meta/EffectGroup/spi_payback_cast_upgradeC.efg",
+    "groupName": "EffectGroup",
+    "name": "spi_payback_cast_upgradeC"
+   },
+   "snoAutoCastingEffectGroup": null
+  }
+ ],
+ "arDamageRemapConditions": [
+  {
+   "__type__": "DamageRemapConditions",
+   "__typeHash__": 3454042638,
+   "eDamageType": 4,
+   "snoVisualRemap": {
+    "__raw__": 2409029,
+    "__group__": 175,
+    "__type__": "DT_SNO",
+    "__typeHash__": 2764331143,
+    "__targetFileName__": "base/meta/VisualRemap/class_spi_crushinghand_poison.vrm",
+    "groupName": "VisualRemap",
+    "name": "class_spi_crushinghand_poison"
+   },
+   "arRequiredSkillTags": [],
+   "unk_a0d2a94": false
+  }
+ ],
  "arPetSpawns": [],
  "unk_143fe9f": {
   "value": "10",
@@ -2181,9 +2375,81 @@
  "unk_c99c7cb": false,
  "unk_fad91a3": false,
  "unk_376802e": false,
+ "unk_b0a1a71": true,
  "unk_bf25f64": 0,
  "arRecastPowerSequence": [],
  "arModifierProfiles": [],
  "arProjectileOverrides": [],
- "arConditionalDependencies": []
+ "arConditionalDependencies": [
+  {
+   "__type__": "PowerConditionalDependency",
+   "__typeHash__": 1908169856,
+   "tName": 140266583,
+   "snoDependencies": [
+    {
+     "__raw__": 1843183,
+     "__group__": 29,
+     "__type__": "DT_SNO_NAME",
+     "__typeHash__": 3339108615,
+     "__targetFileName__": "base/meta/Power/Spiritborn_Gorilla_Passive.pow",
+     "groupName": "Power",
+     "name": "Spiritborn_Gorilla_Passive"
+    }
+   ],
+   "arConditions": [
+    {
+     "__type__": "PowerConditionHasModPoints",
+     "__typeHash__": 1121250797,
+     "dwType": 1121250797,
+     "bInverse": false,
+     "eSubject": 0,
+     "snoPower": {
+      "__raw__": 1871823,
+      "__group__": 29,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/Power/Spiritborn_Gorilla_Potency.pow",
+      "groupName": "Power",
+      "name": "Spiritborn_Gorilla_Potency"
+     },
+     "szPowerMod": 140266583
+    }
+   ]
+  },
+  {
+   "__type__": "PowerConditionalDependency",
+   "__typeHash__": 1908169856,
+   "tName": 2686060811,
+   "snoDependencies": [
+    {
+     "__raw__": 2520018,
+     "__group__": 14,
+     "__type__": "DT_SNO_NAME",
+     "__typeHash__": 3339108615,
+     "__targetFileName__": "base/meta/EffectGroup/spi_payback_payload_upgradeC.efg",
+     "groupName": "EffectGroup",
+     "name": "spi_payback_payload_upgradeC"
+    }
+   ],
+   "arConditions": [
+    {
+     "__type__": "PowerConditionHasModPoints",
+     "__typeHash__": 1121250797,
+     "dwType": 1121250797,
+     "bInverse": false,
+     "eSubject": 0,
+     "snoPower": {
+      "__raw__": 1871823,
+      "__group__": 29,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/Power/Spiritborn_Gorilla_Potency.pow",
+      "groupName": "Power",
+      "name": "Spiritborn_Gorilla_Potency"
+     },
+     "szPowerMod": 2686060811
+    }
+   ]
+  }
+ ]
 }

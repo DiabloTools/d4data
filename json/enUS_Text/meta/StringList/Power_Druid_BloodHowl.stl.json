@@ -15,14 +15,14 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "desc",
-   "szText": "{if:Mod.GrantSpirit}{c_label}Generate Spirit:{/c_label} {c_resource}{SF_2}{/c_resource}\r\n{/if}{c_label}Cooldown: {/c}{c_resource}{Cooldown Time}{/c} seconds\r\nShapeshift into a Werewolf and howl furiously, Healing you for {c_number}[{SF_0} * 100|1%|]{/c} of your Maximum Life {c_number}([PlayerHealthMax() * SF_0]){/c}.",
+   "szText": "{/if}{c_label}Cooldown: {/c}{c_resource}{Cooldown Time}{/c} seconds\r\nShapeshift into a Werewolf and howl furiously, {if:Mod.UpgradeB}Restoring {c_resource}[SF_0 * 100]{/c} of your Maximum Spirit{else}Healing you for {c_number}[SF_0 * 100|1%|]{/c} of your Maximum Life {c_number}([PlayerHealthMax() * SF_0]){/c}{/if}.",
    "hLabel": 3707583
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "rankup_desc",
-   "szText": "\r\n{icon:bullet,1.2} Healing {icon:arrow,1.2} {c_number}[{SF_0} * 100|1%|]{/c} Life",
+   "szText": "\r\n{icon:bullet,1.2} {if:Mod.UpgradeB}Restoring{else}Healing{/if} {icon:arrow,1.2} {if:Mod.UpgradeB}{c_resource}[{SF_0} * 100|1%|]{/c} Spirit{else}{c_number}[{SF_0} * 100|1%|]{/c} Life{/if}",
    "hLabel": 4074074671
   },
   {
@@ -36,50 +36,120 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Buff8_Description",
-   "szText": "Providing healing and Critical Strike chance to Companions and allies",
+   "szText": "Providing Critical Strike Chance to Companions and Allies",
    "hLabel": 2736799774
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
-   "szLabel": "Mod0_Description",
-   "szText": "Kills reduce the Cooldown of {c_important}Blood Howl{/c} by {c_number}{SF_5}{/c} second and hitting a Boss reduces its Cooldown by {c_number}[SF_17|1|]{/c} seconds.",
-   "hLabel": 3591940403
+   "szLabel": "Mod9_Description",
+   "szText": "{c_important}Blood Howl{/c} increases Healing Received from all sources by {c_number}[SF_17 * 100|%|]{/c} for {c_number}[SF_18]{/c} seconds.",
+   "hLabel": 2691694268
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
-   "szLabel": "Mod0_Name",
-   "szText": "Enhanced Blood Howl",
-   "hLabel": 2452871472
+   "szLabel": "Mod9_Name",
+   "szText": "Hungering Howl",
+   "hLabel": 2805090009
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
-   "szLabel": "Mod1_Description",
-   "szText": "{c_important}Blood Howl{/c} also generates {c_number}{SF_2}{/c} Spirit. You deal {c_number}[{SF_16}*100|%x|]{/c} increased damage until you shapeshift out of Werewolf form.",
-   "hLabel": 628601524
+   "szLabel": "Mod10_Description",
+   "szText": "{c_important}Blood Howl{/c} instead restores {c_number}[SF_19]{/c} Spirit for every {c_number}[1|%|]{/c} of Life that would have been healed.",
+   "hLabel": 2741697796
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
-   "szLabel": "Mod1_Name",
-   "szText": "Innate Blood Howl",
-   "hLabel": 2492006865
+   "szLabel": "Mod10_Name",
+   "szText": "Spirit Howl",
+   "hLabel": 3070117409
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
-   "szLabel": "Mod2_Description",
-   "szText": "{c_important}Blood Howl{/c} also increases your Attack Speed by {c_number}[{SF_3}*100|%+|]{/c} for {c_number}{buffduration:MOD_ATTACK_SPEED_BONUS}{/c} seconds.",
-   "hLabel": 1960229941
+   "szLabel": "Mod8_Description",
+   "szText": "{c_important}Blood Howl{/c} grants {c_important}{u}Berserking{/u}{/c} to yourself and allies for {c_number}[SF_22]{/c} seconds and an additional {c_number}[SF_8*100|%x|]{/c} increased damage to other Players for the duration. \r\nIn addition, you deal {c_number}{payload:TOOLTIP_UPGRADEC_POISONING}{/c} Poisoning damage over {c_number}{buffduration:UPGRADEC_DOT}{/c} seconds while {c_important}Blood Howl{/c} is active.",
+   "hLabel": 1360065851
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
-   "szLabel": "Mod2_Name",
-   "szText": "Preserving Blood Howl",
-   "hLabel": 2531142258
+   "szLabel": "Mod8_Name",
+   "szText": "Berserking Howl",
+   "hLabel": 2765954616
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod12_Description",
+   "szText": "For {c_number}[SF_24]{/c} seconds after casting {c_important}Blood Howl{/c}, {if:Mod.UpgradeB}restore {c_resource}[SF_23 * 100]{/c} Spirit{else}heal for {c_number}[SF_23 * 100|%|]{/c} of your Maximum Life{/if} each time you hit an enemy.\r\n\r\nThese bonuses are doubled on Critical Strikes.",
+   "hLabel": 1109987334
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod12_Name",
+   "szText": "Healing",
+   "hLabel": 3148388195
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod13_Description",
+   "szText": "{c_important}Blood Howl{/c} increases your Dodge Chance by {c_number}[SF_25 * 100|%|]{/c} for {c_number}[SF_26]{/c} seconds.",
+   "hLabel": 2441615751
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod13_Name",
+   "szText": "Dodge Chance",
+   "hLabel": 3187523588
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod14_Description",
+   "szText": "{c_important}Blood Howl{/c} grants you {c_important}{u}Unstoppable{/u}{/c} for {c_number}[SF_28]{/c} seconds.",
+   "hLabel": 3773244168
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod14_Name",
+   "szText": "Unstoppable",
+   "hLabel": 3226658981
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod15_Description",
+   "szText": "{c_important}Blood Howl{/c} increases your Movement Speed by {c_number}[SF_29 * 100|x%|]{/c} for {c_number}[SF_30]{/c} seconds.",
+   "hLabel": 809905289
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod15_Name",
+   "szText": "Movement Speed",
+   "hLabel": 3265794374
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod16_Description",
+   "szText": "{c_important}Blood Howl's{/c} base healing is increased by {c_number}[SF_7 * 100|%x|]{/c}.",
+   "hLabel": 2141533706
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod16_Name",
+   "szText": "Werewolf",
+   "hLabel": 3304929767
   }
  ],
  "ptMapStringTable": "0"

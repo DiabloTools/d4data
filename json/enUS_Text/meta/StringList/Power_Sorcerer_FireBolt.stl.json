@@ -15,57 +15,113 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "desc",
-   "szText": "{if:SF_21}{c_label}Mana Cost: {/c}{c_resource}{Resource Cost}{/c}\r\n{/if}{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat_Effect_Chance_Script_Formula_Override:17}|%|]{/c}\r\n{/if}Hurl a flaming bolt, dealing {c_number}{payload:DAMAGE}{/c} damage and Burning for {c_number}{dot:BURNING}{/c} damage over {c_number}{buffduration:BURNING}{/c} seconds.",
+   "szText": "{if:SF_21}{c_label}Mana Cost: {/c}{c_resource}{Resource Cost}{/c}\r\n{/if}{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat_Effect_Chance_Script_Formula_Override:17}|%|]{/c}\r\n{/if}Hurl a flaming bolt, dealing {c_number}{payload:DAMAGE}{/c} damage and an additional {c_number}{dot:BURNING}{/c} Burning damage over {c_number}{buffduration:BURNING}{/c} seconds.",
    "hLabel": 3707583
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "rankup_desc",
-   "szText": "\r\n{icon:bullet,1.2} Damage {icon:arrow,1.2} {c_number}{payload:DAMAGE}{/c}\r\n{icon:bullet,1.2} Burning Damage {icon:arrow,1.2} {c_number}{dot:BURNING}{/c}",
+   "szText": "{icon:bullet,1.2} Damage {icon:arrow,1.2} {c_number}{payload:DAMAGE}{/c}\r\n{icon:bullet,1.2} Burning Damage {icon:arrow,1.2} {c_number}{dot:BURNING}{/c}",
    "hLabel": 4074074671
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
-   "szLabel": "Mod2_Description",
-   "szText": "{c_important}Fire Bolt{/c} pierces through Burning enemies.",
-   "hLabel": 1960229941
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
-   "szLabel": "Mod2_Name",
-   "szText": "Enhanced Fire Bolt",
-   "hLabel": 2531142258
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
    "szLabel": "Mod1_Description",
-   "szText": "{c_important}Fire Bolt{/c} generates {c_number}{SF_9}{/c} Mana when hitting an enemy.",
+   "szText": "{c_important}Fire Bolt{/c} launches an additional parallel bolt, dealing {c_number}{payload:DAMAGE}{/c} Fire damage.",
    "hLabel": 628601524
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod1_Name",
-   "szText": "Flickering Fire Bolt",
+   "szText": "Twin Flame",
    "hLabel": 2492006865
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod4_Description",
-   "szText": "{c_important}Fire Bolt{/c} increase the Burning damage you deal to the enemy by {c_number}[{SF_11} * 100|%x|]{/c} for {c_number}{buffduration:UPGRADEB_BURNING_DAMAGE}{/c} seconds.",
+   "szText": "{c_important}Fire Bolt{/c} shoots out a firefly that attaches itself to an enemy and explodes {c_number}{SF_39}{/c} times after a delay, dealing {c_number}{payload:UPGRADEB_FIREFLY_AOE_DAMAGE}{/c} damage with each explosion.",
    "hLabel": 328519479
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod4_Name",
-   "szText": "Glinting Fire Bolt",
+   "szText": "Firefly",
    "hLabel": 2609413044
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod6_Description",
+   "szText": "{c_important}Fire Bolt{/c} becomes a {c_important}Frost{/c} Skill, dealing {c_number}{payload:UPGRADEC_DAMAGE}{/c} Cold damage and {c_number}{dot:UPGRADEC_FROSTBITE}{/c} Frostbite damage over {c_number}[SF_0]{/c} seconds.\r\n\r\n{c_important}Fire Bolt{/c} pierces {c_number}[SF_27]{/c} time and makes enemies {c_important}{u}Vulnerable{/c}{/u} for {c_number}{SF_24}{/c} seconds.",
+   "hLabel": 2991776313
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod6_Name",
+   "szText": "Shiver",
+   "hLabel": 2687683830
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod7_Description",
+   "szText": "{c_important}Fire Bolt{/c} heals you for {c_number}[SF_28 * 100]%{/c} of your Maximum Life {c_number}([PlayerHealthMax() * SF_28]){/c} when it hits the first enemy.",
+   "hLabel": 28437434
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod7_Name",
+   "szText": "Healing",
+   "hLabel": 2726819223
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod8_Description",
+   "szText": "{c_important}Fire Bolt{/c} generates {c_number}[SF_29]{/c} Mana when it hits the first enemy, or {c_number}[SF_30]{/c} Mana if the enemy is already {if:Mod.UpgradeC}Frostbitten{else}Burning{/if}.",
+   "hLabel": 1360065851
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod8_Name",
+   "szText": "Resource Generation",
+   "hLabel": 2765954616
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod9_Description",
+   "szText": "{c_important}Fire Bolt{/c} deals {c_number}[{SF_31}*100}|%x|]{/c} increased {if:Mod.UpgradeC}Frostbite{else}Burning{/if} damage.",
+   "hLabel": 2691694268
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod9_Name",
+   "szText": "Damage Bonus",
+   "hLabel": 2805090009
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod10_Description",
+   "szText": "{c_important}Fire Bolt{/c} grants {c_number}[SF_33]{/c} stack of {c_important}{u}Overpower{/u}{/c}.",
+   "hLabel": 2741697796
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod10_Name",
+   "szText": "Overpower",
+   "hLabel": 3070117409
   }
  ],
  "ptMapStringTable": "0"

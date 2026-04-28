@@ -73,8 +73,8 @@
        "__type__": "TexAnim",
        "__typeHash__": 911604182,
        "dwType": 911604182,
-       "flUScale": 1,
-       "flVScale": 1
+       "flUScale": 0.25,
+       "flVScale": 0.25
       }
      ],
      "nTexAnimStateIndex": -1,
@@ -91,14 +91,101 @@
      "snoTex": null,
      "ptTexAnim": [
       {
-       "__type__": "TexAnim",
-       "__typeHash__": 911604182,
-       "dwType": 911604182,
+       "__type__": "TexAnimTranslation",
+       "__typeHash__": 3866881285,
+       "dwType": 3866881285,
        "flUScale": 1,
-       "flVScale": 1
+       "flVScale": 1,
+       "flUTransInitial": 0,
+       "unk_803e8a7": {
+        "rangeValue1": 0.4000000059604645,
+        "rangeValue2": 0
+       },
+       "tUTransVelScalar": {
+        "__type__": "InterpolationScalar",
+        "__typeHash__": 991799518,
+        "nScalarFunction": 0,
+        "dwFlags": 1,
+        "tInputRange": {
+         "rangeValue1": 0,
+         "rangeValue2": 1
+        },
+        "tRemapRange": {
+         "rangeValue1": 0,
+         "rangeValue2": 1
+        },
+        "eRemapEasing": 0,
+        "szFormulaName": 0
+       },
+       "flVTransInitial": -0.30000001192092896,
+       "unk_42b1708": {
+        "rangeValue1": 0,
+        "rangeValue2": 0
+       },
+       "tVTransVelScalar": {
+        "__type__": "InterpolationScalar",
+        "__typeHash__": 991799518,
+        "nScalarFunction": 0,
+        "dwFlags": 1,
+        "tInputRange": {
+         "rangeValue1": 0,
+         "rangeValue2": 1
+        },
+        "tRemapRange": {
+         "rangeValue1": 0,
+         "rangeValue2": 1
+        },
+        "eRemapEasing": 0,
+        "szFormulaName": 0
+       },
+       "ePinTranslation": 2,
+       "eOrderOperation": 0,
+       "dwURandomSeed": 0,
+       "dwVRandomSeed": 0,
+       "dwAnimFlags": 16,
+       "unk_e5b0c7f": {
+        "rangeValue1": 0,
+        "rangeValue2": 0
+       },
+       "fXOffset": 0.5,
+       "fYOffset": 0.5,
+       "aRotationInitial": 0.7853981852531433,
+       "dwRotationRandomSeed": 0,
+       "tUScaleScalar": {
+        "__type__": "InterpolationScalar",
+        "__typeHash__": 991799518,
+        "nScalarFunction": 0,
+        "dwFlags": 1,
+        "tInputRange": {
+         "rangeValue1": 0,
+         "rangeValue2": 1
+        },
+        "tRemapRange": {
+         "rangeValue1": 0,
+         "rangeValue2": 1
+        },
+        "eRemapEasing": 0,
+        "szFormulaName": 0
+       },
+       "tVScaleScalar": {
+        "__type__": "InterpolationScalar",
+        "__typeHash__": 991799518,
+        "nScalarFunction": 0,
+        "dwFlags": 1,
+        "tInputRange": {
+         "rangeValue1": 0,
+         "rangeValue2": 1
+        },
+        "tRemapRange": {
+         "rangeValue1": 0,
+         "rangeValue2": 1
+        },
+        "eRemapEasing": 0,
+        "szFormulaName": 0
+       }
       }
      ],
-     "nTexAnimStateIndex": -1,
+     "nTexAnimStateIndex": 0,
      "unk_e1a4010": false
     }
    },
@@ -167,15 +254,7 @@
     "tMatTex": {
      "__type__": "MaterialTexture",
      "__typeHash__": 3890408608,
-     "snoTex": {
-      "__raw__": 1383705,
-      "__group__": 44,
-      "__type__": "DT_SNO",
-      "__typeHash__": 2764331143,
-      "__targetFileName__": "base/meta/Texture/HarvestNode_Mining_Ore_Rare_01_AO.tex",
-      "groupName": "Texture",
-      "name": "HarvestNode_Mining_Ore_Rare_01_AO"
-     },
+     "snoTex": null,
      "ptTexAnim": [
       {
        "__type__": "TexAnim",
@@ -196,15 +275,7 @@
     "tMatTex": {
      "__type__": "MaterialTexture",
      "__typeHash__": 3890408608,
-     "snoTex": {
-      "__raw__": 1386218,
-      "__group__": 44,
-      "__type__": "DT_SNO",
-      "__typeHash__": 2764331143,
-      "__targetFileName__": "base/meta/Texture/HarvestNode_Mining_Ore_Rare_01_Emissive.tex",
-      "groupName": "Texture",
-      "name": "HarvestNode_Mining_Ore_Rare_01_Emissive"
-     },
+     "snoTex": null,
      "ptTexAnim": [
       {
        "__type__": "TexAnim",
@@ -260,7 +331,7 @@
         "groupName": "MaterialValue",
         "name": "emissive multiplier"
        },
-       "value": 0.6000000238418579,
+       "value": 0.8999999761581421,
        "nPathValGraphIndex": -1,
        "eLightGroup": 0
       }
@@ -280,7 +351,7 @@
         "groupName": "MaterialValue",
         "name": "emissive color lerp"
        },
-       "value": 0,
+       "value": 0.30000001192092896,
        "nPathValGraphIndex": -1,
        "eLightGroup": 0
       }
@@ -292,15 +363,15 @@
        "__type__": "RunTimeMaterialValue_float",
        "__typeHash__": 2833801029,
        "snoMaterialValue": {
-        "__raw__": 306521,
+        "__raw__": 387567,
         "__group__": 81,
         "__type__": "DT_SNO",
         "__typeHash__": 2764331143,
-        "__targetFileName__": "base/meta/MaterialValue/Max.mtv",
+        "__targetFileName__": "base/meta/MaterialValue/Env Albedo Brightness.mtv",
         "groupName": "MaterialValue",
-        "name": "Max"
+        "name": "Env Albedo Brightness"
        },
-       "value": 1,
+       "value": 1.100000023841858,
        "nPathValGraphIndex": -1,
        "eLightGroup": 0
       }
@@ -320,7 +391,7 @@
         "groupName": "MaterialValue",
         "name": "Emissive Multiplier - Night"
        },
-       "value": 1,
+       "value": 0.5,
        "nPathValGraphIndex": -1,
        "eLightGroup": 0
       }
@@ -340,7 +411,7 @@
         "groupName": "MaterialValue",
         "name": "Speed"
        },
-       "value": 0.800000011920929,
+       "value": 0.5,
        "nPathValGraphIndex": -1,
        "eLightGroup": 0
       }
@@ -360,7 +431,27 @@
         "groupName": "MaterialValue",
         "name": "Speed 1"
        },
-       "value": 0.25,
+       "value": 0.07000000029802322,
+       "nPathValGraphIndex": -1,
+       "eLightGroup": 0
+      }
+     },
+     {
+      "__type__": "RunTimeMaterialScalarValueEntry",
+      "__typeHash__": 2176853528,
+      "tValue": {
+       "__type__": "RunTimeMaterialValue_float",
+       "__typeHash__": 2833801029,
+       "snoMaterialValue": {
+        "__raw__": 439574,
+        "__group__": 81,
+        "__type__": "DT_SNO",
+        "__typeHash__": 2764331143,
+        "__targetFileName__": "base/meta/MaterialValue/Power.mtv",
+        "groupName": "MaterialValue",
+        "name": "Power"
+       },
+       "value": 0.800000011920929,
        "nPathValGraphIndex": -1,
        "eLightGroup": 0
       }
@@ -379,26 +470,6 @@
         "__targetFileName__": "base/meta/MaterialValue/Emissive Multiplier - Day.mtv",
         "groupName": "MaterialValue",
         "name": "Emissive Multiplier - Day"
-       },
-       "value": 2,
-       "nPathValGraphIndex": -1,
-       "eLightGroup": 0
-      }
-     },
-     {
-      "__type__": "RunTimeMaterialScalarValueEntry",
-      "__typeHash__": 2176853528,
-      "tValue": {
-       "__type__": "RunTimeMaterialValue_float",
-       "__typeHash__": 2833801029,
-       "snoMaterialValue": {
-        "__raw__": 580434,
-        "__group__": 81,
-        "__type__": "DT_SNO",
-        "__typeHash__": 2764331143,
-        "__targetFileName__": "base/meta/MaterialValue/Enable Appearance VAO.mtv",
-        "groupName": "MaterialValue",
-        "name": "Enable Appearance VAO"
        },
        "value": 1,
        "nPathValGraphIndex": -1,
@@ -420,7 +491,7 @@
         "groupName": "MaterialValue",
         "name": "Emissive Min"
        },
-       "value": 0.05000000074505806,
+       "value": 0.5,
        "nPathValGraphIndex": -1,
        "eLightGroup": 0
       }
@@ -432,15 +503,15 @@
        "__type__": "RunTimeMaterialValue_float",
        "__typeHash__": 2833801029,
        "snoMaterialValue": {
-        "__raw__": 1107305,
+        "__raw__": 980581,
         "__group__": 81,
         "__type__": "DT_SNO",
         "__typeHash__": 2764331143,
-        "__targetFileName__": "base/meta/MaterialValue/Env  VAO Darken To Multiply Weight.mtv",
+        "__targetFileName__": "base/meta/MaterialValue/Env Pulse Mask Power.mtv",
         "groupName": "MaterialValue",
-        "name": "Env  VAO Darken To Multiply Weight"
+        "name": "Env Pulse Mask Power"
        },
-       "value": 0.9900000095367432,
+       "value": 0.699999988079071,
        "nPathValGraphIndex": -1,
        "eLightGroup": 0
       }
@@ -452,15 +523,15 @@
        "__type__": "RunTimeMaterialValue_float",
        "__typeHash__": 2833801029,
        "snoMaterialValue": {
-        "__raw__": 1120281,
+        "__raw__": 980592,
         "__group__": 81,
         "__type__": "DT_SNO",
         "__typeHash__": 2764331143,
-        "__targetFileName__": "base/meta/MaterialValue/Env VAO Contrast.mtv",
+        "__targetFileName__": "base/meta/MaterialValue/Env Pulse Mask Width.mtv",
         "groupName": "MaterialValue",
-        "name": "Env VAO Contrast"
+        "name": "Env Pulse Mask Width"
        },
-       "value": 1.2000000476837158,
+       "value": 1,
        "nPathValGraphIndex": -1,
        "eLightGroup": 0
       }
@@ -484,6 +555,26 @@
        "nPathValGraphIndex": -1,
        "eLightGroup": 0
       }
+     },
+     {
+      "__type__": "RunTimeMaterialScalarValueEntry",
+      "__typeHash__": 2176853528,
+      "tValue": {
+       "__type__": "RunTimeMaterialValue_float",
+       "__typeHash__": 2833801029,
+       "snoMaterialValue": {
+        "__raw__": 2241816,
+        "__group__": 81,
+        "__type__": "DT_SNO",
+        "__typeHash__": 2764331143,
+        "__targetFileName__": "base/meta/MaterialValue/Gradient Masking Direction.mtv",
+        "groupName": "MaterialValue",
+        "name": "Gradient Masking Direction"
+       },
+       "value": 2,
+       "nPathValGraphIndex": -1,
+       "eLightGroup": 0
+      }
      }
     ],
     "arMaterialScalarGraphs": [],
@@ -504,9 +595,9 @@
         "name": "emissive color"
        },
        "value": {
-        "x": 1,
-        "y": 1,
-        "z": 1,
+        "x": 0.7226725816726685,
+        "y": 0.5989419221878052,
+        "z": 0.04614884406328201,
         "w": 1
        },
        "nPathValGraphIndex": -1,
@@ -517,7 +608,7 @@
     "arMaterialVectorGraphs": []
    }
   ],
-  "nTexAnimStateCount": 0,
+  "nTexAnimStateCount": 1,
   "fHasGraph": false
  },
  "arDecalLookVariantMap": [],
@@ -841,7 +932,7 @@
  "unk_ce6fe3b": 0,
  "unk_245935": 0,
  "unk_6d58226": 0,
- "flDuration": 0,
+ "flDuration": 1,
  "tOutroDuration": 0.5,
  "unk_a08119e": 0.009999999776482582,
  "unk_5b1ce37": 0.8999999761581421,

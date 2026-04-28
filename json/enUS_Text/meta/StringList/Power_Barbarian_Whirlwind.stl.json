@@ -22,22 +22,8 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "rankup_desc",
-   "szText": "\r\n{icon:bullet, 1.2} Damage {icon:arrow, 1.2} {c_number}{payload:DAMAGE_TOOLTIP}{/c}",
+   "szText": "\r\n{icon:bullet, 1.2} Damage {icon:arrow, 1.2} {c_number}{payload:DAMAGE_TOOLTIP}{/c}{if:Mod.UpgradeA}\r\n{icon:bullet, 1.2} Dust Devil Damage {icon:arrow, 1.2} {c_number}{payload:UPGRADEA_DUSTDEVIL_DMG_TOOLTIP}{/c}{/if}{if:Mod.UpgradeB}\r\n{icon:bullet, 1.2} Explosion Damage {icon:arrow, 1.2} {c_number}{payload:UPGRADEB_EXPLOSION_TOOLTIP}{/c}\r\n{icon:bullet, 1.2} Burning Damage {icon:arrow, 1.2} {c_number}{payload:UPGRADEB_BURNING_DAMAGE_TOOLTIP}{/c}{/if}{if:Mod.UpgradeC}\r\n{icon:bullet, 1.2} Iron Shrapnel Damage {icon:arrow, 1.2} {c_number}{payload:UPGRADEC_SHRAPNEL_DMG_TOOLTIP}{/c}\r\n{icon:bullet, 1.2} Iron Shrapnel Bleeding{icon:arrow, 1.2} {c_number}{payload:UPGRADEC_BLEED_TOOLTIP}{/c}{/if}",
    "hLabel": 4074074671
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
-   "szLabel": "Buff2_Name",
-   "szText": "Violent Whirlwind",
-   "hLabel": 309411509
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
-   "szLabel": "Buff2_Description",
-   "szText": "Your next {c_important}Weapon Mastery{/c} Skill deals {c_number}[{SF_13}* 100|%x|]{/c} increased damage.",
-   "hLabel": 3336963864
   },
   {
    "__type__": "StringTableEntry",
@@ -57,29 +43,99 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod6_Description",
-   "szText": "Channeling {c_important}Whirlwind{/c} for {c_number}{SF_14}{/c} seconds increases the damage of your next {c_important}Weapon Mastery{/c} Skill by {c_number}[{SF_13}* 100|%x|]{/c} if used immediately after {c_important}Whirlwind{/c} ends.",
+   "szText": "{c_important}Whirlwind{/c} also creates {c_number}{SF_12}{/c} {c_important}{u}Dust Devils{/u}{/c} that each deal {c_number}{payload:UPGRADEA_DUSTDEVIL_DMG_TOOLTIP}{/c} damage.",
    "hLabel": 2991776313
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod6_Name",
-   "szText": "Violent Whirlwind",
+   "szText": "Tornado",
    "hLabel": 2687683830
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod7_Description",
-   "szText": "While using a Slashing weapon, {c_important}Whirlwind{/c} also inflicts {c_number}{payload:BLEED_DAMAGE_TOOLTIP}{/c} Bleeding damage over {c_number}{SF_15}{/c} seconds.",
+   "szText": "{c_important}Whirlwind{/c} also explodes, dealing {c_number}{payload:UPGRADEB_EXPLOSION_TOOLTIP}{/c} Fire damage and inflicting {c_number}{dot:UPGRADEB_FIRE_DOT}{/c} Burning damage over {c_number}{buffduration:UPGRADEB_FIRE_DOT}{/c} seconds.\r\n\r\n{c_important}Whirlwind{/c} now deals Fire damage.",
    "hLabel": 28437434
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod7_Name",
-   "szText": "Furious Whirlwind",
+   "szText": "Bursting",
    "hLabel": 2726819223
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod9_Description",
+   "szText": "Attacking with another Skill grants {c_number}{SF_27}{/c} stacks of charge up to {c_number}{SF_29}{/c} that decays over time. Your {c_important}Whirlwind{/c} deals {c_number}[{SF_31}*100|x%|]{/c} increased damage and gains {c_number}[{SF_31}*100|x%|]{/c} Movement Speed per stack.\r\n\r\nWhile {c_important}Whirlwind{/c} has charges it launches {c_important}{u}Iron Shrapnel{/u}{/c} at Nearby enemies, each dealing {c_number}{payload:UPGRADEC_SHRAPNEL_DMG_TOOLTIP}{/c} damage and inflicting {c_number}{dot:UPGRADEC_SHRAPNEL_BLEED_TOOLTIP}{/c} Bleeding damage over {c_number}{buffduration:UPGRADEC_SHRAPNEL_BLEED_TOOLTIP}{/c} seconds.",
+   "hLabel": 2691694268
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod9_Name",
+   "szText": "Winding",
+   "hLabel": 2805090009
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod11_Description",
+   "szText": "Gain {c_number}[{SF_35}*100|x%|]{/c} increased Movement Speed during {c_important}Whirlwind{/c}.",
+   "hLabel": 4073326213
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod11_Name",
+   "szText": "Movement Speed",
+   "hLabel": 3109252802
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod12_Description",
+   "szText": "{c_important}Whirlwind{/c} deals {c_number}[{SF_37}*100|x%|]{/c} increased damage and costs {c_number}{SF_36}{/c} additional Fury.",
+   "hLabel": 1109987334
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod12_Name",
+   "szText": "Cost Damage Bonus",
+   "hLabel": 3148388195
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod13_Description",
+   "szText": "Channeling {c_important}Whirlwind{/c} causes it to deal {c_number}[{SF_46}*100|x%|]{/c} increased damage each time it hits an enemy, stacking up to {c_number}{SF_49}{/c} times.",
+   "hLabel": 2441615751
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod13_Name",
+   "szText": "Channel Damage Bonus",
+   "hLabel": 3187523588
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod10_Description",
+   "szText": "Critical Strikes from {c_important}Whirlwind{/c} {c_important}{u}Weaken{/u}{/c} enemies for {c_number}{SF_48}{/c} seconds.",
+   "hLabel": 2741697796
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod10_Name",
+   "szText": "Weaken",
+   "hLabel": 3070117409
   }
  ],
  "ptMapStringTable": "0"

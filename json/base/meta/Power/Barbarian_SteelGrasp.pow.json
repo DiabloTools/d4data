@@ -79,6 +79,30 @@
     "name": "Search_Copy_WeaponMastery"
    },
    "bSearchOnly": true
+  },
+  {
+   "__type__": "SkillTagStruct",
+   "__typeHash__": 4000554560,
+   "gbidSkillTag": {
+    "__raw__": 116596264,
+    "__type__": "DT_GBID",
+    "__typeHash__": 1028170061,
+    "group": 56,
+    "name": "Skill_Martial"
+   },
+   "bSearchOnly": false
+  },
+  {
+   "__type__": "SkillTagStruct",
+   "__typeHash__": 4000554560,
+   "gbidSkillTag": {
+    "__raw__": 4173699289,
+    "__type__": "DT_GBID",
+    "__typeHash__": 1028170061,
+    "group": 56,
+    "name": "Barbarian_Skill_SteelGrasp"
+   },
+   "bSearchOnly": false
   }
  ],
  "eSkillCat": 12,
@@ -92,6 +116,7 @@
  "bChannelledMovement": false,
  "bAutoChannelled": false,
  "unk_3837f2a": true,
+ "hChannelingString": 0,
  "bInterruptOnDamage": false,
  "tAutoChannelledDuration": {
   "value": "0",
@@ -134,7 +159,7 @@
  "unk_4bf03ff": true,
  "tAttackSpeed": {
   "value": "Attacks_Per_Second_Total",
-  "compiled": "BQAAAAAAAADeAAAA/v///wAAAAAAAAAA"
+  "compiled": "BQAAAAAAAADkAAAA/v///wAAAAAAAAAA"
  },
  "unk_6deb090": false,
  "unk_ed2bdad": false,
@@ -193,12 +218,12 @@
    "__typeHash__": 2616788302,
    "eType": 1,
    "tMinRequired": {
-    "value": "SF_21 ? SF_22 : 0",
-    "compiled": "BQAAABsAAAAAAAAAAAAAAAAAAAAFAAAAHAAAAAAAAAAAAAAAAAAAAAYAAAAAAAAAEAAAAAAAAAA="
+    "value": "SF_21 ? SF_22 : SF_39 ? SF_40 : 0",
+    "compiled": "BQAAABsAAAAAAAAAAAAAAAAAAAAFAAAAHAAAAAAAAAAAAAAAAAAAAAUAAAAtAAAAAAAAAAAAAAAAAAAAEAAAAAUAAAAuAAAAAAAAAAAAAAAAAAAABgAAAAAAAAAQAAAAAAAAAA=="
    },
    "tInitialCost": {
-    "value": "SF_21 ? SF_22 : 0",
-    "compiled": "BQAAABsAAAAAAAAAAAAAAAAAAAAFAAAAHAAAAAAAAAAAAAAAAAAAAAYAAAAAAAAAEAAAAAAAAAA="
+    "value": "SF_21 ? SF_22 : SF_39 ? SF_40 : 0",
+    "compiled": "BQAAABsAAAAAAAAAAAAAAAAAAAAFAAAAHAAAAAAAAAAAAAAAAAAAAAUAAAAtAAAAAAAAAAAAAAAAAAAAEAAAAAUAAAAuAAAAAAAAAAAAAAAAAAAABgAAAAAAAAAQAAAAAAAAAA=="
    },
    "tChannellingCost": {
     "value": "0",
@@ -227,8 +252,8 @@
   "compiled": "BQAAABsAAAAAAAAAAAAAAAAAAAAGAAAAAAAAAAYAAAAAAIA/EAAAAAAAAAA="
  },
  "tCooldownTime": {
-  "value": "SF_21 ? 0 : 0.25",
-  "compiled": "BQAAABsAAAAAAAAAAAAAAAAAAAAGAAAAAAAAAAYAAAAAAIA+EAAAAAAAAAA="
+  "value": "SF_21 ? 0 : 0.5",
+  "compiled": "BQAAABsAAAAAAAAAAAAAAAAAAAAGAAAAAAAAAAYAAAAAAAA/EAAAAAAAAAA="
  },
  "tResourceCostReductionCoefficient": {
   "value": "1",
@@ -660,6 +685,7 @@
  "fCancelOnUsePower": false,
  "fCancelOnMount": false,
  "fCancelOnEvade": false,
+ "unk_e2d9430": false,
  "arHitReactionOverrides": [],
  "arBuffs": [
   {
@@ -683,6 +709,8 @@
     "value": "1",
     "compiled": "BgAAAAAAgD8AAAAA"
    },
+   "unk_bb42146": false,
+   "unk_22c356e": false,
    "gbidBuffPreset": null,
    "bVisibleInUI": false,
    "nVisualPriority": 0,
@@ -695,6 +723,7 @@
    "bShowsActiveStateOnHotbar": false,
    "bShowsDurationOnHotbar": false,
    "bShowsStackCountOnHotbar": false,
+   "unk_8b74b0f": false,
    "unk_71ba554": false,
    "unk_1375622": false,
    "unk_d2dd47": false,
@@ -756,7 +785,8 @@
     "tStaggerMultiplier": {
      "value": "1",
      "compiled": "BgAAAAAAgD8AAAAA"
-    }
+    },
+    "unk_20877c3": false
    },
    "bHasDamageShield": false,
    "tDamageShield": {
@@ -772,7 +802,9 @@
      "compiled": "BgAAAAAAAAAAAAAA"
     }
    },
-   "dwShaderMapOverride": 4294967295
+   "dwShaderMapOverride": 4294967295,
+   "unk_32f141c": 4294967295,
+   "unk_f8a0a44": 4294967295
   },
   {
    "__type__": "PowerBuffDefinition",
@@ -795,6 +827,8 @@
     "value": "1",
     "compiled": "BgAAAAAAgD8AAAAA"
    },
+   "unk_bb42146": false,
+   "unk_22c356e": false,
    "gbidBuffPreset": null,
    "bVisibleInUI": false,
    "nVisualPriority": 0,
@@ -807,6 +841,7 @@
    "bShowsActiveStateOnHotbar": false,
    "bShowsDurationOnHotbar": false,
    "bShowsStackCountOnHotbar": false,
+   "unk_8b74b0f": false,
    "unk_71ba554": false,
    "unk_1375622": false,
    "unk_d2dd47": false,
@@ -868,7 +903,8 @@
     "tStaggerMultiplier": {
      "value": "1",
      "compiled": "BgAAAAAAgD8AAAAA"
-    }
+    },
+    "unk_20877c3": false
    },
    "bHasDamageShield": false,
    "tDamageShield": {
@@ -884,7 +920,9 @@
      "compiled": "BgAAAAAAAAAAAAAA"
     }
    },
-   "dwShaderMapOverride": 4294967295
+   "dwShaderMapOverride": 4294967295,
+   "unk_32f141c": 4294967295,
+   "unk_f8a0a44": 4294967295
   }
  ],
  "nFormulaCount": 0,
@@ -901,8 +939,8 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "45 + (AffixIsEquipped(SNO.Affix.2HAXE_Unique_Barb_001) ? 30 : SF_30)",
-    "compiled": "BgAAAAAANEIFAAAAWQAAAD3YCAAAAAAAAAAAAAEAAAAkAAAABgAAAAAA8EEFAAAAJAAAAAAAAAAAAAAAAAAAABAAAAALAAAAAAAAAA=="
+    "value": "45 + (AffixIsEquipped(SNO.Affix.2HAXE_Unique_Barb_001) ? 30 : 0)",
+    "compiled": "BgAAAAAANEIFAAAAWQAAAD3YCAAAAAAAAAAAAAEAAAAkAAAABgAAAAAA8EEGAAAAAAAAABAAAAALAAAAAAAAAA=="
    }
   },
   {
@@ -925,8 +963,8 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "Mod.UpgradeA ? (SF_29 * (1 + SF_13)) : SF_29",
-    "compiled": "BQAAAFoAAAD/////CQkaoAAAAAAFAAAAIwAAAAAAAAAAAAAAAAAAAAYAAAAAAIA/BQAAABMAAAAAAAAAAAAAAAAAAAALAAAADQAAAAUAAAAjAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAA="
+    "value": "SF_29",
+    "compiled": "BQAAACMAAAAAAAAAAAAAAAAAAAAAAAAA"
    }
   },
   {
@@ -941,8 +979,8 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "3 * SF_26",
-    "compiled": "BgAAAAAAQEAFAAAAIAAAAAAAAAAAAAAAAAAAAA0AAAAAAAAA"
+    "value": "4 * SF_26",
+    "compiled": "BgAAAAAAgEAFAAAAIAAAAAAAAAAAAAAAAAAAAA0AAAAAAAAA"
    }
   },
   {
@@ -957,16 +995,16 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "11 * (Table(35,sLevel))",
-    "compiled": "BgAAAAAAMEEGAAAAAAAMQgUAAAABAAAAAAAAAAAAAAAAAAAAAQAAAAsAAAANAAAAAAAAAA=="
+    "value": "11",
+    "compiled": "BgAAAAAAMEEAAAAA"
    }
   },
   {
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "2 + (SF_10 * Mod.UpgradeB) + GetBonusMaxChargesForPower(SNO.Power.Barbarian_SteelGrasp)",
-    "compiled": "BgAAAAAAAEAFAAAAEAAAAAAAAAAAAAAAAAAAAAUAAABaAAAA/////woJGqAAAAAADQAAAAsAAAAFAAAAWQAAABe4DgAAAAAAAAAAAAEAAAB8AAAACwAAAAAAAAA="
+    "value": "2 + (SF_10 *  Mod.UpgradeB) + (SF_37 *  Mod.Upgrade2)  + GetBonusMaxChargesForPower(SNO.Power.Barbarian_SteelGrasp)",
+    "compiled": "BgAAAAAAAEAFAAAAEAAAAAAAAAAAAAAAAAAAAAUAAABaAAAA/////woJGqAAAAAADQAAAAsAAAAFAAAAKwAAAAAAAAAAAAAAAAAAAAUAAABaAAAA/////9oIGqAAAAAADQAAAAsAAAAFAAAAWQAAABe4DgAAAAAAAAAAAAEAAAB8AAAACwAAAAAAAAA="
    }
   },
   {
@@ -981,8 +1019,8 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "0.8",
-    "compiled": "BgAAAM3MTD8AAAAA"
+    "value": "1",
+    "compiled": "BgAAAAAAgD8AAAAA"
    }
   },
   {
@@ -997,8 +1035,8 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "2",
-    "compiled": "BgAAAAAAAEAAAAAA"
+    "value": "SF_4 * 0.65",
+    "compiled": "BQAAAAoAAAAAAAAAAAAAAAAAAAAGAAAAZ2YmPw0AAAAAAAAA"
    }
   },
   {
@@ -1014,7 +1052,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Affix_Value_1#x1_Legendary_Barb_114",
-    "compiled": "BQAAAAAAAACFBAAAw1cbAAAAAAAAAAAA"
+    "compiled": "BQAAAAAAAACSBAAAw1cbAAAAAAAAAAAA"
    }
   },
   {
@@ -1054,23 +1092,23 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Affix_Flat_Value_2#x1_Legendary_Barb_114",
-    "compiled": "BQAAAAAAAACJBAAAw1cbAAAAAAAAAAAA"
+    "compiled": "BQAAAAAAAACWBAAAw1cbAAAAAAAAAAAA"
    }
   },
   {
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "SF_28 ? 0 : AffixIsEquipped(SNO.Affix.S05_BSK_Barbarian_002) == 1",
-    "compiled": "BQAAACIAAAAAAAAAAAAAAAAAAAAGAAAAAAAAAAUAAABZAAAAqGgdAAAAAAAAAAAAAQAAACQAAAAQAAAABgAAAAAAgD8JAAAAAAAAAA=="
+    "value": "SF_38? 1 : 0",
+    "compiled": "BQAAACwAAAAAAAAAAAAAAAAAAAAGAAAAAACAPwYAAAAAAAAAEAAAAAAAAAA="
    }
   },
   {
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "SF_28 ? 0 : PowerTag.S05_BSK_Barbarian_002.\"Script Formula 2\" - (SF_23 * Max(SF_9-2, 0))",
-    "compiled": "BQAAACIAAAAAAAAAAAAAAAAAAAAGAAAAAAAAAAUAAAAFAAAAqmgdAAIAAAAAAAAAEAAAAAUAAAAdAAAAAAAAAAAAAAAAAAAABQAAAA8AAAAAAAAAAAAAAAAAAAAGAAAAAAAAQAwAAAAGAAAAAAAAAAEAAAABAAAADQAAAAwAAAAAAAAA"
+    "value": "SF_38? 0 : 1",
+    "compiled": "BQAAACwAAAAAAAAAAAAAAAAAAAAGAAAAAAAAAAYAAAAAAIA/EAAAAAAAAAA="
    }
   },
   {
@@ -1078,7 +1116,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "SF_28 ? 0 : Affix_Value_2#S05_BSK_Barbarian_002",
-    "compiled": "BQAAACIAAAAAAAAAAAAAAAAAAAAGAAAAAAAAAAUAAAAAAAAAhgQAAKhoHQAAAAAAEAAAAAAAAAA="
+    "compiled": "BQAAACIAAAAAAAAAAAAAAAAAAAAGAAAAAAAAAAUAAAAAAAAAkwQAAKhoHQAAAAAAEAAAAAAAAAA="
    }
   },
   {
@@ -1094,7 +1132,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Bonus_Percent_Per_Power#Barbarian_SteelGrasp",
-    "compiled": "BQAAAAAAAADVAwAAF7gOAAAAAAAAAAAA"
+    "compiled": "BQAAAAAAAADiAwAAF7gOAAAAAAAAAAAA"
    }
   },
   {
@@ -1102,7 +1140,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "1 + Power_Duration_Bonus_Pct#Barbarian_SteelGrasp",
-    "compiled": "BgAAAAAAgD8FAAAAAAAAANIDAAAXuA4AAAAAAAsAAAAAAAAA"
+    "compiled": "BgAAAAAAgD8FAAAAAAAAAN8DAAAXuA4AAAAAAAsAAAAAAAAA"
    }
   },
   {
@@ -1110,7 +1148,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Chance_For_Double_Damage_Per_Power#Barbarian_SteelGrasp",
-    "compiled": "BQAAAAAAAACcAACAF7gOAAAAAAAAAAAA"
+    "compiled": "BQAAAAAAAACoAACAF7gOAAAAAAAAAAAA"
    }
   },
   {
@@ -1144,6 +1182,86 @@
     "value": "PowerTag.SystemsTuningGlobals.\"Script Formula 5\"",
     "compiled": "BQAAAAUAAADNbRAABQAAAAAAAAAAAAAA"
    }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "7.5 * SF_9",
+    "compiled": "BgAAAAAA8EAFAAAADwAAAAAAAAAAAAAAAAAAAA0AAAAAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "2",
+    "compiled": "BgAAAAAAAEAAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "3",
+    "compiled": "BgAAAAAAQEAAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "SF_29 / SF_34 * 0.75",
+    "compiled": "BQAAACMAAAAAAAAAAAAAAAAAAAAFAAAAKAAAAAAAAAAAAAAAAAAAAA4AAAAGAAAAAABAPw0AAAAAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "4 * SF_26",
+    "compiled": "BgAAAAAAgEAFAAAAIAAAAAAAAAAAAAAAAAAAAA0AAAAAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "2",
+    "compiled": "BgAAAAAAAEAAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "Mod.UpgradeC",
+    "compiled": "BQAAAFoAAAD/////CwkaoAAAAAAAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "AffixIsEquipped(SNO.Affix.S05_BSK_Barbarian_002) == 1",
+    "compiled": "BQAAAFkAAACoaB0AAAAAAAAAAAABAAAAJAAAAAYAAAAAAIA/CQAAAAAAAAA="
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "PowerTag.S05_BSK_Barbarian_002.\"Script Formula 2\" - (SF_23 * Max(SF_9-2, 0))",
+    "compiled": "BQAAAAUAAACqaB0AAgAAAAAAAAAFAAAAHQAAAAAAAAAAAAAAAAAAAAUAAAAPAAAAAAAAAAAAAAAAAAAABgAAAAAAAEAMAAAABgAAAAAAAAABAAAAAQAAAA0AAAAMAAAAAAAAAA=="
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "SF_39 ? 0 : (Mod.UpgradeC ? 0 : 1)",
+    "compiled": "BQAAAC0AAAAAAAAAAAAAAAAAAAAGAAAAAAAAAAUAAABaAAAA/////wsJGqAAAAAABgAAAAAAAAAGAAAAAACAPxAAAAAQAAAAAAAAAA=="
+   }
   }
  ],
  "arPayloads": [
@@ -1162,6 +1280,115 @@
     "tHitpointScalar": {
      "value": "SF_4",
      "compiled": "BQAAAAoAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "tFlatLevel": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    }
+   },
+   "bHasCustomDamageVariance": false,
+   "tDamageVariance": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "arBuffsToApply": [],
+   "bApplyVulnerableDebuff": false,
+   "tVulnerableDurationSecondsOverride": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "unk_b4395d8": false,
+   "unk_7c2668d": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "tFortifiedHealth": {
+    "__type__": "HitpointSpecifier",
+    "__typeHash__": 1185241065,
+    "eType": 0,
+    "tHitpointScalar": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    },
+    "tFlatLevel": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    }
+   },
+   "tApplyFreeze": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "tApplyChillAmount": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "unk_e659b0f": -1,
+   "tHeal": {
+    "__type__": "HitpointSpecifier",
+    "__typeHash__": 1185241065,
+    "eType": 0,
+    "tHitpointScalar": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    },
+    "tFlatLevel": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    }
+   },
+   "eHealType": 0,
+   "bPlayHealEffect": true,
+   "unk_8bc45f2": false,
+   "unk_15c6c03": false,
+   "unk_e842c84": false,
+   "eClassBaseDamageScalar": 2,
+   "bHasCombatEffectOverride": false,
+   "tCombatEffectOverride": {
+    "value": "100",
+    "compiled": "BgAAAAAAyEIAAAAA"
+   },
+   "ePayloadDefaultHitEffectType": 2,
+   "snoNormalHitEffectGroup": {
+    "__raw__": 1225082,
+    "__group__": 14,
+    "__type__": "DT_SNO",
+    "__typeHash__": 2764331143,
+    "__targetFileName__": "base/meta/EffectGroup/barb_steelGrasp_impact.efg",
+    "groupName": "EffectGroup",
+    "name": "barb_steelGrasp_impact"
+   },
+   "snoTargetImpactEffectGroup": null,
+   "unk_f381067": false,
+   "flHitFlashDurationScalar": 1,
+   "iPowerNeedTarget": false,
+   "bPlayNormalHitSoundPayload": false,
+   "unk_969096b": false,
+   "unk_5885b8": 0,
+   "unk_f38eac9": false,
+   "tOnHitSoundsPayload": {
+    "__type__": "OnHitSounds",
+    "__typeHash__": 960545022,
+    "sno1P": null,
+    "sno3PEnemy": null,
+    "sno3PFriendly": null
+   }
+  },
+  {
+   "__type__": "PowerPayloadDefinition",
+   "__typeHash__": 812993760,
+   "snoItemTypeMainHandEffectsOverride": null,
+   "snoItemTypeOffHandEffectsOverride": null,
+   "dwID": 810065684,
+   "dwPayloadId": 8,
+   "eForcedDamageType": -1,
+   "tDamage": {
+    "__type__": "HitpointSpecifier",
+    "__typeHash__": 1185241065,
+    "eType": 0,
+    "tHitpointScalar": {
+     "value": "SF_13",
+     "compiled": "BQAAABMAAAAAAAAAAAAAAAAAAAAAAAAA"
     },
     "tFlatLevel": {
      "value": "0",
@@ -1362,7 +1589,7 @@
    "__typeHash__": 812993760,
    "snoItemTypeMainHandEffectsOverride": null,
    "snoItemTypeOffHandEffectsOverride": null,
-   "dwID": 674124963,
+   "dwID": 3454093823,
    "dwPayloadId": 2,
    "eForcedDamageType": -1,
    "tDamage": {
@@ -1457,6 +1684,208 @@
     "sno3PEnemy": null,
     "sno3PFriendly": null
    }
+  },
+  {
+   "__type__": "PowerPayloadDefinition",
+   "__typeHash__": 812993760,
+   "snoItemTypeMainHandEffectsOverride": null,
+   "snoItemTypeOffHandEffectsOverride": null,
+   "dwID": 409405087,
+   "dwPayloadId": 5,
+   "eForcedDamageType": -1,
+   "tDamage": {
+    "__type__": "HitpointSpecifier",
+    "__typeHash__": 1185241065,
+    "eType": 0,
+    "tHitpointScalar": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    },
+    "tFlatLevel": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    }
+   },
+   "bHasCustomDamageVariance": false,
+   "tDamageVariance": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "arBuffsToApply": [],
+   "bApplyVulnerableDebuff": false,
+   "tVulnerableDurationSecondsOverride": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "unk_b4395d8": true,
+   "unk_7c2668d": {
+    "value": "SF_36",
+    "compiled": "BQAAACoAAAAAAAAAAAAAAAAAAAAAAAAA"
+   },
+   "tFortifiedHealth": {
+    "__type__": "HitpointSpecifier",
+    "__typeHash__": 1185241065,
+    "eType": 0,
+    "tHitpointScalar": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    },
+    "tFlatLevel": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    }
+   },
+   "tApplyFreeze": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "tApplyChillAmount": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "unk_e659b0f": -1,
+   "tHeal": {
+    "__type__": "HitpointSpecifier",
+    "__typeHash__": 1185241065,
+    "eType": 0,
+    "tHitpointScalar": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    },
+    "tFlatLevel": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    }
+   },
+   "eHealType": 0,
+   "bPlayHealEffect": true,
+   "unk_8bc45f2": false,
+   "unk_15c6c03": false,
+   "unk_e842c84": false,
+   "eClassBaseDamageScalar": 2,
+   "bHasCombatEffectOverride": false,
+   "tCombatEffectOverride": {
+    "value": "100",
+    "compiled": "BgAAAAAAyEIAAAAA"
+   },
+   "ePayloadDefaultHitEffectType": 2,
+   "snoNormalHitEffectGroup": null,
+   "snoTargetImpactEffectGroup": null,
+   "unk_f381067": false,
+   "flHitFlashDurationScalar": 1,
+   "iPowerNeedTarget": false,
+   "bPlayNormalHitSoundPayload": false,
+   "unk_969096b": false,
+   "unk_5885b8": 0,
+   "unk_f38eac9": false,
+   "tOnHitSoundsPayload": {
+    "__type__": "OnHitSounds",
+    "__typeHash__": 960545022,
+    "sno1P": null,
+    "sno3PEnemy": null,
+    "sno3PFriendly": null
+   }
+  },
+  {
+   "__type__": "PowerPayloadDefinition",
+   "__typeHash__": 812993760,
+   "snoItemTypeMainHandEffectsOverride": null,
+   "snoItemTypeOffHandEffectsOverride": null,
+   "dwID": 2503332870,
+   "dwPayloadId": 6,
+   "eForcedDamageType": -1,
+   "tDamage": {
+    "__type__": "HitpointSpecifier",
+    "__typeHash__": 1185241065,
+    "eType": 0,
+    "tHitpointScalar": {
+     "value": "SF_35",
+     "compiled": "BQAAACkAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "tFlatLevel": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    }
+   },
+   "bHasCustomDamageVariance": false,
+   "tDamageVariance": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "arBuffsToApply": [],
+   "bApplyVulnerableDebuff": false,
+   "tVulnerableDurationSecondsOverride": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "unk_b4395d8": false,
+   "unk_7c2668d": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "tFortifiedHealth": {
+    "__type__": "HitpointSpecifier",
+    "__typeHash__": 1185241065,
+    "eType": 0,
+    "tHitpointScalar": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    },
+    "tFlatLevel": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    }
+   },
+   "tApplyFreeze": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "tApplyChillAmount": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "unk_e659b0f": -1,
+   "tHeal": {
+    "__type__": "HitpointSpecifier",
+    "__typeHash__": 1185241065,
+    "eType": 0,
+    "tHitpointScalar": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    },
+    "tFlatLevel": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    }
+   },
+   "eHealType": 0,
+   "bPlayHealEffect": true,
+   "unk_8bc45f2": false,
+   "unk_15c6c03": false,
+   "unk_e842c84": false,
+   "eClassBaseDamageScalar": -1,
+   "bHasCombatEffectOverride": false,
+   "tCombatEffectOverride": {
+    "value": "100",
+    "compiled": "BgAAAAAAyEIAAAAA"
+   },
+   "ePayloadDefaultHitEffectType": 2,
+   "snoNormalHitEffectGroup": null,
+   "snoTargetImpactEffectGroup": null,
+   "unk_f381067": false,
+   "flHitFlashDurationScalar": 1,
+   "iPowerNeedTarget": false,
+   "bPlayNormalHitSoundPayload": false,
+   "unk_969096b": false,
+   "unk_5885b8": 0,
+   "unk_f38eac9": false,
+   "tOnHitSoundsPayload": {
+    "__type__": "OnHitSounds",
+    "__typeHash__": 960545022,
+    "sno1P": null,
+    "sno3PEnemy": null,
+    "sno3PFriendly": null
+   }
   }
  ],
  "arMods": [
@@ -1472,6 +1901,7 @@
    "bBulletPointDescription": true,
    "bAffectsEnchantmentDescription": false,
    "unk_b1d89c5": false,
+   "unk_b25b989": false,
    "arSkillTagsToAdd": [
     {
      "__type__": "SkillTagStruct",
@@ -1491,7 +1921,8 @@
    "hIconNormalOverride": 0,
    "hIconMouseoverOverride": 0,
    "hIconPushedOverride": 0,
-   "hIconInactiveOverride": 0
+   "hIconInactiveOverride": 0,
+   "eShapeshiftForm": -1
   },
   {
    "__type__": "PowerMod",
@@ -1504,39 +1935,29 @@
    "bAppendDescription": true,
    "bBulletPointDescription": true,
    "bAffectsEnchantmentDescription": false,
-   "unk_b1d89c5": false,
+   "unk_b1d89c5": true,
+   "unk_b25b989": false,
    "arSkillTagsToAdd": [
     {
      "__type__": "SkillTagStruct",
      "__typeHash__": 4000554560,
      "gbidSkillTag": {
-      "__raw__": 484629810,
+      "__raw__": 2286929143,
       "__type__": "DT_GBID",
       "__typeHash__": 1028170061,
       "group": 56,
-      "name": "Keyword_Berserk"
-     },
-     "bSearchOnly": false
-    },
-    {
-     "__type__": "SkillTagStruct",
-     "__typeHash__": 4000554560,
-     "gbidSkillTag": {
-      "__raw__": 3567369300,
-      "__type__": "DT_GBID",
-      "__typeHash__": 1028170061,
-      "group": 56,
-      "name": "Search_Damage"
+      "name": "Skill_Primary_Brawling"
      },
      "bSearchOnly": false
     }
    ],
    "arSkillTagsToRemove": [],
-   "eModType": 0,
+   "eModType": 2,
    "hIconNormalOverride": 0,
    "hIconMouseoverOverride": 0,
    "hIconPushedOverride": 0,
-   "hIconInactiveOverride": 0
+   "hIconInactiveOverride": 0,
+   "eShapeshiftForm": -1
   },
   {
    "__type__": "PowerMod",
@@ -1546,10 +1967,11 @@
    "dwModId": 5,
    "dwModMask": 4,
    "unk_94cc84e": 2,
-   "bAppendDescription": false,
+   "bAppendDescription": true,
    "bBulletPointDescription": true,
    "bAffectsEnchantmentDescription": false,
-   "unk_b1d89c5": false,
+   "unk_b1d89c5": true,
+   "unk_b25b989": false,
    "arSkillTagsToAdd": [
     {
      "__type__": "SkillTagStruct",
@@ -1562,14 +1984,209 @@
       "name": "Search_Cooldown"
      },
      "bSearchOnly": false
+    },
+    {
+     "__type__": "SkillTagStruct",
+     "__typeHash__": 4000554560,
+     "gbidSkillTag": {
+      "__raw__": 2295126507,
+      "__type__": "DT_GBID",
+      "__typeHash__": 1028170061,
+      "group": 56,
+      "name": "Keyword_DustDevils"
+     },
+     "bSearchOnly": false
+    },
+    {
+     "__type__": "SkillTagStruct",
+     "__typeHash__": 4000554560,
+     "gbidSkillTag": {
+      "__raw__": 3759085154,
+      "__type__": "DT_GBID",
+      "__typeHash__": 1028170061,
+      "group": 56,
+      "name": "Tag_DustDevils"
+     },
+     "bSearchOnly": false
+    }
+   ],
+   "arSkillTagsToRemove": [],
+   "eModType": 3,
+   "hIconNormalOverride": 0,
+   "hIconMouseoverOverride": 0,
+   "hIconPushedOverride": 0,
+   "hIconInactiveOverride": 0,
+   "eShapeshiftForm": -1
+  },
+  {
+   "__type__": "PowerMod",
+   "__typeHash__": 1376535853,
+   "szName": 2686060811,
+   "nMaxPoints": 1,
+   "dwModId": 7,
+   "dwModMask": 8,
+   "unk_94cc84e": 3,
+   "bAppendDescription": true,
+   "bBulletPointDescription": true,
+   "bAffectsEnchantmentDescription": false,
+   "unk_b1d89c5": true,
+   "unk_b25b989": false,
+   "arSkillTagsToAdd": [
+    {
+     "__type__": "SkillTagStruct",
+     "__typeHash__": 4000554560,
+     "gbidSkillTag": {
+      "__raw__": 3340001955,
+      "__type__": "DT_GBID",
+      "__typeHash__": 1028170061,
+      "group": 56,
+      "name": "Skill_Primary_Basic"
+     },
+     "bSearchOnly": false
+    }
+   ],
+   "arSkillTagsToRemove": [
+    {
+     "__raw__": 2242004879,
+     "__type__": "DT_GBID",
+     "__typeHash__": 1028170061,
+     "group": 56,
+     "name": "Skill_Primary_Weapon_Mastery"
+    }
+   ],
+   "eModType": 4,
+   "hIconNormalOverride": 0,
+   "hIconMouseoverOverride": 0,
+   "hIconPushedOverride": 0,
+   "hIconInactiveOverride": 0,
+   "eShapeshiftForm": -1
+  },
+  {
+   "__type__": "PowerMod",
+   "__typeHash__": 1376535853,
+   "szName": 2686060761,
+   "nMaxPoints": 1,
+   "dwModId": 8,
+   "dwModMask": 16,
+   "unk_94cc84e": 4,
+   "bAppendDescription": true,
+   "bBulletPointDescription": true,
+   "bAffectsEnchantmentDescription": false,
+   "unk_b1d89c5": false,
+   "unk_b25b989": false,
+   "arSkillTagsToAdd": [
+    {
+     "__type__": "SkillTagStruct",
+     "__typeHash__": 4000554560,
+     "gbidSkillTag": {
+      "__raw__": 484629810,
+      "__type__": "DT_GBID",
+      "__typeHash__": 1028170061,
+      "group": 56,
+      "name": "Keyword_Berserk"
+     },
+     "bSearchOnly": false
     }
    ],
    "arSkillTagsToRemove": [],
    "eModType": 0,
-   "hIconNormalOverride": 0,
-   "hIconMouseoverOverride": 0,
-   "hIconPushedOverride": 0,
-   "hIconInactiveOverride": 0
+   "hIconNormalOverride": 1778390952,
+   "hIconMouseoverOverride": 1778390952,
+   "hIconPushedOverride": 1778390952,
+   "hIconInactiveOverride": 1778390952,
+   "eShapeshiftForm": -1
+  },
+  {
+   "__type__": "PowerMod",
+   "__typeHash__": 1376535853,
+   "szName": 2686060762,
+   "nMaxPoints": 1,
+   "dwModId": 9,
+   "dwModMask": 32,
+   "unk_94cc84e": 5,
+   "bAppendDescription": true,
+   "bBulletPointDescription": true,
+   "bAffectsEnchantmentDescription": false,
+   "unk_b1d89c5": false,
+   "unk_b25b989": false,
+   "arSkillTagsToAdd": [],
+   "arSkillTagsToRemove": [],
+   "eModType": 0,
+   "hIconNormalOverride": 2920834280,
+   "hIconMouseoverOverride": 2920834280,
+   "hIconPushedOverride": 2920834280,
+   "hIconInactiveOverride": 2920834280,
+   "eShapeshiftForm": -1
+  },
+  {
+   "__type__": "PowerMod",
+   "__typeHash__": 1376535853,
+   "szName": 2686060763,
+   "nMaxPoints": 1,
+   "dwModId": 10,
+   "dwModMask": 64,
+   "unk_94cc84e": 6,
+   "bAppendDescription": true,
+   "bBulletPointDescription": true,
+   "bAffectsEnchantmentDescription": false,
+   "unk_b1d89c5": false,
+   "unk_b25b989": false,
+   "arSkillTagsToAdd": [
+    {
+     "__type__": "SkillTagStruct",
+     "__typeHash__": 4000554560,
+     "gbidSkillTag": {
+      "__raw__": 2434110708,
+      "__type__": "DT_GBID",
+      "__typeHash__": 1028170061,
+      "group": 56,
+      "name": "Keyword_Vulnerable"
+     },
+     "bSearchOnly": false
+    }
+   ],
+   "arSkillTagsToRemove": [],
+   "eModType": 0,
+   "hIconNormalOverride": 1711395052,
+   "hIconMouseoverOverride": 1711395052,
+   "hIconPushedOverride": 1711395052,
+   "hIconInactiveOverride": 1711395052,
+   "eShapeshiftForm": -1
+  },
+  {
+   "__type__": "PowerMod",
+   "__typeHash__": 1376535853,
+   "szName": 2686060764,
+   "nMaxPoints": 1,
+   "dwModId": 11,
+   "dwModMask": 128,
+   "unk_94cc84e": 7,
+   "bAppendDescription": true,
+   "bBulletPointDescription": true,
+   "bAffectsEnchantmentDescription": false,
+   "unk_b1d89c5": false,
+   "unk_b25b989": false,
+   "arSkillTagsToAdd": [
+    {
+     "__type__": "SkillTagStruct",
+     "__typeHash__": 4000554560,
+     "gbidSkillTag": {
+      "__raw__": 3438919839,
+      "__type__": "DT_GBID",
+      "__typeHash__": 1028170061,
+      "group": 56,
+      "name": "Keyword_Weaken"
+     },
+     "bSearchOnly": false
+    }
+   ],
+   "arSkillTagsToRemove": [],
+   "eModType": 0,
+   "hIconNormalOverride": 1029192303,
+   "hIconMouseoverOverride": 1029192303,
+   "hIconPushedOverride": 1029192303,
+   "hIconInactiveOverride": 1029192303,
+   "eShapeshiftForm": -1
   }
  ],
  "snoCastingEffectGroup": {
@@ -1581,7 +2198,15 @@
   "groupName": "EffectGroup",
   "name": "vfxBarb_PrimalAxe_cast"
  },
- "snoAutoCastingEffectGroup": null,
+ "snoAutoCastingEffectGroup": {
+  "__raw__": 998931,
+  "__group__": 14,
+  "__type__": "DT_SNO",
+  "__typeHash__": 2764331143,
+  "__targetFileName__": "base/meta/EffectGroup/vfxBarb_PrimalAxe_cast.efg",
+  "groupName": "EffectGroup",
+  "name": "vfxBarb_PrimalAxe_cast"
+ },
  "tCastingEffectGroupHardpointOverride": {
   "__type__": "HardpointLink",
   "__typeHash__": 3639617719,
@@ -1615,19 +2240,60 @@
     "groupName": "EffectGroup",
     "name": "2HAxe_Unique_Barb_001"
    },
-   "snoAutoCastingEffectGroup": null
-  },
-  {
-   "__type__": "PowerCastingEffectOverride",
-   "__typeHash__": 232788579,
-   "unk_aa3fdee": {
-    "__raw__": 2450702,
-    "__group__": 104,
+   "snoAutoCastingEffectGroup": {
+    "__raw__": 1258197,
+    "__group__": 14,
     "__type__": "DT_SNO",
     "__typeHash__": 2764331143,
-    "__targetFileName__": "base/meta/Affix/S10_2HAxe_Unique_Barb_001.aff",
-    "groupName": "Affix",
-    "name": "S10_2HAxe_Unique_Barb_001"
+    "__targetFileName__": "base/meta/EffectGroup/2HAxe_Unique_Barb_001.efg",
+    "groupName": "EffectGroup",
+    "name": "2HAxe_Unique_Barb_001"
+   }
+  }
+ ],
+ "arCastingEffectOverridesByVisualRemap": [
+  {
+   "__type__": "PowerCastingEffectOverrideByVisualRemap",
+   "__typeHash__": 2441472839,
+   "snoVisualRemap": {
+    "__raw__": 2475378,
+    "__group__": 175,
+    "__type__": "DT_SNO",
+    "__typeHash__": 2764331143,
+    "__targetFileName__": "base/meta/VisualRemap/class_barb_steelgrasp_physical.vrm",
+    "groupName": "VisualRemap",
+    "name": "class_barb_steelgrasp_physical"
+   },
+   "snoCastingEffectGroup": {
+    "__raw__": 2475551,
+    "__group__": 14,
+    "__type__": "DT_SNO",
+    "__typeHash__": 2764331143,
+    "__targetFileName__": "base/meta/EffectGroup/vfxBarb_PrimalAxe_cast_single.efg",
+    "groupName": "EffectGroup",
+    "name": "vfxBarb_PrimalAxe_cast_single"
+   },
+   "snoAutoCastingEffectGroup": {
+    "__raw__": 2475551,
+    "__group__": 14,
+    "__type__": "DT_SNO",
+    "__typeHash__": 2764331143,
+    "__targetFileName__": "base/meta/EffectGroup/vfxBarb_PrimalAxe_cast_single.efg",
+    "groupName": "EffectGroup",
+    "name": "vfxBarb_PrimalAxe_cast_single"
+   }
+  },
+  {
+   "__type__": "PowerCastingEffectOverrideByVisualRemap",
+   "__typeHash__": 2441472839,
+   "snoVisualRemap": {
+    "__raw__": 2476393,
+    "__group__": 175,
+    "__type__": "DT_SNO",
+    "__typeHash__": 2764331143,
+    "__targetFileName__": "base/meta/VisualRemap/class_barb_steelgrasp_physical_2.vrm",
+    "groupName": "VisualRemap",
+    "name": "class_barb_steelgrasp_physical_2"
    },
    "snoCastingEffectGroup": {
     "__raw__": 1258197,
@@ -1638,11 +2304,67 @@
     "groupName": "EffectGroup",
     "name": "2HAxe_Unique_Barb_001"
    },
-   "snoAutoCastingEffectGroup": null
+   "snoAutoCastingEffectGroup": {
+    "__raw__": 1258197,
+    "__group__": 14,
+    "__type__": "DT_SNO",
+    "__typeHash__": 2764331143,
+    "__targetFileName__": "base/meta/EffectGroup/2HAxe_Unique_Barb_001.efg",
+    "groupName": "EffectGroup",
+    "name": "2HAxe_Unique_Barb_001"
+   }
   }
  ],
- "arCastingEffectOverridesByVisualRemap": [],
- "arDamageRemapConditions": [],
+ "arDamageRemapConditions": [
+  {
+   "__type__": "DamageRemapConditions",
+   "__typeHash__": 3454042638,
+   "eDamageType": 0,
+   "snoVisualRemap": {
+    "__raw__": 2475378,
+    "__group__": 175,
+    "__type__": "DT_SNO",
+    "__typeHash__": 2764331143,
+    "__targetFileName__": "base/meta/VisualRemap/class_barb_steelgrasp_physical.vrm",
+    "groupName": "VisualRemap",
+    "name": "class_barb_steelgrasp_physical"
+   },
+   "arRequiredSkillTags": [
+    {
+     "__raw__": 3340001955,
+     "__type__": "DT_GBID",
+     "__typeHash__": 1028170061,
+     "group": 56,
+     "name": "Skill_Primary_Basic"
+    }
+   ],
+   "unk_a0d2a94": false
+  },
+  {
+   "__type__": "DamageRemapConditions",
+   "__typeHash__": 3454042638,
+   "eDamageType": 0,
+   "snoVisualRemap": {
+    "__raw__": 2476393,
+    "__group__": 175,
+    "__type__": "DT_SNO",
+    "__typeHash__": 2764331143,
+    "__targetFileName__": "base/meta/VisualRemap/class_barb_steelgrasp_physical_2.vrm",
+    "groupName": "VisualRemap",
+    "name": "class_barb_steelgrasp_physical_2"
+   },
+   "arRequiredSkillTags": [
+    {
+     "__raw__": 2286929143,
+     "__type__": "DT_GBID",
+     "__typeHash__": 1028170061,
+     "group": 56,
+     "name": "Skill_Primary_Brawling"
+    }
+   ],
+   "unk_a0d2a94": false
+  }
+ ],
  "arPetSpawns": [],
  "unk_143fe9f": {
   "value": "10",
@@ -1655,9 +2377,81 @@
  "unk_c99c7cb": false,
  "unk_fad91a3": false,
  "unk_376802e": false,
+ "unk_b0a1a71": true,
  "unk_bf25f64": 0,
  "arRecastPowerSequence": [],
  "arModifierProfiles": [],
  "arProjectileOverrides": [],
- "arConditionalDependencies": []
+ "arConditionalDependencies": [
+  {
+   "__type__": "PowerConditionalDependency",
+   "__typeHash__": 1908169856,
+   "tName": 2311466526,
+   "snoDependencies": [
+    {
+     "__raw__": 1031625,
+     "__group__": 29,
+     "__type__": "DT_SNO_NAME",
+     "__typeHash__": 3339108615,
+     "__targetFileName__": "base/meta/Power/Barbarian_DustDevils.pow",
+     "groupName": "Power",
+     "name": "Barbarian_DustDevils"
+    }
+   ],
+   "arConditions": [
+    {
+     "__type__": "PowerConditionHasModPoints",
+     "__typeHash__": 1121250797,
+     "dwType": 1121250797,
+     "bInverse": false,
+     "eSubject": 0,
+     "snoPower": {
+      "__raw__": 964631,
+      "__group__": 29,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/Power/Barbarian_SteelGrasp.pow",
+      "groupName": "Power",
+      "name": "Barbarian_SteelGrasp"
+     },
+     "szPowerMod": 2686060810
+    }
+   ]
+  },
+  {
+   "__type__": "PowerConditionalDependency",
+   "__typeHash__": 1908169856,
+   "tName": 1495447186,
+   "snoDependencies": [
+    {
+     "__raw__": 213812,
+     "__group__": 29,
+     "__type__": "DT_SNO_NAME",
+     "__typeHash__": 3339108615,
+     "__targetFileName__": "base/meta/Power/Barbarian_Proc_Berserk.pow",
+     "groupName": "Power",
+     "name": "Barbarian_Proc_Berserk"
+    }
+   ],
+   "arConditions": [
+    {
+     "__type__": "PowerConditionHasModPoints",
+     "__typeHash__": 1121250797,
+     "dwType": 1121250797,
+     "bInverse": false,
+     "eSubject": 0,
+     "snoPower": {
+      "__raw__": 964631,
+      "__group__": 29,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/Power/Barbarian_SteelGrasp.pow",
+      "groupName": "Power",
+      "name": "Barbarian_SteelGrasp"
+     },
+     "szPowerMod": 2686060761
+    }
+   ]
+  }
+ ]
 }

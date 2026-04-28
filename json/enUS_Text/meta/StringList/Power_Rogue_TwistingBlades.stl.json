@@ -15,14 +15,14 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "desc",
-   "szText": "{c_label}Energy Cost:{/c_label} {c_resource}{Resource Cost}{/c_resource}\r\n{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat Effect Chance}|%|]{/c}\r\n{/if}Impale an enemy with your blades, dealing {c_number}{payload:IMPACT}{/c} damage and making them take {c_number}[{SF_18}*100|%x|]{/c} increased damage from you for {c_number}{buffduration:IMPALED_BONUS}{/c} seconds. After {c_number}{buffduration:RETURN_TIMER}{/c} seconds the blades return to you, piercing enemies for {c_number}{payload:RETURN_HIT}{/c} damage.{if:SF_13}\r\n\r\n{c_important}Combo Points{/c} increase damage and grant a Movement Speed bonus for {c_number}{SF_12}{/c} seconds.\r\n{icon:bullet,1.2} {c_label}1 Point:{/c} {c_number}{payload:DAMAGE_TOOLTIP_1CP}{/c} damage, {c_number}[{SF_11}*100|%+|]{/c} movement\r\n{icon:bullet,1.2} {c_label}2 Points:{/c} {c_number}{payload:DAMAGE_TOOLTIP_2CP}{/c} damage, {c_number}[{SF_11}*100*2|%+|]{/c} movement\r\n{icon:bullet,1.2} {c_label}3 Points:{/c} {c_number}{payload:DAMAGE_TOOLTIP_3CP}{/c} damage, {c_number}[{SF_11}*100*3*{SF_23}|%+|]{/c} movement{/if}",
+   "szText": "{c_label}Energy Cost:{/c_label} {c_resource}{Resource Cost}{/c_resource}\r\n{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat Effect Chance}|%|]{/c}\r\n{/if}Impale an enemy with your blades, dealing {c_number}{payload:IMPACT}{/c} damage. After {c_number}{buffduration:RETURN_TIMER}{/c} seconds the blades return to you, piercing enemies for {c_number}{payload:RETURN_HIT}{/c} damage.{if:SF_13}\r\n\r\n{c_important}Combo Points{/c} increase damage and and improve Lucky Hit Chance:\r\n{icon:bullet,1.2} {c_label}1 Point:{/c} {c_number}{payload:DAMAGE_TOOLTIP_1CP}{/c} damage, {c_number}[{SF_34}|%+|]{/c} chance\r\n{icon:bullet,1.2} {c_label}2 Points:{/c} {c_number}{payload:DAMAGE_TOOLTIP_2CP}{/c} damage, {c_number}[{SF_34}*2|%+|]{/c} chance\r\n{icon:bullet,1.2} {c_label}3 Points:{/c} {c_number}{payload:DAMAGE_TOOLTIP_3CP}{/c} damage, {c_number}[{SF_23}*{SF_34}*3|%+|]{/c} chance{/if}",
    "hLabel": 3707583
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "rankup_desc",
-   "szText": "\r\n{icon:bullet,1.2} Impact damage {icon:arrow,1.2} {c_number}{payload:IMPACT}{/c}\r\n{icon:bullet,1.2} Piercing damage {icon:arrow,1.2} {c_number}{payload:RETURN_HIT}{/c}",
+   "szText": "\r\n{icon:bullet,1.2} Impact damage {icon:arrow,1.2} {c_number}{payload:IMPACT}{/c}\r\n{icon:bullet,1.2} Piercing damage {icon:arrow,1.2} {c_number}{payload:RETURN_HIT}{/c}{if:Mod.UpgradeB}\r\n{icon:bullet,1.2} Orbit damage {icon:arrow,1.2} {c_number}{payload:ORBIT_HIT}{/c}{/if}{if:Mod.UpgradeC}\r\n{icon:bullet,1.2} Shade Impact damage {icon:arrow,1.2} {c_number}{payload:UPGRADEB_SHADE_IMPACT}{/c}\r\n{icon:bullet,1.2} Shade Piercing damage {icon:arrow,1.2} {c_number}{payload:UPGRADEB_SHADE_RETURN_HIT}{/c}{/if}",
    "hLabel": 4074074671
   },
   {
@@ -43,43 +43,113 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod2_Description",
-   "szText": "Enemies are {c_important}{u}Dazed{/u}{/c} for {c_number}{buffduration:IMPALED_BONUS}{/c} seconds while impaled with {c_important}Twisting Blades{/c}.",
+   "szText": "Enemies impaled by {c_important}Twisting Blades{/c} are {c_important}{u}Dazed{/u}{/c}. When your {c_important}Twisting Blades{/c} return, your active Cooldowns are reduced by {c_number}[{SF_19}|2|]{/c} seconds per enemy they passed through, up to {c_number}[{SF_16}]{/c} seconds. {c_important}Twisting Blades{/c} damage is increased by {c_number}[{SF_40}*100|x%|]{/c}.",
    "hLabel": 1960229941
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod2_Name",
-   "szText": "Improved Twisting Blades",
+   "szText": "Sleight of Hand",
    "hLabel": 2531142258
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod3_Description",
-   "szText": "When your {c_important}Twisting Blades{/c} return, your active Cooldowns are reduced by {c_number}[{SF_19}|2|]{/c} seconds per enemy they passed through, up to {c_number}[{SF_19}*{SF_5}]{/c} seconds.",
+   "szText": "{c_important}Twisting Blades{/c} now cleaves and spirals outward around you for a short time after they return, dealing {c_number}{payload:ORBIT_HIT}{/c} damage per hit.",
    "hLabel": 3291858358
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod3_Name",
-   "szText": "Advanced Twisting Blades",
+   "szText": "Bladedancer",
    "hLabel": 2570277651
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
+   "szLabel": "Mod6_Description",
+   "szText": "Impaling an enemy with {c_important}Twisting Blades{/c} also summons {c_number}{SF_35}{/c} {c_important}Shade{/c} to strike a nearby target, dealing {c_number}{payload:UPGRADEB_SHADE_IMPACT}{/c} damage on impale and {c_number}{payload:UPGRADEB_SHADE_RETURN_HIT}{/c} damage on returning.",
+   "hLabel": 2991776313
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod6_Name",
+   "szText": "Twisted Twin",
+   "hLabel": 2687683830
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
    "szLabel": "Mod4_Description",
-   "szText": "{c_important}Twisting Blades{/c} deals {c_number}[{SF_16}*100|%x|]{/c} increased damage when returning.",
+   "szText": "{c_important}Twisted Blades'{/c} Energy Cost is reduced to {c_number}{SF_18}{/c}.",
    "hLabel": 328519479
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod4_Name",
-   "szText": "Enhanced Twisting Blades",
+   "szText": "Energy Cost Reduction",
    "hLabel": 2609413044
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod15_Description",
+   "szText": "{c_important}Twisting Blades'{/c} initial impale {c_important}{u}Executes{/u}{/c} enemies. {c_important}Twisting Blades'{/c} return damage is also increased by {c_number}[{SF_21}*100|x%|]{/c}.",
+   "hLabel": 809905289
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod15_Name",
+   "szText": "Damage Increase and Execute",
+   "hLabel": 3265794374
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod13_Description",
+   "szText": "{c_important}Twisting Blades{/c} deals {c_number}[{SF_25}*100|%x|]{/c} increased damage to Crowd Controlled or {c_important}{u}Weakened{/u}{/c} enemies.",
+   "hLabel": 2441615751
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod13_Name",
+   "szText": "Crowd Controlled or Weakened",
+   "hLabel": 3187523588
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod17_Description",
+   "szText": "When you impale an enemy with {c_important}Twisting Blades{/c}, gain {c_number}{SF_33}{/c} stack of {c_important}{u}Resolve{/u}{/c}.",
+   "hLabel": 3473162123
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod17_Name",
+   "szText": "Resolve",
+   "hLabel": 3344065160
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod9_Description",
+   "szText": "Enemies are {c_important}{u}Dazed{/u}{/c} for {c_number}{buffduration:IMPALED_BONUS}{/c} seconds while impaled with {c_important}Twisting Blades{/c}.",
+   "hLabel": 2691694268
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod9_Name",
+   "szText": "Improved Twisting Blades",
+   "hLabel": 2805090009
   }
  ],
  "ptMapStringTable": "0"

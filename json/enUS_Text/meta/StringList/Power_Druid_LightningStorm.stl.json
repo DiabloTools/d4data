@@ -15,7 +15,7 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "desc",
-   "szText": "{c_label}Spirit Cost:{/c} {c_resource}{Resource Cost} per strike{/c}\r\n{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat Effect Chance}|%|]{/c}\r\n{/if}Conjure a growing lightning storm that deals {c_number}{payload:DAMAGE}{/c} damage per strike. The number of strikes increase the longer the storm is channeled up to a maximum of {c_number}[{SF_16}+1]{/c} at once.",
+   "szText": "{c_label}Spirit Cost:{/c} {c_resource}{Resource Cost}{/c} per period\r\n{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat Effect Chance}|%|]{/c}\r\n{/if}Conjure a growing lightning storm that deals {c_number}{payload:DAMAGE}{/c} damage per strike. The number of strikes increases the longer the storm is channeled, up to a maximum of {c_number}[((SF_14*SF_12) + (Mod.Upgrade2 ? SF_21 : 0) + (Mod.UpgradeA ? SF_28 : 0))]{/c} strikes at once. {c_important}Lightning Storm{/c} may grow up to {c_number}[SF_14]{/c} times.\r\n\r\nThe size of your {c_important}Lightning Storm{/c} is preserved for {c_number}[SF_10 + (Mod.Upgrade4 ? SF_24 : 0)]{/c} seconds after channeling.",
    "hLabel": 3707583
   },
   {
@@ -28,58 +28,128 @@
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
-   "szLabel": "Mod2_Description",
-   "szText": "The size of your {c_important}Lightning Storm{/c} is preserved for {c_number}{buffduration:MAINTAIN_STORM}{/c} seconds after channeling.",
-   "hLabel": 1960229941
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
-   "szLabel": "Mod2_Name",
-   "szText": "Enhanced Lightning Storm",
-   "hLabel": 2531142258
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
-   "szLabel": "Mod0_Description",
-   "szText": "{c_important}Lightning Storm{/c} gains {c_number}1{/c} additional lightning strike.",
-   "hLabel": 3591940403
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
-   "szLabel": "Mod0_Name",
-   "szText": "Raging Lightning Storm",
-   "hLabel": 2452871472
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
-   "szLabel": "Mod1_Description",
-   "szText": "{c_important}Lightning Storm{/c} has a {c_number}[{SF_8}*100|%|]{/c} chance to Immobilize enemies hit for {c_number}{buffduration:IMMOBILIZE}{/c} seconds.",
-   "hLabel": 628601524
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
-   "szLabel": "Mod1_Name",
-   "szText": "Primal Lightning Storm",
-   "hLabel": 2492006865
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
    "szLabel": "Mod8_Description",
-   "szText": "While channeling {c_important}Lightning Storm{/c}, gain {c_number}[{SF_20}*100|%|]{/c} of life as Fortify each {c_number}[{SF_2|1|}]{/c} seconds.",
+   "szText": "{c_important}Lightning Storm{/c} may grow {c_number}[SF_29]{/c} additional time and each periodic gains {c_number}[SF_28]{/c} additional strikes.",
    "hLabel": 1360065851
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod8_Name",
-   "szText": "Enduring Lightning Storm",
+   "szText": "Supercell",
    "hLabel": 2765954616
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod16_Description",
+   "szText": "All of your Lightning Strikes are combined into one powerful attack at the targeted location. Size is increased by {c_number}[SF_30*100|%|]{/c} and damage is increased by {c_number}[SF_31*100|x%|]{/c} per Lightning Strike.",
+   "hLabel": 2141533706
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod16_Name",
+   "szText": "Omnibolt",
+   "hLabel": 3304929767
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod14_Description",
+   "szText": "{c_important}Lightning Storm{/c} can be toggled passively and travels with you. {c_important}Lightning Storm{/c} deals {c_number}{payload:TOOLTIP_UPGRADEC_DAMAGE}{/c} damage and will be maintained as long as you have enough Spirit.  Cast {c_important}Lightning Storm{/c} again to cancel this effect.",
+   "hLabel": 3773244168
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod14_Name",
+   "szText": "Hero of the Storm",
+   "hLabel": 3226658981
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod9_Description",
+   "szText": "{c_important}Lightning Storm's{/c} gains {c_number}[SF_17*100|x%|]{/c} bonus damage. This bonus is increased to {c_number}[SF_18*100|x%|]{/c} if the target is {c_important}{u}Vulnerable{/u}{/c}.",
+   "hLabel": 2691694268
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod9_Name",
+   "szText": "Damage Bonus",
+   "hLabel": 2805090009
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod10_Description",
+   "szText": "Gain {c_number}[SF_21]{/c} additional Lightning Strike. Furthermore, each stack of {c_important}{u}Ferocity{/u}{/c} also grants {c_number}[SF_22]{/c} additional Lightning Strike, up to a maximum of {c_number}[SF_20]{/c} additional strikes.",
+   "hLabel": 2741697796
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod10_Name",
+   "szText": "Additional Strikes",
+   "hLabel": 3070117409
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod11_Description",
+   "szText": "{c_important}Lightning Storm{/c} always grows from a baseline of {c_number}[SF_23]{/c} strikes.",
+   "hLabel": 4073326213
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod11_Name",
+   "szText": "Minimum Strikes",
+   "hLabel": 3109252802
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod12_Description",
+   "szText": "The size of your {c_important}Lightning Storm{/c} is preserved for an additional {c_number}[SF_24]{/c} seconds after channeling. In addition, you gain a {c_number}[SF_25*100|x%|]{/c} Movement Speed bonus while {c_important}Lightning Storm's{/c} size is preserved.",
+   "hLabel": 1109987334
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod12_Name",
+   "szText": "Movement Speed",
+   "hLabel": 3148388195
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod17_Description",
+   "szText": "{c_important}Lightning Storm{/c} becomes a {c_important}Werewolf{/c} Skill.",
+   "hLabel": 3473162123
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod17_Name",
+   "szText": "Werewolf",
+   "hLabel": 3344065160
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod18_Description",
+   "szText": "{c_important}Lightning Storm's{/c} damage is increased by {c_number}[SF_19 * 100|%x|]{/c}.",
+   "hLabel": 509823244
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod18_Name",
+   "szText": "Human",
+   "hLabel": 3383200553
   }
  ],
  "ptMapStringTable": "0"

@@ -15,14 +15,14 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "desc",
-   "szText": "{c_label}Cooldown:{/c} {c_resource}{Cooldown Time}{/c} seconds\r\n{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat Effect Chance}|%|]{/c}\r\n{/if}Veins burst out of a Corpse, Pulling in enemies, Stunning them for {c_number}{buffduration:STUN}{/c} seconds, and dealing {c_number}{payload:DAMAGE}{/c} damage to them. Does not consume the Corpse.",
+   "szText": "{c_label}Cooldown:{/c} {c_resource}{Cooldown Time}{/c} seconds\r\n{if:Mod.Upgrade2}{c_label}Generate Essence:{/c_label} {c_resource}{SF_21}{/c_resource}\r\n{/if}{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat Effect Chance}|%|]{/c}\r\n{/if}Burst veins out of a Corpse, Slowing enemies by {c_number}[{SF_10}*100|%|]{/c} for {c_number}[{SF_1}|1|]{/c} seconds before Pulling them in and dealing {c_number}{payload:DAMAGE_PULL}{/c} damage.",
    "hLabel": 3707583
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "rankup_desc",
-   "szText": " \r\n{icon:bullet,1.2} Damage {icon:arrow,1.2} {c_number}{payload:DAMAGE}{/c}\r\n{icon:bullet,1.2} Cooldown {icon:arrow,1.2} {c_number}{Cooldown Time}{/c} seconds",
+   "szText": " \r\n{icon:bullet,1.2} Damage {icon:arrow,1.2} {c_number}{payload:DAMAGE_PULL}{/c}",
    "hLabel": 4074074671
   },
   {
@@ -42,44 +42,100 @@
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
-   "szLabel": "Mod2_Description",
-   "szText": "Enemies who are in range of {c_important}Corpse Tendrils{/c} are Slowed by {c_number}[{SF_10}*100|%|]{/c} before being Pulled.",
-   "hLabel": 1960229941
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
-   "szLabel": "Mod2_Name",
-   "szText": "Enhanced Corpse Tendrils",
-   "hLabel": 2531142258
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
    "szLabel": "Mod0_Description",
-   "szText": "{c_important}Corpse Tendrils{/c} has a {c_number}[{SF_9} * 100|%|]{/c} chance to drop a {c_important}{u}Blood Orb{/u}{/c} when damaging enemies.",
+   "szText": "{c_important}Corpse Tendrils{/c} no longer consumes the Corpse. Enemies are Immobilized for {c_number}{SF_18}{/c} seconds after being Pulled in.",
    "hLabel": 3591940403
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod0_Name",
-   "szText": "Blighted Corpse Tendrils",
+   "szText": "Bitter Harvest",
    "hLabel": 2452871472
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod1_Description",
-   "szText": "Enemies damaged by {c_important}Corpse Tendrils{/c} are made {c_important}{u}Vulnerable{/u}{/c} for {c_number}[{SF_11}]{/c} seconds.",
+   "szText": "{c_important}Corpse Tendrils{/c} is no longer cast on a Corpse and is cast on you instead. \r\n\r\n{c_important}Corpse Tendrils{/c} {c_important}{u}Fortifies{/c}{/u} you for {c_number}[{SF_5}*100|%|]{/c} of your Maximum Life {c_number}([PlayerHealthMax() * SF_5]){/c} for each enemy it damages.",
    "hLabel": 628601524
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod1_Name",
-   "szText": "Plagued Corpse Tendrils",
+   "szText": "Get Over Here!",
    "hLabel": 2492006865
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod3_Description",
+   "szText": "{c_important}Corpse Tendrils{/c} now deals {c_number}{payload:DAMAGE_PULL_VARIANTC}{/c} damage and no longer has a delay before Pulling in enemies.",
+   "hLabel": 3291858358
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod3_Name",
+   "szText": "Jaws Of Death",
+   "hLabel": 2570277651
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod2_Description",
+   "szText": "You gain an additional {c_number}[{SF_14} * 100|%+|]{/c} increased Critical Strike Chance for {c_number}{SF_15}{/c} seconds against enemies damaged by {c_important}Corpse Tendrils{/c}.",
+   "hLabel": 1960229941
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod2_Name",
+   "szText": "Critical Strike Chance",
+   "hLabel": 2531142258
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod4_Description",
+   "szText": "Casting {c_important}Corpse Tendrils{/c} generates {c_number}{SF_21}{/c} Essence.",
+   "hLabel": 328519479
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod4_Name",
+   "szText": "Essence Generation",
+   "hLabel": 2609413044
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod5_Description",
+   "szText": "{c_important}Corpse Tendrils{/c} makes enemies {c_important}{u}Vulnerable{/c}{/u} for {c_number}{SF_11}{/c} seconds.",
+   "hLabel": 1660147896
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod5_Name",
+   "szText": "Vulnerable",
+   "hLabel": 2648548437
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod6_Description",
+   "szText": "{c_important}Corpse Tendrils{/c} gains an additional {c_number}[{SF_19}|%+|]{/c} Lucky Hit Chance.",
+   "hLabel": 2991776313
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod6_Name",
+   "szText": "Lucky Hit Chance",
+   "hLabel": 2687683830
   }
  ],
  "ptMapStringTable": "0"

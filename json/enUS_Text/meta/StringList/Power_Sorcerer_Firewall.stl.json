@@ -15,7 +15,7 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "desc",
-   "szText": "{c_label}Mana Cost: {/c}{c_resource}{Resource Cost}{/c}\r\n{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat_Effect_Chance_Script_Formula_Override:20}|%|]{/c}\r\n{/if}Create a wall of flames that Burns enemies for {c_number}{dot:TOOLTIP_BURNING}{/c} damage over {c_number}{SF_0}{/c} seconds.",
+   "szText": "{if:Mod.UpgradeB}{c_label}Cooldown: {/c}{c_resource}{Cooldown Time}{/c} seconds\r\n{/if}{c_label}Mana Cost: {/c}{c_resource}{Resource Cost}{/c}\r\n{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat_Effect_Chance_Script_Formula_Override:20}|%|]{/c}\r\n{/if}Create a wall of fire, dealing {c_number}{dot:TOOLTIP_BURNING}{/c} Burning damage over {c_number}[SF_0|1|]{/c} seconds. Enemies continue Burning for {c_number}[SF_9|1|]{/c} seconds after leaving the wall.",
    "hLabel": 3707583
   },
   {
@@ -28,44 +28,100 @@
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
-   "szLabel": "Mod2_Description",
-   "szText": "Enemies take {c_number}[{SF_15}*100|%x|]{/c} increased Burning damage from you while standing in {c_important}Firewall{/c}.",
-   "hLabel": 1960229941
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
-   "szLabel": "Mod2_Name",
-   "szText": "Enhanced Firewall",
-   "hLabel": 2531142258
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
    "szLabel": "Mod3_Description",
-   "szText": "Enemies continue Burning for {c_number}{SF_11}{/c} seconds after leaving {c_important}Firewall{/c}.",
+   "szText": "{c_important}Firewall's{/c} Size is increased by {c_number}[SF_11 * 100|%|]{/c} and duration increased to {c_number}[SF_10|1|]{/c} seconds.",
    "hLabel": 3291858358
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod3_Name",
-   "szText": "Mage's Firewall",
+   "szText": "Wildfire",
    "hLabel": 2570277651
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod4_Description",
-   "szText": "You gain {c_number}[{SF_16}*100|%x|]{/c} increased Mana Regeneration per active {c_important}Firewall{/c}, up to {c_number}[{SF_16} * {SF_17} * 100|%x|]{/c}.",
+   "szText": "{c_important}Firewall{/c} creates a ring of fire that deals {c_number}{dot:UPGRADEB_TOOLTIP_BURNING}{/c} Fire damage over {c_number}[SF_0|1|]{/c} seconds, but it now has a {c_number}[SF_28]{/c} second Cooldown.\r\n\r\nStanding in this ring causes your Direct Damage to inflict this Burning damage to enemies.",
    "hLabel": 328519479
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod4_Name",
-   "szText": "Wizard's Firewall",
+   "szText": "Ring of Fire",
    "hLabel": 2609413044
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod6_Description",
+   "szText": "{c_important}Firewall{/c} becomes a {c_important}Shock{/c} Skill, deals {c_number}{dot:UPGRADEC_SPARKING_TOOLTIP}{/c} Sparking damage over {c_number}[SF_0|1|]{/c} seconds, and costs {c_number}{SF_19}{/c} Mana.\r\n\r\n{c_label}Lucky Hit:{/c} Up to a {c_number}[SF_18|%|]{/c} chance to deal {c_number}{payload:UPGRADEC_DAMAGE}{/c} damage and form a {u}{c_important}Crackling Energy{/c}{/u} against enemies affected by {c_important}Firewall{/c}.",
+   "hLabel": 2991776313
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod6_Name",
+   "szText": "Grounding",
+   "hLabel": 2687683830
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod7_Description",
+   "szText": "{c_important}Firewall{/c} heals you for {c_number}[{SF_33}*100|1%|]{/c} of your Maximum Life {c_number}([PlayerHealthMax() * SF_33]){/c} every second per affected enemy.\r\n\r\nEvery {c_number}[{heal:UPGRADE1_HEAL_OVERPOWER_TOOLTIP}|0|]{/c} Life healed by {c_important}Firewall{/c} grants you {c_number}1{/c} stack of {u}{c_important}Overpower{/c}{/u}.",
+   "hLabel": 28437434
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod7_Name",
+   "szText": "Healing",
+   "hLabel": 2726819223
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod8_Description",
+   "szText": "{c_important}Firewall{/c} deals {c_number}[{SF_29} * 100|%x|]{/c} increased damage, but its duration is reduced by {c_number}[{SF_30} * 100|%+|]{/c}.",
+   "hLabel": 1360065851
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod8_Name",
+   "szText": "Damage Bonus",
+   "hLabel": 2765954616
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod9_Description",
+   "szText": "{c_important}Firewall{/c} {u}{c_important}Weakens{/c}{/u} enemies for {c_number}[SF_32]{/c} seconds.",
+   "hLabel": 2691694268
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod9_Name",
+   "szText": "Weaken",
+   "hLabel": 2805090009
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod10_Description",
+   "szText": "Every {c_number}{SF_35}{/c} Mana spent makes your next {c_important}Firewall{/c} cost no Mana, stacking up to {c_number}{SF_36}{/c} total Mana.",
+   "hLabel": 2741697796
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod10_Name",
+   "szText": "Cost Reduction",
+   "hLabel": 3070117409
   }
  ],
  "ptMapStringTable": "0"

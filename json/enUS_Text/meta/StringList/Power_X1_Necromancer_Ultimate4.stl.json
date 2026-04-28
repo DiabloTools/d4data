@@ -15,85 +15,141 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "desc",
-   "szText": "{c_label}Cooldown:{/c_label} {c_resource}{Cooldown Time}{/c_resource} seconds\r\n{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat Effect Chance}|%|]{/c}\r\n{/if}{if:SF_35}{c_label}Essence Cost:{/c} {c_resource}{Resource Cost}{/c}\r\nFor {c_number}{buffduration:CASTER_SKILL_ACTIVE}{/c} seconds, you consume surrounding enemies, dealing {c_number}{dot:SOUL_EXTRACTED}{/c} Corrupting damage per second.\r\n\r\nEvery {c_number}[SF_4|2|]{/c} seconds of this duration, you absorb the souls of up to {c_number}{SF_7}{/c} enemies, dealing {c_number}{payload:SOUL_DAMAGE_CORE}{/c} damage to them. You absorb {c_number}{SF_13}{/c} souls at a time from Bosses.\r\n\r\n {c_important}Soulrifts{/c} stacks up to {c_number}[SF_39]{/c} times.{else}For {c_number}{buffduration:CASTER_SKILL_ACTIVE}{/c} seconds, you consume surrounding enemies, dealing {c_number}{dot:SOUL_EXTRACTED}{/c} Corrupting damage per second.  \r\n\r\nEvery {c_number}[SF_4|2|]{/c} seconds of this duration, you absorb the souls of up to {c_number}{SF_7}{/c} enemies, gaining {c_number}{SF_6}{/c} Essence. You absorb {c_number}{SF_13}{/c} souls at a time from Bosses.{/if}{if:SF_32} \r\n\r\nEvery {c_number}{SF_33}{/c} souls consumed refills {c_number}{SF_34}{/c} of your {c_important}Healing Potions{/c} with the lifeblood of your tortured victims.{/if}",
+   "szText": "{c_label}Cooldown:{/c_label} {c_resource}{Cooldown Time}{/c_resource} seconds\r\n{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat Effect Chance}|%|]{/c}\r\n{/if}{if:SF_35}{c_label}Essence Cost:{/c} {c_resource}{Resource Cost}{/c}\r\nConsume surrounding enemies, dealing {c_number}{dot:TOOLTIP_TOTAL_DAMAGE}{/c} Corrupting damage over {c_number}{buffduration:CASTER_SKILL_ACTIVE}{/c} seconds.\r\n\r\nEvery {c_number}[SF_4|2|]{/c} seconds of this duration, you absorb the souls of up to {c_number}{SF_7}{/c} enemies, dealing {c_number}{payload:SOUL_DAMAGE_CORE}{/c} damage to them. You absorb {c_number}{SF_13}{/c} souls at a time from Bosses.\r\n\r\n {c_important}Soulrifts{/c} stacks up to {c_number}[SF_39]{/c} times.{else}Consume surrounding enemies, dealing {c_number}{dot:TOOLTIP_TOTAL_DAMAGE}{/c} Corrupting damage over {c_number}{buffduration:CASTER_SKILL_ACTIVE}{/c} seconds.\r\n\r\nEvery {c_number}[SF_4|2|]{/c} seconds you absorb the souls of {c_number}{SF_7}{/c} enemies, gaining {c_number}{SF_6}{/c} Essence per enemy. You absorb {c_number}{SF_13}{/c} souls at a time from Bosses.{/if}",
    "hLabel": 3707583
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "rankup_desc",
-   "szText": "\r\n{icon:bullet, 1.2} Damage per second {icon:arrow, 1.2} {c_number}{dot:SOUL_EXTRACTED}{/c}\r\n{icon:bullet,1.2} Cooldown {icon:arrow,1.2} {c_number}{Cooldown Time}{/c} seconds\r\n{c_label}At Rank 5:{/c}\r\n{icon:arrow,1.2} Every {c_number}{SF_33}{/c} souls consumed refills {c_number}{SF_34}{/c} of your {c_important}Healing Potions{/c} with the lifeblood of your tortured victims",
+   "szText": "\r\n{icon:bullet, 1.2} Damage {icon:arrow, 1.2} {c_number}{dot:TOOLTIP_TOTAL_DAMAGE}{/c}",
    "hLabel": 4074074671
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Buff9_Name",
-   "szText": "Soul Rift",
+   "szText": "{c_important}Soulrift{/c} Damage Bonus",
    "hLabel": 583359260
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Buff9_Description",
-   "szText": "Increases your damage by {c_number}[{SF_14}*100|%1|]{/c} per stack.",
+   "szText": "Increases {c_important}Soulrift's{/c} damage by {c_number}[{SF_14}*100|%1|]{/c} per stack.",
    "hLabel": 4068428191
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Buff23_Name",
-   "szText": "Soul Energy",
+   "szText": "Distilled Anima",
    "hLabel": 4176320872
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Buff23_Description",
-   "szText": "Your Movement Speed is increased by [{SF_31}*100|1%+|] per stack.",
+   "szText": "Your Movement Speed is increased by [{SF_31}*100|%+|] per stack.",
    "hLabel": 1623259755
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
-   "szLabel": "Buff25_Name",
-   "szText": "Vitality Drain",
-   "hLabel": 4254591658
+   "szLabel": "Mod2_Description",
+   "szText": "While {c_important}Soulrift{/c} is active you are {c_important}{u}Unhindered{/u}{/c} and gain {c_number}[SF_31*100|%+|]{/c} increased Movement Speed for every soul absorbed, up to {c_number}[SF_29|%+|]{/c}.\r\n\r\nThis bonus persists for {c_number}5{/c} seconds after {c_important}Soulrift{/c} ends.",
+   "hLabel": 1960229941
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
-   "szLabel": "Buff25_Description",
-   "szText": "Fueling your Health Potions with mortal suffering.",
-   "hLabel": 4286516589
+   "szLabel": "Mod2_Name",
+   "szText": "Distilled Anima",
+   "hLabel": 2531142258
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod3_Description",
+   "szText": "{c_important}Soulrift{/c} is cast at the target location. Absorbing an enemy's soul deals {c_number}{payload:SOUL_ABSORB_DAMAGE}{/c} damage and Pulls them in.",
+   "hLabel": 3291858358
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod3_Name",
+   "szText": "Soul Vortex",
+   "hLabel": 2570277651
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod4_Description",
+   "szText": "{c_important}Soulrift{/c} deals Frostbite damage and {c_important}{u}Chills{/c}{/u} for {c_number}[{SF_27}|%|]{/c} every second. \r\n\r\nIf {c_important}Soulrift{/c} absorbs the soul of a {c_important}{u}Frozen{/c}{/u} enemy, they shatter and explode for {c_number}{payload:FROZEN_DAMAGE}{/c} damage.",
+   "hLabel": 328519479
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod4_Name",
+   "szText": "Frozen Wasteland",
+   "hLabel": 2609413044
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod0_Description",
-   "szText": "Every soul absorbed increases your damage by {c_number}[{SF_14}*100|x%1|]{/c}, up to {c_number}[{SF_16}*{SF_14}*100|x%|]{/c}. This bonus persists for {c_number}{SF_15}{/c} seconds after {c_important}Soulrift{/c} ends.",
+   "szText": "Every soul absorbed by {c_important}Soulrift{/c} increases its damage by {c_number}[{SF_14}*100|x%1|]{/c}, up to {c_number}[{SF_16}*{SF_14}*100|x%|]{/c}. ",
    "hLabel": 3591940403
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod0_Name",
-   "szText": "Prime Soulrift",
+   "szText": "Damage Bonus",
    "hLabel": 2452871472
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod1_Description",
-   "szText": "{c_important}Soulrift{/c} extracts twice the souls from enemies and applies {c_important}{u}Vulnerable{/u}{/c} to them for {c_number}{SF_18}{/c} seconds. After it ends, all surrounding enemies are Feared and Slowed by {c_number}[{SF_30}|%|]{/c} for {c_number}{SF_28}{/c} seconds.",
+   "szText": "Every soul absorbed by {c_important}Soulrift{/c} grants a {c_important}{u}Barrier{/c}{/u} for {c_number}[{SF_26} * 100|%1|]{/c} of your Maximum Life {c_number}([Max(1,PlayerHealthMax() * SF_26)|0|]){/c}. \r\n\r\nThis {c_important}{u}Barrier{/c}{/u} persists for {c_number}{SF_15}{/c} seconds after {c_important}Soulrift{/c} ends.",
    "hLabel": 628601524
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod1_Name",
-   "szText": "Supreme Soulrift",
+   "szText": "Barrier",
    "hLabel": 2492006865
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod5_Description",
+   "szText": "When {c_important}Soulrift{/c} absorbs an enemy's soul it makes them {c_important}{u}Vulnerable{/u}{/c} for {c_number}{SF_18}{/c} seconds. \r\n\r\nAfter {c_important}Soulrift{/c} ends, all surrounding enemies are Feared and Slowed by {c_number}[{SF_30}|%|]{/c} for {c_number}{SF_28}{/c} seconds.",
+   "hLabel": 1660147896
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod5_Name",
+   "szText": "Vulnerable and Crowd Control",
+   "hLabel": 2648548437
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod6_Description",
+   "szText": "Every {c_number}{SF_33}{/c} souls absorbed by {c_important}Soulrift{/c} grants {c_number}1{/c} stack of {c_important}{u}Ferocity{/c}{/u}.",
+   "hLabel": 2991776313
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod6_Name",
+   "szText": "Ferocity",
+   "hLabel": 2687683830
   }
  ],
  "ptMapStringTable": "0"

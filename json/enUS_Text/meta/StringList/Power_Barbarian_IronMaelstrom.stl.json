@@ -15,14 +15,14 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "desc",
-   "szText": "{c_label}Cooldown:{/c_label} {c_resource}{Cooldown Time}{/c_resource} seconds\r\n{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[[{Combat_Effect_Chance_Script_Formula_Override:14}|%|]{/c}\r\n{/if}Activate three times to attach chains to each of your weapons and perform an attack:\r\n{icon:bullet, 1.2} First, your Two-Handed Bludgeoning weapon slams into the ground, dealing {c_number}{payload:DAMAGE}{/c} damage and Stunning enemies for {c_number}{buffduration:STUN}{/c} seconds.\r\n{icon:bullet, 1.2} Next, your Two-Handed Slashing weapon swipes in front of you, dealing {c_number}{payload:TOOLTIP_DAMAGE_SLASH}{/c} damage and inflicting {c_number}{dot:TOOLTIP_DAMAGE_SLASH_BLEED}{/c} Bleeding damage over {c_number}{buffduration:TOOLTIP_DAMAGE_SLASH_BLEED}{/c} seconds.\r\n{icon:bullet, 1.2} Finally, your Dual Wield weapons swing around you, dealing {c_number}{payload:TOOLTIP_DAMAGE_DUALWIELDING}{/c} damage per hit.{if:SF_21}\r\n{icon:bullet, 1.2} {c_important}Iron Maelstrom's{/c} damage is increased by {c_number}[{SF_19}*100|x%|]{/c} of your Damage to Injured and Healthy bonuses, up to {c_number}[{SF_22}*100|x%|]{/c}.\r\n\r\nCurrent Bonus: {c_number}[{SF_20} * 100|1%x|]{/c}.{/if}",
+   "szText": "{c_label}Cooldown:{/c_label} {c_resource}{Cooldown Time}{/c_resource} seconds\r\n{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[[{Combat_Effect_Chance_Script_Formula_Override:14}|%|]{/c}\r\n{/if}Activate three times to attach chains to each of your weapons and perform an attack:\r\n{icon:bullet, 1.2} First, your Two-Handed Bludgeoning weapon slams into the ground, dealing {c_number}{payload:TOOLTIP_DAMAGE_BLUNT}{/c} damage and Stunning enemies for {c_number}{SF_9}{/c} seconds.\r\n{icon:bullet, 1.2} Next, your Two-Handed Slashing weapon swipes in front of you, dealing {c_number}{payload:TOOLTIP_DAMAGE_SLASH}{/c} damage and inflicting {c_number}{dot:TOOLTIP_DAMAGE_SLASH_BLEED}{/c} Bleeding damage over {c_number}{buffduration:TOOLTIP_DAMAGE_SLASH_BLEED}{/c} seconds.\r\n{icon:bullet, 1.2} Finally, your Dual Wield weapons swing around you, dealing {c_number}{payload:TOOLTIP_DAMAGE_DUALWIELDING}{/c} damage per hit.",
    "hLabel": 3707583
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "rankup_desc",
-   "szText": "\r\n{icon:bullet, 1.2} Bludgeoning Damage {icon:arrow, 1.2} {c_number}{payload:DAMAGE}{/c}\r\n{icon:bullet, 1.2} Slashing Damage {icon:arrow, 1.2} {c_number}{payload:TOOLTIP_DAMAGE_SLASH}{/c}\r\n{icon:bullet, 1.2} Slashing Bleeding Damage {icon:arrow, 1.2} {c_number}{dot:TOOLTIP_DAMAGE_SLASH_BLEED}{/c}\r\n{icon:bullet, 1.2} Dual Wield Damage {icon:arrow, 1.2} {c_number}{payload:TOOLTIP_DAMAGE_DUALWIELDING}{/c}\r\n{icon:bullet,1.2} Cooldown {icon:arrow,1.2} {c_number}{Cooldown Time}{/c} seconds\r\n{c_label}At Rank 5:{/c}\r\n{icon:arrow,1.2} {c_important}Iron Maelstrom's{/c} damage is increased by {c_number}[{SF_19}*100|x%|]{/c} of your Damage to Injured and Healthy bonuses, up to {c_number}[{SF_22}*100|x%|]{/c}",
+   "szText": "\r\n{icon:bullet, 1.2} Bludgeoning Damage {icon:arrow, 1.2} {c_number}{payload:TOOLTIP_DAMAGE_BLUNT}{/c}\r\n{icon:bullet, 1.2} Slashing Damage {icon:arrow, 1.2} {c_number}{payload:TOOLTIP_DAMAGE_SLASH}{/c}\r\n{icon:bullet, 1.2} Slashing Bleeding Damage {icon:arrow, 1.2} {c_number}{dot:TOOLTIP_DAMAGE_SLASH_BLEED}{/c}\r\n{icon:bullet, 1.2} Dual Wield Damage {icon:arrow, 1.2} {c_number}{payload:TOOLTIP_DAMAGE_DUALWIELDING}{/c}",
    "hLabel": 4074074671
   },
   {
@@ -43,29 +43,99 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod2_Description",
-   "szText": "{c_important}Iron Maelstrom{/c} gains {c_number}[{SF_10}*100|%+|]{/c} increased Critical Strike Chance and deals {c_number}[{SF_11}*100|%x|]{/c} increased Critical Strike Damage.",
+   "szText": "Each attack gains an additional effect:\r\n{icon:bullet, 1.2} Two Handed Bludgeoning creates a {c_important}{u}Earthquake{/u}{/c} that deals {c_number}{payload:UPGRADEA_EARTHQUAKE_TOOLTIP}{/c} Physical damage over {c_number}[PowerTag.Barbarian_Earthquake.\"Script Formula 1\"]{/c} seconds, \r\n{icon:bullet, 1.2} Two-Handed Slashing shoots {c_important}{u}Iron Shrapnel{/u}{/c} dealing {c_number}{payload:SHRAPNEL_DAMAGE}{/c} damage inflicting {c_number}{dot:UPGRADE_A_BLEED_DOT}{/c} Bleeding damage over {c_number}{buffduration:UPGRADE_A_BLEED_DOT}{/c} seconds\r\n{icon:bullet, 1.2} Dual Wield forms {c_important}{u}Dust Devils{/u}{/c} that each deal {c_number}{payload:UPGRADEA_DUSTDEVIL_DMG_TOOLTIP}{/c} damage.",
    "hLabel": 1960229941
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod2_Name",
-   "szText": "Prime Iron Maelstrom",
+   "szText": "Armageddon",
    "hLabel": 2531142258
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod3_Description",
-   "szText": "Swapping weapons reduces {c_important}Iron Maelstrom's{/c} Cooldown by {c_number}{SF_12}{/c} second.",
+   "szText": "{c_important}Iron Maelstrom{/c} now has {c_number}{SF_37}{/c} Charges and it always uses the same attack that matches your last used weapon at {c_number}[{SF_23}*100|x%|]{/c} increased damage.",
    "hLabel": 3291858358
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod3_Name",
-   "szText": "Supreme Iron Maelstrom",
+   "szText": "Hidden Technique",
    "hLabel": 2570277651
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod4_Description",
+   "szText": "Depending on your last used weapon, {c_important}Iron Maelstrom{/c} is now also a single {c_important}Weapon Mastery{/c} Skill, and its Cooldown is reduced to {c_number}[{SF_30}]{/c} seconds.",
+   "hLabel": 328519479
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod4_Name",
+   "szText": "Mastered Weapon",
+   "hLabel": 2609413044
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod5_Description",
+   "szText": "Enemies damaged by {c_important}Iron Maelstrom{/c} {c_important}{u}Weakened{/u}{/c} for {c_number}[{SF_36}]{/c} seconds.",
+   "hLabel": 1660147896
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod5_Name",
+   "szText": "Weaken",
+   "hLabel": 2648548437
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod6_Description",
+   "szText": "Each attack gains an additional effect:\r\n{icon:bullet, 1.2} Two Handed Bludgeoning deals {c_number}[SF_31 * 100|%x|]{/c} increased Critical Strike Damage\r\n{icon:bullet, 1.2} Two Handed Slashing deals {c_number}[SF_32 * 100|%x|]{/c} increased damage to {c_important}{u}Vulnerable{/u}{/c} enemies.\r\n{icon:bullet, 1.2} Dual Wield gains {c_number}[SF_33 * 100|%+|]{/c} Cast Speed.",
+   "hLabel": 2991776313
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod6_Name",
+   "szText": "Additional Effect",
+   "hLabel": 2687683830
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod7_Description",
+   "szText": "Weapon swaps reduce the Cooldown of {c_important}Iron Maelstrom{/c} is by {c_number}{SF_34}{/c} second.",
+   "hLabel": 28437434
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod7_Name",
+   "szText": "Cooldown Reduction",
+   "hLabel": 2726819223
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod8_Description",
+   "szText": "Activating {c_important}Iron Maelstrom{/c} reduces all other active Cooldowns by {c_number}{SF_35}{/c} seconds.",
+   "hLabel": 1360065851
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod8_Name",
+   "szText": "Global Cooldown Reduction",
+   "hLabel": 2765954616
   }
  ],
  "ptMapStringTable": "0"

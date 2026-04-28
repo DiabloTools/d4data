@@ -10,7 +10,13 @@
  "tPrimaryTag": {
   "__type__": "SkillTagStruct",
   "__typeHash__": 4000554560,
-  "gbidSkillTag": null,
+  "gbidSkillTag": {
+   "__raw__": 561380056,
+   "__type__": "DT_GBID",
+   "__typeHash__": 1028170061,
+   "group": 56,
+   "name": "Skill_Primary_SubPower"
+  },
   "bSearchOnly": false
  },
  "arSkillTags": [
@@ -23,6 +29,30 @@
     "__typeHash__": 1028170061,
     "group": 56,
     "name": "Skill_Spirit_Soil"
+   },
+   "bSearchOnly": false
+  },
+  {
+   "__type__": "SkillTagStruct",
+   "__typeHash__": 4000554560,
+   "gbidSkillTag": {
+    "__raw__": 1850482246,
+    "__type__": "DT_GBID",
+    "__typeHash__": 1028170061,
+    "group": 56,
+    "name": "Keyword_PestilentSwarm"
+   },
+   "bSearchOnly": false
+  },
+  {
+   "__type__": "SkillTagStruct",
+   "__typeHash__": 4000554560,
+   "gbidSkillTag": {
+    "__raw__": 3628810136,
+    "__type__": "DT_GBID",
+    "__typeHash__": 1028170061,
+    "group": 56,
+    "name": "Subpower_PestilentSwarm"
    },
    "bSearchOnly": false
   }
@@ -38,6 +68,7 @@
  "bChannelledMovement": false,
  "bAutoChannelled": false,
  "unk_3837f2a": true,
+ "hChannelingString": 0,
  "bInterruptOnDamage": false,
  "tAutoChannelledDuration": {
   "value": "0",
@@ -80,7 +111,7 @@
  "unk_4bf03ff": true,
  "tAttackSpeed": {
   "value": "Attacks_Per_Second_Total",
-  "compiled": "BQAAAAAAAADeAAAA/v///wAAAAAAAAAA"
+  "compiled": "BQAAAAAAAADkAAAA/v///wAAAAAAAAAA"
  },
  "unk_6deb090": false,
  "unk_ed2bdad": false,
@@ -588,6 +619,7 @@
  "fCancelOnUsePower": false,
  "fCancelOnMount": false,
  "fCancelOnEvade": false,
+ "unk_e2d9430": false,
  "arHitReactionOverrides": [],
  "arBuffs": [
   {
@@ -611,6 +643,8 @@
     "value": "1",
     "compiled": "BgAAAAAAgD8AAAAA"
    },
+   "unk_bb42146": false,
+   "unk_22c356e": false,
    "gbidBuffPreset": null,
    "bVisibleInUI": false,
    "nVisualPriority": 0,
@@ -623,6 +657,7 @@
    "bShowsActiveStateOnHotbar": false,
    "bShowsDurationOnHotbar": false,
    "bShowsStackCountOnHotbar": false,
+   "unk_8b74b0f": false,
    "unk_71ba554": false,
    "unk_1375622": false,
    "unk_d2dd47": false,
@@ -684,7 +719,8 @@
     "tStaggerMultiplier": {
      "value": "1",
      "compiled": "BgAAAAAAgD8AAAAA"
-    }
+    },
+    "unk_20877c3": false
    },
    "bHasDamageShield": false,
    "tDamageShield": {
@@ -700,7 +736,9 @@
      "compiled": "BgAAAAAAAAAAAAAA"
     }
    },
-   "dwShaderMapOverride": 4294967295
+   "dwShaderMapOverride": 4294967295,
+   "unk_32f141c": 4294967295,
+   "unk_f8a0a44": 4294967295
   }
  ],
  "nFormulaCount": 0,
@@ -789,8 +827,8 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "Affix.legendary_spiritborn_007_x1.\"Static Value 0\" * SF_15",
-    "compiled": "BQAAAGMAAAB+zhsAAAAAAAAAAAAFAAAAFQAAAAAAAAAAAAAAAAAAAA0AAAAAAAAA"
+    "value": "Affix_Value_1#legendary_spiritborn_007_x1 * SF_15",
+    "compiled": "BQAAAAAAAACSBAAAfs4bAAAAAAAFAAAAFQAAAAAAAAAAAAAAAAAAAA0AAAAAAAAA"
    }
   },
   {
@@ -830,7 +868,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "1 + Bonus_Percent_Per_Power#Spiritborn_Swarm",
-    "compiled": "BgAAAAAAgD8FAAAAAAAAANUDAADaHR4AAAAAAAsAAAAAAAAA"
+    "compiled": "BgAAAAAAgD8FAAAAAAAAAOIDAADaHR4AAAAAAAsAAAAAAAAA"
    }
   },
   {
@@ -838,15 +876,15 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Chance_For_Double_Damage_Per_Power#Spiritborn_Swarm",
-    "compiled": "BQAAAAAAAACcAACA2h0eAAAAAAAAAAAA"
+    "compiled": "BQAAAAAAAACoAACA2h0eAAAAAAAAAAAA"
    }
   },
   {
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "Affix.legendary_spiritborn_016_x1.\"Static Value 0\"",
-    "compiled": "BQAAAGMAAADiWhwAAAAAAAAAAAAAAAAA"
+    "value": "Affix.legendary_spiritborn_016_x1.\"Static Value 1\"/100",
+    "compiled": "BQAAAGMAAADiWhwAAQAAAAAAAAAGAAAAAADIQg4AAAAAAAAA"
    }
   }
  ],
@@ -997,6 +1035,7 @@
  "unk_c99c7cb": false,
  "unk_fad91a3": false,
  "unk_376802e": false,
+ "unk_b0a1a71": true,
  "unk_bf25f64": 0,
  "arRecastPowerSequence": [],
  "arModifierProfiles": [],

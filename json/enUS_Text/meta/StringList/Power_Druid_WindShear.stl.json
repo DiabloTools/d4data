@@ -15,7 +15,7 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "desc",
-   "szText": "{if:SF_25}{c_label}Spirit Cost: {/c}{c_resource}{Resource Cost}{/c}\r\n{/if}{c_label}Generate Spirit:{/c_label} {c_resource}{SF_5}{/c_resource}\r\n{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat Effect Chance}|%|]{/c}\r\n{/if}Conjure a piercing blade of wind, dealing {c_number}{Payload:DAMAGE}{/c} damage.",
+   "szText": "{if:SF_25}{c_label}Spirit Cost: {/c}{c_resource}{Resource Cost}{/c}\r\n{/if}{c_label}Generate Spirit:{/c_label} {c_resource}{SF_5}{/c_resource}\r\n{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat Effect Chance}|%|]{/c}\r\n{/if}Conjure a piercing blade of wind, dealing {c_number}{Payload:DAMAGE}{/c} damage to enemies hit.",
    "hLabel": 3707583
   },
   {
@@ -28,58 +28,142 @@
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
-   "szLabel": "Mod2_Description",
-   "szText": "{c_important}Wind Shear{/c} has a {c_number}[{SF_18}*100|%|]{/c} chance to make enemies {c_important}{u}Vulnerable{/u}{/c} for {c_number}{SF_17}{/c} seconds.",
-   "hLabel": 1960229941
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
-   "szLabel": "Mod2_Name",
-   "szText": "Enhanced Wind Shear",
-   "hLabel": 2531142258
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
    "szLabel": "Mod0_Description",
-   "szText": "Each enemy hit by {c_important}Wind Shear{/c} increases your Movement Speed by {c_number}[{SF_6} * 100|%+|]{/c} for {c_number}{buffduration:BUFF_MOVE_SPEED}{/c} seconds, up to {c_number}[{SF_6} * {SF_8} * 100|%+|]{/c}.",
+   "szText": "{c_important}Wind Shear{/c} returns to you and deals {c_number}[SF_39 * 100]%{/c} bonus damage to enemies already hit by this {c_important}Wind Shear{/c}.",
    "hLabel": 3591940403
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod0_Name",
-   "szText": "Fierce Wind Shear",
+   "szText": "Boomerang",
    "hLabel": 2452871472
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod1_Description",
-   "szText": "{c_important}Wind Shear{/c} grants {c_number}{SF_4}{/c} additional Spirit for each enemy hit beyond the first.",
+   "szText": "Launch {c_number}2{/c} additional projectiles that deal {c_number}{payload:UPGRADEB_DAMAGE}{/c} damage. Additionally, you gain a {c_number}[SF_40*100|+%|]{/c} Movement Speed bonus for {c_number}[SF_44]{/c} seconds after casting.",
    "hLabel": 628601524
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod1_Name",
-   "szText": "Wild Wind Shear",
+   "szText": "Wind Swept",
    "hLabel": 2492006865
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod7_Description",
-   "szText": "After you hit {c_number}[SF_23]{/c} times with {c_important}Wind Shear{/c}, your next {c_important}Wind Shear{/c} will knockback the target.",
+   "szText": "{c_important}Wind Shear{/c} automatically seeks enemies and spawns a {c_important}{u}Dancing Bolt{/u}{/c} when it hits an enemy dealing {c_number}{payload:UPGRADEC_DANCINGBOLT_DAMAGE}{/c}. {c_important}Wind Shear{/c} may only hit {c_number}[SF_32]{/c} targets and may hit the same target.",
    "hLabel": 28437434
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod7_Name",
-   "szText": "Forceful Wind Shear",
+   "szText": "Solar Wind",
    "hLabel": 2726819223
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod8_Description",
+   "szText": "{c_important}Wind Shear{/c} restores {c_resource}[SF_7]{/c} Spirit each time it hits an enemy.",
+   "hLabel": 1360065851
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod8_Name",
+   "szText": "Spirit",
+   "hLabel": 2765954616
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod10_Description",
+   "szText": "{c_important}Wind Shear{/c} grants a {c_important}{u}Barrier{/u}{/c} for {c_number}[SF_10 * 100]%{/c} of your Maximum Life for each enemy hit up to a maximum of {c_number}[SF_12*100|%|]{/c}.",
+   "hLabel": 2741697796
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod10_Name",
+   "szText": "Barrier",
+   "hLabel": 3070117409
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod12_Description",
+   "szText": "Increase {c_important}Wind Shear's{/c} Cast Speed by {c_number}[SF_16 * 100]%{/c}.",
+   "hLabel": 1109987334
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod12_Name",
+   "szText": "Cast Speed",
+   "hLabel": 3148388195
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod14_Description",
+   "szText": "Enemies hit by {c_important}Wind Shear{/c} are {c_important}{u}Vulnerable{/u}{/c} for {c_number}[SF_17]{/c} seconds.",
+   "hLabel": 3773244168
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod14_Name",
+   "szText": "Vulnerable",
+   "hLabel": 3226658981
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod16_Description",
+   "szText": "{c_important}Wind Shear{/c} becomes a {c_important}Werewolf{/c} Skill.",
+   "hLabel": 2141533706
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod16_Name",
+   "szText": "Werewolf",
+   "hLabel": 3304929767
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod18_Description",
+   "szText": "{c_important}Wind Shear{/c} becomes a {c_important}Werebear{/c} Skill.",
+   "hLabel": 509823244
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod18_Name",
+   "szText": "Werebear",
+   "hLabel": 3383200553
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod19_Description",
+   "szText": "{c_important}Wind Shear's{/c} damage is increased by {c_number}[SF_6 * 100|%x|]{/c}.",
+   "hLabel": 1841451661
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod19_Name",
+   "szText": "Human",
+   "hLabel": 3422335946
   }
  ],
  "ptMapStringTable": "0"

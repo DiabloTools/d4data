@@ -15,7 +15,7 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "desc",
-   "szText": "{if:SF_21}{c_label}Fury Cost: {/c}{c_resource}{Resource Cost}{/c}\r\n{/if}{c_label}Generate Fury:{/c_label} {c_resource}{SF_3}{/c_resource}\r\n{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat Effect Chance}|%|]{/c}\r\n{/if}Lunge forward and strike an enemy for {c_number}{payload:DAMAGE}{/c} damage.",
+   "szText": "{if:SF_21}{c_label}Fury Cost: {/c}{c_resource}{Resource Cost}{/c}\r\n{/if}{c_label}Generate Fury:{/c_label} {c_resource}{SF_3}{/c_resource}\r\n{if:Mod.UpgradeB}{c_label}Cooldown:{/c} {c_resource}{Cooldown Time}{/c} seconds\r\n{/if}{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat Effect Chance}|%|]{/c}\r\n{/if}Lunge forward and strike an enemy, dealing {c_number}{payload:DAMAGE}{/c} damage.",
    "hLabel": 3707583
   },
   {
@@ -29,7 +29,7 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "rankup_desc",
-   "szText": "\r\n{icon:bullet, 1.2} Damage {icon:arrow, 1.2} {c_number}{payload:DAMAGE}{/c}",
+   "szText": "\r\n{icon:bullet, 1.2} Damage {icon:arrow, 1.2} {c_number}{payload:DAMAGE}{/c}{if:Mod.UpgradeC}\r\n{icon:bullet, 1.2} Dust Devil Damage {icon:arrow, 1.2} {c_number}{payload:DUST_DEVIL_DAMAGE}{/c}{/if}",
    "hLabel": 4074074671
   },
   {
@@ -50,29 +50,99 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod4_Description",
-   "szText": "{c_important}Lunging Strike{/c} also inflicts {c_number}{dot:BLEEDING}{/c} Bleeding damage over {c_number}{buffduration:BLEEDING}{/c} seconds.",
+   "szText": "{c_important}Lunging Strike{/c} deals {c_number}[SF_31 * 100|%x|]{/c} increased damage and an additional {c_number}[SF_15 * 100|%x|]{/c} increased damage for each target you lunge through, up to {c_number}[(SF_31 + (SF_14*SF_15)) * 100|%x|]{/c}.",
    "hLabel": 328519479
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod4_Name",
-   "szText": "Battle Lunging Strike",
+   "szText": "Skewer",
    "hLabel": 2609413044
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod5_Description",
-   "szText": "Critical Strikes with {c_important}Lunging Strike{/c} grant you {c_important}{u}Berserking{/u}{/c} for {c_number}[{SF_9}|1|]{/c} seconds.",
+   "szText": "{c_important}Lunging Strike{/c} has increased range, damages all enemies in its path, and can lunge without a target.\r\n\r\n{c_important}Lunging Strike{/c} now has a {c_number}{SF_29}{/c} second Cooldown.",
    "hLabel": 1660147896
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod5_Name",
-   "szText": "Combat Lunging Strike",
+   "szText": "Impaling",
    "hLabel": 2648548437
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod7_Description",
+   "szText": "{c_important}Lunging Strike{/c} forms a {c_important}Dust Devil{/c} that deals {c_number}{payload:DUST_DEVIL_DAMAGE}{/c} damage.",
+   "hLabel": 28437434
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod7_Name",
+   "szText": "Whirling",
+   "hLabel": 2726819223
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod10_Description",
+   "szText": "{c_important}Lunging Strike's{/c} range is increased by {c_number}[{SF_6}]{/c}.",
+   "hLabel": 2741697796
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod10_Name",
+   "szText": "Range",
+   "hLabel": 3070117409
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod9_Description",
+   "szText": "{c_important}Lunging Strike{/c} generates {c_number}[{SF_8}]{/c} Fury for each enemy you lunge through.",
+   "hLabel": 2691694268
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod9_Name",
+   "szText": "Fury Generation",
+   "hLabel": 2805090009
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod11_Description",
+   "szText": "{c_important}Lunging Strike{/c} heals you for {c_number}[{SF_10}*100|%|]{/c} of your Maximum Life {c_number}([PlayerHealthMax() * SF_10]){/c} the first time it hits an enemy.",
+   "hLabel": 4073326213
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod11_Name",
+   "szText": "Healing",
+   "hLabel": 3109252802
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod8_Description",
+   "szText": "{c_important}Lunging Strike{/c} grants {c_important}{u}Berserking{/u}{/c} for {c_number}{SF_9}{/c} seconds when it Critically Strikes.\r\n\r\n{c_important}Lunging Strike{/c} gains {c_number}[SF_12 *100|+%|]{/c} increased Critical Strike Chance.",
+   "hLabel": 1360065851
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod8_Name",
+   "szText": "Berserking",
+   "hLabel": 2765954616
   }
  ],
  "ptMapStringTable": "0"

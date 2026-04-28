@@ -15,71 +15,141 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "desc",
-   "szText": "{c_label}Spirit Cost: {/c}{c_resource}{Resource Cost}{/c}\r\n{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat Effect Chance}|%|]{/c}\r\n{/if}Crush enemies between {c_number}4{/c} pillars of earth, dealing up to {c_number}{payload:TOOLTIP_DAMAGE}{/c} damage.",
+   "szText": "{c_label}Spirit Cost: {/c}{c_resource}{Resource Cost}{/c}\r\n{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat Effect Chance}|%|]{/c}\r\n{/if}Crush enemies with {c_number}[SF_10]{/c} pillars of earth, each dealing {c_number}{if:Mod.UpgradeA}{payload:UPGRADEA_DAMAGE}{else}{payload:DAMAGE}{/if}{/c} damage.",
    "hLabel": 3707583
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "rankup_desc",
-   "szText": "\r\n{icon:bullet,1.2} Damage {icon:arrow,1.2} {c_number}{payload:TOOLTIP_DAMAGE}{/c}",
+   "szText": "\r\n{icon:bullet,1.2} Damage {icon:arrow,1.2} {c_number}{payload:DAMAGE}{/c}",
    "hLabel": 4074074671
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
-   "szLabel": "Mod1_Description",
-   "szText": "After {c_important}Landslide{/c} damages enemies {c_number}{SF_9}{/c} times, the next hit will Immobilize enemies for {c_number}{buffduration:IMMOBILIZE}{/c} seconds.",
-   "hLabel": 628601524
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
-   "szLabel": "Mod1_Name",
-   "szText": "Enhanced Landslide",
-   "hLabel": 2492006865
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
    "szLabel": "Mod0_Description",
-   "szText": "When you Immobilize or Stun an enemy, you gain a Terramote. Each enemy hit by {c_important}Landslide{/c} consumes a Terramote causing a guaranteed Critical Strike with {c_number}[{SF_7} * 100|%x|]{/c} increased Critical Strike Damage. Bosses always have up to a {c_number}[{SF_8} * 100|%|]{/c} chance to grant a Terramote when hit.",
+   "szText": "Gain {c_number}[SF_28]{/c} additional pillars. In addition, {c_important}Landslide's{/c} size is increased by {c_number}[SF_29 * 100]%{/c} and damage is increased to {c_number}{payload:UPGRADEA_DAMAGE}{/c}.",
    "hLabel": 3591940403
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod0_Name",
-   "szText": "Primal Landslide",
+   "szText": "Continental Shift",
    "hLabel": 2452871472
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod2_Description",
-   "szText": "When you strike an Immobilized or Stunned enemy with {c_important}Landslide{/c}, an additional pillar of earth is formed.",
+   "szText": "{c_important}Landslide's{/c} pillars automatically crush individual targets in the area.\r\n\r\n{c_important}Landslide{/c} gains a {c_number}[SF_31 * 100]%{/c} damage bonus for the first pillar, reducing by {c_number}[SF_32 * 100]%{/c} for each subsequent pillar.",
    "hLabel": 1960229941
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod2_Name",
-   "szText": "Raging Landslide",
+   "szText": "Vengeance of Earth",
    "hLabel": 2531142258
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod11_Description",
-   "szText": "{c_important}Landslide{/c} cost is reduced by {c_number}[{SF_12}*100|%|]{/c} if cast again within {c_number}{SF_11}{/c} seconds.",
+   "szText": "When cast, {c_important}Landslide{/c} is dormant at the target location for {c_number}[SF_24]{/c} second. Afterwards, {c_important}Landslide{/c} will automatically trigger when an enemy steps on it, dealing {c_number}[SF_23 * 100]%{/c} bonus damage split between all enemies damaged.\r\n\r\nMax {c_number}[SF_25]{/c} {c_important}Landslides{/c} can be active at a time and last {c_number}[SF_26]{/c} seconds. {c_important}Landslide{/c} is also a {c_important}Trap{/c} Skill.",
    "hLabel": 4073326213
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod11_Name",
-   "szText": "Torrential Landslide",
+   "szText": "Land Mine",
    "hLabel": 3109252802
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod19_Description",
+   "szText": "{c_important}Landslide{/c} deals {c_number}[SF_39 * 100]%{/c} bonus damage when hitting the first enemy.",
+   "hLabel": 1841451661
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod19_Name",
+   "szText": "Initial Damage Bonus",
+   "hLabel": 3422335946
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod20_Description",
+   "szText": "Gain {c_number}[SF_40]{/c} additional pillar.",
+   "hLabel": 3735762597
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod20_Name",
+   "szText": "Additional Pillar",
+   "hLabel": 66618082
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod18_Description",
+   "szText": "{c_important}Landslide's{/c} Critical Strike Chance is increased by {c_number}[SF_41 * 100]%{/c} and up to an additional {c_number}[SF_43*100]%{/c} based on how much of your Maximum Life is {c_important}{u}Fortified{/u}{/c}.",
+   "hLabel": 509823244
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod18_Name",
+   "szText": "Critical Strike Chance",
+   "hLabel": 3383200553
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod17_Description",
+   "szText": "{c_important}Landslide{/c} grants {c_number}[SF_44]{/c} stack of {c_important}{u}Resolve{/u}{/c} when hitting the first enemy.",
+   "hLabel": 3473162123
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod17_Name",
+   "szText": "Resolve",
+   "hLabel": 3344065160
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod21_Description",
+   "szText": "{c_important}Landslide{/c} becomes a {c_important}Werebear{/c} Skill.",
+   "hLabel": 772423718
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod21_Name",
+   "szText": "Werebear",
+   "hLabel": 105753475
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod22_Description",
+   "szText": "{c_important}Landslide's{/c} damage is increased by {c_number}[SF_15 * 100|%x|]{/c}.",
+   "hLabel": 2104052135
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod22_Name",
+   "szText": "Human",
+   "hLabel": 144888868
   }
  ],
  "ptMapStringTable": "0"

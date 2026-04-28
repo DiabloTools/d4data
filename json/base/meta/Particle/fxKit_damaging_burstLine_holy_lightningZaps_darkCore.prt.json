@@ -4,13 +4,13 @@
  "__type__": "ParticleDefinition",
  "__typeHash__": 2145577021,
  "eType": 0,
- "dwFlags": 1057944,
+ "dwFlags": 1074200,
  "dwFlagsEx": 503324928,
  "dwFlagsEx2": 0,
  "tSystemDuration": 0.20000000298023224,
  "tOutroDuration": 0.5,
  "tPrepumpDuration": 0,
- "eRenderDistance": 1,
+ "eRenderDistance": 3,
  "eUVFlippingMode": -1,
  "tSystemDurationScalar": {
   "__type__": "InterpolationScalar",
@@ -112,48 +112,7 @@
    ]
   }
  ],
- "pathSystemBurst": [
-  {
-   "__type__": "InterpolationPath_int32",
-   "__typeHash__": 3426042948,
-   "tHeader": {
-    "__type__": "InterpolationPathHeader",
-    "__typeHash__": 2520702334,
-    "tLoopPointStart": 0,
-    "tLoopPointEnd": 1,
-    "nDistributionFunction": 0,
-    "nMinMaxBehavior": 0,
-    "arInterpScalar": [
-     {
-      "__type__": "InterpolationScalar",
-      "__typeHash__": 991799518,
-      "nScalarFunction": 0,
-      "dwFlags": 1,
-      "tInputRange": {
-       "rangeValue1": 0,
-       "rangeValue2": 1
-      },
-      "tRemapRange": {
-       "rangeValue1": 0,
-       "rangeValue2": 1
-      },
-      "eRemapEasing": 0,
-      "szFormulaName": 0
-     }
-    ],
-    "dwFlags": 12
-   },
-   "ptArrayNodes": [
-    {
-     "__type__": "InterpolationNode_int32",
-     "__typeHash__": 2011319229,
-     "tValueMin": 0,
-     "tValueMax": 0,
-     "tTime": 0
-    }
-   ]
-  }
- ],
+ "pathSystemBurst": [],
  "pathSystemAlpha": [],
  "pathSystemAlphaAux": [],
  "pathParticleDuration": [
@@ -192,7 +151,7 @@
      "__type__": "InterpolationNode_float",
      "__typeHash__": 2007685731,
      "tValueMin": 0.2404678761959076,
-     "tValueMax": 0.4110203981399536,
+     "tValueMax": 0.699999988079071,
      "tTime": 0
     }
    ]
@@ -238,8 +197,8 @@
     {
      "__type__": "InterpolationNode_float",
      "__typeHash__": 2007685731,
-     "tValueMin": 0.4000000059604645,
-     "tValueMax": 0.4000000059604645,
+     "tValueMin": 3,
+     "tValueMax": 3,
      "tTime": 0
     }
    ]
@@ -307,7 +266,7 @@
       "__typeHash__": 2520702334,
       "tLoopPointStart": 0,
       "tLoopPointEnd": 1,
-      "nDistributionFunction": 2,
+      "nDistributionFunction": 0,
       "nMinMaxBehavior": 0,
       "arInterpScalar": [
        {
@@ -366,31 +325,16 @@
        "__type__": "InterpolationNode_bcVec3",
        "__typeHash__": 1661010243,
        "tValueMin": {
-        "x": 0.3015178143978119,
+        "x": 0,
         "y": -0.4000000059604645,
         "z": 0
        },
        "tValueMax": {
-        "x": 0.5015178322792053,
+        "x": 1,
         "y": 0.4000000059604645,
         "z": 0
        },
        "tTime": 0
-      },
-      {
-       "__type__": "InterpolationNode_bcVec3",
-       "__typeHash__": 1661010243,
-       "tValueMin": {
-        "x": 0.8423182964324951,
-        "y": -0.4000000059604645,
-        "z": 0
-       },
-       "tValueMax": {
-        "x": 0.942318320274353,
-        "y": 0.4000000059604645,
-        "z": 0
-       },
-       "tTime": 0.9584685564041138
       }
      ]
     }
@@ -777,9 +721,135 @@
  "pathAngularVelocity": [],
  "pathOrientationVelocity": [],
  "pathOrientationVelocity2": [],
- "pathOrientationPosition": [],
+ "pathOrientationPosition": [
+  {
+   "__type__": "InterpolationPath_float",
+   "__typeHash__": 3422409450,
+   "tHeader": {
+    "__type__": "InterpolationPathHeader",
+    "__typeHash__": 2520702334,
+    "tLoopPointStart": 0,
+    "tLoopPointEnd": 1,
+    "nDistributionFunction": 0,
+    "nMinMaxBehavior": 0,
+    "arInterpScalar": [
+     {
+      "__type__": "InterpolationScalar",
+      "__typeHash__": 991799518,
+      "nScalarFunction": 0,
+      "dwFlags": 1,
+      "tInputRange": {
+       "rangeValue1": 0,
+       "rangeValue2": 1
+      },
+      "tRemapRange": {
+       "rangeValue1": 0,
+       "rangeValue2": 1
+      },
+      "eRemapEasing": 0,
+      "szFormulaName": 0
+     }
+    ],
+    "dwFlags": 12
+   },
+   "ptArrayNodes": [
+    {
+     "__type__": "InterpolationNode_float",
+     "__typeHash__": 2007685731,
+     "tValueMin": 0,
+     "tValueMax": 0,
+     "tTime": 0
+    }
+   ]
+  }
+ ],
  "pathOrientationPosition2": [],
- "pathOrientationAxis": [],
+ "pathOrientationAxis": [
+  {
+   "__type__": "VectorPath",
+   "__typeHash__": 2594652800,
+   "tPathData": {
+    "__type__": "InterpolationPath_bcVec3",
+    "__typeHash__": 1102252714,
+    "tHeader": {
+     "__type__": "InterpolationPathHeader",
+     "__typeHash__": 2520702334,
+     "tLoopPointStart": 0,
+     "tLoopPointEnd": 1,
+     "nDistributionFunction": 0,
+     "nMinMaxBehavior": 0,
+     "arInterpScalar": [
+      {
+       "__type__": "InterpolationScalar",
+       "__typeHash__": 991799518,
+       "nScalarFunction": 0,
+       "dwFlags": 1,
+       "tInputRange": {
+        "rangeValue1": 0,
+        "rangeValue2": 1
+       },
+       "tRemapRange": {
+        "rangeValue1": 0,
+        "rangeValue2": 1
+       },
+       "eRemapEasing": 0,
+       "szFormulaName": 0
+      },
+      {
+       "__type__": "InterpolationScalar",
+       "__typeHash__": 991799518,
+       "nScalarFunction": 0,
+       "dwFlags": 1,
+       "tInputRange": {
+        "rangeValue1": 0,
+        "rangeValue2": 1
+       },
+       "tRemapRange": {
+        "rangeValue1": 0,
+        "rangeValue2": 1
+       },
+       "eRemapEasing": 0,
+       "szFormulaName": 0
+      },
+      {
+       "__type__": "InterpolationScalar",
+       "__typeHash__": 991799518,
+       "nScalarFunction": 0,
+       "dwFlags": 1,
+       "tInputRange": {
+        "rangeValue1": 0,
+        "rangeValue2": 1
+       },
+       "tRemapRange": {
+        "rangeValue1": 0,
+        "rangeValue2": 1
+       },
+       "eRemapEasing": 0,
+       "szFormulaName": 0
+      }
+     ],
+     "dwFlags": 12
+    },
+    "ptArrayNodes": [
+     {
+      "__type__": "InterpolationNode_bcVec3",
+      "__typeHash__": 1661010243,
+      "tValueMin": {
+       "x": 1,
+       "y": 0,
+       "z": 0
+      },
+      "tValueMax": {
+       "x": 1,
+       "y": 0,
+       "z": 0
+      },
+      "tTime": 0
+     }
+    ]
+   }
+  }
+ ],
  "pathOrientationAxis2": [],
  "unk_a8c5217": [],
  "pathMotionCylinderRadialPos": [],
@@ -791,7 +861,92 @@
  "pathMotionWorldPos": [],
  "pathMotionWorldVel": [],
  "pathMotionWorldAcc": [],
- "pathMotionRelativeCartesianPos": [],
+ "pathMotionRelativeCartesianPos": [
+  {
+   "__type__": "VectorPath",
+   "__typeHash__": 2594652800,
+   "tPathData": {
+    "__type__": "InterpolationPath_bcVec3",
+    "__typeHash__": 1102252714,
+    "tHeader": {
+     "__type__": "InterpolationPathHeader",
+     "__typeHash__": 2520702334,
+     "tLoopPointStart": 0,
+     "tLoopPointEnd": 1,
+     "nDistributionFunction": 0,
+     "nMinMaxBehavior": 0,
+     "arInterpScalar": [
+      {
+       "__type__": "InterpolationScalar",
+       "__typeHash__": 991799518,
+       "nScalarFunction": 0,
+       "dwFlags": 1,
+       "tInputRange": {
+        "rangeValue1": 0,
+        "rangeValue2": 1
+       },
+       "tRemapRange": {
+        "rangeValue1": 0,
+        "rangeValue2": 1
+       },
+       "eRemapEasing": 0,
+       "szFormulaName": 0
+      },
+      {
+       "__type__": "InterpolationScalar",
+       "__typeHash__": 991799518,
+       "nScalarFunction": 0,
+       "dwFlags": 1,
+       "tInputRange": {
+        "rangeValue1": 0,
+        "rangeValue2": 1
+       },
+       "tRemapRange": {
+        "rangeValue1": 0,
+        "rangeValue2": 1
+       },
+       "eRemapEasing": 0,
+       "szFormulaName": 0
+      },
+      {
+       "__type__": "InterpolationScalar",
+       "__typeHash__": 991799518,
+       "nScalarFunction": 0,
+       "dwFlags": 1,
+       "tInputRange": {
+        "rangeValue1": 0,
+        "rangeValue2": 1
+       },
+       "tRemapRange": {
+        "rangeValue1": 0,
+        "rangeValue2": 1
+       },
+       "eRemapEasing": 0,
+       "szFormulaName": 0
+      }
+     ],
+     "dwFlags": 12
+    },
+    "ptArrayNodes": [
+     {
+      "__type__": "InterpolationNode_bcVec3",
+      "__typeHash__": 1661010243,
+      "tValueMin": {
+       "x": 0,
+       "y": 0,
+       "z": 0.20000000298023224
+      },
+      "tValueMax": {
+       "x": 0,
+       "y": 0,
+       "z": 0.20000000298023224
+      },
+      "tTime": 0
+     }
+    ]
+   }
+  }
+ ],
  "pathMotionRelativeCartesianVel": [
   {
    "__type__": "VectorPath",
@@ -928,5 +1083,5 @@
  "unk_cddc4fd": [],
  "pathVectorFieldRotation": [],
  "unk_da1d404": 0,
- "unk_5a7f188": 1
+ "unk_5a7f188": 5
 }

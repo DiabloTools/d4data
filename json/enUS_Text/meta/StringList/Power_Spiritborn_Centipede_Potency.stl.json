@@ -29,49 +29,98 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod0_Description",
-   "szText": "{c_important}Touch of Death's{/c} infection Heals you for {c_number}[{SF_4}*100|1%|]{/c} of your Maximum Life {c_number}([Max(1,PlayerHealthMax() * {SF_4})]){/c} per second for a total of {c_number}[{SF_4}*{SF_2}*100|%|]{/c} Maximum Life {c_number}([Max(1,PlayerHealthMax() * {SF_4}*{SF_2})]){/c}. You Heal any remaining when the swarm hatches. ",
+   "szText": "{if:SF_45}{c_important}Touch of Death's{/c} strike Heals you for {c_number}[{SF_4}*{SF_2}*100|%|]{/c} of your Maximum Life {c_number}([Max(1,PlayerHealthMax() * {SF_4}*{SF_2})]){/c}.{else}{c_important}Touch of Death's{/c} infection Heals you for {c_number}[{SF_4}*100|1%|]{/c} of your Maximum Life {c_number}([Max(1,PlayerHealthMax() * {SF_4})]){/c} per second for a total of {c_number}[{SF_4}*{SF_2}*100|%|]{/c} Maximum Life {c_number}([Max(1,PlayerHealthMax() * {SF_4}*{SF_2})]){/c}. You Heal any remaining when the swarm hatches.{/if}",
    "hLabel": 3591940403
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod0_Name",
-   "szText": "Enhanced Touch of Death",
+   "szText": "Healing",
    "hLabel": 2452871472
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
+   "szLabel": "Mod4_Description",
+   "szText": "If {c_important}Touch of Death's{/c} strike hits a {c_important}{u}Weakened{/u}{/c} enemy, {c_important}Touch of Death{/c} deals {c_number}[SF_49*100|%x|]{/c} increased damage.",
+   "hLabel": 328519479
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod4_Name",
+   "szText": "Weakened Damage",
+   "hLabel": 2609413044
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod5_Description",
+   "szText": "{c_important}Touch of Death{/c} makes enemies {c_important}{u}Vulnerable{/u}{/c}.",
+   "hLabel": 1660147896
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod5_Name",
+   "szText": "Vulnerable",
+   "hLabel": 2648548437
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod6_Description",
+   "szText": "{if:SF_23}{c_important}Touch of Death's{/c} Vigor cost is reduced by {c_number}[{SF_46}*100|%|]{/c}.{else}{c_important}Touch of Death{/c} gains an additional Charge.{/if}",
+   "hLabel": 2991776313
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod6_Name",
+   "szText": "Additional Charge",
+   "hLabel": 2687683830
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
    "szLabel": "Mod1_Description",
-   "szText": "{c_important}Touch of Death's{/c} swarm bursts every second, applying {c_number}[{SF_32}*100|%|]{/c} of its Base Poisoning damage over {c_number}[{buffduration:POISON_DOT}]{/c} seconds to surrounding enemies.",
+   "szText": "{c_important}Touch of Death's{/c} swarm bursts every second, applying {c_number}{dot:UPGRADE_A_POISON_DOT}{/c} Poisoning damage over {c_number}[{buffduration:UPGRADE_A_POISON_DOT}]{/c} seconds to surrounding enemies.",
    "hLabel": 628601524
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod1_Name",
-   "szText": "Invasive Touch of Death",
+   "szText": "Erupting Swarm",
    "hLabel": 2492006865
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod2_Description",
-   "szText": "{c_important}Touch of Death{/c} is now also a {c_important}Core{/c} Skill which costs {c_number}{SF_22}{/c} Vigor and has no Cooldown.",
+   "szText": "{c_important}Touch of Death{/c} is also a {c_important}Core{/c} Skill which costs {c_number}{SF_22}{/c} Vigor and has no Cooldown. \r\n\r\nWhen a swarm is replaced early, it bursts for {c_number}[{SF_27}*100|%|]{/c} of the damage it would have done. ",
    "hLabel": 1960229941
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod2_Name",
-   "szText": "Poised Touch of Death",
+   "szText": "Swarm of Swarms",
    "hLabel": 2531142258
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
+   "szLabel": "Mod3_Description",
+   "szText": "{c_important}Touch of Death{/c} becomes an {c_important}Eagle{/c} Skill that deals Lightning damage. \r\n\r\n{c_important}Touch of Death{/c} strikes an enemy, dealing {c_number}{payload:IMPACT_C}{/c} damage and conjuring a {c_important}{u}Spirit Storm{/u}{/c} which Sparks enemies for {c_number}{dot:TOOLTIP_STORM_DOT}{/c} damage. If the enemy dies before the {c_important}{u}Spirit Storm{/u}{/c} dissipates, conjure a second moving {c_important}{u}Spirit Storm{/u}{/c}. \r\n\r\nWhen you conjure a {c_important}{u}Spirit Storm{/u}{/c}, reduce {c_important}Touch of Death's{/c} Cooldown by {c_number}[SF_44]{/c} second.",
+   "hLabel": 3291858358
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
    "szLabel": "Mod3_Name",
-   "szText": "(PH) Soil Defense Upgrade C",
+   "szText": "Touch of Lightning",
    "hLabel": 2570277651
   }
  ],

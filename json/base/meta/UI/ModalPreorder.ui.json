@@ -26,7 +26,7 @@
       "dwType": 2502206177,
       "behaviorMessageName": 0,
       "behaviorContainerSno": null,
-      "enumVal": 1106
+      "enumVal": 1168
      },
      "tOnClose": {
       "__type__": "UIDefaultAction",
@@ -34,7 +34,7 @@
       "dwType": 2502206177,
       "behaviorMessageName": 0,
       "behaviorContainerSno": null,
-      "enumVal": 1107
+      "enumVal": 1169
      },
      "bActive": 0,
      "snoOnOpenSound": {
@@ -261,7 +261,7 @@
             "dwType": 2502206177,
             "behaviorMessageName": 0,
             "behaviorContainerSno": null,
-            "enumVal": 1222
+            "enumVal": 1287
            },
            "eHorizontalAnchoring": 2,
            "eVisibilityCondition": 0
@@ -317,9 +317,11 @@
         },
         "hOptionalUIWindowStyleFields": {
          "nHeight": 900,
-         "eVerticalAnchoring": 3,
+         "eVerticalAnchoring": 1,
          "nWidth": 1480,
-         "eHorizontalAnchoring": 3
+         "nLeft": 25,
+         "eHorizontalAnchoring": 0,
+         "bEncloseChildren": 1
         }
        }
       ],
@@ -347,28 +349,994 @@
            "hOptionalUIControlConsoleInputFields": {}
           },
           "hOptionalUIWindowStyleFields": {
-           "eVerticalAnchoring": 1,
+           "eVerticalAnchoring": 0,
            "nRight": 1,
-           "nWidth": 850,
-           "nLeft": 25
+           "nWidth": 855
           },
           "unk_4e673ad": {},
           "hOptionalUIStackPanelStyleFields": {
            "unk_3385ab6": 0,
+           "bReverseOrder": 1,
            "nStackSpacing": 0,
+           "eLayoutBehavior": 0,
            "unk_f89660f": 1,
            "tMargins": {
             "__type__": "UIMargins",
             "__typeHash__": 501814863,
             "flLeft": 0,
-            "flTop": 40,
+            "flTop": 0,
             "flRight": 0,
-            "flBottom": 16
+            "flBottom": 0
            }
           }
          }
         ],
         "arChildren": [
+         {
+          "__type__": "UIControlTemplate",
+          "__typeHash__": 641859515,
+          "szName": "ModalStack2",
+          "ptInlineStyle": [
+           {
+            "__type__": "UIStackPanelStyle",
+            "__typeHash__": 287728085,
+            "dwType": 287728085,
+            "hParentStyle": {
+             "__type__": "UIControlHandle",
+             "__typeHash__": 3063971755,
+             "snoUI": null,
+             "szControlName": 0
+            },
+            "unk_441f783": "0",
+            "hOptionalUIControlStyleFields": {},
+            "tConsoleInput": {
+             "__type__": "UIControlConsoleInput",
+             "__typeHash__": 3089331074,
+             "hOptionalUIControlConsoleInputFields": {}
+            },
+            "hOptionalUIWindowStyleFields": {
+             "unk_739b9e8": -55,
+             "eHorizontalAnchoring": 3
+            },
+            "unk_4e673ad": {},
+            "hOptionalUIStackPanelStyleFields": {
+             "unk_3385ab6": 0
+            }
+           }
+          ],
+          "arChildren": [
+           {
+            "__type__": "UIControlTemplate",
+            "__typeHash__": 641859515,
+            "szName": "D4_Logo",
+            "ptInlineStyle": [
+             {
+              "__type__": "UIWindowStyle",
+              "__typeHash__": 506492871,
+              "dwType": 506492871,
+              "hParentStyle": {
+               "__type__": "UIControlHandle",
+               "__typeHash__": 3063971755,
+               "snoUI": null,
+               "szControlName": 0
+              },
+              "unk_441f783": "0",
+              "hOptionalUIControlStyleFields": {},
+              "tConsoleInput": {
+               "__type__": "UIControlConsoleInput",
+               "__typeHash__": 3089331074,
+               "hOptionalUIControlConsoleInputFields": {}
+              },
+              "hOptionalUIWindowStyleFields": {
+               "nHeight": 345,
+               "eClipBehavior": 2,
+               "eImageFitType": 2,
+               "nWidth": 875,
+               "unk_739b9e8": 0,
+               "eHorizontalAnchoring": 0,
+               "hImageFrame": {
+                "__type__": "UIImageHandleReference",
+                "__typeHash__": 1797021084,
+                "hImageHandle": 475122605
+               }
+              }
+             }
+            ],
+            "arChildren": [],
+            "ptTemplateInstanceConfig": []
+           },
+           {
+            "__type__": "UIControlTemplate",
+            "__typeHash__": 641859515,
+            "szName": "Text1",
+            "ptInlineStyle": [
+             {
+              "__type__": "UITextStyle",
+              "__typeHash__": 127673428,
+              "dwType": 127673428,
+              "hParentStyle": {
+               "__type__": "UIControlHandle",
+               "__typeHash__": 3063971755,
+               "snoUI": null,
+               "szControlName": 0
+              },
+              "unk_441f783": "0",
+              "hOptionalUIControlStyleFields": {},
+              "tConsoleInput": {
+               "__type__": "UIControlConsoleInput",
+               "__typeHash__": 3089331074,
+               "hOptionalUIControlConsoleInputFields": {}
+              },
+              "hOptionalUIWindowStyleFields": {
+               "rgbaForeground": {
+                "r": 239,
+                "g": 236,
+                "b": 228,
+                "a": 255
+               },
+               "unk_739b9e8": -35,
+               "eHorizontalAnchoring": 3
+              },
+              "tFont": {
+               "__type__": "UIControlFont",
+               "__typeHash__": 1698657718,
+               "hOptionalUIControlFontFields": {
+                "snoFont": {
+                 "__raw__": 1300,
+                 "__group__": 19,
+                 "__type__": "DT_SNO",
+                 "__typeHash__": 2764331143,
+                 "__targetFileName__": "base/meta/Font/SansSerif.fnt",
+                 "groupName": "Font",
+                 "name": "SansSerif"
+                },
+                "dwFontSize": 18
+               }
+              },
+              "hOptionalUITextStyleFields": {
+               "bWordWrap": 1,
+               "flTextAdvanceScalar": 1.100000023841858,
+               "hText": {
+                "__type__": "StringLabelHandleEx",
+                "__typeHash__": 721585600,
+                "snoStringList": {
+                 "__raw__": 1404641,
+                 "__group__": 42,
+                 "__type__": "DT_SNO",
+                 "__typeHash__": 2764331143,
+                 "__targetFileName__": "enUS_Text/meta/StringList/OpenBeta_PreorderModalUI.stl",
+                 "groupName": "StringList",
+                 "name": "OpenBeta_PreorderModalUI"
+                },
+                "szLabel": 4077230555
+               },
+               "eTextJustifyVertical": 6,
+               "unk_ad7d5ca": 1,
+               "eResizeToFit": 3,
+               "eTextJustify": 2,
+               "bUseDropShadow": 1,
+               "bTextAllCaps": 0
+              }
+             }
+            ],
+            "arChildren": [],
+            "ptTemplateInstanceConfig": []
+           },
+           {
+            "__type__": "UIControlTemplate",
+            "__typeHash__": 641859515,
+            "szName": "Divider",
+            "ptInlineStyle": [
+             {
+              "__type__": "UIWindowStyle",
+              "__typeHash__": 506492871,
+              "dwType": 506492871,
+              "hParentStyle": {
+               "__type__": "UIControlHandle",
+               "__typeHash__": 3063971755,
+               "snoUI": null,
+               "szControlName": 0
+              },
+              "unk_441f783": "0",
+              "hOptionalUIControlStyleFields": {
+               "hTemplate": {
+                "__type__": "UIControlHandle",
+                "__typeHash__": 3063971755,
+                "snoUI": {
+                 "__raw__": 207620,
+                 "__group__": 46,
+                 "__type__": "DT_SNO",
+                 "__typeHash__": 2764331143,
+                 "__targetFileName__": "base/meta/UI/StyleWindows.ui",
+                 "groupName": "UI",
+                 "name": "StyleWindows"
+                },
+                "szControlName": 1527922317
+               }
+              },
+              "tConsoleInput": {
+               "__type__": "UIControlConsoleInput",
+               "__typeHash__": 3089331074,
+               "hOptionalUIControlConsoleInputFields": {}
+              },
+              "hOptionalUIWindowStyleFields": {
+               "nHeight": 40,
+               "eImageFitType": 2,
+               "nRight": 50,
+               "nWidth": 397,
+               "eHorizontalAnchoring": 1,
+               "unk_bffade6": -10
+              }
+             }
+            ],
+            "arChildren": [],
+            "ptTemplateInstanceConfig": []
+           },
+           {
+            "__type__": "UIControlTemplate",
+            "__typeHash__": 641859515,
+            "szName": "Text2",
+            "ptInlineStyle": [
+             {
+              "__type__": "UITextStyle",
+              "__typeHash__": 127673428,
+              "dwType": 127673428,
+              "hParentStyle": {
+               "__type__": "UIControlHandle",
+               "__typeHash__": 3063971755,
+               "snoUI": null,
+               "szControlName": 0
+              },
+              "unk_441f783": "0",
+              "hOptionalUIControlStyleFields": {},
+              "tConsoleInput": {
+               "__type__": "UIControlConsoleInput",
+               "__typeHash__": 3089331074,
+               "hOptionalUIControlConsoleInputFields": {}
+              },
+              "hOptionalUIWindowStyleFields": {
+               "rgbaForeground": {
+                "r": 210,
+                "g": 200,
+                "b": 174,
+                "a": 255
+               },
+               "unk_739b9e8": -15,
+               "eHorizontalAnchoring": 3
+              },
+              "tFont": {
+               "__type__": "UIControlFont",
+               "__typeHash__": 1698657718,
+               "hOptionalUIControlFontFields": {
+                "snoFont": {
+                 "__raw__": 1300,
+                 "__group__": 19,
+                 "__type__": "DT_SNO",
+                 "__typeHash__": 2764331143,
+                 "__targetFileName__": "base/meta/Font/SansSerif.fnt",
+                 "groupName": "Font",
+                 "name": "SansSerif"
+                },
+                "dwFontSize": 18
+               }
+              },
+              "hOptionalUITextStyleFields": {
+               "bWordWrap": 1,
+               "flTextAdvanceScalar": 1.100000023841858,
+               "hText": {
+                "__type__": "StringLabelHandleEx",
+                "__typeHash__": 721585600,
+                "snoStringList": {
+                 "__raw__": 1404641,
+                 "__group__": 42,
+                 "__type__": "DT_SNO",
+                 "__typeHash__": 2764331143,
+                 "__targetFileName__": "enUS_Text/meta/StringList/OpenBeta_PreorderModalUI.stl",
+                 "groupName": "StringList",
+                 "name": "OpenBeta_PreorderModalUI"
+                },
+                "szLabel": 4077230556
+               },
+               "eTextJustifyVertical": 6,
+               "unk_ad7d5ca": 1,
+               "eResizeToFit": 3,
+               "eTextJustify": 2,
+               "bUseDropShadow": 1,
+               "bTextAllCaps": 0
+              }
+             }
+            ],
+            "arChildren": [],
+            "ptTemplateInstanceConfig": []
+           },
+           {
+            "__type__": "UIControlTemplate",
+            "__typeHash__": 641859515,
+            "szName": "ReleaseDate_Title",
+            "ptInlineStyle": [
+             {
+              "__type__": "UITextStyle",
+              "__typeHash__": 127673428,
+              "dwType": 127673428,
+              "hParentStyle": {
+               "__type__": "UIControlHandle",
+               "__typeHash__": 3063971755,
+               "snoUI": null,
+               "szControlName": 0
+              },
+              "unk_441f783": "0",
+              "hOptionalUIControlStyleFields": {
+               "bActive": 0
+              },
+              "tConsoleInput": {
+               "__type__": "UIControlConsoleInput",
+               "__typeHash__": 3089331074,
+               "hOptionalUIControlConsoleInputFields": {}
+              },
+              "hOptionalUIWindowStyleFields": {
+               "rgbaForeground": {
+                "r": 239,
+                "g": 236,
+                "b": 228,
+                "a": 255
+               },
+               "nRight": 50,
+               "nLeft": 50,
+               "eHorizontalAnchoring": 3
+              },
+              "tFont": {
+               "__type__": "UIControlFont",
+               "__typeHash__": 1698657718,
+               "hOptionalUIControlFontFields": {
+                "snoFont": {
+                 "__raw__": 1302,
+                 "__group__": 19,
+                 "__type__": "DT_SNO",
+                 "__typeHash__": 2764331143,
+                 "__targetFileName__": "base/meta/Font/Serif.fnt",
+                 "groupName": "Font",
+                 "name": "Serif"
+                },
+                "dwFontSize": 24
+               }
+              },
+              "hOptionalUITextStyleFields": {
+               "bWordWrap": 1,
+               "flTextAdvanceScalar": 1.100000023841858,
+               "hText": {
+                "__type__": "StringLabelHandleEx",
+                "__typeHash__": 721585600,
+                "snoStringList": {
+                 "__raw__": 1404641,
+                 "__group__": 42,
+                 "__type__": "DT_SNO",
+                 "__typeHash__": 2764331143,
+                 "__targetFileName__": "enUS_Text/meta/StringList/OpenBeta_PreorderModalUI.stl",
+                 "groupName": "StringList",
+                 "name": "OpenBeta_PreorderModalUI"
+                },
+                "szLabel": 309350849
+               },
+               "unk_ad7d5ca": 1,
+               "eResizeToFit": 3,
+               "eTextJustify": 2,
+               "bUseDropShadow": 1,
+               "bTextAllCaps": 1
+              }
+             }
+            ],
+            "arChildren": [],
+            "ptTemplateInstanceConfig": []
+           },
+           {
+            "__type__": "UIControlTemplate",
+            "__typeHash__": 641859515,
+            "szName": "ReleaseDate",
+            "ptInlineStyle": [
+             {
+              "__type__": "UITextStyle",
+              "__typeHash__": 127673428,
+              "dwType": 127673428,
+              "hParentStyle": {
+               "__type__": "UIControlHandle",
+               "__typeHash__": 3063971755,
+               "snoUI": null,
+               "szControlName": 0
+              },
+              "unk_441f783": "0",
+              "hOptionalUIControlStyleFields": {
+               "bActive": 0
+              },
+              "tConsoleInput": {
+               "__type__": "UIControlConsoleInput",
+               "__typeHash__": 3089331074,
+               "hOptionalUIControlConsoleInputFields": {}
+              },
+              "hOptionalUIWindowStyleFields": {
+               "rgbaForeground": {
+                "r": 210,
+                "g": 200,
+                "b": 174,
+                "a": 255
+               },
+               "nRight": 50,
+               "nLeft": 50,
+               "eHorizontalAnchoring": 3
+              },
+              "tFont": {
+               "__type__": "UIControlFont",
+               "__typeHash__": 1698657718,
+               "hOptionalUIControlFontFields": {
+                "snoFont": {
+                 "__raw__": 1302,
+                 "__group__": 19,
+                 "__type__": "DT_SNO",
+                 "__typeHash__": 2764331143,
+                 "__targetFileName__": "base/meta/Font/Serif.fnt",
+                 "groupName": "Font",
+                 "name": "Serif"
+                },
+                "dwFontSize": 40
+               }
+              },
+              "hOptionalUITextStyleFields": {
+               "bWordWrap": 0,
+               "flTextAdvanceScalar": 1.100000023841858,
+               "hText": {
+                "__type__": "StringLabelHandleEx",
+                "__typeHash__": 721585600,
+                "snoStringList": {
+                 "__raw__": 1404641,
+                 "__group__": 42,
+                 "__type__": "DT_SNO",
+                 "__typeHash__": 2764331143,
+                 "__targetFileName__": "enUS_Text/meta/StringList/OpenBeta_PreorderModalUI.stl",
+                 "groupName": "StringList",
+                 "name": "OpenBeta_PreorderModalUI"
+                },
+                "szLabel": 2488996959
+               },
+               "unk_ad7d5ca": 1,
+               "eResizeToFit": 3,
+               "eTextJustify": 2,
+               "bUseDropShadow": 1,
+               "bTextAllCaps": 1
+              }
+             }
+            ],
+            "arChildren": [],
+            "ptTemplateInstanceConfig": []
+           },
+           {
+            "__type__": "UIControlTemplate",
+            "__typeHash__": 641859515,
+            "szName": "PrePurchase_BTN",
+            "ptInlineStyle": [
+             {
+              "__type__": "UIButtonStyle",
+              "__typeHash__": 3357404523,
+              "dwType": 3357404523,
+              "hParentStyle": {
+               "__type__": "UIControlHandle",
+               "__typeHash__": 3063971755,
+               "snoUI": null,
+               "szControlName": 0
+              },
+              "unk_441f783": "0",
+              "hOptionalUIControlStyleFields": {
+               "hTemplate": {
+                "__type__": "UIControlHandle",
+                "__typeHash__": 3063971755,
+                "snoUI": {
+                 "__raw__": 3944,
+                 "__group__": 46,
+                 "__type__": "DT_SNO",
+                 "__typeHash__": 2764331143,
+                 "__targetFileName__": "base/meta/UI/StyleButtons.ui",
+                 "groupName": "UI",
+                 "name": "StyleButtons"
+                },
+                "szControlName": 21906581
+               },
+               "bAcceptInitialFocus": 1
+              },
+              "tConsoleInput": {
+               "__type__": "UIControlConsoleInput",
+               "__typeHash__": 3089331074,
+               "hOptionalUIControlConsoleInputFields": {}
+              },
+              "hOptionalUIWindowStyleFields": {
+               "tOnClick": {
+                "__type__": "UIDefaultAction",
+                "__typeHash__": 2502206177,
+                "dwType": 2502206177,
+                "behaviorMessageName": 0,
+                "behaviorContainerSno": null,
+                "enumVal": 1170
+               },
+               "unk_739b9e8": 10,
+               "eHorizontalAnchoring": 1,
+               "eVisibilityCondition": -1,
+               "bEncloseChildren": 0
+              },
+              "tFont": {
+               "__type__": "UIControlFont",
+               "__typeHash__": 1698657718,
+               "hOptionalUIControlFontFields": {
+                "dwFontSize": 34
+               }
+              },
+              "hOptionalUITextStyleFields": {
+               "flTextPaddingB": 35,
+               "hText": {
+                "__type__": "StringLabelHandleEx",
+                "__typeHash__": 721585600,
+                "snoStringList": {
+                 "__raw__": 1404641,
+                 "__group__": 42,
+                 "__type__": "DT_SNO",
+                 "__typeHash__": 2764331143,
+                 "__targetFileName__": "enUS_Text/meta/StringList/OpenBeta_PreorderModalUI.stl",
+                 "groupName": "StringList",
+                 "name": "OpenBeta_PreorderModalUI"
+                },
+                "szLabel": 4239608552
+               },
+               "eResizeToFit": 1,
+               "bTextAllCaps": 1
+              },
+              "tIcon": {
+               "__type__": "UIControlIcon",
+               "__typeHash__": 1698752488,
+               "hOptionalUIControlIconFields": {}
+              },
+              "tClickSounds": {
+               "__type__": "UIControlClickSounds",
+               "__typeHash__": 2562866241,
+               "hOptionalUIControlClickSoundsFields": {
+                "snoClickSound": {
+                 "__raw__": 1369475,
+                 "__group__": 40,
+                 "__type__": "DT_SNO",
+                 "__typeHash__": 2764331143,
+                 "__targetFileName__": "base/meta/Sound/Play_UI_Menu_Confirm_Extra_Large.snd",
+                 "groupName": "Sound",
+                 "name": "Play_UI_Menu_Confirm_Extra_Large"
+                },
+                "snoMouseOverSound": {
+                 "__raw__": 157384,
+                 "__group__": 40,
+                 "__type__": "DT_SNO",
+                 "__typeHash__": 2764331143,
+                 "__targetFileName__": "base/meta/Sound/Play_UI_Menu_Generic_Button_Hover.snd",
+                 "groupName": "Sound",
+                 "name": "Play_UI_Menu_Generic_Button_Hover"
+                }
+               }
+              },
+              "hOptionalUIButtonStyleFields": {
+               "snoBtnTiledStyleNormal": {
+                "__raw__": 2473820,
+                "__group__": 103,
+                "__type__": "DT_SNO",
+                "__typeHash__": 2764331143,
+                "__targetFileName__": "base/meta/TiledStyle/BtnLargeFramed_X2_Up.tsl",
+                "groupName": "TiledStyle",
+                "name": "BtnLargeFramed_X2_Up"
+               },
+               "snoBtnTiledStylePressed": {
+                "__raw__": 2473818,
+                "__group__": 103,
+                "__type__": "DT_SNO",
+                "__typeHash__": 2764331143,
+                "__targetFileName__": "base/meta/TiledStyle/BtnLargeFramed_X2_Down.tsl",
+                "groupName": "TiledStyle",
+                "name": "BtnLargeFramed_X2_Down"
+               },
+               "snoBtnTiledStyleMouseOver": {
+                "__raw__": 2473819,
+                "__group__": 103,
+                "__type__": "DT_SNO",
+                "__typeHash__": 2764331143,
+                "__targetFileName__": "base/meta/TiledStyle/BtnLargeFramed_X2_Over.tsl",
+                "groupName": "TiledStyle",
+                "name": "BtnLargeFramed_X2_Over"
+               },
+               "snoBtnTiledStyleDisabled": {
+                "__raw__": 2473817,
+                "__group__": 103,
+                "__type__": "DT_SNO",
+                "__typeHash__": 2764331143,
+                "__targetFileName__": "base/meta/TiledStyle/BtnLargeFramed_X2_Disabled.tsl",
+                "groupName": "TiledStyle",
+                "name": "BtnLargeFramed_X2_Disabled"
+               }
+              }
+             }
+            ],
+            "arChildren": [],
+            "ptTemplateInstanceConfig": [
+             {
+              "__type__": "UITemplateInstanceConfig",
+              "__typeHash__": 475975077,
+              "tStyleOverrides": [
+               {
+                "__type__": "UITemplateStyleOverride",
+                "__typeHash__": 2887578027,
+                "szPathToControl": "RActor_VFX_LargeFramed_Button",
+                "tStyle": [
+                 {
+                  "__type__": "UIRActorStyle",
+                  "__typeHash__": 2564089914,
+                  "dwType": 2564089914,
+                  "hParentStyle": {
+                   "__type__": "UIControlHandle",
+                   "__typeHash__": 3063971755,
+                   "snoUI": null,
+                   "szControlName": 0
+                  },
+                  "unk_441f783": "0",
+                  "hOptionalUIControlStyleFields": {
+                   "bActive": 0
+                  },
+                  "tConsoleInput": {
+                   "__type__": "UIControlConsoleInput",
+                   "__typeHash__": 3089331074,
+                   "hOptionalUIControlConsoleInputFields": {}
+                  },
+                  "hOptionalUIWindowStyleFields": {},
+                  "hOptionalUIRActorStyleFields": {}
+                 }
+                ]
+               }
+              ]
+             }
+            ]
+           },
+           {
+            "__type__": "UIControlTemplate",
+            "__typeHash__": 641859515,
+            "szName": "Disclaimer",
+            "ptInlineStyle": [
+             {
+              "__type__": "UIWindowStyle",
+              "__typeHash__": 506492871,
+              "dwType": 506492871,
+              "hParentStyle": {
+               "__type__": "UIControlHandle",
+               "__typeHash__": 3063971755,
+               "snoUI": null,
+               "szControlName": 0
+              },
+              "unk_441f783": "0",
+              "hOptionalUIControlStyleFields": {
+               "hTemplate": {
+                "__type__": "UIControlHandle",
+                "__typeHash__": 3063971755,
+                "snoUI": {
+                 "__raw__": 826189,
+                 "__group__": 46,
+                 "__type__": "DT_SNO",
+                 "__typeHash__": 2764331143,
+                 "__targetFileName__": "base/meta/UI/Store.ui",
+                 "groupName": "UI",
+                 "name": "Store"
+                },
+                "szControlName": 2472221161
+               }
+              },
+              "tConsoleInput": {
+               "__type__": "UIControlConsoleInput",
+               "__typeHash__": 3089331074,
+               "hOptionalUIControlConsoleInputFields": {}
+              },
+              "hOptionalUIWindowStyleFields": {
+               "eHorizontalAnchoring": 1
+              }
+             }
+            ],
+            "arChildren": [],
+            "ptTemplateInstanceConfig": [
+             {
+              "__type__": "UITemplateInstanceConfig",
+              "__typeHash__": 475975077,
+              "tStyleOverrides": [
+               {
+                "__type__": "UITemplateStyleOverride",
+                "__typeHash__": 2887578027,
+                "szPathToControl": "DisclaimerContent_Message",
+                "tStyle": [
+                 {
+                  "__type__": "UITextStyle",
+                  "__typeHash__": 127673428,
+                  "dwType": 127673428,
+                  "hParentStyle": {
+                   "__type__": "UIControlHandle",
+                   "__typeHash__": 3063971755,
+                   "snoUI": null,
+                   "szControlName": 0
+                  },
+                  "unk_441f783": "0",
+                  "hOptionalUIControlStyleFields": {},
+                  "tConsoleInput": {
+                   "__type__": "UIControlConsoleInput",
+                   "__typeHash__": 3089331074,
+                   "hOptionalUIControlConsoleInputFields": {}
+                  },
+                  "hOptionalUIWindowStyleFields": {
+                   "nTop": 0,
+                   "rgbaForeground": {
+                    "r": 179,
+                    "g": 169,
+                    "b": 155,
+                    "a": 255
+                   },
+                   "nHeight": 0,
+                   "eVerticalAnchoring": 1,
+                   "nBottom": 0,
+                   "nMaxWidth": 800,
+                   "nRight": 0,
+                   "nWidth": 0,
+                   "nLeft": 0,
+                   "eHorizontalAnchoring": 1,
+                   "unk_bffade6": 0
+                  },
+                  "tFont": {
+                   "__type__": "UIControlFont",
+                   "__typeHash__": 1698657718,
+                   "hOptionalUIControlFontFields": {
+                    "snoFont": {
+                     "__raw__": 1300,
+                     "__group__": 19,
+                     "__type__": "DT_SNO",
+                     "__typeHash__": 2764331143,
+                     "__targetFileName__": "base/meta/Font/SansSerif.fnt",
+                     "groupName": "Font",
+                     "name": "SansSerif"
+                    },
+                    "dwFontSize": 18
+                   }
+                  },
+                  "hOptionalUITextStyleFields": {
+                   "flTextPaddingL": 20,
+                   "bWordWrap": 1,
+                   "nOutlineStrength": 0,
+                   "bShowPreviewText": 0,
+                   "hText": {
+                    "__type__": "StringLabelHandleEx",
+                    "__typeHash__": 721585600,
+                    "snoStringList": {
+                     "__raw__": 1404641,
+                     "__group__": 42,
+                     "__type__": "DT_SNO",
+                     "__typeHash__": 2764331143,
+                     "__targetFileName__": "enUS_Text/meta/StringList/OpenBeta_PreorderModalUI.stl",
+                     "groupName": "StringList",
+                     "name": "OpenBeta_PreorderModalUI"
+                    },
+                    "szLabel": 2842826177
+                   },
+                   "szPreviewText": "[PH] To be replaced by code - this is a test string",
+                   "bShrinkToFit": 0,
+                   "eTextJustifyVertical": 0,
+                   "unk_ad7d5ca": 1,
+                   "eResizeToFit": 1,
+                   "eTextJustify": 1
+                  }
+                 }
+                ]
+               },
+               {
+                "__type__": "UITemplateStyleOverride",
+                "__typeHash__": 2887578027,
+                "szPathToControl": "Store_Disclaimer_Background_Texture",
+                "tStyle": [
+                 {
+                  "__type__": "UIWindowStyle",
+                  "__typeHash__": 506492871,
+                  "dwType": 506492871,
+                  "hParentStyle": {
+                   "__type__": "UIControlHandle",
+                   "__typeHash__": 3063971755,
+                   "snoUI": null,
+                   "szControlName": 0
+                  },
+                  "unk_441f783": "0",
+                  "hOptionalUIControlStyleFields": {},
+                  "tConsoleInput": {
+                   "__type__": "UIControlConsoleInput",
+                   "__typeHash__": 3089331074,
+                   "hOptionalUIControlConsoleInputFields": {}
+                  },
+                  "hOptionalUIWindowStyleFields": {
+                   "nTop": 0,
+                   "nHeight": 0,
+                   "eVerticalAnchoring": 3,
+                   "nBottom": 0,
+                   "nRight": 0,
+                   "nWidth": 0,
+                   "snoTiledStyle": {
+                    "__raw__": 2073110,
+                    "__group__": 103,
+                    "__type__": "DT_SNO",
+                    "__typeHash__": 2764331143,
+                    "__targetFileName__": "base/meta/TiledStyle/center_gradient_borderless.tsl",
+                    "groupName": "TiledStyle",
+                    "name": "center_gradient_borderless"
+                   },
+                   "nLeft": 0,
+                   "eHorizontalAnchoring": 3,
+                   "rgbaTint": {
+                    "r": 174,
+                    "g": 174,
+                    "b": 174,
+                    "a": 255
+                   },
+                   "dwAlpha": 200
+                  }
+                 }
+                ]
+               },
+               {
+                "__type__": "UITemplateStyleOverride",
+                "__typeHash__": 2887578027,
+                "szPathToControl": "Store_Disclaimer_Frame",
+                "tStyle": [
+                 {
+                  "__type__": "UIWindowStyle",
+                  "__typeHash__": 506492871,
+                  "dwType": 506492871,
+                  "hParentStyle": {
+                   "__type__": "UIControlHandle",
+                   "__typeHash__": 3063971755,
+                   "snoUI": null,
+                   "szControlName": 0
+                  },
+                  "unk_441f783": "0",
+                  "hOptionalUIControlStyleFields": {},
+                  "tConsoleInput": {
+                   "__type__": "UIControlConsoleInput",
+                   "__typeHash__": 3089331074,
+                   "hOptionalUIControlConsoleInputFields": {}
+                  },
+                  "hOptionalUIWindowStyleFields": {
+                   "nTop": 0,
+                   "nHeight": 0,
+                   "eVerticalAnchoring": 3,
+                   "nBottom": 0,
+                   "nRight": 0,
+                   "nWidth": 0,
+                   "snoTiledStyle": null,
+                   "nLeft": 0,
+                   "eHorizontalAnchoring": 3
+                  }
+                 }
+                ]
+               },
+               {
+                "__type__": "UITemplateStyleOverride",
+                "__typeHash__": 2887578027,
+                "szPathToControl": "DisclaimerConent_Icon",
+                "tStyle": [
+                 {
+                  "__type__": "UIWindowStyle",
+                  "__typeHash__": 506492871,
+                  "dwType": 506492871,
+                  "hParentStyle": {
+                   "__type__": "UIControlHandle",
+                   "__typeHash__": 3063971755,
+                   "snoUI": null,
+                   "szControlName": 0
+                  },
+                  "unk_441f783": "0",
+                  "hOptionalUIControlStyleFields": {},
+                  "tConsoleInput": {
+                   "__type__": "UIControlConsoleInput",
+                   "__typeHash__": 3089331074,
+                   "hOptionalUIControlConsoleInputFields": {}
+                  },
+                  "hOptionalUIWindowStyleFields": {
+                   "nTop": 0,
+                   "nHeight": 31,
+                   "eVerticalAnchoring": 1,
+                   "nBottom": 0,
+                   "nRight": 0,
+                   "nWidth": 31,
+                   "nLeft": 0,
+                   "eHorizontalAnchoring": 0,
+                   "unk_bffade6": 0,
+                   "hImageFrame": {
+                    "__type__": "UIImageHandleReference",
+                    "__typeHash__": 1797021084,
+                    "hImageHandle": 768189629
+                   }
+                  }
+                 }
+                ]
+               }
+              ]
+             }
+            ]
+           },
+           {
+            "__type__": "UIControlTemplate",
+            "__typeHash__": 641859515,
+            "szName": "BetaJourney_Text",
+            "ptInlineStyle": [
+             {
+              "__type__": "UITextStyle",
+              "__typeHash__": 127673428,
+              "dwType": 127673428,
+              "hParentStyle": {
+               "__type__": "UIControlHandle",
+               "__typeHash__": 3063971755,
+               "snoUI": null,
+               "szControlName": 0
+              },
+              "unk_441f783": "0",
+              "hOptionalUIControlStyleFields": {
+               "bActive": 0
+              },
+              "tConsoleInput": {
+               "__type__": "UIControlConsoleInput",
+               "__typeHash__": 3089331074,
+               "hOptionalUIControlConsoleInputFields": {}
+              },
+              "hOptionalUIWindowStyleFields": {
+               "rgbaForeground": {
+                "r": 158,
+                "g": 156,
+                "b": 152,
+                "a": 255
+               },
+               "eHorizontalAnchoring": 3,
+               "bEncloseChildren": 0
+              },
+              "tFont": {
+               "__type__": "UIControlFont",
+               "__typeHash__": 1698657718,
+               "hOptionalUIControlFontFields": {
+                "snoFont": {
+                 "__raw__": 466646,
+                 "__group__": 19,
+                 "__type__": "DT_SNO",
+                 "__typeHash__": 2764331143,
+                 "__targetFileName__": "base/meta/Font/SansSerif_Medium.fnt",
+                 "groupName": "Font",
+                 "name": "SansSerif_Medium"
+                },
+                "dwFontSize": 14
+               }
+              },
+              "hOptionalUITextStyleFields": {
+               "bWordWrap": 1,
+               "hText": {
+                "__type__": "StringLabelHandleEx",
+                "__typeHash__": 721585600,
+                "snoStringList": {
+                 "__raw__": 1404641,
+                 "__group__": 42,
+                 "__type__": "DT_SNO",
+                 "__typeHash__": 2764331143,
+                 "__targetFileName__": "enUS_Text/meta/StringList/OpenBeta_PreorderModalUI.stl",
+                 "groupName": "StringList",
+                 "name": "OpenBeta_PreorderModalUI"
+                },
+                "szLabel": 3245238889
+               },
+               "unk_ad7d5ca": 1,
+               "eResizeToFit": 3,
+               "eTextJustify": 2,
+               "bUseDropShadow": 1
+              }
+             }
+            ],
+            "arChildren": [],
+            "ptTemplateInstanceConfig": []
+           }
+          ],
+          "ptTemplateInstanceConfig": []
+         },
          {
           "__type__": "UIControlTemplate",
           "__typeHash__": 641859515,
@@ -400,7 +1368,6 @@
              },
              "eClipBehavior": 0,
              "eHorizontalAnchoring": 3,
-             "unk_bffade6": 15,
              "bEncloseChildren": 1
             },
             "tFont": {
@@ -416,7 +1383,7 @@
                "groupName": "Font",
                "name": "SansSerif"
               },
-              "dwFontSize": 24
+              "dwFontSize": 22
              }
             },
             "hOptionalUITextStyleFields": {
@@ -440,1057 +1407,6 @@
              "eTextJustify": 2,
              "bUseDropShadow": 1,
              "bTextAllCaps": 0
-            }
-           }
-          ],
-          "arChildren": [],
-          "ptTemplateInstanceConfig": []
-         },
-         {
-          "__type__": "UIControlTemplate",
-          "__typeHash__": 641859515,
-          "szName": "D4_Logo",
-          "ptInlineStyle": [
-           {
-            "__type__": "UIWindowStyle",
-            "__typeHash__": 506492871,
-            "dwType": 506492871,
-            "hParentStyle": {
-             "__type__": "UIControlHandle",
-             "__typeHash__": 3063971755,
-             "snoUI": null,
-             "szControlName": 0
-            },
-            "unk_441f783": "0",
-            "hOptionalUIControlStyleFields": {},
-            "tConsoleInput": {
-             "__type__": "UIControlConsoleInput",
-             "__typeHash__": 3089331074,
-             "hOptionalUIControlConsoleInputFields": {}
-            },
-            "hOptionalUIWindowStyleFields": {
-             "nHeight": 393,
-             "eClipBehavior": 2,
-             "nWidth": 612,
-             "eHorizontalAnchoring": 1,
-             "unk_bffade6": -40,
-             "hImageFrame": {
-              "__type__": "UIImageHandleReference",
-              "__typeHash__": 1797021084,
-              "hImageHandle": 575470061
-             }
-            }
-           }
-          ],
-          "arChildren": [],
-          "ptTemplateInstanceConfig": []
-         },
-         {
-          "__type__": "UIControlTemplate",
-          "__typeHash__": 641859515,
-          "szName": "Text1",
-          "ptInlineStyle": [
-           {
-            "__type__": "UITextStyle",
-            "__typeHash__": 127673428,
-            "dwType": 127673428,
-            "hParentStyle": {
-             "__type__": "UIControlHandle",
-             "__typeHash__": 3063971755,
-             "snoUI": null,
-             "szControlName": 0
-            },
-            "unk_441f783": "0",
-            "hOptionalUIControlStyleFields": {},
-            "tConsoleInput": {
-             "__type__": "UIControlConsoleInput",
-             "__typeHash__": 3089331074,
-             "hOptionalUIControlConsoleInputFields": {}
-            },
-            "hOptionalUIWindowStyleFields": {
-             "rgbaForeground": {
-              "r": 239,
-              "g": 236,
-              "b": 228,
-              "a": 255
-             },
-             "eHorizontalAnchoring": 3,
-             "unk_bffade6": -85
-            },
-            "tFont": {
-             "__type__": "UIControlFont",
-             "__typeHash__": 1698657718,
-             "hOptionalUIControlFontFields": {
-              "snoFont": {
-               "__raw__": 1300,
-               "__group__": 19,
-               "__type__": "DT_SNO",
-               "__typeHash__": 2764331143,
-               "__targetFileName__": "base/meta/Font/SansSerif.fnt",
-               "groupName": "Font",
-               "name": "SansSerif"
-              },
-              "dwFontSize": 20
-             }
-            },
-            "hOptionalUITextStyleFields": {
-             "bWordWrap": 1,
-             "flTextAdvanceScalar": 1.100000023841858,
-             "hText": {
-              "__type__": "StringLabelHandleEx",
-              "__typeHash__": 721585600,
-              "snoStringList": {
-               "__raw__": 1404641,
-               "__group__": 42,
-               "__type__": "DT_SNO",
-               "__typeHash__": 2764331143,
-               "__targetFileName__": "enUS_Text/meta/StringList/OpenBeta_PreorderModalUI.stl",
-               "groupName": "StringList",
-               "name": "OpenBeta_PreorderModalUI"
-              },
-              "szLabel": 4077230555
-             },
-             "eTextJustifyVertical": 6,
-             "unk_ad7d5ca": 1,
-             "eResizeToFit": 3,
-             "eTextJustify": 2,
-             "bUseDropShadow": 1,
-             "bTextAllCaps": 0
-            }
-           }
-          ],
-          "arChildren": [],
-          "ptTemplateInstanceConfig": []
-         },
-         {
-          "__type__": "UIControlTemplate",
-          "__typeHash__": 641859515,
-          "szName": "Divider",
-          "ptInlineStyle": [
-           {
-            "__type__": "UIWindowStyle",
-            "__typeHash__": 506492871,
-            "dwType": 506492871,
-            "hParentStyle": {
-             "__type__": "UIControlHandle",
-             "__typeHash__": 3063971755,
-             "snoUI": null,
-             "szControlName": 0
-            },
-            "unk_441f783": "0",
-            "hOptionalUIControlStyleFields": {
-             "hTemplate": {
-              "__type__": "UIControlHandle",
-              "__typeHash__": 3063971755,
-              "snoUI": {
-               "__raw__": 207620,
-               "__group__": 46,
-               "__type__": "DT_SNO",
-               "__typeHash__": 2764331143,
-               "__targetFileName__": "base/meta/UI/StyleWindows.ui",
-               "groupName": "UI",
-               "name": "StyleWindows"
-              },
-              "szControlName": 1527922317
-             }
-            },
-            "tConsoleInput": {
-             "__type__": "UIControlConsoleInput",
-             "__typeHash__": 3089331074,
-             "hOptionalUIControlConsoleInputFields": {}
-            },
-            "hOptionalUIWindowStyleFields": {
-             "nRight": 50,
-             "nWidth": 397,
-             "eHorizontalAnchoring": 1,
-             "unk_bffade6": -75
-            }
-           }
-          ],
-          "arChildren": [],
-          "ptTemplateInstanceConfig": []
-         },
-         {
-          "__type__": "UIControlTemplate",
-          "__typeHash__": 641859515,
-          "szName": "Text2",
-          "ptInlineStyle": [
-           {
-            "__type__": "UITextStyle",
-            "__typeHash__": 127673428,
-            "dwType": 127673428,
-            "hParentStyle": {
-             "__type__": "UIControlHandle",
-             "__typeHash__": 3063971755,
-             "snoUI": null,
-             "szControlName": 0
-            },
-            "unk_441f783": "0",
-            "hOptionalUIControlStyleFields": {},
-            "tConsoleInput": {
-             "__type__": "UIControlConsoleInput",
-             "__typeHash__": 3089331074,
-             "hOptionalUIControlConsoleInputFields": {}
-            },
-            "hOptionalUIWindowStyleFields": {
-             "rgbaForeground": {
-              "r": 210,
-              "g": 200,
-              "b": 174,
-              "a": 255
-             },
-             "eHorizontalAnchoring": 3,
-             "unk_bffade6": -60
-            },
-            "tFont": {
-             "__type__": "UIControlFont",
-             "__typeHash__": 1698657718,
-             "hOptionalUIControlFontFields": {
-              "snoFont": {
-               "__raw__": 1300,
-               "__group__": 19,
-               "__type__": "DT_SNO",
-               "__typeHash__": 2764331143,
-               "__targetFileName__": "base/meta/Font/SansSerif.fnt",
-               "groupName": "Font",
-               "name": "SansSerif"
-              },
-              "dwFontSize": 20
-             }
-            },
-            "hOptionalUITextStyleFields": {
-             "bWordWrap": 1,
-             "flTextAdvanceScalar": 1.100000023841858,
-             "hText": {
-              "__type__": "StringLabelHandleEx",
-              "__typeHash__": 721585600,
-              "snoStringList": {
-               "__raw__": 1404641,
-               "__group__": 42,
-               "__type__": "DT_SNO",
-               "__typeHash__": 2764331143,
-               "__targetFileName__": "enUS_Text/meta/StringList/OpenBeta_PreorderModalUI.stl",
-               "groupName": "StringList",
-               "name": "OpenBeta_PreorderModalUI"
-              },
-              "szLabel": 4077230556
-             },
-             "eTextJustifyVertical": 6,
-             "unk_ad7d5ca": 1,
-             "eResizeToFit": 3,
-             "eTextJustify": 2,
-             "bUseDropShadow": 1,
-             "bTextAllCaps": 0
-            }
-           }
-          ],
-          "arChildren": [],
-          "ptTemplateInstanceConfig": []
-         },
-         {
-          "__type__": "UIControlTemplate",
-          "__typeHash__": 641859515,
-          "szName": "ReleaseDate_Title",
-          "ptInlineStyle": [
-           {
-            "__type__": "UITextStyle",
-            "__typeHash__": 127673428,
-            "dwType": 127673428,
-            "hParentStyle": {
-             "__type__": "UIControlHandle",
-             "__typeHash__": 3063971755,
-             "snoUI": null,
-             "szControlName": 0
-            },
-            "unk_441f783": "0",
-            "hOptionalUIControlStyleFields": {
-             "bActive": 0
-            },
-            "tConsoleInput": {
-             "__type__": "UIControlConsoleInput",
-             "__typeHash__": 3089331074,
-             "hOptionalUIControlConsoleInputFields": {}
-            },
-            "hOptionalUIWindowStyleFields": {
-             "rgbaForeground": {
-              "r": 239,
-              "g": 236,
-              "b": 228,
-              "a": 255
-             },
-             "nRight": 50,
-             "nLeft": 50,
-             "eHorizontalAnchoring": 3,
-             "unk_bffade6": -70
-            },
-            "tFont": {
-             "__type__": "UIControlFont",
-             "__typeHash__": 1698657718,
-             "hOptionalUIControlFontFields": {
-              "snoFont": {
-               "__raw__": 1302,
-               "__group__": 19,
-               "__type__": "DT_SNO",
-               "__typeHash__": 2764331143,
-               "__targetFileName__": "base/meta/Font/Serif.fnt",
-               "groupName": "Font",
-               "name": "Serif"
-              },
-              "dwFontSize": 24
-             }
-            },
-            "hOptionalUITextStyleFields": {
-             "bWordWrap": 1,
-             "flTextAdvanceScalar": 1.100000023841858,
-             "hText": {
-              "__type__": "StringLabelHandleEx",
-              "__typeHash__": 721585600,
-              "snoStringList": {
-               "__raw__": 1404641,
-               "__group__": 42,
-               "__type__": "DT_SNO",
-               "__typeHash__": 2764331143,
-               "__targetFileName__": "enUS_Text/meta/StringList/OpenBeta_PreorderModalUI.stl",
-               "groupName": "StringList",
-               "name": "OpenBeta_PreorderModalUI"
-              },
-              "szLabel": 309350849
-             },
-             "unk_ad7d5ca": 1,
-             "eResizeToFit": 3,
-             "eTextJustify": 2,
-             "bUseDropShadow": 1,
-             "bTextAllCaps": 1
-            }
-           }
-          ],
-          "arChildren": [],
-          "ptTemplateInstanceConfig": []
-         },
-         {
-          "__type__": "UIControlTemplate",
-          "__typeHash__": 641859515,
-          "szName": "ReleaseDate",
-          "ptInlineStyle": [
-           {
-            "__type__": "UITextStyle",
-            "__typeHash__": 127673428,
-            "dwType": 127673428,
-            "hParentStyle": {
-             "__type__": "UIControlHandle",
-             "__typeHash__": 3063971755,
-             "snoUI": null,
-             "szControlName": 0
-            },
-            "unk_441f783": "0",
-            "hOptionalUIControlStyleFields": {
-             "bActive": 0
-            },
-            "tConsoleInput": {
-             "__type__": "UIControlConsoleInput",
-             "__typeHash__": 3089331074,
-             "hOptionalUIControlConsoleInputFields": {}
-            },
-            "hOptionalUIWindowStyleFields": {
-             "rgbaForeground": {
-              "r": 210,
-              "g": 200,
-              "b": 174,
-              "a": 255
-             },
-             "nRight": 50,
-             "nLeft": 50,
-             "eHorizontalAnchoring": 3,
-             "unk_bffade6": -60
-            },
-            "tFont": {
-             "__type__": "UIControlFont",
-             "__typeHash__": 1698657718,
-             "hOptionalUIControlFontFields": {
-              "snoFont": {
-               "__raw__": 1302,
-               "__group__": 19,
-               "__type__": "DT_SNO",
-               "__typeHash__": 2764331143,
-               "__targetFileName__": "base/meta/Font/Serif.fnt",
-               "groupName": "Font",
-               "name": "Serif"
-              },
-              "dwFontSize": 40
-             }
-            },
-            "hOptionalUITextStyleFields": {
-             "bWordWrap": 0,
-             "flTextAdvanceScalar": 1.100000023841858,
-             "hText": {
-              "__type__": "StringLabelHandleEx",
-              "__typeHash__": 721585600,
-              "snoStringList": {
-               "__raw__": 1404641,
-               "__group__": 42,
-               "__type__": "DT_SNO",
-               "__typeHash__": 2764331143,
-               "__targetFileName__": "enUS_Text/meta/StringList/OpenBeta_PreorderModalUI.stl",
-               "groupName": "StringList",
-               "name": "OpenBeta_PreorderModalUI"
-              },
-              "szLabel": 2488996959
-             },
-             "unk_ad7d5ca": 1,
-             "eResizeToFit": 3,
-             "eTextJustify": 2,
-             "bUseDropShadow": 1,
-             "bTextAllCaps": 1
-            }
-           }
-          ],
-          "arChildren": [],
-          "ptTemplateInstanceConfig": []
-         },
-         {
-          "__type__": "UIControlTemplate",
-          "__typeHash__": 641859515,
-          "szName": "PrePurchase_BTN",
-          "ptInlineStyle": [
-           {
-            "__type__": "UIButtonStyle",
-            "__typeHash__": 3357404523,
-            "dwType": 3357404523,
-            "hParentStyle": {
-             "__type__": "UIControlHandle",
-             "__typeHash__": 3063971755,
-             "snoUI": null,
-             "szControlName": 0
-            },
-            "unk_441f783": "0",
-            "hOptionalUIControlStyleFields": {
-             "hTemplate": {
-              "__type__": "UIControlHandle",
-              "__typeHash__": 3063971755,
-              "snoUI": {
-               "__raw__": 3944,
-               "__group__": 46,
-               "__type__": "DT_SNO",
-               "__typeHash__": 2764331143,
-               "__targetFileName__": "base/meta/UI/StyleButtons.ui",
-               "groupName": "UI",
-               "name": "StyleButtons"
-              },
-              "szControlName": 21906581
-             },
-             "bAcceptInitialFocus": 1
-            },
-            "tConsoleInput": {
-             "__type__": "UIControlConsoleInput",
-             "__typeHash__": 3089331074,
-             "hOptionalUIControlConsoleInputFields": {}
-            },
-            "hOptionalUIWindowStyleFields": {
-             "tOnClick": {
-              "__type__": "UIDefaultAction",
-              "__typeHash__": 2502206177,
-              "dwType": 2502206177,
-              "behaviorMessageName": 0,
-              "behaviorContainerSno": null,
-              "enumVal": 1108
-             },
-             "eHorizontalAnchoring": 1,
-             "unk_bffade6": -40,
-             "eVisibilityCondition": -1,
-             "bEncloseChildren": 0
-            },
-            "tFont": {
-             "__type__": "UIControlFont",
-             "__typeHash__": 1698657718,
-             "hOptionalUIControlFontFields": {
-              "dwFontSize": 34
-             }
-            },
-            "hOptionalUITextStyleFields": {
-             "flTextPaddingB": 35,
-             "hText": {
-              "__type__": "StringLabelHandleEx",
-              "__typeHash__": 721585600,
-              "snoStringList": {
-               "__raw__": 1404641,
-               "__group__": 42,
-               "__type__": "DT_SNO",
-               "__typeHash__": 2764331143,
-               "__targetFileName__": "enUS_Text/meta/StringList/OpenBeta_PreorderModalUI.stl",
-               "groupName": "StringList",
-               "name": "OpenBeta_PreorderModalUI"
-              },
-              "szLabel": 4239608552
-             },
-             "eResizeToFit": 1,
-             "bTextAllCaps": 1
-            },
-            "tIcon": {
-             "__type__": "UIControlIcon",
-             "__typeHash__": 1698752488,
-             "hOptionalUIControlIconFields": {}
-            },
-            "tClickSounds": {
-             "__type__": "UIControlClickSounds",
-             "__typeHash__": 2562866241,
-             "hOptionalUIControlClickSoundsFields": {
-              "snoClickSound": {
-               "__raw__": 1369475,
-               "__group__": 40,
-               "__type__": "DT_SNO",
-               "__typeHash__": 2764331143,
-               "__targetFileName__": "base/meta/Sound/Play_UI_Menu_Confirm_Extra_Large.snd",
-               "groupName": "Sound",
-               "name": "Play_UI_Menu_Confirm_Extra_Large"
-              },
-              "snoMouseOverSound": {
-               "__raw__": 157384,
-               "__group__": 40,
-               "__type__": "DT_SNO",
-               "__typeHash__": 2764331143,
-               "__targetFileName__": "base/meta/Sound/Play_UI_Menu_Generic_Button_Hover.snd",
-               "groupName": "Sound",
-               "name": "Play_UI_Menu_Generic_Button_Hover"
-              }
-             }
-            },
-            "hOptionalUIButtonStyleFields": {
-             "snoBtnTiledStyleNormal": {
-              "__raw__": 2473820,
-              "__group__": 103,
-              "__type__": "DT_SNO",
-              "__typeHash__": 2764331143,
-              "__targetFileName__": "base/meta/TiledStyle/BtnLargeFramed_X2_Up.tsl",
-              "groupName": "TiledStyle",
-              "name": "BtnLargeFramed_X2_Up"
-             },
-             "snoBtnTiledStylePressed": {
-              "__raw__": 2473818,
-              "__group__": 103,
-              "__type__": "DT_SNO",
-              "__typeHash__": 2764331143,
-              "__targetFileName__": "base/meta/TiledStyle/BtnLargeFramed_X2_Down.tsl",
-              "groupName": "TiledStyle",
-              "name": "BtnLargeFramed_X2_Down"
-             },
-             "snoBtnTiledStyleMouseOver": {
-              "__raw__": 2473819,
-              "__group__": 103,
-              "__type__": "DT_SNO",
-              "__typeHash__": 2764331143,
-              "__targetFileName__": "base/meta/TiledStyle/BtnLargeFramed_X2_Over.tsl",
-              "groupName": "TiledStyle",
-              "name": "BtnLargeFramed_X2_Over"
-             },
-             "snoBtnTiledStyleDisabled": {
-              "__raw__": 2473817,
-              "__group__": 103,
-              "__type__": "DT_SNO",
-              "__typeHash__": 2764331143,
-              "__targetFileName__": "base/meta/TiledStyle/BtnLargeFramed_X2_Disabled.tsl",
-              "groupName": "TiledStyle",
-              "name": "BtnLargeFramed_X2_Disabled"
-             }
-            }
-           }
-          ],
-          "arChildren": [],
-          "ptTemplateInstanceConfig": [
-           {
-            "__type__": "UITemplateInstanceConfig",
-            "__typeHash__": 475975077,
-            "tStyleOverrides": [
-             {
-              "__type__": "UITemplateStyleOverride",
-              "__typeHash__": 2887578027,
-              "szPathToControl": "RActor_VFX_LargeFramed_Button",
-              "tStyle": [
-               {
-                "__type__": "UIRActorStyle",
-                "__typeHash__": 2564089914,
-                "dwType": 2564089914,
-                "hParentStyle": {
-                 "__type__": "UIControlHandle",
-                 "__typeHash__": 3063971755,
-                 "snoUI": null,
-                 "szControlName": 0
-                },
-                "unk_441f783": "0",
-                "hOptionalUIControlStyleFields": {
-                 "bActive": 0
-                },
-                "tConsoleInput": {
-                 "__type__": "UIControlConsoleInput",
-                 "__typeHash__": 3089331074,
-                 "hOptionalUIControlConsoleInputFields": {}
-                },
-                "hOptionalUIWindowStyleFields": {},
-                "hOptionalUIRActorStyleFields": {}
-               }
-              ]
-             }
-            ]
-           }
-          ]
-         },
-         {
-          "__type__": "UIControlTemplate",
-          "__typeHash__": 641859515,
-          "szName": "Disclaimer",
-          "ptInlineStyle": [
-           {
-            "__type__": "UIWindowStyle",
-            "__typeHash__": 506492871,
-            "dwType": 506492871,
-            "hParentStyle": {
-             "__type__": "UIControlHandle",
-             "__typeHash__": 3063971755,
-             "snoUI": null,
-             "szControlName": 0
-            },
-            "unk_441f783": "0",
-            "hOptionalUIControlStyleFields": {
-             "hTemplate": {
-              "__type__": "UIControlHandle",
-              "__typeHash__": 3063971755,
-              "snoUI": {
-               "__raw__": 826189,
-               "__group__": 46,
-               "__type__": "DT_SNO",
-               "__typeHash__": 2764331143,
-               "__targetFileName__": "base/meta/UI/Store.ui",
-               "groupName": "UI",
-               "name": "Store"
-              },
-              "szControlName": 2472221161
-             }
-            },
-            "tConsoleInput": {
-             "__type__": "UIControlConsoleInput",
-             "__typeHash__": 3089331074,
-             "hOptionalUIControlConsoleInputFields": {}
-            },
-            "hOptionalUIWindowStyleFields": {
-             "eHorizontalAnchoring": 1,
-             "unk_bffade6": -40
-            }
-           }
-          ],
-          "arChildren": [],
-          "ptTemplateInstanceConfig": [
-           {
-            "__type__": "UITemplateInstanceConfig",
-            "__typeHash__": 475975077,
-            "tStyleOverrides": [
-             {
-              "__type__": "UITemplateStyleOverride",
-              "__typeHash__": 2887578027,
-              "szPathToControl": "DisclaimerContent_Message",
-              "tStyle": [
-               {
-                "__type__": "UITextStyle",
-                "__typeHash__": 127673428,
-                "dwType": 127673428,
-                "hParentStyle": {
-                 "__type__": "UIControlHandle",
-                 "__typeHash__": 3063971755,
-                 "snoUI": null,
-                 "szControlName": 0
-                },
-                "unk_441f783": "0",
-                "hOptionalUIControlStyleFields": {},
-                "tConsoleInput": {
-                 "__type__": "UIControlConsoleInput",
-                 "__typeHash__": 3089331074,
-                 "hOptionalUIControlConsoleInputFields": {}
-                },
-                "hOptionalUIWindowStyleFields": {
-                 "nTop": 4,
-                 "rgbaForeground": {
-                  "r": 179,
-                  "g": 169,
-                  "b": 155,
-                  "a": 255
-                 },
-                 "nHeight": 0,
-                 "eVerticalAnchoring": 1,
-                 "nBottom": 0,
-                 "nMaxWidth": 800,
-                 "nRight": 0,
-                 "nWidth": 0,
-                 "nLeft": 0,
-                 "eHorizontalAnchoring": 1,
-                 "unk_bffade6": 0
-                },
-                "tFont": {
-                 "__type__": "UIControlFont",
-                 "__typeHash__": 1698657718,
-                 "hOptionalUIControlFontFields": {
-                  "snoFont": {
-                   "__raw__": 1300,
-                   "__group__": 19,
-                   "__type__": "DT_SNO",
-                   "__typeHash__": 2764331143,
-                   "__targetFileName__": "base/meta/Font/SansSerif.fnt",
-                   "groupName": "Font",
-                   "name": "SansSerif"
-                  },
-                  "dwFontSize": 18
-                 }
-                },
-                "hOptionalUITextStyleFields": {
-                 "flTextPaddingL": 20,
-                 "bWordWrap": 1,
-                 "nOutlineStrength": 0,
-                 "bShowPreviewText": 0,
-                 "hText": {
-                  "__type__": "StringLabelHandleEx",
-                  "__typeHash__": 721585600,
-                  "snoStringList": {
-                   "__raw__": 1404641,
-                   "__group__": 42,
-                   "__type__": "DT_SNO",
-                   "__typeHash__": 2764331143,
-                   "__targetFileName__": "enUS_Text/meta/StringList/OpenBeta_PreorderModalUI.stl",
-                   "groupName": "StringList",
-                   "name": "OpenBeta_PreorderModalUI"
-                  },
-                  "szLabel": 2842826177
-                 },
-                 "szPreviewText": "[PH] To be replaced by code - this is a test string",
-                 "bShrinkToFit": 0,
-                 "eTextJustifyVertical": 0,
-                 "unk_ad7d5ca": 1,
-                 "eResizeToFit": 1,
-                 "eTextJustify": 1
-                }
-               }
-              ]
-             },
-             {
-              "__type__": "UITemplateStyleOverride",
-              "__typeHash__": 2887578027,
-              "szPathToControl": "Store_Disclaimer_Background_Texture",
-              "tStyle": [
-               {
-                "__type__": "UIWindowStyle",
-                "__typeHash__": 506492871,
-                "dwType": 506492871,
-                "hParentStyle": {
-                 "__type__": "UIControlHandle",
-                 "__typeHash__": 3063971755,
-                 "snoUI": null,
-                 "szControlName": 0
-                },
-                "unk_441f783": "0",
-                "hOptionalUIControlStyleFields": {},
-                "tConsoleInput": {
-                 "__type__": "UIControlConsoleInput",
-                 "__typeHash__": 3089331074,
-                 "hOptionalUIControlConsoleInputFields": {}
-                },
-                "hOptionalUIWindowStyleFields": {
-                 "nTop": 0,
-                 "nHeight": 0,
-                 "eVerticalAnchoring": 3,
-                 "nBottom": 0,
-                 "nRight": 0,
-                 "nWidth": 0,
-                 "snoTiledStyle": {
-                  "__raw__": 2073110,
-                  "__group__": 103,
-                  "__type__": "DT_SNO",
-                  "__typeHash__": 2764331143,
-                  "__targetFileName__": "base/meta/TiledStyle/center_gradient_borderless.tsl",
-                  "groupName": "TiledStyle",
-                  "name": "center_gradient_borderless"
-                 },
-                 "nLeft": 0,
-                 "eHorizontalAnchoring": 3,
-                 "rgbaTint": {
-                  "r": 174,
-                  "g": 174,
-                  "b": 174,
-                  "a": 255
-                 },
-                 "dwAlpha": 200
-                }
-               }
-              ]
-             },
-             {
-              "__type__": "UITemplateStyleOverride",
-              "__typeHash__": 2887578027,
-              "szPathToControl": "Store_Disclaimer_Frame",
-              "tStyle": [
-               {
-                "__type__": "UIWindowStyle",
-                "__typeHash__": 506492871,
-                "dwType": 506492871,
-                "hParentStyle": {
-                 "__type__": "UIControlHandle",
-                 "__typeHash__": 3063971755,
-                 "snoUI": null,
-                 "szControlName": 0
-                },
-                "unk_441f783": "0",
-                "hOptionalUIControlStyleFields": {},
-                "tConsoleInput": {
-                 "__type__": "UIControlConsoleInput",
-                 "__typeHash__": 3089331074,
-                 "hOptionalUIControlConsoleInputFields": {}
-                },
-                "hOptionalUIWindowStyleFields": {
-                 "nTop": 0,
-                 "nHeight": 0,
-                 "eVerticalAnchoring": 3,
-                 "nBottom": 0,
-                 "nRight": 0,
-                 "nWidth": 0,
-                 "snoTiledStyle": null,
-                 "nLeft": 0,
-                 "eHorizontalAnchoring": 3
-                }
-               }
-              ]
-             },
-             {
-              "__type__": "UITemplateStyleOverride",
-              "__typeHash__": 2887578027,
-              "szPathToControl": "DisclaimerConent_Icon",
-              "tStyle": [
-               {
-                "__type__": "UIWindowStyle",
-                "__typeHash__": 506492871,
-                "dwType": 506492871,
-                "hParentStyle": {
-                 "__type__": "UIControlHandle",
-                 "__typeHash__": 3063971755,
-                 "snoUI": null,
-                 "szControlName": 0
-                },
-                "unk_441f783": "0",
-                "hOptionalUIControlStyleFields": {},
-                "tConsoleInput": {
-                 "__type__": "UIControlConsoleInput",
-                 "__typeHash__": 3089331074,
-                 "hOptionalUIControlConsoleInputFields": {}
-                },
-                "hOptionalUIWindowStyleFields": {
-                 "nTop": 3,
-                 "nHeight": 31,
-                 "eVerticalAnchoring": 1,
-                 "nBottom": 0,
-                 "nRight": 0,
-                 "nWidth": 31,
-                 "nLeft": 0,
-                 "eHorizontalAnchoring": 0,
-                 "unk_bffade6": 0,
-                 "hImageFrame": {
-                  "__type__": "UIImageHandleReference",
-                  "__typeHash__": 1797021084,
-                  "hImageHandle": 768189629
-                 }
-                }
-               }
-              ]
-             }
-            ]
-           }
-          ]
-         },
-         {
-          "__type__": "UIControlTemplate",
-          "__typeHash__": 641859515,
-          "szName": "BetaJourney_Text",
-          "ptInlineStyle": [
-           {
-            "__type__": "UITextStyle",
-            "__typeHash__": 127673428,
-            "dwType": 127673428,
-            "hParentStyle": {
-             "__type__": "UIControlHandle",
-             "__typeHash__": 3063971755,
-             "snoUI": null,
-             "szControlName": 0
-            },
-            "unk_441f783": "0",
-            "hOptionalUIControlStyleFields": {
-             "bActive": 0
-            },
-            "tConsoleInput": {
-             "__type__": "UIControlConsoleInput",
-             "__typeHash__": 3089331074,
-             "hOptionalUIControlConsoleInputFields": {}
-            },
-            "hOptionalUIWindowStyleFields": {
-             "rgbaForeground": {
-              "r": 158,
-              "g": 156,
-              "b": 152,
-              "a": 255
-             },
-             "eHorizontalAnchoring": 3,
-             "unk_bffade6": -37,
-             "bEncloseChildren": 0
-            },
-            "tFont": {
-             "__type__": "UIControlFont",
-             "__typeHash__": 1698657718,
-             "hOptionalUIControlFontFields": {
-              "snoFont": {
-               "__raw__": 466646,
-               "__group__": 19,
-               "__type__": "DT_SNO",
-               "__typeHash__": 2764331143,
-               "__targetFileName__": "base/meta/Font/SansSerif_Medium.fnt",
-               "groupName": "Font",
-               "name": "SansSerif_Medium"
-              },
-              "dwFontSize": 14
-             }
-            },
-            "hOptionalUITextStyleFields": {
-             "bWordWrap": 1,
-             "hText": {
-              "__type__": "StringLabelHandleEx",
-              "__typeHash__": 721585600,
-              "snoStringList": {
-               "__raw__": 1404641,
-               "__group__": 42,
-               "__type__": "DT_SNO",
-               "__typeHash__": 2764331143,
-               "__targetFileName__": "enUS_Text/meta/StringList/OpenBeta_PreorderModalUI.stl",
-               "groupName": "StringList",
-               "name": "OpenBeta_PreorderModalUI"
-              },
-              "szLabel": 3245238889
-             },
-             "unk_ad7d5ca": 1,
-             "eResizeToFit": 3,
-             "eTextJustify": 2,
-             "bUseDropShadow": 1
-            }
-           }
-          ],
-          "arChildren": [],
-          "ptTemplateInstanceConfig": []
-         }
-        ],
-        "ptTemplateInstanceConfig": []
-       },
-       {
-        "__type__": "UIControlTemplate",
-        "__typeHash__": 641859515,
-        "szName": "Sale_Container",
-        "ptInlineStyle": [
-         {
-          "__type__": "UIWindowStyle",
-          "__typeHash__": 506492871,
-          "dwType": 506492871,
-          "hParentStyle": {
-           "__type__": "UIControlHandle",
-           "__typeHash__": 3063971755,
-           "snoUI": null,
-           "szControlName": 0
-          },
-          "unk_441f783": "0",
-          "hOptionalUIControlStyleFields": {
-           "bActive": 0
-          },
-          "tConsoleInput": {
-           "__type__": "UIControlConsoleInput",
-           "__typeHash__": 3089331074,
-           "hOptionalUIControlConsoleInputFields": {}
-          },
-          "hOptionalUIWindowStyleFields": {
-           "nHeight": 70,
-           "eVerticalAnchoring": 2,
-           "unk_52796f5": 0,
-           "nBottom": 64,
-           "nMaxWidth": 450,
-           "nRight": 200,
-           "nWidth": 450,
-           "nLeft": 380,
-           "eHorizontalAnchoring": 1,
-           "bEncloseChildren": 1,
-           "nMaxHeight": 175,
-           "nMinHeight": -1
-          }
-         }
-        ],
-        "arChildren": [
-         {
-          "__type__": "UIControlTemplate",
-          "__typeHash__": 641859515,
-          "szName": "Sale_Text",
-          "ptInlineStyle": [
-           {
-            "__type__": "UITextStyle",
-            "__typeHash__": 127673428,
-            "dwType": 127673428,
-            "hParentStyle": {
-             "__type__": "UIControlHandle",
-             "__typeHash__": 3063971755,
-             "snoUI": null,
-             "szControlName": 0
-            },
-            "unk_441f783": "0",
-            "hOptionalUIControlStyleFields": {},
-            "tConsoleInput": {
-             "__type__": "UIControlConsoleInput",
-             "__typeHash__": 3089331074,
-             "hOptionalUIControlConsoleInputFields": {}
-            },
-            "hOptionalUIWindowStyleFields": {
-             "rgbaForeground": {
-              "r": 255,
-              "g": 255,
-              "b": 255,
-              "a": 255
-             },
-             "eVerticalAnchoring": 3,
-             "nMaxWidth": 450,
-             "snoTiledStyle": {
-              "__raw__": 2073110,
-              "__group__": 103,
-              "__type__": "DT_SNO",
-              "__typeHash__": 2764331143,
-              "__targetFileName__": "base/meta/TiledStyle/center_gradient_borderless.tsl",
-              "groupName": "TiledStyle",
-              "name": "center_gradient_borderless"
-             },
-             "eHorizontalAnchoring": 1,
-             "nMinHeight": 70
-            },
-            "tFont": {
-             "__type__": "UIControlFont",
-             "__typeHash__": 1698657718,
-             "hOptionalUIControlFontFields": {
-              "dwFontSize": 42
-             }
-            },
-            "hOptionalUITextStyleFields": {
-             "bWordWrap": 1,
-             "bShowPreviewText": 0,
-             "hText": {
-              "__type__": "StringLabelHandleEx",
-              "__typeHash__": 721585600,
-              "snoStringList": {
-               "__raw__": 1404641,
-               "__group__": 42,
-               "__type__": "DT_SNO",
-               "__typeHash__": 2764331143,
-               "__targetFileName__": "enUS_Text/meta/StringList/OpenBeta_PreorderModalUI.stl",
-               "groupName": "StringList",
-               "name": "OpenBeta_PreorderModalUI"
-              },
-              "szLabel": 2515931273
-             },
-             "szPreviewText": "LONG STRING HERE WOW SALE! ",
-             "eTextJustifyVertical": 6,
-             "eResizeToFit": 1,
-             "eTextJustify": 2
             }
            }
           ],
@@ -1692,7 +1608,7 @@
                  "dwType": 2502206177,
                  "behaviorMessageName": 0,
                  "behaviorContainerSno": null,
-                 "enumVal": 1222
+                 "enumVal": 1287
                 }
                }
               },
@@ -1768,7 +1684,7 @@
                 "dwType": 2502206177,
                 "behaviorMessageName": 0,
                 "behaviorContainerSno": null,
-                "enumVal": 1210
+                "enumVal": 1275
                }
               }
              }
@@ -1801,7 +1717,7 @@
                 "dwType": 2502206177,
                 "behaviorMessageName": 0,
                 "behaviorContainerSno": null,
-                "enumVal": 1209
+                "enumVal": 1274
                }
               }
              }
@@ -1836,14 +1752,14 @@
         "unk_441f783": "0",
         "hOptionalUIControlStyleFields": {},
         "hOptionalUIHotkeyStyleFields": {
-         "eHotkey": 129,
+         "eHotkey": 136,
          "unk_f68242e": {
           "__type__": "UIDefaultAction",
           "__typeHash__": 2502206177,
           "dwType": 2502206177,
           "behaviorMessageName": 0,
           "behaviorContainerSno": null,
-          "enumVal": 1107
+          "enumVal": 1169
          }
         }
        }

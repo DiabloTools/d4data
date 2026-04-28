@@ -15,7 +15,7 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "desc",
-   "szText": "{c_label}Cooldown:{/c_label} {c_resource}{Cooldown Time}{/c_resource} seconds\r\n{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat_Effect_Chance_Script_Formula_Override:18}|%|]{/c}\r\n{/if}Shapeshift into a Werewolf and perform an infectious bite against enemies in front of you, dealing {c_number}{PAYLOAD:INITIAL_DAMAGE}{/c} damage and applying an additional {c_number}{dot:BUFF_OHNORABIES}{/c} Poisoning damage over {c_number}{buffduration:BUFF_OHNORABIES}{/c} seconds. \r\n\r\nInfected enemies spread {c_important}Rabies{/c} to other surrounding targets.",
+   "szText": "{if:SF_37}{c_label}Spirit Cost:{/c_label} {c_resource}{Resource Cost}{/c_resource}{else}{c_label}Cooldown:{/c_label} {c_resource}{Cooldown Time}{/c_resource} seconds{/if}\r\n{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat_Effect_Chance_Script_Formula_Override:18}|%|]{/c}\r\n{/if}Perform an infectious bite against enemies in front of you, dealing {c_number}{PAYLOAD:INITIAL_DAMAGE}{/c} damage and applying an additional {c_number}{dot:BUFF_OHNORABIES}{/c} Poisoning damage over {c_number}[{buffduration:BUFF_OHNORABIES}|1|]{/c} seconds. \r\n\r\nInfected enemies spread {c_important}Rabies{/c} to other surrounding targets.",
    "hLabel": 3707583
   },
   {
@@ -42,30 +42,128 @@
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
+   "szLabel": "Mod8_Description",
+   "szText": "{c_important}Rabies{/c} becomes a {c_important}Core{/c} Skill, costs costs {c_resource}{if:Mod.Upgrade4}[SF_36-SF_14]{else}[SF_36]{/if}{/c} Spirit, and has no Cooldown.\r\n\r\n{c_important}Rabies{/c} spread can reinfect enemies who already have the disease up to {c_number}[SF_27]{/c} times per cast.",
+   "hLabel": 1360065851
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod8_Name",
+   "szText": "Relapse",
+   "hLabel": 2765954616
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod16_Description",
+   "szText": "{c_important}Rabies{/c} becomes a {c_important}Core{/c} Skill, costs {c_resource}{if:Mod.Upgrade4}[SF_29-SF_14]{else}[SF_29]{/if}{/c} Spirit, and has no Cooldown.\r\n\r\n{c_important}Rabies{/c} deals {c_number}[SF_28*100|x%|]{/c} increased damage but only spreads to one target a time. ",
+   "hLabel": 2141533706
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod16_Name",
+   "szText": "Superinfection",
+   "hLabel": 3304929767
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod14_Description",
+   "szText": "{c_important}Rabies{/c} deals its full damage after {c_number}[SF_38 * (Mod.Upgrade2 ? SF_3 : 1)]{/c} seconds as Direct Damage to the target. This Direct Damage gains {c_number}[SF_39*100|+%|]{/c} ({c_number}[SF_40*100|+%|]{/c} while {c_important}{u}Berserking{/u}{/c}) bonus Critical Strike Damage. ",
+   "hLabel": 3773244168
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod14_Name",
+   "szText": "Malaise",
+   "hLabel": 3226658981
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
    "szLabel": "Mod0_Description",
-   "szText": "{c_important}Rabies{/c} spread distance is increased by {c_number}[{SF_4}*100|%|]{/c}.",
+   "szText": "{c_important}Rabies{/c} spread distance is increased by {c_number}[SF_4*100|%|]{/c}.",
    "hLabel": 3591940403
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod0_Name",
-   "szText": "Natural Rabies",
+   "szText": "Spread Distance",
    "hLabel": 2452871472
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod1_Description",
-   "szText": "{c_important}Rabies{/c} deals its total Poisoning damage in {c_number}[SF_3]{/c} seconds instead of {c_number}[SF_10]{/c}.",
+   "szText": "{c_important}Rabies{/c} deals its total Poisoning damage {c_number}[SF_3*100|%|]{/c} faster.",
    "hLabel": 628601524
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod1_Name",
-   "szText": "Savage Rabies",
+   "szText": "Poisoning Speed",
    "hLabel": 2492006865
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod11_Description",
+   "szText": "Enemies that die while affected by {c_important}Rabies{/c} will heal you for {c_number}[SF_15*100|%|]{/c} Maximum Life.",
+   "hLabel": 4073326213
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod11_Name",
+   "szText": "Healing",
+   "hLabel": 3109252802
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod12_Description",
+   "szText": "{c_important}Rabies'{/c} {if:Mod.UpgradeB}Spirit Cost{else}Cooldown{/if} is reduced by {c_number}{if:Mod.UpgradeB}[SF_14]{else}[SF_13]{/c} seconds{/if}.",
+   "hLabel": 1109987334
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod12_Name",
+   "szText": "Cost Reduction",
+   "hLabel": 3148388195
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod17_Description",
+   "szText": "{c_important}Rabies'{/c} damage is increased by {c_number}[SF_12 * 100|%x|]{/c}.",
+   "hLabel": 3473162123
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod17_Name",
+   "szText": "Werewolf",
+   "hLabel": 3344065160
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod19_Description",
+   "szText": "{c_important}Rabies{/c} becomes a {c_important}Werebear{/c} Skill.",
+   "hLabel": 1841451661
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod19_Name",
+   "szText": "Werebear",
+   "hLabel": 3422335946
   }
  ],
  "ptMapStringTable": "0"

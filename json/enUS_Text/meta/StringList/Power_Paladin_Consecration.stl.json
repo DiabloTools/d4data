@@ -15,7 +15,7 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "desc",
-   "szText": "{c_label}Cooldown:{/c_label} {c_resource}{Cooldown Time}{/c_resource} seconds\r\n{/if}{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat Effect Chance}|%|]{/c}\r\n{/if}Bathe in the Light for {c_number}[{buffduration:TOOLTIP_DURATION}]{/c} seconds, Healing you and your allies for {c_number}[SF_8*100|1%|]{/c} Maximum Life {c_number}([Max(1,PlayerHealthMax() * {SF_8})]){/c} per second and damaging enemies for {c_number}{payload:TOOLTIP_BASE_DMG}{/c} damage per second.",
+   "szText": "{c_label}Cooldown:{/c_label} {c_resource}{Cooldown Time}{/c_resource} seconds\r\n{/if}{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat Effect Chance}|%|]{/c}\r\n{/if}Bathe in the Light for {c_number}{buffduration:TOOLTIP_DURATION}{/c} seconds, Healing you and your allies for {c_number}[SF_8*100|1%|]{/c} Maximum Life {c_number}([Max(1,PlayerHealthMax() * {SF_8})]){/c} per second and damaging enemies for {c_number}{payload:TOOLTIP_BASE_DMG}{/c} damage per second.",
    "hLabel": 3707583
   },
   {
@@ -28,22 +28,8 @@
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
-   "szLabel": "Mod1_Description",
-   "szText": "While inside {c_important}Consecration{/c}, you and your allies deal {c_number}[{SF_23} * 100|%x|]{/c} additional damage and consume {c_number}[{SF_24} * 100|%x|]{/c} less resource.",
-   "hLabel": 628601524
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
-   "szLabel": "Mod1_Name",
-   "szText": "Enhanced Consecration",
-   "hLabel": 2492006865
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
    "szLabel": "Mod2_Description",
-   "szText": "{c_important}Consecration's{/c} size is increased and lasts an additional {c_number}{SF_10}{/c} seconds. \r\n\r\nEnemies within {c_important}Consecration{/c} are now {c_important}{u}Weakened{/u}{/c}.",
+   "szText": "{c_important}Consecration's{/c} size is increased by {c_number}[(SF_9 / SF_10 - 1) * 100 |%|]{/c}\r\n\r\nWhile inside {c_important}Consecration{/c}, you and your allies deal {c_number}[{SF_23} * 100|%x|]{/c} additional damage and consume {c_number}[{SF_24} * 100|%x|]{/c} less resource.",
    "hLabel": 1960229941
   },
   {
@@ -80,6 +66,62 @@
    "szLabel": "Mod4_Name",
    "szText": "Sanctify",
    "hLabel": 2609413044
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod13_Description",
+   "szText": "{c_important}Consecration{/c} {c_important}{u}Weakens{/u}{/c} enemies within.",
+   "hLabel": 2441615751
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod13_Name",
+   "szText": "Weaken",
+   "hLabel": 3187523588
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod14_Description",
+   "szText": "Increase the duration of {c_important}Consecration{/c} by {c_number}[{SF_29} * 100|x%|]{/c}.",
+   "hLabel": 3773244168
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod14_Name",
+   "szText": "Duration",
+   "hLabel": 3226658981
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod15_Description",
+   "szText": "{c_important}Consecration's{/c} initial Cast {c_important}{u}Fortifies{/u}{/c} you for {c_number}[SF_30*100|1%|]{/c} of Maximum Life {c_number}([Max(1,{fortified:FORTIFY})|0|]){/c} per enemy hit.",
+   "hLabel": 809905289
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod15_Name",
+   "szText": "Fortify",
+   "hLabel": 3265794374
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod16_Description",
+   "szText": "{c_important}Consecration{/c} increases Primary Resource Generation for you and your allies by {c_number}[{SF_31}*100|+%|]{/c}.",
+   "hLabel": 2141533706
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod16_Name",
+   "szText": "Resource Generation",
+   "hLabel": 3304929767
   }
  ],
  "ptMapStringTable": "0"

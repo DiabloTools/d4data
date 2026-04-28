@@ -15,57 +15,113 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "desc",
-   "szText": "{if:SF_16}{c_label}Mana Cost: {/c}{c_resource}{Resource Cost}{/c}\r\n{/if}{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat Effect Chance}|%|]{/c}\r\n{/if}Throw a bolt of frost at an enemy, dealing {c_number}{payload:IMPACT}{/c} damage and {c_important}{u}Chilling{/u}{/c} them for {c_number}[{SF_4}|%|]{/c}.",
+   "szText": "{if:SF_16}{c_label}Mana Cost: {/c}{c_resource}{Resource Cost}{/c}\r\n{/if}{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat Effect Chance}|%|]{/c}\r\n{/if}Throw a bolt of frost at an enemy, dealing {c_number}{payload:DEFAULT_PAYLOAD}{/c} damage and {c_important}{u}Chilling{/u}{/c} for {c_number}[{SF_4}|%|]{/c}.",
    "hLabel": 3707583
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "rankup_desc",
-   "szText": "\r\n{icon:bullet,1.2} Damage {icon:arrow,1.2} {c_number}{payload:IMPACT}{/c}",
+   "szText": "{icon:bullet,1.2} Damage {icon:arrow,1.2} {c_number}{payload:DEFAULT_PAYLOAD}{/c}",
    "hLabel": 4074074671
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
-   "szLabel": "Mod0_Description",
-   "szText": "{c_important}Frost Bolt{/c} has a {c_number}[{SF_7} * 100|%|]{/c} chance to explode on {c_important}{u}Chilled{/u}{/c} enemies, hitting surrounding enemies. Chance increased to {c_number}100%{/c} against {c_important}{u}Frozen{/u}{/c} enemies.",
-   "hLabel": 3591940403
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
-   "szLabel": "Mod0_Name",
-   "szText": "Enhanced Frost Bolt",
-   "hLabel": 2452871472
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
    "szLabel": "Mod2_Description",
-   "szText": "{c_important}Frost Bolt{/c} makes {c_important}{u}Frozen{/u}{/c} enemies {c_important}{u}Vulnerable{/u}{/c} for {c_number}{SF_9}{/c} seconds.",
+   "szText": "{c_important}Frost Bolt{/c} launches an additional projectile after the first. Each projectile deals {c_number}{payload:UPGRADEA_FOLLOWING_PAYLOAD}{/c} damage.",
    "hLabel": 1960229941
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod2_Name",
-   "szText": "Flickering Frost Bolt",
+   "szText": "Relentless Bolt",
    "hLabel": 2531142258
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod3_Description",
-   "szText": "{c_important}Frost Bolt{/c} generates {c_number}{SF_10}{/c} Mana when hitting {c_important}{u}Chilled{/u}{/c} or {c_important}{u}Frozen{/u}{/c} enemies.",
+   "szText": "{c_important}Frost Bolt{/c} shatters when it hits a {c_important}{u}Frozen{/u}{/c} enemy, exploding for {c_number}{payload:UPGRADEB_SHATTERED_PAYLOAD}{/c} damage and {c_important}{u}Chilling{/u}{/c} for {c_number}[SF_8]%{/c}.",
    "hLabel": 3291858358
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod3_Name",
-   "szText": "Glinting Frost Bolt",
+   "szText": "Shatter",
    "hLabel": 2570277651
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod5_Description",
+   "szText": "{c_important}Frost Bolt{/c} becomes a {c_important}Shock{/c} Skill that deals Lightning damage.\r\n\r\n{c_important}Frost Bolt{/c} arcs {c_number}{SF_18}{/c} to {c_number}{SF_19}{/c} times to additional enemies, dealing {c_number}{payload:UPGRADEC_CHAIN_PAYLOAD}{/c} damage with each arc and {c_important}{u}Weakening{/c}{/u} them for {c_number}4{/c} seconds.",
+   "hLabel": 1660147896
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod5_Name",
+   "szText": "Static Shock",
+   "hLabel": 2648548437
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod11_Description",
+   "szText": "{c_important}Frost Bolt{/c} grants a {c_important}{u}Barrier{/u}{/c} for {c_number}[SF_25 * 100]%{/c} of your Maximum Life {c_number}([PlayerHealthMax() * SF_25]){/c} up to {c_number}[(SF_25 * SF_24) * 100]%{/c} for {c_number}[SF_26]{/c} seconds when it hits the first enemy.",
+   "hLabel": 4073326213
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod11_Name",
+   "szText": "Barrier",
+   "hLabel": 3109252802
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod12_Description",
+   "szText": "{c_important}Frost Bolt{/c} generates {c_number}[SF_33]{/c} Mana when it hits the first enemy, or {c_number}[SF_35]{/c} Mana if the target is already {c_important}{u}Frozen{/u}{/c}.",
+   "hLabel": 1109987334
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod12_Name",
+   "szText": "Resource Generation",
+   "hLabel": 3148388195
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod13_Description",
+   "szText": "{c_important}Frost Bolt{/c} makes enemies {c_important}{u}Vulnerable{/c}{/u} for {c_number}4{/c} seconds.",
+   "hLabel": 2441615751
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod13_Name",
+   "szText": "Vulnerable",
+   "hLabel": 3187523588
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod14_Description",
+   "szText": "{c_important}Frost Bolt{/c} pierces {c_number}[SF_27]{/c} time.",
+   "hLabel": 3773244168
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod14_Name",
+   "szText": "Pierce",
+   "hLabel": 3226658981
   }
  ],
  "ptMapStringTable": "0"

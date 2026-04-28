@@ -15,28 +15,70 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "desc",
-   "szText": "{c_label}Cooldown:{/c_label} {c_resource}{Cooldown Time}{/c_resource} seconds\r\nSurround yourself with up to {c_number}{SF_0}{/c} protective shadows. Gain {c_number}[{SF_1} * 100|1%|]{/c} Damage Reduction per active shadow. Each time you take direct damage, that damage is reduced and a shadow is consumed.",
+   "szText": "{c_label}Cooldown:{/c_label} {c_resource}{Cooldown Time}{/c_resource} seconds\r\nSurround yourself with up to {c_number}{SF_0}{/c} protective shadows. Gain {c_number}[{SF_1} * 100|1+%|]{/c} Resistance to All Elements per active shadow. If you have the maximum amount of shadows, direct damage is reduced by {c_number}[{SF_22} * 100|1%|]{/c}. Each time you take direct damage, a shadow is consumed.",
    "hLabel": 3707583
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "rankup_desc",
-   "szText": "\r\n{icon:bullet,1.2} Damage Reduction {icon:arrow,1.2} {c_number}[{SF_1} * 100|1%|]{/c}.",
+   "szText": "\r\n{icon:bullet,1.2} Resistance to All Elements {icon:arrow,1.2} {c_number}[{SF_1} * 100|+1%|]{/c}{if:Mod.UpgradeA}\r\n{icon:bullet, 1.2} Dodge Chance {icon:arrow, 1.2} {c_number}[{SF_11}*100|1%|]{/c}{/if}{if:Mod.UpgradeB}\r\n{icon:bullet, 1.2} Energy Regeneration {icon:arrow, 1.2} {c_number}[SF_20*100|x%|]{/c}{/if}{if:Mod.UpgradeC}\r\n{icon:bullet, 1.2} Nova Damage {icon:arrow, 1.2} {c_number}{payload:COLD_EXPLOSION_TOOLTIP}{/c}{/if}",
    "hLabel": 4074074671
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
+   "szLabel": "Mod4_Description",
+   "szText": "Casting {c_important}Dark Shroud{/c} increases your Dodge Chance by {c_number}[{SF_9}*100|%|]{/c} for {c_number}{SF_10}{/c} seconds. While you have at least {c_number}{SF_18}{/c} active shadow from {c_important}Dark Shroud{/c}, gain {c_number}[{SF_11}*100|1%|]{/c} Dodge Chance.",
+   "hLabel": 328519479
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod4_Name",
+   "szText": "Shadow Dancer",
+   "hLabel": 2609413044
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod6_Description",
+   "szText": "{c_important}Dark Shroud{/c} no longer grants Resistance to All Elements, but instead grants you {c_number}[SF_20*100|x%|]{/c} increased Energy Regeneration per shadow.",
+   "hLabel": 2991776313
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod6_Name",
+   "szText": "Overflow",
+   "hLabel": 2687683830
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod8_Description",
+   "szText": "When a {c_important}Dark Shroud{/c} shadow is consumed, it explodes in a frigid nova that deals {c_number}{payload:COLD_EXPLOSION_TOOLTIP}{/c} Cold damage to surrounding enemies and {c_important}{u}Chills{/u}{/c} them for {c_number}[{SF_17}|%|]{/c}.",
+   "hLabel": 1360065851
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod8_Name",
+   "szText": "Best Served Cold",
+   "hLabel": 2765954616
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
    "szLabel": "Mod0_Description",
-   "szText": "Each active {c_important}Dark Shroud{/c} shadow grants you {c_number}[{SF_5} * 100|%+|]{/c} Movement Speed and also has a {c_number}[{SF_3} * 100|%|]{/c} chance to not be consumed. ",
+   "szText": "Each active {c_important}Dark Shroud{/c} shadow grants you {c_number}[{SF_5} * 100|%x|]{/c} Movement Speed. ",
    "hLabel": 3591940403
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod0_Name",
-   "szText": "Enhanced Dark Shroud",
+   "szText": "Movement Speed",
    "hLabel": 2452871472
   },
   {
@@ -50,21 +92,35 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod1_Name",
-   "szText": "Countering Dark Shroud",
+   "szText": "Critical Strike",
    "hLabel": 2492006865
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
+   "szLabel": "Mod10_Description",
+   "szText": "{c_important}Dark Shroud{/c} shadows have a {c_number}[{SF_3} * 100|%|]{/c} chance to not be consumed. ",
+   "hLabel": 2741697796
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod10_Name",
+   "szText": "Consume Chance",
+   "hLabel": 3070117409
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
    "szLabel": "Mod2_Description",
-   "szText": "You Heal for {c_number}[{SF_14} * 100|%|]{/c} of your Maximum Life when a {c_important}Dark Shroud{/c} shadow is removed. ",
+   "szText": "You Heal for {c_number}[{SF_14} * 100|%|]{/c} of your Maximum Life when a {c_important}Dark Shroud{/c} shadow is consumed. ",
    "hLabel": 1960229941
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod2_Name",
-   "szText": "Subverting Dark Shroud",
+   "szText": "Healing",
    "hLabel": 2531142258
   }
  ],

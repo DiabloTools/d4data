@@ -15,21 +15,21 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "desc",
-   "szText": "{c_label}Mana Cost:{/c} {c_resource}{Resource Cost}{/c}\r\n{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat Effect Chance}|%|]{/c}\r\n{/if}Unleash an orb that {c_important}{u}Chills{/u}{/c} for {c_number}[{SF_2}|%|]{/c} and expels piercing shards, dealing a total of {c_number}{payload:TOOLTIP_DAMAGE}{/c} damage. Upon expiration, {c_important}Frozen Orb{/c} explodes, dealing {c_number}{payload:FROSTBOLT_DAMAGE}{/c} damage and {c_important}{u}Chilling{/u}{/c} enemies for {c_number}[{SF_9}|%|]{/c}.",
+   "szText": "{c_label}Mana Cost:{/c} {c_resource}{Resource Cost}{/c}\r\n{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat Effect Chance}|%|]{/c}\r\n{/if}Unleash an whirling orb that deals {c_number}{dot:FROSTBITE}{/c} Frostbite damage over {c_number}[SF_14]{/c} seconds and {c_important}{u}Chills{/u}{/c} for {c_number}[SF_2|%|]{/c}. After {if:Mod.Upgrade3}{c_number}[SF_5|1|]{/c} seconds{else}{c_number}[SF_5]{/c} second{/if} {c_important}Frozen Orb{/c} will explode, dealing {c_number}{payload:IMPACT_DAMAGE}{/c} damage.",
    "hLabel": 3707583
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "rankup_desc",
-   "szText": "\r\n{icon:bullet,1.2} Shards Damage {icon:arrow,1.2} {c_number}{payload:TOOLTIP_DAMAGE}{/c}\r\n{icon:bullet,1.2} Explosion Damage {icon:arrow,1.2} {c_number}{payload:FROSTBOLT_DAMAGE}{/c}",
+   "szText": "\r\n{icon:bullet,1.2} Frostbite Damage {icon:arrow,1.2} {c_number}{dot:FROSTBITE}{/c}\r\n{icon:bullet,1.2} Explosion Damage {icon:arrow,1.2} {c_number}{payload:IMPACT_DAMAGE}{/c}",
    "hLabel": 4074074671
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod5_Description",
-   "szText": "{c_important}Frozen Orb's{/c} explosion deals {c_number}[{SF_27}  * 100|%x|]{/c} more damage.",
+   "szText": "While {c_important}{u}Healthy{/u}{/c}, the explosion of {c_important}Frozen Orb{/c} deals {c_number}[{SF_27}  * 100|%x|]{/c} increased damage.",
    "hLabel": 1660147896
   },
   {
@@ -43,29 +43,99 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod6_Description",
-   "szText": "{c_important}Frozen Orb's{/c} explosion restores {c_number}{SF_23}{/c} Mana when hitting a {c_important}{u}Frozen{/u}{/c} enemy.",
+   "szText": "When {c_important}Frozen Orb{/c} first explodes it remains stationary for {c_number}[SF_46|1|]{/c} seconds then seeks another target to explode again, dealing {c_number}{payload:UPGRADEA_2ND_IMPACT_DAMAGE}{/c} damage.",
    "hLabel": 2991776313
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod6_Name",
-   "szText": "Destructive Frozen Orb",
+   "szText": "Seeking Orb",
    "hLabel": 2687683830
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod7_Description",
-   "szText": "{c_important}Frozen Orb's{/c} explosion applies {c_important}{u}Vulnerable{/u}{/c} for {c_number}{SF_32}{/c} seconds.",
+   "szText": "{c_important}{u}Ice Spikes{/u}{/c} spawn around {c_important}Frozen Orb{/c}, dealing {c_number}{payload:UPGRADEB_TOOLTIP}{/c} damage.\r\n\r\n{c_important}Frozen Orb{/c} makes enemies {c_important}{u}Vulnerable{/u}{/c} for {c_number}{SF_51}{/c} seconds.",
    "hLabel": 28437434
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod7_Name",
-   "szText": "Greater Frozen Orb",
+   "szText": "Shattered Path",
    "hLabel": 2726819223
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod9_Description",
+   "szText": "{c_important}Frozen Orb{/c} becomes a {c_important}Pyromancy{/c} Skill that deals {c_number}{dot:BURNING}{/c} Burning damage over {c_number}[SF_42]{/c} seconds and explodes for {c_number}{payload:UPGRADEC_IMPACT_DAMAGE}{/c} Fire damage\r\n\r\n{c_important}Frozen Orb{/c} will consume {c_number}1{/c} stack of {c_important}{u}Overpower{/u}{/c} to explode {c_number}[SF_59]{/c} times along its path.",
+   "hLabel": 2691694268
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod9_Name",
+   "szText": "Great Orb of Fire",
+   "hLabel": 2805090009
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod10_Description",
+   "szText": "{c_important}Frozen Orb{/c} deals {c_number}[SF_56 * 100|%x|]{/c} increased {if:SF_60}Burning{else}Frostbite{/if} damage.",
+   "hLabel": 2741697796
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod10_Name",
+   "szText": "Damage Over Time Bonus",
+   "hLabel": 3070117409
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod11_Description",
+   "szText": "{c_important}Frozen Orb{/c} grants a {c_important}{u}Barrier{/u}{/c} for {c_number}[{SF_20}*100|%|]{/c} of your Maximum Life {c_number}([PlayerHealthMax() * SF_20]){/c} for {c_number}{buffduration:BARRIER}{/c} seconds for each enemy hit by its explosion, up to {c_number}[{SF_23} * 100|%|]{/c}.",
+   "hLabel": 4073326213
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod11_Name",
+   "szText": "Barrier",
+   "hLabel": 3109252802
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod12_Description",
+   "szText": "{c_important}Frozen Orb{/c} deals {c_number}[SF_58 * 100|%x|]{/c} increased explosion damage.",
+   "hLabel": 1109987334
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod12_Name",
+   "szText": "Explosion Damage Bonus",
+   "hLabel": 3148388195
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod13_Description",
+   "szText": "{c_important}Frozen Orb{/c} lasts {c_number}[SF_61]{/c} additional second before exploding.",
+   "hLabel": 2441615751
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod13_Name",
+   "szText": "Duration Bonus",
+   "hLabel": 3187523588
   }
  ],
  "ptMapStringTable": "0"

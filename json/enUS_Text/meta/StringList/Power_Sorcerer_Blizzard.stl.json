@@ -15,57 +15,113 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "desc",
-   "szText": "{c_label}Mana Cost:{/c} {c_resource}{Resource Cost}{/c}\r\n{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat_Effect_Chance_Script_Formula_Override:22}|%|]{/c}\r\n{/if}Call forth a frigid blizzard that deals {c_number}{dot:TOOLTIP_BLIZZARD_DOT}{/c} Frostbite damage and continually {c_important}{u}Chills{/u}{/c} enemies for {c_number}[{SF_9}|%|]{/c} over {c_number}{SF_19}{/c} seconds.",
+   "szText": "{c_label}Mana Cost:{/c} {c_resource}{Resource Cost}{/c}\r\n{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat_Effect_Chance_Script_Formula_Override:22}|%|]{/c}\r\n{/if}Call forth a frigid blizzard that deals {c_number}{dot:TOOLTIP_BLIZZARD_DOT}{/c} Frostbite damage and continually {c_important}{u}Chills{/u}{/c} enemies for {c_number}[{SF_9} * SF_10|%|]{/c} over {c_number}{SF_10}{/c} seconds.",
    "hLabel": 3707583
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "rankup_desc",
-   "szText": "\r\n{icon:bullet,1.2} Damage {icon:arrow,1.2} {c_number}{dot:TOOLTIP_BLIZZARD_DOT}{/c}",
+   "szText": "\r\n{icon:bullet,1.2} Frostbite Damage {icon:arrow,1.2} {c_number}{dot:TOOLTIP_BLIZZARD_DOT}{/c}",
    "hLabel": 4074074671
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
-   "szLabel": "Mod1_Description",
-   "szText": "{c_important}Blizzard{/c} deals {c_number}[{SF_12} * 100|%x|]{/c} increased damage to {c_important}{u}Frozen{/u}{/c} enemies.",
-   "hLabel": 628601524
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
-   "szLabel": "Mod1_Name",
-   "szText": "Enhanced Blizzard",
-   "hLabel": 2492006865
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
    "szLabel": "Mod4_Description",
-   "szText": "{c_important}Blizzard's{/c} duration is increased by {c_number}{SF_14}{/c} seconds.",
+   "szText": "{c_important}Blizzard's{/c} duration is increased to {c_number}[SF_12]{/c} seconds and it makes enemies {c_important}{u}Vulnerable{/u}{/c}. ",
    "hLabel": 328519479
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod4_Name",
-   "szText": "Mage's Blizzard",
+   "szText": "Exposure",
    "hLabel": 2609413044
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod2_Description",
-   "szText": "While you have an active {c_important}Blizzard{/c}, you gain {c_number}1{/c} Mana Regeneration for every {c_number}20{/c} Maximum Mana.\r\n\r\nCurrent Bonus: {c_number}{SF_16}{/c}",
+   "szText": "{c_important}Blizzard{/c} forms {u}{c_important}Ice Spikes{/c}{/u} that explode twice if they hit a {u}{c_important}Vulnerable{/c}{/u} enemy, dealing {c_number}{payload:UPGRADEB_ICE_SPIKE_TOOLTIP}{/c} damage.",
    "hLabel": 1960229941
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod2_Name",
-   "szText": "Wizard's Blizzard",
+   "szText": "Hailstorm",
    "hLabel": 2531142258
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod7_Description",
+   "szText": "{c_important}Blizzard{/c} becomes a {c_important}Shock{/c} Skill, deals {c_number}{dot:UPGRADEC_TOOLTIP_DOT}{/c} Sparking damage over {c_number}[SF_34|1|]{/c} seconds, and costs {c_number}{SF_35}{/c} Mana.\r\n\r\n{c_important}Blizzard{/c} periodically {c_important}Stuns{/c} enemies for {c_number}[{buffduration:UPGRADEC_STUN}|2|]{/c} seconds.",
+   "hLabel": 28437434
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod7_Name",
+   "szText": "Static Field",
+   "hLabel": 2726819223
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod8_Description",
+   "szText": "{c_important}Blizzard{/c} grants you a {u}{c_important}Barrier{/c}{/u} that absorbs {c_number}[SF_40 * 100 |1%|]{/c} of your Maximum Life for {c_number}{SF_42}{/c} seconds every second for each affected enemy.",
+   "hLabel": 1360065851
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod8_Name",
+   "szText": "Barrier",
+   "hLabel": 2765954616
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod9_Description",
+   "szText": "{c_important}Blizzard{/c} deals {c_number}[SF_43 * 100|x%|]{/c} increased damage to Crowd Controlled enemies.",
+   "hLabel": 2691694268
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod9_Name",
+   "szText": "Damage Bonus",
+   "hLabel": 2805090009
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod10_Description",
+   "szText": "{c_important}Blizzard{/c} now seeks enemies and its duration is increased by {c_number}[SF_44 * 100|%|]{/c}.",
+   "hLabel": 2741697796
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod10_Name",
+   "szText": "Seek and Duration Bonus",
+   "hLabel": 3070117409
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod11_Description",
+   "szText": "{c_important}Blizzard{/c} deals {c_number}[SF_45 * 100|x%|]{/c} increased damage and grants {c_number}{SF_46}{/c} Mana Regeneration for each active {c_important}Blizzard{/c}, up to {c_number}[{SF_47}*{SF_46}]{/c} Mana.",
+   "hLabel": 4073326213
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod11_Name",
+   "szText": "Resource Generation",
+   "hLabel": 3109252802
   }
  ],
  "ptMapStringTable": "0"

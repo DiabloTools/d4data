@@ -15,7 +15,7 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "desc",
-   "szText": "{if:SF_22}{c_label}Fury Cost:{/c_label} {c_resource}{Resource Cost}{/c_resource}\r\n{/if}{if:SF_25}{if:SF_8}{c_label}Charges:{/c} {c_resource}{SF_10}{/c}\r\n{c_label}Charge Cooldown:{/c_label} {c_resource}{Recharge Time}{/c} seconds\r\n{/if}{if:SF_9}{c_label}Cooldown:{/c_label} {c_resource}{Cooldown Time}{/c_resource} seconds\r\n{/if}{/if}{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat Effect Chance}|%|]{/c}\r\n{/if}Attempt a killing strike, dealing {c_number}{payload:EXECUTE_IMPACT}{/c} damage to enemies in front of you.{if:SF_25}\r\n\r\n{if:SF_9}If this kills an enemy, its Cooldown is reset.{/if}{if:SF_8}If this kills an enemy, a Charge is refunded.{/if}{/if}",
+   "szText": "{if:SF_22}{c_label}Fury Cost:{/c_label} {c_resource}{Resource Cost}{/c_resource}\r\n{/if}{if:SF_25}{if:SF_8}{c_label}Charges:{/c} {c_resource}{SF_10}{/c}\r\n{c_label}Charge Cooldown:{/c_label} {c_resource}{Recharge Time}{/c} seconds\r\n{/if}{if:SF_9}{c_label}Cooldown:{/c_label} {c_resource}{Cooldown Time}{/c_resource} seconds\r\n{/if}{/if}{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat Effect Chance}|%|]{/c}\r\n{/if}{if:SF_46}Attempt a killing strike, dealing {c_number}{payload:EXECUTE_IMPACT}{/c} in fire damage to enemies in front of you and Burning them for {c_number}{dot:BUFF_UPGRADEC_FIRE_DOT}{/c} damage over {c_number}{buffduration:BUFF_UPGRADEC_FIRE_DOT}{/c} seconds.{else}Attempt a killing strike, dealing {c_number}{payload:EXECUTE_IMPACT}{/c} damage to enemies in front of you.{/if}\r\n{if:SF_46}{if:SF_9}If this kills an enemy, its Cooldown is reset and the enemy explodes for {c_number}{payload:IMPACT_VARIANTC}{/c} damage to surrounding enemies.{/if}{if:SF_8}If this kills an enemy, a Charge is refunded and the enemy explodes for {c_number}{payload:IMPACT_VARIANTC}{/c} damage to surrounding enemies.{/if}{/if}{if:SF_47}{if:SF_9}If this kills an enemy, its Cooldown is reset.{/if}{if:SF_8}If this kills an enemy, a Charge is refunded.{/if}{/if}",
    "hLabel": 3707583
   },
   {
@@ -29,50 +29,106 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "rankup_desc",
-   "szText": "\r\n{icon:bullet, 1.2} Damage {icon:arrow, 1.2} {c_number}{payload:EXECUTE_IMPACT}{/c}",
+   "szText": "\r\n{icon:bullet, 1.2} Damage {icon:arrow, 1.2} {c_number}{if:Mod.UpgradeB}{payload:LEGENDARY_SHOCKWAVE}{else}{payload:EXECUTE_IMPACT}{/if}{/c}{if:Mod.UpgradeC}\r\n{icon:bullet, 1.2} Burning Damage {icon:arrow, 1.2} {c_number}{payload:UPGRADEC_BURNING_DAMAGE_TOOLTIP}{/c}\r\n{icon:bullet, 1.2} Explosion Damage {icon:arrow, 1.2} {c_number}{payload:IMPACT_VARIANTC}{/c}{/if}",
    "hLabel": 4074074671
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
-   "szLabel": "Mod3_Description",
-   "szText": "{c_important}Death Blow{/c} deals {c_number}[{SF_12} * 100|%x|]{/c} increased damage to Bosses.",
-   "hLabel": 3291858358
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
-   "szLabel": "Mod3_Name",
-   "szText": "Enhanced Death Blow",
-   "hLabel": 2570277651
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
    "szLabel": "Mod4_Description",
-   "szText": "If {c_important}Death Blow{/c} damages at least one enemy, gain {c_number}{SF_15}{/c} Fury.",
+   "szText": "{c_important}Death Blow's{/c} cooldown is reduced to {c_number}{SF_29}{/c} seconds. \r\n\r\nHitting enemies with {c_important}Death Blow{/c} increases the damage of subsequent casts by {c_number}[{SF_30}*100|x%|]{/c} per hit enemy, up to {c_number}[{SF_30}*{SF_31}*100|x%|]{/c}. Kills reset this bonus.",
    "hLabel": 328519479
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod4_Name",
-   "szText": "Fighter's Death Blow",
+   "szText": "Consecutive",
    "hLabel": 2609413044
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod5_Description",
-   "szText": "If {c_important}Death Blow{/c} damages at least one enemy, gain {c_important}{u}Berserking{/u}{/c} for {c_number}{SF_16}{/c} seconds.",
+   "szText": "{c_important}Death Blow{/c} creates a shockwave that deals {c_number}{payload:LEGENDARY_SHOCKWAVE}{/c} damage.",
    "hLabel": 1660147896
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod5_Name",
-   "szText": "Warrior's Death Blow",
+   "szText": "Sonic Boom",
    "hLabel": 2648548437
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod6_Description",
+   "szText": "{c_important}Death Blow{/c} now deals Fire damage and deals an additional {c_number}{dot:BUFF_UPGRADEC_FIRE_DOT}{/c} Burning damage over {c_number}{buffduration:BUFF_UPGRADEC_FIRE_DOT}{/c} seconds. \r\n\r\nEnemies that die to {c_important}Death Blow{/c} while Burning or to {c_important}Death Blow's{/c} burn trigger a fiery explosion for {c_number}{payload:IMPACT_VARIANTC}{/c} damage to surrounding enemies.",
+   "hLabel": 2991776313
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod6_Name",
+   "szText": "Blast",
+   "hLabel": 2687683830
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod7_Description",
+   "szText": "Enemies you hit with {c_important}Death Blow{/c} can be {c_important}{u}Executed{/u}{/c} by any of your attacks for the next {c_number}[{SF_35}]{/c} seconds, resetting {c_important}Death Blow's{/c} cooldown on a successful {c_important}{u}Execution{/u}{/c}.",
+   "hLabel": 28437434
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod7_Name",
+   "szText": "Execute",
+   "hLabel": 2726819223
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod10_Description",
+   "szText": "{c_important}Death Blow{/c} grants {c_number}[{SF_36}]{/c} stack of {c_important}{u}Overpower{/u}{/c} when it kills an enemy.",
+   "hLabel": 2741697796
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod10_Name",
+   "szText": "Overpower",
+   "hLabel": 3070117409
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod9_Description",
+   "szText": "Killing an enemy with {c_important}Death Blow{/c} restores {c_number}[{SF_37}|%|]{/c} of your Fury.",
+   "hLabel": 2691694268
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod9_Name",
+   "szText": "Fury Generation",
+   "hLabel": 2805090009
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod8_Description",
+   "szText": "{if:SF_25}{c_important}Death Blow{/c} has {c_number}[{SF_38}+1]{/c} charges.{else}Killing an enemy with {c_important}Death Blow{/c} makes the next cast of {c_important}Death Blow{/c} free.{/if}",
+   "hLabel": 1360065851
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod8_Name",
+   "szText": "Charges",
+   "hLabel": 2765954616
   }
  ],
  "ptMapStringTable": "0"

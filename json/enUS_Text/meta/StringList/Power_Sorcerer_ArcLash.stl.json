@@ -15,7 +15,7 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "desc",
-   "szText": "{if:SF_15}{c_label}Mana Cost: {/c}{c_resource}{Resource Cost}{/c}\r\n{/if}{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat Effect Chance}|%|]{/c}\r\n{/if}Unleash arcing lightning that deals {c_number}{payload:DAMAGE}{/c} damage to enemies in front of you. Every {c_number}{SF_10}{/c} times {c_important}Arc Lash{/c} swipes, it Stuns all enemies hit for {c_number}{buffduration:STUN}{/c} seconds.",
+   "szText": "{if:SF_15}{c_label}Mana Cost: {/c}{c_resource}{Resource Cost}{/c}\r\n{/if}{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat Effect Chance}|%|]{/c}\r\n{/if}Unleash arcing lightning, dealing {c_number}{payload:DAMAGE}{/c} damage to enemies in front of you.",
    "hLabel": 3707583
   },
   {
@@ -28,58 +28,100 @@
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
-   "szLabel": "Buff3_Name",
-   "szText": "Movement Speed Increased",
-   "hLabel": 348546902
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
-   "szLabel": "Buff3_Description",
-   "szText": "Movement Speed Increased",
-   "hLabel": 373624985
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
-   "szLabel": "Mod2_Description",
-   "szText": "If {c_important}Arc Lash's{/c} initial swipe Critically Strikes, it swipes an additional time.",
-   "hLabel": 1960229941
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
-   "szLabel": "Mod2_Name",
-   "szText": "Enhanced Arc Lash",
-   "hLabel": 2531142258
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
    "szLabel": "Mod3_Description",
-   "szText": "Arc Lash grants {c_number}[{SF_19}]{/c} Mana if your swipe hits at least one enemy. When you hit {c_number}[{SF_17}]{/c} or more enemies or a Boss, your next swipe also deals  {c_number}[{SF_18}*100|%x|]{/c} more damage.",
+   "szText": "{c_important}Arc Lash{/c} now casts from both sides in a larger arc, hitting enemies caught in the middle twice.",
    "hLabel": 3291858358
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod3_Name",
-   "szText": "Flickering Arc Lash",
+   "szText": "Full Lash",
    "hLabel": 2570277651
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod4_Description",
-   "szText": "Hitting a Stunned enemy with {c_important}Arc Lash{/c} reduces your Cooldowns by {c_number}[{SF_13}|2|]{/c} seconds.",
+   "szText": "{c_important}Arc Lash{/c} launches a swift projectile that unleashes arcing lightning at the first enemy hit, dealing up to {c_number}[{SF_24} * 100}|%x|]{/c} increased damage based on how far the projectile travels.\r\n\r\nHitting an enemy with {c_important}Arc Lash's{/c} projectile increases your Movement Speed by {c_number}[SF_17*100|+%|]{/c} for {c_number}{SF_7}{/c} seconds, stacking up to {c_number}[SF_17*100*SF_14|+%|]{/c}.",
    "hLabel": 328519479
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod4_Name",
-   "szText": "Glinting Arc Lash",
+   "szText": "Inescapable Reach",
    "hLabel": 2609413044
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod6_Description",
+   "szText": "{c_important}Arc Lash{/c} becomes a {c_important}Frost{/c} Skill, deals Cold damage, and {c_important}{u}Chills{/u}{/c} for {c_number}[SF_21|%|]{/c}.\r\n\r\n{c_important}Arc Lash{/c} has a larger range and deals up to {c_number}[{SF_22} * 100}|%x|]{/c} increased damage based on how {c_important}{u}Chilled{/u}{/c} the enemy is, dealing the maximum damage if they are {c_important}{u}Frozen{/u}{/c}.",
+   "hLabel": 2991776313
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod6_Name",
+   "szText": "Icy Thrash",
+   "hLabel": 2687683830
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod7_Description",
+   "szText": "{c_important}Arc Lash{/c} grants {c_number}[SF_8]{/c} stack of {c_important}{u}Ferocity{/c}{/u}.",
+   "hLabel": 28437434
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod7_Name",
+   "szText": "Ferocity",
+   "hLabel": 2726819223
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod8_Description",
+   "szText": "{c_important}Arc Lash{/c} deals {c_number}[SF_9*100|x%|]{/c} increased damage to Crowd Controlled enemies.",
+   "hLabel": 1360065851
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod8_Name",
+   "szText": "Damage Bonus",
+   "hLabel": 2765954616
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod9_Description",
+   "szText": "{c_important}Arc Lash{/c} generates {c_number}[{SF_11}]{/c} Mana when it hits the first enemy.",
+   "hLabel": 2691694268
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod9_Name",
+   "szText": "Resource Generation",
+   "hLabel": 2805090009
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod10_Description",
+   "szText": "Every {c_number}[SF_12]{/c} seconds your next {c_important}Arc Lash{/c} will Stun all enemies hit for {c_number}[SF_13]{/c} seconds.",
+   "hLabel": 2741697796
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod10_Name",
+   "szText": "Stun",
+   "hLabel": 3070117409
   }
  ],
  "ptMapStringTable": "0"

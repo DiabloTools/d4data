@@ -3,18 +3,18 @@
  "__snoID__": 1868680,
  "__type__": "MaterialDefinition",
  "__typeHash__": 3110834328,
- "dwFlags": 2049,
+ "dwFlags": 2065,
  "tUberMaterial": {
   "__type__": "UberMaterial",
   "__typeHash__": 377055229,
   "snoShaderMap": {
-   "__raw__": 383296,
+   "__raw__": 568972,
    "__group__": 36,
    "__type__": "DT_SNO",
    "__typeHash__": 2764331143,
-   "__targetFileName__": "base/meta/ShaderMap/vfx_particle_opaque_uber_unlit_noAA.shm",
+   "__targetFileName__": "base/meta/ShaderMap/vfx_particle_gBuffer_uber_lit.shm",
    "groupName": "ShaderMap",
-   "name": "vfx_particle_opaque_uber_unlit_noAA"
+   "name": "vfx_particle_gBuffer_uber_lit"
   },
   "snoMaterialValueSetOverride": null,
   "mat": {
@@ -60,13 +60,91 @@
      "__type__": "MaterialTexture",
      "__typeHash__": 3890408608,
      "snoTex": {
-      "__raw__": 671363,
+      "__raw__": 487375,
       "__group__": 44,
       "__type__": "DT_SNO",
       "__typeHash__": 2764331143,
-      "__targetFileName__": "base/meta/Texture/Cave_Mine_Rock_Smooth_Decal_A_Alpha.tex",
+      "__targetFileName__": "base/meta/Texture/necro_boneShards_Mask.tex",
       "groupName": "Texture",
-      "name": "Cave_Mine_Rock_Smooth_Decal_A_Alpha"
+      "name": "necro_boneShards_Mask"
+     },
+     "ptTexAnim": [
+      {
+       "__type__": "TexAnimFrameByFrame",
+       "__typeHash__": 1011253607,
+       "dwType": 1011253607,
+       "flUScale": 1,
+       "flVScale": 1,
+       "tFrameAnim": {
+        "__type__": "FrameAnim",
+        "__typeHash__": 1068774800,
+        "ePlaybackMode": 2,
+        "tFrameRateRange": {
+         "rangeValue1": 0,
+         "rangeValue2": 0
+        },
+        "tStartFrameRange": {
+         "rangeValue1": 0,
+         "rangeValue2": 5
+        },
+        "dwFrameRandomSeed": 0,
+        "tAnimationDelayRange": {
+         "rangeValue1": 0,
+         "rangeValue2": 0
+        },
+        "unk_ca71af4": false
+       },
+       "fScaleUVsToFrame": true
+      }
+     ],
+     "nTexAnimStateIndex": 0,
+     "unk_e1a4010": false
+    }
+   },
+   {
+    "__type__": "MaterialTextureEntry",
+    "__typeHash__": 552516018,
+    "eShaderTex": 47,
+    "tMatTex": {
+     "__type__": "MaterialTexture",
+     "__typeHash__": 3890408608,
+     "snoTex": {
+      "__raw__": 487373,
+      "__group__": 44,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/Texture/necro_boneShards_Normal.tex",
+      "groupName": "Texture",
+      "name": "necro_boneShards_Normal"
+     },
+     "ptTexAnim": [
+      {
+       "__type__": "TexAnim",
+       "__typeHash__": 911604182,
+       "dwType": 911604182,
+       "flUScale": 1,
+       "flVScale": 1
+      }
+     ],
+     "nTexAnimStateIndex": -1,
+     "unk_e1a4010": false
+    }
+   },
+   {
+    "__type__": "MaterialTextureEntry",
+    "__typeHash__": 552516018,
+    "eShaderTex": 94,
+    "tMatTex": {
+     "__type__": "MaterialTexture",
+     "__typeHash__": 3890408608,
+     "snoTex": {
+      "__raw__": 533033,
+      "__group__": 44,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/Texture/dissolve_canvasTearNoisey_Mask.tex",
+      "groupName": "Texture",
+      "name": "dissolve_canvasTearNoisey_Mask"
      },
      "ptTexAnim": [
       {
@@ -89,24 +167,111 @@
      "__type__": "MaterialTexture",
      "__typeHash__": 3890408608,
      "snoTex": {
-      "__raw__": 1636147,
+      "__raw__": 507980,
       "__group__": 44,
       "__type__": "DT_SNO",
       "__typeHash__": 2764331143,
-      "__targetFileName__": "base/meta/Texture/barb_rallyingCry_aoe_wave_cloudy_clean_Noise.tex",
+      "__targetFileName__": "base/meta/Texture/environmentVFX_smokeBillow_B_Noise.tex",
       "groupName": "Texture",
-      "name": "barb_rallyingCry_aoe_wave_cloudy_clean_Noise"
+      "name": "environmentVFX_smokeBillow_B_Noise"
      },
      "ptTexAnim": [
       {
-       "__type__": "TexAnim",
-       "__typeHash__": 911604182,
-       "dwType": 911604182,
+       "__type__": "TexAnimTranslation",
+       "__typeHash__": 3866881285,
+       "dwType": 3866881285,
        "flUScale": 1,
-       "flVScale": 1
+       "flVScale": 1,
+       "flUTransInitial": 0,
+       "unk_803e8a7": {
+        "rangeValue1": 0,
+        "rangeValue2": 0
+       },
+       "tUTransVelScalar": {
+        "__type__": "InterpolationScalar",
+        "__typeHash__": 991799518,
+        "nScalarFunction": 0,
+        "dwFlags": 1,
+        "tInputRange": {
+         "rangeValue1": 0,
+         "rangeValue2": 1
+        },
+        "tRemapRange": {
+         "rangeValue1": 0,
+         "rangeValue2": 1
+        },
+        "eRemapEasing": 0,
+        "szFormulaName": 0
+       },
+       "flVTransInitial": 0,
+       "unk_42b1708": {
+        "rangeValue1": 0,
+        "rangeValue2": 0
+       },
+       "tVTransVelScalar": {
+        "__type__": "InterpolationScalar",
+        "__typeHash__": 991799518,
+        "nScalarFunction": 0,
+        "dwFlags": 1,
+        "tInputRange": {
+         "rangeValue1": 0,
+         "rangeValue2": 1
+        },
+        "tRemapRange": {
+         "rangeValue1": 0,
+         "rangeValue2": 1
+        },
+        "eRemapEasing": 0,
+        "szFormulaName": 0
+       },
+       "ePinTranslation": 2,
+       "eOrderOperation": 0,
+       "dwURandomSeed": 1,
+       "dwVRandomSeed": 1,
+       "dwAnimFlags": 3,
+       "unk_e5b0c7f": {
+        "rangeValue1": 0,
+        "rangeValue2": 0
+       },
+       "fXOffset": 0.5,
+       "fYOffset": 0.5,
+       "aRotationInitial": 0,
+       "dwRotationRandomSeed": 0,
+       "tUScaleScalar": {
+        "__type__": "InterpolationScalar",
+        "__typeHash__": 991799518,
+        "nScalarFunction": 0,
+        "dwFlags": 1,
+        "tInputRange": {
+         "rangeValue1": 0,
+         "rangeValue2": 1
+        },
+        "tRemapRange": {
+         "rangeValue1": 0,
+         "rangeValue2": 1
+        },
+        "eRemapEasing": 0,
+        "szFormulaName": 0
+       },
+       "tVScaleScalar": {
+        "__type__": "InterpolationScalar",
+        "__typeHash__": 991799518,
+        "nScalarFunction": 0,
+        "dwFlags": 1,
+        "tInputRange": {
+         "rangeValue1": 0,
+         "rangeValue2": 1
+        },
+        "tRemapRange": {
+         "rangeValue1": 0,
+         "rangeValue2": 1
+        },
+        "eRemapEasing": 0,
+        "szFormulaName": 0
+       }
       }
      ],
-     "nTexAnimStateIndex": -1,
+     "nTexAnimStateIndex": 1,
      "unk_e1a4010": false
     }
    },
@@ -144,46 +309,6 @@
        "__type__": "RunTimeMaterialValue_float",
        "__typeHash__": 2833801029,
        "snoMaterialValue": {
-        "__raw__": 138947,
-        "__group__": 81,
-        "__type__": "DT_SNO",
-        "__typeHash__": 2764331143,
-        "__targetFileName__": "base/meta/MaterialValue/emissive multiplier.mtv",
-        "groupName": "MaterialValue",
-        "name": "emissive multiplier"
-       },
-       "value": 10,
-       "nPathValGraphIndex": -1,
-       "eLightGroup": 0
-      }
-     },
-     {
-      "__type__": "RunTimeMaterialScalarValueEntry",
-      "__typeHash__": 2176853528,
-      "tValue": {
-       "__type__": "RunTimeMaterialValue_float",
-       "__typeHash__": 2833801029,
-       "snoMaterialValue": {
-        "__raw__": 138973,
-        "__group__": 81,
-        "__type__": "DT_SNO",
-        "__typeHash__": 2764331143,
-        "__targetFileName__": "base/meta/MaterialValue/Alpha Dissolve Power Max.mtv",
-        "groupName": "MaterialValue",
-        "name": "Alpha Dissolve Power Max"
-       },
-       "value": 0,
-       "nPathValGraphIndex": -1,
-       "eLightGroup": 0
-      }
-     },
-     {
-      "__type__": "RunTimeMaterialScalarValueEntry",
-      "__typeHash__": 2176853528,
-      "tValue": {
-       "__type__": "RunTimeMaterialValue_float",
-       "__typeHash__": 2833801029,
-       "snoMaterialValue": {
         "__raw__": 139177,
         "__group__": 81,
         "__type__": "DT_SNO",
@@ -193,6 +318,26 @@
         "name": "Alpha Brightness Global"
        },
        "value": 2,
+       "nPathValGraphIndex": -1,
+       "eLightGroup": 0
+      }
+     },
+     {
+      "__type__": "RunTimeMaterialScalarValueEntry",
+      "__typeHash__": 2176853528,
+      "tValue": {
+       "__type__": "RunTimeMaterialValue_float",
+       "__typeHash__": 2833801029,
+       "snoMaterialValue": {
+        "__raw__": 151653,
+        "__group__": 81,
+        "__type__": "DT_SNO",
+        "__typeHash__": 2764331143,
+        "__targetFileName__": "base/meta/MaterialValue/Alpha Shape-Noise Multiplier.mtv",
+        "groupName": "MaterialValue",
+        "name": "Alpha Shape-Noise Multiplier"
+       },
+       "value": 1.5,
        "nPathValGraphIndex": -1,
        "eLightGroup": 0
       }
@@ -244,33 +389,13 @@
        "__type__": "RunTimeMaterialValue_float",
        "__typeHash__": 2833801029,
        "snoMaterialValue": {
-        "__raw__": 985328,
+        "__raw__": 239823,
         "__group__": 81,
         "__type__": "DT_SNO",
         "__typeHash__": 2764331143,
-        "__targetFileName__": "base/meta/MaterialValue/Low EV Alpha.mtv",
+        "__targetFileName__": "base/meta/MaterialValue/Noise 1 - Alpha lerp to white.mtv",
         "groupName": "MaterialValue",
-        "name": "Low EV Alpha"
-       },
-       "value": 1,
-       "nPathValGraphIndex": -1,
-       "eLightGroup": 0
-      }
-     },
-     {
-      "__type__": "RunTimeMaterialScalarValueEntry",
-      "__typeHash__": 2176853528,
-      "tValue": {
-       "__type__": "RunTimeMaterialValue_float",
-       "__typeHash__": 2833801029,
-       "snoMaterialValue": {
-        "__raw__": 985329,
-        "__group__": 81,
-        "__type__": "DT_SNO",
-        "__typeHash__": 2764331143,
-        "__targetFileName__": "base/meta/MaterialValue/High EV Alpha.mtv",
-        "groupName": "MaterialValue",
-        "name": "High EV Alpha"
+        "name": "Noise 1 - Alpha lerp to white"
        },
        "value": 1,
        "nPathValGraphIndex": -1,
@@ -283,7 +408,7 @@
     "arMaterialVectorGraphs": []
    }
   ],
-  "nTexAnimStateCount": 0,
+  "nTexAnimStateCount": 2,
   "fHasGraph": false
  },
  "arDecalLookVariantMap": [],
@@ -606,7 +731,7 @@
  },
  "unk_ce6fe3b": 0,
  "unk_245935": 0,
- "unk_6d58226": 0,
+ "unk_6d58226": 1,
  "flDuration": 0,
  "tOutroDuration": 0.5,
  "unk_a08119e": 0.20000000298023224,

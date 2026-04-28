@@ -15,14 +15,14 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "desc",
-   "szText": "{c_label}Cooldown: {/c}{c_resource}{Cooldown Time}{/c} seconds\r\nSteel yourself, increasing only your Maxmium Health by {c_number}[{SF_14}*100|%|]{/c} and gaining a {c_important}{u}Barrier{/u}{/c} that absorbs {c_number}[{SF_0}*100|%|]{/c} of your missing Life for {c_number}{buffduration:BARRIER}{/c} seconds.",
+   "szText": "{c_label}Cooldown: {/c}{c_resource}{Cooldown Time}{/c} seconds\r\n{if:SF_10}Steel yourself for {c_number}{SF_1}{/c} seconds, increasing your Maximum Life by {c_number}[({SF_14} * {SF_35})*100|%|]{/c} and preventing your Life from being reduced below {c_number}1{/c}. You are healed to {c_number}[{SF_9}*100|1%|]{/c} Life when {c_important}Iron Skin{/c} expires.{/if}{if:SF_19}Steel yourself for {c_number}{SF_1}{/c} seconds, increasing your Maximum Life by {c_number}[({SF_14} * {SF_35})*100|%|]{/c} and reflecting Iron Shrapnel when attacked, dealing {c_number}{payload:UPGRADE_C_SHRAPNEL_TOOLTIP}{/c} damage and inflicting {c_number}{dot:UPGRADE_C_BLEED_DOT}{/c} bleeding damage over {c_number}{buffduration:UPGRADE_C_BLEED_DOT}{/c} seconds.{/if}{if:SF_7}Steel yourself for {c_number}{SF_1}{/c} seconds, increasing your Maximum Life by {c_number}[({SF_14} * {SF_35})*100|%|]{/c} and gaining a {c_important}{u}Barrier{/u}{/c} that absorbs {c_number}[{SF_0}*100|1%|]{/c} of your Maximum Life {c_number}({shield:BARRIER}){/c} in damage.{/if}",
    "hLabel": 3707583
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "rankup_desc",
-   "szText": "\r\n{icon:bullet, 1.2} {c_important}{u}Barrier{/u}{/c} Absorption {icon:arrow, 1.2} {c_number}[{SF_0}*100|%|]{/c}",
+   "szText": "\r\n{if:SF_7}{icon:bullet, 1.2} Barrier potency {icon:arrow, 1.2} {c_number}[{SF_0}*100|1%|]{/c}{/if}{if:Mod.UpgradeB}{icon:bullet, 1.2} Heal Amount {icon:arrow, 1.2} {c_number}[{SF_9}*100|1%|]{/c}{/if}{if:Mod.UpgradeC}{icon:bullet, 1.2} Iron Shrapnel Damage {icon:arrow, 1.2} {c_number}{payload:UPGRADE_C_SHRAPNEL_TOOLTIP}{/c}\r\n{icon:bullet, 1.2} Bleeding Damage {icon:arrow, 1.2} {c_number}{dot:UPGRADE_C_BLEED_DOT}{/c}{/if}",
    "hLabel": 4074074671
   },
   {
@@ -42,30 +42,100 @@
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
-   "szLabel": "Mod5_Description",
-   "szText": "While {c_important}Iron Skin{/c} is active, Heal for {c_number}[{SF_7} * 100|%|]{/c} of the {c_important}{u}Barrier's{/u}{/c} original amount as Life per second.",
-   "hLabel": 1660147896
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
-   "szLabel": "Mod5_Name",
-   "szText": "Tactical Iron Skin",
-   "hLabel": 2648548437
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
    "szLabel": "Mod6_Description",
-   "szText": "{c_important}Iron Skin{/c} also grants {c_number}[{SF_8}*100|%|]{/c} Maximum Life {c_number}([{fortified:PAYLOAD_FORTIFY_BASE}|0|]){/c} as {c_important}{u}Fortify{/u}{/c}. Double this amount if cast while below {c_number}[{SF_9}*100|%|]{/c} Life.",
+   "szText": "{c_important}Iron Skin{/c} also grants {c_important}{u}Unstoppable{/u}{/c} and enemies that hit you are Knocked back.",
    "hLabel": 2991776313
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod6_Name",
-   "szText": "Strategic Iron Skin",
+   "szText": "Juggernaut",
    "hLabel": 2687683830
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod5_Description",
+   "szText": "{c_important}Iron Skin{/c} no longer grants a {c_important}{u}Barrier{/u}{/c}, but your Life cannot be reduced below {c_number}1{/c} for the duration and you are healed to {c_number}[{SF_9}*100|1%|]{/c} Life when {c_important}Iron Skin{/c} expires.",
+   "hLabel": 1660147896
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod5_Name",
+   "szText": "Endure",
+   "hLabel": 2648548437
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod7_Description",
+   "szText": "{c_important}Iron Skin{/c} no longer grants a {c_important}{u}Barrier{/u}{/c}. Instead you reflect {c_important}{u}Iron Shrapnel{/u}{/c} when attacked, dealing {c_number}{payload:UPGRADE_C_SHRAPNEL_TOOLTIP}{/c} damage and inflicting {c_number}{dot:UPGRADE_C_BLEED_DOT}{/c} Bleeding damage over {c_number}{buffduration:UPGRADE_C_BLEED_DOT}{/c} seconds.\r\n\r\n{c_important}Iron Skin's{/c} duration is tripled.",
+   "hLabel": 28437434
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod7_Name",
+   "szText": "Retaliation",
+   "hLabel": 2726819223
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod10_Description",
+   "szText": "{c_important}Iron Skin{/c} increases your Movement Speed by {c_number}[{SF_32}*100|x%|]{/c}.",
+   "hLabel": 2741697796
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod10_Name",
+   "szText": "Movement Speed",
+   "hLabel": 3070117409
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod11_Description",
+   "szText": "Enemies attacking you while {c_important}Iron Skin{/c} is active become {c_important}{u}Weakened{/u}{/c} for {c_number}[{SF_31}]{/c} seconds.",
+   "hLabel": 4073326213
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod11_Name",
+   "szText": "Weaken",
+   "hLabel": 3109252802
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod8_Description",
+   "szText": "{c_important}Iron Skin{/c} grants {c_number}[{SF_36}]{/c} stacks of {c_important}{u}Resolve{/u}{/c} when cast.",
+   "hLabel": 1360065851
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod8_Name",
+   "szText": "Resolve",
+   "hLabel": 2765954616
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod9_Description",
+   "szText": "Increase the Maximum Life granted from {c_important}Iron Skin{/c} to {c_number}[{SF_14}*(1+{SF_33})*100|%|]{/c}.",
+   "hLabel": 2691694268
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod9_Name",
+   "szText": "Maximum Life",
+   "hLabel": 2805090009
   }
  ],
  "ptMapStringTable": "0"

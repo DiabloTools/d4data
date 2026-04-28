@@ -15,14 +15,14 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "desc",
-   "szText": "{if:Mod.Spirit}{c_label}Generates Spirit:{/c} {c_resource}{SF_11}{/c}\r\n{/if}{c_label}Cooldown: {/c}{c_resource}{Cooldown Time}{/c} seconds\r\n{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat Effect Chance}|%|]{/c}\r\n{/if}Shapeshift into a Werebear, become {c_important}{u}Unstoppable{/u}{/c}, and charge forward, dealing {c_number}{payload:PAYLOAD_DAMAGE}{/c} damage and Knocking Back enemies.\r\n\r\nEnemies who are Knocked Back into terrain take an additional {c_number}{payload:TERRAIN_IMPACT_DAMAGE}{/c} damage and are Stunned for {c_number}{buffduration:TERRAIN_IMPACT}{/c} seconds.",
+   "szText": "{c_label}Generates Spirit:{/c} {c_resource}{SF_8}{/c}\r\n{c_label}Cooldown: {/c}{c_resource}{Cooldown Time}{/c} seconds\r\n{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat Effect Chance}|%|]{/c}\r\n{/if}Shapeshift and charge forward, dealing {c_number}{payload:PAYLOAD_DAMAGE}{/c} damage and Knocking Back enemies.",
    "hLabel": 3707583
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "rankup_desc",
-   "szText": " \r\n{icon:bullet,1.2} Damage {icon:arrow,1.2} {c_number}{payload:PAYLOAD_DAMAGE}{/c}\r\n{icon:bullet,1.2} Terrain Impact Damage {icon:arrow,1.2} {c_number}{payload:TERRAIN_IMPACT_DAMAGE}{/c}",
+   "szText": " \r\n{icon:bullet,1.2} Damage {icon:arrow,1.2} {c_number}{payload:PAYLOAD_DAMAGE}{/c}",
    "hLabel": 4074074671
   },
   {
@@ -56,16 +56,128 @@
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
+   "szLabel": "Mod8_Description",
+   "szText": "Trample deals {c_number}[SF_23 * SF_24 * 100|%|]{/c} bonus damage to the first target. Each subsequent target hit reduces this bonus by {c_number}[SF_23*100|%|]{/c}.",
+   "hLabel": 1360065851
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod8_Name",
+   "szText": "Brunt Force",
+   "hLabel": 2765954616
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod9_Description",
+   "szText": "{c_important}Trample{/c} sunders the earth forming rock pillars along the path and around your target location that deal {c_number}{payload:UPGRADE_B_TOOLTIP}{/c}  damage.\r\n\r\n{c_important}Trample{/c} is now an {c_important}Earth{/c} Skill.",
+   "hLabel": 2691694268
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod9_Name",
+   "szText": "Trampled Earth",
+   "hLabel": 2805090009
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod10_Description",
+   "szText": "Trampling may {c_important}{u}Execute{/u}{/c} enemies in an explosion of blood dealing {c_number}{payload:UPGRADE_C_EXPLOSION_PAYLOAD}{/c} damage to other nearby enemies and healing you for {c_number}[SF_29* 100|%|]{/c} of your Maximum Life.",
+   "hLabel": 2741697796
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod10_Name",
+   "szText": "Exsanguination",
+   "hLabel": 3070117409
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod11_Description",
+   "szText": "{c_important}Trample{/c} makes you {c_important}{u}Unstoppable{/u}{/c} for the duration.",
+   "hLabel": 4073326213
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod11_Name",
+   "szText": "Unstoppable",
+   "hLabel": 3109252802
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
    "szLabel": "Mod3_Description",
-   "szText": "Casting {c_important}Trample{/c} grants {c_number}{SF_11}{/c} Spirit.",
+   "szText": "{c_important}Trample{/c} grants an additional {c_number}{SF_11}{/c} Spirit.",
    "hLabel": 3291858358
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod3_Name",
-   "szText": "Savage Trample",
+   "szText": "Spirit",
    "hLabel": 2570277651
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod13_Description",
+   "szText": "Reduce {c_important}Trample's{/c} cooldown by {c_number}{SF_30}{/c} seconds.",
+   "hLabel": 2441615751
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod13_Name",
+   "szText": "Cooldown Reduction",
+   "hLabel": 3187523588
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod14_Description",
+   "szText": "{c_important}Trample{/c} Stuns enemies for {c_number}{buffduration:UPGRADE4_STUN}{/c} seconds instead of Knocking Back.",
+   "hLabel": 3773244168
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod14_Name",
+   "szText": "Stun",
+   "hLabel": 3226658981
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod15_Description",
+   "szText": "{c_important}Trample's{/c} damage is increased by {c_number}[SF_22 * 100|%x|]{/c}.",
+   "hLabel": 809905289
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod15_Name",
+   "szText": "Werebear",
+   "hLabel": 3265794374
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod16_Description",
+   "szText": "{c_important}Trample{/c} becomes a {c_important}Werewolf{/c} Skill allowing you to quickly leap through the air.",
+   "hLabel": 2141533706
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod16_Name",
+   "szText": "Werewolf",
+   "hLabel": 3304929767
   }
  ],
  "ptMapStringTable": "0"

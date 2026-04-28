@@ -15,57 +15,113 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "desc",
-   "szText": "{c_label}Energy Cost:{/c} {c_resource}{Resource Cost}{/c}\r\n{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}{Combat Effect Chance}%{/c}\r\n{/if}Fire an arrow that pierces through all enemies in a line, dealing {c_number}{payload:IMPACT}{/c} damage, increased by {c_number}[{SF_6}*100|%x|]{/c} per enemy it pierces.{if:SF_12}\r\n\r\n{c_important}Combo Points{/c} increase damage and improve Lucky Hit Chance:\r\n{icon:bullet,1.2} {c_label}1 Point:{/c} {c_number}{payload:DAMAGE_TOOLTIP_1CP}{/c} damage, {c_number}[{SF_10}|%+|]{/c} chance\r\n{icon:bullet,1.2} {c_label}2 Points:{/c} {c_number}{payload:DAMAGE_TOOLTIP_2CP}{/c} damage, {c_number}[{SF_10}*2|%+|]{/c} chance\r\n{icon:bullet,1.2} {c_label}3 Points:{/c} {c_number}{payload:DAMAGE_TOOLTIP_3CP}{/c} damage, {c_number}[{SF_15}*{SF_10}*3|%+|]{/c} chance{/if}",
+   "szText": "{c_label}Energy Cost:{/c} {c_resource}{Resource Cost}{/c}\r\n{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}{Combat Effect Chance}%{/c}\r\n{/if}Fire an arrow that pierces through all enemies in a line, dealing {c_number}{payload:IMPACT}{/c} damage.{if:SF_12}\r\n\r\n{c_important}Combo Points{/c} increase damage and improve Lucky Hit Chance:\r\n{icon:bullet,1.2} {c_label}1 Point:{/c} {c_number}{payload:DAMAGE_TOOLTIP_1CP}{/c} damage, {c_number}[{SF_10}|%+|]{/c} chance\r\n{icon:bullet,1.2} {c_label}2 Points:{/c} {c_number}{payload:DAMAGE_TOOLTIP_2CP}{/c} damage, {c_number}[{SF_10}*2|%+|]{/c} chance\r\n{icon:bullet,1.2} {c_label}3 Points:{/c} {c_number}{payload:DAMAGE_TOOLTIP_3CP}{/c} damage, {c_number}[{SF_15}*{SF_10}*3|%+|]{/c} chance{/if}",
    "hLabel": 3707583
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "rankup_desc",
-   "szText": "\r\n{icon:bullet,1.2} Damage {icon:arrow,1.2} {c_number}{payload:IMPACT}{/c}",
+   "szText": "\r\n{icon:bullet,1.2} Damage {icon:arrow,1.2} {c_number}{if:Mod.UpgradeC}{payload:UPGRADEC_IMPACT}{else}{payload:IMPACT}{/if}{/c}{if:Mod.UpgradeB}\r\n{icon:bullet,1.2} Shade Damage {icon:arrow,1.2} {c_number}{payload:UPGRADEB_IMPACT_SHADE}{/c}{/if}",
    "hLabel": 4074074671
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
-   "szLabel": "Mod2_Description",
-   "szText": "Casting {c_important}Penetrating Shot{/c} and hitting a Boss or Elite with it has a {c_number}[{SF_32}*100|%|]{/c} chance to fire it an additional time for free. ",
-   "hLabel": 1960229941
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
-   "szLabel": "Mod2_Name",
-   "szText": "Enhanced Penetrating Shot",
-   "hLabel": 2531142258
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
    "szLabel": "Mod1_Description",
-   "szText": "When Cast with full Energy, {c_important}Penetrating Shot{/c} Slows all enemies it hits by {c_number}[{SF_18}*100|%|]{/c} for {c_number}{buffduration:SLOW}{/c} seconds, then additionally dealing {c_number}[SF_33*100|%x|]{/c} increased damage to Elite enemies and Knocking them Down for {c_number}{buffduration:KNOCKDOWN}{/c} seconds.",
+   "szText": "Whenever {c_important}Penetrating Shot{/c} damages an enemy, {c_number}[SF_39]{/c} additional arrows split off to either side. These side arrows deal {c_number}[{SF_24}*100|%x|]{/c} of {c_important}Penetrating Shot's{/c} Base damage and do not split.",
    "hLabel": 628601524
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod1_Name",
-   "szText": "Advanced Penetrating Shot",
+   "szText": "Trick Shot",
    "hLabel": 2492006865
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod0_Description",
-   "szText": "{c_important}Penetrating Shot{/c} has a {c_number}[{SF_21}*100|%+|]{/c} increased Critical Strike Chance. If {c_important}Penetrating Shot{/c} damages at least {c_number}{SF_20}{/c} enemies, you gain {c_number}[{SF_17}*100|%+|]{/c} increased Critical Strike Chance for {c_number}[SF_23]{/c} seconds.",
+   "szText": "{c_important}Penetrating Shot{/c} now summons {c_number}[SF_40]{/c} {c_important}Shades{/c} that also fire at your target, each dealing {c_number}{payload:UPGRADEB_IMPACT_SHADE}{/c} damage.",
    "hLabel": 3591940403
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod0_Name",
-   "szText": "Improved Penetrating Shot",
+   "szText": "Shadow Shot",
    "hLabel": 2452871472
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod5_Description",
+   "szText": "{c_important}Penetrating Shot{/c} takes {c_number}[{SF_35}*100|%|]{/c} longer to fire, but shoots a larger, more powerful arrow dealing {c_number}{payload:UPGRADEC_IMPACT}{/c} damage.",
+   "hLabel": 1660147896
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod5_Name",
+   "szText": "Ballista",
+   "hLabel": 2648548437
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod2_Description",
+   "szText": "{c_important}Penetrating Shot's{/c} arrows deal {c_number}[{SF_6}*100|%x|]{/c} increased damage. This bonus is reduced by {c_number}[{SF_20}*100|x%|]{/c} per enemy they pierce.",
+   "hLabel": 1960229941
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod2_Name",
+   "szText": "Damage Increase",
+   "hLabel": 2531142258
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod7_Description",
+   "szText": "{c_important}Penetrating Shot{/c} Slows enemies hit by {c_number}[{SF_18}*100|%|]{/c} for {c_number}{buffduration:SIDE_2_SLOW}{/c} seconds.",
+   "hLabel": 28437434
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod7_Name",
+   "szText": "Slow",
+   "hLabel": 2726819223
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod9_Description",
+   "szText": "{c_important}Penetrating Shot{/c} deals {c_number}[{SF_43} * 100|%x|]{/c} increased damage per stack of {c_important}{u}Ferocity{/u}{/c}.",
+   "hLabel": 2691694268
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod9_Name",
+   "szText": "Ferocity",
+   "hLabel": 2805090009
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod11_Description",
+   "szText": "{c_important}Penetrating Shot{/c} deals {c_number}[{SF_44} * 100|%x|]{/c} increased damage to {c_important}{u}Vulnerable{/u}{/c} enemies.",
+   "hLabel": 4073326213
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod11_Name",
+   "szText": "Vulnerable",
+   "hLabel": 3109252802
   }
  ],
  "ptMapStringTable": "0"

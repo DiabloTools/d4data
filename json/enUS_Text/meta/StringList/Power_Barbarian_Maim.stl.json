@@ -29,7 +29,7 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "rankup_desc",
-   "szText": "\r\n{icon:bullet, 1.2} Impact Damage {icon:arrow, 1.2} {c_number}{payload:DAMAGE}{/c}\r\n{icon:bullet, 1.2} Bleeding Damage {icon:arrow, 1.2} {c_number}{dot:BLEEDING}{/c}",
+   "szText": "\r\n{icon:bullet, 1.2} Impact Damage {icon:arrow, 1.2} {c_number}{payload:DAMAGE}{/c}\r\n{icon:bullet, 1.2} Bleeding Damage {icon:arrow, 1.2} {c_number}{dot:BLEEDING}{/c}{if:Mod.UpgradeC}\r\n{icon:bullet, 1.2} Explosion Bleeding {icon:arrow, 1.2} {c_number}{dot:UPGRADEC_BLEEDING}{/c}{/if}",
    "hLabel": 4074074671
   },
   {
@@ -50,29 +50,99 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod3_Description",
-   "szText": "When {c_important}Flay{/c} deals direct damage to an enemy, they take {c_number}[{SF_10}*100|%x|]{/c} increased Bleeding damage from you for the next {c_number}{buffduration:AMPLIFY_BLEED_DEBUFF}{/c} seconds.",
+   "szText": "{c_important}Flay's{/c} Bleeding duration is reduced by {c_number}[{SF_27}||]{/c} seconds and it makes enemies {c_important}{u}Vulnerable{/u}{/c}.",
    "hLabel": 3291858358
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod3_Name",
-   "szText": "Battle Flay",
+   "szText": "Anemia",
    "hLabel": 2570277651
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod4_Description",
-   "szText": "When {c_important}Flay{/c} deals direct damage to an enemy, you gain {c_number}[{SF_19} * 100]%{/c} Damage Reduction and {c_number}[{SF_21}]{/c} Thorns for {c_number}[{SF_17}]{/c} seconds. This stacks up to {c_number}[{SF_12}]{/c} times.",
+   "szText": "{c_important}Flay's{/c} Bleeding is extended by {c_number}[{SF_12}]{/c} |4second:seconds; whenever the enemy moves too far from you.",
    "hLabel": 328519479
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod4_Name",
-   "szText": "Combat Flay",
+   "szText": "Hemorrhaging",
    "hLabel": 2609413044
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod8_Description",
+   "szText": "If {c_important}Flay{/c} hits a Bleeding enemy it causes a blood explosion that inflicts {c_number}{dot:UPGRADEC_BLEEDING}{/c} Bleeding damage over {c_number}{buffduration:UPGRADEC_BLEEDING}{/c} seconds.",
+   "hLabel": 1360065851
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod8_Name",
+   "szText": "The Flayer",
+   "hLabel": 2765954616
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod10_Description",
+   "szText": "{c_important}Flay{/c} Slows enemies by {c_number}[{SF_30}*100|%|]{/c}{c_number}.",
+   "hLabel": 2741697796
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod10_Name",
+   "szText": "Slow",
+   "hLabel": 3070117409
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod11_Description",
+   "szText": "{c_important}Flay's{/c} Bleeding duration is increased by {c_number}{SF_33}{/c} seconds.",
+   "hLabel": 4073326213
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod11_Name",
+   "szText": "Duration Bonus",
+   "hLabel": 3109252802
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod12_Description",
+   "szText": "{c_important}Flay{/c} {c_important}{u}Weakens{/u}{/c} enemies.",
+   "hLabel": 1109987334
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod12_Name",
+   "szText": "Weaken",
+   "hLabel": 3148388195
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod9_Description",
+   "szText": "Each Nearby enemy Bleeding from {c_important}Flay{/c} Heals you for {c_number}[{SF_35}*100|%|]{/c} of your Maximum Life ({c_number}{heal:UPGRADE4_HEAL_TOOLTIP}{/c}) per second, up to {c_number}[{SF_35}*{SF_34}*100|%|]{/c}.",
+   "hLabel": 2691694268
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod9_Name",
+   "szText": "Healing",
+   "hLabel": 2805090009
   }
  ],
  "ptMapStringTable": "0"

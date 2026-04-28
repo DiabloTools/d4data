@@ -15,57 +15,113 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "desc",
-   "szText": "{c_label}Cooldown:{/c_label} {c_resource}{Cooldown Time}{/c_resource} seconds\r\nUnearth a prison of bone with {c_number}{pet_health:BoneWall}{/c} Life that surrounds the target area for {c_number}{buffduration:WALL_TRACKER}{/c} seconds.",
+   "szText": "{c_label}Cooldown:{/c_label} {c_resource}{Cooldown Time}{/c_resource} seconds\r\n{if:Mod.Upgrade2}{c_label}Generate Essence:{/c_label} {c_resource}{SF_23}{/c_resource}\r\n{/if}Unearth a prison of bone with {c_number}{pet_health:BoneWall}{/c} Life that surrounds the target area for {c_number}{buffduration:WALL_TRACKER}{/c} seconds.",
    "hLabel": 3707583
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "rankup_desc",
-   "szText": " \r\n{icon:bullet,1.2} Bone Prison Life {icon:arrow,1.2} {c_number}{pet_health:BoneWall}{/c}\r\n{icon:bullet,1.2} Cooldown {icon:arrow,1.2} {c_number}{Cooldown Time}{/c} seconds",
+   "szText": " \r\n{icon:bullet,1.2} Life {icon:arrow,1.2} {c_number}{pet_health:BoneWall}{/c}\r\n{icon:bullet,1.2} Duration {icon:arrow,1.2} {c_number}{buffduration:WALL_TRACKER}{/c} seconds",
    "hLabel": 4074074671
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod1_Description",
-   "szText": "Casting {c_important}Bone Prison{/c} grants {c_number}{SF_23}{/c} Essence. Trapping a Boss generates another {c_number}{SF_3}{/c} Essence. ",
+   "szText": "You gain {c_number}{SF_31}{/c} Thorns for each enemy trapped by {c_important}Bone Prison{/c}.\r\n\r\nWhen a segment of {c_important}Bone Prison{/c} is destroyed or expires, it deals {c_number}[{SF_33} * 100]%{/c} of your Thorns around itself.",
    "hLabel": 628601524
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod1_Name",
-   "szText": "Ghastly Bone Prison",
+   "szText": "Bramble",
    "hLabel": 2492006865
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
-   "szLabel": "Mod2_Description",
-   "szText": "Enemies inside of {c_important}Bone Prison{/c} when cast are made {c_important}{u}Vulnerable{/u}{/c} and take {c_number}[{SF_22}*100|%x|]{/c} increased damage for {c_number}[SF_12]{/c} seconds.",
-   "hLabel": 1960229941
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
-   "szLabel": "Mod2_Name",
-   "szText": "Enhanced Bone Prison",
-   "hLabel": 2531142258
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
    "szLabel": "Mod3_Description",
-   "szText": "Reduce your active Cooldowns by {c_number}[SF_10|1|]{/c} seconds for each enemy trapped by {c_important}Bone Prison{/c}, up to {c_number}[SF_11]{/c} seconds.",
+   "szText": "{c_important}Bone Prison{/c} becomes a {c_important}Darkness{/c} Skill.\r\n\r\n{c_important}Bone Prison{/c} forms a Corpse every second and spawns a pool of {c_important}{u}Desecrated Ground{/c}{/u}, dealing {c_number}{dot:TOOLTIP_DOT}{/c} Corrupting damage.",
    "hLabel": 3291858358
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod3_Name",
-   "szText": "Dreadful Bone Prison",
+   "szText": "Plunging Darkness",
    "hLabel": 2570277651
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod4_Description",
+   "szText": "{c_important}Bone Prison{/c} becomes a {c_important}Blood{/c} Skill, casting the prison around you. \r\n\r\nWhile standing within it your Essence Generation and Cast Speed are increased by {c_number}[{SF_29} * 100|%|]{/c}, but it drains {c_number}[SF_24*100|%|]{/c} of your Maximum Life every second.",
+   "hLabel": 328519479
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod4_Name",
+   "szText": "Life Imprisonment",
+   "hLabel": 2609413044
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod2_Description",
+   "szText": "{c_important}Bone Prison{/c} reduces your active Cooldowns by {c_number}[SF_10|1|]{/c} seconds for each enemy trapped, up to {c_number}{SF_11}{/c} seconds.",
+   "hLabel": 1960229941
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod2_Name",
+   "szText": "Cooldown Reduction",
+   "hLabel": 2531142258
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod5_Description",
+   "szText": "Casting {c_important}Bone Prison{/c} generates {c_number}{SF_23}{/c} Essence. Trapping a Boss generates an additional {c_number}{SF_3}{/c} Essence.",
+   "hLabel": 1660147896
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod5_Name",
+   "szText": "Essence Generation",
+   "hLabel": 2648548437
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod6_Description",
+   "szText": "{c_important}Bone Prison{/c} makes enemies {c_important}{u}Vulnerable{/c}{/u} for {c_number}{SF_12}{/c} seconds.",
+   "hLabel": 2991776313
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod6_Name",
+   "szText": "Vulnerable",
+   "hLabel": 2687683830
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod7_Description",
+   "szText": "{c_important}Bone Prison{/c} grants {c_number}{SF_7}{/c} stack of {c_important}{u}Resolve{/c}{/u} for each enemy trapped.",
+   "hLabel": 28437434
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod7_Name",
+   "szText": "Resolve",
+   "hLabel": 2726819223
   }
  ],
  "ptMapStringTable": "0"

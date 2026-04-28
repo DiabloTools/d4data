@@ -15,7 +15,7 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "desc",
-   "szText": "{if:SF_16}{c_label}Essence Cost: {/c}{c_resource}{Resource Cost}{/c}\r\n{/if}{c_label}Generate Essence:{/c_label} {c_resource}{SF_2}{/c_resource} per enemy hit, {c_resource}{SF_19}{/c_resource} for a Boss\r\n{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat Effect Chance}|%|]{/c}\r\n{/if}Sweep an ethereal scythe in front of you, dealing {c_number}{payload:DAMAGE}{/c} damage. Hitting an enemy with {c_important}Reap{/c} increases your Damage Reduction by {c_number}[{SF_8}*100|%|]{/c} for {c_number}{buffduration:DAMAGE_REDUCTION}{/c} seconds.",
+   "szText": "{if:SF_16}{c_label}Essence Cost: {/c}{c_resource}{Resource Cost}{/c}\r\n{/if}{c_label}Generate Essence:{/c_label} {c_resource}{SF_29}{/c_resource}\r\n{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat Effect Chance}|%|]{/c}\r\n{/if}Sweep an ethereal scythe in front of you, dealing {c_number}{payload:DAMAGE}{/c} damage.",
    "hLabel": 3707583
   },
   {
@@ -28,58 +28,100 @@
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
-   "szLabel": "Buff8_Name",
-   "szText": "Enhanced Reap",
-   "hLabel": 544223867
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
-   "szLabel": "Buff8_Description",
-   "szText": "Attack Speed increased.",
-   "hLabel": 2736799774
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
-   "szLabel": "Mod3_Description",
-   "szText": "If an enemy hit by {c_important}Reap{/c} dies within {c_number}{SF_4}{/c} seconds, you gain {c_number}[{SF_5} * 100|%+|]{/c} Attack Speed for {c_number}{buffduration:MOD_ATTACK_SPEED}{/c} seconds.",
-   "hLabel": 3291858358
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
-   "szLabel": "Mod3_Name",
-   "szText": "Enhanced Reap",
-   "hLabel": 2570277651
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
    "szLabel": "Mod1_Description",
-   "szText": "{c_important}Reap{/c} forms a Corpse under the first enemy hit. Can only occur every {c_number}{SF_6}{/c} seconds.",
+   "szText": "{c_important}Reap{/c} sweeps a second time, dealing {c_number}{payload:DAMAGE_ECHO}{/c} damage and generating {c_number}{SF_4}{/c} Essence.",
    "hLabel": 628601524
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod1_Name",
-   "szText": "Acolyte's Reap",
+   "szText": "Harvest",
    "hLabel": 2492006865
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod2_Description",
-   "szText": "{c_important}Reap{/c} instantly kills enemies below {c_number}[{SF_7}*100|%|]{/c} Life. This does not work on Bosses or Players.",
+   "szText": "{c_important}Reap{/c} becomes a {c_important}Blood{/c} Skill that deals {c_number}{payload:DAMAGE_BLOOD}{/c} Physical damage.\r\n\r\n{c_important}Reap{/c} will {c_important}{u}Execute{/c}{/u} enemies and has a {c_number}[{SF_30} * 100|%|]{/c} chance to form a {c_important}{u}Blood Orb{/u}{/c} if they are killed by it.",
    "hLabel": 1960229941
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod2_Name",
-   "szText": "Initiate's Reap",
+   "szText": "Cull The Weak",
    "hLabel": 2531142258
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod4_Description",
+   "szText": "{c_important}Reap{/c} deals {c_number}{payload:DAMAGE_COLD}{/c} Cold damage and {c_important}{u}Chills{/u}{/c} for {c_number}[{SF_20}|%|]{/c}.\r\n\r\n{c_important}Reap{/c} gains an additional {c_number}[{SF_27} * 100|%+|]{/c} Cast Speed.",
+   "hLabel": 328519479
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod4_Name",
+   "szText": "Chilled To The Bone",
+   "hLabel": 2609413044
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod3_Description",
+   "szText": "{c_important}Reap{/c} gains an additional {c_number}[{SF_5}*100|%+|]{/c} Critical Strike Chance.",
+   "hLabel": 3291858358
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod3_Name",
+   "szText": "Critical Strike Chance",
+   "hLabel": 2570277651
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod5_Description",
+   "szText": "{c_important}Reap{/c} generates {c_number}{SF_7}{/c} additional Essence per enemy hit.",
+   "hLabel": 1660147896
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod5_Name",
+   "szText": "Essence Generation",
+   "hLabel": 2648548437
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod6_Description",
+   "szText": "{c_important}Reap{/c} forms a Corpse under the first enemy hit.",
+   "hLabel": 2991776313
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod6_Name",
+   "szText": "Corpse Generation",
+   "hLabel": 2687683830
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod7_Description",
+   "szText": "{c_important}Reap{/c} grants {c_number}{SF_31}{/c} stack of {c_important}{u}Ferocity{/c}{/u}.",
+   "hLabel": 28437434
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod7_Name",
+   "szText": "Ferocity",
+   "hLabel": 2726819223
   }
  ],
  "ptMapStringTable": "0"

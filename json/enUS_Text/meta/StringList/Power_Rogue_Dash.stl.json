@@ -22,50 +22,106 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "rankup_desc",
-   "szText": "\r\n{icon:bullet,1.2} Charge Cooldown {icon:arrow,1.2} {c_number}{Recharge Time}{/c} seconds\r\n{icon:bullet,1.2} Damage {icon:arrow,1.2} {c_number}{payload:IMPACT}{/c}",
+   "szText": "\r\n{icon:bullet,1.2} Damage {icon:arrow,1.2} {c_number}{payload:IMPACT}{/c}{if:Mod.UpgradeA}\r\n{icon:bullet, 1.2} Shade Damage {icon:arrow, 1.2} {c_number}{payload:UPGRADE_A_IMPACT}{/c}{/if}{if:Mod.UpgradeB}\r\n{icon:bullet, 1.2} Explosion Damage {icon:arrow, 1.2} {c_number}{payload:MOD_B_IMPACT}{/c}{/if}",
    "hLabel": 4074074671
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
-   "szLabel": "Mod2_Description",
-   "szText": "Casting {c_important}Dash{/c} increases your Critical Strike Chance by {c_number}[{SF_29}*100|%+|]{/c} for {c_number}{SF_34}{/c} seconds. ",
-   "hLabel": 1960229941
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
-   "szLabel": "Mod2_Name",
-   "szText": "Enhanced Dash",
-   "hLabel": 2531142258
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
    "szLabel": "Mod0_Description",
-   "szText": "At the end of {c_important}Dash{/c} , Knock Down surrounding enemies for {c_number}{SF_12}{/c} seconds and deal {c_number}[{SF_28}*100|x%|]{/c} of its damage to them. ",
+   "szText": "A {c_important}Shade{/c} {c_important}Dashes{/c} after you, dealing {c_number}{payload:UPGRADE_A_IMPACT}{/c} damage. {c_important}Dash's{/c} Cooldown is reduced by {c_number}{SF_38}{/c} second per enemy you hit, up to {c_number}{SF_39}{/c} seconds.",
    "hLabel": 3591940403
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod0_Name",
-   "szText": "Disciplined Dash",
+   "szText": "Shadow Play",
    "hLabel": 2452871472
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod1_Description",
-   "szText": "{c_important}Dash{/c} has {c_number}{SF_16}{/c} additional Charge and its Charge Cooldown is reduced by {c_number}{SF_17}{/c} seconds. ",
+   "szText": "{c_important}Dash{/c} is also a {c_important}Grenade{/c} Skill. At the end of {c_important}Dash{/c}, explode and Knock Down surrounding enemies for {c_number}{SF_12}{/c} seconds, dealing {c_number}{payload:MOD_B_IMPACT}{/c} damage to them.",
    "hLabel": 628601524
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod1_Name",
-   "szText": "Methodical Dash",
+   "szText": "Detonation",
    "hLabel": 2492006865
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod4_Description",
+   "szText": "At the end of {c_important}Dash{/c}, you enter {c_important}{u}Stealth{/u}{/c} for {c_number}[SF_36]{/c} seconds and gain {c_number}[SF_37]{/c} stack of {c_important}{u}Ferocity{/u}{/c}, increased by {c_number}[{SF_42}]{/c} per {c_number}{SF_45}{/c} Skill Ranks.",
+   "hLabel": 328519479
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod4_Name",
+   "szText": "Primer",
+   "hLabel": 2609413044
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod2_Description",
+   "szText": "Damaging enemies with {c_important}Dash{/c} increases their chance to be Critically Struck by {c_number}[{SF_29}*100|%+|]{/c} for {c_number}{buffduration:SIDE_1_CRIT_CHANCE}{/c} seconds. ",
+   "hLabel": 1960229941
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod2_Name",
+   "szText": "Critical Strike Chance",
+   "hLabel": 2531142258
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod8_Description",
+   "szText": "Enemies you {c_important}Dash{/c} through become {c_important}{u}Weakened{/u}{/c} for {c_number}{SF_41}{/c} seconds.",
+   "hLabel": 1360065851
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod8_Name",
+   "szText": "Weaken",
+   "hLabel": 2765954616
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod6_Description",
+   "szText": "{c_important}Dash{/c} has {c_number}{SF_16}{/c} additional Charge and its Charge Cooldown is reduced by {c_number}{SF_17}{/c} seconds. ",
+   "hLabel": 2991776313
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod6_Name",
+   "szText": "Charges and Cooldown Reduction",
+   "hLabel": 2687683830
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod10_Description",
+   "szText": "At the end of {c_important}Dash{/c}, gain {c_number}{SF_43}{/c} stack of {c_important}{u}Resolve{/u}{/c}.",
+   "hLabel": 2741697796
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod10_Name",
+   "szText": "Resolve",
+   "hLabel": 3070117409
   }
  ],
  "ptMapStringTable": "0"

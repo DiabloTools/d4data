@@ -15,57 +15,113 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "desc",
-   "szText": "{c_label}Cooldown:{/c_label} {c_resource}{Cooldown Time}{/c_resource} seconds\r\n{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat Effect Chance}|%|]{/c}\r\n{/if}Throw a smoky concoction at enemies that deals {c_number}{payload:SMOKE_PAYLOAD}{/c} damage and {c_important}{u}Dazes{/u}{/c} them for {c_number}{buffduration:SMOKE_BLINDNESS}{/c} seconds.",
+   "szText": "{if:SF_52}{c_label}Energy Cost:{/c_label} {c_resource}{Resource Cost}{/c_resource}\r\n{/if}{if:SF_47}{c_label}Charges:{/c} {c_resource}{SF_44}{/c}\r\n{c_label}Charge Cooldown:{/c} {c_resource}{Recharge Time}{/c_resource} seconds\r\n{/if}{if:SF_48}{c_label}Cooldown:{/c_label} {c_resource}{Cooldown Time}{/c_resource} seconds\r\n{/if}{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat Effect Chance}|%|]{/c}\r\n{/if}Throw a smoky concoction at enemies that deals {c_number}{payload:SMOKE_PAYLOAD}{/c} damage and {c_important}{u}Dazes{/u}{/c} them for {c_number}{buffduration:SMOKE_BLINDNESS}{/c} seconds.",
    "hLabel": 3707583
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "rankup_desc",
-   "szText": "\r\n{icon:bullet,1.2} Damage {icon:arrow,1.2} {c_number}{if:Mod.UpgradeB}{payload:POISON_PAYLOAD}{else}{payload:SMOKE_PAYLOAD}{/if}{/c}\r\n{icon:bullet,1.2} Cooldown {icon:arrow,1.2} {c_number}{Cooldown Time}{/c} seconds.",
+   "szText": "\r\n{icon:bullet,1.2} Damage {icon:arrow,1.2} {c_number}{if:Mod.UpgradeB}{payload:POISON_PAYLOAD}{else}{payload:SMOKE_PAYLOAD}{/if}{/c}{if:Mod.UpgradeA}\r\n{icon:bullet, 1.2} Critical Strike Chance {icon:arrow, 1.2} {c_number}[{SF_39}*100|+1%|]{/c}{/if}{if:Mod.UpgradeB}\r\n{icon:bullet, 1.2} Poison Damage {icon:arrow, 1.2} {c_number}{dot:POISON_DOT}{/c}{/if}{if:Mod.UpgradeC}\r\n{icon:bullet, 1.2} Shade Damage {icon:arrow, 1.2} {c_number}{payload:UPGRADE_C_PAYLOAD_SHADE}{/c}{/if}",
    "hLabel": 4074074671
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
-   "szLabel": "Mod0_Description",
-   "szText": "Enemies hit by {c_important}Smoke Grenade{/c} take {c_number}[{SF_6}*100|%x|]{/c} increased damage from you for {c_number}{SF_20}{/c} seconds.",
-   "hLabel": 3591940403
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
-   "szLabel": "Mod0_Name",
-   "szText": "Enhanced Smoke Grenade",
-   "hLabel": 2452871472
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
    "szLabel": "Mod2_Description",
-   "szText": "Hitting an Elite or Boss with your {c_important}Smoke Grenade{/c} reduces its Cooldown by {c_number}{SF_11}{/c} seconds.",
+   "szText": "{c_important}Smoke Grenade{/c} no longer {c_important}{u}Dazes{/u}{/c} enemies and instead creates a cloud of shadows at your feet. While within the cloud, you gain {c_number}[{SF_39}*100|+1%|]{/c} Critical Strike Chance and {c_important}{u}Stealth{/u}{/c} once every {c_number}[{SF_50}]{/c} second.",
    "hLabel": 1960229941
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod2_Name",
-   "szText": "Countering Smoke Grenade",
+   "szText": "Silhouette",
    "hLabel": 2531142258
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod3_Description",
-   "szText": "{c_important}Smoke Grenade{/c} now deals Poison damage and applies another {c_number}{payload:POISON_PAYLOAD}{/c} Poisoning damage over {c_number}{SF_21}{/c} seconds.",
+   "szText": "{c_important}Smoke Grenade{/c} now deals Poison damage and applies another {c_number}{dot:POISON_DOT}{/c} Poisoning damage over {c_number}{buffduration:POISON_DOT}{/c} seconds.",
    "hLabel": 3291858358
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod3_Name",
-   "szText": "Subverting Smoke Grenade",
+   "szText": "Poison Grenade",
    "hLabel": 2570277651
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod5_Description",
+   "szText": "{c_important}Smoke Grenade{/c} no longer {c_important}{u}Dazes{/u}{/c} and deals {c_number}{payload:UPGRADE_C_PAYLOAD}{/c} Shadow damage. When your {c_important}Smoke Grenade{/c} detonates, it also creates a {c_important}Shade{/c} that leaves behind {c_number}[SF_36]{/c} grenade, dealing {c_number}{payload:UPGRADE_C_PAYLOAD_SHADE}{/c} damage.\r\n\r\n{c_important}Smoke Grenade{/c} is now also a {c_important}Core{/c} Skill that no longer has a Cooldown and costs {c_resource}[SF_51]{/c} Energy.",
+   "hLabel": 1660147896
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod5_Name",
+   "szText": "Shade Grenade",
+   "hLabel": 2648548437
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod7_Description",
+   "szText": "Enemies hit by {c_important}Smoke Grenade{/c} become {c_important}{u}Vulnerable{/u}{/c} for {c_number}{SF_41}{/c} seconds.",
+   "hLabel": 28437434
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod7_Name",
+   "szText": "Vulnerable",
+   "hLabel": 2726819223
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod9_Description",
+   "szText": "{c_important}Smoke Grenade{/c} gains {c_number}[{SF_11}*100|+%|]{/c} increased Duration and deals {c_number}[{SF_28}*100|x%|]{/c} increased damage.",
+   "hLabel": 2691694268
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod9_Name",
+   "szText": "Increased Duration and Damage",
+   "hLabel": 2805090009
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod0_Description",
+   "szText": "{c_important}Smoke Grenade's{/c} size is increased by {c_number}[SF_42 * 100|%|]{/c}.",
+   "hLabel": 3591940403
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod0_Name",
+   "szText": "Size",
+   "hLabel": 2452871472
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod11_Description",
+   "szText": "{c_important}Smoke Grenade{/c} gains {c_number}{SF_46}{/c} Charge or costs {c_number}{SF_43}{/c} less Energy.",
+   "hLabel": 4073326213
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod11_Name",
+   "szText": "Charge or Energy Cost Reduction",
+   "hLabel": 3109252802
   }
  ],
  "ptMapStringTable": "0"

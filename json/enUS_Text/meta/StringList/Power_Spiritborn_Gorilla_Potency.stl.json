@@ -15,7 +15,7 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "desc",
-   "szText": "{if:SF_7}{c_label}Vigor Cost:{/c_label} {c_resource}All Remaining Vigor{/c_resource}\r\n{/if}{c_label}Cooldown:{/c_label} {c_resource}{Cooldown Time}{/c_resource} seconds\r\n{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}{Combat Effect Chance}%{/c}\r\n{/if}Smash enemies in front of you, dealing {c_number}{payload:IMPACT}{/c} damage.\r\n\r\nWhen attacked, you have a {c_number}[{SF_9}*100|%|]{/c} chance to reduce {c_important}Payback's{/c} active Cooldown by {c_number}[{SF_8}|1|]{/c} seconds.",
+   "szText": "{if:SF_7}{c_label}Vigor Cost:{/c_label} {c_resource}{Resource Cost}{/c_resource}\r\n{else}{c_label}Cooldown:{/c_label} {c_resource}{Cooldown Time}{/c_resource} seconds\r\n{/if}{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}{Combat Effect Chance}%{/c}\r\n{/if}Smash enemies in front of you, dealing {if:SF_7}{c_number}{payload:IMPACT_B}{/c}{else}{c_number}{payload:IMPACT}{/c}{/if} damage.\r\n\r\nWhen attacked, you have a {c_number}[{SF_9}*100|%|]{/c} chance to {if:SF_7}gain {c_number}[SF_5]{/c} Vigor{else}reset {c_important}Payback's{/c} Cooldown{/if}.",
    "hLabel": 3707583
   },
   {
@@ -43,49 +43,98 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod0_Description",
-   "szText": "Each time an enemy attacks you the damage they take from {c_important}Payback{/c} is increased by {c_number}[{SF_15}*100|%x|]{/c} for {c_number}{SF_14}{/c} seconds, up to {c_number}[{SF_15} * {SF_16} *100|%x|]{/c}.",
+   "szText": "Each time an enemy attacks you, the damage they take from {c_important}Payback{/c} is increased by {c_number}[{SF_15}*100|%x|]{/c}, up to {c_number}[{SF_15} * {SF_16} *100|%x|]{/c}.",
    "hLabel": 3591940403
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod0_Name",
-   "szText": "Enhanced Payback",
+   "szText": "Damage Increase",
    "hLabel": 2452871472
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
+   "szLabel": "Mod5_Description",
+   "szText": "{c_important}Payback{/c} grants {c_number}{SF_10}{/c} {c_important}{u}Resolve{/u}{/c}.",
+   "hLabel": 1660147896
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod5_Name",
+   "szText": "Resolve Generation",
+   "hLabel": 2648548437
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
    "szLabel": "Mod2_Description",
-   "szText": "Becoming Control Impaired while {c_important}Payback{/c} is on Cooldown makes it free to cast and grants you {c_important}{u}Unstoppable{/u}{/c} for {c_number}{SF_11}{/c} seconds. Can only occur once every {c_number}{SF_12}{/c} seconds.",
+   "szText": "{c_important}Payback{/c} echoes forward damaging a larger area.",
    "hLabel": 1960229941
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod2_Name",
-   "szText": "Invasive Payback",
+   "szText": "Area Increase",
    "hLabel": 2531142258
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
+   "szLabel": "Mod6_Description",
+   "szText": "{c_important}Payback{/c} grants {c_number}[{SF_13} *100|%+|]{/c} Block Chance for {c_number}{buffduration:SIDE_4_BUFF}{/c} seconds.",
+   "hLabel": 2991776313
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod6_Name",
+   "szText": "Block Chance",
+   "hLabel": 2687683830
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod4_Description",
+   "szText": "Becoming Control Impaired while {c_important}Payback{/c} is on Cooldown makes it free to Cast and grants you {c_important}{u}Unstoppable{/u}{/c} and {c_number}[SF_33*100|%|]{/c} Damage Reduction for {c_number}{SF_11}{/c} seconds. Can only occur once every {c_number}{SF_12}{/c} seconds.",
+   "hLabel": 328519479
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod4_Name",
+   "szText": "Break Free",
+   "hLabel": 2609413044
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
    "szLabel": "Mod1_Description",
-   "szText": "{c_important}Payback{/c} passively grants you Vigor when you take damage. {c_important}Payback{/c} is now also a {c_important}Core{/c} Skill and Consumes all of your Vigor to increase its damage by {c_number}[{SF_6}*100|1%x|]{/c} for each point Consumed.",
+   "szText": "{c_important}Payback{/c} is also a {c_important}Core{/c} Skill that costs {c_number}[SF_5]{/c} Vigor, has no Cooldown, and deals {c_number}{payload:IMPACT_B}{/c} damage. \r\n\r\nWhen attacked, you have a {c_number}[{SF_9}*100|%|]{/c} chance to gain {c_number}[SF_5]{/c} Vigor instead.",
    "hLabel": 628601524
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod1_Name",
-   "szText": "Poised Payback",
+   "szText": "Wrath of the Gorilla",
    "hLabel": 2492006865
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
+   "szLabel": "Mod3_Description",
+   "szText": "{c_important}Payback{/c} becomes a {c_important}Centipede{/c} Skill that deals Poison damage.\r\n\r\n{c_important}Payback{/c} smashes enemies in front of you, Poisoning them for {c_number}{dot:UPGRADE_C_DOT}{/c} damage over {c_number}{SF_24}{/c} seconds and increasing your Thorns by {c_number}[SF_27 * 100|%|]{/c} for {c_number}[SF_28]{/c} seconds.\r\n\r\nWhenever you Crowd Control an enemy, reduce {c_important}Payback's{/c} Cooldown by {c_number}[{SF_26}|1|]{/c} |4second:seconds;.",
+   "hLabel": 3291858358
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
    "szLabel": "Mod3_Name",
-   "szText": "(PH) Upgrade C",
+   "szText": "Insidious Retribution",
    "hLabel": 2570277651
   }
  ],

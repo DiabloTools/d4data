@@ -15,43 +15,127 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "desc",
-   "szText": "{c_label}Cooldown: {/c}{c_resource}{Cooldown Time}{/c} seconds\r\n{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat Effect Chance}|%|]{/c}\r\n{/if}Encase yourself in ice and become {c_important}{u}Immune{/u}{/c} for {c_number}{buffduration:BUFF_IMMUNE}{/c} seconds, {c_important}{u}Chilling{/u}{/c} surrounding enemies for {c_number}[{SF_6}|%|]{/c} and continuously dealing {c_number}{payload:PERIODIC_DAMAGE}{/c} damage to them. When {c_important}Deep Freeze{/c} ends, you explode for {c_number}{payload:FINAL_EXPLOSION_DAMAGE}{/c} more damage.\r\n\r\nCasting {c_important}Deep Freeze{/c} again ends the effect early.{if:SF_21} \r\n\r\n{c_important}Deep Freeze's{/c} damage is increased by {c_number}[{SF_19}*100|x%|]{/c} of your Vulnerable Damage bonus, up to {c_number}[{SF_23}*100|x%|]{/c}.\r\n\r\nCurrent Bonus: {c_number}[{SF_20} * 100|1%x|]{/c}.{/if}",
+   "szText": "{if:SF_22}{c_label}Cooldown:{/c_label} {c_resource}{Cooldown Time}{/c} seconds\r\n{/if}{if:SF_21}{c_label}Charges:{/c} {c_resource}{SF_20}{/c}\r\n{c_label}Charge Cooldown:{/c_label} {c_resource}{Recharge Time}{/c} seconds\r\n{/if}{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat Effect Chance}|%|]{/c}\r\n{/if}Encase yourself in ice and become {c_important}{u}Immune{/u}{/c} for {c_number}{buffduration:ICE_BLOCKED}{/c} seconds, {c_important}{u}Chilling{/u}{/c} surrounding enemies for {c_number}[{SF_10}|%|]{/c} and continuously dealing {c_number}{payload:WAVE_DAMAGE}{/c} damage to them. When {c_important}Deep Freeze{/c} ends, you explode for an additional {c_number}{payload:FINAL_EXPLOSION_DAMAGE}{/c} damage.\r\n\r\nCasting {c_important}Deep Freeze{/c} again ends the effect early.",
    "hLabel": 3707583
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "rankup_desc",
-   "szText": "\r\n{icon:bullet, 1.2} Periodic Damage {icon:arrow, 1.2} {c_number}{payload:PERIODIC_DAMAGE}{/c}\r\n{icon:bullet, 1.2} Final Damage {icon:arrow, 1.2} {c_number}{payload:FINAL_EXPLOSION_DAMAGE}{/c}\r\n{icon:bullet,1.2} Cooldown {icon:arrow,1.2} {c_number}{Cooldown Time}{/c} seconds\r\n{c_label}At Rank 5:{/c}\r\n{icon:arrow,1.2} {c_important}Deep Freeze's{/c} damage is increased by {c_number}[{SF_19}*100|x%|]{/c} of your Vulnerable Damage bonus, up to {c_number}[{SF_23}*100|x%|]{/c}",
+   "szText": "\r\n{icon:bullet, 1.2} Continuous Damage {icon:arrow, 1.2} {c_number}{payload:WAVE_DAMAGE}{/c}\r\n{icon:bullet, 1.2} Explosion Damage {icon:arrow, 1.2} {c_number}{payload:FINAL_EXPLOSION_DAMAGE}{/c}",
    "hLabel": 4074074671
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
+   "szLabel": "Buff28_Name",
+   "szText": "Frigid Ward",
+   "hLabel": 77030541
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Buff28_Description",
+   "szText": "A Barrier formed by Deep Freeze that generates Mana every second.",
+   "hLabel": 3986434544
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
    "szLabel": "Mod0_Description",
-   "szText": "When {c_important}Deep Freeze{/c} ends, gain {c_number}[{SF_14}*100|%|]{/c} of your Maximum Life {c_number}({Shield:BARRIER_TOOLTIP}){/c} as a {c_important}{u}Barrier{/u}{/c} for {c_number}{SF_15}{/c} seconds.",
+   "szText": "{c_important}Deep Freeze{/c} forms a {u}{c_important}Barrier{/c}{/u} that absorbs {c_number}{shield:UPGRADEA_BARRIER_TOOLTIP}{/c}{if:ADVANCED_TOOLTIP}([{SF_11}*100|%|] of Maximum Life){/if} damage every second while active.\r\n\r\nThis {u}{c_important}Barrier{/c}{/u} grants {c_number}{SF_12}{/c} Mana Regeneration.",
    "hLabel": 3591940403
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod0_Name",
-   "szText": "Prime Deep Freeze",
+   "szText": "Frigid Ward",
    "hLabel": 2452871472
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod1_Description",
-   "szText": "{c_important}Deep Freeze's{/c} initial hit makes surrounding enemies {c_important}{u}Vulnerable{/u}{/c} for {c_number}{SF_17}{/c} seconds. After it ends, your Non-{c_important}Ultimate{/c} Cooldowns are instantly reset and your {c_important}Frost{/c} Skills deal {c_number}[{SF_22}*100|%x|]{/c} increased damage for {c_number}{SF_17}{/c} seconds. ",
+   "szText": "{c_important}Deep Freeze's{/c} continuous and final explosion damage become Frostbite damage that deals {c_number}{dot:UPGRADEB_FROSTBITE_TOOLTIP}{/c} and {c_number}{dot:UPGRADEB_EXPLOSION_TOOLTIP}{/c} damage over {c_number}{buffDuration:UPGRADEB_FROSTBITE}{/c} seconds respectively.\r\n\r\nThis Frostbite damage {u}{c_important}Chills{/c}{/u} for {c_number}[SF_10 * (SF_16 / SF_17)|%|]{/c} over {c_number}{buffDuration:UPGRADEB_FROSTBITE}{/c} seconds and will remove {c_important}{u}Unstoppable{/c}{/u} from enemies.",
    "hLabel": 628601524
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod1_Name",
-   "szText": "Supreme Deep Freeze",
+   "szText": "Bonechill",
    "hLabel": 2492006865
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod3_Description",
+   "szText": "Instead of encasing yourself and becoming {u}{c_important}Immune{/c}{/u}, {c_important}Deep Freeze{/c} now forms at the target location dealing {c_number}{payload:UPGRADEC_WAVE_DAMAGE}{/c} damage continuously and {c_number}{payload:UPGRADEC_FINAL_DAMAGE}{/c} explosion damage.\r\n\r\nYou remain free to act during the duration and {c_important}Deep Freeze{/c} now has {c_number}{SF_20}{/c} Charges.",
+   "hLabel": 3291858358
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod3_Name",
+   "szText": "Glacier",
+   "hLabel": 2570277651
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod4_Description",
+   "szText": "Increases the duration to {c_number}{SF_23}{/c} seconds.",
+   "hLabel": 328519479
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod4_Name",
+   "szText": "Duration",
+   "hLabel": 2609413044
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod5_Description",
+   "szText": "Damage makes enemies {u}{c_important}Vulnerable{/c}{/u} and {u}{c_important}Weakened{/c}{/u} for {c_number}[SF_24]{/c} seconds.",
+   "hLabel": 1660147896
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod5_Name",
+   "szText": "Vulnerable and Weakened",
+   "hLabel": 2648548437
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod6_Description",
+   "szText": "Reduces your Cooldowns by {c_resource}{SF_25}{/c} second and generate {c_resource}{SF_28}{/c} Mana every second while active.",
+   "hLabel": 2991776313
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod6_Name",
+   "szText": "Reduce Cooldown",
+   "hLabel": 2687683830
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod7_Description",
+   "szText": "Cooldown speed is increased by {c_number}[SF_27 * 100|%|]{/c} while you have a {u}{c_important}Barrier{/c}{/u}.",
+   "hLabel": 28437434
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod7_Name",
+   "szText": "Cooldown with Barrier ",
+   "hLabel": 2726819223
   }
  ],
  "ptMapStringTable": "0"

@@ -15,71 +15,113 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "desc",
-   "szText": "{c_label}Cooldown:{/c} {c_resource}{Cooldown Time}{/c} seconds\r\nA {c_important}{u}Barrier{/u}{/c} of ice forms around you for {c_number}{buffduration:ICE_BARRIER}{/c} seconds, absorbing {c_number}[{SF_0}*100|%|]{/c} of your Maximum Life {c_number}({shield:ICE_BARRIER}){/c} in damage.",
+   "szText": "{if:SF_24}{c_label}Cooldown:{/c_label} {c_resource}{Cooldown Time}{/c} seconds\r\n{/if}{if:SF_23}{c_label}Charges:{/c} {c_resource}[SF_23 + 1]{/c}\r\n{c_label}Charge Cooldown:{/c_label} {c_resource}{Recharge Time}{/c} seconds\r\n{/if}A {c_important}{u}Barrier{/u}{/c} of ice forms around you for {c_number}{buffduration:ICE_BARRIER}{/c} seconds, absorbing {c_number}[{SF_0}*100|%|]{/c} of your Maximum Life {c_number}({shield:ICE_BARRIER}){/c} in damage.",
    "hLabel": 3707583
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "rankup_desc",
-   "szText": "\r\n{icon:bullet,1.2} {c_important}{u}Barrier{/u}{/c} Amount {icon:arrow,1.2} {c_number}{shield:ICE_BARRIER}{/c}",
+   "szText": "\r\n{icon:bullet,1.2} {c_important}{u}Barrier{/u}{/c} Amount {icon:arrow,1.2} {c_number}{shield:ICE_BARRIER}{/c}{if:Mod.UpgradeA}\r\n{icon:bullet,1.2} Total Armor {icon:arrow,1.2} {c_number}[SF_6 * 100|%|]{/c}{/if}{if:Mod.UpgradeC}\r\n{icon:bullet,1.2} All Resistances {icon:arrow,1.2} {c_number}[SF_21 * 100|%|]{/c}{/if}",
    "hLabel": 4074074671
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
-   "szLabel": "Buff21_Name",
-   "szText": "Frigid Strike",
-   "hLabel": 4098050086
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
-   "szLabel": "Buff21_Description",
-   "szText": "Doing increased damage to Frozen enemies.",
-   "hLabel": 3254970217
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
-   "szLabel": "Mod2_Description",
-   "szText": "While {c_important}Ice Armor{/c} is active, your Mana Regeneration is increased by {c_number}[{SF_10} * 100|%x|]{/c}.",
-   "hLabel": 1960229941
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
-   "szLabel": "Mod2_Name",
-   "szText": "Enhanced Ice Armor",
-   "hLabel": 2531142258
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
    "szLabel": "Mod1_Description",
-   "szText": "While {c_important}Ice Armor{/c} is active, you periodically {c_important}{u}Chill{/u}{/c} Close enemies for {c_number}[{SF_19}|%|]{/c} and deal {c_number}[{SF_20} * 100|%x|]{/c} increased damage to {c_important}{u}Frozen{/u}{/c} enemies.",
+   "szText": "{c_important}Ice Armor{/c} grants {u}{c_important}Unstoppable{/c}{/u} for {c_number}{SF_5}{/c} second and increases your Armor by {c_number}[SF_6 * 100 |%|]{/c} while active.",
    "hLabel": 628601524
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod1_Name",
-   "szText": "Mystical Ice Armor",
+   "szText": "Permafrost",
    "hLabel": 2492006865
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod5_Description",
-   "szText": "While {c_important}Ice Armor{/c} is active, you reduce its Cooldown by {c_number}{SF_21}{/c} seconds for every {c_number}{SF_22}{/c} Mana you spend.",
+   "szText": "{c_important}Ice Armor{/c} forms {c_number}{SF_11}{/c} {u}{c_important}Ice Spikes{/c}{/u} per second under Close enemies that deal {c_number}{payload:UPGRADEB_ICE_SPIKE_TOOLTIP}{/c} damage.",
    "hLabel": 1660147896
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod5_Name",
-   "szText": "Shimmering Ice Armor",
+   "szText": "Razor Ice",
    "hLabel": 2648548437
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod7_Description",
+   "szText": "{c_important}Ice Armor{/c} also applies to Nearby Allies and increases All Resistances by {c_number}[SF_21 * 100 |%x|]{/c}.",
+   "hLabel": 28437434
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod7_Name",
+   "szText": "Blast Chill",
+   "hLabel": 2726819223
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod8_Description",
+   "szText": "{c_important}Ice Armor's{/c} duration is increased to {c_number}[Mod.Upgrade1 ? SF_1 : (SF_1 + SF_13)]{/c} seconds and its Barrier amount is increased by {c_number}[SF_12 * 100 |%x|]{/c}.",
+   "hLabel": 1360065851
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod8_Name",
+   "szText": "Duration Bonus and Barrier",
+   "hLabel": 2765954616
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod9_Description",
+   "szText": "Close enemies that attack you while {c_important}Ice Armor{/c} is active will be {c_important}{u}Frozen{/c}{/u} or {c_important}{u}Chilled{/c}{/u} for {c_number}[SF_16|%|]{/c}.",
+   "hLabel": 2691694268
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod9_Name",
+   "szText": "Frozen and Chill",
+   "hLabel": 2805090009
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod10_Description",
+   "szText": "{c_important}Ice Armor's{/c} Cooldown is reduced to {c_number}[Mod.Upgrade3? SF_2 : (SF_2 - SF_17)]{/c} seconds.",
+   "hLabel": 2741697796
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod10_Name",
+   "szText": "Cooldown Reduction",
+   "hLabel": 3070117409
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod11_Description",
+   "szText": "{c_important}Ice Armor{/c} grants {c_number}{SF_19}{/c} Mana Regeneration while active.",
+   "hLabel": 4073326213
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod11_Name",
+   "szText": "Resource Regeneration",
+   "hLabel": 3109252802
   }
  ],
  "ptMapStringTable": "0"

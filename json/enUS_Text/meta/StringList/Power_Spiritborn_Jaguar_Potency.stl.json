@@ -15,7 +15,7 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "desc",
-   "szText": "{c_label}Charges:{/c} {c_resource}[Mod.UpgradeA ? SF_17 : SF_1]{/c}\r\n{c_label}Charge Cooldown:{/c} {c_resource}{SF_1}{/c_resource} per {c_resource}{Recharge Time}{/c_resource} seconds \r\n{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}{Combat Effect Chance}%{/c}\r\n{/if}Slash a short distance through an enemy, striking all enemies along the way twice for a total of {c_number}{payload:IMPACT_TOOLTIP}{/c} total damage.",
+   "szText": "{c_label}Charges:{/c} {c_resource}[Mod.UpgradeA ? SF_17 : SF_1]{/c}\r\n{c_label}Charge Cooldown:{/c} {c_resource}{SF_31}{/c_resource} per {c_resource}{Recharge Time}{/c_resource} seconds \r\n{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}{Combat Effect Chance}%{/c}\r\n{/if}Slash a short distance through an enemy, striking all enemies along the way twice for a total of {c_number}{payload:IMPACT_TOOLTIP}{/c} total damage.",
    "hLabel": 3707583
   },
   {
@@ -50,42 +50,91 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod0_Name",
-   "szText": "Enhanced Rushing Claw",
+   "szText": "Damage Increase",
    "hLabel": 2452871472
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
-   "szLabel": "Mod1_Description",
-   "szText": "{c_important}Rushing Claw{/c} now has {c_number}{SF_17}{/c} Maximum Charges and its Cooldown is reduced by {c_number}{SF_21}{/c} seconds. Casting it consumes all Charges to increase its damage by {c_number}[{SF_6}*100|%x|]{/c} per Charge and it hits a larger area.",
-   "hLabel": 628601524
+   "szLabel": "Mod5_Description",
+   "szText": "Using {c_important}Rushing Claw's{/c} last Charge will refill {c_number}{SF_13}{/c} Charges by consuming {c_number}{SF_12}{/c} stacks of {c_important}{u}Ferocity{/u}{/c}.",
+   "hLabel": 1660147896
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
-   "szLabel": "Mod1_Name",
-   "szText": "Poised Rushing Claw",
-   "hLabel": 2492006865
+   "szLabel": "Mod5_Name",
+   "szText": "Charge Refund",
+   "hLabel": 2648548437
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod2_Description",
-   "szText": "Using {c_important}Rushing Claw's{/c} last Charge will refill {c_number}{SF_13}{/c} Charges by consuming {c_number}{SF_12}{/c} stacks of {c_important}{u}Ferocity{/u}{/c}.",
+   "szText": "{c_important}Rushing Claw{/c} deals {c_number}[{SF_25}*100|%x|]{/c} more damage if you Dodged in the last {c_number}{buffduration:SIDE_3_BUFF}{/c} seconds.",
    "hLabel": 1960229941
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod2_Name",
-   "szText": "Invasive Rushing Claw",
+   "szText": "Damage Bonus",
    "hLabel": 2531142258
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
+   "szLabel": "Mod6_Description",
+   "szText": "{c_important}Rushing Claw{/c} extends the duration of your active {c_important}Incarnate{/c} Skills by {c_number}[{SF_27}|1|]{/c} |4second:seconds;, up to {c_number}[{SF_28}|1|]{/c} |4second:seconds;. ",
+   "hLabel": 2991776313
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod6_Name",
+   "szText": "Incarnate Duration",
+   "hLabel": 2687683830
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod4_Description",
+   "szText": "{c_important}Rushing Claw{/c} deals {c_number}[{SF_22}*100|%|]{/c} increased damage and is empowered based on how many Charges it has when you Cast it:\r\n{icon:bullet,1.2} {c_label}1:{/c} Heals {c_number}[{SF_21}*100|%|]{/c} of your Maximum Life {c_number}([PlayerHealthMax() * SF_21]){/c}.\r\n{icon:bullet,1.2} {c_label}2:{/c} Guaranteed to Critically Strike.\r\n{icon:bullet,1.2} {c_label}3:{/c} Gain {c_number}[{SF_23}*100|%|]{/c} Dodge Chance for {c_number}[{buffduration:UPGRADE_A_DODGE}|1|]{/c} |4second:seconds;. \r\n{icon:bullet,1.2} {c_label}4+:{/c} Strikes an additional time.",
+   "hLabel": 328519479
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod4_Name",
+   "szText": "Evolving Claws",
+   "hLabel": 2609413044
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod1_Description",
+   "szText": "{c_important}Rushing Claw{/c} now has {c_number}{SF_17}{/c} Maximum Charges. Casting it consumes all Charges to increase its damage by {c_number}[{SF_6}*100|%x|]{/c} per Charge and it hits a larger area.\r\n\r\n{c_important}Rushing Claw's{/c} Cooldown refreshes {c_number}[SF_35 * 100|%|]{/c} faster for each {c_important}{u}Ferocity{/u}{/c} you have.",
+   "hLabel": 628601524
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod1_Name",
+   "szText": "Colossal Claw",
+   "hLabel": 2492006865
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod3_Description",
+   "szText": "{c_important}Rushing Claw{/c} becomes an {c_important}Eagle{/c} Skill, deals Lightning damage, and has {c_number}{SF_30}{/c} Charges with a {c_number}[SF_36]{/c} second Charge Cooldown. \r\n\r\n{c_important}Rushing Claw{/c} counts as an {c_important}Evade{/c}. You no longer need a target to Cast {c_important}Rushing Claw{/c}.",
+   "hLabel": 3291858358
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
    "szLabel": "Mod3_Name",
-   "szText": "(PH) Plains Offense Upgrade C",
+   "szText": "Evasive Swipe",
    "hLabel": 2570277651
   }
  ],

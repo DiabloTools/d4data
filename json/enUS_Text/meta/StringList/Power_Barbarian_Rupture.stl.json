@@ -15,7 +15,7 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "desc",
-   "szText": "{if:SF_37}{c_label}Fury Cost:{/c_label} {c_resource}{Resource Cost}{/c_resource}\r\n{/if}{if:SF_40}{if:SF_13}{c_label}Cooldown:{/c_label} {c_resource}{Cooldown Time}{/c} seconds\r\n{/if}{if:SF_14}{c_label}Charges:{/c} {c_resource}{SF_15}{/c}\r\n{c_label}Charge Cooldown:{/c_label} {c_resource}{Recharge Time}{/c} seconds\r\n{/if}{/if}{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat Effect Chance}|%|]{/c}\r\n{/if}Skewer enemies in front of you, dealing {c_number}{payload:DAMAGE}{/c} damage which is guaranteed to {c_important}{u}Overpower{/u}{/c}. Then rip your weapon out, damaging enemies for their total Bleeding amount and removing all Bleeding damage from them.",
+   "szText": "{if:SF_37}{c_label}Fury Cost:{/c_label} {c_resource}{Resource Cost}{/c_resource}\r\n{/if}{if:SF_40}{if:SF_13}{c_label}Cooldown:{/c_label} {c_resource}{Cooldown Time}{/c} seconds\r\n{/if}{if:SF_14}{c_label}Charges:{/c} {c_resource}{SF_15}{/c}\r\n{c_label}Charge Cooldown:{/c_label} {c_resource}{Recharge Time}{/c} seconds\r\n{/if}{/if}{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat Effect Chance}|%|]{/c}\r\n{/if}Skewer enemies in front of you, dealing {c_number}{payload:INITIAL_DAMAGE}{/c} damage, then rip your weapon out, inflicting {c_number}{dot:BLEEDING}{/c} Bleeding damage over {c_number}{SF_8}{/c} seconds. ",
    "hLabel": 3707583
   },
   {
@@ -29,50 +29,120 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "rankup_desc",
-   "szText": "\r\n{if:SF_14}{icon:bullet, 1.2} Charge Cooldown: {icon:arrow, 1.2} {c_number}{Recharge Time}{/c} seconds.\r\n{else}{icon:bullet, 1.2} Cooldown: {icon:arrow, 1.2} {c_number}{Cooldown Time}{/c} seconds.{/if}",
+   "szText": "\r\n{icon:bullet, 1.2} Damage {icon:arrow, 1.2} {c_number}{payload:INITIAL_DAMAGE}{/c}\r\n{icon:bullet, 1.2} Bleeding Damage {icon:arrow, 1.2} {c_number}{dot:BLEEDING}{/c}{if:Mod.UpgradeA}\r\n{icon:bullet, 1.2} Explosion Damage {icon:arrow, 1.2} {c_number}{dot:UPGRADEA_EXPLOSION_BLEEDING}{/c}{/if}{if:Mod.UpgradeB}\r\n{icon:bullet, 1.2} Blood Pool Damage {icon:arrow, 1.2} {c_number}{dot:UPGRADEB_AOE_BLEED}{/c}{/if}{/if}{if:Mod.UpgradeC}\r\n{icon:bullet, 1.2} Ancient Damage {icon:arrow, 1.2} {c_number}{payload:UPGRADEC_RIP_DAMAGE}{/c}{/if}",
    "hLabel": 4074074671
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod4_Description",
-   "szText": "Ripping your weapon out of enemies during {c_important}Rupture{/c} causes an explosion that deals {c_number}{dot:EXPLOSION_BLEEDING}{/c} Bleeding damage over {c_number}{SF_19}{/c} seconds. This damage is increased by {c_number}[{SF_33} * 100|%x|]{/c} for every {c_number}{SF_32}{/c} Strength you have.\r\n\r\nCurrent Bonus: {c_number}[{SF_34} * 100|%x|]{/c}",
+   "szText": "{c_important}Rupture{/c} now causes an explosion when you rip your weapon out, dealing {c_number}{dot:UPGRADEA_EXPLOSION_BLEEDING}{/c} Bleeding damage over {c_number}{SF_19}{/c} seconds.",
    "hLabel": 328519479
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod4_Name",
-   "szText": "Enhanced Rupture",
+   "szText": "Gore",
    "hLabel": 2609413044
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
-   "szLabel": "Mod5_Description",
-   "szText": "Hitting at least {c_number}1{/c} enemy with {c_important}Rupture{/c} Heals you for {c_number}[{SF_21}*100|%|]{/c} of your Maximum Life {c_number}([PlayerHealthMax() * SF_21]){/c}.",
-   "hLabel": 1660147896
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
-   "szLabel": "Mod5_Name",
-   "szText": "Fighter's Rupture",
-   "hLabel": 2648548437
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
    "szLabel": "Mod6_Description",
-   "szText": "Hitting enemies with {c_important}Rupture{/c} increases your Attack Speed by {c_number}[{SF_23} * 100|%+|]{/c} for {c_number}{buffduration:ATTACK_SPEED}{/c} seconds.",
+   "szText": "{c_important}Rupture{/c} now creates a blood pool when you rip your weapon out, inflicting {c_number}{dot:UPGRADEB_AOE_BLEED}{/c} Bleeding damage over {c_number}{SF_22}{/c} seconds. You and your Allies gain {c_number}[SF_23 * 100]%{/c} increased Attack Speed while standing in the blood pool.",
    "hLabel": 2991776313
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod6_Name",
-   "szText": "Warrior's Rupture",
+   "szText": "Blood Pool",
    "hLabel": 2687683830
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod7_Description",
+   "szText": "Casting {c_important}Rupture{/c} Summons {c_number}[SF_47]{/c} Ancients that skewer your target for {c_number}{payload:INITIAL_DAMAGE}{/c} damage and then performing a rip attack that deals {c_number}{payload:UPGRADEC_RIP_DAMAGE}{/c} as direct damage instead of Bleeding.",
+   "hLabel": 28437434
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod7_Name",
+   "szText": "All For One",
+   "hLabel": 2726819223
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod8_Description",
+   "szText": "{c_important}Rupture's{/c} Size is increased by {c_number}[{SF_52}*100|%|]{/c}.",
+   "hLabel": 1360065851
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod8_Name",
+   "szText": "Size Bonus",
+   "hLabel": 2765954616
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod5_Description",
+   "szText": "{c_important}Rupture{/c} deals {c_number}[{SF_43}*100|x%|]{/c} increased damage. Each subsequent enemy Hit reduces this bonus by {c_number}[{SF_44}*100|%|]{/c}.",
+   "hLabel": 1660147896
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod5_Name",
+   "szText": "Damage Bonus",
+   "hLabel": 2648548437
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod10_Description",
+   "szText": "Ripping your weapon out of enemies reduces {c_important}Rupture's{/c} Cooldown by {c_number}{SF_50}{/c} second.",
+   "hLabel": 2741697796
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod10_Name",
+   "szText": "Cooldown Reduction",
+   "hLabel": 3070117409
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod11_Description",
+   "szText": "Heal for {c_number}[{SF_55}*100|%|]{/c} of your Maximum Life on Hit.",
+   "hLabel": 4073326213
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod11_Name",
+   "szText": "Healing",
+   "hLabel": 3109252802
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod9_Description",
+   "szText": "(NYI) You teleport to them before you {c_important}Rupture{/c} ",
+   "hLabel": 2691694268
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod9_Name",
+   "szText": "(NYI) Upgrade 2",
+   "hLabel": 2805090009
   }
  ],
  "ptMapStringTable": "0"

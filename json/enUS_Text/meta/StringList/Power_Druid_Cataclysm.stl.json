@@ -15,14 +15,14 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "desc",
-   "szText": "{c_label}Cooldown: {/c}{c_resource}{Cooldown Time}{/c} seconds\r\n{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat Effect Chance}|%|]{/c}\r\n{/if}A massive storm follows you for {c_number}{buffduration:TORNADO_SPAWNING}{/c} seconds. Twisters Knock Back enemies dealing {c_number}{payload:TORNADO_DAMAGE}{/c} damage, and lightning strikes wildly dealing {c_number}{payload:LIGHTNING_STRIKE}{/c} damage.{if:SF_38} \r\n\r\nCasting {c_important}Cataclysm{/c} Slows surrounding enemies by {c_number}[{SF_39}|%|]{/c} for {c_number}{SF_40}{/c} seconds.{/if}",
+   "szText": "{c_label}Cooldown: {/c}{c_resource}{Cooldown Time}{/c} seconds\r\n{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat Effect Chance}|%|]{/c}\r\n{/if}A massive storm follows you for {c_number}{buffduration:TORNADO_SPAWNING}{/c} seconds. Twisters Knock Back enemies dealing {c_number}{payload:TORNADO_DAMAGE}{/c} damage, and lightning strikes wildly dealing {c_number}{payload:LIGHTNING_STRIKE}{/c} damage.",
    "hLabel": 3707583
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "rankup_desc",
-   "szText": "\r\n{icon:bullet, 1.2} Twister Damage {icon:arrow, 1.2} {c_number}{payload:TORNADO_DAMAGE}{/c}\r\n{icon:bullet, 1.2} Lightning Damage {icon:arrow, 1.2} {c_number}{payload:LIGHTNING_STRIKE}{/c}\r\n{icon:bullet,1.2} Cooldown {icon:arrow,1.2} {c_number}{Cooldown Time}{/c} seconds\r\n{c_label}At Rank 5:{/c}\r\n{icon:arrow,1.2} Casting {c_important}Cataclysm{/c} Slows surrounding enemies by {c_number}[{SF_39}|%|]{/c} for {c_number}{SF_40}{/c} seconds",
+   "szText": "\r\n{icon:bullet, 1.2} Twister Damage {icon:arrow, 1.2} {c_number}{payload:TORNADO_DAMAGE}{/c}\r\n{icon:bullet, 1.2} Lightning Damage {icon:arrow, 1.2} {c_number}{payload:LIGHTNING_STRIKE}{/c}",
    "hLabel": 4074074671
   },
   {
@@ -42,16 +42,142 @@
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
-   "szLabel": "Mod0_Description",
-   "szText": "Lightning strikes from {c_important}Cataclysm{/c} make enemies {c_important}{u}Vulnerable{/u}{/c} for {c_number}{SF_31}{/c} seconds.",
-   "hLabel": 3591940403
+   "szLabel": "Mod3_Description",
+   "szText": "{c_important}Cataclysm{/c} spawns double the Twister and Lightning Bolts. In addition, Lighting Bolt strikes have a {c_number}[SF_57*100|%|]{/c} chance to spawn {c_number}2-4{/c} {c_important}Dancing Bolts{/c} that deal {c_number}{payload:UPGRADEA_TOOLTIP_DBOLT_DAMAGE}{/c} damage.",
+   "hLabel": 3291858358
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
-   "szLabel": "Mod0_Name",
-   "szText": "Supreme Cataclysm",
-   "hLabel": 2452871472
+   "szLabel": "Mod3_Name",
+   "szText": "Severe Storm",
+   "hLabel": 2570277651
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod4_Description",
+   "szText": "All Twisters now orbit you and deal {c_number}[SF_45*100|x%|]{/c} bonus damage.",
+   "hLabel": 328519479
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod4_Name",
+   "szText": "Terrible Twisters",
+   "hLabel": 2609413044
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod5_Description",
+   "szText": "{c_important}Cataclysm{/c} is also an {c_important}Earth{/c} Skill.\r\n\r\n{c_important}Cataclysm{/c} additionally summons {c_important}{u}Tectonic Spikes{/u}{/c} around you for the duration dealing {c_number}{payload:TREMOR_DAMAGE}{/c} Physical damage.",
+   "hLabel": 1660147896
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod5_Name",
+   "szText": "Tectonic Spikes",
+   "hLabel": 2648548437
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod6_Description",
+   "szText": "Casting {c_important}Cataclysm{/c} Slows surrounding enemies by {c_number}[SF_39*100|%|]{/c} for {c_number}{SF_40}{/c} seconds.",
+   "hLabel": 2991776313
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod6_Name",
+   "szText": "Slow",
+   "hLabel": 2687683830
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod7_Description",
+   "szText": "{c_important}Cataclysm's{/c} duration is increased by {c_number}{SF_53}{/c} seconds.",
+   "hLabel": 28437434
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod7_Name",
+   "szText": "Duration",
+   "hLabel": 2726819223
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod8_Description",
+   "szText": "Casting {c_important}Cataclysm{/c} grants {c_number}{SF_55}{/c} stacks of {c_important}{u}Ferocity{/u}{/c}.",
+   "hLabel": 1360065851
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod8_Name",
+   "szText": "Ferocity",
+   "hLabel": 2765954616
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod9_Description",
+   "szText": "Enemies hit by {c_important}Cataclysm{/c} are {c_important}{u}Vulnerable{/u}{/c}.",
+   "hLabel": 2691694268
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod9_Name",
+   "szText": "Vulnerable",
+   "hLabel": 2805090009
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod14_Description",
+   "szText": "Enemies hit by {c_important}Cataclysm{/c} become {c_important}{u}Vulnerable{/u}{/c}.",
+   "hLabel": 3773244168
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod14_Name",
+   "szText": "Vulnerable",
+   "hLabel": 3226658981
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod11_Description",
+   "szText": "{c_important}Cataclysm{/c} becomes a {c_important}Werewolf{/c} Skill.",
+   "hLabel": 4073326213
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod11_Name",
+   "szText": "Werewolf",
+   "hLabel": 3109252802
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod12_Description",
+   "szText": "{c_important}Cataclysm's{/c} damage is increased by {c_number}[SF_42 * 100|%x|]{/c}.",
+   "hLabel": 1109987334
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod12_Name",
+   "szText": "Human",
+   "hLabel": 3148388195
   }
  ],
  "ptMapStringTable": "0"

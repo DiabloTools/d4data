@@ -15,43 +15,113 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "desc",
-   "szText": "{c_label}Cooldown:{/c_label} {c_resource}{Cooldown Time}{/c_resource} seconds\r\n{if:SF_16}{c_label}Lucky Hit Chance: {/c}{c_resource}[{SF_19}|%|]{/c}\r\n{else}{/if}Explode into rage, {if:SF_16}Pulling In{else} Knocking Back {/if} surrounding enemies and {if:SF_16}dealing {c_number}{payload:PULL_PAYLOAD}{/c} damage to them plus {/if}gaining {c_important}{u}Berserking{/u}{/c}, and {c_important}{u}Unstoppable{/u}{/c} for {c_number}{SF_13}{/c} seconds.",
+   "szText": "{c_label}Cooldown:{/c_label} {c_resource}{Cooldown Time}{/c_resource} seconds\r\nExplode into rage, Knocking Back surrounding enemies while gaining {c_important}{u}Berserking{/u}{/c} and {c_important}{u}Unstoppable{/u}{/c} for {c_number}[{SF_13}|1|]{/c} seconds.",
    "hLabel": 3707583
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "rankup_desc",
-   "szText": "\r\n{icon:bullet,1.2} Cooldown {icon:arrow,1.2} {c_number}{Cooldown Time}{/c} seconds\r\n{c_label}At Rank 5:{/c}\r\n{icon:arrow,1.2} {c_important}Wrath of the Berserker{/c} Pulls In enemies instead of Knocking Back and deals {c_number}{payload:PULL_PAYLOAD}{/c} damage to them",
+   "szText": "\r\n{icon:bullet,1.2} Duration {icon:arrow,1.2}{c_number}[{SF_13}|1|]{/c} seconds{if:Mod.UpgradeA}\r\n{icon:bullet,1.2} Fury Spent {icon:arrow,1.2}{c_number}{SF_36}{/c}{/if}{if:Mod.UpgradeB}\r\n{icon:bullet,1.2} Explosion {icon:arrow,1.2}{c_number}{payload:VARIANTB_IMPACT}{/c}{/if}{if:Mod.UpgradeC}\r\n{icon:bullet,1.2} Fire Damage {icon:arrow,1.2}{c_number}{payload:UPGRADE_C_PAYLOAD}{/c}\r\n{icon:bullet,1.2} Burn Damage {icon:arrow,1.2}{c_number}{c_number}{dot:VARIANT_C_BURNING}{/c}{/if}",
    "hLabel": 4074074671
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod0_Description",
-   "szText": "While {c_important}Wrath of the Berserker{/c} is active, every {c_number}{SF_5}{/c} Fury you spend increases {c_important}{u}Berserking's{/u}{/c} damage bonus by {c_number}[{SF_6}*100|%x|]{/c}, up to {c_number}[{SF_7} * 100|%x|]{/c}.",
+   "szText": "While {c_important}Wrath of the Berserker{/c} is active, every {c_number}{SF_36}{/c} Fury spent increases its duration by {c_number}{SF_37}{/c} second, up to {c_number}{SF_38}{/c}.",
    "hLabel": 3591940403
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod0_Name",
-   "szText": "Supreme Wrath of the Berserker",
+   "szText": "Maximum Carnage",
    "hLabel": 2452871472
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod2_Description",
-   "szText": "While {c_important}Wrath of the Berserker{/c} is active, gain {c_number}[{SF_3} * 100|%+|]{/c} increased Movement Speed and increase Fury Generation by {c_number}[{SF_14} * 100|%x|]{/c}.",
+   "szText": "While {c_important}Wrath of the Berserker{/c} is active, all attacks causes a fiery explosion for {c_number}{payload:VARIANTB_IMPACT}{/c} damage.",
    "hLabel": 1960229941
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod2_Name",
-   "szText": "Prime Wrath of the Berserker",
+   "szText": "Deep Impact",
    "hLabel": 2531142258
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod6_Description",
+   "szText": "While {c_important}Wrath of the Berserker{/c} is active, you gain a Fire aura that deals {c_number}{payload:UPGRADE_C_PAYLOAD}{/c} damage and Burns for {c_number}{dot:VARIANT_C_BURNING}{/c} damage over {c_number}{buffduration:VARIANT_C_BURNING}{/c} seconds. You gain {c_number}[SF_39|+%|]{/c} All Resistance.",
+   "hLabel": 2991776313
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod6_Name",
+   "szText": "Full Throttle",
+   "hLabel": 2687683830
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod7_Description",
+   "szText": "While {c_important}Wrath of the Berserker{/c} is active, gain {c_number}[SF_31 * 100|%+|]{/c} Attack Speed and increase {c_important}Fury{/c} Generation by {c_number}[SF_32 * 100|%x|]{/c}.",
+   "hLabel": 28437434
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod7_Name",
+   "szText": "Fury Generation",
+   "hLabel": 2726819223
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod8_Description",
+   "szText": "While {c_important}Wrath of the Berserker{/c} is active, your {c_important}{u}Berserking{/u}{/c} damage bonus is increased by {c_number}[SF_33 * 100|%x|]{/c}.",
+   "hLabel": 1360065851
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod8_Name",
+   "szText": "Berserking",
+   "hLabel": 2765954616
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod9_Description",
+   "szText": "The duration of {c_important}Wrath of the Berserker{/c} is increased to {c_number}[{SF_43}|1|]{/c} seconds.",
+   "hLabel": 2691694268
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod9_Name",
+   "szText": "Duration Bonus",
+   "hLabel": 2805090009
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod10_Description",
+   "szText": "{c_important}Wrath of the Berserker{/c} grants {c_number}{SF_48}{/c} stack of {c_important}{u}Overpower{/u}{/c} per second.",
+   "hLabel": 2741697796
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod10_Name",
+   "szText": "Overpower",
+   "hLabel": 3070117409
   }
  ],
  "ptMapStringTable": "0"

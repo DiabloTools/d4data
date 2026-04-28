@@ -15,29 +15,127 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "desc",
-   "szText": "{c_label}Cooldown:{/c_label} {c_resource}{Cooldown Time}{/c_resource} seconds\r\n{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat Effect Chance}|%|]{/c}\r\n{/if}Arrows rain down over a large area dealing {c_number}{payload:TOOLTIP_DAMAGE}{/c} damage and Knocking Down enemies for {c_number}{buffduration:MOD_KNOCKDOWN}{/c} seconds.{if:SF_27} \r\n\r\nDistant Damage Bonus {icon:arrow, 1.2} {c_number}[{SF_26} * 100|1%x|]{/c}.{/if}",
+   "szText": "{c_label}Cooldown:{/c_label} {c_resource}{Cooldown Time}{/c_resource} seconds\r\n{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat Effect Chance}|%|]{/c}\r\n{/if}Arrows rain down over a large area dealing {c_number}{payload:TOOLTIP_DAMAGE}{/c} damage and Immobilizing enemies for {c_number}[SF_19]{/c} seconds.",
    "hLabel": 3707583
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "rankup_desc",
-   "szText": "\r\n{icon:bullet, 1.2} Damage {icon:arrow, 1.2} {c_number}{payload:TOOLTIP_DAMAGE}{/c}\r\n{icon:bullet,1.2} Cooldown {icon:arrow,1.2} {c_number}{Cooldown Time}{/c} seconds\r\n{c_label}At Rank 5:{/c}\r\n{icon:arrow,1.2} {c_important}Rain of Arrows{/c} damage is increased by {c_number}[{SF_25}*100|x%|]{/c} of your Damage to Distant bonus, up to {c_number}[{SF_28}*100|x%|]{/c}.",
+   "szText": "\r\n{icon:bullet, 1.2} Damage {icon:arrow, 1.2} {c_number}{if:Mod.UpgradeB}{payload:UPGRADE_B_TOOLTIP_DAMAGE}{else}{payload:TOOLTIP_DAMAGE}{/if}{/c}{if:Mod.UpgradeA}\r\n{icon:bullet, 1.2} Additional Wave Damage {icon:arrow, 1.2} {c_number}{payload:UPGRADE_A_TOOLTIP_DAMAGE}{/c}{/if}{if:Mod.UpgradeC}\r\n{icon:bullet, 1.2} Arrow Storm Damage {icon:arrow, 1.2} {c_number}{payload:UPGRADE_C_TOOLTIP_DAMAGE}{/c}{/if}",
    "hLabel": 4074074671
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
+   "szLabel": "Mod3_Description",
+   "szText": "{c_important}Rain of Arrows{/c} no longer Immobilizes, and instead, its first wave Knocks Down enemies for {c_number}{buffduration:MOD_KNOCKDOWN}{/c} seconds.\r\n\r\nCasting {c_important}Rain of Arrows{/c} consumes {c_number}[SF_40]{/c} stacks of {c_important}{u}Overpower{/u}{/c} to send out {c_number}[SF_41]{/c} additional waves, each dealing {c_number}{payload:UPGRADE_A_TOOLTIP_DAMAGE}{/c} damage.",
+   "hLabel": 3291858358
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod3_Name",
+   "szText": "Monsoon",
+   "hLabel": 2570277651
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod7_Description",
+   "szText": "{c_important}Rain of Arrows{/c} now comes in from the sides in shorter waves and no longer Immobilizes, but instead deals {c_number}{payload:UPGRADE_B_TOOLTIP_DAMAGE}{/c} damage, Knocks Back enemies towards the center, and makes them {c_important}{u}Vulnerable{/u}{/c} for {c_number}{SF_34}{/c} seconds.",
+   "hLabel": 28437434
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod7_Name",
+   "szText": "Crashing Waves",
+   "hLabel": 2726819223
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod5_Description",
+   "szText": "{c_important}Rain of Arrows{/c} also unleashes {c_number}[SF_30]{/c} {c_important}Arrow Storms{/c} that target Nearby enemies, each dealing {c_number}{payload:UPGRADE_C_TOOLTIP_DAMAGE}{/c} damage.",
+   "hLabel": 1660147896
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod5_Name",
+   "szText": "Flash Flood",
+   "hLabel": 2648548437
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
    "szLabel": "Mod0_Description",
-   "szText": "{c_important}Rain of Arrows{/c} deals {c_number}[SF_23*100|%x|]{/c} increased damage to both {c_important}{u}Vulnerable{/u}{/c} and Crowd Controlled enemies.",
+   "szText": "{c_important}Rain of Arrows'{/c} Cooldown is reduced by {c_number}{SF_35}{/c} seconds.",
    "hLabel": 3591940403
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod0_Name",
-   "szText": "Supreme Rain of Arrows",
+   "szText": "Cooldown",
    "hLabel": 2452871472
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod15_Description",
+   "szText": "{c_important}Rain of Arrows{/c} deals {c_number}[{SF_36} * 100|%x|]{/c} increased damage and has a {c_number}[{SF_39} * 100|%|]{/c} chance to deal double damage.",
+   "hLabel": 809905289
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod15_Name",
+   "szText": "Double Damage",
+   "hLabel": 3265794374
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod13_Description",
+   "szText": "{c_important}Rain of Arrows'{/c} damage is increased by {c_number}[{SF_37}*100|%x|]{/c} for every stack of {c_important}{u}Ferocity{/u}{/c} you have when Casting {c_important}Rain of Arrows{/c}.",
+   "hLabel": 2441615751
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod13_Name",
+   "szText": "Ferocity",
+   "hLabel": 3187523588
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod11_Description",
+   "szText": "{c_important}Rain of Arrows'{/c} Cast Speed is increased by {c_number}[{SF_38} * 100|%+|]{/c} and Lucky Hit Chance is increased by {c_number}[{SF_44} * 100|%x|]{/c}.",
+   "hLabel": 4073326213
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod11_Name",
+   "szText": "Cast Speed and Lucky Hit",
+   "hLabel": 3109252802
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod9_Description",
+   "szText": "{c_important}Rain of Arrows{/c} deals {c_number}[SF_23*100|%x|]{/c} increased damage to both {c_important}{u}Vulnerable{/u}{/c} and Crowd Controlled enemies.",
+   "hLabel": 2691694268
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod9_Name",
+   "szText": "Supreme Rain of Arrows",
+   "hLabel": 2805090009
   },
   {
    "__type__": "StringTableEntry",

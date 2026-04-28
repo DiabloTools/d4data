@@ -15,71 +15,127 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "desc",
-   "szText": "{if:SF_18}{c_label}Energy Cost: {/c}{c_resource}{Resource Cost}{/c}\r\n{/if}{if:SF_11}{c_label}Generate Combo Point:{/c} {c_resource}{SF_10}{/c}\r\n{/if}{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat Effect Chance}|%|]{/c}\r\n{/if}Melee attack an enemy, dealing {c_number}{payload:IMPACT}{/c} damage and increasing Energy Regeneration by {c_number}[{SF_4}*100|%x|]{/c} for {c_number}{buffduration:ENERGY_REGEN}{/c} seconds.",
+   "szText": "{if:SF_18}{c_label}Energy Cost: {/c}{c_resource}{Resource Cost}{/c}\r\n{/if}{if:SF_11}{c_label}Generate Combo Point:{/c} {c_resource}{SF_10}{/c}\r\n{/if}{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat Effect Chance}|%|]{/c}\r\n{/if}Melee attack an enemy, dealing {c_number}{payload:IMPACT}{/c} damage and also gain {c_number}{SF_4}{/c} Energy once every {c_number}[{SF_7}|1|]{/c} seconds for {c_number}{buffduration:ENERGY_REGEN}{/c} seconds.",
    "hLabel": 3707583
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "rankup_desc",
-   "szText": "\r\n{icon:bullet,1.2} Damage {icon:arrow,1.2} {c_number}{payload:IMPACT}{/c}",
+   "szText": "\r\n{icon:bullet,1.2} {if:Mod.UpgradeC}Cleave Damage{else}Damage{/if} {icon:arrow,1.2} {c_number}{if:SF_41}{payload:IMPACT}{/if}{if:Mod.UpgradeA}{payload:UPGRADEA_IMPACT}{/if}{if:Mod.UpgradeB}{payload:UPGRADEB_IMPACT}{/if}{/c}{if:Mod.UpgradeC}{payload:CLEAVE_PAYLOAD}{/if}{/c}",
    "hLabel": 4074074671
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
-   "szLabel": "Buff5_Name",
-   "szText": "Cooldown Reduction",
-   "hLabel": 426817688
+   "szLabel": "Buff16_Name",
+   "szText": "Cast Speed",
+   "hLabel": 3002259082
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
-   "szLabel": "Buff5_Description",
-   "szText": "Cooldown Reduction",
-   "hLabel": 3036881819
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
-   "szLabel": "Mod1_Description",
-   "szText": "Damaging a Crowd Controlled or {c_important}{u}Injured{/u}{/c} enemy with {c_important}Invigorating Strike{/c} increases its Energy Regeneration bonus to {c_number}[({SF_4}+{SF_6})*100|%x|]{/c}.",
-   "hLabel": 628601524
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
-   "szLabel": "Mod1_Name",
-   "szText": "Enhanced Invigorating Strike",
-   "hLabel": 2492006865
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
-   "szLabel": "Mod2_Description",
-   "szText": "Hitting an enemy with {c_important}Invigorating Strike{/c} while you are below {c_number}[{SF_7}*100|%|]{/c} Energy makes them {c_important}{u}Vulnerable{/u}{/c} for {c_number}{SF_8}{/c} seconds.",
-   "hLabel": 1960229941
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
-   "szLabel": "Mod2_Name",
-   "szText": "Fundamental Invigorating Strike",
-   "hLabel": 2531142258
+   "szLabel": "Buff16_Description",
+   "szText": "Increases Invigorating Strike Cast Speed by {c_number}[{SF_32}*100|%|]{/c} per stack.",
+   "hLabel": 329112909
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod3_Description",
-   "szText": "{c_important}Invigorating Strike{/c} additionally grants {c_number}[{SF_14} * 100|%+|]{/c} Lucky Hit Chance. Hitting a Crowd Controlled or {c_important}{u}Injured{/u}{/c} enemy increases this bonus to {c_number}[{SF_14} * {SF_15} *100|%+|]{/c} Lucky Hit Chance.",
+   "szText": "{c_important}Invigorating Strike{/c} now deals {c_number}{payload:UPGRADEA_IMPACT}{/c} damage and every {c_number}[SF_31]rd{/c} cast grants {c_number}[SF_30]{/c} stack of {c_important}{u}Resolve{/u}{/c} and {c_number}[SF_29]{/c} stack of {c_important}{u}Ferocity{/u}{/c}.",
    "hLabel": 3291858358
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod3_Name",
-   "szText": "Primary Invigorating Strike",
+   "szText": "Accumulating Strike",
    "hLabel": 2570277651
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod2_Description",
+   "szText": "{c_important}Invigorating Strike{/c} is also a {c_important}Mobility{/c} Skill.\r\n\r\nCasting {c_important}Invigorating Strike{/c} now dashes you to the target, dealing {c_number}{payload:UPGRADEB_IMPACT}{/c} damage and granting {c_number}[{SF_15}*100|%x|]{/c} increased Movement Speed for {c_number}{buffduration:UPGRADEB_MOVEMENT_SPEED_BONUS}{/c} seconds.",
+   "hLabel": 1960229941
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod2_Name",
+   "szText": "Quick Strike",
+   "hLabel": 2531142258
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod4_Description",
+   "szText": "{c_important}Invigorating Strike{/c} now cleaves, dealing {c_number}{payload:IMPACT_COLD}{/c} Cold damage and {c_important}{u}Chilling{/u}{/c} enemies for {c_number}{SF_23}%{/c} per attack.",
+   "hLabel": 328519479
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod4_Name",
+   "szText": "Enervating Strike",
+   "hLabel": 2609413044
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod1_Description",
+   "szText": "Gain {c_number}{SF_13}{/c} additional Energy once every {c_number}[{SF_7}|1|]{/c} seconds after hitting an enemy with {c_important}Invigorating Strike{/c}. If a Close enemy is Crowd Controlled, the additional Energy gain is increased to {c_number}[{SF_13} + {SF_6}]{/c}.",
+   "hLabel": 628601524
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod1_Name",
+   "szText": "Energy",
+   "hLabel": 2492006865
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod6_Description",
+   "szText": "Increases {c_important}Invigorating Strike{/c} Cast Speed by {c_number}[{SF_32}*100|%|]{/c} when hitting an enemy for the first time, up to {c_number}[{SF_32}*100*{SF_33}|%|]{/c}, for {c_number}[SF_34]{/c} seconds.",
+   "hLabel": 2991776313
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod6_Name",
+   "szText": "Cast Speed",
+   "hLabel": 2687683830
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod8_Description",
+   "szText": "Hitting an enemy with {c_important}Invigorating Strike{/c} makes them {c_important}{u}Vulnerable{/u}{/c} for {c_number}[SF_8]{/c} seconds.",
+   "hLabel": 1360065851
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod8_Name",
+   "szText": "Vulnerable",
+   "hLabel": 2765954616
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod10_Description",
+   "szText": "Heal for {c_number}[{SF_35}*100|%|]{/c} of your Maximum Life once every {c_number}[{SF_37}|1|]{/c} seconds for {c_number}{SF_5}{/c} seconds after hitting an enemy with {c_important}Invigorating Strike{/c}.",
+   "hLabel": 2741697796
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod10_Name",
+   "szText": "Healing",
+   "hLabel": 3070117409
   }
  ],
  "ptMapStringTable": "0"

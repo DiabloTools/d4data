@@ -15,43 +15,127 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "desc",
-   "szText": "{c_label}Cooldown:{/c_label} {c_resource}{Cooldown Time}{/c_resource} seconds\r\nImbue your weapons with frigid energies. Your next {c_number}{SF_0}{/c} {c_important}Imbueable{/c} Skills deal Cold damage and {c_important}{u}Chill{/u}{/c} enemies for {c_number}[{SF_3}|%|]{/c} per hit.",
+   "szText": "{c_label}Cooldown:{/c_label} {c_resource}{Cooldown Time}{/c_resource} seconds\r\n{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat_Effect_Chance_Script_Formula_Override:6}|%|]{/c}\r\n{/if}Imbue your weapons with frigid energies for {c_number}{buffduration:ICE_CHARGES}{/c} seconds. While imbued, your {c_important}Imbueable{/c} Skills deal Cold damage, {c_important}{u}Chill{/u}{/c} enemies for {c_number}[{SF_3}|%|]{/c} per hit, and {c_important}{u}Weaken{/u}{/c} enemies for {c_number}[{SF_5}]{/c} seconds.",
    "hLabel": 3707583
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "rankup_desc",
-   "szText": "\r\n{icon:bullet,1.2} {c_important}{u}Chill{/u}{/c} Amount {icon:arrow,1.2} {c_number}[{SF_3}|%|]{/c} ",
+   "szText": "\r\n{icon:bullet,1.2} {c_important}{u}Chill{/u}{/c} Amount {icon:arrow,1.2} {c_number}[{SF_3}|%|]{/c}{if:Mod.UpgradeA}\r\n{icon:bullet, 1.2} Duration {icon:arrow, 1.2} {c_number}[{SF_8}*100|x%|]{/c}{/if}{if:Mod.UpgradeB}\r\n{icon:bullet, 1.2} Barrier Amount {icon:arrow, 1.2} {c_number}[{SF_31}*100|1%|]{/c}{/if}{if:Mod.UpgradeC}\r\n{icon:bullet, 1.2} Frigid Damage {icon:arrow, 1.2} {c_number}{payload:IMPACT_COLD}{/c}{/if}",
    "hLabel": 4074074671
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
+   "szLabel": "Mod6_Description",
+   "szText": "{c_important}Cold Imbued{/c} Skills cause enemies to become {c_important}{u}Vulnerable{/u}{/c} for {c_number}[{SF_22}]{/c} seconds. {c_important}Cold Imbuement's{/c} Duration is increased by {c_number}[{SF_8}*100|x%|]{/c}.",
+   "hLabel": 2991776313
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod6_Name",
+   "szText": "Frozen Heart",
+   "hLabel": 2687683830
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod10_Description",
+   "szText": "{c_label}Lucky Hit:{/c} {c_important}Cold Imbued{/c} Skills have up to a {c_number}[{SF_11}*100|%|]{/c} chance to encase you in a {c_important}{u}Barrier{/u}{/c} for {c_number}[{SF_31}*100|1%|]{/c} of your Maximum Life, up to {c_number}[{SF_31}*{SF_32}*100|%|]{/c}, for {c_number}{buffduration:UPGRADE_B_BARRIER}{/c} seconds. This {c_important}{u}Barrier{/u}{/c} reduces your Energy costs by {c_number}[{SF_33}*100|%|]{/c}.",
+   "hLabel": 2741697796
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod10_Name",
+   "szText": "Buffered Battery",
+   "hLabel": 3070117409
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod8_Description",
+   "szText": "When {c_important}Cold Imbuement{/c} is Cast it now also creates a frigid emanation around you for {c_number}{SF_26}{/c} seconds that deals {c_number}{payload:IMPACT_COLD}{/c} Cold damage and {c_important}{u}Chills{/u}{/c} any enemies within for {c_number}[{SF_25}|%|]{/c} every {c_number}[{SF_29}|1|]{/c} seconds.",
+   "hLabel": 1360065851
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod8_Name",
+   "szText": "Crystal Distillation",
+   "hLabel": 2765954616
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
    "szLabel": "Mod2_Description",
-   "szText": "{c_label}Lucky Hit:{/c} {c_important}Cold Imbued{/c} Skills have up to a {c_number}[{SF_21}*100|%|]{/c} chance to make enemies {c_important}{u}Vulnerable{/u}{/c} for {c_number}{SF_22}{/c} seconds.",
+   "szText": "{c_important}Cold Imbued{/c} Skills grant {c_number}{SF_37}{/c} Energy when hitting an enemy for the first time.",
    "hLabel": 1960229941
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod2_Name",
-   "szText": "Enhanced Cold Imbuement",
+   "szText": "Energy",
    "hLabel": 2531142258
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
-   "szLabel": "Mod3_Description",
-   "szText": "{c_important}Cold Imbued{/c} Skills deal {c_number}[{SF_20}*100|%x|]{/c} damage to Crowd Controlled enemies. Double this bonus against {c_important}{u}Frozen{/u}{/C} enemies.",
-   "hLabel": 3291858358
+   "szLabel": "Mod14_Description",
+   "szText": "When {c_important}Cold Imbuement{/c} {c_important}{u}Chills{/u}{/c} an enemy, {c_important}Cold Imbuement's{/c} Cooldown is reduced by {c_number}[{SF_38}|1|]{/c} seconds.",
+   "hLabel": 3773244168
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
-   "szLabel": "Mod3_Name",
-   "szText": "Mixed Cold Imbuement",
-   "hLabel": 2570277651
+   "szLabel": "Mod14_Name",
+   "szText": "Cooldown",
+   "hLabel": 3226658981
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod16_Description",
+   "szText": "When {c_important}Cold Imbuement{/c} {c_important}{u}Chills{/u}{/c} an enemy, you have a {c_number}[{SF_42}*100|%|]{/c} chance to gain {c_number}{SF_40}{/c} stack of {c_important}{u}Resolve{/u}{/c}.",
+   "hLabel": 2141533706
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod16_Name",
+   "szText": "Resolve",
+   "hLabel": 3304929767
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod18_Description",
+   "szText": "When you {c_important}{u}Freeze{/u}{/c} an enemy while {c_important}Cold Imbued{/c}, gain {c_number}{SF_41}{/c} stack of {c_important}{u}Overpower{/u}{/c}.",
+   "hLabel": 509823244
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod18_Name",
+   "szText": "Overpower",
+   "hLabel": 3383200553
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod12_Description",
+   "szText": "{c_label}Lucky Hit:{/c} {c_important}Cold Imbued{/c} Skills have up to a {c_number}[{SF_21}*100|%|]{/c} chance to make enemies {c_important}{u}Vulnerable{/u}{/c} for {c_number}{SF_22}{/c} seconds.",
+   "hLabel": 1109987334
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod12_Name",
+   "szText": "Enhanced Cold Imbuement",
+   "hLabel": 3148388195
   },
   {
    "__type__": "StringTableEntry",

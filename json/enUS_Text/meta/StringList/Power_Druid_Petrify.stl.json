@@ -15,14 +15,14 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "desc",
-   "szText": "{c_label}Generate Spirit:{/c_label} {c_resource}{SF_10}{/c_resource}\r\n{c_label}Cooldown: {/c}{c_resource}{Cooldown Time}{/c} seconds\r\nEncase all Nearby enemies in stone, Stunning them for {c_number}{buffduration:BUFF_PETRIFIED_STUN}{/c} seconds. {if:SF_12}\r\n\r\n{/if}Casting {c_important}Petrify{/c} resets all your Non-{c_important}Ultimate{/c} Cooldowns.{/if}",
+   "szText": "{if:Mod.Upgrade1}{c_label}Generate Spirit:{/c_label} {c_resource}{SF_20}{/c_resource}\r\n{/if}{c_label}Cooldown: {/c}{c_resource}{Cooldown Time}{/c} seconds\r\nEncase all Nearby enemies in stone, Stunning them for {c_number}{buffduration:PETRIFIED}{/c} seconds. {c_important}Petrified{/c} enemies take {c_number}[SF_2*100|+%|]{/c} bonus Critical Strike Damage from you.",
    "hLabel": 3707583
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "rankup_desc",
-   "szText": "\r\n{icon:bullet,1.2} Cooldown {icon:arrow,1.2} {c_number}{Cooldown Time}{/c} seconds\r\n{c_label}At Rank 5:{/c}\r\n{icon:arrow,1.2} Casting {c_important}Petrify{/c} resets all your Non-{c_important}Ultimate{/c} Cooldowns",
+   "szText": "\r\n{icon:bullet,1.2} {c_important}Petrify{/c} Critical Strike Damage {icon:arrow,1.2} {c_number}[SF_2*100|+%|]{/c}",
    "hLabel": 4074074671
   },
   {
@@ -52,6 +52,132 @@
    "szLabel": "Mod2_Name",
    "szText": "Supreme Petrify",
    "hLabel": 2531142258
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod3_Description",
+   "szText": "Increase Petrify's duration by {c_number}[SF_14*100|%x|]{/c} and reduces the Cooldown by {c_number}[SF_12]{/c} seconds.",
+   "hLabel": 3291858358
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod3_Name",
+   "szText": "Greater Petrify",
+   "hLabel": 2570277651
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod4_Description",
+   "szText": "When enemies are {c_important}Petrified{/c}, they take {c_number}{payload:UPGRADEB_PETRIFY_DAMAGE}{/c} damage.",
+   "hLabel": 328519479
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod4_Name",
+   "szText": "Seismic Shift",
+   "hLabel": 2609413044
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod5_Description",
+   "szText": "For {c_number}{SF_17}{/c} seconds after casting Petrify, any additional enemy who strikes you is also {c_important}Petrified{/c} for {c_number}{SF_18}{/c} seconds.",
+   "hLabel": 1660147896
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod5_Name",
+   "szText": "Enduring Consequences",
+   "hLabel": 2648548437
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod6_Description",
+   "szText": "{c_important}Petrify's{/c} duration is increased by {c_number}{SF_19}{/c} second.",
+   "hLabel": 2991776313
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod6_Name",
+   "szText": "Duration",
+   "hLabel": 2687683830
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod7_Description",
+   "szText": "{c_important}Petrify{/c} generates {c_number}{SF_20}{/c} Spirit.",
+   "hLabel": 28437434
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod7_Name",
+   "szText": "Spirit",
+   "hLabel": 2726819223
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod8_Description",
+   "szText": "{c_important}Petrify{/c} grants {c_number}{SF_21}{/c} stacks of {c_important}{u}Resolve{/u}{/c}. {c_number}[1]{/c} additional stack of {c_important}{u}Resolve{/u}{/c} is granted if an enemy is killed while {c_important}Petrified{/c}. {c_important}{u}Resolve{/u}{/c} bonuses from {c_important}Petrify{/c} may exceed the maximum.",
+   "hLabel": 1360065851
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod8_Name",
+   "szText": "Resolve",
+   "hLabel": 2765954616
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod9_Description",
+   "szText": "{c_important}Petrify{/c} grants {c_number}[SF_22|%x|]{/c} {c_important}{u}Fortify{/u}{/c}.",
+   "hLabel": 2691694268
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod9_Name",
+   "szText": "Fortify",
+   "hLabel": 2805090009
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod10_Description",
+   "szText": "Gain {c_number}[SF_6*100|+%|]{/c} bonus Critical Strike Damage when enemies are {c_important}Petrified{/c}.",
+   "hLabel": 2741697796
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod10_Name",
+   "szText": "Human",
+   "hLabel": 3070117409
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod11_Description",
+   "szText": "{c_important}Petrify{/c} becomes a {c_important}Werebear{/c} Skill.",
+   "hLabel": 4073326213
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod11_Name",
+   "szText": "Werebear",
+   "hLabel": 3109252802
   }
  ],
  "ptMapStringTable": "0"

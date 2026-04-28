@@ -29,7 +29,7 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "rankup_desc",
-   "szText": "\r\n{icon:bullet, 1.2} Impact Damage {icon:arrow, 1.2} {c_number}{payload:MELEE_PAYLOAD}{/c}\r\n{icon:bullet, 1.2} Bleeding Damage {icon:arrow, 1.2} {c_number}{payload:BLEED_TOOLTIP}{/c}",
+   "szText": "\r\n{icon:bullet, 1.2} Impact Damage {icon:arrow, 1.2} {c_number}{if:Mod.UpgradeC}{payload:VARIANTC_DAMAGE}{else}{payload:MELEE_PAYLOAD}{/if}{/c}\r\n{icon:bullet, 1.2} {if:Mod.UpgradeC}Burning{else}Bleeding{/if} Damage {icon:arrow, 1.2} {c_number}{if:Mod.UpgradeC}{payload:VARIANTC_BURN_TOOLTIP}{else}{payload:BLEED_TOOLTIP}{/if}{/c}",
    "hLabel": 4074074671
   },
   {
@@ -50,29 +50,99 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod2_Description",
-   "szText": "{c_important}Rend{/c} deals {c_number}[{SF_9}*100|%x|]{/c} increased damage to {c_important}{u}Vulnerable{/u}{/c} enemies.",
+   "szText": "{c_important}Rend{/c} gains {c_number}[{SF_28}*100|+%|]{/c} increased Size and {c_number}[{SF_37}*100|x%|]{/c} increased damage. Consecutive swings of {c_important}Rend{/c} further increases its Size by {c_number}[{SF_29}*100|+%|]{/c}, up to {c_number}[{SF_29}*{SF_30}*100|+%|]{/c}, until you stop swinging.",
    "hLabel": 1960229941
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod2_Name",
-   "szText": "Violent Rend",
+   "szText": "Flailing",
    "hLabel": 2531142258
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod1_Description",
-   "szText": "Direct damage with {c_important}Rend{/c} grants {c_number}{SF_8}{/c} Fury per enemy hit, up to a maximum of {c_number}{SF_7}{/c} Fury.",
+   "szText": "Enemies that die while Bleeding from {c_important}Rend{/c} spread {c_number}[{SF_35}*100|%|]{/c} their remaining Bleed onto a random Close enemy.",
    "hLabel": 628601524
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod1_Name",
-   "szText": "Furious Rend",
+   "szText": "Blood Sworn",
    "hLabel": 2492006865
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod9_Description",
+   "szText": "{c_important}Rend{/c} now deals Fire damage.\r\n\r\nEach slash creates a wave of fire, dealing {c_number}{payload:VARIANTC_DAMAGE}{/c} damage and an additional {c_number}{dot:VARIANTC_BURNING}{/c} Burning damage over {c_number}{buffduration:VARIANTC_BURNING}{/c} seconds.",
+   "hLabel": 2691694268
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod9_Name",
+   "szText": "Scorching",
+   "hLabel": 2805090009
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod11_Description",
+   "szText": "{c_important}Rend{/c} deals {c_number}[{SF_48}*100|x%|]{/c} increased damage to enemies that are moving.",
+   "hLabel": 4073326213
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod11_Name",
+   "szText": "Moving Damage Bonus",
+   "hLabel": 3109252802
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod12_Description",
+   "szText": "{c_important}Rend{/c} deals {c_number}[{SF_45}*100|x%|]{/c} increased damage to {c_important}{u}Vulnerable{/u}{/c} enemies.",
+   "hLabel": 1109987334
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod12_Name",
+   "szText": "Vulnerable Damage Bonus",
+   "hLabel": 3148388195
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod13_Description",
+   "szText": "{c_important}Rend{/c} gains {c_number}[{SF_46}*100|+%|]{/c} increased Cast Speed.",
+   "hLabel": 2441615751
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod13_Name",
+   "szText": "Cast Speed",
+   "hLabel": 3187523588
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod10_Description",
+   "szText": "Heal for {c_number}[{SF_47}*100|%|]{/c} of your Maximum Life per second for each enemy Bleeding from {c_important}Rend{/c}.",
+   "hLabel": 2741697796
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod10_Name",
+   "szText": "Healing",
+   "hLabel": 3070117409
   }
  ],
  "ptMapStringTable": "0"

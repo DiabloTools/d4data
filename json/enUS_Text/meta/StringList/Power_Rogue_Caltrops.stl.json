@@ -15,43 +15,15 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "desc",
-   "szText": "{c_label}Charges:{/c} {c_resource}{SF_9}{/c}\r\n{c_label}Charge Cooldown:{/c} {c_resource}{Recharge Time}{/c_resource} seconds \r\n{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat Effect Chance}|%|]{/c}\r\n{/if}Throw caltrops on the ground, dealing {c_number}{if:Mod.UpgradeB}{payload:IMPACT_COLD}{else}{payload:IMPACT}{/if}{/c} damage and Slowing enemies by {c_number}[{SF_1}*100|%|]{/c}. Lasts {c_number}{SF_0}{/c} seconds. ",
+   "szText": "{c_label}Charges:{/c} {c_resource}{SF_9}{/c}\r\n{c_label}Charge Cooldown:{/c} {c_resource}{Recharge Time}{/c_resource} seconds \r\n{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat Effect Chance}|%|]{/c}\r\n{/if}Throw caltrops on the ground, dealing {c_number}{payload:IMPACT}{/c} damage. Affected enemies take {c_number}{payload:IMPACT_OVER_TIME}{/c} damage every second and are Slowed by {c_number}[{SF_1}*100|%|]{/c}. Lasts {c_number}{SF_0}{/c} seconds. ",
    "hLabel": 3707583
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "rankup_desc",
-   "szText": "\r\n{icon:bullet,1.2} Damage {icon:arrow,1.2} {c_number}{if:Mod.UpgradeB}{payload:IMPACT_COLD}{else}{payload:IMPACT}{/if}{/c}\r\n{icon:bullet,1.2} Slow Amount {icon:arrow,1.2} {c_number}[{SF_1}*100|%|]{/c}",
+   "szText": "\r\n{icon:bullet,1.2} Initial Damage {icon:arrow,1.2} {c_number}{if:Mod.UpgradeB}{payload:IMPACT_COLD}{else}{payload:IMPACT}{/if}{/c}\r\n{icon:bullet,1.2} Continuous Damage {icon:arrow,1.2} {c_number}{if:Mod.UpgradeB}{payload:IMPACT_OVER_TIME_COLD}{else}{payload:IMPACT_OVER_TIME}{/if}{/c}\r\n{icon:bullet,1.2} Slow Amount {icon:arrow,1.2} {c_number}[{SF_1}*100|%|]{/c}{/if}{if:Mod.UpgradeA}\r\n{icon:bullet, 1.2} Chill Amount {icon:arrow, 1.2} {c_number}{SF_16}%{/c}{/if}{if:Mod.UpgradeB}\r\n{icon:bullet, 1.2} Dagger Damage {icon:arrow, 1.2} {c_number}{payload:UPGRADE_B_DAMAGE}{/c}{/if}{if:Mod.UpgradeC}\r\n{icon:bullet, 1.2} Poison Damage {icon:arrow, 1.2} {c_number}{dot:UPGRADE_C_POISON}{/c}{/if}",
    "hLabel": 4074074671
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
-   "szLabel": "Mod2_Description",
-   "szText": "Enemies in {c_important}Caltrops{/c} take {c_number}[SF_14 * SF_20 * 100|%x|]{/c} increased damage from you, increased by {c_number}[{SF_14} * 100|%x|]{/c} each second, up to {c_number}[{SF_37} * {SF_14} * 100|%x|]{/c}",
-   "hLabel": 1960229941
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
-   "szLabel": "Mod2_Name",
-   "szText": "Enhanced Caltrops",
-   "hLabel": 2531142258
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
-   "szLabel": "Mod3_Description",
-   "szText": "You have {c_number}[{SF_18} * 100|%+|]{/c} Critical Strike Chance against enemies inside your {c_important}Caltrops{/c}. Double this amount against {c_important}{u}Vulnerable{/u}{/c} enemies.",
-   "hLabel": 3291858358
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
-   "szLabel": "Mod3_Name",
-   "szText": "Disciplined Caltrops",
-   "hLabel": 2570277651
   },
   {
    "__type__": "StringTableEntry",
@@ -64,8 +36,92 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod4_Name",
-   "szText": "Methodical Caltrops",
+   "szText": "Catch Cold",
    "hLabel": 2609413044
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod3_Description",
+   "szText": "{c_important}Caltrops{/c} no longer Slows enemies and instead is also a {c_important}Marksman{/c} Skill that throws {c_number}[SF_33]{/c} piercing daggers over its duration, each dealing {c_number}{payload:UPGRADE_B_DAMAGE}{/c} Shadow damage. Enemies damaged by {c_important}Caltrops{/c} become {c_important}{u}Vulnerable{/u}{/c} for {c_number}[SF_31]{/c} seconds.",
+   "hLabel": 3291858358
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod3_Name",
+   "szText": "Mired Sharpshooter",
+   "hLabel": 2570277651
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod6_Description",
+   "szText": "Throw {c_number}{SF_45}{/c} smaller Caltrops that now deal Poison damage and {c_number}{dot:UPGRADE_C_POISON}{/c} Poisoning damage over {c_number}{buffduration:UPGRADE_C_POISON}{/c} seconds. Enemies affected by this Poisoning are {c_important}{u}Weakened{/u}{/c}",
+   "hLabel": 2991776313
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod6_Name",
+   "szText": "Pernicious Poisons",
+   "hLabel": 2687683830
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod2_Description",
+   "szText": "Casting {c_important}Caltrops{/c} grants {c_number}{SF_50}{/c} stack of {c_important}{u}Ferocity{/u}{/c}.",
+   "hLabel": 1960229941
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod2_Name",
+   "szText": "Ferocity",
+   "hLabel": 2531142258
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod10_Description",
+   "szText": "{c_important}Caltrops'{/c} size is increased by {c_number}[SF_49 * 100|%|]{/c}.",
+   "hLabel": 2741697796
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod10_Name",
+   "szText": "Size",
+   "hLabel": 3070117409
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod8_Description",
+   "szText": "You now have {c_number}[{SF_18} * 100|%+|]{/c} Critical Strike Chance against enemies inside your {c_important}Caltrops{/c}. Double this amount against {c_important}{u}Vulnerable{/u}{/c} enemies.",
+   "hLabel": 1360065851
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod8_Name",
+   "szText": "Critical Strike",
+   "hLabel": 2765954616
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod12_Description",
+   "szText": "{c_important}Caltrops'{/c} duration is increased by {c_number}{SF_48}{/c} seconds.",
+   "hLabel": 1109987334
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod12_Name",
+   "szText": "Duration",
+   "hLabel": 3148388195
   }
  ],
  "ptMapStringTable": "0"

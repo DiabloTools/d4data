@@ -54,21 +54,21 @@
    "y": 0,
    "z": 0
   },
-  "wdHeight": 1,
+  "wdHeight": 1.5,
   "wdRadius": 0.3799999952316284
  },
  "aabbBounds": {
   "__type__": "AABB",
   "__typeHash__": 2408934,
   "wp": {
-   "x": 0.5,
-   "y": 0.5,
-   "z": 0.5
+   "x": 0.75,
+   "y": 0.75,
+   "z": 0.75
   },
   "wvExt": {
    "x": 0.3799999952316284,
    "y": 0.3799999952316284,
-   "z": 0.5
+   "z": 0.75
   }
  },
  "wsBounds": {
@@ -108,8 +108,8 @@
  "flFadeCorpseTimeUntilFade": 10,
  "flFadeCorpseTime": 2,
  "aAbsoluteOrientation": 0,
- "flHitFlashPower": 1,
- "flHitFlashMultiplier": 1,
+ "flHitFlashPower": 2,
+ "flHitFlashMultiplier": 0.5,
  "flOverlayPower": 1,
  "eTopology": 1,
  "ptMsgTriggeredEvents": [],
@@ -133,19 +133,11 @@
    "tCollisionSettings": {
     "__type__": "CollisionSettings",
     "__typeHash__": 3066352125,
-    "snoCollision": {
-     "__raw__": 1335420,
-     "__group__": 127,
-     "__type__": "DT_SNO",
-     "__typeHash__": 2764331143,
-     "__targetFileName__": "base/meta/CollisionSettings/Flippy_Standard.col",
-     "groupName": "CollisionSettings",
-     "name": "Flippy_Standard"
-    },
+    "snoCollision": null,
     "tCustomCollFlags": {
      "__type__": "ActorCollisionFlags",
      "__typeHash__": 2766662738,
-     "uDynamicFlagsNoOverlap": 25264,
+     "uDynamicFlagsNoOverlap": 752,
      "uDynamicMyFlags": 128
     },
     "unk_a882afd": false,
@@ -161,7 +153,7 @@
      "y": 0,
      "z": 0
     },
-    "wdHeight": 1,
+    "wdHeight": 1.5,
     "wdRadius": 0.3799999952316284
    },
    "aabbCollision": {
@@ -182,7 +174,7 @@
    "unk_7a83a6d": true,
    "bAffectsRagdoll": false,
    "flStepUpHeight": 0.5,
-   "eNavBehavior": 1,
+   "eNavBehavior": 0,
    "flForceSimScaleFactor": 1,
    "ptHitCollisionShapes": [],
    "tProjectileSceneCollisionShape": {
@@ -328,6 +320,11 @@
      "__type__": "FoleyMaterialTag",
      "__typeHash__": 2077459498,
      "szTag": 4077680
+    },
+    {
+     "__type__": "FoleyMaterialTag",
+     "__typeHash__": 2077459498,
+     "szTag": 4077680
     }
    ],
    "unk_472eb5b": null,
@@ -358,7 +355,7 @@
    "tHairStateDefault": {
     "__type__": "HairAndBeardState",
     "__typeHash__": 1271971574,
-    "eHairState": 1,
+    "eHairState": 0,
     "eBeardState": 0,
     "eJewelryState": 0,
     "ePersonaState": 0,
@@ -425,6 +422,73 @@
    "fUseClassHairStateOverrides": false,
    "fUseClassHairStateGenderOverrides": false,
    "tClassHairStateOverrides": [
+    {
+     "__type__": "HairAndBeardState",
+     "__typeHash__": 1271971574,
+     "eHairState": 0,
+     "eBeardState": 0,
+     "eJewelryState": 0,
+     "ePersonaState": 0,
+     "eEyeState": 1,
+     "eMouthState": 1,
+     "bUsesHairClippingVolume": false,
+     "eHairCullShape": 0,
+     "tHairClippingSphere": {
+      "__type__": "Sphere",
+      "__typeHash__": 3384912071,
+      "wpCenter": {
+       "x": 0,
+       "y": 0,
+       "z": 0
+      },
+      "wdRadius": 0.10000000149011612
+     },
+     "tHairClippingCylinder": {
+      "__type__": "AxialCylinder",
+      "__typeHash__": 3017070665,
+      "wpBase": {
+       "x": 0,
+       "y": 0,
+       "z": 0
+      },
+      "wdHeight": 0.20000000298023224,
+      "wdRadius": 0.20000000298023224
+     },
+     "tHairCylinderRotation": {
+      "__type__": "bcQuat",
+      "__typeHash__": 3955716320,
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "w": 1
+     },
+     "tHairClippingBox": {
+      "__type__": "OBB",
+      "__typeHash__": 88275,
+      "transform": {
+       "__type__": "PRTransform",
+       "__typeHash__": 2588169118,
+       "q": {
+        "__type__": "bcQuat",
+        "__typeHash__": 3955716320,
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+       },
+       "wp": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+       }
+      },
+      "wvExt": {
+       "x": 0.10000000149011612,
+       "y": 0.10000000149011612,
+       "z": 0.10000000149011612
+      }
+     }
+    },
     {
      "__type__": "HairAndBeardState",
      "__typeHash__": 1271971574,
@@ -965,6 +1029,16 @@
      "ePersonaStateGenderOverride": 0,
      "eEyeStateGenderOverride": 0,
      "eMouthStateGenderOverride": 0
+    },
+    {
+     "__type__": "HairStateGenderOverrides",
+     "__typeHash__": 2872085037,
+     "eHairStateGenderOverride": 0,
+     "eBeardStateGenderOverride": 0,
+     "eJewleryStateGenderOverride": 0,
+     "ePersonaStateGenderOverride": 0,
+     "eEyeStateGenderOverride": 0,
+     "eMouthStateGenderOverride": 0
     }
    ],
    "snoAttachedActor": null,
@@ -973,7 +1047,7 @@
    "hSocketedActiveImage": 0,
    "fMustKeepInInventory": false,
    "fBottomless": false,
-   "eItemUseType": 77,
+   "eItemUseType": 0,
    "snoPowerUpPower": null,
    "snoItemUseLevelAreaRequirement": null,
    "tHardpointOffsets": [
@@ -1025,9 +1099,23 @@
      "fHardpointOffsetsHinting": true,
      "arMaleOffsets": [],
      "arFemaleOffsets": []
+    },
+    {
+     "__type__": "HardpointOffsets",
+     "__typeHash__": 1755847107,
+     "fHardpointOffsetsHinting": true,
+     "arMaleOffsets": [],
+     "arFemaleOffsets": []
     }
    ],
    "tHardpointMountedOffsets": [
+    {
+     "__type__": "HardpointOffsets",
+     "__typeHash__": 1755847107,
+     "fHardpointOffsetsHinting": true,
+     "arMaleOffsets": [],
+     "arFemaleOffsets": []
+    },
     {
      "__type__": "HardpointOffsets",
      "__typeHash__": 1755847107,
@@ -1139,6 +1227,11 @@
      "__type__": "MirrorItemState",
      "__typeHash__": 3604536395,
      "dwMirrorStateFlags": 0
+    },
+    {
+     "__type__": "MirrorItemState",
+     "__typeHash__": 3604536395,
+     "dwMirrorStateFlags": 0
     }
    ],
    "tWeaponData": {
@@ -1167,9 +1260,13 @@
      null,
      null,
      null,
+     null,
+     null,
      null
     ],
     "snoActor2": [
+     null,
+     null,
      null,
      null,
      null,

@@ -15,7 +15,7 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "desc",
-   "szText": "{c_label}Cooldown:{/c_label} {c_resource}{Cooldown Time}{/c_resource} seconds\r\nBellow a mighty war cry, increasing your damage dealt by {c_number}[{SF_1}*100|1%x|]{/c} for {c_number}[{SF_2}|1|]{/c} seconds, and Nearby allies for {c_number}[{SF_5}|1|]{/c} seconds.",
+   "szText": "{c_label}Cooldown:{/c_label} {c_resource}{Cooldown Time}{/c_resource} seconds\r\nBellow a mighty war cry, increasing your damage dealt by {c_number}[{SF_1}*100|1%x|]{/c} for {c_number}[{SF_2}|1|]{/c} seconds.\r\n\r\nNearby allies gain half of {c_important}War Cry's{/c} effects.",
    "hLabel": 3707583
   },
   {
@@ -29,7 +29,7 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "rankup_desc",
-   "szText": "\r\n{icon:bullet, 1.2} Damage Bonus {icon:arrow, 1.2} {c_number}[{SF_1}*100|1%x|]{/c}",
+   "szText": "\r\n{icon:bullet, 1.2} Damage Bonus {icon:arrow, 1.2} {c_number}[{SF_1}*100|1%x|]{/c}{if:Mod.UpgradeB}\r\n{icon:bullet, 1.2} Leap Damage {icon:arrow, 1.2} {c_number}{payload:LEAP_TOOLTIP}{/c}{/if}{if:Mod.UpgradeC}\r\n{icon:bullet, 1.2} Damage Increase {icon:arrow, 1.2} {c_number}[{SF_19} * 100|2%x|]{/c}{/if}",
    "hLabel": 4074074671
   },
   {
@@ -49,6 +49,20 @@
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
+   "szLabel": "Buff15_Name",
+   "szText": "War Cry",
+   "hLabel": 2963123689
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Buff15_Description",
+   "szText": "Damage Increased",
+   "hLabel": 3292451788
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
    "szLabel": "Mod3_Description",
    "szText": "{c_important}War Cry{/c} grants you {c_important}{u}Berserking{/u}{/c} for {c_number}{SF_10}{/c} seconds.",
    "hLabel": 3291858358
@@ -64,29 +78,99 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod4_Description",
-   "szText": "If at least {c_number}{SF_12}{/c} enemies are Nearby when you cast {c_important}War Cry{/c}, your damage bonus is increased by an additional {c_number}[{SF_9} *100|%x|]{/c}.",
+   "szText": "{c_important}War Cry's{/c} damage bonus is increased by {c_number}[SF_9*100|%|]{/c} and allies now receive its full effect. You also gain {c_important}{u}Berserking{/u}{/c} for {c_number}{SF_21}{/c} seconds.",
    "hLabel": 328519479
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod4_Name",
-   "szText": "Power War Cry",
+   "szText": "Mighty Roar",
    "hLabel": 2609413044
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod5_Description",
-   "szText": "{c_important}War Cry{/c} grants you {c_number}[{SF_15}*100|%|]{/c} Maximum Life {c_number}([Max(1,{fortified:MOD_FORTIFY_BASE})|0|]){/c} as {c_important}{u}Fortify{/u}{/c}.",
+   "szText": "{c_important}War Cry{/c} Summons {c_important}Korlic{/c} who leaps at enemies, dealing {c_number}{payload:LEAP_TOOLTIP}{/c} damage",
    "hLabel": 1660147896
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod5_Name",
-   "szText": "Mighty War Cry",
+   "szText": "Korlic",
    "hLabel": 2648548437
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod7_Description",
+   "szText": "{c_important}War Cry{/c} terrifies your enemies, causing them to cower in Fear. You gain {c_number}[SF_19 * 100|3%x|]{/c} increased damage for each enemy Feared, up to {c_number}[SF_19 * SF_20 * 100|2%x|]{/c}",
+   "hLabel": 28437434
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod7_Name",
+   "szText": "The Scream",
+   "hLabel": 2726819223
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod8_Description",
+   "szText": "{c_important}War Cry{/c} grants {c_number}{SF_22}{/c} stacks of {c_important}{u}Ferocity{/u}{/c}.",
+   "hLabel": 1360065851
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod8_Name",
+   "szText": "Ferocity",
+   "hLabel": 2765954616
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod11_Description",
+   "szText": "{c_important}War Cry{/c} Slows nearby enemies by {c_number}[SF_23 * 100|%|]{/c} for {c_number}[{SF_2}]{/c} seconds.",
+   "hLabel": 4073326213
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod11_Name",
+   "szText": "Slow",
+   "hLabel": 3109252802
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod10_Description",
+   "szText": "{c_important}War Cry's{/c} duration is increased to {c_number}{SF_27}{/c} seconds.",
+   "hLabel": 2741697796
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod10_Name",
+   "szText": "Duration Increase",
+   "hLabel": 3070117409
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod9_Description",
+   "szText": "{c_important}War Cry{/c} makes nearby enemies {c_important}{u}Vulnerable{/u}{/c} for {c_number}{SF_26}{/c} seconds.",
+   "hLabel": 2691694268
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod9_Name",
+   "szText": "Vulnerable",
+   "hLabel": 2805090009
   }
  ],
  "ptMapStringTable": "0"

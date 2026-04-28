@@ -15,7 +15,7 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "desc",
-   "szText": "{c_label}Essence Cost: {/c}{c_resource}{Resource Cost}{/c}\r\n{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat Effect Chance}|%|]{/c}\r\n{/if}Curse the target area. Enemies afflicted by {c_important}Iron Maiden{/c} take {c_number}{payload:CURSE_DAMAGE}{/c} damage every {c_number}{SF_17}{/c} seconds and each time they deal direct damage. Lasts {c_number}{buffduration:IRONMAIDEN_CURSE}{/c} seconds.",
+   "szText": "{if:Mod.Upgrade1}{c_label}Generate Essence:{/c} {c_resource}{SF_6}{/c}\r\n{else}{c_label}Essence Cost: {/c}{c_resource}{Resource Cost}{/c}\r\n{/if}{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat Effect Chance}|%|]{/c}\r\n{/if}Curse the target area. Enemies afflicted by {c_important}Iron Maiden{/c} take {c_number}{payload:CURSE_PERIODIC_DAMAGE}{/c} damage every {c_number}{SF_17}{/c} seconds and {c_number}{payload:CURSE_DAMAGE}{/c} damage each time they deal direct damage for {c_number}{buffduration:IRONMAIDEN_CURSE}{/c} seconds.",
    "hLabel": 3707583
   },
   {
@@ -28,44 +28,100 @@
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
-   "szLabel": "Mod0_Description",
-   "szText": "{c_important}Iron Maiden{/c} no longer costs Essence. Instead, gain {c_number}{SF_6}{/c} Essence for each enemy Cursed. Does not work with enemies who are already Cursed with {c_important}Iron Maiden{/c}.",
-   "hLabel": 3591940403
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
-   "szLabel": "Mod0_Name",
-   "szText": "Enhanced Iron Maiden",
-   "hLabel": 2452871472
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
    "szLabel": "Mod1_Description",
-   "szText": "Heal for {c_number}[{SF_7}*100|%|]{/c} of your Maximum Life {c_number}([PlayerHealthMax() * SF_7]){/c} when an enemy dies while afflicted with {c_important}Iron Maiden{/c}.",
+   "szText": "While at least {c_number}1{/c} enemy is afflicted with {c_important}Iron Maiden{/c}, you gain {c_number}{SF_9}{/c} Thorns.\r\n\r\n{c_important}Iron Maiden's{/c} damage is increased by {c_number}[{SF_29} * 100]%{/c} of your Thorns.",
    "hLabel": 628601524
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod1_Name",
-   "szText": "Abhorrent Iron Maiden",
+   "szText": "Schadenfreude",
    "hLabel": 2492006865
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod2_Description",
-   "szText": "When at least {c_number}{SF_8}{/c} enemies are afflicted by {c_important}Iron Maiden{/c}, its damage is increased by {c_number}[{SF_9}*100|%x|]{/c}.",
+   "szText": "{c_important}Iron Maiden{/c} is also a {c_important}Darkness{/c} Skill that deals Shadow damage. \r\n\r\nEnemies have {c_number}[{SF_11}*100|%|]{/c} chance to be stunned for {c_number}{SF_12}{/c} seconds when they take damage from {c_important}Iron Maiden{/c}.",
    "hLabel": 1960229941
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod2_Name",
-   "szText": "Horrid Iron Maiden",
+   "szText": "Torture Artist",
    "hLabel": 2531142258
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod3_Description",
+   "szText": "{c_important}Iron Maiden{/c} is also a {c_important}Blood{/c} Skill, causing enemies damaged by it to have a {c_number}[{SF_23}*100|%|]{/c} chance to form a {c_important}{u}Blood Orb{/c}{/u}. \r\n\r\nCasting {c_important}Iron Maiden{/c} picks up {c_number}[SF_31]{/c} {c_important}{u}Blood Orbs{/c}{/u} in the target area and causes them to burst for {c_number}{payload:BLOOD_EXPLOSION}{/c} damage.",
+   "hLabel": 3291858358
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod3_Name",
+   "szText": "Blood Maiden",
+   "hLabel": 2570277651
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod0_Description",
+   "szText": "{c_important}Iron Maiden{/c} no longer has an Essence cost and instead generates {c_number}{SF_6}{/c} Essence for each enemy you curse that was not already afflicted with {c_important}Iron Maiden{/c}.",
+   "hLabel": 3591940403
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod0_Name",
+   "szText": "Essence Generation",
+   "hLabel": 2452871472
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod4_Description",
+   "szText": "Enemies afflicted with {c_important}Iron Maiden{/c} will be {c_important}{u}Executed{/c}{/u}.\r\n\r\nYou are {c_important}{u}Fortified{/c}{/u} for {c_number}[{SF_7}*100|%|]{/c} of your Maximum Life {c_number}([Max(1,{fortified:FORTIFY})|0|]){/c} when an enemy dies while afflicted with {c_important}Iron Maiden.{/c}",
+   "hLabel": 328519479
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod4_Name",
+   "szText": "Execute and Fortify",
+   "hLabel": 2609413044
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod5_Description",
+   "szText": "Enemies afflicted with {c_important}Iron Maiden{/c} are {c_important}{u}Vulnerable{/c}{/u}.",
+   "hLabel": 1660147896
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod5_Name",
+   "szText": "Vulnerable",
+   "hLabel": 2648548437
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod6_Description",
+   "szText": "{c_label}Lucky Hit:{/c} Enemies hit while afflicted with {c_important}Iron Maiden{/c} have up to a {c_number}[{SF_25}*100|%|]{/c} chance to randomly grant {c_number}1{/c} stack of {c_important}{u}Ferocity{/c}{/u} or {c_important}{u}Overpower{/c}{/u}.",
+   "hLabel": 2991776313
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod6_Name",
+   "szText": "Ferocity and Overpower",
+   "hLabel": 2687683830
   }
  ],
  "ptMapStringTable": "0"

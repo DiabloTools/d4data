@@ -15,7 +15,7 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "desc",
-   "szText": "{c_label}Cooldown: {/c}{c_resource}{Cooldown Time}{/c} seconds\r\n{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat_Effect_Chance_Script_Formula_Override:17}|1%|]{/c}\r\n{/if}Summon a spear of lightning that seeks out enemies for {c_number}[{SF_2}|1|]{/c} seconds, dealing {c_number}{payload:IMPACT_DAMAGE}{/c} damage per hit. Critical Strikes apply {c_important}{u}Vulnerable{/u}{/c} for {c_number}{SF_19}{/c} seconds.\r\n\r\nYou may have up to {c_number}12{/c} {c_important}Lightning Spears{/c} active at a time.",
+   "szText": "{c_label}Cooldown: {/c}{c_resource}{Cooldown Time}{/c} seconds\r\n{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat_Effect_Chance_Script_Formula_Override:17}|1%|]{/c}\r\n{/if}Summon a spear of lightning that seeks out enemies for {c_number}[{SF_2}|1|]{/c} seconds, dealing {c_number}{payload:IMPACT_DAMAGE}{/c} damage per hit.\r\n\r\nYou may have up to {c_number}[SF_58]{/c} {c_important}Lightning Spears{/c} active at a time.",
    "hLabel": 3707583
   },
   {
@@ -28,44 +28,100 @@
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
-   "szLabel": "Mod3_Description",
-   "szText": "Casting {c_important}Lightning Spear{/c} spawns an additional {c_important}Lightning Spear{/c} and increases their Critical Strike Chance by {c_number}[{SF_10} * 100|%+|]{/c}.",
-   "hLabel": 3291858358
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
-   "szLabel": "Mod3_Name",
-   "szText": "Enhanced Lightning Spear",
-   "hLabel": 2570277651
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
    "szLabel": "Mod1_Description",
-   "szText": "Collecting {c_important}{u}Crackling Energy{/u}{/c} increases the damage of your next {c_important}Lightning Spear{/c} cast by {c_number}[{SF_9} * 100|%x|]{/c}, up to {c_number}[{SF_9} * {SF_13} * 100|%x|]{/c}.",
+   "szText": "{c_important}Lightning Spear{/c} arcs to {c_number}[SF_47]{/c} additional surrounding targets dealing {c_number}{payload:UPGRADEA_CHAIN_DAMAGE}{/c} damage. Critical Strikes greatly increase the range of the arcs.",
    "hLabel": 628601524
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod1_Name",
-   "szText": "Roaring Lightning Spear",
+   "szText": "Chain Reaction",
    "hLabel": 2492006865
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod4_Description",
-   "szText": "{c_important}Lightning Spear{/c} Stuns enemies for {c_number}{buffduration:UPGRADEB_STUN}{/c} seconds when Critically Striking.",
+   "szText": "{c_important}Lightning Spear{/c} fires {c_number}[SF_57]{/c} spears that deal {c_number}{payload:UPGRADEB_IMPACT_DAMAGE}{/c} damage Stun enemies for {c_number}[SF_40|1|]{/c} |4seconds;second. Enemies can only be Stunned this way once every {c_number}[SF_43]{/c} seconds.",
    "hLabel": 328519479
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod4_Name",
-   "szText": "Invoked Lightning Spear",
+   "szText": "Reverse Polarity",
    "hLabel": 2609413044
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod6_Description",
+   "szText": "{c_important}Lightning Spear{/c} becomes a {c_important}Pyromancy{/c} Skill, deals {c_number}{payload:UPGRADEC_IMPACT_DAMAGE}{/c} Fire damage, but its Cooldown is increased by {c_number}[SF_34]{/c} seconds\r\n\r\n{c_important}Burning{/c} enemies hit by {c_important}Lightning Spear{/c} explode for {c_number}{payload:UPGRADEC_DETONATE_DAMAGE}{/c}.",
+   "hLabel": 2991776313
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod6_Name",
+   "szText": "Flame Spear",
+   "hLabel": 2687683830
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod7_Description",
+   "szText": "{c_important}Lightning Spears{/c} move {c_number}[SF_41*100|%|]{/c} faster.",
+   "hLabel": 28437434
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod7_Name",
+   "szText": "Projectile Speed",
+   "hLabel": 2726819223
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod8_Description",
+   "szText": "When a {c_important}Lightning Spear{/c} Critically Strikes, its duration is increased by {c_number}[SF_39|1|]{/c} seconds.",
+   "hLabel": 1360065851
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod8_Name",
+   "szText": "Duration Bonus",
+   "hLabel": 2765954616
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod9_Description",
+   "szText": "{c_important}Lightning Spear{/c} deals {c_number}[{SF_44} * 100|%x|]{/c} increased damage. This bonus is reduced by {c_number}[{SF_45} * 100|%x|]{/c} each time {c_important}Lightning Spear{/c} deals damage to an enemy.",
+   "hLabel": 2691694268
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod9_Name",
+   "szText": "Damage Bonus",
+   "hLabel": 2805090009
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod10_Description",
+   "szText": "{c_important}Lightning Spear{/c} gains {c_number}[SF_46*100|%|]{/c} increased Critical Strike Chance.",
+   "hLabel": 2741697796
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod10_Name",
+   "szText": "Critical Strike",
+   "hLabel": 3070117409
   }
  ],
  "ptMapStringTable": "0"

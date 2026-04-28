@@ -15,7 +15,7 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "desc",
-   "szText": "{c_label}Cooldown: {/c}{c_resource}{Cooldown Time}{/c} seconds\r\nShapeshift into a Werebear and bellow a mighty roar, reducing Nearby enemies' damage dealt by {c_number}[{SF_2} * 100|%|]{/c} for {c_number}{buffduration:BUFF_DAMAGE_DEALT_REDUCTION}{/c} seconds.",
+   "szText": "{if:Mod.UpgradeB}{c_label}Spirit Cost: {/c}{c_resource}{Resource Cost}{/c}{else}{c_label}Cooldown: {/c}{c_resource}{Cooldown Time}{/c} seconds{/if}\r\nShapeshift into a Werebear and bellow a mighty roar reducing Nearby enemies' damage dealt by {c_number}[{SF_2} * 100|%|]{/c} for {c_number}[SF_0|1|]{/c} seconds.",
    "hLabel": 3707583
   },
   {
@@ -29,64 +29,120 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "rankup_desc",
-   "szText": "\r\n{icon:bullet,1.2} Cooldown {icon:arrow,1.2} {c_number}{Cooldown Time}{/c} seconds",
+   "szText": "\r\n{icon:bullet,1.2} Duration {icon:arrow,1.2} {c_number}[SF_0|1|] seconds{/c}",
    "hLabel": 4074074671
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
-   "szLabel": "Buff8_Name",
-   "szText": "Debilitating Shout",
-   "hLabel": 544223867
+   "szLabel": "Mod9_Description",
+   "szText": "All {c_important}Debilitating Roar's{/c} effects and durations are increased by {c_number}[SF_19 * 100|%|]{/c}.",
+   "hLabel": 2691694268
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
-   "szLabel": "Buff8_Description",
-   "szText": "Enemy damage dealt is reduced",
-   "hLabel": 2736799774
+   "szLabel": "Mod9_Name",
+   "szText": "Booming Roar",
+   "hLabel": 2805090009
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
-   "szLabel": "Mod3_Description",
-   "szText": "{c_important}Debilitating Roar{/c} also {c_important}{u}Fortifies{/u}{/c} you for {c_number}[{SF_10}*100|%|]{/c} of your Maximum Life {c_number}([Max(1,{fortified:MOD_FORTIFY})|0|]){/c}.",
-   "hLabel": 3291858358
+   "szLabel": "Mod10_Description",
+   "szText": "{c_important}Debilitating Roar{/c} no longer has a Cooldown but costs {c_resource}[SF_20]{/c} Spirit to cast instead.",
+   "hLabel": 2741697796
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
-   "szLabel": "Mod3_Name",
-   "szText": "Enhanced Debilitating Roar",
-   "hLabel": 2570277651
+   "szLabel": "Mod10_Name",
+   "szText": "Survival Instincts",
+   "hLabel": 3070117409
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
-   "szLabel": "Mod1_Description",
-   "szText": "{c_important}Debilitating Roar{/c} also Heals you for {c_number}[{SF_8}*100|%|]{/c} of your Maximum Life {c_number}([PlayerHealthMax() * SF_8]){/c} each second for its duration.",
-   "hLabel": 628601524
+   "szLabel": "Mod8_Description",
+   "szText": "{c_important}Debilitating Roar{/c} immediately grants {c_number}[SF_17]{/c} stack of {c_important}{u}Resolve{/u}{/c} and an additional {c_number}[SF_18]{/c} stack every second for the duration.",
+   "hLabel": 1360065851
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
-   "szLabel": "Mod1_Name",
-   "szText": "Preserving Debilitating Roar",
-   "hLabel": 2492006865
+   "szLabel": "Mod8_Name",
+   "szText": "Roar of Resolve",
+   "hLabel": 2765954616
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
-   "szLabel": "Mod2_Description",
-   "szText": "You deal {c_number}[{SF_9}*100|%x|]{/c} increased damage while {c_important}Debilitating Roar{/c} is active.",
-   "hLabel": 1960229941
+   "szLabel": "Mod12_Description",
+   "szText": "Increase the duration of {c_important}Debilitating Roar{/c} by {if:Mod.UpgradeA}{c_number}[SF_24|1|]{/c} seconds or {c_number}[SF_24 + SF_25|1|]{/c} seconds{else}{c_number}[SF_24]{/c} second or {c_number}[SF_24 + SF_25]{/c} seconds{/if} if you are {c_important}{u}Fortified{/u}{/c}.",
+   "hLabel": 1109987334
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
-   "szLabel": "Mod2_Name",
-   "szText": "Innate Debilitating Roar",
-   "hLabel": 2531142258
+   "szLabel": "Mod12_Name",
+   "szText": "Increased Duration",
+   "hLabel": 3148388195
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod13_Description",
+   "szText": "{c_important}Debilitating Roar{/c} Slows enemies by {c_number}[SF_23 * 100|%|]{/c} for the duration.",
+   "hLabel": 2441615751
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod13_Name",
+   "szText": "Slow",
+   "hLabel": 3187523588
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod14_Description",
+   "szText": "{c_important}Debilitating Roar{/c} grants you and your allies {c_number}[SF_22*100|%|]{/c} bonus Maximum Life for the duration.",
+   "hLabel": 3773244168
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod14_Name",
+   "szText": "Maximum Life",
+   "hLabel": 3226658981
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod15_Description",
+   "szText": "Reduce the Cooldown of {c_important}Debilitating Roar{/c} by {c_number}[SF_26]{/c} seconds.",
+   "hLabel": 809905289
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod15_Name",
+   "szText": "Cooldown",
+   "hLabel": 3265794374
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod16_Description",
+   "szText": "{c_important}Debilitating Roar{/c} reduces Nearby enemies' damage dealt by an additional {c_number}[SF_8 * 100|%|]{/c}.",
+   "hLabel": 2141533706
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod16_Name",
+   "szText": "Werebear",
+   "hLabel": 3304929767
   }
  ],
  "ptMapStringTable": "0"

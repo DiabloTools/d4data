@@ -29,14 +29,14 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "rankup_desc",
-   "szText": "\r\n{icon:bullet, 1.2} Damage {icon:arrow, 1.2} {c_number}{payload:DAMAGE}{/c}",
+   "szText": "\r\n{icon:bullet, 1.2} Damage {icon:arrow, 1.2} {c_number}{payload:DAMAGE}{/c}{if:Mod.UpgradeA}\r\n{icon:bullet, 1.2} Quake Damage {icon:arrow, 1.2} {c_number}{payload:UPGRADEA_DAMAGE}{/c}{/if}{if:Mod.UpgradeB}\r\n{icon:bullet, 1.2} Seismic Damage {icon:arrow, 1.2} {c_number}{payload:UPGRADEB_DAMAGE}{/c}{/if}{if:Mod.UpgradeC}\r\n{icon:bullet, 1.2} Ancient Damage {icon:arrow, 1.2} {c_number}{payload:UPGRADEC_DAMAGE}{/c}\r\n{icon:bullet, 1.2} Explosion Damage {icon:arrow, 1.2} {c_number}{payload:UPGRADEC_EXPLOSION_DAMAGE}{/c}{/if}",
    "hLabel": 4074074671
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod6_Description",
-   "szText": "Gain {c_number}[{SF_9} * 100|%|]{/c} more Fury and {c_number}[{SF_7}|%+|]{/c} more Maximum Fury for {c_number}[SF_17]{/c} seconds for each enemy damaged by {c_important}Hammer of the Ancients{/c}, stacking up to {c_number}[SF_8]{/c} times.",
+   "szText": "Gain {c_number}[{SF_9} * 100|%x|]{/c} more Fury for {c_number}[SF_17]{/c} seconds for each enemy damaged by {c_important}Hammer of the Ancients{/c}, stacking up to {c_number}[SF_8]{/c} times.",
    "hLabel": 2991776313
   },
   {
@@ -50,29 +50,99 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod7_Description",
-   "szText": "After {c_important}{u}Overpowering{/u}{/c} with {c_important}Hammer of the Ancients{/c}, you deal {c_number}[{SF_18} * 100|%x|]{/c} more damage for {c_number}{buffduration:UPGRADE_BONUS_DAMAGE}{/c} seconds.",
+   "szText": "{c_important}Hammer of the Ancients{/c} quakes outward and deals {c_number}{payload:UPGRADEA_DAMAGE}{/c} damage.",
    "hLabel": 28437434
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod7_Name",
-   "szText": "Violent Hammer of the Ancients",
+   "szText": "Explosive",
    "hLabel": 2726819223
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod8_Description",
-   "szText": "{c_important}Hammer of the Ancients{/c} gains {c_number}[{SF_12} * 100|%x|]{/c} Critical Strike Damage and Critical Strike Chance for every {c_number}{SF_20}{/c} Fury you had when cast. Its Critical Strikes Knock Down enemies for {c_number}[{SF_21}||]{/c} seconds. ",
+   "szText": "{c_important}Hammer of the Ancients{/c} forms a seismic line that deals {c_number}{payload:UPGRADEB_DAMAGE}{/c} and Slows enemies hit by {c_number}[SF_38 * 100|%|]{/c} for {c_number}[SF_39]{/c} seconds. ",
    "hLabel": 1360065851
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod8_Name",
-   "szText": "Furious Hammer of the Ancients",
+   "szText": "Fissure",
    "hLabel": 2765954616
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod20_Description",
+   "szText": "{c_important}Hammer of the Ancients{/c} now deals Fire damage.\r\n\r\nCasting {c_important}Hammer of the Ancients{/c} Summons {c_number}[SF_37]{/c} Ancients to hammer the same area for {c_number}{payload:UPGRADEC_DAMAGE}{/c} damage each. If Burning enemies are struck {c_important}Hammer of the Ancients{/c} explodes, dealing {c_number}{payload:UPGRADEC_EXPLOSION_DAMAGE}{/c} damage.",
+   "hLabel": 3735762597
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod20_Name",
+   "szText": "Ancestral",
+   "hLabel": 66618082
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod12_Description",
+   "szText": "{c_important}Hammer of the Ancients{/c} gains {c_number}[{SF_12} * 100|%+|]{/c} increased Critical Strike Chance for every {c_number}{SF_20}{/c} Maximum Fury you have, up to {c_number}[{SF_12} * {SF_45} * 100|%+|]{/c} Critical Strike Chance at {c_number}[{SF_20}*{SF_45}]{/c} Maximum Fury.\r\n\r\nCurrent bonus: {c_number}[{SF_46}*100|%+|]{/c} increased Critical Strike Chance.",
+   "hLabel": 1109987334
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod12_Name",
+   "szText": "Critical Strike",
+   "hLabel": 3148388195
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod13_Description",
+   "szText": "{c_important}Hammer of the Ancients{/c} gains {c_number}[{SF_47}*100|+%|]{/c} increased Size and {c_number}[{SF_48}*100|x%|]{/c} increased damage.",
+   "hLabel": 2441615751
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod13_Name",
+   "szText": "Size and Damage Bonus",
+   "hLabel": 3187523588
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod14_Description",
+   "szText": "Gain {c_number}[{SF_43}*100|+%|]{/c} increased Fury Generation for {c_number}[{SF_44}]{/c} seconds for each enemy damaged by {c_important}Hammer of the Ancients{/c}, up to {c_number}[{SF_43}*{SF_42}*100|+%|]{/c}.",
+   "hLabel": 3773244168
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod14_Name",
+   "szText": "Fury Generation",
+   "hLabel": 3226658981
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod15_Description",
+   "szText": "{c_important}Hammer of the Ancients{/c} deals {c_number}[{SF_27}*100|x%|]{/c} increased damage if you have {c_important}{u}Overpower{/u}{/c}.",
+   "hLabel": 809905289
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod15_Name",
+   "szText": "Overpower",
+   "hLabel": 3265794374
   }
  ],
  "ptMapStringTable": "0"

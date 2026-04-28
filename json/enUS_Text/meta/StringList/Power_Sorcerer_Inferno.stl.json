@@ -15,43 +15,113 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "desc",
-   "szText": "{c_label}Cooldown: {/c}{c_resource}{Cooldown Time}{/c} seconds\r\n{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat Effect Chance}*2|%|]{/c}\r\n{/if}Summon a fiery serpent that continually constricts the target area, Burning enemies for {c_number}{dot:TOOLTIP_BUFF_BURNING}{/c} damage over {c_number}{SF_5}{/c} seconds{if:SF_25} and continually making them {c_important}{u}Vulnerable{/u}{/c} for {c_number}{SF_26}{/c} seconds.{else}.{/if} ",
+   "szText": "{if:SF_32}{c_label}Mana Cost: {/c}{c_resource}{Resource Cost}{/c}\r\n{/if}{c_label}Cooldown: {/c}{c_resource}{Cooldown Time}{/c} seconds\r\n{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat Effect Chance}*2|%|]{/c}\r\n{/if}Summon a fiery serpent that deals {c_number}{payload:DAMAGE_INWARD}{/c} damage and Burns enemies for {c_number}{dot:TOOLTIP_BUFF_BURNING}{/c} damage over {c_number}{SF_5}{/c} seconds, stacking up to {c_number}{SF_3}{/c} times.",
    "hLabel": 3707583
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "rankup_desc",
-   "szText": "\r\n{icon:bullet, 1.2} Damage {icon:arrow, 1.2} {c_number}[{dot:BUFF_BURNING} * SF_3]{/c}\r\n{icon:bullet,1.2} Cooldown {icon:arrow,1.2} {c_number}{Cooldown Time}{/c} seconds\r\n{c_label}At Rank 5:{/c}\r\n{icon:arrow,1.2} Enemies within {c_important}Inferno{/c} are continually made {c_important}{u}Vulnerable{/u}{/c} for {c_number}{SF_26}{/c} seconds",
+   "szText": "\r\n{icon:bullet, 1.2} Direct Damage {icon:arrow, 1.2} {c_number}[{payload:DAMAGE_INWARD}]{/c}\r\n{icon:bullet, 1.2} Burning Damage {icon:arrow, 1.2} {c_number}[{dot:TOOLTIP_BUFF_BURNING}]{/c}",
    "hLabel": 4074074671
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod1_Description",
-   "szText": "{c_important}Inferno{/c} repeatedly Pulls enemies to its center.",
+   "szText": "{c_important}Inferno's{/c} Burning duration is increased to {c_number}{SF_36}{/c} seconds. Enemies killed by {c_important}Inferno{/c} explode, dealing {c_number}{payload:UPGRADEA_EXPLOSION_DAMAGE}{/c} damage.",
    "hLabel": 628601524
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod1_Name",
-   "szText": "Prime Inferno",
+   "szText": "Living Bomb",
    "hLabel": 2492006865
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod2_Description",
-   "szText": "While {c_important}Inferno{/c} is active, your {c_important}Pyromancy{/c} Skills deal {c_number}[SF_28 * 100|%|]{/c} increased damage and cost no Mana.",
+   "szText": "{c_important}Inferno{/c} triggers {u}{c_important}Meteorites{/c}{/u} that deal {c_number}{payload:UPGRADEB_METEORITE_TOOLTIP}{/c} to enemies and Immobilize them for {c_number}[SF_22|1|]{/c} second.",
    "hLabel": 1960229941
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod2_Name",
-   "szText": "Supreme Inferno",
+   "szText": "Meteor Shower",
    "hLabel": 2531142258
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod4_Description",
+   "szText": "{c_important}Inferno{/c} now forms around you and follows you, healing you for {c_number}[(SF_26 / SF_28) * 100 |%|]{/c} of your Maximum Life per second.",
+   "hLabel": 328519479
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod4_Name",
+   "szText": "Lifecoil",
+   "hLabel": 2609413044
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod5_Description",
+   "szText": "{c_important}Inferno{/c} continuously pulls enemies towards the center.",
+   "hLabel": 1660147896
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod5_Name",
+   "szText": "Pull",
+   "hLabel": 2648548437
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod6_Description",
+   "szText": "{c_important}Inferno{/c} overfills your {u}{c_important}Overpower{/c}{/u} by {c_number}{SF_29}{/c} stacks.",
+   "hLabel": 2991776313
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod6_Name",
+   "szText": "Overpower",
+   "hLabel": 2687683830
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod7_Description",
+   "szText": "{c_important}Inferno's{/c} Cooldown is reduced to {c_number}{SF_30}{/c} seconds, but it now also costs {c_number}{SF_31}{/c} Mana.",
+   "hLabel": 28437434
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod7_Name",
+   "szText": "Cooldown Reduction",
+   "hLabel": 2726819223
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod8_Description",
+   "szText": "{c_important}Inferno's{/c} Burning damage is now converted to direct Fire damage, allowing it to Critically Strike. \r\n\r\n{c_important}Inferno{/c} deals {c_number}[SF_25 * 100 |%|]{/c} increased Critical Strike Damage.",
+   "hLabel": 1360065851
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod8_Name",
+   "szText": "Direct Damage Bonus",
+   "hLabel": 2765954616
   }
  ],
  "ptMapStringTable": "0"

@@ -15,57 +15,113 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "desc",
-   "szText": "{if:SF_10}{c_label}Essence Cost:{/c} {c_resource}{Resource Cost}{/c}\r\n{/if}{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat_Effect_Chance_Script_Formula_Override:20}|%|]{/c}\r\n{/if}{if:Mod.Miasma}Release a vile miasma from a Corpse, dealing {c_number}{dot:MIASMA_DOT_TOOLTIP}{/c} Corrupting damage over {c_number}{buffduration:MIASMA_DOT_TOOLTIP}{/c} seconds.{else}Detonate a Corpse, dealing {c_number}{payload:DAMAGE}{/c} damage to surrounding enemies.{/if}",
+   "szText": "{if:Mod.Upgrade4}{c_label}Generate Essence:{/c_label} {c_resource}{SF_1}{/c_resource}\r\n{/if}{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat_Effect_Chance_Script_Formula_Override:20}|%|]{/c}\r\n{/if}Detonate a Corpse, dealing {c_number}{payload:DAMAGE}{/c} damage to enemies.",
    "hLabel": 3707583
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "rankup_desc",
-   "szText": "\r\n{icon:bullet,1.2} Damage {icon:arrow,1.2} {if:Mod.Miasma}{c_number}{dot:MIASMA_DOT_TOOLTIP}{/c}{else}{c_number}{payload:DAMAGE}{/c}{/if}",
+   "szText": "\r\n{icon:bullet,1.2} Damage {icon:arrow,1.2} {c_number}{payload:DAMAGE}{/c}",
    "hLabel": 4074074671
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
-   "szLabel": "Mod0_Description",
-   "szText": "{c_important}Corpse Explosion's{/c} radius is increased by {c_number}[{SF_1}*100|%|]{/c}.",
-   "hLabel": 3591940403
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
-   "szLabel": "Mod0_Name",
-   "szText": "Enhanced Corpse Explosion",
-   "hLabel": 2452871472
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
-   "szLabel": "Mod1_Description",
-   "szText": "{c_important}Corpse Explosion{/c} becomes a {c_important}Darkness{/c} Skill and, instead of exploding, releases a vile miasma dealing {c_number}{dot:MIASMA_DOT_TOOLTIP}{/c} Corrupting damage over {c_number}{SF_12}{/c} seconds.",
-   "hLabel": 628601524
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
-   "szLabel": "Mod1_Name",
-   "szText": "Blighted Corpse Explosion",
-   "hLabel": 2492006865
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
    "szLabel": "Mod2_Description",
-   "szText": "{c_important}Corpse Explosion{/c} deals {c_number}[{SF_15}*100|%x|]{/c} increased damage to enemies that are Slowed, Stunned or {c_important}{u}Vulnerable{/u}{/c}. These damage bonuses can stack.",
+   "szText": "{c_important}Corpse Explosion's{/c} Size is increased by {c_number}[SF_6*100|%|]{/c} and damage is increased by {c_number}[SF_4*100|x%|]{/c}.",
    "hLabel": 1960229941
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod2_Name",
-   "szText": "Plagued Corpse Explosion",
+   "szText": "Bloody Mess",
    "hLabel": 2531142258
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod1_Description",
+   "szText": "{c_important}Corpse Explosion{/c} is also a {c_important}Darkness{/c} Skill and, instead of exploding, releases a vile miasma dealing {c_number}{dot:MIASMA_DOT_TOOLTIP}{/c} Corrupting damage over {c_number}{SF_12}{/c} seconds.",
+   "hLabel": 628601524
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod1_Name",
+   "szText": "Miasma",
+   "hLabel": 2492006865
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod3_Description",
+   "szText": "{c_important}Corpse Explosion{/c} is also a {c_important}Bone{/c} Skill and, instead of exploding, fires {c_number}{SF_27}{/c} piercing bone shards dealing {c_number}{payload:SHARD_DAMAGE}{/c} damage each.",
+   "hLabel": 3291858358
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod3_Name",
+   "szText": "Shrapnel",
+   "hLabel": 2570277651
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod0_Description",
+   "szText": "{c_important}Corpse Explosion{/c} detonates up to {c_number}{SF_5}{/c} additional corpses.",
+   "hLabel": 3591940403
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod0_Name",
+   "szText": "Multiple Corpses",
+   "hLabel": 2452871472
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod4_Description",
+   "szText": "Corpses consumed by {c_important}Corpse Explosion{/c} can be consumed {c_number}1{/c} additional time.",
+   "hLabel": 328519479
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod4_Name",
+   "szText": "Corpse Efficiency",
+   "hLabel": 2609413044
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod5_Description",
+   "szText": "{c_important}Corpse Explosion{/c} has a {c_number}[{SF_10}*100|%|]{/c} chance to form a {c_important}{u}Blood Orb{/c}{/u}.",
+   "hLabel": 1660147896
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod5_Name",
+   "szText": "Blood Orb",
+   "hLabel": 2648548437
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod6_Description",
+   "szText": "Casting {c_important}Corpse Explosion{/c} generates {c_number}{SF_1}{/c} Essence.",
+   "hLabel": 2991776313
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod6_Name",
+   "szText": "Essence Generation",
+   "hLabel": 2687683830
   }
  ],
  "ptMapStringTable": "0"

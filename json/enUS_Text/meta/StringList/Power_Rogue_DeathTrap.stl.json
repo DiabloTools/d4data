@@ -15,35 +15,147 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "desc",
-   "szText": "{c_label}Cooldown:{/c_label} {c_resource}{Cooldown Time}{/c_resource} seconds\r\n{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat Effect Chance}|%|]{/c}\r\n{/if}Place a trap that arms after {c_number}{buffduration:ARMING}{/c} seconds. It activates once an enemy is within range and Pulls them in, dealing a total of {c_number}{payload:TOOLTIP_DAMAGE}{/c} damage in the area.\r\n{if:SF_22} \r\n\r\nKilling or {c_important}{u}Overpowering{/u}{/c} an enemy with {c_important}Death Trap{/c} has a {c_number}[SF_5*100|%|]{/c} chance to reset its Cooldown.{/if}",
+   "szText": "{if:SF_40}{c_label}Cooldown:{/c_label} {c_resource}{Recharge Time}{/c_resource} seconds{else}{c_label}Cooldown:{/c_label} {c_resource}{Cooldown Time}{/c_resource} seconds{/if}\r\n{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat Effect Chance}|%|]{/c}\r\n{/if}Place a trap that arms after {c_number}{buffduration:ARMING}{/c} seconds. It activates once an enemy is within range, dealing a total of {c_number}{payload:TOOLTIP_DAMAGE}{/c} damage in the area.",
    "hLabel": 3707583
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "rankup_desc",
-   "szText": "\r\n{icon:bullet, 1.2} Damage {icon:arrow, 1.2} {c_number}{payload:TOOLTIP_DAMAGE}{/c}\r\n{icon:bullet,1.2} Cooldown {icon:arrow,1.2} {c_number}{Cooldown Time}{/c} seconds\r\n{c_label}At Rank 5:{/c}\r\n{icon:arrow,1.2} Killing or {c_important}{u}Overpowering{/u}{/c} an enemy with {c_important}Death Trap{/c} has a {c_number}[MAX(0.2, SF_5)*100|%|]{/c} chance to reset its Cooldown",
+   "szText": "\r\n{icon:bullet, 1.2} Damage {icon:arrow, 1.2} {c_number}{if:Mod.UpgradeA}{payload:TOOLTIP_UPGRADEA_DAMAGE}{else}{payload:TOOLTIP_DAMAGE}{/if}{/c}{if:Mod.UpgradeC}\r\n{icon:bullet, 1.2} Grenade Damage {icon:arrow, 1.2} {c_number}{payload:UPGRADEC_DAMAGE_TOOLTIP}{/c}{/if}",
    "hLabel": 4074074671
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
+   "szLabel": "Buff31_Name",
+   "szText": "Death Trap Dodge",
+   "hLabel": 1094550759
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Buff31_Description",
+   "szText": "Casting {c_important}Death Trap{/c} grants {c_number}[{SF_48}*100|%|]{/c} Dodge Chance.",
+   "hLabel": 4249035018
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod3_Description",
+   "szText": "{c_important}Death Trap's{/c} arm time is reduced by {c_number}[{SF_16}*100|%|]{/c}, and it deals a total of {c_number}{payload:TOOLTIP_UPGRADEA_DAMAGE}{/c} damage in the area.\r\n\r\nCasting {c_important}Death Trap{/c} consumes {c_number}{SF_32}{/c} stack of {c_important}{u}Overpower{/u}{/c} to reduce arm time by {c_number}[{SF_16}*(1+{SF_33})*100|%|]{/c} and increase its damage by {c_number}[{SF_34}*100|x%|]{/c}.",
+   "hLabel": 3291858358
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod3_Name",
+   "szText": "Sudden Death",
+   "hLabel": 2570277651
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod7_Description",
+   "szText": "{c_important}Death Trap{/c} Pulls In enemies and makes them {c_important}{u}Vulnerable{/u}{/c} and Knocked Down for {c_number}{SF_38}{/c} seconds.\r\n\r\n{c_important}Death Trap{/c} gains {c_number}{SF_36}{/c} additional charge and has its Cooldown reduced by {c_number}{SF_37}{/c} seconds.",
+   "hLabel": 28437434
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod7_Name",
+   "szText": "Death Pit",
+   "hLabel": 2726819223
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod5_Description",
+   "szText": "{c_important}Death Trap{/c} is also a {c_important}Grenade{/c} Skill.\r\n\r\n{c_important}Death Trap{/c} also releases {c_number}[{SF_41}*{SF_47}]{/c} {c_important}Stun Grenades{/c} that each explode for {c_number}{payload:UPGRADEC_DAMAGE_TOOLTIP}{/c} damage. ",
+   "hLabel": 1660147896
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod5_Name",
+   "szText": "Explosive Trigger",
+   "hLabel": 2648548437
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
    "szLabel": "Mod0_Description",
-   "szText": "Enemies hit by {c_important}Death Trap{/c} take {c_number}[{SF_25}*100|%x|]{/c} increased damage from your {c_important}Trap{/c} Skills for {c_number}{buffduration:TRAP_DAMAGE_BONUS}{/c} seconds.",
+   "szText": "Killing an enemy or dealing damage to an Elite for the first time with {c_important}Death Trap{/c} reduces its Cooldown by {c_number}[SF_43]{/c} second.",
    "hLabel": 3591940403
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod0_Name",
-   "szText": "Prime Death Trap",
+   "szText": "Cooldown",
    "hLabel": 2452871472
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
+   "szLabel": "Mod11_Description",
+   "szText": "Casting {c_important}Death Trap{/c} grants you {c_number}[{SF_48}*100|%|]{/c} Dodge Chance for {c_number}{SF_49}{/c} seconds.",
+   "hLabel": 4073326213
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod11_Name",
+   "szText": "Dodge",
+   "hLabel": 3109252802
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod13_Description",
+   "szText": "{c_important}Death Trap's{/c} damage is increased by {c_number}[{SF_50}*100|%x|]{/c} while you have {c_important}{u}Resolve{/u}{/c}.",
+   "hLabel": 2441615751
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod13_Name",
+   "szText": "Resolve",
+   "hLabel": 3187523588
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod15_Description",
+   "szText": "{c_important}Death Trap{/c} makes enemies {c_important}{u}Weakened{/u}{/c} for {c_number}{SF_51}{/c} seconds.",
+   "hLabel": 809905289
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod15_Name",
+   "szText": "Weaken",
+   "hLabel": 3265794374
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod9_Description",
+   "szText": "Enemies hit by {c_important}Death Trap{/c} take {c_number}[{SF_25}*100|%x|]{/c} increased damage from your {c_important}Trap{/c} Skills for {c_number}{buffduration:TRAP_DAMAGE_BONUS}{/c} seconds.",
+   "hLabel": 2691694268
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod9_Name",
+   "szText": "Prime Death Trap",
+   "hLabel": 2805090009
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
    "szLabel": "Mod1_Description",
-   "szText": "Enemies that resist {c_important}Death Traps'{/c} Pull In are hit again for {c_number}[SF_20*100|%x|]{/c} of {c_important}Death Traps'{/c} damage.",
+   "szText": "Enemies that resist {c_important}Death Trap's{/c} Pull In are hit again for {c_number}[SF_20*100|%x|]{/c} of {c_important}Death Trap's{/c} damage.",
    "hLabel": 628601524
   },
   {

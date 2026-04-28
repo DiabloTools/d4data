@@ -15,57 +15,113 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "desc",
-   "szText": "{if:SF_26}{c_label}Energy Cost: {/c}{c_resource}{Resource Cost}{/c}\r\n{/if}{if:SF_16}{c_label}Generate Combo Point:{/c} {c_resource}{SF_15}{/c}\r\n{/if}{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat Effect Chance}|%|]{/c}\r\n{/if}Fire an arrow that seeks an enemy, dealing {c_number}{payload:IMPACT}{/c} damage and increasing your Critical Strike Chance against them by {c_number}[{SF_9}*100|%+|]{/c} for {c_number}{buffduration:AMPLIFY_CRIT_CHANCE}{/c} seconds, up to {c_number}[{SF_9}*{SF_10}*100|%+|]{/c}.",
+   "szText": "{if:SF_26}{c_label}Energy Cost: {/c}{c_resource}{Resource Cost}{/c}\r\n{/if}{if:SF_16}{c_label}Generate Combo Point:{/c} {c_resource}{SF_15}{/c}\r\n{/if}{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat Effect Chance}|%|]{/c}\r\n{/if}Fire an arrow that seeks an enemy and pierces through its heart, dealing {c_number}{payload:IMPACT}{/c} damage.",
    "hLabel": 3707583
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "rankup_desc",
-   "szText": "\r\n{icon:bullet,1.2} Damage {icon:arrow,1.2} {c_number}{payload:IMPACT}{/c}",
+   "szText": "\r\n{icon:bullet,1.2} Damage {icon:arrow,1.2} {c_number}{if:Mod.UpgradeC}{payload:IMPACT_UPGRADE_C}{else}{payload:IMPACT}{/if}{/c}",
    "hLabel": 4074074671
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
-   "szLabel": "Mod2_Description",
-   "szText": "When {c_important}Heartseeker{/c} Critically Strikes, gain {c_number}[{SF_22}*100|%+|]{/c} Attack Speed for {c_number}{SF_23}{/c} seconds. Double this amount if the enemy is {c_important}{u}Vulnerable{/u}{/c}.",
-   "hLabel": 1960229941
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
-   "szLabel": "Mod2_Name",
-   "szText": "Enhanced Heartseeker",
-   "hLabel": 2531142258
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
-   "szLabel": "Mod0_Description",
-   "szText": "{c_important}Heartseeker{/c} also increases the Critical Strike Damage the enemy takes from you by {c_number}[{SF_12}*100|%x|]{/c} for {c_number}{SF_11}{/c} seconds, up to {c_number}[{SF_12}*{SF_10}*100|%x|]{/c}.",
-   "hLabel": 3591940403
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
-   "szLabel": "Mod0_Name",
-   "szText": "Fundamental Heartseeker",
-   "hLabel": 2452871472
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
    "szLabel": "Mod1_Description",
-   "szText": "{c_important}Heartseeker{/c} ricochets to an additional enemy, dealing {c_number}[{SF_13}*100|%|]{/c} of the original damage.",
+   "szText": "{c_important}Heartseeker{/c} now has a {c_number}[{SF_13}*100|%|]{/c} chance to fire an additional arrow. When {c_important}Heartseeker{/c} Critically Strikes, it grants {c_number}{SF_42}{/c} stack of {c_important}{u}Overpower{/u}{/c}.",
    "hLabel": 628601524
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod1_Name",
-   "szText": "Primary Heartseeker",
+   "szText": "Procession",
    "hLabel": 2492006865
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod0_Description",
+   "szText": "{c_important}Heartseeker{/c} now pierces up to {c_number}[SF_31]{/c} additional time and deals {c_number}[SF_36 * 100|%x|]{/c} increased damage against the enemy it hits for the next {c_number}{buffduration:UPGRADEB_DAMAGE_BONUS}{/c} seconds, up to {c_number}[SF_36 * SF_38 * 100|%x|]{/c}.",
+   "hLabel": 3591940403
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod0_Name",
+   "szText": "Devouring Arrow",
+   "hLabel": 2452871472
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod4_Description",
+   "szText": "{c_important}Heartseeker{/c} now has a {if:SF_45}{c_number}{Cooldown Time}{/c}{else}{c_number}{SF_44}{/c}{/if} second Cooldown and fires {c_number}2{/c} additional arrows to your left and right dealing {c_number}{payload:IMPACT_UPGRADE_C}{/c} damage. If at least {c_number}2{/c} arrows hit the same enemy, surrounding enemies will be Pulled In.",
+   "hLabel": 328519479
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod4_Name",
+   "szText": "Confluence",
+   "hLabel": 2609413044
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod2_Description",
+   "szText": "When {c_important}Heartseeker{/c} hits an enemy, your Critical Strike Chance against them is increased by {c_number}[{SF_9}*100|%+|]{/c} for {c_number}{buffduration:AMPLIFY_CRIT_CHANCE}{/c} seconds, up to {c_number}[{SF_9}*{SF_10}*100|%+|]{/c}.",
+   "hLabel": 1960229941
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod2_Name",
+   "szText": "Critical Strike Chance",
+   "hLabel": 2531142258
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod6_Description",
+   "szText": "Gain {c_number}{SF_39}{/c} Energy when {c_important}Heartseeker{/c} hits an enemy.",
+   "hLabel": 2991776313
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod6_Name",
+   "szText": "Energy",
+   "hLabel": 2687683830
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod8_Description",
+   "szText": "{c_important}Heartseeker{/c} pierces through {c_number}{SF_40}{/c} additional enemy.",
+   "hLabel": 1360065851
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod8_Name",
+   "szText": "Pierce",
+   "hLabel": 2765954616
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod10_Description",
+   "szText": "When {c_important}Heartseeker{/c} hits an enemy, they become {c_important}{u}Weakened{/u}{/c} for {c_number}{SF_41}{/c} seconds.",
+   "hLabel": 2741697796
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod10_Name",
+   "szText": "Weakened",
+   "hLabel": 3070117409
   }
  ],
  "ptMapStringTable": "0"

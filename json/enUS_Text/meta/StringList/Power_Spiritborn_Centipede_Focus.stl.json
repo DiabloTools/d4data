@@ -15,63 +15,112 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "desc",
-   "szText": "{c_label}Cooldown:{/c_label} {c_resource}{Cooldown Time}{/c_resource} seconds\r\n{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat_Effect_Chance_Script_Formula_Override:20}|%|]{/c}\r\n{/if}{c_label}Passive:{/c} Enemies that attack you are Poisoned for {c_number}{dot:POISON_DOT}{/c} damage over {c_number}[{buffduration:POISON_DOT}]{/c} seconds.\r\n\r\n{c_label}Active:{/c} Your toxins overflow, applying the Poisoning in a trail and making you {c_important}{u}Unhindered{/u}{/c} for {c_number}[{buffduration:ACTIVE_PERIODIC}|1|]{/c} seconds.",
+   "szText": "{c_label}Cooldown:{/c_label} {c_resource}{Cooldown Time}{/c_resource} seconds\r\n{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat_Effect_Chance_Script_Formula_Override:20}|%|]{/c}\r\n{/if}{c_label}Passive:{/c} Enemies that attack you are Poisoned for {c_number}{dot:POISON_DOT}{/c} damage over {c_number}[{buffduration:POISON_DOT}]{/c} seconds.\r\n\r\n{c_label}Active:{/c} Your toxins overflow, applying the Poisoning in a trail and making you {c_important}{u}Unhindered{/u}{/c} for {c_number}[{buffduration:TIMER}|1|]{/c} seconds.",
    "hLabel": 3707583
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "rankup_desc",
-   "szText": "\r\n{icon:bullet,1.2} Poisoning Damage {icon:arrow,1.2} {c_number}{dot:POISON_DOT}{/c}\r\n{icon:bullet,1.2} Active Duration {icon:arrow,1.2} {c_number}[{buffduration:ACTIVE_PERIODIC}|1|]{/c} seconds\r\n{c_label}Rank {SF_17}:{/c}\r\n{icon:bullet, 1.2} Poisoning Duration {icon:arrow, 1.2} {c_number}[{SF_18}]{/c}",
+   "szText": "\r\n{icon:bullet,1.2} Poisoning Damage {icon:arrow,1.2} {c_number}{dot:POISON_DOT}{/c}",
    "hLabel": 4074074671
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod0_Description",
-   "szText": "While active, {c_important}Toxic Skin's{/c} Poisoning is increased by {c_number}[({SF_12}-1)*100|%|]{/c} to {c_number}{dot:POISON_DOT_BUFFED}{/c} over {c_number}[{buffduration:POISON_DOT_BUFFED}]{/c} seconds.",
+   "szText": "{c_important}Toxic Skin{/c} generates {c_number}[SF_34]{/c} Vigor per second while active. ",
    "hLabel": 3591940403
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod0_Name",
-   "szText": "Enhanced Toxic Skin",
+   "szText": "Vigor Generation",
    "hLabel": 2452871472
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod1_Description",
-   "szText": "{c_important}Toxic Skin{/c} passively increases Thorns damage you deal to Poisoned enemies by {c_number}[{SF_13}*100|%x|]{/c}.",
+   "szText": "{c_important}Toxic Skin{/c} passively increases your Thorns by {c_number}[{SF_13}*100|%x|]{/c}.",
    "hLabel": 628601524
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod1_Name",
-   "szText": "Replenishing Toxic Skin",
+   "szText": "Thorns",
    "hLabel": 2492006865
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
+   "szLabel": "Mod5_Description",
+   "szText": "While {c_important}Toxic Skin{/c} is active, Heal for {c_number}[SF_18*100|%|]{/c} of your Maximum Life {c_number}([PlayerHealthMax() * SF_18]){/c} per second.",
+   "hLabel": 1660147896
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod5_Name",
+   "szText": "Healing",
+   "hLabel": 2648548437
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod6_Description",
+   "szText": "{c_important}Toxic Skin's{/c} duration is increased by {c_number}[{SF_15}]{/c} |4second:seconds;",
+   "hLabel": 2991776313
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod6_Name",
+   "szText": "Duration Increase",
+   "hLabel": 2687683830
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
    "szLabel": "Mod2_Description",
-   "szText": "While {c_important}Toxic Skin{/c} is active, you deal an additional {c_number}{payload:POISON_CRIT}{/c} Poison damage as Critical Strikes to Nearby {c_important}{u}Vulnerable{/u}{/c} Poisoned enemies every second.",
+   "szText": "While {c_important}Toxic Skin{/c} is active, you launch toxic globs that apply {c_number}{dot:UPGRADE_A_POISON_DOT}{/c} Poisoning damage over {c_number}[{buffduration:UPGRADE_A_POISON_DOT}]{/c} seconds ",
    "hLabel": 1960229941
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod2_Name",
-   "szText": "Measured Toxic Skin",
+   "szText": "Erupting Skin",
    "hLabel": 2531142258
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
+   "szLabel": "Mod4_Description",
+   "szText": "{c_important}Toxic Skin's{/c} Cooldown is reduced by {c_number}[SF_29]{/c} |4second:seconds; and its damage {c_important}{u}Weakens{/u}{/c} enemies. While its active, you gain {c_number}[{SF_30}*100|%|]{/c} Armor.",
+   "hLabel": 328519479
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod4_Name",
+   "szText": "Skuttle Bug",
+   "hLabel": 2609413044
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod3_Description",
+   "szText": "{c_important}Toxic Skin{/c} becomes a {c_important}Jaguar{/c} Skill that deals Fire damage. \r\n\r\n{c_label}Passive:{/c} Whenever you receive Healing, gain {c_number}[{SF_23}*100|%+|]{/c} Critical Strike Damage until your next Critical Strike, up to {c_number}[{SF_24}*100|%+|]{/c}.\r\n\r\n{c_label}Active:{/c} Jaguar energy flows through you, automatically slashing Close enemies for {c_number}{payload:UPGRADE_C_DAMAGE}{/c} damage every {c_number}[{SF_27}|1|]{/c} |4second:seconds; for {c_number}[{buffduration:TIMER}|1|]{/c} |4second:seconds;. ",
+   "hLabel": 3291858358
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
    "szLabel": "Mod3_Name",
-   "szText": "(PH) Soil Offense Upgrade C",
+   "szText": "Fiery Soul",
    "hLabel": 2570277651
   }
  ],

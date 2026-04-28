@@ -15,57 +15,141 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "desc",
-   "szText": "{if:SF_17}{c_label}Spirit Cost: {/c}{c_resource}{Resource Cost}{/c}\r\n{/if}{c_label}Generate Spirit:{/c_label} {c_resource}{SF_3}{/c_resource}\r\n{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat Effect Chance}|%|]{/c}\r\n{/if}Shapeshift into a Werewolf and claw at an enemy for {c_number}{payload:MELEE_DAMAGE}{/c} damage. ",
+   "szText": "{if:SF_17}{c_label}Spirit Cost: {/c}{c_resource}{Resource Cost}{/c}\r\n{/if}{c_label}Generate Spirit:{/c_label} {c_resource}{SF_3}{/c_resource}\r\n{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat Effect Chance}|%|]{/c}\r\n{/if}Shapeshift into a Werewolf and claw at enemies dealing {c_number}{if:Mod.UpgradeB}{payload:UPGRADEB_DAMAGE}{/c} Lightning{else}{payload:TOOLTIP_DAMAGE}{/c} Physical{/if} damage.",
    "hLabel": 3707583
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "rankup_desc",
-   "szText": "\r\n{icon:bullet,1.2} Damage {icon:arrow,1.2} {c_number}{payload:MELEE_DAMAGE}{/c}",
+   "szText": "\r\n{icon:bullet,1.2} Damage {icon:arrow,1.2} {if:Mod.UpgradeB}{c_number}{payload:UPGRADEB_DAMAGE}{/c}{else}{c_number}{payload:DAMAGE}{/c}{/if}",
    "hLabel": 4074074671
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
-   "szLabel": "Mod2_Description",
-   "szText": "{c_important}Claw's{/c} Attack Speed is increased by {c_number}[{SF_12}*100|%x|]{/c}. ",
-   "hLabel": 1960229941
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
-   "szLabel": "Mod2_Name",
-   "szText": "Enhanced Claw",
-   "hLabel": 2531142258
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
    "szLabel": "Mod0_Description",
-   "szText": "{c_important}Claw{/c} applies {c_number}{dot:POISON_DOT}{/c} Poisoning damage over {c_number}{buffduration:POISON_DOT}{/c} seconds.",
+   "szText": "{c_important}Claw{/c} attacks twice and deals {c_number}{payload:UPGRADEA_DAMAGE}{/c} damage and an additional {c_number}{dot:UPGRADEA_POISON}{/c} Poisoning damage over {c_number}[SF_6]{/c} seconds to enemies hit.",
    "hLabel": 3591940403
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod0_Name",
-   "szText": "Fierce Claw",
+   "szText": "Viper Strikes",
    "hLabel": 2452871472
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod1_Description",
-   "szText": "{c_important}Claw{/c} has a {c_number}[{SF_9}*100|%|]{/c} chance to attack twice.",
+   "szText": "{c_important}Claw{/c} is also a {c_important}Storm{/c} Skill.\r\n\r\n{c_important}Claw{/c} deals {c_number}{payload:UPGRADEB_DAMAGE}{/c} Lightning damage and enemies has a {c_number}[SF_28*100|%|]{/c} chance to spawn {c_number}[SF_29]{/c} {c_important}{u}Dancing Bolts{/u}{/c} that deal {c_number}{payload:TOOLTIP_UPGRADEB_BOLT_DAMAGE}{/c} damage each.",
    "hLabel": 628601524
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod1_Name",
-   "szText": "Wild Claw",
+   "szText": "Lightning Claw",
    "hLabel": 2492006865
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod8_Description",
+   "szText": "{c_important}Claw{/c} now dashes you towards your target and deals {c_number}{payload:UPGRADEC_DAMAGE}{/c} damage.",
+   "hLabel": 1360065851
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod8_Name",
+   "szText": "Dash",
+   "hLabel": 2765954616
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod9_Description",
+   "szText": "{c_important}Claw{/c} restores an addditional {c_number}[SF_11]{/c} Spirit.",
+   "hLabel": 2691694268
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod9_Name",
+   "szText": "Spirit",
+   "hLabel": 2805090009
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod10_Description",
+   "szText": "Gain {c_number}[SF_26]{/c} stack of {c_important}{u}Ferocity{/u}{/c} per cast when dealing damage.",
+   "hLabel": 2741697796
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod10_Name",
+   "szText": "Ferocity",
+   "hLabel": 3070117409
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod11_Description",
+   "szText": "{c_important}Claw's{/c} Cast Speed is increased by {c_number}[SF_12*100|%|]{/c}.",
+   "hLabel": 4073326213
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod11_Name",
+   "szText": "Cast Speed",
+   "hLabel": 3109252802
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod12_Description",
+   "szText": "{c_important}Claw's{/c} Critical Strike Chance is increased by {c_number}[SF_10*100|+%|]{/c}.",
+   "hLabel": 1109987334
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod12_Name",
+   "szText": "Critical Strike Chance",
+   "hLabel": 3148388195
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod13_Description",
+   "szText": "{c_important}Claw{/c} becomes a {c_important}Werebear{/c} Skill.",
+   "hLabel": 2441615751
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod13_Name",
+   "szText": "Werebear",
+   "hLabel": 3187523588
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod14_Description",
+   "szText": "{c_important}Claw's{/c} damage is increased by {c_number}[SF_25 * 100|%x|]{/c}.",
+   "hLabel": 3773244168
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod14_Name",
+   "szText": "Werewolf",
+   "hLabel": 3226658981
   }
  ],
  "ptMapStringTable": "0"

@@ -28,8 +28,10 @@
      "hOptionalUIControlConsoleInputFields": {}
     },
     "hOptionalUIWindowStyleFields": {
+     "nTop": 0,
      "nHeight": 1080,
      "eVerticalAnchoring": 3,
+     "nBottom": 0,
      "nRight": 0,
      "nWidth": 1920,
      "nLeft": 0,
@@ -1034,6 +1036,7 @@
                 },
                 "flProgressMax": -5,
                 "flProgressMin": -2,
+                "flProgressCurrent": 0,
                 "hProgressForegroundImage": {
                  "__type__": "UIImageHandleReference",
                  "__typeHash__": 1797021084,
@@ -1283,6 +1286,54 @@
                "nLeft": -1,
                "eHorizontalAnchoring": 1
               }
+             }
+            ],
+            "arChildren": [],
+            "ptTemplateInstanceConfig": []
+           },
+           {
+            "__type__": "UIControlTemplate",
+            "__typeHash__": 641859515,
+            "szName": "Health_Weakened_Boss",
+            "ptInlineStyle": [
+             {
+              "__type__": "UIProgressBarStyle",
+              "__typeHash__": 3328833529,
+              "dwType": 3328833529,
+              "hParentStyle": {
+               "__type__": "UIControlHandle",
+               "__typeHash__": 3063971755,
+               "snoUI": null,
+               "szControlName": 0
+              },
+              "unk_441f783": "0",
+              "hOptionalUIControlStyleFields": {
+               "bActive": 0
+              },
+              "tConsoleInput": {
+               "__type__": "UIControlConsoleInput",
+               "__typeHash__": 3089331074,
+               "hOptionalUIControlConsoleInputFields": {}
+              },
+              "hOptionalUIWindowStyleFields": {
+               "eVerticalAnchoring": 3,
+               "snoMaterial": {
+                "__raw__": 2470764,
+                "__group__": 57,
+                "__type__": "DT_SNO",
+                "__typeHash__": 2764331143,
+                "__targetFileName__": "base/meta/Material/vfx_ui_progressbar_linear_Nameplate_Health_Weakened_Boss.mat",
+                "groupName": "Material",
+                "name": "vfx_ui_progressbar_linear_Nameplate_Health_Weakened_Boss"
+               },
+               "eHorizontalAnchoring": 3
+              },
+              "tProgressBarBase": {
+               "__type__": "UIProgressBarBase",
+               "__typeHash__": 4134908163,
+               "hOptionalUIProgressBarBaseFields": {}
+              },
+              "hOptionalUIProgressBarStyleFields": {}
              }
             ],
             "arChildren": [],
@@ -11121,20 +11172,20 @@
              "hProgressFillLineImage": {
               "__type__": "UIImageHandleReference",
               "__typeHash__": 1797021084,
-              "hImageHandle": 2496137453
+              "hImageHandle": 973603547
              },
              "flProgressMin": -3
             }
            },
            "hOptionalUIProgressBarStyleFields": {
             "snoProgressForegroundTiledStyle": {
-             "__raw__": 1742814,
+             "__raw__": 2608155,
              "__group__": 103,
              "__type__": "DT_SNO",
              "__typeHash__": 2764331143,
-             "__targetFileName__": "base/meta/TiledStyle/ResourceBar_Sorc.tsl",
+             "__targetFileName__": "base/meta/TiledStyle/ResourceBar_Warlock.tsl",
              "groupName": "TiledStyle",
-             "name": "ResourceBar_Sorc"
+             "name": "ResourceBar_Warlock"
             }
            }
           }
@@ -11146,6 +11197,147 @@
          "__type__": "UIControlTemplate",
          "__typeHash__": 641859515,
          "szName": "ResourceFrame",
+         "ptInlineStyle": [
+          {
+           "__type__": "UIWindowStyle",
+           "__typeHash__": 506492871,
+           "dwType": 506492871,
+           "hParentStyle": {
+            "__type__": "UIControlHandle",
+            "__typeHash__": 3063971755,
+            "snoUI": null,
+            "szControlName": 0
+           },
+           "unk_441f783": "0",
+           "hOptionalUIControlStyleFields": {},
+           "tConsoleInput": {
+            "__type__": "UIControlConsoleInput",
+            "__typeHash__": 3089331074,
+            "hOptionalUIControlConsoleInputFields": {}
+           },
+           "hOptionalUIWindowStyleFields": {
+            "eVerticalAnchoring": 3,
+            "snoTiledStyle": null,
+            "eHorizontalAnchoring": 3,
+            "hImageFrame": {
+             "__type__": "UIImageHandleReference",
+             "__typeHash__": 1797021084,
+             "hImageHandle": 2402866295
+            }
+           }
+          }
+         ],
+         "arChildren": [],
+         "ptTemplateInstanceConfig": []
+        }
+       ],
+       "ptTemplateInstanceConfig": []
+      },
+      {
+       "__type__": "UIControlTemplate",
+       "__typeHash__": 641859515,
+       "szName": "Player_SecondaryResource",
+       "ptInlineStyle": [
+        {
+         "__type__": "UIWindowStyle",
+         "__typeHash__": 506492871,
+         "dwType": 506492871,
+         "hParentStyle": {
+          "__type__": "UIControlHandle",
+          "__typeHash__": 3063971755,
+          "snoUI": {
+           "__raw__": 57449,
+           "__group__": 46,
+           "__type__": "DT_SNO",
+           "__typeHash__": 2764331143,
+           "__targetFileName__": "base/meta/UI/Nameplate.ui",
+           "groupName": "UI",
+           "name": "Nameplate"
+          },
+          "szControlName": 1079047874
+         },
+         "unk_441f783": "0",
+         "hOptionalUIControlStyleFields": {
+          "bActive": 1
+         },
+         "tConsoleInput": {
+          "__type__": "UIControlConsoleInput",
+          "__typeHash__": 3089331074,
+          "hOptionalUIControlConsoleInputFields": {}
+         },
+         "hOptionalUIWindowStyleFields": {
+          "eHorizontalAnchoring": 1,
+          "hImageFrame": {
+           "__type__": "UIImageHandleReference",
+           "__typeHash__": 1797021084,
+           "hImageHandle": 3444680348
+          }
+         }
+        }
+       ],
+       "arChildren": [
+        {
+         "__type__": "UIControlTemplate",
+         "__typeHash__": 641859515,
+         "szName": "SecondaryResourceProgressBar",
+         "ptInlineStyle": [
+          {
+           "__type__": "UIProgressBarStyle",
+           "__typeHash__": 3328833529,
+           "dwType": 3328833529,
+           "hParentStyle": {
+            "__type__": "UIControlHandle",
+            "__typeHash__": 3063971755,
+            "snoUI": null,
+            "szControlName": 0
+           },
+           "unk_441f783": "0",
+           "hOptionalUIControlStyleFields": {},
+           "tConsoleInput": {
+            "__type__": "UIControlConsoleInput",
+            "__typeHash__": 3089331074,
+            "hOptionalUIControlConsoleInputFields": {}
+           },
+           "hOptionalUIWindowStyleFields": {
+            "nTop": 2,
+            "eVerticalAnchoring": 3,
+            "nBottom": 2,
+            "nRight": 2,
+            "nLeft": 2,
+            "eHorizontalAnchoring": 3
+           },
+           "tProgressBarBase": {
+            "__type__": "UIProgressBarBase",
+            "__typeHash__": 4134908163,
+            "hOptionalUIProgressBarBaseFields": {
+             "hProgressFillLineImage": {
+              "__type__": "UIImageHandleReference",
+              "__typeHash__": 1797021084,
+              "hImageHandle": 905802170
+             },
+             "flProgressMin": -3
+            }
+           },
+           "hOptionalUIProgressBarStyleFields": {
+            "snoProgressForegroundTiledStyle": {
+             "__raw__": 2608156,
+             "__group__": 103,
+             "__type__": "DT_SNO",
+             "__typeHash__": 2764331143,
+             "__targetFileName__": "base/meta/TiledStyle/ResourceBar_Warlock2.tsl",
+             "groupName": "TiledStyle",
+             "name": "ResourceBar_Warlock2"
+            }
+           }
+          }
+         ],
+         "arChildren": [],
+         "ptTemplateInstanceConfig": []
+        },
+        {
+         "__type__": "UIControlTemplate",
+         "__typeHash__": 641859515,
+         "szName": "SecondaryResourceFrame",
          "ptInlineStyle": [
           {
            "__type__": "UIWindowStyle",

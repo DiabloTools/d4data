@@ -15,57 +15,113 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "desc",
-   "szText": "{if:SF_19}{c_label}Energy Cost: {/c}{c_resource}{Resource Cost}{/c}\r\n{/if}{if:SF_12}{c_label}Generate Combo Point:{/c} {c_resource}{SF_10}{/c}\r\n{/if}{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat Effect Chance}|%|]{/c}\r\n{/if}Fire a powerful arrow at an enemy, dealing {c_number}{payload:IMPACT}{/c} damage. Every {c_number}3rd{/c} cast makes enemies hit {c_important}{u}Vulnerable{/u}{/c} for {c_number}{SF_15}{/c} seconds.",
+   "szText": "{if:SF_19}{c_label}Energy Cost: {/c}{c_resource}{Resource Cost}{/c}\r\n{/if}{if:SF_12}{c_label}Generate Combo Point:{/c} {c_resource}{SF_10}{/c}\r\n{/if}{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat Effect Chance}|%|]{/c}\r\n{/if}Fire a powerful arrow at an enemy, dealing {c_number}{payload:IMPACT}{/c} damage and Propelling Close enemies, Knocking Back the enemy. Propel can occur once every {c_number}{SF_14}{/c} seconds per enemy.",
    "hLabel": 3707583
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "rankup_desc",
-   "szText": "\r\n{icon:bullet,1.2} Damage {icon:arrow,1.2} {c_number}{payload:IMPACT}{/c}",
+   "szText": "\r\n{icon:bullet,1.2} Damage {icon:arrow,1.2} {c_number}{if:SF_37}{payload:IMPACT}{/if}{if:Mod.UpgradeA}{payload:UPGRADE_A_IMPACT}{/if}{if:Mod.UpgradeB}{payload:UPGRADE_B_IMPACT}{/if}{/c}{if:Mod.UpgradeA}\r\n{icon:bullet,1.2} Immobilize Duration {icon:arrow,1.2} {c_number}{buffduration:IMMOBILIZE}{/if}{/c}{if:Mod.UpgradeC}\r\n{icon:bullet,1.2} Arrow Storm Damage {icon:arrow,1.2} {c_number}{payload:UPGRADE_C_DAMAGE_TOOLTIP}{/if}{/c}",
    "hLabel": 4074074671
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
-   "szLabel": "Mod1_Description",
-   "szText": "Every {c_number}3rd{/c} cast of {c_important}Forceful Arrow{/c} additionally has a {c_number}[{SF_14}*100|%+|]{/c} increased Critical Strike Chance.",
-   "hLabel": 628601524
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
-   "szLabel": "Mod1_Name",
-   "szText": "Enhanced Forceful Arrow",
-   "hLabel": 2492006865
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
    "szLabel": "Mod0_Description",
-   "szText": "{c_important}Forceful Arrow{/c} Knocks Back Close enemies and Immobilizes them for {c_number}{buffduration:IMMOBILIZE}{/c} seconds. Enemies Immobilized this way take {c_number}[SF_24 * 100|%x|]{/c} increased damage for the duration.",
+   "szText": "{c_important}Forceful Arrow{/c} now Immobilizes Knocked Back enemies for {c_number}{buffduration:IMMOBILIZE}{/c} |4second:seconds; and deals {c_number}{payload:UPGRADE_A_IMPACT}{/c} damage. {c_important}Forceful Arrow's{/c} Knock Back range is increased by {c_number}[{SF_28}*100|%|]{/c}.",
    "hLabel": 3591940403
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod0_Name",
-   "szText": "Fundamental Forceful Arrow",
+   "szText": "Pin",
    "hLabel": 2452871472
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod2_Description",
-   "szText": "{c_important}Forceful Arrow{/c} pierces through the first enemy hit and has a {c_number}[SF_25 * 100|%|]{/c} chance to Execute {c_important}{u}Injured{/u}{/c} Non-Boss enemies.",
+   "szText": "{c_important}Forceful Arrow{/c} pierces through the first enemy hit, deals {c_number}{payload:UPGRADE_B_IMPACT}{/c} damage, and has a {c_number}[SF_29 * 100|%|]{/c} chance to {c_important}{u}Execute{/u}{/c} enemies.",
    "hLabel": 1960229941
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod2_Name",
-   "szText": "Primary Forceful Arrow",
+   "szText": "Ender",
    "hLabel": 2531142258
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod4_Description",
+   "szText": "{c_important}Forceful Arrow's{/c} Propel no longer Knocks Back Close enemies and instead creates an {c_important}{u}Arrow Storm{/u}{/c} every {c_number}{SF_31}{/c} arrows, dealing {c_number}{payload:UPGRADE_C_DAMAGE_TOOLTIP}{/c} damage and Slowing enemies hit by {c_number}[{SF_21}*100|%|]{/c} for {c_number}{buffduration:SLOW}{/c} seconds.",
+   "hLabel": 328519479
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod4_Name",
+   "szText": "Cloudburst",
+   "hLabel": 2609413044
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod8_Description",
+   "szText": "{c_important}Forceful Arrow{/c} causes enemies to become {c_important}{u}Vulnerable{/u}{/c} for {c_number}{SF_15}{/c} seconds.",
+   "hLabel": 1360065851
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod8_Name",
+   "szText": "Vulnerable",
+   "hLabel": 2765954616
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod18_Description",
+   "szText": "Gain {c_number}{SF_30}{/c} Energy when {c_important}Forceful Arrow{/c} damages an enemy and an additional {c_number}{SF_32}{/c} Energy after attempting to Propel an enemy.",
+   "hLabel": 509823244
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod18_Name",
+   "szText": "Energy",
+   "hLabel": 3383200553
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod16_Description",
+   "szText": "{c_important}Forceful Arrow{/c} grants {c_number}{SF_33}{/c} stacks of {c_important}{u}Ferocity{/u}{/c} after attempting to Propel an enemy.",
+   "hLabel": 2141533706
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod16_Name",
+   "szText": "Ferocity",
+   "hLabel": 3304929767
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod14_Description",
+   "szText": "{c_important}Forceful Arrow{/c} grants {c_number}{SF_34}{/c} stack of {c_important}{u}Overpower{/u}{/c} after attempting to Propel an enemy.",
+   "hLabel": 3773244168
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod14_Name",
+   "szText": "Overpower",
+   "hLabel": 3226658981
   }
  ],
  "ptMapStringTable": "0"

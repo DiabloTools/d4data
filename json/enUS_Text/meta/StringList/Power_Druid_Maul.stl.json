@@ -15,21 +15,21 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "desc",
-   "szText": "{if:SF_14}{c_label}Spirit Cost: {/c}{c_resource}{Resource Cost}{/c}\r\n{/if}{c_label}Generate Spirit:{/c_label} {c_resource}{SF_0}{/c_resource}\r\n{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat Effect Chance}|%|]{/c}\r\n{/if}Shapeshift into a Werebear and maul enemies in front of you, dealing {c_number}{payload:MELEE_PAYLOAD}{/c} damage. ",
+   "szText": "{if:SF_14}{c_label}Spirit Cost: {/c}{c_resource}{Resource Cost}{/c}\r\n{/if}{c_label}Generate Spirit:{/c_label} {c_resource}{SF_0}{/c_resource}\r\n{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat Effect Chance}|%|]{/c}\r\n{/if}Shapeshift into a Werebear and maul enemies in front of you, dealing {c_number}{payload:TOOLTIP_DAMAGE}{/c} damage. ",
    "hLabel": 3707583
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "simple_desc",
-   "szText": "Basic Skill: Turn into a Werebear and tear at an enemy.",
+   "szText": "Basic Skill: Turn into a Werebear and maul an enemy.",
    "hLabel": 4074669608
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "rankup_desc",
-   "szText": "\r\n{icon:bullet,1.2} Damage {icon:arrow,1.2} {c_number}{payload:MELEE_PAYLOAD}{/c}",
+   "szText": "\r\n{icon:bullet,1.2} Damage {icon:arrow,1.2} {if:Mod.UpgradeC}{c_number}{payload:UPGRADEC_DAMAGE}{/c}{else}{c_number}{payload:DAMAGE}{/c}{/if}",
    "hLabel": 4074074671
   },
   {
@@ -50,29 +50,127 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod1_Description",
-   "szText": "Increases the range and radius of {c_important}Maul{/c} by {c_number}[SF_3 *100|%|]{/c}.",
+   "szText": "Increases the range and radius of {c_important}Maul{/c} by {c_number}[SF_3 *100|%|]{/c}. {c_important}Maul's{/c} damage is increased to {c_number}{payload:UPGRADEA_DAMAGE}{/c}.",
    "hLabel": 628601524
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod1_Name",
-   "szText": "Fierce Maul",
+   "szText": "Wide Sweeps",
    "hLabel": 2492006865
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod2_Description",
-   "szText": "{c_important}Maul{/c} has a {c_number}[{SF_6}*100|%|]{/c} chance to Knock Down enemies for {c_number}{SF_7}{/c} seconds.",
+   "szText": "{c_important}Maul{/c} deals {c_number}[SF_6*100|x%|]{/c} increased damage but generates {c_number}{SF_7}{/c} less Spirit.",
    "hLabel": 1960229941
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod2_Name",
-   "szText": "Wild Maul",
+   "szText": "Reckless Rage",
    "hLabel": 2531142258
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod8_Description",
+   "szText": "{c_important}Maul{/c} is also an {c_important}Earth{/c} Skill.\r\n\r\n{c_important}Maul{/c} turns your fists to stone allowing you to punch enemies with the might of the Earth dealing {c_number}{payload:UPGRADEC_DAMAGE}{/c} damage.",
+   "hLabel": 1360065851
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod8_Name",
+   "szText": "Stone Fists",
+   "hLabel": 2765954616
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod10_Description",
+   "szText": "Maul has a {c_number}[SF_24*100|%|]{/c} chance when first dealing damage to grant {c_important}{u}Berserking{/u}{/c} for {c_number}[SF_25]{/c} seconds.",
+   "hLabel": 2741697796
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod10_Name",
+   "szText": "Berserking",
+   "hLabel": 3070117409
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod12_Description",
+   "szText": "{c_important}Maul's{/c} grants {c_number}[SF_13]{/c} stack of {c_important}{u}Resolve{/u}{/c} per cast when dealing damage.",
+   "hLabel": 1109987334
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod12_Name",
+   "szText": "Resolve",
+   "hLabel": 3148388195
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod14_Description",
+   "szText": "{c_important}Maul's{/c} grants {c_number}[SF_18]{/c} stack of {c_important}{u}Overpower{/u}{/c} per cast when dealing damage.",
+   "hLabel": 3773244168
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod14_Name",
+   "szText": "Overpower",
+   "hLabel": 3226658981
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod16_Description",
+   "szText": "{c_important}Maul{/c} generates an additional {c_number}[SF_19]{/c} Spirit.",
+   "hLabel": 2141533706
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod16_Name",
+   "szText": "Spirit",
+   "hLabel": 3304929767
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod17_Description",
+   "szText": "{c_important}Maul{/c} becomes a {c_important}Werewolf{/c} Skill.",
+   "hLabel": 3473162123
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod17_Name",
+   "szText": "Werewolf",
+   "hLabel": 3344065160
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod18_Description",
+   "szText": "{c_important}Maul's{/c} damage is increased by {c_number}[SF_20 * 100|%x|]{/c}.",
+   "hLabel": 509823244
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod18_Name",
+   "szText": "Werebear",
+   "hLabel": 3383200553
   }
  ],
  "ptMapStringTable": "0"

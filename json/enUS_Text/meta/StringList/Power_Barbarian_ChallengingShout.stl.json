@@ -15,7 +15,7 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "desc",
-   "szText": "{c_label}Cooldown:{/c_label} {c_resource}{Cooldown Time}{/c_resource} seconds\r\nTaunt Nearby enemies and gain {c_number}[{SF_11} * 100|%|]{/c} Damage Reduction for  {c_number}[{SF_2}|1|]{/c} seconds.",
+   "szText": "{c_label}Cooldown:{/c_label} {c_resource}{Cooldown Time}{/c_resource} seconds\r\nTaunt Nearby enemies and gain {c_number}[{SF_11} * 100|1%|]{/c} Damage Reduction for {c_number}[{SF_2}|1|]{/c} seconds.",
    "hLabel": 3707583
   },
   {
@@ -29,7 +29,7 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "rankup_desc",
-   "szText": "\r\n{icon:bullet, 1.2} Damage Reduction {icon:arrow, 1.2} {c_number}[{SF_11} * 100|%|]{/c}",
+   "szText": "\r\n{if:Mod.UpgradeC}{icon:bullet, 1.2} Burning Damage {icon:arrow, 1.2} {c_number}{dot:UPGRADEC_BURNING}{/c}{else}{icon:bullet, 1.2} Damage Reduction {icon:arrow, 1.2} {c_number}[{SF_11} * 100|1%|]{/c}{/if}",
    "hLabel": 4074074671
   },
   {
@@ -64,29 +64,99 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod5_Description",
-   "szText": "While {c_important}Challenging Shout{/c} is active, you gain {c_number}{SF_4}{/c} Fury each time you take damage.",
+   "szText": "{c_important}Challenging Shout's{/c} grants an additional {c_number}[{SF_22}*{SF_24}*100|%|]{/c} Damage Reduction that decays over its duration.",
    "hLabel": 1660147896
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod5_Name",
-   "szText": "Tactical Challenging Shout",
+   "szText": "Bawl",
    "hLabel": 2648548437
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod6_Description",
-   "szText": "While {c_important}Challenging Shout{/c} is active, gain Thorns equal to {c_number}[{SF_12} * 100|%|]{/c} of your Maximum Life.",
+   "szText": "{c_important}Challenging Shout{/c} Summons {c_important}Talic{/c}, who spins in a whirlwind rapidly attacking enemies for {c_number}{payload:WHIRLWIND_TOOLTIP}{/c} damage.",
    "hLabel": 2991776313
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod6_Name",
-   "szText": "Strategic Challenging Shout",
+   "szText": "Talic",
    "hLabel": 2687683830
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod7_Description",
+   "szText": "{c_important}Challenging Shout{/c} causes enemies to burn with rage, dealing {c_number}{dot:UPGRADEC_BURNING}{/c} Burning damage over {c_number}{buffduration:UPGRADEC_BURNING}{/c} seconds. \r\n\r\nYou no longer gain Damage Reduction from {c_important}Challenging Shout{/c} but instead gain {c_number}[{SF_32}*100|x%|]{/c} increased damage against Burning enemies.",
+   "hLabel": 28437434
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod7_Name",
+   "szText": "Raging",
+   "hLabel": 2726819223
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod8_Description",
+   "szText": "{c_important}Challenging Shout{/c} {c_important}{u}Weakens{/c}{/u} enemies.",
+   "hLabel": 1360065851
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod8_Name",
+   "szText": "Weaken",
+   "hLabel": 2765954616
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod11_Description",
+   "szText": "{c_important}Challenging Shout's{/c} duration is increased by {c_number}{SF_30}{/c} seconds.",
+   "hLabel": 4073326213
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod11_Name",
+   "szText": "Duration Bonus",
+   "hLabel": 3109252802
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod10_Description",
+   "szText": "Taking damage while {c_important}Challenging Shout{/c} is active will generate {c_number}{SF_4}{/c} Fury.",
+   "hLabel": 2741697796
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod10_Name",
+   "szText": "Fury Generation",
+   "hLabel": 3070117409
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod9_Description",
+   "szText": "The first {c_number}{SF_33}{/c} enemies Taunted by {c_important}Challenging Shout{/c} take {c_number}[{SF_34}*100|x%|]{/c} increased damage from you.",
+   "hLabel": 2691694268
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod9_Name",
+   "szText": "Damage Bonus",
+   "hLabel": 2805090009
   }
  ],
  "ptMapStringTable": "0"

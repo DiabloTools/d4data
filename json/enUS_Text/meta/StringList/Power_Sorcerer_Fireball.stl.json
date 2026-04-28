@@ -15,7 +15,7 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "desc",
-   "szText": "{c_label}Mana Cost: {/c}{c_resource}{Resource Cost}{/c}\r\n{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat Effect Chance}|%|]{/c}\r\n{/if}Hurl an exploding ball of fire, dealing {c_number}{payload:PAYLOAD_PROJECTILE}{/c} damage to surrounding enemies.",
+   "szText": "{c_label}Mana Cost: {/c}{c_resource}{Resource Cost}{/c}\r\n{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat Effect Chance}|%|]{/c}\r\n{/if}Hurl an exploding ball of fire, dealing {c_number}{payload:PAYLOAD_PROJECTILE}{/c} damage to enemies.",
    "hLabel": 3707583
   },
   {
@@ -28,44 +28,100 @@
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
-   "szLabel": "Mod1_Description",
-   "szText": "Casting {c_important}Fireball{/c} increases its radius by {c_number}[{SF_5} * 100|%|]{/c} and Burns enemies for {c_number}{dot:BURNING}{/c} damage over {c_number}{buffduration:BURNING}{/c} seconds.",
-   "hLabel": 628601524
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
-   "szLabel": "Mod1_Name",
-   "szText": "Enhanced Fireball",
-   "hLabel": 2492006865
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
    "szLabel": "Mod2_Description",
-   "szText": "{c_important}Fireball's{/c} Critical Strike Damage is increased by {c_number}[{SF_19} * 100|%x|]{/c}, increased to {c_number}[{SF_21} * 100|%x|]{/c} when hitting at least {c_number}3{/c} enemies.",
+   "szText": "{c_important}Fireball{/c} travels {c_number}[SF_19*100|%|]{/c} faster and deals {c_number}[SF_20*100|%x|]{/c} increased damage.",
    "hLabel": 1960229941
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod2_Name",
-   "szText": "Destructive Fireball",
+   "szText": "Instantaneous Destruction",
    "hLabel": 2531142258
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod6_Description",
-   "szText": "{c_important}Fireball{/c} deals {c_number}[{SF_23} * 100|x%|]{/c} increased damage to Burning enemies. When a non-Boss enemy takes this damage while below {c_number}[{SF_38} * 100|%|]{/c} life, they are instantly killed.",
+   "szText": "{c_important}Fireball{/c_important} now bounces as it travels and explodes each time it hits the ground, dealing {c_number}[SF_21 * 100|%|]{/c} of normal damage.",
    "hLabel": 2991776313
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod6_Name",
-   "szText": "Greater Fireball",
+   "szText": "Illumination",
    "hLabel": 2687683830
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod8_Description",
+   "szText": "{c_important}Fireball{/c} becomes a {c_important}Frost{/c} Skill that deals Cold damage.\r\n\r\nWhen {c_important}Fireball{/c} hits a {c_important}{u}Frozen{/u}{/c} enemy it creates {c_number}[SF_28+1]{/c} {c_important}{u}Ice Spikes{/c}{/u} around them, dealing {c_number}{payload:UPGRADEC_ICESPIKE_TOOLTIP}{/c} damage each.",
+   "hLabel": 1360065851
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod8_Name",
+   "szText": "Frostball",
+   "hLabel": 2765954616
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod9_Description",
+   "szText": "{c_important}Fireball{/c} deals {c_number}[SF_13*100|%x|]{/c} increased Critical Strike Damage.",
+   "hLabel": 2691694268
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod9_Name",
+   "szText": "Critical Strike Damage",
+   "hLabel": 2805090009
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod10_Description",
+   "szText": "{c_important}Fireball's{/c} direct damage deals an additional {c_number}[SF_14 * 100]%{/c} damage over {c_number}[SF_15]{/c} seconds.",
+   "hLabel": 2741697796
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod10_Name",
+   "szText": "Damage Over Time",
+   "hLabel": 3070117409
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod11_Description",
+   "szText": "{c_important}Fireball{/c} deals {c_number}[{SF_16}*100|%x|]{/c} increased damage, but its Mana cost is increased by {c_number}{SF_17}{/c}.",
+   "hLabel": 4073326213
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod11_Name",
+   "szText": "Damage Bonus",
+   "hLabel": 3109252802
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod12_Description",
+   "szText": "{c_important}Fireball's{/c} Size is increased by {c_number}[(SF_18 * 100 * 2)|%+|]{/c}.",
+   "hLabel": 1109987334
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod12_Name",
+   "szText": "Size Bonus",
+   "hLabel": 3148388195
   }
  ],
  "ptMapStringTable": "0"

@@ -15,7 +15,7 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "desc",
-   "szText": "{c_label}Cooldown: {/c}{c_resource}{Cooldown Time}{/c} seconds{if:SF_32}\r\n{c_label}Spirit Cost:{/c_label} {c_resource}{Resource Cost}{/c_resource}{/if}\r\n{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat_Effect_Chance_Script_Formula_Override:18}|%|]{/c}\r\n{/if}{c_label}Passive{/c}: Summon {c_number}{SF_1}{/c} |4Raven:Ravens; to fly above you, attacking enemies for {c_number}{payload:TOOLTIP_DAMAGE}{/c} damage every {c_number}{SF_2}{/c} seconds.\r\n\r\n{c_label}Active{/c}: The target area is swarmed with ravens, dealing {c_number}{payload:POOL_TOOLTIP_DAMAGE}{/c} damage over {c_number}{SF_4}{/c} seconds.",
+   "szText": "{c_label}Cooldown: {/c}{c_resource}{Cooldown Time}{/c} seconds{if:SF_35}\r\n{c_label}Spirit Cost:{/c_label} {c_resource}{Resource Cost}{/c_resource}{/if}\r\n{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat_Effect_Chance_Script_Formula_Override:18}|%|]{/c}\r\n{/if}{c_label}Passive{/c}: Summon {c_number}{SF_1}{/c} |4Raven:Ravens; to fly above you, attacking enemies for {c_number}{payload:TOOLTIP_DAMAGE}{/c} damage every {c_number}{SF_2}{/c} seconds.\r\n\r\n{c_label}Active{/c}: The target area is swarmed with ravens, dealing {c_number}{payload:POOL_TOOLTIP_DAMAGE}{/c} damage over {c_number}{SF_4}{/c} seconds.",
    "hLabel": 3707583
   },
   {
@@ -28,44 +28,114 @@
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
-   "szLabel": "Mod2_Description",
-   "szText": "You have {c_number}[{SF_9}*100|%+|]{/c} increased Critical Strike Chance against enemies for {c_number}{SF_10}{/c} seconds after they are hit by {c_important}Ravens{/c}.",
-   "hLabel": 1960229941
+   "szLabel": "Mod16_Description",
+   "szText": "{c_label}Passive:{/c} Increases {c_important}Raven's{/c} passive attack speed by {c_number}[SF_40*100|%|]{/c} and gain {c_number}[SF_41]{/c} additional {c_important}Raven{/c} Companions.",
+   "hLabel": 2141533706
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
-   "szLabel": "Mod2_Name",
-   "szText": "Enhanced Ravens",
-   "hLabel": 2531142258
+   "szLabel": "Mod16_Name",
+   "szText": "Raven Flock",
+   "hLabel": 3304929767
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
-   "szLabel": "Mod0_Description",
-   "szText": "Enemies inside the swarm of {c_important}Ravens{/c} when it is activated become {c_important}{u}Vulnerable{/u}{/c} for {c_number}{SF_11}{/c} seconds.",
-   "hLabel": 3591940403
+   "szLabel": "Mod17_Description",
+   "szText": "{c_important}Ravens{/c} is also a {c_important}Storm{/c} Skill that deal Lightning damage.\r\n\r\n{c_label}Active:{/c} Enemies are stunned for {c_number}[SF_42]{/c} seconds.",
+   "hLabel": 3473162123
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
-   "szLabel": "Mod0_Name",
-   "szText": "Ferocious Ravens",
-   "hLabel": 2452871472
+   "szLabel": "Mod17_Name",
+   "szText": "Stormcrow",
+   "hLabel": 3344065160
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
-   "szLabel": "Mod3_Description",
-   "szText": "{c_number}{SF_14}{/c} additional {c_important}Ravens{/c} periodically attack enemies. Increases the passive damage of {c_important}Ravens{/c} by {c_number}[SF_23 * 100|%x|]{/c}.",
-   "hLabel": 3291858358
+   "szLabel": "Mod8_Description",
+   "szText": "{c_label}Active: {/c}The active area is {c_number}[SF_33*100|%|]{/c} larger. If the target dies, the Raven Flock moves itself towards new target.",
+   "hLabel": 1360065851
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
-   "szLabel": "Mod3_Name",
-   "szText": "Brutal Ravens",
-   "hLabel": 2570277651
+   "szLabel": "Mod8_Name",
+   "szText": "Migration",
+   "hLabel": 2765954616
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod12_Description",
+   "szText": "{c_label}Passive: {/c}{c_important}Raven{/c} attacks make enemies {c_important}{u}Vulnerable{/u}{/c}.",
+   "hLabel": 1109987334
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod12_Name",
+   "szText": "Vulnerable",
+   "hLabel": 3148388195
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod13_Description",
+   "szText": "{c_label}Active:{/c} Raven's active damage is increased by {c_number}[SF_39*100|x%|]{/c}.",
+   "hLabel": 2441615751
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod13_Name",
+   "szText": "Active Damage Bonus",
+   "hLabel": 3187523588
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod14_Description",
+   "szText": "{c_label}Passive:{/c} {c_important}Raven's{/c} attacks grant {c_number}[SF_9]{/c} stack of {c_important}{u}Resolve{/u}{/c} once every {c_number}[SF_10]{/c} seconds.",
+   "hLabel": 3773244168
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod14_Name",
+   "szText": "Resolve",
+   "hLabel": 3226658981
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod15_Description",
+   "szText": "{c_label}Passive:{/c} Gain {c_number}{SF_14}{/c} additional {c_important}Ravens{/c}.",
+   "hLabel": 809905289
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod15_Name",
+   "szText": "Additional Raven",
+   "hLabel": 3265794374
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod18_Description",
+   "szText": "{c_important}Ravens'{/c} damage is increased by {c_number}[SF_38 * 100|%x|]{/c}.",
+   "hLabel": 509823244
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod18_Name",
+   "szText": "Versatile",
+   "hLabel": 3383200553
   }
  ],
  "ptMapStringTable": "0"

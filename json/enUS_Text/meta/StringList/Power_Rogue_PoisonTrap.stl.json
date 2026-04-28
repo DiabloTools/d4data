@@ -15,57 +15,127 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "desc",
-   "szText": "{c_label}Cooldown:{/c} {c_resource}{Cooldown Time}{/c} seconds\r\n{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat_Effect_Chance_Script_Formula_Override:1}|%|]{/c}\r\n{/if}Place a trap that arms after {c_number}{buffduration:ARMING}{/c} seconds. It activates when an enemy moves within range, applying {c_number}{payload:TOOLTIP_DAMAGE}{/c} Poisoning damage over {c_number}{SF_2}{/c} seconds to enemies in the area.\r\n\r\nYou can have {c_number}{SF_10}{/c} armed traps out at once.{if:SF_25}\r\n\r\n{c_important}Combo Points{/c} increase damage and improve Lucky Hit Chance:\r\n{icon:bullet,1.2} {c_label}1 Point:{/c} {c_number}{payload:DAMAGE_TOOLTIP_1CP}{/c} damage, {c_number}[{SF_27}|%+|]{/c} chance\r\n{icon:bullet,1.2} {c_label}2 Points:{/c} {c_number}{payload:DAMAGE_TOOLTIP_2CP}{/c} damage, {c_number}[{SF_27}*2|%+|]{/c} chance\r\n{icon:bullet,1.2} {c_label}3 Points:{/c} {c_number}{payload:DAMAGE_TOOLTIP_3CP}{/c} damage, {c_number}[{SF_28}*{SF_27}*3|%+|]{/c} chance{/if}",
+   "szText": "{if:SF_52}{c_label}Charges:{/c} {c_resource}{SF_49}{/c}\r\n{c_label}Charge Cooldown:{/c} {c_resource}{Recharge Time}{/c_resource} seconds\r\n{/if}{if:SF_53}{c_label}Cooldown:{/c_label} {c_resource}{Cooldown Time}{/c_resource} seconds\r\n{/if}{if:ADVANCED_TOOLTIP}{c_label}Lucky Hit Chance: {/c}{c_resource}[{Combat_Effect_Chance_Script_Formula_Override:1}|%|]{/c}\r\n{/if}Place a trap that arms after {c_number}{buffduration:ARMING}{/c} seconds. It activates when an enemy moves within range, applying {c_number}{payload:TOOLTIP_DAMAGE}{/c} Poisoning damage over {c_number}{SF_2}{/c} seconds to enemies in the area.\r\n\r\nYou can have {c_number}{SF_10}{/c} armed traps out at once.",
    "hLabel": 3707583
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "rankup_desc",
-   "szText": "\r\n{icon:bullet,1.2} Poisoning Damage {icon:arrow,1.2} {c_number}{payload:TOOLTIP_DAMAGE}{/c}",
+   "szText": "\r\n{icon:bullet,1.2} {if:Mod.UpgradeC}Frostbite{else}Poisoning{/if} Damage {icon:arrow,1.2} {c_number}{if:Mod.UpgradeC}{payload:UPGRADEC_TOOLTIP_DAMAGE}{else}{payload:TOOLTIP_DAMAGE}{/if}{/c}{if:Mod.UpgradeA}\r\n{icon:bullet, 1.2} Burst Damage {icon:arrow, 1.2} {c_number}{payload:UPGRADE_A_BURST}{/c}{/if}{if:Mod.UpgradeB}\r\n{icon:bullet, 1.2} Cooldown Reduction {icon:arrow, 1.2} {c_number}[SF_44|1|]{/c}{/if}",
    "hLabel": 4074074671
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
+   "szLabel": "Mod6_Description",
+   "szText": "{c_important}Poison Trap{/c} bursts for an additional {c_number}{payload:UPGRADE_A_BURST}{/c} damage when it triggers. Enemies hit by this burst take {c_number}[{SF_39}*100|x%|]{/c} increased damage from {c_important}Poison Trap{/c}.",
+   "hLabel": 2991776313
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod6_Name",
+   "szText": "Contamination",
+   "hLabel": 2687683830
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod8_Description",
+   "szText": "{c_important}Poison Trap's{/c} Cooldown is reduced by {c_number}[SF_44|1|]{/c} seconds. {c_important}Poison Trap{/c} has no arm time, no longer breaks {c_important}{u}Stealth{/u}{/c}, and triggers no Cooldown while you are in {c_important}{u}Stealth{/u}{/c}. All {c_important}Poison Traps{/c} activate when you exit {c_important}{u}Stealth{/u}{/c} and begin {c_important}Poison Trap's{/c} Cooldown.",
+   "hLabel": 1360065851
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod8_Name",
+   "szText": "Infiltrator",
+   "hLabel": 2765954616
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
    "szLabel": "Mod1_Description",
-   "szText": "You deal {c_number}[{SF_16}*100|%x|]{/c} increased Non-Physical damage to enemies standing inside your {c_important}Poison Trap{/c}.",
+   "szText": "{c_important}Poison Trap{/c} no longer deals Poisoning damage and instead deals {c_number}{payload:UPGRADEC_TOOLTIP_DAMAGE}{/c} Frostbite damage and {c_important}{u}Chills{/u}{/c} enemies for {c_number}[{SF_43}|%|]{/c} per second.",
    "hLabel": 628601524
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod1_Name",
-   "szText": "Subverting Poison Trap",
+   "szText": "Frostbite Trap",
    "hLabel": 2492006865
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
-   "szLabel": "Mod2_Description",
-   "szText": "{c_important}Poison Trap{/c} has a {c_number}[{SF_17}*100|%|]{/c} chance to reset your {c_important}Imbuement{/c} Skill Cooldowns when activated.",
-   "hLabel": 1960229941
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
-   "szLabel": "Mod2_Name",
-   "szText": "Countering Poison Trap",
-   "hLabel": 2531142258
-  },
-  {
-   "__type__": "StringTableEntry",
-   "__typeHash__": 3844612145,
-   "szLabel": "Mod3_Description",
+   "szLabel": "Mod5_Description",
    "szText": "{c_important}Poison Trap{/c} Knocks Down enemies for {c_number}{buffduration:KNOCKDOWN}{/c} seconds when it activates.",
-   "hLabel": 3291858358
+   "hLabel": 1660147896
   },
   {
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
-   "szLabel": "Mod3_Name",
-   "szText": "Enhanced Poison Trap",
-   "hLabel": 2570277651
+   "szLabel": "Mod5_Name",
+   "szText": "Knock Down",
+   "hLabel": 2648548437
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod12_Description",
+   "szText": "Casting {c_important}Poison Trap{/c} grants {c_number}{SF_47}{/c} stacks of {c_important}{u}Resolve{/u}{/c}.",
+   "hLabel": 1109987334
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod12_Name",
+   "szText": "Resolve",
+   "hLabel": 3148388195
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod14_Description",
+   "szText": "{c_important}Poison Trap{/c} gains {c_number}{SF_51}{/c} Charge.",
+   "hLabel": 3773244168
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod14_Name",
+   "szText": "Charges",
+   "hLabel": 3226658981
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod16_Description",
+   "szText": "{c_important}Poison Trap{/c} makes enemies {c_important}{u}Vulnerable{/u}{/c} for {c_number}{SF_48}{/c} seconds when it activates.",
+   "hLabel": 2141533706
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod16_Name",
+   "szText": "Vulnerable",
+   "hLabel": 3304929767
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod10_Description",
+   "szText": "You deal {c_number}[{SF_16}*100|%x|]{/c} increased Non-Physical damage to enemies standing inside your {c_important}Poison Trap{/c}.",
+   "hLabel": 2741697796
+  },
+  {
+   "__type__": "StringTableEntry",
+   "__typeHash__": 3844612145,
+   "szLabel": "Mod10_Name",
+   "szText": "Subverting Poison Trap",
+   "hLabel": 3070117409
   }
  ],
  "ptMapStringTable": "0"
