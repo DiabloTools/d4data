@@ -2,7 +2,7 @@ const fs = require('fs');
 const node_path = require('path');
 const definitions = require('./definitions.json');
 
-const attributes = Object.values(require('./attributes.json')).reduce((t, v) => {
+const attributes = Object.values(require('./attributeList.json')).reduce((t, v) => {
   t[v.eAttrib] = v;
   return t;
 }, {});
