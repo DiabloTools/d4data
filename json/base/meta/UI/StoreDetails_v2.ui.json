@@ -5540,6 +5540,7 @@
                           "nRight": 0,
                           "nWidth": 0,
                           "nLeft": 0,
+                          "bWindowIsInputFocusGroup": 0,
                           "eHorizontalAnchoring": 0,
                           "bEncloseChildren": 1
                          }
@@ -5627,7 +5628,136 @@
                               "groupName": "StringList",
                               "name": "Reliquaries"
                              },
-                             "szLabel": 3361471898
+                             "szLabel": 2587978890
+                            },
+                            "szPreviewText": "Purchase Bundle ",
+                            "eResizeToFit": 1
+                           },
+                           "tIcon": {
+                            "__type__": "UIControlIcon",
+                            "__typeHash__": 1698752488,
+                            "hOptionalUIControlIconFields": {}
+                           },
+                           "tClickSounds": {
+                            "__type__": "UIControlClickSounds",
+                            "__typeHash__": 2562866241,
+                            "hOptionalUIControlClickSoundsFields": {
+                             "snoMouseOverSound": {
+                              "__raw__": 157384,
+                              "__group__": 40,
+                              "__type__": "DT_SNO",
+                              "__typeHash__": 2764331143,
+                              "__targetFileName__": "base/meta/Sound/Play_UI_Menu_Generic_Button_Hover.snd",
+                              "groupName": "Sound",
+                              "name": "Play_UI_Menu_Generic_Button_Hover"
+                             }
+                            }
+                           },
+                           "hOptionalUIButtonStyleFields": {
+                            "tOnHitRegionEnter": {
+                             "__type__": "UIDefaultAction",
+                             "__typeHash__": 2502206177,
+                             "dwType": 2502206177,
+                             "behaviorMessageName": 0,
+                             "behaviorContainerSno": null,
+                             "enumVal": 724
+                            },
+                            "tOnGainedFocus": {
+                             "__type__": "UIDefaultAction",
+                             "__typeHash__": 2502206177,
+                             "dwType": 2502206177,
+                             "behaviorMessageName": 0,
+                             "behaviorContainerSno": null,
+                             "enumVal": 724
+                            }
+                           }
+                          }
+                         ],
+                         "arChildren": [],
+                         "ptTemplateInstanceConfig": []
+                        },
+                        {
+                         "__type__": "UIControlTemplate",
+                         "__typeHash__": 641859515,
+                         "szName": "Reliquary_PurchasePlatinumBtn",
+                         "ptInlineStyle": [
+                          {
+                           "__type__": "UIButtonStyle",
+                           "__typeHash__": 3357404523,
+                           "dwType": 3357404523,
+                           "hParentStyle": {
+                            "__type__": "UIControlHandle",
+                            "__typeHash__": 3063971755,
+                            "snoUI": null,
+                            "szControlName": 0
+                           },
+                           "unk_441f783": "0",
+                           "hOptionalUIControlStyleFields": {
+                            "bActive": {
+                             "DataPath": "BundleDetails:SecondaryPurchaseOptionsAreActive",
+                             "value": 1
+                            },
+                            "hTemplate": {
+                             "__type__": "UIControlHandle",
+                             "__typeHash__": 3063971755,
+                             "snoUI": {
+                              "__raw__": 3944,
+                              "__group__": 46,
+                              "__type__": "DT_SNO",
+                              "__typeHash__": 2764331143,
+                              "__targetFileName__": "base/meta/UI/StyleButtons.ui",
+                              "groupName": "UI",
+                              "name": "StyleButtons"
+                             },
+                             "szControlName": 21906581
+                            }
+                           },
+                           "tConsoleInput": {
+                            "__type__": "UIControlConsoleInput",
+                            "__typeHash__": 3089331074,
+                            "hOptionalUIControlConsoleInputFields": {}
+                           },
+                           "hOptionalUIWindowStyleFields": {
+                            "eClipBehavior": 1,
+                            "unk_3dc9f06": 2,
+                            "unk_3dc9f07": 2,
+                            "unk_438e5c1": 1,
+                            "tOnClick": {
+                             "__type__": "UIDefaultAction",
+                             "__typeHash__": 2502206177,
+                             "dwType": 2502206177,
+                             "behaviorMessageName": 0,
+                             "behaviorContainerSno": null,
+                             "enumVal": 728
+                            },
+                            "nMinWidth": 345,
+                            "eHorizontalAnchoring": 0,
+                            "nMinHeight": 75
+                           },
+                           "tFont": {
+                            "__type__": "UIControlFont",
+                            "__typeHash__": 1698657718,
+                            "hOptionalUIControlFontFields": {}
+                           },
+                           "hOptionalUITextStyleFields": {
+                            "flTextPaddingB": 0,
+                            "flTextPaddingL": 16,
+                            "flTextPaddingR": 16,
+                            "flTextPaddingT": 0,
+                            "bShowPreviewText": 1,
+                            "hText": {
+                             "__type__": "StringLabelHandleEx",
+                             "__typeHash__": 721585600,
+                             "snoStringList": {
+                              "__raw__": 478804,
+                              "__group__": 42,
+                              "__type__": "DT_SNO",
+                              "__typeHash__": 2764331143,
+                              "__targetFileName__": "enUS_Text/meta/StringList/Store.stl",
+                              "groupName": "StringList",
+                              "name": "Store"
+                             },
+                             "szLabel": 1196302989
                             },
                             "szPreviewText": "Purchase Bundle ",
                             "eResizeToFit": 1
@@ -24641,7 +24771,8 @@
          },
          "unk_441f783": "0",
          "hOptionalUIControlStyleFields": {
-          "bActive": 1
+          "bActive": 1,
+          "bAcceptInitialFocus": 0
          },
          "tConsoleInput": {
           "__type__": "UIControlConsoleInput",
@@ -25459,89 +25590,6 @@
           },
           "dwAlpha": 255
          }
-        }
-       ]
-      },
-      {
-       "__type__": "UITemplateStyleOverride",
-       "__typeHash__": 2887578027,
-       "szPathToControl": "Reliquary_PurchaseBtn",
-       "tStyle": [
-        {
-         "__type__": "UIButtonStyle",
-         "__typeHash__": 3357404523,
-         "dwType": 3357404523,
-         "hParentStyle": {
-          "__type__": "UIControlHandle",
-          "__typeHash__": 3063971755,
-          "snoUI": {
-           "__raw__": 3944,
-           "__group__": 46,
-           "__type__": "DT_SNO",
-           "__typeHash__": 2764331143,
-           "__targetFileName__": "base/meta/UI/StyleButtons.ui",
-           "groupName": "UI",
-           "name": "StyleButtons"
-          },
-          "szControlName": 1707016131
-         },
-         "unk_441f783": "0",
-         "hOptionalUIControlStyleFields": {},
-         "tConsoleInput": {
-          "__type__": "UIControlConsoleInput",
-          "__typeHash__": 3089331074,
-          "hOptionalUIControlConsoleInputFields": {}
-         },
-         "hOptionalUIWindowStyleFields": {
-          "nTop": 0,
-          "eVerticalAnchoring": 0,
-          "tOnClick": {
-           "__type__": "UIDefaultAction",
-           "__typeHash__": 2502206177,
-           "dwType": 2502206177,
-           "behaviorMessageName": 0,
-           "behaviorContainerSno": null,
-           "enumVal": 730
-          },
-          "nBottom": 0,
-          "nRight": 0,
-          "nWidth": 0,
-          "nLeft": 0,
-          "eHorizontalAnchoring": 0
-         },
-         "tFont": {
-          "__type__": "UIControlFont",
-          "__typeHash__": 1698657718,
-          "hOptionalUIControlFontFields": {}
-         },
-         "hOptionalUITextStyleFields": {
-          "bShowPreviewText": 1,
-          "hText": {
-           "__type__": "StringLabelHandleEx",
-           "__typeHash__": 721585600,
-           "snoStringList": {
-            "__raw__": 2132839,
-            "__group__": 42,
-            "__type__": "DT_SNO",
-            "__typeHash__": 2764331143,
-            "__targetFileName__": "enUS_Text/meta/StringList/Reliquaries.stl",
-            "groupName": "StringList",
-            "name": "Reliquaries"
-           },
-           "szLabel": 2587978890
-          }
-         },
-         "tIcon": {
-          "__type__": "UIControlIcon",
-          "__typeHash__": 1698752488,
-          "hOptionalUIControlIconFields": {}
-         },
-         "tClickSounds": {
-          "__type__": "UIControlClickSounds",
-          "__typeHash__": 2562866241,
-          "hOptionalUIControlClickSoundsFields": {}
-         },
-         "hOptionalUIButtonStyleFields": {}
         }
        ]
       },

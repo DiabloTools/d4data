@@ -67,30 +67,6 @@
     "name": "Search_ResourceMana"
    },
    "bSearchOnly": true
-  },
-  {
-   "__type__": "SkillTagStruct",
-   "__typeHash__": 4000554560,
-   "gbidSkillTag": {
-    "__raw__": 2834424330,
-    "__type__": "DT_GBID",
-    "__typeHash__": 1028170061,
-    "group": 56,
-    "name": "Skill_Primary_Core"
-   },
-   "bSearchOnly": false
-  },
-  {
-   "__type__": "SkillTagStruct",
-   "__typeHash__": 4000554560,
-   "gbidSkillTag": {
-    "__raw__": 2579369720,
-    "__type__": "DT_GBID",
-    "__typeHash__": 1028170061,
-    "group": 56,
-    "name": "Search_Copy_Core"
-   },
-   "bSearchOnly": false
   }
  ],
  "eSkillCat": 2,
@@ -1954,6 +1930,22 @@
     "value": "PowerTag.SystemsTuningGlobals.\"Script Formula 5\"",
     "compiled": "BQAAAAUAAADNbRAABQAAAAAAAAAAAAAA"
    }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "SF_1 * ((SF_33 == 1/SF_1) ? 1 : SF_33) * (Mod.UpgradeC ? SF_16 : SF_4)",
+    "compiled": "BQAAAAcAAAAAAAAAAAAAAAAAAAAFAAAAJwAAAAAAAAAAAAAAAAAAAAYAAAAAAIA/BQAAAAcAAAAAAAAAAAAAAAAAAAAOAAAACQAAAAYAAAAAAIA/BQAAACcAAAAAAAAAAAAAAAAAAAAQAAAADQAAAAUAAABaAAAA/////wsJGqAAAAAABQAAABYAAAAAAAAAAAAAAAAAAAAFAAAACgAAAAAAAAAAAAAAAAAAABAAAAANAAAAAAAAAA=="
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "(((Mod.UpgradeA ? (SF_9 * (1/SF_3)) : 1) *(Mod.UpgradeB ? (SF_12 * (1/SF_13)) : 1) * (Mod.UpgradeC ? (SF_15 * (1/SF_3)) : 1)) / SF_1)",
+    "compiled": "BQAAAFoAAAD/////CQkaoAAAAAAFAAAADwAAAAAAAAAAAAAAAAAAAAYAAAAAAIA/BQAAAAkAAAAAAAAAAAAAAAAAAAAOAAAADQAAAAYAAAAAAIA/EAAAAAUAAABaAAAA/////woJGqAAAAAABQAAABIAAAAAAAAAAAAAAAAAAAAGAAAAAACAPwUAAAATAAAAAAAAAAAAAAAAAAAADgAAAA0AAAAGAAAAAACAPxAAAAANAAAABQAAAFoAAAD/////CwkaoAAAAAAFAAAAFQAAAAAAAAAAAAAAAAAAAAYAAAAAAIA/BQAAAAkAAAAAAAAAAAAAAAAAAAAOAAAADQAAAAYAAAAAAIA/EAAAAA0AAAAFAAAABwAAAAAAAAAAAAAAAAAAAA4AAAAAAAAA"
+   }
   }
  ],
  "arPayloads": [
@@ -2879,8 +2871,8 @@
     "__typeHash__": 1185241065,
     "eType": 0,
     "tHitpointScalar": {
-     "value": "(SF_1 * SF_29 * SF_4) * SF_28",
-     "compiled": "BQAAAAcAAAAAAAAAAAAAAAAAAAAFAAAAIwAAAAAAAAAAAAAAAAAAAA0AAAAFAAAACgAAAAAAAAAAAAAAAAAAAA0AAAAFAAAAIgAAAAAAAAAAAAAAAAAAAA0AAAAAAAAA"
+     "value": "SF_32 * SF_28",
+     "compiled": "BQAAACYAAAAAAAAAAAAAAAAAAAAFAAAAIgAAAAAAAAAAAAAAAAAAAA0AAAAAAAAA"
     },
     "tFlatLevel": {
      "value": "0",

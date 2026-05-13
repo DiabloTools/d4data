@@ -1332,8 +1332,8 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "33 + SF_37*SF_34*SF_24*SF_13",
-    "compiled": "BgAAAAAABEIFAAAAKwAAAAAAAAAAAAAAAAAAAAUAAAAoAAAAAAAAAAAAAAAAAAAADQAAAAUAAAAeAAAAAAAAAAAAAAAAAAAADQAAAAUAAAATAAAAAAAAAAAAAAAAAAAADQAAAAsAAAAAAAAA"
+    "value": "33 + SF_37*SF_34*SF_24",
+    "compiled": "BgAAAAAABEIFAAAAKwAAAAAAAAAAAAAAAAAAAAUAAAAoAAAAAAAAAAAAAAAAAAAADQAAAAUAAAAeAAAAAAAAAAAAAAAAAAAADQAAAAsAAAAAAAAA"
    }
   },
   {
@@ -2354,8 +2354,8 @@
     "__typeHash__": 1185241065,
     "eType": 0,
     "tHitpointScalar": {
-     "value": "SF_0*(1+SF_17*1)",
-     "compiled": "BQAAAAYAAAAAAAAAAAAAAAAAAAAGAAAAAACAPwUAAAAXAAAAAAAAAAAAAAAAAAAABgAAAAAAgD8NAAAACwAAAA0AAAAAAAAA"
+     "value": "SF_0*(1+SF_17*1) * SF_23",
+     "compiled": "BQAAAAYAAAAAAAAAAAAAAAAAAAAGAAAAAACAPwUAAAAXAAAAAAAAAAAAAAAAAAAABgAAAAAAgD8NAAAACwAAAA0AAAAFAAAAHQAAAAAAAAAAAAAAAAAAAA0AAAAAAAAA"
     },
     "tFlatLevel": {
      "value": "0",
@@ -2463,8 +2463,8 @@
     "__typeHash__": 1185241065,
     "eType": 0,
     "tHitpointScalar": {
-     "value": "SF_0*(1+SF_17*2)",
-     "compiled": "BQAAAAYAAAAAAAAAAAAAAAAAAAAGAAAAAACAPwUAAAAXAAAAAAAAAAAAAAAAAAAABgAAAAAAAEANAAAACwAAAA0AAAAAAAAA"
+     "value": "SF_0*(1+SF_17*2) * SF_23",
+     "compiled": "BQAAAAYAAAAAAAAAAAAAAAAAAAAGAAAAAACAPwUAAAAXAAAAAAAAAAAAAAAAAAAABgAAAAAAAEANAAAACwAAAA0AAAAFAAAAHQAAAAAAAAAAAAAAAAAAAA0AAAAAAAAA"
     },
     "tFlatLevel": {
      "value": "0",
@@ -3068,5 +3068,41 @@
  "arRecastPowerSequence": [],
  "arModifierProfiles": [],
  "arProjectileOverrides": [],
- "arConditionalDependencies": []
+ "arConditionalDependencies": [
+  {
+   "__type__": "PowerConditionalDependency",
+   "__typeHash__": 1908169856,
+   "tName": 140266583,
+   "snoDependencies": [
+    {
+     "__raw__": 2542298,
+     "__group__": 29,
+     "__type__": "DT_SNO_NAME",
+     "__typeHash__": 3339108615,
+     "__targetFileName__": "base/meta/Power/Execute_Power.pow",
+     "groupName": "Power",
+     "name": "Execute_Power"
+    }
+   ],
+   "arConditions": [
+    {
+     "__type__": "PowerConditionHasModPoints",
+     "__typeHash__": 1121250797,
+     "dwType": 1121250797,
+     "bInverse": false,
+     "eSubject": 0,
+     "snoPower": {
+      "__raw__": 398258,
+      "__group__": 29,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/Power/Rogue_TwistingBlades.pow",
+      "groupName": "Power",
+      "name": "Rogue_TwistingBlades"
+     },
+     "szPowerMod": 140266583
+    }
+   ]
+  }
+ ]
 }
