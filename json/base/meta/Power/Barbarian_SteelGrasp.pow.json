@@ -84,11 +84,11 @@
    "__type__": "SkillTagStruct",
    "__typeHash__": 4000554560,
    "gbidSkillTag": {
-    "__raw__": 116596264,
+    "__raw__": 3012496276,
     "__type__": "DT_GBID",
     "__typeHash__": 1028170061,
     "group": 56,
-    "name": "Skill_Martial"
+    "name": "Skill_Combat"
    },
    "bSearchOnly": false
   },
@@ -677,6 +677,9 @@
  "hIconInactive": 2116423825,
  "hIconInactiveMouseover": 0,
  "hIconRound": 0,
+ "unk_2c3956": false,
+ "unk_b53e8e5": 0,
+ "gbidSeasonalSkillTag": null,
  "gbidHotbarCountPetType": null,
  "unk_159fc50": 0,
  "bForceLearned": false,
@@ -939,8 +942,8 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "45 + (AffixIsEquipped(SNO.Affix.2HAXE_Unique_Barb_001) ? 30 : 0)",
-    "compiled": "BgAAAAAANEIFAAAAWQAAAD3YCAAAAAAAAAAAAAEAAAAkAAAABgAAAAAA8EEGAAAAAAAAABAAAAALAAAAAAAAAA=="
+    "value": "45 + (Mod.UpgradeA ? 30 : 0)",
+    "compiled": "BgAAAAAANEIFAAAAWgAAAP////8JCRqgAAAAAAYAAAAAAPBBBgAAAAAAAAAQAAAACwAAAAAAAAA="
    }
   },
   {
@@ -1052,7 +1055,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Affix_Value_1#x1_Legendary_Barb_114",
-    "compiled": "BQAAAAAAAACSBAAAw1cbAAAAAAAAAAAA"
+    "compiled": "BQAAAAAAAACVBAAAw1cbAAAAAAAAAAAA"
    }
   },
   {
@@ -1092,7 +1095,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Affix_Flat_Value_2#x1_Legendary_Barb_114",
-    "compiled": "BQAAAAAAAACWBAAAw1cbAAAAAAAAAAAA"
+    "compiled": "BQAAAAAAAACZBAAAw1cbAAAAAAAAAAAA"
    }
   },
   {
@@ -1116,7 +1119,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "SF_28 ? 0 : Affix_Value_2#S05_BSK_Barbarian_002",
-    "compiled": "BQAAACIAAAAAAAAAAAAAAAAAAAAGAAAAAAAAAAUAAAAAAAAAkwQAAKhoHQAAAAAAEAAAAAAAAAA="
+    "compiled": "BQAAACIAAAAAAAAAAAAAAAAAAAAGAAAAAAAAAAUAAAAAAAAAlgQAAKhoHQAAAAAAEAAAAAAAAAA="
    }
   },
   {
@@ -1132,7 +1135,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Bonus_Percent_Per_Power#Barbarian_SteelGrasp",
-    "compiled": "BQAAAAAAAADiAwAAF7gOAAAAAAAAAAAA"
+    "compiled": "BQAAAAAAAADlAwAAF7gOAAAAAAAAAAAA"
    }
   },
   {
@@ -1140,7 +1143,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "1 + Power_Duration_Bonus_Pct#Barbarian_SteelGrasp",
-    "compiled": "BgAAAAAAgD8FAAAAAAAAAN8DAAAXuA4AAAAAAAsAAAAAAAAA"
+    "compiled": "BgAAAAAAgD8FAAAAAAAAAOIDAAAXuA4AAAAAAAsAAAAAAAAA"
    }
   },
   {
@@ -1268,7 +1271,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Min(1.5, 1 + (AoE_Size_Bonus_Per_Power#Barbarian_SteelGrasp / 2))",
-    "compiled": "BgAAAAAAwD8GAAAAAACAPwUAAAAAAAAADQQAABe4DgAAAAAABgAAAAAAAEAOAAAACwAAAAEAAAAAAAAAAAAAAA=="
+    "compiled": "BgAAAAAAwD8GAAAAAACAPwUAAAAAAAAAEAQAABe4DgAAAAAABgAAAAAAAEAOAAAACwAAAAEAAAAAAAAAAAAAAA=="
    }
   }
  ],

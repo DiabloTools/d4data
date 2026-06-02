@@ -264,24 +264,24 @@
   "compiled": "BgAAAAAAAAAAAAAA"
  },
  "tChargeCost": {
-  "value": "Mod.UpgradeB ? 1 : 0",
-  "compiled": "BQAAAFoAAAD/////CgkaoAAAAAAGAAAAAACAPwYAAAAAAAAAEAAAAAAAAAA="
+  "value": "Mod.UpgradeB ? 1 : SF_46 ? 1 : 0",
+  "compiled": "BQAAAFoAAAD/////CgkaoAAAAAAGAAAAAACAPwUAAAA0AAAAAAAAAAAAAAAAAAAAEAAAAAYAAAAAAIA/BgAAAAAAAAAQAAAAAAAAAA=="
  },
  "tMaxCharges": {
-  "value": "Mod.UpgradeB ? SF_37 : 0",
-  "compiled": "BQAAAFoAAAD/////CgkaoAAAAAAFAAAAKwAAAAAAAAAAAAAAAAAAAAYAAAAAAAAAEAAAAAAAAAA="
+  "value": "Mod.UpgradeB ? SF_37 : SF_46 ? SF_47 : 0",
+  "compiled": "BQAAAFoAAAD/////CgkaoAAAAAAFAAAAKwAAAAAAAAAAAAAAAAAAAAUAAAA0AAAAAAAAAAAAAAAAAAAAEAAAAAUAAAA1AAAAAAAAAAAAAAAAAAAABgAAAAAAAAAQAAAAAAAAAA=="
  },
  "tRechargeTime": {
-  "value": "Mod.UpgradeB ? SF_2 : 0",
-  "compiled": "BQAAAFoAAAD/////CgkaoAAAAAAFAAAACAAAAAAAAAAAAAAAAAAAAAYAAAAAAAAAEAAAAAAAAAA="
+  "value": "Mod.UpgradeB ? SF_2 : SF_46 ? SF_30 : 0",
+  "compiled": "BQAAAFoAAAD/////CgkaoAAAAAAFAAAACAAAAAAAAAAAAAAAAAAAAAUAAAA0AAAAAAAAAAAAAAAAAAAAEAAAAAUAAAAkAAAAAAAAAAAAAAAAAAAABgAAAAAAAAAQAAAAAAAAAA=="
  },
  "tRechargeAmount": {
   "value": "1",
   "compiled": "BgAAAAAAgD8AAAAA"
  },
  "tCooldownTime": {
-  "value": "Mod.UpgradeB ? 0 : SF_2",
-  "compiled": "BQAAAFoAAAD/////CgkaoAAAAAAGAAAAAAAAAAUAAAAIAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAA="
+  "value": "Mod.UpgradeB ? 0 : SF_2 : SF_46 ? 0 : SF_2",
+  "compiled": "BQAAAFoAAAD/////CgkaoAAAAAAGAAAAAAAAAAUAAAAIAAAAAAAAAAAAAAAAAAAABQAAADQAAAAAAAAAAAAAAAAAAAAQAAAABgAAAAAAAAAFAAAACAAAAAAAAAAAAAAAAAAAABAAAAAAAAAA"
  },
  "tResourceCostReductionCoefficient": {
   "value": "1",
@@ -697,6 +697,9 @@
  "hIconInactive": 3500979587,
  "hIconInactiveMouseover": 0,
  "hIconRound": 0,
+ "unk_2c3956": false,
+ "unk_b53e8e5": 0,
+ "gbidSeasonalSkillTag": null,
  "gbidHotbarCountPetType": null,
  "unk_159fc50": 0,
  "bForceLearned": false,
@@ -1584,7 +1587,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "min(SF_22, (((1+ Multiplicative_Damage_Bonus_To_High_Health)*(1+Damage_Bonus_To_High_Health))+((1+Multiplicative_Damage_Bonus_To_Low_Health)*(1+Damage_Bonus_To_Low_Health)) - 2)*(SF_19))",
-    "compiled": "BQAAABwAAAAAAAAAAAAAAAAAAAAGAAAAAACAPwUAAAAAAAAAXQQAAP7///8AAAAACwAAAAYAAAAAAIA/BQAAAAAAAABcBAAA/v///wAAAAALAAAADQAAAAYAAAAAAIA/BQAAAAAAAABbBAAA/v///wAAAAALAAAABgAAAAAAgD8FAAAAAAAAAFoEAAD+////AAAAAAsAAAANAAAACwAAAAYAAAAAAABADAAAAAUAAAAZAAAAAAAAAAAAAAAAAAAADQAAAAEAAAAAAAAAAAAAAA=="
+    "compiled": "BQAAABwAAAAAAAAAAAAAAAAAAAAGAAAAAACAPwUAAAAAAAAAYAQAAP7///8AAAAACwAAAAYAAAAAAIA/BQAAAAAAAABfBAAA/v///wAAAAALAAAADQAAAAYAAAAAAIA/BQAAAAAAAABeBAAA/v///wAAAAALAAAABgAAAAAAgD8FAAAAAAAAAF0EAAD+////AAAAAAsAAAANAAAACwAAAAYAAAAAAABADAAAAAUAAAAZAAAAAAAAAAAAAAAAAAAADQAAAAEAAAAAAAAAAAAAAA=="
    }
   },
   {
@@ -1785,6 +1788,22 @@
    "tFormula": {
     "value": "PowerTag.Amulet_Unique_Barb_101_x2.\"Script Formula 2\"",
     "compiled": "BQAAAAUAAAD1XycAAgAAAAAAAAAAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "AffixIsEquipped(SNO.Affix.legendary_barb_004) == 1",
+    "compiled": "BQAAAFkAAAA72AgAAAAAAAAAAAABAAAAJAAAAAYAAAAAAIA/CQAAAAAAAAA="
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "2",
+    "compiled": "BgAAAAAAAEAAAAAA"
    }
   }
  ],

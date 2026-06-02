@@ -8,7 +8,7 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Desc",
-   "szText": "{c_important}{u}Vulnerable{/c}{/u}, {c_important}{u}Weakened{/c}{/u}, Crowd Controlled, or Corrupted enemies are {c_important}Afflicted{/c}, taking {c_number}[Affix.\"Static Value 0\"|%|]{/c} increased damage from you.\r\n\r\n{c_important}Curse{/c} Skills deal {c_random}[(Owner.Weapon_Damage_Min_Total + Owner.Weapon_Damage_Delta_Total) * Affix_Value_1]{/c} Shadow damage when applied to {c_important}Afflicted{/c} enemies.",
+   "szText": "{if:SF.IsMythic}{c_mythic}{/if}{c_important}{u}Vulnerable{/c}{/u}, {c_important}{u}Weakened{/c}{/u}, Crowd Controlled, or Corrupted enemies are {c_important}Afflicted{/c}, taking {c_number}[Affix.\"Static Value 0\"|%|]{/c} increased damage from you.\r\n\r\n{c_important}Curse{/c} Skills deal {if:SF.IsMythic}{c_number}{else}{c_random}{/if}[(Owner.Weapon_Damage_Min_Total + Owner.Weapon_Damage_Delta_Total) * Affix_Value_1]{/c} Shadow damage when applied to {c_important}Afflicted{/c} enemies.{if:SF.IsMythic}{/c_mythic}{/if}",
    "hLabel": 3707583
   }
  ],

@@ -658,6 +658,9 @@
  "hIconInactive": 3884457247,
  "hIconInactiveMouseover": 0,
  "hIconRound": 0,
+ "unk_2c3956": false,
+ "unk_b53e8e5": 0,
+ "gbidSeasonalSkillTag": null,
  "gbidHotbarCountPetType": null,
  "unk_159fc50": 0,
  "bForceLearned": false,
@@ -1282,8 +1285,8 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "0.4 * Table(34, sLevel)",
-    "compiled": "BgAAAM3MzD4GAAAAAAAIQgUAAAABAAAAAAAAAAAAAAAAAAAAAQAAAAsAAAANAAAAAAAAAA=="
+    "value": "0.4 * Table(34, sLevel) * (SF_25 ? (1+SF_24) : 1)",
+    "compiled": "BgAAAM3MzD4GAAAAAAAIQgUAAAABAAAAAAAAAAAAAAAAAAAAAQAAAAsAAAANAAAABQAAAB8AAAAAAAAAAAAAAAAAAAAGAAAAAACAPwUAAAAeAAAAAAAAAAAAAAAAAAAACwAAAAYAAAAAAIA/EAAAAA0AAAAAAAAA"
    }
   },
   {
@@ -1322,8 +1325,8 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "1 + (SF_25 ? SF_24 : 0) + floor(sLevel/10)",
-    "compiled": "BgAAAAAAgD8FAAAAHwAAAAAAAAAAAAAAAAAAAAUAAAAeAAAAAAAAAAAAAAAAAAAABgAAAAAAAAAQAAAACwAAAAUAAAABAAAAAAAAAAAAAAAAAAAABgAAAAAAIEEOAAAAAQAAAAUAAAALAAAAAAAAAA=="
+    "value": "1 + floor(sLevel/10)",
+    "compiled": "BgAAAAAAgD8FAAAAAQAAAAAAAAAAAAAAAAAAAAYAAAAAACBBDgAAAAEAAAAFAAAACwAAAAAAAAA="
    }
   },
   {
@@ -1451,15 +1454,15 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "1 + Bonus_Percent_Per_Power#Spiritborn_Jaguar_Focus",
-    "compiled": "BgAAAAAAgD8FAAAAAAAAAOIDAAB1bBwAAAAAAAsAAAAAAAAA"
+    "compiled": "BgAAAAAAgD8FAAAAAAAAAOUDAAB1bBwAAAAAAAsAAAAAAAAA"
    }
   },
   {
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "1",
-    "compiled": "BgAAAAAAgD8AAAAA"
+    "value": "0.2",
+    "compiled": "BgAAAM3MTD4AAAAA"
    }
   },
   {
@@ -1514,8 +1517,8 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "0.8 * Table(34, sLevel)",
-    "compiled": "BgAAAM3MTD8GAAAAAAAIQgUAAAABAAAAAAAAAAAAAAAAAAAAAQAAAAsAAAANAAAAAAAAAA=="
+    "value": "0.8 * Table(34, sLevel) * (SF_25 ? (1+SF_24) : 1)",
+    "compiled": "BgAAAM3MTD8GAAAAAAAIQgUAAAABAAAAAAAAAAAAAAAAAAAAAQAAAAsAAAANAAAABQAAAB8AAAAAAAAAAAAAAAAAAAAGAAAAAACAPwUAAAAeAAAAAAAAAAAAAAAAAAAACwAAAAYAAAAAAIA/EAAAAA0AAAAAAAAA"
    }
   },
   {
@@ -1546,8 +1549,8 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "0.8 * Table(34, sLevel)",
-    "compiled": "BgAAAM3MTD8GAAAAAAAIQgUAAAABAAAAAAAAAAAAAAAAAAAAAQAAAAsAAAANAAAAAAAAAA=="
+    "value": "0.8 * Table(34, sLevel) * (SF_25 ? (1+SF_24) : 1)",
+    "compiled": "BgAAAM3MTD8GAAAAAAAIQgUAAAABAAAAAAAAAAAAAAAAAAAAAQAAAAsAAAANAAAABQAAAB8AAAAAAAAAAAAAAAAAAAAGAAAAAACAPwUAAAAeAAAAAAAAAAAAAAAAAAAACwAAAAYAAAAAAIA/EAAAAA0AAAAAAAAA"
    }
   },
   {
@@ -1943,26 +1946,13 @@
    "bAffectsEnchantmentDescription": false,
    "unk_b1d89c5": false,
    "unk_b25b989": false,
-   "arSkillTagsToAdd": [
-    {
-     "__type__": "SkillTagStruct",
-     "__typeHash__": 4000554560,
-     "gbidSkillTag": {
-      "__raw__": 2871340666,
-      "__type__": "DT_GBID",
-      "__typeHash__": 1028170061,
-      "group": 56,
-      "name": "Keyword_Hunter"
-     },
-     "bSearchOnly": false
-    }
-   ],
+   "arSkillTagsToAdd": [],
    "arSkillTagsToRemove": [],
    "eModType": 0,
-   "hIconNormalOverride": 3169811489,
-   "hIconMouseoverOverride": 3169811489,
-   "hIconPushedOverride": 3169811489,
-   "hIconInactiveOverride": 3169811489,
+   "hIconNormalOverride": 1990297850,
+   "hIconMouseoverOverride": 1990297850,
+   "hIconPushedOverride": 1990297850,
+   "hIconInactiveOverride": 1990297850,
    "eShapeshiftForm": -1
   },
   {

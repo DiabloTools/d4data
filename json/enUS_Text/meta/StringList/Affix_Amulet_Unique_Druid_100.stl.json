@@ -8,7 +8,7 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Desc",
-   "szText": "When {c_important}Boulder{/c} would have normally expired, it instead explodes dealing an additional {c_random}[Affix_Value_1 * (Owner.Weapon_Damage_Min_Total + Owner.Weapon_Damage_Delta_Total)]{/c} damage to surrounding enemies.",
+   "szText": "{if:SF.IsMythic}{c_mythic}{/if}When {c_important}Boulder{/c} would have normally expired, it instead explodes dealing an additional {if:SF.IsMythic}{c_number}{else}{c_random}{/if}[Affix_Value_1 * 100|%x|]{/c} damage to surrounding enemies.{if:SF.IsMythic}{/c_mythic}{/if}",
    "hLabel": 3707583
   }
  ],
