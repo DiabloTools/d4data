@@ -1188,6 +1188,7 @@ for (let c = 2; c < process.argv.length; c++) {
 }
 collectCombinedMetaFiles(42); // StringList
 collectCombinedMetaFiles(44); // Texture
+collectCombinedMetaFiles(71); // wWiseSoundBank
 if (fileNames.length == 0 && fileNamesGB.length == 0 && fileNamesCombinedMeta.length == 0) {
   console.error("No files were found in the given directories.");
   process.exit(1);
@@ -1383,7 +1384,7 @@ function parseCombinedMetaFile(fileInfo, index) {
       const originalOffset = fileDataOffset;
       const alignedOffset = (((fileDataOffset + 8 - 1) / alignment) >> 0) * alignment;
       fileDataOffset = alignedOffset;
-      if (snoGroup == 44) {
+      if (snoGroup != 42) {
         fileDataOffset += 8;
       }
 
