@@ -138,8 +138,11 @@ AffixFamilyTableEntry
 AffixFamilyTableEntry_Table
 AffixMessage
 AffixSelector
+AffixSelector_Deprecated
 AffixSortGroup
 AffixSubstitutePair
+AffixTagEntry
+AffixTagEntry_Table
 AfterCreditsScenes
 AimTargetMessage
 AllLogicSubcondition
@@ -462,6 +465,8 @@ CommunityModifierUpdateMessage
 CompInfluence
 CompVertInfluences
 CompanionHeroSaveData
+CompanionRenameRequestMessage
+CompanionRenameRequestResponse
 CompanionsHeroSaveData
 ComplexEffectAddMessage
 ConcatenateStringsBehaviorNode
@@ -551,6 +556,7 @@ CustomBehaviorMessage
 CustomBuffCallback
 CustomClientArgs
 CustomClientEvent
+CustomDisclaimer
 CustomGlobalEvent
 CustomGlobalEventHandlerBehaviorNode
 CustomMessageHandlerBehaviorNode
@@ -1193,6 +1199,7 @@ HirelingSwapMessage
 HitReactionOverride
 HitpointSpecifier
 HorizontalTiledWindowPieces
+HostAffixSelector
 HotbarButtonData
 HoudiniParticlesSimDefinition
 IGCConversationCompletedMessage
@@ -1848,6 +1855,11 @@ PhaseJumpServerTriggeredEnd
 PhaseJumpStoppedChannelling
 PhysicsDefinition
 PickUpIconConfiguration
+PipDefinition
+PipEvaluateCampaign
+PipEvaluateNewProduct
+PipEvaluateWardrobe
+PipEvaluationCriteriaParameters
 Plane
 PlasmaAttachMessage
 PlatformAccount
@@ -2561,6 +2573,7 @@ SnoDataHandle
 SnoPropertyPath
 SocialWheelSlotBinding
 SocketedEffects
+SoloSelfFoundSubcondition
 SonyConsoleAwardDefinition
 SorcererEnchantSlotUnlockData
 SoundDefinition
@@ -2672,6 +2685,8 @@ StoryboardValueNode_bcVec2
 StoryboardValueNode_float
 StringCaseData
 StringDataMessage
+StringFormulaEntry
+StringFormulaEntry_Table
 StringLabelHandleEx
 StringListDefinition
 StringListFetchBehaviorNode
@@ -2714,6 +2729,7 @@ SyncPowerModifiersMessage
 SyncedRunewordData
 TGCoeffs
 TalentRankAssignedMessage
+TargetAffixSelector
 TelemetryBugEnteredMessage
 TeleportToDungeonMessage
 TempCollisionMesh
@@ -3005,6 +3021,7 @@ UIMinimapStyle
 UIModalDefinition
 UIParagonBoardStyle
 UIPieChartStyle
+UIPipStyle
 UIProgressBarBase
 UIProgressBarBaseOptionalFieldMapDefaults
 UIProgressBarStyle
@@ -3444,10 +3461,12 @@ arAdditionalDungeonState
 arAdditionalPassives
 arAdditionalTargets
 arAffectedItemLabels
+arAffixBonusPerMagicType
 arAffixChanceIncrease
 arAffixCountPerQuality
 arAffixSkillTags
 arAffixSubstitution
+arAffixTags
 arAffixes
 arAllReferencedItems
 arAllowedCategories
@@ -3602,6 +3621,7 @@ arCrowdControlEffects
 arCurrencyCaps
 arCurrencyData
 arCurveLengths
+arCustomDisclaimers
 arCustomPathPositions
 arCustomStaticImages
 arCustomizationAppearances
@@ -3966,6 +3986,7 @@ arPetTypes
 arPhaseJumps
 arPhases
 arPieces
+arPipEvaluationCriteria
 arPlatforms
 arPlayStyle
 arPlayedFlags
@@ -4340,6 +4361,7 @@ bCheckBackpack
 bCheckEquipped
 bCheckSeasonActive
 bCheckStash
+bCheckUnlocked
 bCheckWorld
 bClear
 bClearZBuffer
@@ -4369,6 +4391,7 @@ bDisableDefaultDungeonStates
 bDisableDefaultLabels
 bDisableDynamicAvoidance
 bDisableFontScale
+bDisableRename
 bDisabled
 bDisplayChatMessage
 bDisplayWhileEmpty
@@ -4535,6 +4558,7 @@ bIsReinforcementMenu
 bIsRepeatableReward
 bIsScript
 bIsSeasonal
+bIsSpecific
 bIsTemperedAffix
 bIsTransmog
 bIsUnique
@@ -5569,6 +5593,7 @@ eMipFilter
 eMobility
 eModType
 eMode
+eModifier
 eModifyType
 eMonsterRarity
 eMountRarity
@@ -6294,6 +6319,7 @@ flBlendHertzAdd
 flBlendInTime
 flBlendOutOverrideTime
 flBlendOutTime
+flBlendPercentage
 flBlendTime
 flBlendTimeOverride
 flBlendWeight
@@ -7318,6 +7344,7 @@ gbidAddOnType
 gbidAdditionalDungeonAffix
 gbidAffixFamily
 gbidAffixSkillTag
+gbidAffixTag
 gbidAmbushType
 gbidArmorPact
 gbidArmorPactType
@@ -7402,6 +7429,7 @@ gbidSeasonalLaurel
 gbidSeasonalLeaderboardActivity
 gbidSeasonalPetType
 gbidSeasonalRank
+gbidSeasonalSkillTag
 gbidSelectedTuningEffect
 gbidSkillRequirement
 gbidSkillTag
@@ -7459,6 +7487,8 @@ hCornerFrames
 hCrafterIcon
 hCrafterTitleOverride
 hCurrency
+hCustomDisclaimerString
+hCustomDisclaimerStrings
 hDefaultClaimedHiddenCacheIcon
 hDefaultHiddenCacheIcon
 hDefaultIconFill
@@ -9516,6 +9546,7 @@ snoDungeonCompleteActor
 snoDungeonDefaultObserver
 snoDungeonWorld
 snoDye
+snoDyeArmor
 snoDynamicPrefetchList
 snoDynamicPreloadList
 snoEffect
@@ -9865,6 +9896,8 @@ snoPassivePowerContainer
 snoPassivePowerReward
 snoPattern
 snoPersonalChatterSound
+snoPetActor
+snoPetItem
 snoPetSpawnPower
 snoPhasingVisibilityCondition
 snoPhysics
@@ -9873,6 +9906,7 @@ snoPickupEffectGroup
 snoPickupEffects
 snoPickupOverrideSound
 snoPingTargetEffectGroup
+snoPip
 snoPlaybackSound
 snoPlayerActor
 snoPlayerAnimSetOverrides
@@ -10455,6 +10489,7 @@ szName
 szNavHeaderName
 szNewHeroId
 szNewHeroName
+szNewName
 szNodeAssetProperty
 szNotificationUIName
 szOldHeroName
@@ -10884,6 +10919,9 @@ tEquipSound
 tEquipment
 tEquipmentDyes
 tEquipmentSlots
+tEvaluateCampaign
+tEvaluateNewProduct
+tEvaluateWardrobe
 tEventSettings
 tExeIn
 tExeOut
@@ -11157,6 +11195,7 @@ tOnClose
 tOnContextMenu
 tOnController
 tOnControllerButtonHeld
+tOnControllerButtonHoldAborted
 tOnControllerButtonUp
 tOnDPadDown
 tOnDPadDownHeld
@@ -11167,6 +11206,7 @@ tOnDPadRightHeld
 tOnDPadUp
 tOnDPadUpHeld
 tOnDataChanged
+tOnDeferredOpen
 tOnDispose
 tOnDoubleClick
 tOnDragStart
@@ -11489,6 +11529,7 @@ tTableType
 tTangents
 tTargetAffixSelector
 tTargetId
+tTargetItemAffixSelector
 tTargetLocatorName
 tTargetMarkerSnapshot
 tTemperData
