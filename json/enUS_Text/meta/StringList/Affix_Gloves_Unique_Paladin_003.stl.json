@@ -8,7 +8,7 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Desc",
-   "szText": "{c_important}Holy Light's{/c} passive now deals {c_random}[(Owner.Weapon_Damage_Min_Total + Owner.Weapon_Damage_Delta_Total) * Affix_Value_1]{/c} Fire Damage every second in a small area around you. Each time an enemy dies within this aura, it increases its damage by {c_number}[Affix.\"Static Value 0\" * 100|%+|]{/c} and burn area by {c_number}[Affix.\"Static Value 1\" * 100|%+|]{/c} for {c_number}[Affix.\"Static Value 2\"]{/c} seconds, up to {c_number}[Affix.\"Static Value 3\"]{/c} times.\r\n\r\nActivating {c_important}Holy Light Aura{/c} refreshes this duration.",
+   "szText": "{if:SF.IsMythic}{c_mythic}{/if}{c_important}Holy Light's{/c} passive now deals {if:SF.IsMythic}{c_number}{else}{c_random}{/if}[(Owner.Weapon_Damage_Min_Total + Owner.Weapon_Damage_Delta_Total) * Affix_Value_1]{/c} Fire Damage every second in a small area around you. Each time an enemy dies within this aura, it increases its damage by {c_number}[Affix.\"Static Value 0\" * 100|%x|]{/c} and burn area by {c_number}[Affix.\"Static Value 1\" * 100|%+|]{/c} for {c_number}[Affix.\"Static Value 2\"]{/c} seconds, up to {c_number}[Affix.\"Static Value 3\"]{/c} times.\r\n\r\nActivating {c_important}Holy Light Aura{/c} refreshes this duration.{if:SF.IsMythic}{/c_mythic}{/if}",
    "hLabel": 3707583
   }
  ],

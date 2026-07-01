@@ -8,7 +8,7 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Desc",
-   "szText": "{c_important}Rabies{/c} spreads {c_number}[Affix_Value_2*100|%|]{/c} faster and deals {c_number}[Affix.\"Static Value 0\"*100|%x|]{/c} bonus damage (max {c_random}[Affix_Value_1*100|%x|]{/c}) each time it spreads.",
+   "szText": "{if:SF.IsMythic}{c_mythic}{/if}{c_important}Rabies{/c} spreads {c_number}[Affix_Value_2*100|%|]{/c} faster and deals {c_number}[Affix.\"Static Value 0\"*100|%x|]{/c} bonus damage (max {if:SF.IsMythic}{c_number}{else}{c_random}{/if}[Affix_Value_1*100|%x|]{/c}) each time it spreads.{if:SF.IsMythic}{/c_mythic}{/if}",
    "hLabel": 3707583
   }
  ],

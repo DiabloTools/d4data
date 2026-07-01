@@ -585,6 +585,9 @@
  "hIconInactive": 3388948515,
  "hIconInactiveMouseover": 0,
  "hIconRound": 0,
+ "unk_2c3956": false,
+ "unk_b53e8e5": 0,
+ "gbidSeasonalSkillTag": null,
  "gbidHotbarCountPetType": null,
  "unk_159fc50": 0,
  "bForceLearned": false,
@@ -856,7 +859,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Evade_Reduce_Cooldown_On_Attack",
-    "compiled": "BQAAAAAAAAAhBAAA/v///wAAAAAAAAAA"
+    "compiled": "BQAAAAAAAAAkBAAA/v///wAAAAAAAAAA"
    }
   },
   {
@@ -872,7 +875,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Evade_Movement_Dodge_Chance",
-    "compiled": "BQAAAAAAAAAiBAAA/v///wAAAAAAAAAA"
+    "compiled": "BQAAAAAAAAAlBAAA/v///wAAAAAAAAAA"
    }
   },
   {
@@ -896,7 +899,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Evade_Max_Charges",
-    "compiled": "BQAAAAAAAAAgBAAA/v///wAAAAAAAAAA"
+    "compiled": "BQAAAAAAAAAjBAAA/v///wAAAAAAAAAA"
    }
   },
   {
@@ -932,8 +935,57 @@
  },
  "flCastingEffectGroupDuration": 0.5,
  "arCastingEffectOverrides": [],
- "arCastingEffectOverridesByVisualRemap": [],
- "arDamageRemapConditions": [],
+ "arCastingEffectOverridesByVisualRemap": [
+  {
+   "__type__": "PowerCastingEffectOverrideByVisualRemap",
+   "__typeHash__": 2441472839,
+   "snoVisualRemap": {
+    "__raw__": 2350117,
+    "__group__": 175,
+    "__type__": "DT_SNO",
+    "__typeHash__": 2764331143,
+    "__targetFileName__": "base/meta/VisualRemap/class_sorc_fire.vrm",
+    "groupName": "VisualRemap",
+    "name": "class_sorc_fire"
+   },
+   "snoCastingEffectGroup": {
+    "__raw__": 2504809,
+    "__group__": 14,
+    "__type__": "DT_SNO",
+    "__typeHash__": 2764331143,
+    "__targetFileName__": "base/meta/EffectGroup/Sorc_teleport_cast_upgradeB.efg",
+    "groupName": "EffectGroup",
+    "name": "Sorc_teleport_cast_upgradeB"
+   },
+   "snoAutoCastingEffectGroup": null
+  }
+ ],
+ "arDamageRemapConditions": [
+  {
+   "__type__": "DamageRemapConditions",
+   "__typeHash__": 3454042638,
+   "eDamageType": 1,
+   "snoVisualRemap": {
+    "__raw__": 2350117,
+    "__group__": 175,
+    "__type__": "DT_SNO",
+    "__typeHash__": 2764331143,
+    "__targetFileName__": "base/meta/VisualRemap/class_sorc_fire.vrm",
+    "groupName": "VisualRemap",
+    "name": "class_sorc_fire"
+   },
+   "arRequiredSkillTags": [
+    {
+     "__raw__": 3828504356,
+     "__type__": "DT_GBID",
+     "__typeHash__": 1028170061,
+     "group": 56,
+     "name": "Skill_Fire"
+    }
+   ],
+   "unk_a0d2a94": false
+  }
+ ],
  "arPetSpawns": [],
  "unk_143fe9f": {
   "value": "10",

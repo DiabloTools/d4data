@@ -639,6 +639,9 @@
  "hIconInactive": 512499318,
  "hIconInactiveMouseover": 0,
  "hIconRound": 0,
+ "unk_2c3956": false,
+ "unk_b53e8e5": 0,
+ "gbidSeasonalSkillTag": null,
  "gbidHotbarCountPetType": null,
  "unk_159fc50": 0,
  "bForceLearned": false,
@@ -1920,7 +1923,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Min(1.5, 1 + (AoE_Size_Bonus_Per_Power#Necromancer_BoneSpirit / 2))",
-    "compiled": "BgAAAAAAwD8GAAAAAACAPwUAAAAAAAAADQQAAIkqBwAAAAAABgAAAAAAAEAOAAAACwAAAAEAAAAAAAAAAAAAAA=="
+    "compiled": "BgAAAAAAwD8GAAAAAACAPwUAAAAAAAAAEAQAAIkqBwAAAAAABgAAAAAAAEAOAAAACwAAAAEAAAAAAAAAAAAAAA=="
    }
   },
   {
@@ -1928,7 +1931,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Affix_Value_1#legendary_necro_133 / 100",
-    "compiled": "BQAAAAAAAACSBAAAhy0eAAAAAAAGAAAAAADIQg4AAAAAAAAA"
+    "compiled": "BQAAAAAAAACVBAAAhy0eAAAAAAAGAAAAAADIQg4AAAAAAAAA"
    }
   },
   {
@@ -1952,7 +1955,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Affix_Value_1#x1_legendary_necro_129 / 100",
-    "compiled": "BQAAAAAAAACSBAAA5jIcAAAAAAAGAAAAAADIQg4AAAAAAAAA"
+    "compiled": "BQAAAAAAAACVBAAA5jIcAAAAAAAGAAAAAADIQg4AAAAAAAAA"
    }
   },
   {
@@ -2016,7 +2019,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Affix_Value_1#Chest_Unique_Necro_101_x2 / 100",
-    "compiled": "BQAAAAAAAACSBAAAYYAnAAAAAAAGAAAAAADIQg4AAAAAAAAA"
+    "compiled": "BQAAAAAAAACVBAAAYYAnAAAAAAAGAAAAAADIQg4AAAAAAAAA"
    }
   },
   {
@@ -2531,7 +2534,20 @@
    "bAffectsEnchantmentDescription": false,
    "unk_b1d89c5": true,
    "unk_b25b989": false,
-   "arSkillTagsToAdd": [],
+   "arSkillTagsToAdd": [
+    {
+     "__type__": "SkillTagStruct",
+     "__typeHash__": 4000554560,
+     "gbidSkillTag": {
+      "__raw__": 3537867514,
+      "__type__": "DT_GBID",
+      "__typeHash__": 1028170061,
+      "group": 56,
+      "name": "Search_Cooldown"
+     },
+     "bSearchOnly": false
+    }
+   ],
    "arSkillTagsToRemove": [],
    "eModType": 0,
    "hIconNormalOverride": 2920834280,
@@ -2603,7 +2619,15 @@
      "bSearchOnly": false
     }
    ],
-   "arSkillTagsToRemove": [],
+   "arSkillTagsToRemove": [
+    {
+     "__raw__": 3537867514,
+     "__type__": "DT_GBID",
+     "__typeHash__": 1028170061,
+     "group": 56,
+     "name": "Search_Cooldown"
+    }
+   ],
    "eModType": 0,
    "hIconNormalOverride": 1264068485,
    "hIconMouseoverOverride": 1264068485,
@@ -2629,11 +2653,11 @@
      "__type__": "SkillTagStruct",
      "__typeHash__": 4000554560,
      "gbidSkillTag": {
-      "__raw__": 2892145024,
+      "__raw__": 3567369300,
       "__type__": "DT_GBID",
       "__typeHash__": 1028170061,
       "group": 56,
-      "name": "Search_Critical"
+      "name": "Search_Damage"
      },
      "bSearchOnly": false
     }

@@ -655,8 +655,17 @@
  "hIconInactive": 2900569648,
  "hIconInactiveMouseover": 0,
  "hIconRound": 0,
- "gbidHotbarCountPetType": null,
- "unk_159fc50": 0,
+ "unk_2c3956": false,
+ "unk_b53e8e5": 0,
+ "gbidSeasonalSkillTag": null,
+ "gbidHotbarCountPetType": {
+  "__raw__": 3965754003,
+  "__type__": "DT_GBID",
+  "__typeHash__": 1028170061,
+  "group": 23,
+  "name": "Warlock_SummonFallenGrunt"
+ },
+ "unk_159fc50": 2359620896,
  "bForceLearned": false,
  "fCancelOnDamage": false,
  "fCancelOnDamageThreshold": false,
@@ -1171,7 +1180,7 @@
    "unk_4bdaef2": false,
    "bVisibleInHotbarUI": true,
    "bShowsActiveStateOnHotbar": true,
-   "bShowsDurationOnHotbar": true,
+   "bShowsDurationOnHotbar": false,
    "bShowsStackCountOnHotbar": false,
    "unk_8b74b0f": false,
    "unk_71ba554": false,
@@ -2035,8 +2044,8 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "20",
-    "compiled": "BgAAAAAAoEEAAAAA"
+    "value": "30",
+    "compiled": "BgAAAAAA8EEAAAAA"
    }
   },
   {
@@ -2205,6 +2214,22 @@
    "tFormula": {
     "value": "PowerTag.SystemsTuningGlobals.\"Script Formula 0\"",
     "compiled": "BQAAAAUAAADNbRAAAAAAAAAAAAAAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "8 + Bonus_Flat_Resource_Per_Power#Warlock_Summon_Lunatic",
+    "compiled": "BgAAAAAAAEEFAAAAAAAAAAgBAIDBwyEAAAAAAAsAAAAAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "Mod.UpgradeC * SF_9",
+    "compiled": "BQAAAFoAAAD/////CwkaoAAAAAAFAAAADwAAAAAAAAAAAAAAAAAAAA0AAAAAAAAA"
    }
   }
  ],
@@ -3084,8 +3109,8 @@
     "name": "Warlock_SummonFallenGrunt"
    },
    "tMax": {
-    "value": "3",
-    "compiled": "BgAAAAAAQEAAAAAA"
+    "value": "SF_31",
+    "compiled": "BQAAACUAAAAAAAAAAAAAAAAAAAAAAAAA"
    },
    "tHealth": {
     "__type__": "HitpointSpecifier",

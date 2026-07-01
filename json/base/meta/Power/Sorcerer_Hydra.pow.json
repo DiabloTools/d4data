@@ -637,6 +637,9 @@
  "hIconInactive": 3656869647,
  "hIconInactiveMouseover": 0,
  "hIconRound": 0,
+ "unk_2c3956": false,
+ "unk_b53e8e5": 0,
+ "gbidSeasonalSkillTag": null,
  "gbidHotbarCountPetType": null,
  "unk_159fc50": 0,
  "bForceLearned": false,
@@ -3243,6 +3246,124 @@
    "dwShaderMapOverride": 4294967295,
    "dwChillShaderMapOverride": 4294967295,
    "dwFrozenShaderMapOverride": 4294967295
+  },
+  {
+   "__type__": "PowerBuffDefinition",
+   "__typeHash__": 1071057721,
+   "dwID": 3022893808,
+   "dwBuffId": 39,
+   "bHarmful": false,
+   "bInfinite": true,
+   "tDuration": {
+    "value": "1",
+    "compiled": "BgAAAAAAgD8AAAAA"
+   },
+   "tMaxExtendDuration": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   },
+   "bMoveOnSkillCategoryCooldown": false,
+   "unk_dcb22bd": false,
+   "tMaxStackCount": {
+    "value": "1",
+    "compiled": "BgAAAAAAgD8AAAAA"
+   },
+   "unk_bb42146": false,
+   "unk_22c356e": false,
+   "gbidBuffPreset": null,
+   "bVisibleInUI": false,
+   "nVisualPriority": 0,
+   "bShowDuration": false,
+   "bCancellable": false,
+   "unk_99b5752": false,
+   "unk_93cd85f": false,
+   "unk_4bdaef2": false,
+   "bVisibleInHotbarUI": false,
+   "bShowsActiveStateOnHotbar": false,
+   "bShowsDurationOnHotbar": false,
+   "bShowsStackCountOnHotbar": false,
+   "unk_8b74b0f": false,
+   "unk_71ba554": false,
+   "unk_1375622": false,
+   "unk_d2dd47": false,
+   "unk_8a5f69e": false,
+   "hIcon": 0,
+   "hFloatingIcon": 0,
+   "hFloatingTextLabel": 0,
+   "flFloatingTextIconRange": 0,
+   "unk_395ccd6": false,
+   "bDealsDOT": false,
+   "tDOT": {
+    "__type__": "PowerBuffDOTDamage",
+    "__typeHash__": 3824324374,
+    "unk_c3d4c36": false,
+    "eDamageType": -1,
+    "tDamage": {
+     "__type__": "HitpointSpecifier",
+     "__typeHash__": 1185241065,
+     "eType": 0,
+     "tHitpointScalar": {
+      "value": "0",
+      "compiled": "BgAAAAAAAAAAAAAA"
+     },
+     "tFlatLevel": {
+      "value": "0",
+      "compiled": "BgAAAAAAAAAAAAAA"
+     }
+    },
+    "unk_89dc285": false,
+    "flFlatDamageBonusScalar": 1,
+    "unk_f551941": -1,
+    "bDamageIgnoresInvulnerable": false,
+    "bDamageIgnoresBonuses": false,
+    "unk_b7113b1": false,
+    "eClassBaseDamageScalar": -1,
+    "bHasCombatEffectOverride": false,
+    "tCombatEffectOverride": {
+     "value": "100",
+     "compiled": "BgAAAAAAyEIAAAAA"
+    },
+    "bHideDamageEffects": false,
+    "bHideGlobalApplicationEffect": false
+   },
+   "tCrowdControl": {
+    "__type__": "PowerBuffCrowdControl",
+    "__typeHash__": 4138865712,
+    "unk_c63f49e": true,
+    "dwCCFlags": 0,
+    "bUseGlobalSlowAmount": false,
+    "eGlobalSlowAmountType": 0,
+    "tSlowAmount": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    },
+    "tChillAmount": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    },
+    "tStaggerMultiplier": {
+     "value": "1",
+     "compiled": "BgAAAAAAgD8AAAAA"
+    },
+    "unk_20877c3": false
+   },
+   "bHasDamageShield": false,
+   "tDamageShield": {
+    "__type__": "HitpointSpecifier",
+    "__typeHash__": 1185241065,
+    "eType": 0,
+    "tHitpointScalar": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    },
+    "tFlatLevel": {
+     "value": "0",
+     "compiled": "BgAAAAAAAAAAAAAA"
+    }
+   },
+   "dwShaderMapOverride": 4294967295,
+   "dwChillShaderMapOverride": 4294967295,
+   "dwFrozenShaderMapOverride": 4294967295
   }
  ],
  "nFormulaCount": 0,
@@ -3315,8 +3436,8 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "(Mod.UpgradeB ? 10 : 1) + Max_Summons_Per_Skill_Tag#Skill_Primary_Conjuration",
-    "compiled": "BQAAAFoAAAD/////CgkaoAAAAAAGAAAAAAAgQQYAAAAAAIA/EAAAAAUAAAAAAAAACwEAgE3lD3MAAAAACwAAAAAAAAA="
+    "value": "(Mod.UpgradeB ? SF_54: 1) + Max_Summons_Per_Skill_Tag#Skill_Primary_Conjuration",
+    "compiled": "BQAAAFoAAAD/////CgkaoAAAAAAFAAAAPAAAAAAAAAAAAAAAAAAAAAYAAAAAAIA/EAAAAAUAAAAAAAAACwEAgE3lD3MAAAAACwAAAAAAAAA="
    }
   },
   {
@@ -3412,7 +3533,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "SF_19 * (1 + Combat_Effect_Chance_Bonus_Per_Skill#Sorcerer_Hydra_ProjectileAttack)",
-    "compiled": "BQAAABkAAAAAAAAAAAAAAAAAAAAGAAAAAACAPwUAAAAAAAAAtgQAAFE+AgAAAAAACwAAAA0AAAAAAAAA"
+    "compiled": "BQAAABkAAAAAAAAAAAAAAAAAAAAGAAAAAACAPwUAAAAAAAAAuQQAAFE+AgAAAAAACwAAAA0AAAAAAAAA"
    }
   },
   {
@@ -3428,7 +3549,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Affix_Value_1#legendary_sorc_039 / 100",
-    "compiled": "BQAAAAAAAACSBAAAqNgIAAAAAAAGAAAAAADIQg4AAAAAAAAA"
+    "compiled": "BQAAAAAAAACVBAAAqNgIAAAAAAAGAAAAAADIQg4AAAAAAAAA"
    }
   },
   {
@@ -3484,7 +3605,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Affix_Value_1#Amulet_Unique_Sorc_102",
-    "compiled": "BQAAAAAAAACSBAAAM1cjAAAAAAAAAAAA"
+    "compiled": "BQAAAAAAAACVBAAAM1cjAAAAAAAAAAAA"
    }
   },
   {
@@ -3677,6 +3798,14 @@
    "tFormula": {
     "value": "Affix.legendary_sorc_039.\"Static Value 1\"",
     "compiled": "BQAAAGMAAACo2AgAAQAAAAAAAAAAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "10",
+    "compiled": "BgAAAAAAIEEAAAAA"
    }
   }
  ],
@@ -4354,11 +4483,23 @@
      "__type__": "SkillTagStruct",
      "__typeHash__": 4000554560,
      "gbidSkillTag": {
-      "__raw__": 2892145024,
+      "__raw__": 2543133100,
       "__type__": "DT_GBID",
       "__typeHash__": 1028170061,
       "group": 56,
-      "name": "Search_Critical"
+      "name": "Search_Burn"
+     },
+     "bSearchOnly": false
+    },
+    {
+     "__type__": "SkillTagStruct",
+     "__typeHash__": 4000554560,
+     "gbidSkillTag": {
+      "__raw__": 3567369300,
+      "__type__": "DT_GBID",
+      "__typeHash__": 1028170061,
+      "group": 56,
+      "name": "Search_Damage"
      },
      "bSearchOnly": false
     }
@@ -4394,42 +4535,6 @@
       "__typeHash__": 1028170061,
       "group": 56,
       "name": "Search_Damage"
-     },
-     "bSearchOnly": false
-    },
-    {
-     "__type__": "SkillTagStruct",
-     "__typeHash__": 4000554560,
-     "gbidSkillTag": {
-      "__raw__": 2543133100,
-      "__type__": "DT_GBID",
-      "__typeHash__": 1028170061,
-      "group": 56,
-      "name": "Search_Burn"
-     },
-     "bSearchOnly": false
-    },
-    {
-     "__type__": "SkillTagStruct",
-     "__typeHash__": 4000554560,
-     "gbidSkillTag": {
-      "__raw__": 2543162295,
-      "__type__": "DT_GBID",
-      "__typeHash__": 1028170061,
-      "group": 56,
-      "name": "Search_Cold"
-     },
-     "bSearchOnly": false
-    },
-    {
-     "__type__": "SkillTagStruct",
-     "__typeHash__": 4000554560,
-     "gbidSkillTag": {
-      "__raw__": 1302406649,
-      "__type__": "DT_GBID",
-      "__typeHash__": 1028170061,
-      "group": 56,
-      "name": "Search_Lightning"
      },
      "bSearchOnly": false
     }
@@ -4496,11 +4601,11 @@
      "__type__": "SkillTagStruct",
      "__typeHash__": 4000554560,
      "gbidSkillTag": {
-      "__raw__": 2616760579,
+      "__raw__": 340908880,
       "__type__": "DT_GBID",
       "__typeHash__": 1028170061,
       "group": 56,
-      "name": "Keyword_Chill_Frozen"
+      "name": "Keyword_Chill"
      },
      "bSearchOnly": false
     },
@@ -4548,12 +4653,25 @@
    "dwModId": 7,
    "dwModMask": 16,
    "unk_94cc84e": 4,
-   "bAppendDescription": false,
+   "bAppendDescription": true,
    "bBulletPointDescription": true,
    "bAffectsEnchantmentDescription": false,
    "unk_b1d89c5": false,
    "unk_b25b989": false,
-   "arSkillTagsToAdd": [],
+   "arSkillTagsToAdd": [
+    {
+     "__type__": "SkillTagStruct",
+     "__typeHash__": 4000554560,
+     "gbidSkillTag": {
+      "__raw__": 2772682893,
+      "__type__": "DT_GBID",
+      "__typeHash__": 1028170061,
+      "group": 56,
+      "name": "Search_Healing"
+     },
+     "bSearchOnly": false
+    }
+   ],
    "arSkillTagsToRemove": [],
    "eModType": 0,
    "hIconNormalOverride": 1813944211,
@@ -4570,7 +4688,7 @@
    "dwModId": 8,
    "dwModMask": 32,
    "unk_94cc84e": 5,
-   "bAppendDescription": false,
+   "bAppendDescription": true,
    "bBulletPointDescription": true,
    "bAffectsEnchantmentDescription": false,
    "unk_b1d89c5": false,
@@ -4605,12 +4723,25 @@
    "dwModId": 9,
    "dwModMask": 64,
    "unk_94cc84e": 6,
-   "bAppendDescription": false,
+   "bAppendDescription": true,
    "bBulletPointDescription": true,
    "bAffectsEnchantmentDescription": false,
    "unk_b1d89c5": false,
    "unk_b25b989": false,
-   "arSkillTagsToAdd": [],
+   "arSkillTagsToAdd": [
+    {
+     "__type__": "SkillTagStruct",
+     "__typeHash__": 4000554560,
+     "gbidSkillTag": {
+      "__raw__": 3537867514,
+      "__type__": "DT_GBID",
+      "__typeHash__": 1028170061,
+      "group": 56,
+      "name": "Search_Cooldown"
+     },
+     "bSearchOnly": false
+    }
+   ],
    "arSkillTagsToRemove": [],
    "eModType": 0,
    "hIconNormalOverride": 1643528245,
@@ -4627,12 +4758,25 @@
    "dwModId": 10,
    "dwModMask": 128,
    "unk_94cc84e": 7,
-   "bAppendDescription": false,
+   "bAppendDescription": true,
    "bBulletPointDescription": true,
    "bAffectsEnchantmentDescription": false,
    "unk_b1d89c5": false,
    "unk_b25b989": false,
-   "arSkillTagsToAdd": [],
+   "arSkillTagsToAdd": [
+    {
+     "__type__": "SkillTagStruct",
+     "__typeHash__": 4000554560,
+     "gbidSkillTag": {
+      "__raw__": 2329556113,
+      "__type__": "DT_GBID",
+      "__typeHash__": 1028170061,
+      "group": 56,
+      "name": "Search_CastSpeed"
+     },
+     "bSearchOnly": false
+    }
+   ],
    "arSkillTagsToRemove": [],
    "eModType": 0,
    "hIconNormalOverride": 898961067,

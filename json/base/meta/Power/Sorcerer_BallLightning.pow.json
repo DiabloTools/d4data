@@ -741,6 +741,9 @@
  "hIconInactive": 4249175949,
  "hIconInactiveMouseover": 0,
  "hIconRound": 0,
+ "unk_2c3956": false,
+ "unk_b53e8e5": 0,
+ "gbidSeasonalSkillTag": null,
  "gbidHotbarCountPetType": null,
  "unk_159fc50": 0,
  "bForceLearned": false,
@@ -1703,16 +1706,16 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "",
-    "compiled": ""
+    "value": "1.2",
+    "compiled": "BgAAAJqZmT8AAAAA"
    }
   },
   {
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "1.2 * Table(34,sLevel)",
-    "compiled": "BgAAAJqZmT8GAAAAAAAIQgUAAAABAAAAAAAAAAAAAAAAAAAAAQAAAAsAAAANAAAAAAAAAA=="
+    "value": "SF_36 ? SF_0 : (SF_0 * Table(34,sLevel))",
+    "compiled": "BQAAACoAAAAAAAAAAAAAAAAAAAAFAAAABgAAAAAAAAAAAAAAAAAAAAUAAAAGAAAAAAAAAAAAAAAAAAAABgAAAAAACEIFAAAAAQAAAAAAAAAAAAAAAAAAAAEAAAALAAAADQAAABAAAAAAAAAA"
    }
   },
   {
@@ -1847,8 +1850,8 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "Min(1.5, 1 + (AoE_Size_Bonus_Per_Power#Sorcerer_BallLightning / 2) + (AoE_Size_Bonus_Per_Skill_Tag#Skill_Primary_Mastery / 2) + SF_26)",
-    "compiled": "BgAAAAAAwD8GAAAAAACAPwUAAAAAAAAADQQAAO7XBwAAAAAABgAAAAAAAEAOAAAACwAAAAUAAAAAAAAASQAAgIZTfiwAAAAABgAAAAAAAEAOAAAACwAAAAUAAAAgAAAAAAAAAAAAAAAAAAAACwAAAAEAAAAAAAAAAAAAAA=="
+    "value": "SF_35 + Min(1.5, 1 + (AoE_Size_Bonus_Per_Power#Sorcerer_BallLightning / 2) + (AoE_Size_Bonus_Per_Skill_Tag#Skill_Primary_Mastery / 2) + SF_26)",
+    "compiled": "BQAAACkAAAAAAAAAAAAAAAAAAAAGAAAAAADAPwYAAAAAAIA/BQAAAAAAAAAQBAAA7tcHAAAAAAAGAAAAAAAAQA4AAAALAAAABQAAAAAAAABJAACAhlN+LAAAAAAGAAAAAAAAQA4AAAALAAAABQAAACAAAAAAAAAAAAAAAAAAAAALAAAAAQAAAAAAAAALAAAAAAAAAA=="
    }
   },
   {
@@ -1880,7 +1883,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Percent_Bonus_Projectiles_Per_Power#Sorcerer_BallLightning + Percent_Bonus_Projectiles_All + Percent_Bonus_Projectiles_Per_Skill_Tag#Skill_Primary_Core + (Mod.Upgrade1 ? SF_20 : 0)",
-    "compiled": "BQAAAAAAAADsAwAA7tcHAAAAAAAFAAAAAAAAAOsDAAD+////AAAAAAsAAAAFAAAAAAAAAO0DAAAK4vGoAAAAAAsAAAAFAAAAWgAAAP/////ZCBqgAAAAAAUAAAAaAAAAAAAAAAAAAAAAAAAABgAAAAAAAAAQAAAACwAAAAAAAAA="
+    "compiled": "BQAAAAAAAADvAwAA7tcHAAAAAAAFAAAAAAAAAO4DAAD+////AAAAAAsAAAAFAAAAAAAAAPADAAAK4vGoAAAAAAsAAAAFAAAAWgAAAP/////ZCBqgAAAAAAUAAAAaAAAAAAAAAAAAAAAAAAAABgAAAAAAAAAQAAAACwAAAAAAAAA="
    }
   },
   {
@@ -1911,8 +1914,8 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "Mod.UpgradeC? (AoE_Size_Bonus_Per_Skill_Tag#Skill_Fire/2) : 0",
-    "compiled": "BQAAAFoAAAD/////CwkaoAAAAAAFAAAAAAAAAEkAAIAkVzLkAAAAAAYAAAAAAABADgAAAAYAAAAAAAAAEAAAAAAAAAA="
+    "value": "SF_36? (AoE_Size_Bonus_Per_Skill_Tag#Skill_Fire/2) : 0",
+    "compiled": "BQAAACoAAAAAAAAAAAAAAAAAAAAFAAAAAAAAAEkAAIAkVzLkAAAAAAYAAAAAAABADgAAAAYAAAAAAAAAEAAAAAAAAAA="
    }
   },
   {
@@ -1936,7 +1939,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "AffixIsEquipped(SNO.Affix.1HFocus_Unique_Sorc_100) ? (1 + Affix_Value_1#1HFocus_Unique_Sorc_100 / 100) : 1",
-    "compiled": "BQAAAFkAAAAFgCAAAAAAAAAAAAABAAAAJAAAAAYAAAAAAIA/BQAAAAAAAACSBAAABYAgAAAAAAAGAAAAAADIQg4AAAALAAAABgAAAAAAgD8QAAAAAAAAAA=="
+    "compiled": "BQAAAFkAAAAFgCAAAAAAAAAAAAABAAAAJAAAAAYAAAAAAIA/BQAAAAAAAACVBAAABYAgAAAAAAAGAAAAAADIQg4AAAALAAAABgAAAAAAgD8QAAAAAAAAAA=="
    }
   },
   {
@@ -1969,6 +1972,38 @@
    "tFormula": {
     "value": "(((Mod.UpgradeA ? (SF_9 * (1/SF_3)) : 1) *(Mod.UpgradeB ? (SF_12 * (1/SF_13)) : 1) * (Mod.UpgradeC ? (SF_15 * (1/SF_3)) : 1)) / SF_1)",
     "compiled": "BQAAAFoAAAD/////CQkaoAAAAAAFAAAADwAAAAAAAAAAAAAAAAAAAAYAAAAAAIA/BQAAAAkAAAAAAAAAAAAAAAAAAAAOAAAADQAAAAYAAAAAAIA/EAAAAAUAAABaAAAA/////woJGqAAAAAABQAAABIAAAAAAAAAAAAAAAAAAAAGAAAAAACAPwUAAAATAAAAAAAAAAAAAAAAAAAADgAAAA0AAAAGAAAAAACAPxAAAAANAAAABQAAAFoAAAD/////CwkaoAAAAAAFAAAAFQAAAAAAAAAAAAAAAAAAAAYAAAAAAIA/BQAAAAkAAAAAAAAAAAAAAAAAAAAOAAAADQAAAAYAAAAAAIA/EAAAAA0AAAAFAAAABwAAAAAAAAAAAAAAAAAAAA4AAAAAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "0.02",
+    "compiled": "BgAAAArXozwAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "SF_36 ? MIN(SF_37, SF_34 * sLevel) : 0",
+    "compiled": "BQAAACoAAAAAAAAAAAAAAAAAAAAFAAAAKwAAAAAAAAAAAAAAAAAAAAUAAAAoAAAAAAAAAAAAAAAAAAAABQAAAAEAAAAAAAAAAAAAAAAAAAANAAAAAQAAAAAAAAAGAAAAAAAAABAAAAAAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "Mod.UpgradeC",
+    "compiled": "BQAAAFoAAAD/////CwkaoAAAAAAAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "1",
+    "compiled": "BgAAAAAAgD8AAAAA"
    }
   }
  ],

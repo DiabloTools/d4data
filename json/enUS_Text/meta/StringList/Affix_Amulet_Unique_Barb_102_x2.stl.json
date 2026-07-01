@@ -8,7 +8,7 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Desc",
-   "szText": "{c_important}{u}Berserking's{/u}{/c} damage bonus is increased by {c_random}[Affix_Value_1 * 100|1%x|]{/c}. While not {c_important}{u}Healthy{/u}{/c}, you are always {c_important}{u}Berserk{/u}{/c}.",
+   "szText": "{if:SF.IsMythic}{c_mythic}{/if}{c_important}{u}Berserking's{/u}{/c} damage bonus is increased by {if:SF.IsMythic}{c_number}{else}{c_random}{/if}[Affix_Value_1 * 100|1%+|]{/c}. While not {c_important}{u}Healthy{/u}{/c}, you are always {c_important}{u}Berserk{/u}{/c}.{if:SF.IsMythic}{/c_mythic}{/if}",
    "hLabel": 3707583
   }
  ],

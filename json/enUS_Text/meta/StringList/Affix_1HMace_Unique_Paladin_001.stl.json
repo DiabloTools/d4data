@@ -8,7 +8,7 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Desc",
-   "szText": "{c_important}Blessed Hammer{/c} deals {c_random}[Affix_Value_1 * 100|%x|]{/c} increased damage.\r\n\r\n{c_label}Lucky Hit:{/c} Up to a {c_number}[Affix_Value_2 * 100|%|]{/c} chance to spawn a base Blessed Hammer on the target hit.",
+   "szText": "{if:SF.IsMythic}{c_mythic}{/if}{c_important}Blessed Hammer{/c} deals {if:SF.IsMythic}{c_number}{else}{c_random}{/if}[Affix_Value_1 * 100|%x|]{/c} increased damage.\r\n\r\n{c_label}Lucky Hit:{/c} Up to a {c_number}[Affix_Value_2 * 100|%|]{/c} chance to spawn a base Blessed Hammer on the target hit.{if:SF.IsMythic}{/c_mythic}{/if}",
    "hLabel": 3707583
   }
  ],

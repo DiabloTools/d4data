@@ -8,7 +8,7 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Desc",
-   "szText": "Each Damage over Time type you apply explodes every second, dealing {c_random}[(Owner.Weapon_Damage_Min_Total + Owner.Weapon_Damage_Delta_Total) * (1 + Owner.Main_Hand_Damage_Percent_Bonus) * Affix_Value_1]{/c} damage over {c_number}[Affix.\"Static Value 0\"]{/c} seconds to surrounding enemies.",
+   "szText": "{if:SF.IsMythic}{c_mythic}{/if}Each Damage over Time type you apply explodes every second, dealing {if:SF.IsMythic}{c_number}{else}{c_random}{/if}[(Owner.Weapon_Damage_Min_Total + Owner.Weapon_Damage_Delta_Total) * (1 + Owner.Main_Hand_Damage_Percent_Bonus) * Affix_Value_1]{/c} damage over {c_number}[Affix.\"Static Value 0\"]{/c} seconds to surrounding enemies.{if:SF.IsMythic}{/c_mythic}{/if}",
    "hLabel": 3707583
   }
  ],

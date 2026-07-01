@@ -8,7 +8,7 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Desc",
-   "szText": "{c_important}Pulverize{/c} pulls Distant enemies towards you. In addition, {c_important}Pulverize{/c} deals {c_random}[Affix_Value_1*100|x%|]{/c} bonus damage. This damage bonus is increased to {c_random}[(Affix_Value_1*Affix.\"Static Value 0\")*100|x%|]{/c} if the target was pulled towards you, is {c_important}{u}Unstoppable{/u}{/c} or a Boss.",
+   "szText": "{if:SF.IsMythic}{c_mythic}{/if}{c_important}Pulverize{/c} pulls Distant enemies towards you. In addition, {c_important}Pulverize{/c} deals {if:SF.IsMythic}{c_number}{else}{c_random}{/if}[Affix_Value_1*100|x%|]{/c} bonus damage. This damage bonus is increased to {if:SF.IsMythic}{c_number}{else}{c_random}{/if}[(Affix_Value_1*Affix.\"Static Value 0\")*100|x%|]{/c} if the target was pulled towards you, is {c_important}{u}Unstoppable{/u}{/c} or a Boss.{if:SF.IsMythic}{/c_mythic}{/if}",
    "hLabel": 3707583
   }
  ],

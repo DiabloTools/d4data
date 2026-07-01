@@ -8,7 +8,7 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Desc",
-   "szText": "{c_important}Ground Stomp's{/c} damage is increased by {c_random}[Affix_Value_1 * 100|1%x|]{/c} plus an additional amount based on the distance traveled since the last casted {c_important}Ground Stomp's{/c}, up to {c_random}[Affix_Value_1 * Affix.\"Static Value 0\" * 100|1%x|]{/c}.",
+   "szText": "{if:SF.IsMythic}{c_mythic}{/if}{c_important}Ground Stomp's{/c} damage is increased by {if:SF.IsMythic}{c_number}{else}{c_random}{/if}[Affix_Value_1 * 100|1%x|]{/c} plus an additional amount based on the distance traveled since the last casted {c_important}Ground Stomp's{/c}, up to {if:SF.IsMythic}{c_number}{else}{c_random}{/if}[Affix_Value_1 * Affix.\"Static Value 0\" * 100|1%x|]{/c}.{if:SF.IsMythic}{/c_mythic}{/if}",
    "hLabel": 3707583
   }
  ],
