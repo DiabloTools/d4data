@@ -112,21 +112,7 @@ function loadStrings(snoEntry, language = 'enUS') {
 }
 
 function loadData(snoEntry) {
-  let {groupName, name} = snoEntry;
-
-  groupName = snoGroupMap[groupName] || groupName;
-
-  let files = fs.readdirSync(`./json/base/meta/${groupName}/`).filter(file => {
-    let parts = file.split('.');
-
-    return parts.length === 3 && parts[0] === name && parts[2] === 'json';
-  });
-
-  if (files.length === 1) {
-    return loadJSON(`./json/base/meta/${groupName}/${files[0]}`);
-  }
-
-  return {};
+  return loadJSON(`./json/${snoEntry.__targetFileName__}.json`);
 }
 
 function forEachFileInGroup(groupName, cb = function () {}) {
@@ -151,11 +137,15 @@ function forEachFileInGroup(groupName, cb = function () {}) {
 const Sanctuary_Eastern_Continent = loadData({
   groupName: 'World',
   name: 'Sanctuary_Eastern_Continent',
+  __raw__: 69068,
+  __targetFileName__: "base/meta/World/Sanctuary_Eastern_Continent.wrl",
 });
 
 const global_markers = loadData({
   groupName: 'Global',
   name: 'global_markers',
+  __raw__: 69068,
+  __targetFileName__: "base/meta/Global/global_markers.glo",
 });
 
 function rotate({x, y}, angle) {
@@ -176,7 +166,7 @@ function scale({x, y}, xScale, yScale) {
     return {
       x: x,
       y: y,
-    };  
+    };
   }
 
   return {
@@ -384,7 +374,7 @@ function processMarkerSet(marker_set, offset = { x: 0, y: 0, z: 0 }) {
           gbidSpawnLocType !== undefined ? `gbidSpawnLocType: ${gbidSpawnLocType}` : null,
           `Coordinates: ${adjusted.x}, ${adjusted.y}`,
         ].filter(Boolean).join('\n');
-  
+
 
         markers[['spawn', gbidSpawnLocType, adjusted.x, adjusted.y].join('|')] = (`<path data-search-text="${[
           gbidSpawnLocType ? gbidSpawnLocType.replace(/"/g, '&quot;') : null,
@@ -394,10 +384,15 @@ function processMarkerSet(marker_set, offset = { x: 0, y: 0, z: 0 }) {
   }
 }
 
+let processedMarkerSetSNOs = {};
 global_markers.ptContent.forEach(content_entry => {
   if (Array.isArray(content_entry.arGlobalMarkerActors)) {
     content_entry.arGlobalMarkerActors.forEach(global_marker_actor => {
-      if (global_marker_actor.snoWorld.name === 'Sanctuary_Eastern_Continent' && global_marker_actor.snoMarkerSet.name) {
+      if (processedMarkerSetSNOs[global_marker_actor.snoMarkerSet.__raw__]) {
+        return;
+      }
+      if (global_marker_actor.snoWorld.__raw__ === Sanctuary_Eastern_Continent.__raw__ && global_marker_actor.snoMarkerSet.name) {
+        processedMarkerSetSNOs[global_marker_actor.snoMarkerSet.__raw__] = true;
         let marker_set = loadData(global_marker_actor.snoMarkerSet);
         console.log('[' + COLOR_YELLOW + 'World' + COLOR_NONE + '] Sanctuary_Eastern_Continent => [' + COLOR_YELLOW + 'MarkerSet' + COLOR_NONE + ']', global_marker_actor.snoMarkerSet.name, '=> snoMarkerSet[' + COLOR_GREEN + (Array.isArray(marker_set.tMarkerSet) && marker_set.tMarkerSet.length) + COLOR_NONE +']');
         processMarkerSet(marker_set);
@@ -426,6 +421,11 @@ Sanctuary_Eastern_Continent.ptServerData.forEach(tServerData => {
 
     subzone.arWorldMarkerSets.forEach(entry => {
       if (entry.snoMarkerSet && entry.snoMarkerSet.groupName === 'MarkerSet') {
+        if (processedMarkerSetSNOs[entry.snoMarkerSet.__raw__]) {
+          return;
+        }
+
+        processedMarkerSetSNOs[entry.snoMarkerSet.__raw__] = true;
         let marker_set = loadData(entry.snoMarkerSet);
         console.log('[' + COLOR_YELLOW + 'World' + COLOR_NONE + '] Sanctuary_Eastern_Continent => [' + COLOR_YELLOW + 'Subzone' + COLOR_NONE + ']', subzone_entry.name, '=> [' + COLOR_YELLOW + 'MarkerSet' + COLOR_NONE + ']', entry.snoMarkerSet.name, '=> snoMarkerSet[' + COLOR_GREEN + (Array.isArray(marker_set.tMarkerSet) && marker_set.tMarkerSet.length) + COLOR_NONE +']');
         processMarkerSet(marker_set);
