@@ -436,7 +436,14 @@ Sanctuary_Eastern_Continent.ptServerData.forEach(tServerData => {
 
 markers = Object.values(markers).sort().reverse();
 
-let imageUrl = "https://files.blizzhackers.dev/d4tex/Sanctuary_Eastern_Continent_map.jpg";
+const imageUrl = "Sanctuary_Eastern_Continent_map.jpg";
+const tZoneMapParams = Sanctuary_Eastern_Continent.tZoneMapParams;
+const zone_art = Object.freeze({
+  x: Math.round(-tZoneMapParams.vecZoneArtCenter.x / tZoneMapParams.flZoneArtScale),
+  y: Math.round(-tZoneMapParams.vecZoneArtCenter.y / tZoneMapParams.flZoneArtScale),
+  w: tZoneMapParams.nGridSystemZoneMapFieldWidth * Sanctuary_Eastern_Continent.flGridSize,
+  h: tZoneMapParams.nGridSystemZoneMapFieldHeight * Sanctuary_Eastern_Continent.flGridSize,
+});
 fs.writeFileSync('docs/atlas.html', `<html>
   <head>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -450,7 +457,7 @@ fs.writeFileSync('docs/atlas.html', `<html>
     </div>
     <svg viewBox="-1284 -2618 3564 3564" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;">
       <g id="atlas-group" transform="matrix(3.6466190067585558 0 0 3.6466190067585558 -3030 3625)">
-        <image href="${imageUrl}" x="-1356" y="-2724" width="3836" height="3836">
+        <image href="${imageUrl}" preserveAspectRatio="none" x="${zone_art.x}" y="${zone_art.y}" width="${zone_art.w}" height="${zone_art.h}">
           <title>Sanctuary Eastern Continent</title>
         </image>
         <g transform="scale(-1, 1) rotate(45)">
