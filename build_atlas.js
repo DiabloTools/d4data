@@ -226,6 +226,10 @@ function processMarkerSet(marker_set, offset = { x: 0, y: 0, z: 0 }) {
         return;
       }
 
+      if (marker.snoname == null) {
+        return;
+      }
+
       let snoReference = marker.snoname;
 
       if (snoReference.name) {
