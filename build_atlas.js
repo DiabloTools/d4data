@@ -71,6 +71,11 @@ const GizmoTypeEnum = Object.freeze({
   "Unique Operator Chest": 106,
   "Chair": 107,
   "Party Member Portal": 108,
+  "Participant Timer": 109,
+  "Recipe Event": 110,
+  "Event Select Portal": 112,
+  "Raid Banner": 113,
+  "Armory": 114
 });
 
 const GizmoTypeEnumLabels = Object.freeze(Object.keys(GizmoTypeEnum).reduce((ret, key) => {
@@ -192,14 +197,14 @@ function rgbaToHex(color) {
   return ret !== '#00000054' ? ret : '#ffffff54';
 }
 
-let borders = Sanctuary_Eastern_Continent.unk_675bda3.map(StaticCamp => {
-  const strings = loadStrings(StaticCamp.snoTerritory);
+let borders = Sanctuary_Eastern_Continent.arRegionBoundaries.map(tRegionBoundary => {
+  const strings = loadStrings(tRegionBoundary.snoTerritory);
 
-  if (StaticCamp.__type__ !== 'ScreenStaticCamps') {
+  if (tRegionBoundary.__type__ !== 'TerritoryRegionBoundary') {
     return null;
   }
 
-  return '<path class="subzone-border" d="M ' + StaticCamp.arPoints.map(point => {
+  return '<path class="subzone-border" d="M ' + tRegionBoundary.arPoints.map(point => {
     return point.x + ' ' + point.y;
   }).join(' L ') + ` z"><title>${strings.Name}</title></path>`;
 }).filter(Boolean);
@@ -328,6 +333,11 @@ function processMarkerSet(marker_set, offset = { x: 0, y: 0, z: 0 }) {
           GizmoTypeEnum["Unique Operator Chest"],
           GizmoTypeEnum["Chair"],
           GizmoTypeEnum["Party Member Portal"],
+          GizmoTypeEnum["Participant Timer"],
+          GizmoTypeEnum["Recipe Event"],
+          GizmoTypeEnum["Event Select Portal"],
+          GizmoTypeEnum["Raid Banner"],
+          GizmoTypeEnum["Armory"],
         ].indexOf(eGizmoType) < 0) {
            return;
         }
@@ -392,11 +402,25 @@ global_markers.ptContent.forEach(content_entry => {
   }
 });
 
-Sanctuary_Eastern_Continent.ptServerData.forEach(server_data => {
-  server_data.arSubzones.forEach(subzone_entry => {
+Sanctuary_Eastern_Continent.ptServerData.forEach(tServerData => {
+  let arSubzones = [];
+  let processedSubzones = {};
+
+  tServerData.ptSceneChunks.forEach(tSceneChunk => {
+    tSceneChunk.tSceneSpec.arSubzones.forEach(tSubzoneRelation => {
+      if (processedSubzones[tSubzoneRelation.snoSubzone.__raw__]) {
+        return;
+      }
+
+      processedSubzones[tSubzoneRelation.snoSubzone.__raw__] = true;
+      arSubzones.push(tSubzoneRelation.snoSubzone);
+    });
+  });
+
+  arSubzones.forEach(subzone_entry => {
     let subzone = loadData(subzone_entry);
 
-    subzone.unk_9a1125c.forEach(entry => {
+    subzone.arWorldMarkerSets.forEach(entry => {
       if (entry.snoMarkerSet && entry.snoMarkerSet.groupName === 'MarkerSet') {
         let marker_set = loadData(entry.snoMarkerSet);
         console.log('[' + COLOR_YELLOW + 'World' + COLOR_NONE + '] Sanctuary_Eastern_Continent => [' + COLOR_YELLOW + 'Subzone' + COLOR_NONE + ']', subzone_entry.name, '=> [' + COLOR_YELLOW + 'MarkerSet' + COLOR_NONE + ']', entry.snoMarkerSet.name, '=> snoMarkerSet[' + COLOR_GREEN + (Array.isArray(marker_set.tMarkerSet) && marker_set.tMarkerSet.length) + COLOR_NONE +']');
