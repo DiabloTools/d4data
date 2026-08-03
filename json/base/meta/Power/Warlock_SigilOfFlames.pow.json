@@ -2273,7 +2273,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Life_Cost_Reduction",
-    "compiled": "BQAAAAAAAAAJAQCA/v///wAAAAAAAAAA"
+    "compiled": "BQAAAAAAAAASAQCA/v///wAAAAAAAAAA"
    }
   },
   {
@@ -2305,7 +2305,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Custom_Duration_Bonus_Per_Skill_Tag#Skill_Primary_Sigil",
-    "compiled": "BQAAAAAAAAAVAQCAOTNMyAAAAAAAAAAA"
+    "compiled": "BQAAAAAAAAAeAQCAOTNMyAAAAAAAAAAA"
    }
   },
   {
@@ -2328,8 +2328,8 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "Min(1.5, 1 + (SF_31 / 2))",
-    "compiled": "BgAAAAAAwD8GAAAAAACAPwUAAAAlAAAAAAAAAAAAAAAAAAAABgAAAAAAAEAOAAAACwAAAAEAAAAAAAAAAAAAAA=="
+    "value": "Min(2, 1 + (SF_31 / 2))",
+    "compiled": "BgAAAAAAAEAGAAAAAACAPwUAAAAlAAAAAAAAAAAAAAAAAAAABgAAAAAAAEAOAAAACwAAAAEAAAAAAAAAAAAAAA=="
    }
   },
   {
@@ -2603,10 +2603,10 @@
     "compiled": "BgAAAAAAAAAAAAAA"
    },
    "arBuffsToApply": [],
-   "bApplyVulnerableDebuff": false,
+   "bApplyVulnerableDebuff": true,
    "tVulnerableDurationSecondsOverride": {
-    "value": "0",
-    "compiled": "BgAAAAAAAAAAAAAA"
+    "value": "30",
+    "compiled": "BgAAAAAA8EEAAAAA"
    },
    "unk_b4395d8": false,
    "unk_7c2668d": {
@@ -2958,6 +2958,18 @@
       "name": "Keyword_Hex"
      },
      "bSearchOnly": false
+    },
+    {
+     "__type__": "SkillTagStruct",
+     "__typeHash__": 4000554560,
+     "gbidSkillTag": {
+      "__raw__": 2434110708,
+      "__type__": "DT_GBID",
+      "__typeHash__": 1028170061,
+      "group": 56,
+      "name": "Keyword_Vulnerable"
+     },
+     "bSearchOnly": false
     }
    ],
    "arSkillTagsToRemove": [
@@ -3165,7 +3177,40 @@
  "unk_b0a1a71": true,
  "unk_bf25f64": 0,
  "arRecastPowerSequence": [],
- "arModifierProfiles": [],
+ "arModifierProfiles": [
+  {
+   "__type__": "PowerModifierProfile",
+   "__typeHash__": 2130857229,
+   "snoPowerModifier": {
+    "__raw__": 2671651,
+    "__group__": 176,
+    "__type__": "DT_SNO",
+    "__typeHash__": 2764331143,
+    "__targetFileName__": "base/meta/PowerModifier/ShowNoCastConfirmation_Moving.pmd",
+    "groupName": "PowerModifier",
+    "name": "ShowNoCastConfirmation_Moving"
+   },
+   "arConditions": [
+    {
+     "__type__": "PowerConditionHasModPoints",
+     "__typeHash__": 1121250797,
+     "dwType": 1121250797,
+     "bInverse": false,
+     "eSubject": 0,
+     "snoPower": {
+      "__raw__": 2218213,
+      "__group__": 29,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/Power/Warlock_SigilOfFlames.pow",
+      "groupName": "Power",
+      "name": "Warlock_SigilOfFlames"
+     },
+     "szPowerMod": 2686060810
+    }
+   ]
+  }
+ ],
  "arProjectileOverrides": [],
  "arConditionalDependencies": [
   {

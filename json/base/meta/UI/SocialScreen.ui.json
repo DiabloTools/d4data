@@ -26,7 +26,7 @@
       "dwType": 2502206177,
       "behaviorMessageName": 0,
       "behaviorContainerSno": null,
-      "enumVal": 964
+      "enumVal": 973
      },
      "tOnUpdate": {
       "__type__": "UIUpdateAction",
@@ -42,7 +42,7 @@
       "dwType": 2502206177,
       "behaviorMessageName": 0,
       "behaviorContainerSno": null,
-      "enumVal": 965
+      "enumVal": 974
      },
      "bActive": 0,
      "snoOnOpenSound": {
@@ -430,7 +430,7 @@
               "dwType": 2502206177,
               "behaviorMessageName": 0,
               "behaviorContainerSno": null,
-              "enumVal": 1252
+              "enumVal": 1261
              },
              "nBottom": 6,
              "nLeft": 15,
@@ -654,7 +654,7 @@
               "dwType": 2502206177,
               "behaviorMessageName": 0,
               "behaviorContainerSno": null,
-              "enumVal": 1253
+              "enumVal": 1262
              },
              "nBottom": 6,
              "nRight": 3,
@@ -877,7 +877,7 @@
               "dwType": 2502206177,
               "behaviorMessageName": 0,
               "behaviorContainerSno": null,
-              "enumVal": 1254
+              "enumVal": 1263
              },
              "nBottom": 10,
              "nRight": 15,
@@ -1063,7 +1063,7 @@
          "dwType": 2502206177,
          "behaviorMessageName": 0,
          "behaviorContainerSno": null,
-         "enumVal": 971
+         "enumVal": 980
         },
         "tOnButton2": {
          "__type__": "UIDefaultAction",
@@ -1071,7 +1071,7 @@
          "dwType": 2502206177,
          "behaviorMessageName": 0,
          "behaviorContainerSno": null,
-         "enumVal": 1272
+         "enumVal": 1281
         }
        }
       },
@@ -1155,7 +1155,7 @@
           "dwType": 2502206177,
           "behaviorMessageName": 0,
           "behaviorContainerSno": null,
-          "enumVal": 1272
+          "enumVal": 1281
          },
          "eHotkey": 136,
          "unk_f68242e": {
@@ -1164,7 +1164,7 @@
           "dwType": 2502206177,
           "behaviorMessageName": 0,
           "behaviorContainerSno": null,
-          "enumVal": 1272
+          "enumVal": 1281
          }
         }
        }
@@ -1251,12 +1251,12 @@
          {
           "__type__": "UIControlTemplate",
           "__typeHash__": 641859515,
-          "szName": "Party_Settings_Container",
+          "szName": "PartyFinder_Buttons",
           "ptInlineStyle": [
            {
-            "__type__": "UIStackPanelStyle",
-            "__typeHash__": 287728085,
-            "dwType": 287728085,
+            "__type__": "UIWindowStyle",
+            "__typeHash__": 506492871,
+            "dwType": 506492871,
             "hParentStyle": {
              "__type__": "UIControlHandle",
              "__typeHash__": 3063971755,
@@ -1264,22 +1264,7 @@
              "szControlName": 0
             },
             "unk_441f783": "0",
-            "hOptionalUIControlStyleFields": {
-             "hTemplate": {
-              "__type__": "UIControlHandle",
-              "__typeHash__": 3063971755,
-              "snoUI": {
-               "__raw__": 623438,
-               "__group__": 46,
-               "__type__": "DT_SNO",
-               "__typeHash__": 2764331143,
-               "__targetFileName__": "base/meta/UI/SocialScreen.ui",
-               "groupName": "UI",
-               "name": "SocialScreen"
-              },
-              "szControlName": 3716349730
-             }
-            },
+            "hOptionalUIControlStyleFields": {},
             "tConsoleInput": {
              "__type__": "UIControlConsoleInput",
              "__typeHash__": 3089331074,
@@ -1288,588 +1273,632 @@
             "hOptionalUIWindowStyleFields": {
              "nTop": 80,
              "eVerticalAnchoring": 0,
-             "nBottom": 100,
-             "nRight": -3,
              "nLeft": 23,
-             "eHorizontalAnchoring": 0
-            },
-            "unk_4e673ad": {},
-            "hOptionalUIStackPanelStyleFields": {}
+             "eHorizontalAnchoring": 0,
+             "bEncloseChildren": 1
+            }
            }
           ],
-          "arChildren": [],
+          "arChildren": [
+           {
+            "__type__": "UIControlTemplate",
+            "__typeHash__": 641859515,
+            "szName": "Party_Settings_Container",
+            "ptInlineStyle": [
+             {
+              "__type__": "UIStackPanelStyle",
+              "__typeHash__": 287728085,
+              "dwType": 287728085,
+              "hParentStyle": {
+               "__type__": "UIControlHandle",
+               "__typeHash__": 3063971755,
+               "snoUI": null,
+               "szControlName": 0
+              },
+              "unk_441f783": "0",
+              "hOptionalUIControlStyleFields": {
+               "hTemplate": {
+                "__type__": "UIControlHandle",
+                "__typeHash__": 3063971755,
+                "snoUI": {
+                 "__raw__": 623438,
+                 "__group__": 46,
+                 "__type__": "DT_SNO",
+                 "__typeHash__": 2764331143,
+                 "__targetFileName__": "base/meta/UI/SocialScreen.ui",
+                 "groupName": "UI",
+                 "name": "SocialScreen"
+                },
+                "szControlName": 3716349730
+               }
+              },
+              "tConsoleInput": {
+               "__type__": "UIControlConsoleInput",
+               "__typeHash__": 3089331074,
+               "hOptionalUIControlConsoleInputFields": {}
+              },
+              "hOptionalUIWindowStyleFields": {
+               "eVerticalAnchoring": 0,
+               "nBottom": 100,
+               "nRight": -3,
+               "eHorizontalAnchoring": 0
+              },
+              "unk_4e673ad": {},
+              "hOptionalUIStackPanelStyleFields": {}
+             }
+            ],
+            "arChildren": [],
+            "ptTemplateInstanceConfig": []
+           },
+           {
+            "__type__": "UIControlTemplate",
+            "__typeHash__": 641859515,
+            "szName": "PartyFinder_Disabled_Container",
+            "ptInlineStyle": [
+             {
+              "__type__": "UIStackPanelStyle",
+              "__typeHash__": 287728085,
+              "dwType": 287728085,
+              "hParentStyle": {
+               "__type__": "UIControlHandle",
+               "__typeHash__": 3063971755,
+               "snoUI": null,
+               "szControlName": 0
+              },
+              "unk_441f783": "0",
+              "hOptionalUIControlStyleFields": {
+               "bActive": 0,
+               "hTemplate": {
+                "__type__": "UIControlHandle",
+                "__typeHash__": 3063971755,
+                "snoUI": {
+                 "__raw__": 623438,
+                 "__group__": 46,
+                 "__type__": "DT_SNO",
+                 "__typeHash__": 2764331143,
+                 "__targetFileName__": "base/meta/UI/SocialScreen.ui",
+                 "groupName": "UI",
+                 "name": "SocialScreen"
+                },
+                "szControlName": 3716349730
+               }
+              },
+              "tConsoleInput": {
+               "__type__": "UIControlConsoleInput",
+               "__typeHash__": 3089331074,
+               "hOptionalUIControlConsoleInputFields": {}
+              },
+              "hOptionalUIWindowStyleFields": {
+               "eVerticalAnchoring": 0,
+               "nBottom": 100,
+               "nRight": -3,
+               "eHorizontalAnchoring": 0
+              },
+              "unk_4e673ad": {},
+              "hOptionalUIStackPanelStyleFields": {}
+             }
+            ],
+            "arChildren": [],
+            "ptTemplateInstanceConfig": [
+             {
+              "__type__": "UITemplateInstanceConfig",
+              "__typeHash__": 475975077,
+              "tStyleOverrides": [
+               {
+                "__type__": "UITemplateStyleOverride",
+                "__typeHash__": 2887578027,
+                "szPathToControl": "Party_Header_Text",
+                "tStyle": [
+                 {
+                  "__type__": "UITextStyle",
+                  "__typeHash__": 127673428,
+                  "dwType": 127673428,
+                  "hParentStyle": {
+                   "__type__": "UIControlHandle",
+                   "__typeHash__": 3063971755,
+                   "snoUI": null,
+                   "szControlName": 0
+                  },
+                  "unk_441f783": "0",
+                  "hOptionalUIControlStyleFields": {
+                   "bActive": 1
+                  },
+                  "tConsoleInput": {
+                   "__type__": "UIControlConsoleInput",
+                   "__typeHash__": 3089331074,
+                   "hOptionalUIControlConsoleInputFields": {}
+                  },
+                  "hOptionalUIWindowStyleFields": {
+                   "nTop": 3,
+                   "rgbaForeground": {
+                    "r": 146,
+                    "g": 140,
+                    "b": 124,
+                    "a": 255
+                   },
+                   "nHeight": 0,
+                   "eVerticalAnchoring": 1,
+                   "nBottom": 0,
+                   "nRight": 0,
+                   "nWidth": 0,
+                   "nLeft": 0,
+                   "eHorizontalAnchoring": 0,
+                   "hImageFrame": {
+                    "__type__": "UIImageHandleReference",
+                    "__typeHash__": 1797021084,
+                    "hImageHandle": 0
+                   }
+                  },
+                  "tFont": {
+                   "__type__": "UIControlFont",
+                   "__typeHash__": 1698657718,
+                   "hOptionalUIControlFontFields": {
+                    "snoFont": {
+                     "__raw__": 1300,
+                     "__group__": 19,
+                     "__type__": "DT_SNO",
+                     "__typeHash__": 2764331143,
+                     "__targetFileName__": "base/meta/Font/SansSerif.fnt",
+                     "groupName": "Font",
+                     "name": "SansSerif"
+                    },
+                    "dwFontSize": 21
+                   }
+                  },
+                  "hOptionalUITextStyleFields": {
+                   "bShowPreviewText": 0,
+                   "hText": {
+                    "__type__": "StringLabelHandleEx",
+                    "__typeHash__": 721585600,
+                    "snoStringList": {
+                     "__raw__": 196807,
+                     "__group__": 42,
+                     "__type__": "DT_SNO",
+                     "__typeHash__": 2764331143,
+                     "__targetFileName__": "enUS_Text/meta/StringList/Social.stl",
+                     "groupName": "StringList",
+                     "name": "Social"
+                    },
+                    "szLabel": 3661070101
+                   },
+                   "szPreviewText": "Party Finder",
+                   "bShrinkToFit": 0,
+                   "eTextJustifyVertical": 6,
+                   "unk_ad7d5ca": 1,
+                   "eResizeToFit": 1,
+                   "eTextJustify": 1,
+                   "bTextAllCaps": 0
+                  }
+                 }
+                ]
+               },
+               {
+                "__type__": "UITemplateStyleOverride",
+                "__typeHash__": 2887578027,
+                "szPathToControl": "PartyFinder_Settings",
+                "tStyle": [
+                 {
+                  "__type__": "UIStackPanelStyle",
+                  "__typeHash__": 287728085,
+                  "dwType": 287728085,
+                  "hParentStyle": {
+                   "__type__": "UIControlHandle",
+                   "__typeHash__": 3063971755,
+                   "snoUI": null,
+                   "szControlName": 0
+                  },
+                  "unk_441f783": "0",
+                  "hOptionalUIControlStyleFields": {
+                   "bActive": 0
+                  },
+                  "tConsoleInput": {
+                   "__type__": "UIControlConsoleInput",
+                   "__typeHash__": 3089331074,
+                   "hOptionalUIControlConsoleInputFields": {}
+                  },
+                  "hOptionalUIWindowStyleFields": {
+                   "nTop": 0,
+                   "nHeight": 50,
+                   "eVerticalAnchoring": 0,
+                   "nBottom": 0,
+                   "nRight": 5,
+                   "nWidth": 0,
+                   "nLeft": -5,
+                   "eHorizontalAnchoring": 1
+                  },
+                  "unk_4e673ad": {},
+                  "hOptionalUIStackPanelStyleFields": {
+                   "unk_3385ab6": 0,
+                   "nStackSpacing": 10,
+                   "bHorizontal": 1
+                  }
+                 }
+                ]
+               }
+              ]
+             }
+            ]
+           },
+           {
+            "__type__": "UIControlTemplate",
+            "__typeHash__": 641859515,
+            "szName": "Party_Disabled_Container",
+            "ptInlineStyle": [
+             {
+              "__type__": "UIStackPanelStyle",
+              "__typeHash__": 287728085,
+              "dwType": 287728085,
+              "hParentStyle": {
+               "__type__": "UIControlHandle",
+               "__typeHash__": 3063971755,
+               "snoUI": null,
+               "szControlName": 0
+              },
+              "unk_441f783": "0",
+              "hOptionalUIControlStyleFields": {
+               "bActive": 0,
+               "hTemplate": {
+                "__type__": "UIControlHandle",
+                "__typeHash__": 3063971755,
+                "snoUI": {
+                 "__raw__": 623438,
+                 "__group__": 46,
+                 "__type__": "DT_SNO",
+                 "__typeHash__": 2764331143,
+                 "__targetFileName__": "base/meta/UI/SocialScreen.ui",
+                 "groupName": "UI",
+                 "name": "SocialScreen"
+                },
+                "szControlName": 3716349730
+               }
+              },
+              "tConsoleInput": {
+               "__type__": "UIControlConsoleInput",
+               "__typeHash__": 3089331074,
+               "hOptionalUIControlConsoleInputFields": {}
+              },
+              "hOptionalUIWindowStyleFields": {
+               "eVerticalAnchoring": 0,
+               "nBottom": 100,
+               "nRight": -3,
+               "eHorizontalAnchoring": 0
+              },
+              "unk_4e673ad": {},
+              "hOptionalUIStackPanelStyleFields": {}
+             }
+            ],
+            "arChildren": [],
+            "ptTemplateInstanceConfig": [
+             {
+              "__type__": "UITemplateInstanceConfig",
+              "__typeHash__": 475975077,
+              "tStyleOverrides": [
+               {
+                "__type__": "UITemplateStyleOverride",
+                "__typeHash__": 2887578027,
+                "szPathToControl": "Party_Header_Text",
+                "tStyle": [
+                 {
+                  "__type__": "UITextStyle",
+                  "__typeHash__": 127673428,
+                  "dwType": 127673428,
+                  "hParentStyle": {
+                   "__type__": "UIControlHandle",
+                   "__typeHash__": 3063971755,
+                   "snoUI": null,
+                   "szControlName": 0
+                  },
+                  "unk_441f783": "0",
+                  "hOptionalUIControlStyleFields": {
+                   "bActive": 1
+                  },
+                  "tConsoleInput": {
+                   "__type__": "UIControlConsoleInput",
+                   "__typeHash__": 3089331074,
+                   "hOptionalUIControlConsoleInputFields": {}
+                  },
+                  "hOptionalUIWindowStyleFields": {
+                   "nTop": 3,
+                   "rgbaForeground": {
+                    "r": 146,
+                    "g": 140,
+                    "b": 124,
+                    "a": 255
+                   },
+                   "nHeight": 0,
+                   "eVerticalAnchoring": 1,
+                   "nBottom": 0,
+                   "nRight": 0,
+                   "nWidth": 0,
+                   "nLeft": 0,
+                   "eHorizontalAnchoring": 0,
+                   "hImageFrame": {
+                    "__type__": "UIImageHandleReference",
+                    "__typeHash__": 1797021084,
+                    "hImageHandle": 0
+                   }
+                  },
+                  "tFont": {
+                   "__type__": "UIControlFont",
+                   "__typeHash__": 1698657718,
+                   "hOptionalUIControlFontFields": {
+                    "snoFont": {
+                     "__raw__": 1300,
+                     "__group__": 19,
+                     "__type__": "DT_SNO",
+                     "__typeHash__": 2764331143,
+                     "__targetFileName__": "base/meta/Font/SansSerif.fnt",
+                     "groupName": "Font",
+                     "name": "SansSerif"
+                    },
+                    "dwFontSize": 21
+                   }
+                  },
+                  "hOptionalUITextStyleFields": {
+                   "bShowPreviewText": 0,
+                   "hText": {
+                    "__type__": "StringLabelHandleEx",
+                    "__typeHash__": 721585600,
+                    "snoStringList": {
+                     "__raw__": 196807,
+                     "__group__": 42,
+                     "__type__": "DT_SNO",
+                     "__typeHash__": 2764331143,
+                     "__targetFileName__": "enUS_Text/meta/StringList/Social.stl",
+                     "groupName": "StringList",
+                     "name": "Social"
+                    },
+                    "szLabel": 2086445000
+                   },
+                   "szPreviewText": "Party Finder",
+                   "bShrinkToFit": 0,
+                   "eTextJustifyVertical": 6,
+                   "unk_ad7d5ca": 1,
+                   "eResizeToFit": 1,
+                   "eTextJustify": 1,
+                   "bTextAllCaps": 0
+                  }
+                 }
+                ]
+               },
+               {
+                "__type__": "UITemplateStyleOverride",
+                "__typeHash__": 2887578027,
+                "szPathToControl": "Party_Header_Voice_Chat_Icon",
+                "tStyle": [
+                 {
+                  "__type__": "UIWindowStyle",
+                  "__typeHash__": 506492871,
+                  "dwType": 506492871,
+                  "hParentStyle": {
+                   "__type__": "UIControlHandle",
+                   "__typeHash__": 3063971755,
+                   "snoUI": null,
+                   "szControlName": 0
+                  },
+                  "unk_441f783": "0",
+                  "hOptionalUIControlStyleFields": {
+                   "bActive": 0
+                  },
+                  "tConsoleInput": {
+                   "__type__": "UIControlConsoleInput",
+                   "__typeHash__": 3089331074,
+                   "hOptionalUIControlConsoleInputFields": {}
+                  },
+                  "hOptionalUIWindowStyleFields": {
+                   "nTop": 3,
+                   "nHeight": 45,
+                   "eVerticalAnchoring": 1,
+                   "nBottom": 0,
+                   "nRight": 0,
+                   "nWidth": 45,
+                   "nLeft": 0,
+                   "eHorizontalAnchoring": 0,
+                   "hImageFrame": {
+                    "__type__": "UIImageHandleReference",
+                    "__typeHash__": 1797021084,
+                    "hImageHandle": 0
+                   }
+                  }
+                 }
+                ]
+               },
+               {
+                "__type__": "UITemplateStyleOverride",
+                "__typeHash__": 2887578027,
+                "szPathToControl": "PartyFinder_ControllerPrompt",
+                "tStyle": [
+                 {
+                  "__type__": "UIStackPanelStyle",
+                  "__typeHash__": 287728085,
+                  "dwType": 287728085,
+                  "hParentStyle": {
+                   "__type__": "UIControlHandle",
+                   "__typeHash__": 3063971755,
+                   "snoUI": null,
+                   "szControlName": 0
+                  },
+                  "unk_441f783": "0",
+                  "hOptionalUIControlStyleFields": {
+                   "bActive": 0,
+                   "hTemplate": {
+                    "__type__": "UIControlHandle",
+                    "__typeHash__": 3063971755,
+                    "snoUI": {
+                     "__raw__": 162972,
+                     "__group__": 46,
+                     "__type__": "DT_SNO",
+                     "__typeHash__": 2764331143,
+                     "__targetFileName__": "base/meta/UI/ButtonLegend.ui",
+                     "groupName": "UI",
+                     "name": "ButtonLegend"
+                    },
+                    "szControlName": 820473858
+                   }
+                  },
+                  "tConsoleInput": {
+                   "__type__": "UIControlConsoleInput",
+                   "__typeHash__": 3089331074,
+                   "hOptionalUIControlConsoleInputFields": {}
+                  },
+                  "hOptionalUIWindowStyleFields": {
+                   "nTop": 3,
+                   "nHeight": 0,
+                   "eVerticalAnchoring": 1,
+                   "nBottom": 0,
+                   "nRight": 0,
+                   "nWidth": 0,
+                   "nLeft": 0,
+                   "eHorizontalAnchoring": 0,
+                   "eVisibilityCondition": -1
+                  },
+                  "unk_4e673ad": {},
+                  "hOptionalUIStackPanelStyleFields": {}
+                 }
+                ]
+               },
+               {
+                "__type__": "UITemplateStyleOverride",
+                "__typeHash__": 2887578027,
+                "szPathToControl": "PartyFinder_Settings",
+                "tStyle": [
+                 {
+                  "__type__": "UIStackPanelStyle",
+                  "__typeHash__": 287728085,
+                  "dwType": 287728085,
+                  "hParentStyle": {
+                   "__type__": "UIControlHandle",
+                   "__typeHash__": 3063971755,
+                   "snoUI": null,
+                   "szControlName": 0
+                  },
+                  "unk_441f783": "0",
+                  "hOptionalUIControlStyleFields": {
+                   "bActive": 0
+                  },
+                  "tConsoleInput": {
+                   "__type__": "UIControlConsoleInput",
+                   "__typeHash__": 3089331074,
+                   "hOptionalUIControlConsoleInputFields": {}
+                  },
+                  "hOptionalUIWindowStyleFields": {
+                   "nTop": 0,
+                   "nHeight": 50,
+                   "eVerticalAnchoring": 0,
+                   "nBottom": 0,
+                   "nRight": 5,
+                   "nWidth": 0,
+                   "nLeft": -5,
+                   "eHorizontalAnchoring": 1
+                  },
+                  "unk_4e673ad": {},
+                  "hOptionalUIStackPanelStyleFields": {
+                   "unk_3385ab6": 0,
+                   "nStackSpacing": 10,
+                   "bHorizontal": 1
+                  }
+                 }
+                ]
+               },
+               {
+                "__type__": "UITemplateStyleOverride",
+                "__typeHash__": 2887578027,
+                "szPathToControl": "Party_Header",
+                "tStyle": [
+                 {
+                  "__type__": "UIStackPanelStyle",
+                  "__typeHash__": 287728085,
+                  "dwType": 287728085,
+                  "hParentStyle": {
+                   "__type__": "UIControlHandle",
+                   "__typeHash__": 3063971755,
+                   "snoUI": null,
+                   "szControlName": 0
+                  },
+                  "unk_441f783": "0",
+                  "hOptionalUIControlStyleFields": {
+                   "bActive": 0
+                  },
+                  "tConsoleInput": {
+                   "__type__": "UIControlConsoleInput",
+                   "__typeHash__": 3089331074,
+                   "hOptionalUIControlConsoleInputFields": {}
+                  },
+                  "hOptionalUIWindowStyleFields": {
+                   "nTop": 0,
+                   "nHeight": 50,
+                   "eVerticalAnchoring": 1,
+                   "nBottom": 0,
+                   "nRight": 0,
+                   "nWidth": 0,
+                   "nLeft": 0,
+                   "eHorizontalAnchoring": 0
+                  },
+                  "unk_4e673ad": {},
+                  "hOptionalUIStackPanelStyleFields": {
+                   "unk_3385ab6": 0,
+                   "nStackSpacing": 10,
+                   "bHorizontal": 1,
+                   "tMargins": {
+                    "__type__": "UIMargins",
+                    "__typeHash__": 501814863,
+                    "flLeft": 0,
+                    "flTop": 0,
+                    "flRight": 0,
+                    "flBottom": 0
+                   }
+                  }
+                 }
+                ]
+               },
+               {
+                "__type__": "UITemplateStyleOverride",
+                "__typeHash__": 2887578027,
+                "szPathToControl": "Instruction",
+                "tStyle": [
+                 {
+                  "__type__": "UIStackPanelStyle",
+                  "__typeHash__": 287728085,
+                  "dwType": 287728085,
+                  "hParentStyle": {
+                   "__type__": "UIControlHandle",
+                   "__typeHash__": 3063971755,
+                   "snoUI": null,
+                   "szControlName": 0
+                  },
+                  "unk_441f783": "0",
+                  "hOptionalUIControlStyleFields": {
+                   "bActive": 0
+                  },
+                  "tConsoleInput": {
+                   "__type__": "UIControlConsoleInput",
+                   "__typeHash__": 3089331074,
+                   "hOptionalUIControlConsoleInputFields": {}
+                  },
+                  "hOptionalUIWindowStyleFields": {
+                   "nTop": 0,
+                   "nHeight": 0,
+                   "eVerticalAnchoring": 0,
+                   "nBottom": 0,
+                   "nRight": 0,
+                   "nWidth": 0,
+                   "nLeft": 0,
+                   "eHorizontalAnchoring": 0
+                  },
+                  "unk_4e673ad": {},
+                  "hOptionalUIStackPanelStyleFields": {
+                   "nStackSpacing": 4,
+                   "bHorizontal": 1
+                  }
+                 }
+                ]
+               }
+              ]
+             }
+            ]
+           }
+          ],
           "ptTemplateInstanceConfig": []
-         },
-         {
-          "__type__": "UIControlTemplate",
-          "__typeHash__": 641859515,
-          "szName": "PartyFinder_Disabled_Container",
-          "ptInlineStyle": [
-           {
-            "__type__": "UIStackPanelStyle",
-            "__typeHash__": 287728085,
-            "dwType": 287728085,
-            "hParentStyle": {
-             "__type__": "UIControlHandle",
-             "__typeHash__": 3063971755,
-             "snoUI": null,
-             "szControlName": 0
-            },
-            "unk_441f783": "0",
-            "hOptionalUIControlStyleFields": {
-             "bActive": 0,
-             "hTemplate": {
-              "__type__": "UIControlHandle",
-              "__typeHash__": 3063971755,
-              "snoUI": {
-               "__raw__": 623438,
-               "__group__": 46,
-               "__type__": "DT_SNO",
-               "__typeHash__": 2764331143,
-               "__targetFileName__": "base/meta/UI/SocialScreen.ui",
-               "groupName": "UI",
-               "name": "SocialScreen"
-              },
-              "szControlName": 3716349730
-             }
-            },
-            "tConsoleInput": {
-             "__type__": "UIControlConsoleInput",
-             "__typeHash__": 3089331074,
-             "hOptionalUIControlConsoleInputFields": {}
-            },
-            "hOptionalUIWindowStyleFields": {
-             "nTop": 80,
-             "eVerticalAnchoring": 0,
-             "nBottom": 100,
-             "nRight": -3,
-             "nLeft": 23,
-             "eHorizontalAnchoring": 0
-            },
-            "unk_4e673ad": {},
-            "hOptionalUIStackPanelStyleFields": {}
-           }
-          ],
-          "arChildren": [],
-          "ptTemplateInstanceConfig": [
-           {
-            "__type__": "UITemplateInstanceConfig",
-            "__typeHash__": 475975077,
-            "tStyleOverrides": [
-             {
-              "__type__": "UITemplateStyleOverride",
-              "__typeHash__": 2887578027,
-              "szPathToControl": "Party_Header_Text",
-              "tStyle": [
-               {
-                "__type__": "UITextStyle",
-                "__typeHash__": 127673428,
-                "dwType": 127673428,
-                "hParentStyle": {
-                 "__type__": "UIControlHandle",
-                 "__typeHash__": 3063971755,
-                 "snoUI": null,
-                 "szControlName": 0
-                },
-                "unk_441f783": "0",
-                "hOptionalUIControlStyleFields": {
-                 "bActive": 1
-                },
-                "tConsoleInput": {
-                 "__type__": "UIControlConsoleInput",
-                 "__typeHash__": 3089331074,
-                 "hOptionalUIControlConsoleInputFields": {}
-                },
-                "hOptionalUIWindowStyleFields": {
-                 "nTop": 3,
-                 "rgbaForeground": {
-                  "r": 146,
-                  "g": 140,
-                  "b": 124,
-                  "a": 255
-                 },
-                 "nHeight": 0,
-                 "eVerticalAnchoring": 1,
-                 "nBottom": 0,
-                 "nRight": 0,
-                 "nWidth": 0,
-                 "nLeft": 0,
-                 "eHorizontalAnchoring": 0,
-                 "hImageFrame": {
-                  "__type__": "UIImageHandleReference",
-                  "__typeHash__": 1797021084,
-                  "hImageHandle": 0
-                 }
-                },
-                "tFont": {
-                 "__type__": "UIControlFont",
-                 "__typeHash__": 1698657718,
-                 "hOptionalUIControlFontFields": {
-                  "snoFont": {
-                   "__raw__": 1300,
-                   "__group__": 19,
-                   "__type__": "DT_SNO",
-                   "__typeHash__": 2764331143,
-                   "__targetFileName__": "base/meta/Font/SansSerif.fnt",
-                   "groupName": "Font",
-                   "name": "SansSerif"
-                  },
-                  "dwFontSize": 21
-                 }
-                },
-                "hOptionalUITextStyleFields": {
-                 "bShowPreviewText": 0,
-                 "hText": {
-                  "__type__": "StringLabelHandleEx",
-                  "__typeHash__": 721585600,
-                  "snoStringList": {
-                   "__raw__": 196807,
-                   "__group__": 42,
-                   "__type__": "DT_SNO",
-                   "__typeHash__": 2764331143,
-                   "__targetFileName__": "enUS_Text/meta/StringList/Social.stl",
-                   "groupName": "StringList",
-                   "name": "Social"
-                  },
-                  "szLabel": 3661070101
-                 },
-                 "szPreviewText": "Party Finder",
-                 "bShrinkToFit": 0,
-                 "eTextJustifyVertical": 6,
-                 "unk_ad7d5ca": 1,
-                 "eResizeToFit": 1,
-                 "eTextJustify": 1,
-                 "bTextAllCaps": 0
-                }
-               }
-              ]
-             },
-             {
-              "__type__": "UITemplateStyleOverride",
-              "__typeHash__": 2887578027,
-              "szPathToControl": "PartyFinder_Settings",
-              "tStyle": [
-               {
-                "__type__": "UIStackPanelStyle",
-                "__typeHash__": 287728085,
-                "dwType": 287728085,
-                "hParentStyle": {
-                 "__type__": "UIControlHandle",
-                 "__typeHash__": 3063971755,
-                 "snoUI": null,
-                 "szControlName": 0
-                },
-                "unk_441f783": "0",
-                "hOptionalUIControlStyleFields": {
-                 "bActive": 0
-                },
-                "tConsoleInput": {
-                 "__type__": "UIControlConsoleInput",
-                 "__typeHash__": 3089331074,
-                 "hOptionalUIControlConsoleInputFields": {}
-                },
-                "hOptionalUIWindowStyleFields": {
-                 "nTop": 0,
-                 "nHeight": 50,
-                 "eVerticalAnchoring": 0,
-                 "nBottom": 0,
-                 "nRight": 5,
-                 "nWidth": 0,
-                 "nLeft": -5,
-                 "eHorizontalAnchoring": 1
-                },
-                "unk_4e673ad": {},
-                "hOptionalUIStackPanelStyleFields": {
-                 "unk_3385ab6": 0,
-                 "nStackSpacing": 10,
-                 "bHorizontal": 1
-                }
-               }
-              ]
-             }
-            ]
-           }
-          ]
-         },
-         {
-          "__type__": "UIControlTemplate",
-          "__typeHash__": 641859515,
-          "szName": "Party_Disabled_Container",
-          "ptInlineStyle": [
-           {
-            "__type__": "UIStackPanelStyle",
-            "__typeHash__": 287728085,
-            "dwType": 287728085,
-            "hParentStyle": {
-             "__type__": "UIControlHandle",
-             "__typeHash__": 3063971755,
-             "snoUI": null,
-             "szControlName": 0
-            },
-            "unk_441f783": "0",
-            "hOptionalUIControlStyleFields": {
-             "bActive": 0,
-             "hTemplate": {
-              "__type__": "UIControlHandle",
-              "__typeHash__": 3063971755,
-              "snoUI": {
-               "__raw__": 623438,
-               "__group__": 46,
-               "__type__": "DT_SNO",
-               "__typeHash__": 2764331143,
-               "__targetFileName__": "base/meta/UI/SocialScreen.ui",
-               "groupName": "UI",
-               "name": "SocialScreen"
-              },
-              "szControlName": 3716349730
-             }
-            },
-            "tConsoleInput": {
-             "__type__": "UIControlConsoleInput",
-             "__typeHash__": 3089331074,
-             "hOptionalUIControlConsoleInputFields": {}
-            },
-            "hOptionalUIWindowStyleFields": {
-             "nTop": 80,
-             "eVerticalAnchoring": 0,
-             "nBottom": 100,
-             "nRight": -3,
-             "nLeft": 23,
-             "eHorizontalAnchoring": 0
-            },
-            "unk_4e673ad": {},
-            "hOptionalUIStackPanelStyleFields": {}
-           }
-          ],
-          "arChildren": [],
-          "ptTemplateInstanceConfig": [
-           {
-            "__type__": "UITemplateInstanceConfig",
-            "__typeHash__": 475975077,
-            "tStyleOverrides": [
-             {
-              "__type__": "UITemplateStyleOverride",
-              "__typeHash__": 2887578027,
-              "szPathToControl": "Party_Header_Text",
-              "tStyle": [
-               {
-                "__type__": "UITextStyle",
-                "__typeHash__": 127673428,
-                "dwType": 127673428,
-                "hParentStyle": {
-                 "__type__": "UIControlHandle",
-                 "__typeHash__": 3063971755,
-                 "snoUI": null,
-                 "szControlName": 0
-                },
-                "unk_441f783": "0",
-                "hOptionalUIControlStyleFields": {
-                 "bActive": 1
-                },
-                "tConsoleInput": {
-                 "__type__": "UIControlConsoleInput",
-                 "__typeHash__": 3089331074,
-                 "hOptionalUIControlConsoleInputFields": {}
-                },
-                "hOptionalUIWindowStyleFields": {
-                 "nTop": 3,
-                 "rgbaForeground": {
-                  "r": 146,
-                  "g": 140,
-                  "b": 124,
-                  "a": 255
-                 },
-                 "nHeight": 0,
-                 "eVerticalAnchoring": 1,
-                 "nBottom": 0,
-                 "nRight": 0,
-                 "nWidth": 0,
-                 "nLeft": 0,
-                 "eHorizontalAnchoring": 0,
-                 "hImageFrame": {
-                  "__type__": "UIImageHandleReference",
-                  "__typeHash__": 1797021084,
-                  "hImageHandle": 0
-                 }
-                },
-                "tFont": {
-                 "__type__": "UIControlFont",
-                 "__typeHash__": 1698657718,
-                 "hOptionalUIControlFontFields": {
-                  "snoFont": {
-                   "__raw__": 1300,
-                   "__group__": 19,
-                   "__type__": "DT_SNO",
-                   "__typeHash__": 2764331143,
-                   "__targetFileName__": "base/meta/Font/SansSerif.fnt",
-                   "groupName": "Font",
-                   "name": "SansSerif"
-                  },
-                  "dwFontSize": 21
-                 }
-                },
-                "hOptionalUITextStyleFields": {
-                 "bShowPreviewText": 0,
-                 "hText": {
-                  "__type__": "StringLabelHandleEx",
-                  "__typeHash__": 721585600,
-                  "snoStringList": {
-                   "__raw__": 196807,
-                   "__group__": 42,
-                   "__type__": "DT_SNO",
-                   "__typeHash__": 2764331143,
-                   "__targetFileName__": "enUS_Text/meta/StringList/Social.stl",
-                   "groupName": "StringList",
-                   "name": "Social"
-                  },
-                  "szLabel": 2086445000
-                 },
-                 "szPreviewText": "Party Finder",
-                 "bShrinkToFit": 0,
-                 "eTextJustifyVertical": 6,
-                 "unk_ad7d5ca": 1,
-                 "eResizeToFit": 1,
-                 "eTextJustify": 1,
-                 "bTextAllCaps": 0
-                }
-               }
-              ]
-             },
-             {
-              "__type__": "UITemplateStyleOverride",
-              "__typeHash__": 2887578027,
-              "szPathToControl": "Party_Header_Voice_Chat_Icon",
-              "tStyle": [
-               {
-                "__type__": "UIWindowStyle",
-                "__typeHash__": 506492871,
-                "dwType": 506492871,
-                "hParentStyle": {
-                 "__type__": "UIControlHandle",
-                 "__typeHash__": 3063971755,
-                 "snoUI": null,
-                 "szControlName": 0
-                },
-                "unk_441f783": "0",
-                "hOptionalUIControlStyleFields": {
-                 "bActive": 0
-                },
-                "tConsoleInput": {
-                 "__type__": "UIControlConsoleInput",
-                 "__typeHash__": 3089331074,
-                 "hOptionalUIControlConsoleInputFields": {}
-                },
-                "hOptionalUIWindowStyleFields": {
-                 "nTop": 3,
-                 "nHeight": 45,
-                 "eVerticalAnchoring": 1,
-                 "nBottom": 0,
-                 "nRight": 0,
-                 "nWidth": 45,
-                 "nLeft": 0,
-                 "eHorizontalAnchoring": 0,
-                 "hImageFrame": {
-                  "__type__": "UIImageHandleReference",
-                  "__typeHash__": 1797021084,
-                  "hImageHandle": 0
-                 }
-                }
-               }
-              ]
-             },
-             {
-              "__type__": "UITemplateStyleOverride",
-              "__typeHash__": 2887578027,
-              "szPathToControl": "PartyFinder_ControllerPrompt",
-              "tStyle": [
-               {
-                "__type__": "UIStackPanelStyle",
-                "__typeHash__": 287728085,
-                "dwType": 287728085,
-                "hParentStyle": {
-                 "__type__": "UIControlHandle",
-                 "__typeHash__": 3063971755,
-                 "snoUI": null,
-                 "szControlName": 0
-                },
-                "unk_441f783": "0",
-                "hOptionalUIControlStyleFields": {
-                 "bActive": 0,
-                 "hTemplate": {
-                  "__type__": "UIControlHandle",
-                  "__typeHash__": 3063971755,
-                  "snoUI": {
-                   "__raw__": 162972,
-                   "__group__": 46,
-                   "__type__": "DT_SNO",
-                   "__typeHash__": 2764331143,
-                   "__targetFileName__": "base/meta/UI/ButtonLegend.ui",
-                   "groupName": "UI",
-                   "name": "ButtonLegend"
-                  },
-                  "szControlName": 820473858
-                 }
-                },
-                "tConsoleInput": {
-                 "__type__": "UIControlConsoleInput",
-                 "__typeHash__": 3089331074,
-                 "hOptionalUIControlConsoleInputFields": {}
-                },
-                "hOptionalUIWindowStyleFields": {
-                 "nTop": 3,
-                 "nHeight": 0,
-                 "eVerticalAnchoring": 1,
-                 "nBottom": 0,
-                 "nRight": 0,
-                 "nWidth": 0,
-                 "nLeft": 0,
-                 "eHorizontalAnchoring": 0,
-                 "eVisibilityCondition": -1
-                },
-                "unk_4e673ad": {},
-                "hOptionalUIStackPanelStyleFields": {}
-               }
-              ]
-             },
-             {
-              "__type__": "UITemplateStyleOverride",
-              "__typeHash__": 2887578027,
-              "szPathToControl": "PartyFinder_Settings",
-              "tStyle": [
-               {
-                "__type__": "UIStackPanelStyle",
-                "__typeHash__": 287728085,
-                "dwType": 287728085,
-                "hParentStyle": {
-                 "__type__": "UIControlHandle",
-                 "__typeHash__": 3063971755,
-                 "snoUI": null,
-                 "szControlName": 0
-                },
-                "unk_441f783": "0",
-                "hOptionalUIControlStyleFields": {
-                 "bActive": 0
-                },
-                "tConsoleInput": {
-                 "__type__": "UIControlConsoleInput",
-                 "__typeHash__": 3089331074,
-                 "hOptionalUIControlConsoleInputFields": {}
-                },
-                "hOptionalUIWindowStyleFields": {
-                 "nTop": 0,
-                 "nHeight": 50,
-                 "eVerticalAnchoring": 0,
-                 "nBottom": 0,
-                 "nRight": 5,
-                 "nWidth": 0,
-                 "nLeft": -5,
-                 "eHorizontalAnchoring": 1
-                },
-                "unk_4e673ad": {},
-                "hOptionalUIStackPanelStyleFields": {
-                 "unk_3385ab6": 0,
-                 "nStackSpacing": 10,
-                 "bHorizontal": 1
-                }
-               }
-              ]
-             },
-             {
-              "__type__": "UITemplateStyleOverride",
-              "__typeHash__": 2887578027,
-              "szPathToControl": "Party_Header",
-              "tStyle": [
-               {
-                "__type__": "UIStackPanelStyle",
-                "__typeHash__": 287728085,
-                "dwType": 287728085,
-                "hParentStyle": {
-                 "__type__": "UIControlHandle",
-                 "__typeHash__": 3063971755,
-                 "snoUI": null,
-                 "szControlName": 0
-                },
-                "unk_441f783": "0",
-                "hOptionalUIControlStyleFields": {
-                 "bActive": 0
-                },
-                "tConsoleInput": {
-                 "__type__": "UIControlConsoleInput",
-                 "__typeHash__": 3089331074,
-                 "hOptionalUIControlConsoleInputFields": {}
-                },
-                "hOptionalUIWindowStyleFields": {
-                 "nTop": 0,
-                 "nHeight": 50,
-                 "eVerticalAnchoring": 1,
-                 "nBottom": 0,
-                 "nRight": 0,
-                 "nWidth": 0,
-                 "nLeft": 0,
-                 "eHorizontalAnchoring": 0
-                },
-                "unk_4e673ad": {},
-                "hOptionalUIStackPanelStyleFields": {
-                 "unk_3385ab6": 0,
-                 "nStackSpacing": 10,
-                 "bHorizontal": 1,
-                 "tMargins": {
-                  "__type__": "UIMargins",
-                  "__typeHash__": 501814863,
-                  "flLeft": 0,
-                  "flTop": 0,
-                  "flRight": 0,
-                  "flBottom": 0
-                 }
-                }
-               }
-              ]
-             },
-             {
-              "__type__": "UITemplateStyleOverride",
-              "__typeHash__": 2887578027,
-              "szPathToControl": "Instruction",
-              "tStyle": [
-               {
-                "__type__": "UIStackPanelStyle",
-                "__typeHash__": 287728085,
-                "dwType": 287728085,
-                "hParentStyle": {
-                 "__type__": "UIControlHandle",
-                 "__typeHash__": 3063971755,
-                 "snoUI": null,
-                 "szControlName": 0
-                },
-                "unk_441f783": "0",
-                "hOptionalUIControlStyleFields": {
-                 "bActive": 0
-                },
-                "tConsoleInput": {
-                 "__type__": "UIControlConsoleInput",
-                 "__typeHash__": 3089331074,
-                 "hOptionalUIControlConsoleInputFields": {}
-                },
-                "hOptionalUIWindowStyleFields": {
-                 "nTop": 0,
-                 "nHeight": 0,
-                 "eVerticalAnchoring": 0,
-                 "nBottom": 0,
-                 "nRight": 0,
-                 "nWidth": 0,
-                 "nLeft": 0,
-                 "eHorizontalAnchoring": 0
-                },
-                "unk_4e673ad": {},
-                "hOptionalUIStackPanelStyleFields": {
-                 "nStackSpacing": 4,
-                 "bHorizontal": 1
-                }
-               }
-              ]
-             }
-            ]
-           }
-          ]
          },
          {
           "__type__": "UIControlTemplate",
@@ -3485,7 +3514,7 @@
                         "dwType": 2502206177,
                         "behaviorMessageName": 0,
                         "behaviorContainerSno": null,
-                        "enumVal": 968
+                        "enumVal": 977
                        },
                        "nRight": 5,
                        "nWidth": 56,
@@ -3623,7 +3652,7 @@
                       "dwType": 2502206177,
                       "behaviorMessageName": 0,
                       "behaviorContainerSno": null,
-                      "enumVal": 978
+                      "enumVal": 987
                      },
                      "bReadTextOnHover": 1,
                      "nRight": 8,
@@ -4436,7 +4465,7 @@
                 "dwType": 2502206177,
                 "behaviorMessageName": 0,
                 "behaviorContainerSno": null,
-                "enumVal": 1368
+                "enumVal": 1377
                },
                "bAllowsHeldRepeats": 1,
                "eHotkey": 141
@@ -4472,7 +4501,7 @@
                 "dwType": 2502206177,
                 "behaviorMessageName": 0,
                 "behaviorContainerSno": null,
-                "enumVal": 1367
+                "enumVal": 1376
                },
                "bAllowsHeldRepeats": 1,
                "eHotkey": 140
@@ -4798,7 +4827,7 @@
                     "dwType": 2502206177,
                     "behaviorMessageName": 0,
                     "behaviorContainerSno": null,
-                    "enumVal": 968
+                    "enumVal": 977
                    },
                    "eHorizontalAnchoring": 1,
                    "eVisibilityCondition": 0
@@ -5210,7 +5239,7 @@
               "dwType": 2502206177,
               "behaviorMessageName": 0,
               "behaviorContainerSno": null,
-              "enumVal": 967
+              "enumVal": 976
              }
             },
             "hOptionalUIRadioButtonGroupStyleFields": {
@@ -5311,7 +5340,7 @@
                   "dwType": 2502206177,
                   "behaviorMessageName": 0,
                   "behaviorContainerSno": null,
-                  "enumVal": 980
+                  "enumVal": 989
                  },
                  "snoOnActionSound": null
                 }
@@ -5342,7 +5371,7 @@
                   "dwType": 2502206177,
                   "behaviorMessageName": 0,
                   "behaviorContainerSno": null,
-                  "enumVal": 979
+                  "enumVal": 988
                  },
                  "snoOnOpenSound": null
                 },
@@ -5577,7 +5606,7 @@
           "dwType": 2502206177,
           "behaviorMessageName": 0,
           "behaviorContainerSno": null,
-          "enumVal": 973
+          "enumVal": 982
          },
          "eFixedControllerButton": 2
         }
@@ -5679,7 +5708,7 @@
           "dwType": 2502206177,
           "behaviorMessageName": 0,
           "behaviorContainerSno": null,
-          "enumVal": 968
+          "enumVal": 977
          },
          "snoOnActionSound": {
           "__raw__": 137607,
@@ -5720,7 +5749,7 @@
           "dwType": 2502206177,
           "behaviorMessageName": 0,
           "behaviorContainerSno": null,
-          "enumVal": 969
+          "enumVal": 978
          },
          "tOnController": {
           "__type__": "UIDefaultAction",
@@ -7615,7 +7644,7 @@
            "dwType": 2502206177,
            "behaviorMessageName": 0,
            "behaviorContainerSno": null,
-           "enumVal": 1303
+           "enumVal": 1312
           },
           "eHorizontalAnchoring": 3,
           "eTooltipAlignHorizontal": 0,
@@ -11439,7 +11468,7 @@
              "dwType": 2502206177,
              "behaviorMessageName": 0,
              "behaviorContainerSno": null,
-             "enumVal": 407
+             "enumVal": 416
             },
             "tOnClose": {
              "__type__": "UIDefaultAction",
@@ -11447,7 +11476,7 @@
              "dwType": 2502206177,
              "behaviorMessageName": 0,
              "behaviorContainerSno": null,
-             "enumVal": 408
+             "enumVal": 417
             },
             "bActive": 1
            },
@@ -11530,7 +11559,7 @@
              "dwType": 2502206177,
              "behaviorMessageName": 0,
              "behaviorContainerSno": null,
-             "enumVal": 407
+             "enumVal": 416
             },
             "tOnClose": {
              "__type__": "UIDefaultAction",
@@ -11538,7 +11567,7 @@
              "dwType": 2502206177,
              "behaviorMessageName": 0,
              "behaviorContainerSno": null,
-             "enumVal": 408
+             "enumVal": 417
             }
            },
            "tConsoleInput": {
@@ -14412,7 +14441,7 @@
              "dwType": 2502206177,
              "behaviorMessageName": 0,
              "behaviorContainerSno": null,
-             "enumVal": 974
+             "enumVal": 983
             },
             "eHorizontalAnchoring": 1,
             "bEncloseChildren": 1
@@ -14609,7 +14638,7 @@
              "dwType": 2502206177,
              "behaviorMessageName": 0,
              "behaviorContainerSno": null,
-             "enumVal": 975
+             "enumVal": 984
             },
             "eHorizontalAnchoring": 1,
             "bEncloseChildren": 1
@@ -14807,7 +14836,7 @@
              "dwType": 2502206177,
              "behaviorMessageName": 0,
              "behaviorContainerSno": null,
-             "enumVal": 976
+             "enumVal": 985
             },
             "eHorizontalAnchoring": 1,
             "bEncloseChildren": 1
@@ -14905,7 +14934,7 @@
              "dwType": 2502206177,
              "behaviorMessageName": 0,
              "behaviorContainerSno": null,
-             "enumVal": 977
+             "enumVal": 986
             },
             "eHorizontalAnchoring": 1,
             "bEncloseChildren": 1
@@ -15091,7 +15120,7 @@
              "dwType": 2502206177,
              "behaviorMessageName": 0,
              "behaviorContainerSno": null,
-             "enumVal": 1255
+             "enumVal": 1264
             },
             "eVisibilityCondition": -1
            },
@@ -15190,7 +15219,7 @@
              "dwType": 2502206177,
              "behaviorMessageName": 0,
              "behaviorContainerSno": null,
-             "enumVal": 972
+             "enumVal": 981
             },
             "eVisibilityCondition": -1
            },
