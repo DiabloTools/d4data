@@ -60,6 +60,7 @@ aFacingAngleThreshold
 aGroups
 aHorizontalAngle
 aInfluences
+aLocalSyncOriginalYaw
 aLookOverrides
 aMaxSpeed
 aMetaData
@@ -224,6 +225,7 @@ arAdditionalDungeonState
 arAdditionalPassives
 arAdditionalTargets
 arAffectedItemLabels
+arAffectedNodeAttributeList
 arAffixBonusPerMagicType
 arAffixChanceIncrease
 arAffixCountPerQuality
@@ -295,6 +297,7 @@ arBonusObjectives
 arBounties
 arBountyGroups
 arBountyIcons
+arBountyMetaProgressValues
 arBountyTierIcons
 arBountyZones
 arBuffNames
@@ -360,6 +363,7 @@ arConditionalSkillTags
 arConditionalWorlds
 arConditionedScalars
 arConditions
+arConnectedNodeIds
 arConnections
 arContactFrames
 arContentTags
@@ -1098,6 +1102,7 @@ bApplyOnPowerStart
 bApplyPowerToPlayer
 bApplyPowerToSeasonalPet
 bApplyToChildren
+bApplyToTargetArea
 bApplyVulnerableDebuff
 bAutoCast
 bAutoChannelled
@@ -1128,6 +1133,7 @@ bChannelledMovement
 bCheckBackpack
 bCheckCanPurchase
 bCheckEquipped
+bCheckForStoreProductType
 bCheckSeasonActive
 bCheckStash
 bCheckStoreBought
@@ -1151,6 +1157,7 @@ bData
 bDealsDOT
 bDebugDraw
 bDefensive
+bDefineItemDisplayedQualityLevelRequirement
 bDefineItemQualityLevelRequirement
 bDefineItemQualityModifierRequirement
 bDefineRuneRarityRequirement
@@ -1189,6 +1196,8 @@ bEarnsSeal
 bEffectGroupUntracked
 bEmote
 bEnable
+bEnableLoadingScreenWithCompanion
+bEnableLoadingScreenWithMount
 bEnablePartyLoadingScreens
 bEnableSoloTooltipOverrides
 bEnabled
@@ -1429,6 +1438,7 @@ bReadTextOnHover
 bRecipeIsHidden
 bRecurseForAttachments
 bRemove
+bRemoveExistingBuffs
 bRemoveOnPassiveReapplication
 bRemoveOnPowerDelete
 bRemoveOnPowerUnequip
@@ -1664,9 +1674,11 @@ dwAddOnCategoryIndex
 dwAdditionalFields
 dwAdditionalGizmoContext
 dwAffectsFlags
+dwAffixSelectorExcludedAffixType
 dwAllowedQualityLevels
 dwAllowedRarities
 dwAlpha
+dwAlternateTextPhaseUID
 dwAmount
 dwAmountToGain
 dwAnimFlags
@@ -1685,6 +1697,7 @@ dwAxis
 dwBAOffset
 dwBASegment
 dwBASize
+dwBackgroundProgressBarSourceCallbackUID
 dwBaseAmount
 dwBasePortalType
 dwBattlePassCategoryIndex
@@ -1760,6 +1773,7 @@ dwEntranceName
 dwEntranceNameToFind
 dwEquipResult
 dwEventEntryHash
+dwExcludedAffixTypes
 dwExperience
 dwExperienceToNextLevel
 dwExplosionChannel
@@ -1772,6 +1786,8 @@ dwFlagsEx
 dwFlagsEx2
 dwFogFlags
 dwFontSize
+dwForcedIQMs
+dwForegroundProgressBarSourceCallbackUID
 dwFormatHash
 dwFormulaHash
 dwFrameRandomSeed
@@ -1836,6 +1852,7 @@ dwMaterialHash
 dwMaterialId
 dwMaxActorCount
 dwMaxArmorPacts
+dwMaxBountyMetaProgressPoints
 dwMaxConcurrentCount
 dwMaxFavorLevel
 dwMaxInstances
@@ -1927,6 +1944,7 @@ dwQuantity
 dwQuestHash
 dwRandomSeed
 dwRank
+dwReferencedQuestCount
 dwRegionSourceCallbackUID
 dwReliquaryCategoryIndex
 dwRemovalReasons
@@ -1957,6 +1975,7 @@ dwSecondAttachedActorID
 dwSecondaryEntranceNameToFind
 dwSeed
 dwSeedInitial
+dwSeekingUpdateRate
 dwSegmentsStep
 dwServerTimeAnimStarted
 dwSettingFlags
@@ -2027,6 +2046,7 @@ dwURandomSeed
 dwUniqueID
 dwUniqueId
 dwUnlockLevel
+dwUpgradePointsToUnlock
 dwUpgradeType
 dwUpsellCategoryIndex
 dwVRandomSeed
@@ -2362,6 +2382,7 @@ eManualRestockCurrency
 eMarkerSourceType
 eMaterial
 eMaterialImportance
+eMaxItemDisplayedQualityLevel
 eMaxItemQualityLevel
 eMaxRuneRarity
 eMaxWorldTier
@@ -2372,6 +2393,7 @@ eMicrophoneMode
 eMiddleClickPredicate
 eMinIQL
 eMinIQM
+eMinItemDisplayedQualityLevel
 eMinItemQualityLevel
 eMinRuneRarity
 eMinWorldTier
@@ -2834,6 +2856,7 @@ fIntroMovie
 fInvert
 fInvulnerable
 fIrisSize
+fIsAltMetaQuestTurnInNPC
 fIsClothBone
 fIsCombatHitFlash
 fIsCorpse
@@ -2843,6 +2866,7 @@ fIsGrass
 fIsLogoMovie
 fIsLoop
 fIsMailbox
+fIsMetaQuestTurnInNPC
 fIsNPC
 fIsOnEdge
 fIsQuestRestricted
@@ -4161,6 +4185,7 @@ gbidDungeonArchetype
 gbidDungeonState
 gbidDynamicMovementDataOverride
 gbidFeatureFlag
+gbidFocusAssociatedData
 gbidFocusRarity
 gbidFocusType
 gbidForcedPreloadList
@@ -4683,6 +4708,7 @@ hUITemplate
 hUnlockCriteria
 hUnlockDescription
 hUpCornerImage
+hVcCardImage
 hVendorIcon
 hWaypointIcon
 hWorldEventWarmupWarning
@@ -4697,6 +4723,7 @@ height
 heightDataMirror
 hide
 hitFlashParams
+hitSnoAppearance
 horizontalAnchoring
 i1
 i2
@@ -4982,6 +5009,7 @@ nFloatingDamageNumberFontSize
 nFloatingDamageTextFontSize
 nFloatingTextFontSize
 nFloor
+nFocusAssociatedData
 nFocusRarity
 nFocusType
 nFontSizeFallback
@@ -5137,6 +5165,7 @@ nMaxStackSize
 nMaxWidth
 nMercenaryClass
 nMetaDataCount
+nMetaProgressValue
 nMin
 nMinHeight
 nMinItemPower
@@ -5653,6 +5682,7 @@ pathXAmpOverLength
 pathYAmpOverLength
 pdwChildren
 pdwChunkIndices
+pdwUsedConstants
 pflFacingYaw
 pflRootScale
 pgbidRareNames
@@ -5788,6 +5818,7 @@ ptItemAffixAttributes
 ptItemData
 ptKeysComp
 ptKinematicRoots
+ptLODDistancePerSubObject
 ptLODs
 ptLeaf
 ptLeaves
@@ -6140,6 +6171,7 @@ snoActorService
 snoActorSpawnCondition
 snoActorWorldMarkerPing
 snoAddOnAppearance
+snoAddedLootBeamEffect
 snoAdditionalItemType
 snoAffix
 snoAffixEffect
@@ -6178,6 +6210,7 @@ snoAudioTrack
 snoAutoCastingEffectGroup
 snoBGAnim
 snoBackground
+snoBannerTiledStyleOverride
 snoBaseItem
 snoBaseLayer
 snoBaseMaterial
@@ -7187,6 +7220,7 @@ szBoostMenuPath
 szBoostName
 szBuffDataID
 szBuildVer
+szCachedShaderName
 szCameraMarker
 szCameraMarkerName
 szCategoryTemplate
@@ -7454,6 +7488,7 @@ szTabInstanceName
 szTabRadioButtonGroupName
 szTag
 szTarget
+szTargetArea
 szTargetLocatorName
 szTargetParentContextMenu
 szTestName
@@ -7511,6 +7546,9 @@ tAdditionalRandomAffixesRange
 tAdvanceEvent
 tAdvancedBloomSettings
 tAfterCreditsScenes
+tAfterLoginLoadingInfo
+tAfterLoginLoadingInfoForExpansion1
+tAfterLoginLoadingInfoForExpansion2
 tAllowedScaleRange
 tAllowedScaleRangeX
 tAllowedScaleRangeY
@@ -7855,6 +7893,9 @@ tInfo
 tInfoPanelData
 tInitialCost
 tInitialLoadingInfo
+tInitialLoadingInfoForCurrentSeason
+tInitialLoadingInfoForExpansion
+tInitialLoadingInfoNewHero
 tInputRange
 tInstanceData
 tIntRange
@@ -8110,6 +8151,7 @@ tPlayerSeal
 tPlayerTitle
 tPlug
 tPopulationGroup
+tPostCampaignStinger
 tPostFXParams
 tPotionBtn
 tPowerBonus
@@ -8478,6 +8520,7 @@ uAmount
 uAuthToken
 uBlobSize
 uCameraSmoothingTime
+uClientInterpTime
 uCollectiblePowerTypes
 uCommandFrame
 uCount
