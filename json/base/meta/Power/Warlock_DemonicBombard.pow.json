@@ -60,6 +60,18 @@
    "__type__": "SkillTagStruct",
    "__typeHash__": 4000554560,
    "gbidSkillTag": {
+    "__raw__": 2549193150,
+    "__type__": "DT_GBID",
+    "__typeHash__": 1028170061,
+    "group": 56,
+    "name": "Skill_Primary_Summoning"
+   },
+   "bSearchOnly": false
+  },
+  {
+   "__type__": "SkillTagStruct",
+   "__typeHash__": 4000554560,
+   "gbidSkillTag": {
     "__raw__": 2579369720,
     "__type__": "DT_GBID",
     "__typeHash__": 1028170061,
@@ -1328,8 +1340,8 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "1.5",
-    "compiled": "BgAAAAAAwD8AAAAA"
+    "value": "1.75",
+    "compiled": "BgAAAAAA4D8AAAAA"
    }
   },
   {
@@ -1360,8 +1372,8 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "0.4 * Table(34, sLevel)",
-    "compiled": "BgAAAM3MzD4GAAAAAAAIQgUAAAABAAAAAAAAAAAAAAAAAAAAAQAAAAsAAAANAAAAAAAAAA=="
+    "value": "0.55 * Table(34, sLevel)",
+    "compiled": "BgAAAM3MDD8GAAAAAAAIQgUAAAABAAAAAAAAAAAAAAAAAAAAAQAAAAsAAAANAAAAAAAAAA=="
    }
   },
   {
@@ -1608,8 +1620,8 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "SF_7 * Affix.1HSword_Unique_Warlock_002.\"Static Value 0\"",
-    "compiled": "BQAAAA0AAAAAAAAAAAAAAAAAAAAFAAAAYwAAAJAPJwAAAAAAAAAAAA0AAAAAAAAA"
+    "value": "SF_7 * Affix_Value_2#1HSword_Unique_Warlock_002",
+    "compiled": "BQAAAA0AAAAAAAAAAAAAAAAAAAAFAAAAAAAAAJYEAACQDycAAAAAAA0AAAAAAAAA"
    }
   },
   {
@@ -2076,32 +2088,7 @@
    "bAffectsEnchantmentDescription": false,
    "unk_b1d89c5": true,
    "unk_b25b989": false,
-   "arSkillTagsToAdd": [
-    {
-     "__type__": "SkillTagStruct",
-     "__typeHash__": 4000554560,
-     "gbidSkillTag": {
-      "__raw__": 2004895518,
-      "__type__": "DT_GBID",
-      "__typeHash__": 1028170061,
-      "group": 56,
-      "name": "Skill_Lesser_Demon"
-     },
-     "bSearchOnly": false
-    },
-    {
-     "__type__": "SkillTagStruct",
-     "__typeHash__": 4000554560,
-     "gbidSkillTag": {
-      "__raw__": 2549193150,
-      "__type__": "DT_GBID",
-      "__typeHash__": 1028170061,
-      "group": 56,
-      "name": "Skill_Primary_Summoning"
-     },
-     "bSearchOnly": false
-    }
-   ],
+   "arSkillTagsToAdd": [],
    "arSkillTagsToRemove": [],
    "eModType": 0,
    "hIconNormalOverride": 19873807,
@@ -2408,7 +2395,40 @@
  "unk_b0a1a71": true,
  "unk_bf25f64": 0,
  "arRecastPowerSequence": [],
- "arModifierProfiles": [],
+ "arModifierProfiles": [
+  {
+   "__type__": "PowerModifierProfile",
+   "__typeHash__": 2130857229,
+   "snoPowerModifier": {
+    "__raw__": 2671651,
+    "__group__": 176,
+    "__type__": "DT_SNO",
+    "__typeHash__": 2764331143,
+    "__targetFileName__": "base/meta/PowerModifier/ShowNoCastConfirmation_Moving.pmd",
+    "groupName": "PowerModifier",
+    "name": "ShowNoCastConfirmation_Moving"
+   },
+   "arConditions": [
+    {
+     "__type__": "PowerConditionHasModPoints",
+     "__typeHash__": 1121250797,
+     "dwType": 1121250797,
+     "bInverse": false,
+     "eSubject": 0,
+     "snoPower": {
+      "__raw__": 2245719,
+      "__group__": 29,
+      "__type__": "DT_SNO",
+      "__typeHash__": 2764331143,
+      "__targetFileName__": "base/meta/Power/Warlock_DemonicBombard.pow",
+      "groupName": "Power",
+      "name": "Warlock_DemonicBombard"
+     },
+     "szPowerMod": 2686060811
+    }
+   ]
+  }
+ ],
  "arProjectileOverrides": [],
  "arConditionalDependencies": [
   {
@@ -2498,21 +2518,21 @@
    ],
    "arConditions": [
     {
-     "__type__": "PowerConditionHasModPoints",
-     "__typeHash__": 1121250797,
-     "dwType": 1121250797,
+     "__type__": "PowerConditionHasSkillTagEquipped",
+     "__typeHash__": 2265524520,
+     "dwType": 2265524520,
      "bInverse": false,
      "eSubject": 0,
-     "snoPower": {
-      "__raw__": 2245719,
-      "__group__": 29,
-      "__type__": "DT_SNO",
-      "__typeHash__": 2764331143,
-      "__targetFileName__": "base/meta/Power/Warlock_DemonicBombard.pow",
-      "groupName": "Power",
-      "name": "Warlock_DemonicBombard"
-     },
-     "szPowerMod": 2686060810
+     "arSkillTags": [
+      {
+       "__raw__": 2549193150,
+       "__type__": "DT_GBID",
+       "__typeHash__": 1028170061,
+       "group": 56,
+       "name": "Skill_Primary_Summoning"
+      }
+     ],
+     "unk_3d81b37": false
     }
    ]
   },

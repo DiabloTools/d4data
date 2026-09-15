@@ -618,13 +618,13 @@
   "name": "Sorcerer"
  },
  "snoSkillRequirement": {
-  "__raw__": 955632,
+  "__raw__": 955620,
   "__group__": 116,
   "__type__": "DT_SNO",
   "__typeHash__": 2764331143,
-  "__targetFileName__": "base/meta/ItemRequirement/AllSorcWeapons.irq",
+  "__targetFileName__": "base/meta/ItemRequirement/AnyWeapon.irq",
   "groupName": "ItemRequirement",
-  "name": "AllSorcWeapons"
+  "name": "AnyWeapon"
  },
  "snoItemRequirement": null,
  "snoHeroConditionRequirement": null,
@@ -2793,7 +2793,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "(1 + Min(0.5, (AoE_Size_Bonus_Per_Power#Sorcerer_Firewall / 2) + (AoE_Size_Bonus_Per_Skill_Tag#Skill_Primary_Mastery / 2) + Mod.UpgradeA? (SF_11 / 2) : 0 + SF_37))  * SF_38",
-    "compiled": "BgAAAAAAgD8GAAAAAAAAPwUAAAAAAAAAEAQAAD6zAQAAAAAABgAAAAAAAEAOAAAABQAAAAAAAABJAACAhlN+LAAAAAAGAAAAAAAAQA4AAAALAAAABQAAAFoAAAD/////CQkaoAAAAAAFAAAAEQAAAAAAAAAAAAAAAAAAAAYAAAAAAABADgAAAAYAAAAAAAAAEAAAAAsAAAAFAAAAKwAAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAAsAAAAFAAAALAAAAAAAAAAAAAAAAAAAAA0AAAAAAAAA"
+    "compiled": "BgAAAAAAgD8GAAAAAAAAPwUAAAAAAAAAEAQAAD6zAQAAAAAABgAAAAAAAEAOAAAABQAAAAAAAABKAACAhlN+LAAAAAAGAAAAAAAAQA4AAAALAAAABQAAAFoAAAD/////CQkaoAAAAAAFAAAAEQAAAAAAAAAAAAAAAAAAAAYAAAAAAABADgAAAAYAAAAAAAAAEAAAAAsAAAAFAAAAKwAAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAAsAAAAFAAAALAAAAAAAAAAAAAAAAAAAAA0AAAAAAAAA"
    }
   },
   {
@@ -2801,7 +2801,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Chance_For_Double_Damage_Per_Power#Sorcerer_Firewall",
-    "compiled": "BQAAAAAAAACoAACAPrMBAAAAAAAAAAAA"
+    "compiled": "BQAAAAAAAACpAACAPrMBAAAAAAAAAAAA"
    }
   },
   {
@@ -2889,7 +2889,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Mod.UpgradeC? 0 : (AoE_Size_Bonus_Per_Skill_Tag#Skill_Fire/2)",
-    "compiled": "BQAAAFoAAAD/////CwkaoAAAAAAGAAAAAAAAAAUAAAAAAAAASQAAgCRXMuQAAAAABgAAAAAAAEAOAAAAEAAAAAAAAAA="
+    "compiled": "BQAAAFoAAAD/////CwkaoAAAAAAGAAAAAAAAAAUAAAAAAAAASgAAgCRXMuQAAAAABgAAAAAAAEAOAAAAEAAAAAAAAAA="
    }
   },
   {
@@ -2906,6 +2906,30 @@
    "tFormula": {
     "value": "AffixIsEquipped(SNO.Affix.Helm_Unique_Sorc_102_x2)",
     "compiled": "BQAAAFkAAABRcScAAAAAAAAAAAABAAAAJAAAAAAAAAA="
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "3 * Table(34,40) * (1 + Mod.Upgrade2? SF_29 : 0)",
+    "compiled": "BgAAAAAAQEAGAAAAAAAIQgYAAAAAACBCAQAAAAsAAAANAAAABgAAAAAAgD8FAAAAWgAAAP/////aCBqgAAAAAAUAAAAjAAAAAAAAAAAAAAAAAAAABgAAAAAAAAAQAAAACwAAAA0AAAAAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "SF_40 / SF_7",
+    "compiled": "BQAAAC4AAAAAAAAAAAAAAAAAAAAFAAAADQAAAAAAAAAAAAAAAAAAAA4AAAAAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "SF_41",
+    "compiled": "BQAAAC8AAAAAAAAAAAAAAAAAAAAAAAAA"
    }
   }
  ],

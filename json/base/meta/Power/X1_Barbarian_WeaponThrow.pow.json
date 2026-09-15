@@ -304,8 +304,8 @@
   "compiled": "BgAAAAAAgD8AAAAA"
  },
  "tCooldownReductionCoefficient": {
-  "value": "SF_52 ? 0 : 1",
-  "compiled": "BQAAADoAAAAAAAAAAAAAAAAAAAAGAAAAAAAAAAYAAAAAAIA/EAAAAAAAAAA="
+  "value": "SF_52 ? (SF_38 ? 1 : 0) : 1",
+  "compiled": "BQAAADoAAAAAAAAAAAAAAAAAAAAFAAAALAAAAAAAAAAAAAAAAAAAAAYAAAAAAIA/BgAAAAAAAAAQAAAABgAAAAAAgD8QAAAAAAAAAA=="
  },
  "bTargetGroundOnly": false,
  "eTargetLockBehavior": 1,
@@ -1988,24 +1988,24 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "SF_28 ? 0 : 1",
-    "compiled": "BQAAACIAAAAAAAAAAAAAAAAAAAAGAAAAAAAAAAYAAAAAAIA/EAAAAAAAAAA="
+    "value": "SF_27 ? 0 : 1",
+    "compiled": "BQAAACEAAAAAAAAAAAAAAAAAAAAGAAAAAAAAAAYAAAAAAIA/EAAAAAAAAAA="
    }
   },
   {
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "SF_38 ? 0 : AffixIsEquipped(SNO.Affix.S05_BSK_Barbarian_002)",
-    "compiled": "BQAAACwAAAAAAAAAAAAAAAAAAAAGAAAAAAAAAAUAAABZAAAAqGgdAAAAAAAAAAAAAQAAACQAAAAQAAAAAAAAAA=="
+    "value": "AffixIsEquipped(SNO.Affix.S05_BSK_Barbarian_002)",
+    "compiled": "BQAAAFkAAACoaB0AAAAAAAAAAAABAAAAJAAAAAAAAAA="
    }
   },
   {
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "SF_38 ? 0 : (PowerTag.S05_BSK_Barbarian_002.\"Script Formula 5\" - (SF_30 * Max(SF_28-1, 0)))",
-    "compiled": "BQAAACwAAAAAAAAAAAAAAAAAAAAGAAAAAAAAAAUAAAAFAAAAqmgdAAUAAAAAAAAABQAAACQAAAAAAAAAAAAAAAAAAAAFAAAAIgAAAAAAAAAAAAAAAAAAAAYAAAAAAIA/DAAAAAYAAAAAAAAAAQAAAAEAAAANAAAADAAAABAAAAAAAAAA"
+    "value": "PowerTag.S05_BSK_Barbarian_002.\"Script Formula 5\" - (SF_30 * Max(SF_28-1, 0))",
+    "compiled": "BQAAAAUAAACqaB0ABQAAAAAAAAAFAAAAJAAAAAAAAAAAAAAAAAAAAAUAAAAiAAAAAAAAAAAAAAAAAAAABgAAAAAAgD8MAAAABgAAAAAAAAABAAAAAQAAAA0AAAAMAAAAAAAAAA=="
    }
   },
   {
@@ -2020,16 +2020,16 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "SF_24 ? 0 : (SF_28 ? 1 : 0)",
-    "compiled": "BQAAAB4AAAAAAAAAAAAAAAAAAAAGAAAAAAAAAAUAAAAiAAAAAAAAAAAAAAAAAAAABgAAAAAAgD8GAAAAAAAAABAAAAAQAAAAAAAAAA=="
+    "value": "SF_24 ? 0 : (SF_59 ? 1 : 0)",
+    "compiled": "BQAAAB4AAAAAAAAAAAAAAAAAAAAGAAAAAAAAAAUAAABBAAAAAAAAAAAAAAAAAAAABgAAAAAAgD8GAAAAAAAAABAAAAAQAAAAAAAAAA=="
    }
   },
   {
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "SF_29 ? (SF_29 + 1) : 0",
-    "compiled": "BQAAACMAAAAAAAAAAAAAAAAAAAAFAAAAIwAAAAAAAAAAAAAAAAAAAAYAAAAAAIA/CwAAAAYAAAAAAAAAEAAAAAAAAAA="
+    "value": "SF_29 + 1",
+    "compiled": "BQAAACMAAAAAAAAAAAAAAAAAAAAGAAAAAACAPwsAAAAAAAAA"
    }
   },
   {
@@ -2069,7 +2069,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Chance_For_Double_Damage_Per_Power#X1_Barbarian_WeaponThrow",
-    "compiled": "BQAAAAAAAACoAACANJYYAAAAAAAAAAAA"
+    "compiled": "BQAAAAAAAACpAACANJYYAAAAAAAAAAAA"
    }
   },
   {
@@ -2270,6 +2270,14 @@
    "tFormula": {
     "value": "Mod.UpgradeA ? 0 : (Mod.UpgradeB ? 0 : (Mod.UpgradeC ? 0 : 1))",
     "compiled": "BQAAAFoAAAD/////CQkaoAAAAAAGAAAAAAAAAAUAAABaAAAA/////woJGqAAAAAABgAAAAAAAAAFAAAAWgAAAP////8LCRqgAAAAAAYAAAAAAAAABgAAAAAAgD8QAAAAEAAAABAAAAAAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "AffixIsEquipped(SNO.Affix.legendary_barb_004)",
+    "compiled": "BQAAAFkAAAA72AgAAAAAAAAAAAABAAAAJAAAAAAAAAA="
    }
   }
  ],

@@ -184,7 +184,25 @@
  "bMustBeLearned": true,
  "bCaptionsInside": false,
  "eShapeshiftForm": -1,
- "arResourceCosts": [],
+ "arResourceCosts": [
+  {
+   "__type__": "PowerResourceCost",
+   "__typeHash__": 2616788302,
+   "eType": 0,
+   "tMinRequired": {
+    "value": "Mod.UpgradeC ? SF_41 : 0",
+    "compiled": "BQAAAFoAAAD/////CwkaoAAAAAAFAAAALwAAAAAAAAAAAAAAAAAAAAYAAAAAAAAAEAAAAAAAAAA="
+   },
+   "tInitialCost": {
+    "value": "Mod.UpgradeC ? SF_41 : 0",
+    "compiled": "BQAAAFoAAAD/////CwkaoAAAAAAFAAAALwAAAAAAAAAAAAAAAAAAAAYAAAAAAAAAEAAAAAAAAAA="
+   },
+   "tChannellingCost": {
+    "value": "0",
+    "compiled": "BgAAAAAAAAAAAAAA"
+   }
+  }
+ ],
  "tHealthCost": {
   "value": "0",
   "compiled": "BgAAAAAAAAAAAAAA"
@@ -206,8 +224,8 @@
   "compiled": "BgAAAAAAgD8AAAAA"
  },
  "tCooldownTime": {
-  "value": "SF_8",
-  "compiled": "BQAAAA4AAAAAAAAAAAAAAAAAAAAAAAAA"
+  "value": "Mod.UpgradeC ? 0 : SF_8",
+  "compiled": "BQAAAFoAAAD/////CwkaoAAAAAAGAAAAAAAAAAUAAAAOAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAA="
  },
  "tResourceCostReductionCoefficient": {
   "value": "1",
@@ -1993,7 +2011,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Sorc_Conjurations_BonusSummons_Chance[Sorcerer_IceBlades]",
-    "compiled": "BQAAAAAAAAA9AACA/v///wAAAAAAAAAA"
+    "compiled": "BQAAAAAAAAA+AACA/v///wAAAAAAAAAA"
    }
   },
   {
@@ -2001,7 +2019,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "3 + Max_Summons_Per_Skill_Tag#Skill_Primary_Conjuration",
-    "compiled": "BgAAAAAAQEAFAAAAAAAAAAsBAIBN5Q9zAAAAAAsAAAAAAAAA"
+    "compiled": "BgAAAAAAQEAFAAAAAAAAABUBAIBN5Q9zAAAAAAsAAAAAAAAA"
    }
   },
   {
@@ -2009,7 +2027,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "3 + Max_Summons_Per_Skill_Tag#Skill_Primary_Conjuration",
-    "compiled": "BgAAAAAAQEAFAAAAAAAAAAsBAIBN5Q9zAAAAAAsAAAAAAAAA"
+    "compiled": "BgAAAAAAQEAFAAAAAAAAABUBAIBN5Q9zAAAAAAsAAAAAAAAA"
    }
   },
   {
@@ -2154,6 +2172,14 @@
    "tFormula": {
     "value": "Mod.Upgrade3 ? 1.2: 1",
     "compiled": "BQAAAFoAAAD/////2wgaoAAAAAAGAAAAmpmZPwYAAAAAAIA/EAAAAAAAAAA="
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "20",
+    "compiled": "BgAAAAAAoEEAAAAA"
    }
   }
  ],
