@@ -15,7 +15,7 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "desc",
-   "szText": "{/if}{c_label}Cooldown: {/c}{c_resource}{Cooldown Time}{/c} seconds\r\nShapeshift into a Werewolf and howl furiously, {if:Mod.UpgradeB}Restoring {c_resource}[SF_0 * 100]{/c} of your Maximum Spirit{else}Healing you for {c_number}[SF_0 * 100|1%|]{/c} of your Maximum Life {c_number}([PlayerHealthMax() * SF_0]){/c}{/if}.",
+   "szText": "{/if}{c_label}Cooldown: {/c}{c_resource}{Cooldown Time}{/c} seconds\r\nShapeshift into a Werewolf and howl furiously, {if:Mod.UpgradeB}Restoring {c_resource}[SF_0 * 100|%|]{/c} of your Maximum Spirit. If you are at Maximum Spirit, Heal the remainder. For every {c_number}10%{/c} Life you overheal, gain {c_number}1{/c} stack of {c_important}{u}Ferocity{/u}{/c}.{else}Healing you for {c_number}[SF_0 * 100|1%|]{/c} of your Maximum Life {c_number}([PlayerHealthMax() * SF_0]){/c}. For every {c_number}10%{/c} Life you overheal, gain {c_number}1{/c} stack of {c_important}{u}Ferocity{/u}{/c}.{/if}",
    "hLabel": 3707583
   },
   {
@@ -57,7 +57,7 @@
    "__type__": "StringTableEntry",
    "__typeHash__": 3844612145,
    "szLabel": "Mod10_Description",
-   "szText": "{c_important}Blood Howl{/c} instead restores {c_number}[SF_19]{/c} Spirit for every {c_number}[1|%|]{/c} of Life that would have been healed.",
+   "szText": "{c_important}Blood Howl{/c} now restores Maximum Spirit first, then Heals with the remainder.",
    "hLabel": 2741697796
   },
   {

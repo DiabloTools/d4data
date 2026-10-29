@@ -198,24 +198,24 @@
   "compiled": "BgAAAAAAAAAAAAAA"
  },
  "tChargeCost": {
-  "value": "0",
-  "compiled": "BgAAAAAAAAAAAAAA"
+  "value": "SF_45 ? 1 : 0",
+  "compiled": "BQAAADMAAAAAAAAAAAAAAAAAAAAGAAAAAACAPwYAAAAAAAAAEAAAAAAAAAA="
  },
  "tMaxCharges": {
-  "value": "0",
-  "compiled": "BgAAAAAAAAAAAAAA"
+  "value": "SF_45 ? (1 + SF_44) : 0",
+  "compiled": "BQAAADMAAAAAAAAAAAAAAAAAAAAGAAAAAACAPwUAAAAyAAAAAAAAAAAAAAAAAAAACwAAAAYAAAAAAAAAEAAAAAAAAAA="
  },
  "tRechargeTime": {
-  "value": "0",
-  "compiled": "BgAAAAAAAAAAAAAA"
+  "value": "SF_45 ? SF_12 : 0",
+  "compiled": "BQAAADMAAAAAAAAAAAAAAAAAAAAFAAAAEgAAAAAAAAAAAAAAAAAAAAYAAAAAAAAAEAAAAAAAAAA="
  },
  "tRechargeAmount": {
   "value": "1",
   "compiled": "BgAAAAAAgD8AAAAA"
  },
  "tCooldownTime": {
-  "value": "SF_35 ? 0 : SF_12",
-  "compiled": "BQAAACkAAAAAAAAAAAAAAAAAAAAGAAAAAAAAAAUAAAASAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAA="
+  "value": "SF_45 ? 0 : SF_12",
+  "compiled": "BQAAADMAAAAAAAAAAAAAAAAAAAAGAAAAAAAAAAUAAAASAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAA="
  },
  "tResourceCostReductionCoefficient": {
   "value": "1",
@@ -1231,7 +1231,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Min(0.5, (AoE_Size_Bonus_Per_Power#Druid_Ravens / 2))",
-    "compiled": "BgAAAAAAAD8FAAAAAAAAABAEAACsSwQAAAAAAAYAAAAAAABADgAAAAEAAAAAAAAAAAAAAA=="
+    "compiled": "BgAAAAAAAD8FAAAAAAAAABEEAACsSwQAAAAAAAYAAAAAAABADgAAAAEAAAAAAAAAAAAAAA=="
    }
   },
   {
@@ -1359,7 +1359,31 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "AffixIsEquipped(SNO.Affix.Talisman_SetPower_Druid05_03) ? Affix_Value_1#Talisman_SetPower_Druid05_03 : 0",
-    "compiled": "BQAAAFkAAAB7AyMAAAAAAAAAAAABAAAAJAAAAAUAAAAAAAAAlQQAAHsDIwAAAAAABgAAAAAAAAAQAAAAAAAAAA=="
+    "compiled": "BQAAAFkAAAB7AyMAAAAAAAAAAAABAAAAJAAAAAUAAAAAAAAAlgQAAHsDIwAAAAAABgAAAAAAAAAQAAAAAAAAAA=="
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "GetBonusMaxChargesForPower(SNO.Power.Druid_Ravens)",
+    "compiled": "BQAAAFkAAACsSwQAAAAAAAAAAAABAAAAfAAAAAAAAAA="
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "AffixIsEquipped(SNO.Affix.legendary_druid_106_x2)",
+    "compiled": "BQAAAFkAAAB//CcAAAAAAAAAAAABAAAAJAAAAAAAAAA="
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "SF_45 ? (1 + SF_44) : 0",
+    "compiled": "BQAAADMAAAAAAAAAAAAAAAAAAAAGAAAAAACAPwUAAAAyAAAAAAAAAAAAAAAAAAAACwAAAAYAAAAAAAAAEAAAAAAAAAA="
    }
   }
  ],
@@ -1936,18 +1960,6 @@
    "unk_b1d89c5": 0,
    "unk_b25b989": 1,
    "arSkillTagsToAdd": [
-    {
-     "__type__": "SkillTagStruct",
-     "__typeHash__": 4000554560,
-     "gbidSkillTag": {
-      "__raw__": 3359304269,
-      "__type__": "DT_GBID",
-      "__typeHash__": 1028170061,
-      "group": 56,
-      "name": "Skill_Nature_Magic"
-     },
-     "bSearchOnly": 0
-    },
     {
      "__type__": "SkillTagStruct",
      "__typeHash__": 4000554560,

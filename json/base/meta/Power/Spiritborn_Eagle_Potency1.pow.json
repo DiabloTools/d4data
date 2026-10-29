@@ -225,8 +225,8 @@
   "compiled": "BQAAAAYAAAAAAAAAAAAAAAAAAAAAAAAA"
  },
  "tRechargeAmount": {
-  "value": "Mod.Side4 ? SF_23 : 1",
-  "compiled": "BQAAAFoAAAD/////WUxcCAAAAAAFAAAAHQAAAAAAAAAAAAAAAAAAAAYAAAAAAIA/EAAAAAAAAAA="
+  "value": "1",
+  "compiled": "BgAAAAAAgD8AAAAA"
  },
  "tCooldownTime": {
   "value": "0",
@@ -1855,8 +1855,8 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "SF_42 ? (SF_40 * (1 + SF_39)) : SF_40",
-    "compiled": "BQAAADAAAAAAAAAAAAAAAAAAAAAFAAAALgAAAAAAAAAAAAAAAAAAAAYAAAAAAIA/BQAAAC0AAAAAAAAAAAAAAAAAAAALAAAADQAAAAUAAAAuAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAA="
+    "value": "SF_40 - (SF_42 ? SF_39 : 0)",
+    "compiled": "BQAAAC4AAAAAAAAAAAAAAAAAAAAFAAAAMAAAAAAAAAAAAAAAAAAAAAUAAAAtAAAAAAAAAAAAAAAAAAAABgAAAAAAAAAQAAAADAAAAAAAAAA="
    }
   },
   {
@@ -1871,8 +1871,8 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "1.2 * Table(34,sLevel)",
-    "compiled": "BgAAAJqZmT8GAAAAAAAIQgUAAAABAAAAAAAAAAAAAAAAAAAAAQAAAAsAAAANAAAAAAAAAA=="
+    "value": "1.6 * Table(34,sLevel)",
+    "compiled": "BgAAAM3MzD8GAAAAAAAIQgUAAAABAAAAAAAAAAAAAAAAAAAAAQAAAAsAAAANAAAAAAAAAA=="
    }
   },
   {
@@ -2055,8 +2055,8 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "3  + GetBonusMaxChargesForPower(SNO.Power.Spiritborn_Eagle_Potency1)",
-    "compiled": "BgAAAAAAQEAFAAAAWQAAAL+PHAAAAAAAAAAAAAEAAAB8AAAACwAAAAAAAAA="
+    "value": "3  + GetBonusMaxChargesForPower(SNO.Power.Spiritborn_Eagle_Potency1) + (SF_46 ? SF_47 : 0)",
+    "compiled": "BgAAAAAAQEAFAAAAWQAAAL+PHAAAAAAAAAAAAAEAAAB8AAAACwAAAAUAAAA0AAAAAAAAAAAAAAAAAAAABQAAADUAAAAAAAAAAAAAAAAAAAAGAAAAAAAAABAAAAALAAAAAAAAAA=="
    }
   },
   {
@@ -2088,7 +2088,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Percent_Bonus_Projectiles_Per_Power#Spiritborn_Eagle_Potency1 + SF_30",
-    "compiled": "BQAAAAAAAADvAwAAv48cAAAAAAAFAAAAJAAAAAAAAAAAAAAAAAAAAAsAAAAAAAAA"
+    "compiled": "BQAAAAAAAADwAwAAv48cAAAAAAAFAAAAJAAAAAAAAAAAAAAAAAAAAAsAAAAAAAAA"
    }
   },
   {
@@ -2128,7 +2128,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Affix_Value_1#legendary_spiritborn_031_x1",
-    "compiled": "BQAAAAAAAACVBAAAEj0eAAAAAAAAAAAA"
+    "compiled": "BQAAAAAAAACWBAAAEj0eAAAAAAAAAAAA"
    }
   },
   {
@@ -2167,8 +2167,8 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": ".4",
-    "compiled": "BgAAAM3MzD4AAAAA"
+    "value": "2",
+    "compiled": "BgAAAAAAAEAAAAAA"
    }
   },
   {
@@ -2217,6 +2217,30 @@
    "tFormula": {
     "value": "0.5",
     "compiled": "BgAAAAAAAD8AAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "AffixIsEquipped(SNO.Affix.Quarterstaff_Unique_Spiritborn_001) ? 1 : 0",
+    "compiled": "BQAAAFkAAAArMCEAAAAAAAAAAAABAAAAJAAAAAYAAAAAAIA/BgAAAAAAAAAQAAAAAAAAAA=="
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "Affix.Quarterstaff_Unique_Spiritborn_001.\"Static Value 2\"",
+    "compiled": "BQAAAGMAAAArMCEAAgAAAAAAAAAAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "1",
+    "compiled": "BgAAAAAAgD8AAAAA"
    }
   }
  ],
@@ -2734,20 +2758,7 @@
    "bAffectsEnchantmentDescription": 0,
    "unk_b1d89c5": 0,
    "unk_b25b989": 0,
-   "arSkillTagsToAdd": [
-    {
-     "__type__": "SkillTagStruct",
-     "__typeHash__": 4000554560,
-     "gbidSkillTag": {
-      "__raw__": 328056235,
-      "__type__": "DT_GBID",
-      "__typeHash__": 1028170061,
-      "group": 56,
-      "name": "Keyword_Barrier"
-     },
-     "bSearchOnly": 0
-    }
-   ],
+   "arSkillTagsToAdd": [],
    "arSkillTagsToRemove": [],
    "eModType": 0,
    "hIconNormalOverride": 2920834280,

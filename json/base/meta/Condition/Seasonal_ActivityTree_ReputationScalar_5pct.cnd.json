@@ -1,0 +1,35 @@
+{
+ "__fileName__": "base/meta/Condition/Seasonal_ActivityTree_ReputationScalar_5pct.cnd",
+ "__snoID__": 2697016,
+ "__type__": "ConditionDefinition",
+ "__typeHash__": 250193936,
+ "ptRootCondition": [
+  {
+   "__type__": "AnyLogicSubcondition",
+   "__typeHash__": 3494179431,
+   "dwType": 3494179431,
+   "bNegate": 0,
+   "nMaxDepth": 12,
+   "arConditions": [
+    {
+     "__type__": "AttributeSubcondition",
+     "__typeHash__": 3477503045,
+     "dwType": 3477503045,
+     "bNegate": 0,
+     "nMaxDepth": 12,
+     "eComparisonOp": 0,
+     "eAttribute": 1348,
+     "__eAttribute_name__": "Reputation_Bonus_Percent",
+     "flValue": 0.05000000074505806,
+     "nParam": 2695701,
+     "eActorToEvaluate": 1,
+     "bUseFormula": 0,
+     "szAttributeFormula": {
+      "value": "((Season - (3 * Floor((Season - 1) / 3)))-1)*100",
+      "compiled": "BQAAAAAAAAD9AwAA/v///wAAAAAGAAAAAABAQAUAAAAAAAAA/QMAAP7///8AAAAABgAAAAAAgD8MAAAABgAAAAAAQEAOAAAAAQAAAAUAAAANAAAADAAAAAYAAAAAAIA/DAAAAAYAAAAAAMhCDQAAAAAAAAA="
+     }
+    }
+   ]
+  }
+ ]
+}

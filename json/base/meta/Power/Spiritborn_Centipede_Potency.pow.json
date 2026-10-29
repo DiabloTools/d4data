@@ -222,24 +222,24 @@
   "compiled": "BgAAAAAAAAAAAAAA"
  },
  "tChargeCost": {
-  "value": "SF_47 ? 1 : 0",
-  "compiled": "BQAAADUAAAAAAAAAAAAAAAAAAAAGAAAAAACAPwYAAAAAAAAAEAAAAAAAAAA="
+  "value": "SF_54 ? 1 : 0",
+  "compiled": "BQAAADwAAAAAAAAAAAAAAAAAAAAGAAAAAACAPwYAAAAAAAAAEAAAAAAAAAA="
  },
  "tMaxCharges": {
-  "value": "SF_47 ? SF_48 : 0",
-  "compiled": "BQAAADUAAAAAAAAAAAAAAAAAAAAFAAAANgAAAAAAAAAAAAAAAAAAAAYAAAAAAAAAEAAAAAAAAAA="
+  "value": "SF_54 ? SF_53 : 0",
+  "compiled": "BQAAADwAAAAAAAAAAAAAAAAAAAAFAAAAOwAAAAAAAAAAAAAAAAAAAAYAAAAAAAAAEAAAAAAAAAA="
  },
  "tRechargeTime": {
-  "value": "SF_23 ? 0 : SF_0",
-  "compiled": "BQAAAB0AAAAAAAAAAAAAAAAAAAAGAAAAAAAAAAUAAAAGAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAA="
+  "value": "SF_54 ? SF_0 : 0",
+  "compiled": "BQAAADwAAAAAAAAAAAAAAAAAAAAFAAAABgAAAAAAAAAAAAAAAAAAAAYAAAAAAAAAEAAAAAAAAAA="
  },
  "tRechargeAmount": {
   "value": "1",
   "compiled": "BgAAAAAAgD8AAAAA"
  },
  "tCooldownTime": {
-  "value": "SF_23 ? 0 : (SF_47 ? 0 : SF_0)",
-  "compiled": "BQAAAB0AAAAAAAAAAAAAAAAAAAAGAAAAAAAAAAUAAAA1AAAAAAAAAAAAAAAAAAAABgAAAAAAAAAFAAAABgAAAAAAAAAAAAAAAAAAABAAAAAQAAAAAAAAAA=="
+  "value": "SF_54 ? 0 : SF_0",
+  "compiled": "BQAAADwAAAAAAAAAAAAAAAAAAAAGAAAAAAAAAAUAAAAGAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAA="
  },
  "tResourceCostReductionCoefficient": {
   "value": "1",
@@ -2097,7 +2097,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "(1-POW(1-(Bonus_Percent_Per_Power#Spiritborn_Centipede_Potency + SF_38)/100,1/(SF_2*2)))*100",
-    "compiled": "BgAAAAAAgD8GAAAAAACAPwUAAAAAAAAA5QMAAMGPHAAAAAAABQAAACwAAAAAAAAAAAAAAAAAAAALAAAABgAAAAAAyEIOAAAADAAAAAYAAAAAAIA/BQAAAAgAAAAAAAAAAAAAAAAAAAAGAAAAAAAAQA0AAAAOAAAAAQAAAAcAAAAMAAAABgAAAAAAyEINAAAAAAAAAA=="
+    "compiled": "BgAAAAAAgD8GAAAAAACAPwUAAAAAAAAA5gMAAMGPHAAAAAAABQAAACwAAAAAAAAAAAAAAAAAAAALAAAABgAAAAAAyEIOAAAADAAAAAYAAAAAAIA/BQAAAAgAAAAAAAAAAAAAAAAAAAAGAAAAAAAAQA0AAAAOAAAAAQAAAAcAAAAMAAAABgAAAAAAyEINAAAAAAAAAA=="
    }
   },
   {
@@ -2248,8 +2248,8 @@
    "__type__": "ScriptFormulaInfo",
    "__typeHash__": 551777591,
    "tFormula": {
-    "value": "2",
-    "compiled": "BgAAAAAAAEAAAAAA"
+    "value": "1",
+    "compiled": "BgAAAAAAgD8AAAAA"
    }
   },
   {
@@ -2266,6 +2266,38 @@
    "tFormula": {
     "value": "PowerTag.Spiritborn_Lightning_Storm.\"Script Formula 0\"",
     "compiled": "BQAAAAUAAAB/JiQAAAAAAAAAAAAAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "AffixIsEquipped(SNO.Affix.Quarterstaff_Unique_Spiritborn_001) ? 1 : 0",
+    "compiled": "BQAAAFkAAAArMCEAAAAAAAAAAAABAAAAJAAAAAYAAAAAAIA/BgAAAAAAAAAQAAAAAAAAAA=="
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "Affix.Quarterstaff_Unique_Spiritborn_001.\"Static Value 2\"",
+    "compiled": "BQAAAGMAAAArMCEAAgAAAAAAAAAAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "1 + (SF_47 ? SF_48 : 0) + (SF_51 ? SF_52 : 0)",
+    "compiled": "BgAAAAAAgD8FAAAANQAAAAAAAAAAAAAAAAAAAAUAAAA2AAAAAAAAAAAAAAAAAAAABgAAAAAAAAAQAAAACwAAAAUAAAA5AAAAAAAAAAAAAAAAAAAABQAAADoAAAAAAAAAAAAAAAAAAAAGAAAAAAAAABAAAAALAAAAAAAAAA=="
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "SF_23 ? 0 : (SF_51 ? 1 : (SF_47 ? 1 : 0))",
+    "compiled": "BQAAAB0AAAAAAAAAAAAAAAAAAAAGAAAAAAAAAAUAAAA5AAAAAAAAAAAAAAAAAAAABgAAAAAAgD8FAAAANQAAAAAAAAAAAAAAAAAAAAYAAAAAAIA/BgAAAAAAAAAQAAAAEAAAABAAAAAAAAAA"
    }
   }
  ],

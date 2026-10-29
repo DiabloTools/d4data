@@ -219,24 +219,24 @@
   "compiled": "BgAAAAAAAAAAAAAA"
  },
  "tChargeCost": {
-  "value": "0",
-  "compiled": "BgAAAAAAAAAAAAAA"
+  "value": "SF_34 ? 1 : 0",
+  "compiled": "BQAAACgAAAAAAAAAAAAAAAAAAAAGAAAAAACAPwYAAAAAAAAAEAAAAAAAAAA="
  },
  "tMaxCharges": {
-  "value": "0",
-  "compiled": "BgAAAAAAAAAAAAAA"
+  "value": "SF_34 ? (1+SF_35) : 0",
+  "compiled": "BQAAACgAAAAAAAAAAAAAAAAAAAAGAAAAAACAPwUAAAApAAAAAAAAAAAAAAAAAAAACwAAAAYAAAAAAAAAEAAAAAAAAAA="
  },
  "tRechargeTime": {
-  "value": "0",
-  "compiled": "BgAAAAAAAAAAAAAA"
+  "value": "SF_34 ? SF_0 : 0",
+  "compiled": "BQAAACgAAAAAAAAAAAAAAAAAAAAFAAAABgAAAAAAAAAAAAAAAAAAAAYAAAAAAAAAEAAAAAAAAAA="
  },
  "tRechargeAmount": {
   "value": "1",
   "compiled": "BgAAAAAAgD8AAAAA"
  },
  "tCooldownTime": {
-  "value": "SF_7 ? 0 : SF_0",
-  "compiled": "BQAAAA0AAAAAAAAAAAAAAAAAAAAGAAAAAAAAAAUAAAAGAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAA="
+  "value": "SF_7 ? 0 : (SF_34 ? 0 : SF_0)",
+  "compiled": "BQAAAA0AAAAAAAAAAAAAAAAAAAAGAAAAAAAAAAUAAAAoAAAAAAAAAAAAAAAAAAAABgAAAAAAAAAFAAAABgAAAAAAAAAAAAAAAAAAABAAAAAQAAAAAAAAAA=="
  },
  "tResourceCostReductionCoefficient": {
   "value": "0",
@@ -1558,7 +1558,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Bonus_Percent_Per_Power#Spiritborn_Gorilla_Potency + SF_22",
-    "compiled": "BQAAAAAAAADlAwAAz48cAAAAAAAFAAAAHAAAAAAAAAAAAAAAAAAAAAsAAAAAAAAA"
+    "compiled": "BQAAAAAAAADmAwAAz48cAAAAAAAFAAAAHAAAAAAAAAAAAAAAAAAAAAsAAAAAAAAA"
    }
   },
   {
@@ -1655,6 +1655,22 @@
    "tFormula": {
     "value": ".4",
     "compiled": "BgAAAM3MzD4AAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "AffixIsEquipped(SNO.Affix.Quarterstaff_Unique_Spiritborn_001) ? (SF_7 ? 0 : 1) : 0",
+    "compiled": "BQAAAFkAAAArMCEAAAAAAAAAAAABAAAAJAAAAAUAAAANAAAAAAAAAAAAAAAAAAAABgAAAAAAAAAGAAAAAACAPxAAAAAGAAAAAAAAABAAAAAAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "Affix.Quarterstaff_Unique_Spiritborn_001.\"Static Value 2\"",
+    "compiled": "BQAAAGMAAAArMCEAAgAAAAAAAAAAAAAA"
    }
   }
  ],

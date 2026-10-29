@@ -182,24 +182,24 @@
   "compiled": "BgAAAAAAAAAAAAAA"
  },
  "tChargeCost": {
-  "value": "0",
-  "compiled": "BgAAAAAAAAAAAAAA"
+  "value": "SF_50 ? 1 : 0",
+  "compiled": "BQAAADgAAAAAAAAAAAAAAAAAAAAGAAAAAACAPwYAAAAAAAAAEAAAAAAAAAA="
  },
  "tMaxCharges": {
-  "value": "0",
-  "compiled": "BgAAAAAAAAAAAAAA"
+  "value": "SF_50 ? SF_51 : 0",
+  "compiled": "BQAAADgAAAAAAAAAAAAAAAAAAAAFAAAAOQAAAAAAAAAAAAAAAAAAAAYAAAAAAAAAEAAAAAAAAAA="
  },
  "tRechargeTime": {
-  "value": "0",
-  "compiled": "BgAAAAAAAAAAAAAA"
+  "value": "SF_41 ? SF_40 : SF_4",
+  "compiled": "BQAAAC8AAAAAAAAAAAAAAAAAAAAFAAAALgAAAAAAAAAAAAAAAAAAAAUAAAAKAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAA="
  },
  "tRechargeAmount": {
   "value": "1",
   "compiled": "BgAAAAAAgD8AAAAA"
  },
  "tCooldownTime": {
-  "value": "SF_41 ? SF_40 : SF_4",
-  "compiled": "BQAAAC8AAAAAAAAAAAAAAAAAAAAFAAAALgAAAAAAAAAAAAAAAAAAAAUAAAAKAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAA="
+  "value": "SF_50 ? 0 : (SF_41 ? SF_40 : SF_4)",
+  "compiled": "BQAAADgAAAAAAAAAAAAAAAAAAAAGAAAAAAAAAAUAAAAvAAAAAAAAAAAAAAAAAAAABQAAAC4AAAAAAAAAAAAAAAAAAAAFAAAACgAAAAAAAAAAAAAAAAAAABAAAAAQAAAAAAAAAA=="
  },
  "tResourceCostReductionCoefficient": {
   "value": "1",
@@ -2513,7 +2513,7 @@
    "__typeHash__": 551777591,
    "tFormula": {
     "value": "Bonus_Percent_Per_Power#Spiritborn_Centipede_Ultimate",
-    "compiled": "BQAAAAAAAADlAwAA6mAZAAAAAAAAAAAA"
+    "compiled": "BQAAAAAAAADmAwAA6mAZAAAAAAAAAAAA"
    }
   },
   {
@@ -2682,6 +2682,30 @@
    "tFormula": {
     "value": ".05",
     "compiled": "BgAAAM3MTD0AAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "Mod.UpgradeB ? 1 : (AffixIsEquipped(SNO.Affix.Glaive_Unique_Spiritborn_010_x1) ? 1 : 0)",
+    "compiled": "BQAAAFoAAAD/////CgkaoAAAAAAGAAAAAACAPwUAAABZAAAAU7UeAAAAAAAAAAAAAQAAACQAAAAGAAAAAACAPwYAAAAAAAAAEAAAABAAAAAAAAAA"
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "SF_49 ? AffixIsEquipped(SNO.Affix.Quarterstaff_Unique_Spiritborn_001) : 0",
+    "compiled": "BQAAADcAAAAAAAAAAAAAAAAAAAAFAAAAWQAAACswIQAAAAAAAAAAAAEAAAAkAAAABgAAAAAAAAAQAAAAAAAAAA=="
+   }
+  },
+  {
+   "__type__": "ScriptFormulaInfo",
+   "__typeHash__": 551777591,
+   "tFormula": {
+    "value": "1 + Affix.Quarterstaff_Unique_Spiritborn_001.\"Static Value 2\"",
+    "compiled": "BgAAAAAAgD8FAAAAYwAAACswIQACAAAAAAAAAAsAAAAAAAAA"
    }
   }
  ],
