@@ -541,6 +541,12 @@ let basicTypes = {
       ret.value = Boolean(ret.value);
     }
   },
+  "DT_LONGENUM": function (ret, file, typeHashes, offset, field, fieldPath, results = { readLength: 0 }) {
+    //readLog.push({fieldPath: fieldPath.join('.') + ' @ ' + offset, value: ret});
+    ret.value = file.readBigInt64LE(offset).toString(16);
+
+    results.readLength += 8;
+  },
   "DT_RANGE": function (ret, file, typeHashes, offset, field, fieldPath, results = { readLength: 0 }) {
     //readLog.push({fieldPath: fieldPath.join('.') + ' @ ' + offset, value: ret});
     let subresults = { readLength: 0 };
